@@ -1,0 +1,179 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.EntityKind
+  commentId: T:TDMaker.Core.EntityKind
+  id: EntityKind
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.EntityKind.Enemy
+  - TDMaker.Core.EntityKind.Hero
+  - TDMaker.Core.EntityKind.Other
+  - TDMaker.Core.EntityKind.Projectile
+  - TDMaker.Core.EntityKind.Soldier
+  - TDMaker.Core.EntityKind.Tower
+  langs:
+  - csharp
+  - vb
+  name: EntityKind
+  nameWithType: EntityKind
+  fullName: TDMaker.Core.EntityKind
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Stable system index categories.
+  example: []
+  syntax:
+    content: public enum EntityKind
+    content.vb: Public Enum EntityKind
+- uid: TDMaker.Core.EntityKind.Other
+  commentId: F:TDMaker.Core.EntityKind.Other
+  id: Other
+  parent: TDMaker.Core.EntityKind
+  langs:
+  - csharp
+  - vb
+  name: Other
+  nameWithType: EntityKind.Other
+  fullName: TDMaker.Core.EntityKind.Other
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An entity outside the M1 role indexes.
+  example: []
+  syntax:
+    content: Other = 0
+    return:
+      type: TDMaker.Core.EntityKind
+- uid: TDMaker.Core.EntityKind.Enemy
+  commentId: F:TDMaker.Core.EntityKind.Enemy
+  id: Enemy
+  parent: TDMaker.Core.EntityKind
+  langs:
+  - csharp
+  - vb
+  name: Enemy
+  nameWithType: EntityKind.Enemy
+  fullName: TDMaker.Core.EntityKind.Enemy
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A path-following hostile unit.
+  example: []
+  syntax:
+    content: Enemy = 1
+    return:
+      type: TDMaker.Core.EntityKind
+- uid: TDMaker.Core.EntityKind.Tower
+  commentId: F:TDMaker.Core.EntityKind.Tower
+  id: Tower
+  parent: TDMaker.Core.EntityKind
+  langs:
+  - csharp
+  - vb
+  name: Tower
+  nameWithType: EntityKind.Tower
+  fullName: TDMaker.Core.EntityKind.Tower
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A constructed tower.
+  example: []
+  syntax:
+    content: Tower = 2
+    return:
+      type: TDMaker.Core.EntityKind
+- uid: TDMaker.Core.EntityKind.Soldier
+  commentId: F:TDMaker.Core.EntityKind.Soldier
+  id: Soldier
+  parent: TDMaker.Core.EntityKind
+  langs:
+  - csharp
+  - vb
+  name: Soldier
+  nameWithType: EntityKind.Soldier
+  fullName: TDMaker.Core.EntityKind.Soldier
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A barracks-owned friendly unit.
+  example: []
+  syntax:
+    content: Soldier = 3
+    return:
+      type: TDMaker.Core.EntityKind
+- uid: TDMaker.Core.EntityKind.Projectile
+  commentId: F:TDMaker.Core.EntityKind.Projectile
+  id: Projectile
+  parent: TDMaker.Core.EntityKind
+  langs:
+  - csharp
+  - vb
+  name: Projectile
+  nameWithType: EntityKind.Projectile
+  fullName: TDMaker.Core.EntityKind.Projectile
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A generated flight entity.
+  example: []
+  syntax:
+    content: Projectile = 4
+    return:
+      type: TDMaker.Core.EntityKind
+- uid: TDMaker.Core.EntityKind.Hero
+  commentId: F:TDMaker.Core.EntityKind.Hero
+  id: Hero
+  parent: TDMaker.Core.EntityKind
+  langs:
+  - csharp
+  - vb
+  name: Hero
+  nameWithType: EntityKind.Hero
+  fullName: TDMaker.Core.EntityKind.Hero
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An independent friendly hero, also present in the soldier index.
+  example: []
+  syntax:
+    content: Hero = 5
+    return:
+      type: TDMaker.Core.EntityKind
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.EntityKind
+  commentId: T:TDMaker.Core.EntityKind
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.EntityKind.html
+  name: EntityKind
+  nameWithType: EntityKind
+  fullName: TDMaker.Core.EntityKind

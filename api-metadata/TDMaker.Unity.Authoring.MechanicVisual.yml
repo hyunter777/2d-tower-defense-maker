@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.MechanicVisual
+  commentId: T:TDMaker.Unity.Authoring.MechanicVisual
+  id: MechanicVisual
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.MechanicVisual.#ctor(UnityEngine.Color,UnityEngine.GameObject)
+  - TDMaker.Unity.Authoring.MechanicVisual.#ctor(UnityEngine.Color,UnityEngine.GameObject,System.Single,System.Single)
+  - TDMaker.Unity.Authoring.MechanicVisual.#ctor(UnityEngine.Color,UnityEngine.GameObject,System.Single,System.Single,TDMaker.Unity.Authoring.MechanicVisualKind)
+  - TDMaker.Unity.Authoring.MechanicVisual.Color
+  - TDMaker.Unity.Authoring.MechanicVisual.Kind
+  - TDMaker.Unity.Authoring.MechanicVisual.Radius
+  - TDMaker.Unity.Authoring.MechanicVisual.Vfx
+  - TDMaker.Unity.Authoring.MechanicVisual.Width
+  langs:
+  - csharp
+  - vb
+  name: MechanicVisual
+  nameWithType: MechanicVisual
+  fullName: TDMaker.Unity.Authoring.MechanicVisual
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'View-side look of a keyed mechanic (chain, multi-target attack, region pulse, trap, mines, beam, transfer, reflection,
+    life steal,
+
+    body raising), collected while baking.'
+  example: []
+  syntax:
+    content: public sealed class MechanicVisual
+    content.vb: Public NotInheritable Class MechanicVisual
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.MechanicVisual.#ctor(UnityEngine.Color,UnityEngine.GameObject)
+  commentId: M:TDMaker.Unity.Authoring.MechanicVisual.#ctor(UnityEngine.Color,UnityEngine.GameObject)
+  id: '#ctor(UnityEngine.Color,UnityEngine.GameObject)'
+  parent: TDMaker.Unity.Authoring.MechanicVisual
+  langs:
+  - csharp
+  - vb
+  name: MechanicVisual(Color, GameObject)
+  nameWithType: MechanicVisual.MechanicVisual(Color, GameObject)
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.MechanicVisual(UnityEngine.Color, UnityEngine.GameObject)
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Creates a visual.
+  example: []
+  syntax:
+    content: public MechanicVisual(Color color, GameObject vfx)
+    parameters:
+    - id: color
+      type: UnityEngine.Color
+    - id: vfx
+      type: UnityEngine.GameObject
+    content.vb: Public Sub New(color As Color, vfx As GameObject)
+  overload: TDMaker.Unity.Authoring.MechanicVisual.#ctor*
+  nameWithType.vb: MechanicVisual.New(Color, GameObject)
+  fullName.vb: TDMaker.Unity.Authoring.MechanicVisual.New(UnityEngine.Color, UnityEngine.GameObject)
+  name.vb: New(Color, GameObject)
+- uid: TDMaker.Unity.Authoring.MechanicVisual.#ctor(UnityEngine.Color,UnityEngine.GameObject,System.Single,System.Single)
+  commentId: M:TDMaker.Unity.Authoring.MechanicVisual.#ctor(UnityEngine.Color,UnityEngine.GameObject,System.Single,System.Single)
+  id: '#ctor(UnityEngine.Color,UnityEngine.GameObject,System.Single,System.Single)'
+  parent: TDMaker.Unity.Authoring.MechanicVisual
+  langs:
+  - csharp
+  - vb
+  name: MechanicVisual(Color, GameObject, float, float)
+  nameWithType: MechanicVisual.MechanicVisual(Color, GameObject, float, float)
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.MechanicVisual(UnityEngine.Color, UnityEngine.GameObject, float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Creates a visual with a radius and a line width.
+  example: []
+  syntax:
+    content: public MechanicVisual(Color color, GameObject vfx, float radius, float width)
+    parameters:
+    - id: color
+      type: UnityEngine.Color
+    - id: vfx
+      type: UnityEngine.GameObject
+    - id: radius
+      type: System.Single
+    - id: width
+      type: System.Single
+    content.vb: Public Sub New(color As Color, vfx As GameObject, radius As Single, width As Single)
+  overload: TDMaker.Unity.Authoring.MechanicVisual.#ctor*
+  nameWithType.vb: MechanicVisual.New(Color, GameObject, Single, Single)
+  fullName.vb: TDMaker.Unity.Authoring.MechanicVisual.New(UnityEngine.Color, UnityEngine.GameObject, Single, Single)
+  name.vb: New(Color, GameObject, Single, Single)
+- uid: TDMaker.Unity.Authoring.MechanicVisual.#ctor(UnityEngine.Color,UnityEngine.GameObject,System.Single,System.Single,TDMaker.Unity.Authoring.MechanicVisualKind)
+  commentId: M:TDMaker.Unity.Authoring.MechanicVisual.#ctor(UnityEngine.Color,UnityEngine.GameObject,System.Single,System.Single,TDMaker.Unity.Authoring.MechanicVisualKind)
+  id: '#ctor(UnityEngine.Color,UnityEngine.GameObject,System.Single,System.Single,TDMaker.Unity.Authoring.MechanicVisualKind)'
+  parent: TDMaker.Unity.Authoring.MechanicVisual
+  langs:
+  - csharp
+  - vb
+  name: MechanicVisual(Color, GameObject, float, float, MechanicVisualKind)
+  nameWithType: MechanicVisual.MechanicVisual(Color, GameObject, float, float, MechanicVisualKind)
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.MechanicVisual(UnityEngine.Color, UnityEngine.GameObject, float, float,
+    TDMaker.Unity.Authoring.MechanicVisualKind)
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Creates a visual of a given kind.
+  example: []
+  syntax:
+    content: public MechanicVisual(Color color, GameObject vfx, float radius, float width, MechanicVisualKind kind)
+    parameters:
+    - id: color
+      type: UnityEngine.Color
+    - id: vfx
+      type: UnityEngine.GameObject
+    - id: radius
+      type: System.Single
+    - id: width
+      type: System.Single
+    - id: kind
+      type: TDMaker.Unity.Authoring.MechanicVisualKind
+    content.vb: Public Sub New(color As Color, vfx As GameObject, radius As Single, width As Single, kind As MechanicVisualKind)
+  overload: TDMaker.Unity.Authoring.MechanicVisual.#ctor*
+  nameWithType.vb: MechanicVisual.New(Color, GameObject, Single, Single, MechanicVisualKind)
+  fullName.vb: TDMaker.Unity.Authoring.MechanicVisual.New(UnityEngine.Color, UnityEngine.GameObject, Single, Single, TDMaker.Unity.Authoring.MechanicVisualKind)
+  name.vb: New(Color, GameObject, Single, Single, MechanicVisualKind)
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Color
+  commentId: P:TDMaker.Unity.Authoring.MechanicVisual.Color
+  id: Color
+  parent: TDMaker.Unity.Authoring.MechanicVisual
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: MechanicVisual.Color
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Color
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Arc, beam or ring colour.
+  example: []
+  syntax:
+    content: public Color Color { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public ReadOnly Property Color As Color
+  overload: TDMaker.Unity.Authoring.MechanicVisual.Color*
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Vfx
+  commentId: P:TDMaker.Unity.Authoring.MechanicVisual.Vfx
+  id: Vfx
+  parent: TDMaker.Unity.Authoring.MechanicVisual
+  langs:
+  - csharp
+  - vb
+  name: Vfx
+  nameWithType: MechanicVisual.Vfx
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Vfx
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional pooled VFX prefab.
+  example: []
+  syntax:
+    content: public GameObject Vfx { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ReadOnly Property Vfx As GameObject
+  overload: TDMaker.Unity.Authoring.MechanicVisual.Vfx*
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Radius
+  commentId: P:TDMaker.Unity.Authoring.MechanicVisual.Radius
+  id: Radius
+  parent: TDMaker.Unity.Authoring.MechanicVisual
+  langs:
+  - csharp
+  - vb
+  name: Radius
+  nameWithType: MechanicVisual.Radius
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Radius
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Trap detection radius or beam range (zero when unused).
+  example: []
+  syntax:
+    content: public float Radius { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Radius As Single
+  overload: TDMaker.Unity.Authoring.MechanicVisual.Radius*
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Width
+  commentId: P:TDMaker.Unity.Authoring.MechanicVisual.Width
+  id: Width
+  parent: TDMaker.Unity.Authoring.MechanicVisual
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: MechanicVisual.Width
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Width
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Beam line width (zero uses the default).
+  example: []
+  syntax:
+    content: public float Width { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Width As Single
+  overload: TDMaker.Unity.Authoring.MechanicVisual.Width*
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Kind
+  commentId: P:TDMaker.Unity.Authoring.MechanicVisual.Kind
+  id: Kind
+  parent: TDMaker.Unity.Authoring.MechanicVisual
+  langs:
+  - csharp
+  - vb
+  name: Kind
+  nameWithType: MechanicVisual.Kind
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Kind
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: What the visual belongs to.
+  example: []
+  syntax:
+    content: public MechanicVisualKind Kind { get; }
+    parameters: []
+    return:
+      type: TDMaker.Unity.Authoring.MechanicVisualKind
+    content.vb: Public ReadOnly Property Kind As MechanicVisualKind
+  overload: TDMaker.Unity.Authoring.MechanicVisual.Kind*
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Authoring.MechanicVisual.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.MechanicVisual.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicVisual.html#TDMaker_Unity_Authoring_MechanicVisual__ctor_UnityEngine_Color_UnityEngine_GameObject_
+  name: MechanicVisual
+  nameWithType: MechanicVisual.MechanicVisual
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.MechanicVisual
+  nameWithType.vb: MechanicVisual.New
+  fullName.vb: TDMaker.Unity.Authoring.MechanicVisual.New
+  name.vb: New
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.MechanicVisualKind
+  commentId: T:TDMaker.Unity.Authoring.MechanicVisualKind
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicVisualKind.html
+  name: MechanicVisualKind
+  nameWithType: MechanicVisualKind
+  fullName: TDMaker.Unity.Authoring.MechanicVisualKind
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Color*
+  commentId: Overload:TDMaker.Unity.Authoring.MechanicVisual.Color
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicVisual.html#TDMaker_Unity_Authoring_MechanicVisual_Color
+  name: Color
+  nameWithType: MechanicVisual.Color
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Color
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Vfx*
+  commentId: Overload:TDMaker.Unity.Authoring.MechanicVisual.Vfx
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicVisual.html#TDMaker_Unity_Authoring_MechanicVisual_Vfx
+  name: Vfx
+  nameWithType: MechanicVisual.Vfx
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Vfx
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Radius*
+  commentId: Overload:TDMaker.Unity.Authoring.MechanicVisual.Radius
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicVisual.html#TDMaker_Unity_Authoring_MechanicVisual_Radius
+  name: Radius
+  nameWithType: MechanicVisual.Radius
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Radius
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Width*
+  commentId: Overload:TDMaker.Unity.Authoring.MechanicVisual.Width
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicVisual.html#TDMaker_Unity_Authoring_MechanicVisual_Width
+  name: Width
+  nameWithType: MechanicVisual.Width
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Width
+- uid: TDMaker.Unity.Authoring.MechanicVisual.Kind*
+  commentId: Overload:TDMaker.Unity.Authoring.MechanicVisual.Kind
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicVisual.html#TDMaker_Unity_Authoring_MechanicVisual_Kind
+  name: Kind
+  nameWithType: MechanicVisual.Kind
+  fullName: TDMaker.Unity.Authoring.MechanicVisual.Kind

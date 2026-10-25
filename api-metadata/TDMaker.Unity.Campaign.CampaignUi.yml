@@ -1,0 +1,772 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.CampaignUi
+  commentId: T:TDMaker.Unity.Campaign.CampaignUi
+  id: CampaignUi
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.CampaignUi.Canvas(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Int32)
+  - TDMaker.Unity.Campaign.CampaignUi.DestroyObject(UnityEngine.GameObject)
+  - TDMaker.Unity.Campaign.CampaignUi.LevelSummary(TDMaker.Unity.Campaign.CampaignLevel)
+  - TDMaker.Unity.Campaign.CampaignUi.LevelTitle(TDMaker.Unity.Campaign.CampaignLevel)
+  - TDMaker.Unity.Campaign.CampaignUi.Paragraph(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
+  - TDMaker.Unity.Campaign.CampaignUi.TextButton(UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.String,System.String,UnityEngine.Vector2,UnityEngine.Vector2,System.Action)
+  - TDMaker.Unity.Campaign.CampaignUi.Texts
+  langs:
+  - csharp
+  - vb
+  name: CampaignUi
+  nameWithType: CampaignUi
+  fullName: TDMaker.Unity.Campaign.CampaignUi
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Helpers shared by the campaign screens (built from code with a <xref href="TDMaker.Unity.Hud.HudTheme" data-throw-if-not-resolved="false"></xref>,
+    like the HUD).
+  example: []
+  syntax:
+    content: public static class CampaignUi
+    content.vb: Public Module CampaignUi
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Campaign.CampaignUi.Canvas(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Int32)
+  commentId: M:TDMaker.Unity.Campaign.CampaignUi.Canvas(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Int32)
+  id: Canvas(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Int32)
+  parent: TDMaker.Unity.Campaign.CampaignUi
+  langs:
+  - csharp
+  - vb
+  name: Canvas(string, Transform, HudTheme, int)
+  nameWithType: CampaignUi.Canvas(string, Transform, HudTheme, int)
+  fullName: TDMaker.Unity.Campaign.CampaignUi.Canvas(string, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Creates a screen-space overlay canvas scaled like the HUD (for screens used outside an existing canvas).
+  example: []
+  syntax:
+    content: public static RectTransform Canvas(string name, Transform parent, HudTheme theme, int sortingOffset = 20)
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    - id: sortingOffset
+      type: System.Int32
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Public Shared Function Canvas(name As String, parent As Transform, theme As HudTheme, sortingOffset As Integer
+      = 20) As RectTransform
+  overload: TDMaker.Unity.Campaign.CampaignUi.Canvas*
+  nameWithType.vb: CampaignUi.Canvas(String, Transform, HudTheme, Integer)
+  fullName.vb: TDMaker.Unity.Campaign.CampaignUi.Canvas(String, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, Integer)
+  name.vb: Canvas(String, Transform, HudTheme, Integer)
+- uid: TDMaker.Unity.Campaign.CampaignUi.DestroyObject(UnityEngine.GameObject)
+  commentId: M:TDMaker.Unity.Campaign.CampaignUi.DestroyObject(UnityEngine.GameObject)
+  id: DestroyObject(UnityEngine.GameObject)
+  parent: TDMaker.Unity.Campaign.CampaignUi
+  langs:
+  - csharp
+  - vb
+  name: DestroyObject(GameObject)
+  nameWithType: CampaignUi.DestroyObject(GameObject)
+  fullName: TDMaker.Unity.Campaign.CampaignUi.DestroyObject(UnityEngine.GameObject)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Destroys a UI object (immediately outside play mode, where deferred destruction is not allowed).
+  example: []
+  syntax:
+    content: public static void DestroyObject(GameObject go)
+    parameters:
+    - id: go
+      type: UnityEngine.GameObject
+    content.vb: Public Shared Sub DestroyObject(go As GameObject)
+  overload: TDMaker.Unity.Campaign.CampaignUi.DestroyObject*
+- uid: TDMaker.Unity.Campaign.CampaignUi.TextButton(UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.String,System.String,UnityEngine.Vector2,UnityEngine.Vector2,System.Action)
+  commentId: M:TDMaker.Unity.Campaign.CampaignUi.TextButton(UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.String,System.String,UnityEngine.Vector2,UnityEngine.Vector2,System.Action)
+  id: TextButton(UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.String,System.String,UnityEngine.Vector2,UnityEngine.Vector2,System.Action)
+  parent: TDMaker.Unity.Campaign.CampaignUi
+  langs:
+  - csharp
+  - vb
+  name: TextButton(Transform, HudTheme, string, string, Vector2, Vector2, Action)
+  nameWithType: CampaignUi.TextButton(Transform, HudTheme, string, string, Vector2, Vector2, Action)
+  fullName: TDMaker.Unity.Campaign.CampaignUi.TextButton(UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, string, string,
+    UnityEngine.Vector2, UnityEngine.Vector2, System.Action)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: A themed text button centred at <code class="paramref">position</code> of its parent.
+  example: []
+  syntax:
+    content: public static HudButton TextButton(Transform parent, HudTheme theme, string name, string text, Vector2 position,
+      Vector2 size, Action action)
+    parameters:
+    - id: parent
+      type: UnityEngine.Transform
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    - id: name
+      type: System.String
+    - id: text
+      type: System.String
+    - id: position
+      type: UnityEngine.Vector2
+    - id: size
+      type: UnityEngine.Vector2
+    - id: action
+      type: System.Action
+    return:
+      type: TDMaker.Unity.Hud.HudButton
+    content.vb: Public Shared Function TextButton(parent As Transform, theme As HudTheme, name As String, text As String,
+      position As Vector2, size As Vector2, action As Action) As HudButton
+  overload: TDMaker.Unity.Campaign.CampaignUi.TextButton*
+  nameWithType.vb: CampaignUi.TextButton(Transform, HudTheme, String, String, Vector2, Vector2, Action)
+  fullName.vb: TDMaker.Unity.Campaign.CampaignUi.TextButton(UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, String, String,
+    UnityEngine.Vector2, UnityEngine.Vector2, System.Action)
+  name.vb: TextButton(Transform, HudTheme, String, String, Vector2, Vector2, Action)
+- uid: TDMaker.Unity.Campaign.CampaignUi.Paragraph(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
+  commentId: M:TDMaker.Unity.Campaign.CampaignUi.Paragraph(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
+  id: Paragraph(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
+  parent: TDMaker.Unity.Campaign.CampaignUi
+  langs:
+  - csharp
+  - vb
+  name: Paragraph(string, Transform, HudTheme, float, Color, TextAnchor, string)
+  nameWithType: CampaignUi.Paragraph(string, Transform, HudTheme, float, Color, TextAnchor, string)
+  fullName: TDMaker.Unity.Campaign.CampaignUi.Paragraph(string, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, float,
+    UnityEngine.Color, UnityEngine.TextAnchor, string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: A wrapping label.
+  example: []
+  syntax:
+    content: public static TextMeshProUGUI Paragraph(string name, Transform parent, HudTheme theme, float size, Color color,
+      TextAnchor anchor, string text = "")
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    - id: size
+      type: System.Single
+    - id: color
+      type: UnityEngine.Color
+    - id: anchor
+      type: UnityEngine.TextAnchor
+    - id: text
+      type: System.String
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public Shared Function Paragraph(name As String, parent As Transform, theme As HudTheme, size As Single, color
+      As Color, anchor As TextAnchor, text As String = "") As TextMeshProUGUI
+  overload: TDMaker.Unity.Campaign.CampaignUi.Paragraph*
+  nameWithType.vb: CampaignUi.Paragraph(String, Transform, HudTheme, Single, Color, TextAnchor, String)
+  fullName.vb: TDMaker.Unity.Campaign.CampaignUi.Paragraph(String, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, Single,
+    UnityEngine.Color, UnityEngine.TextAnchor, String)
+  name.vb: Paragraph(String, Transform, HudTheme, Single, Color, TextAnchor, String)
+- uid: TDMaker.Unity.Campaign.CampaignUi.LevelTitle(TDMaker.Unity.Campaign.CampaignLevel)
+  commentId: M:TDMaker.Unity.Campaign.CampaignUi.LevelTitle(TDMaker.Unity.Campaign.CampaignLevel)
+  id: LevelTitle(TDMaker.Unity.Campaign.CampaignLevel)
+  parent: TDMaker.Unity.Campaign.CampaignUi
+  langs:
+  - csharp
+  - vb
+  name: LevelTitle(CampaignLevel)
+  nameWithType: CampaignUi.LevelTitle(CampaignLevel)
+  fullName: TDMaker.Unity.Campaign.CampaignUi.LevelTitle(TDMaker.Unity.Campaign.CampaignLevel)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Title of a campaign level in the current language (<code>campaign.level.&lt;key&gt;.title</code>, then the entry,
+    then the level asset).
+  example: []
+  syntax:
+    content: public static string LevelTitle(CampaignLevel level)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Campaign.CampaignLevel
+    return:
+      type: System.String
+    content.vb: Public Shared Function LevelTitle(level As CampaignLevel) As String
+  overload: TDMaker.Unity.Campaign.CampaignUi.LevelTitle*
+- uid: TDMaker.Unity.Campaign.CampaignUi.LevelSummary(TDMaker.Unity.Campaign.CampaignLevel)
+  commentId: M:TDMaker.Unity.Campaign.CampaignUi.LevelSummary(TDMaker.Unity.Campaign.CampaignLevel)
+  id: LevelSummary(TDMaker.Unity.Campaign.CampaignLevel)
+  parent: TDMaker.Unity.Campaign.CampaignUi
+  langs:
+  - csharp
+  - vb
+  name: LevelSummary(CampaignLevel)
+  nameWithType: CampaignUi.LevelSummary(CampaignLevel)
+  fullName: TDMaker.Unity.Campaign.CampaignUi.LevelSummary(TDMaker.Unity.Campaign.CampaignLevel)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Summary of a campaign level in the current language (<code>campaign.level.&lt;key&gt;.summary</code>, then the
+    entry).
+  example: []
+  syntax:
+    content: public static string LevelSummary(CampaignLevel level)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Campaign.CampaignLevel
+    return:
+      type: System.String
+    content.vb: Public Shared Function LevelSummary(level As CampaignLevel) As String
+  overload: TDMaker.Unity.Campaign.CampaignUi.LevelSummary*
+- uid: TDMaker.Unity.Campaign.CampaignUi.Texts
+  commentId: P:TDMaker.Unity.Campaign.CampaignUi.Texts
+  id: Texts
+  parent: TDMaker.Unity.Campaign.CampaignUi
+  langs:
+  - csharp
+  - vb
+  name: Texts
+  nameWithType: CampaignUi.Texts
+  fullName: TDMaker.Unity.Campaign.CampaignUi.Texts
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The current text resolver.
+  example: []
+  syntax:
+    content: public static TextResolver Texts { get; }
+    parameters: []
+    return:
+      type: TDMaker.Unity.Localization.TextResolver
+    content.vb: Public Shared ReadOnly Property Texts As TextResolver
+  overload: TDMaker.Unity.Campaign.CampaignUi.Texts*
+references:
+- uid: TDMaker.Unity.Hud.HudTheme
+  commentId: T:TDMaker.Unity.Hud.HudTheme
+  parent: TDMaker.Unity.Hud
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html
+  name: HudTheme
+  nameWithType: HudTheme
+  fullName: TDMaker.Unity.Hud.HudTheme
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.Hud
+  commentId: N:TDMaker.Unity.Hud
+  isExternal: true
+  name: TDMaker.Unity.Hud
+  nameWithType: TDMaker.Unity.Hud
+  fullName: TDMaker.Unity.Hud
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Campaign.CampaignUi.Canvas*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignUi.Canvas
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignUi.html#TDMaker_Unity_Campaign_CampaignUi_Canvas_System_String_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_System_Int32_
+  name: Canvas
+  nameWithType: CampaignUi.Canvas
+  fullName: TDMaker.Unity.Campaign.CampaignUi.Canvas
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UnityEngine.RectTransform
+  commentId: T:UnityEngine.RectTransform
+  parent: UnityEngine
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Campaign.CampaignUi.DestroyObject*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignUi.DestroyObject
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignUi.html#TDMaker_Unity_Campaign_CampaignUi_DestroyObject_UnityEngine_GameObject_
+  name: DestroyObject
+  nameWithType: CampaignUi.DestroyObject
+  fullName: TDMaker.Unity.Campaign.CampaignUi.DestroyObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: TDMaker.Unity.Campaign.CampaignUi.TextButton*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignUi.TextButton
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignUi.html#TDMaker_Unity_Campaign_CampaignUi_TextButton_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_System_String_System_String_UnityEngine_Vector2_UnityEngine_Vector2_System_Action_
+  name: TextButton
+  nameWithType: CampaignUi.TextButton
+  fullName: TDMaker.Unity.Campaign.CampaignUi.TextButton
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: TDMaker.Unity.Hud.HudButton
+  commentId: T:TDMaker.Unity.Hud.HudButton
+  parent: TDMaker.Unity.Hud
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudButton.html
+  name: HudButton
+  nameWithType: HudButton
+  fullName: TDMaker.Unity.Hud.HudButton
+- uid: TDMaker.Unity.Campaign.CampaignUi.Paragraph*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignUi.Paragraph
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignUi.html#TDMaker_Unity_Campaign_CampaignUi_Paragraph_System_String_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_System_Single_UnityEngine_Color_UnityEngine_TextAnchor_System_String_
+  name: Paragraph
+  nameWithType: CampaignUi.Paragraph
+  fullName: TDMaker.Unity.Campaign.CampaignUi.Paragraph
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine.TextAnchor
+  commentId: T:UnityEngine.TextAnchor
+  parent: UnityEngine
+  isExternal: true
+  name: TextAnchor
+  nameWithType: TextAnchor
+  fullName: UnityEngine.TextAnchor
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro
+- uid: TDMaker.Unity.Campaign.CampaignUi.LevelTitle*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignUi.LevelTitle
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignUi.html#TDMaker_Unity_Campaign_CampaignUi_LevelTitle_TDMaker_Unity_Campaign_CampaignLevel_
+  name: LevelTitle
+  nameWithType: CampaignUi.LevelTitle
+  fullName: TDMaker.Unity.Campaign.CampaignUi.LevelTitle
+- uid: TDMaker.Unity.Campaign.CampaignLevel
+  commentId: T:TDMaker.Unity.Campaign.CampaignLevel
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignLevel.html
+  name: CampaignLevel
+  nameWithType: CampaignLevel
+  fullName: TDMaker.Unity.Campaign.CampaignLevel
+- uid: TDMaker.Unity.Campaign.CampaignUi.LevelSummary*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignUi.LevelSummary
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignUi.html#TDMaker_Unity_Campaign_CampaignUi_LevelSummary_TDMaker_Unity_Campaign_CampaignLevel_
+  name: LevelSummary
+  nameWithType: CampaignUi.LevelSummary
+  fullName: TDMaker.Unity.Campaign.CampaignUi.LevelSummary
+- uid: TDMaker.Unity.Campaign.CampaignUi.Texts*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignUi.Texts
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignUi.html#TDMaker_Unity_Campaign_CampaignUi_Texts
+  name: Texts
+  nameWithType: CampaignUi.Texts
+  fullName: TDMaker.Unity.Campaign.CampaignUi.Texts
+- uid: TDMaker.Unity.Localization.TextResolver
+  commentId: T:TDMaker.Unity.Localization.TextResolver
+  parent: TDMaker.Unity.Localization
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html
+  name: TextResolver
+  nameWithType: TextResolver
+  fullName: TDMaker.Unity.Localization.TextResolver
+- uid: TDMaker.Unity.Localization
+  commentId: N:TDMaker.Unity.Localization
+  isExternal: true
+  name: TDMaker.Unity.Localization
+  nameWithType: TDMaker.Unity.Localization
+  fullName: TDMaker.Unity.Localization
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Localization
+    name: Localization
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Localization
+    name: Localization
+    isExternal: true

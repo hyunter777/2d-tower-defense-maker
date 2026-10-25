@@ -1,0 +1,537 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.RecoveryData
+  commentId: T:TDMaker.Unity.Authoring.RecoveryData
+  id: RecoveryData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.RecoveryData.#ctor
+  - TDMaker.Unity.Authoring.RecoveryData.ToDef
+  - TDMaker.Unity.Authoring.RecoveryData.amount
+  - TDMaker.Unity.Authoring.RecoveryData.damageGrace
+  - TDMaker.Unity.Authoring.RecoveryData.enabled
+  - TDMaker.Unity.Authoring.RecoveryData.idleOnly
+  - TDMaker.Unity.Authoring.RecoveryData.interval
+  langs:
+  - csharp
+  - vb
+  name: RecoveryData
+  nameWithType: RecoveryData
+  fullName: TDMaker.Unity.Authoring.RecoveryData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Health recovery, baked into <xref href="TDMaker.Core.Defs.RecoveryDef" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public sealed class RecoveryData
+    content.vb: Public NotInheritable Class RecoveryData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.RecoveryData.enabled
+  commentId: F:TDMaker.Unity.Authoring.RecoveryData.enabled
+  id: enabled
+  parent: TDMaker.Unity.Authoring.RecoveryData
+  langs:
+  - csharp
+  - vb
+  name: enabled
+  nameWithType: RecoveryData.enabled
+  fullName: TDMaker.Unity.Authoring.RecoveryData.enabled
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether the unit recovers health.
+  example: []
+  syntax:
+    content: public bool enabled
+    return:
+      type: System.Boolean
+    content.vb: Public enabled As Boolean
+- uid: TDMaker.Unity.Authoring.RecoveryData.amount
+  commentId: F:TDMaker.Unity.Authoring.RecoveryData.amount
+  id: amount
+  parent: TDMaker.Unity.Authoring.RecoveryData
+  langs:
+  - csharp
+  - vb
+  name: amount
+  nameWithType: RecoveryData.amount
+  fullName: TDMaker.Unity.Authoring.RecoveryData.amount
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Health restored per tick.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float amount'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public amount As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.RecoveryData.interval
+  commentId: F:TDMaker.Unity.Authoring.RecoveryData.interval
+  id: interval
+  parent: TDMaker.Unity.Authoring.RecoveryData
+  langs:
+  - csharp
+  - vb
+  name: interval
+  nameWithType: RecoveryData.interval
+  fullName: TDMaker.Unity.Authoring.RecoveryData.interval
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Seconds between ticks.
+  example: []
+  syntax:
+    content: '[Min(0.01)]
+
+      public float interval'
+    return:
+      type: System.Single
+    content.vb: '<Min(0.01)>
+
+      Public interval As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0.01
+- uid: TDMaker.Unity.Authoring.RecoveryData.damageGrace
+  commentId: F:TDMaker.Unity.Authoring.RecoveryData.damageGrace
+  id: damageGrace
+  parent: TDMaker.Unity.Authoring.RecoveryData
+  langs:
+  - csharp
+  - vb
+  name: damageGrace
+  nameWithType: RecoveryData.damageGrace
+  fullName: TDMaker.Unity.Authoring.RecoveryData.damageGrace
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Seconds without taking damage before recovery starts.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float damageGrace'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public damageGrace As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.RecoveryData.idleOnly
+  commentId: F:TDMaker.Unity.Authoring.RecoveryData.idleOnly
+  id: idleOnly
+  parent: TDMaker.Unity.Authoring.RecoveryData
+  langs:
+  - csharp
+  - vb
+  name: idleOnly
+  nameWithType: RecoveryData.idleOnly
+  fullName: TDMaker.Unity.Authoring.RecoveryData.idleOnly
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Only recover while idle (not moving or fighting). Enemies are never idle, so turn this off for them.
+  example: []
+  syntax:
+    content: public bool idleOnly
+    return:
+      type: System.Boolean
+    content.vb: Public idleOnly As Boolean
+- uid: TDMaker.Unity.Authoring.RecoveryData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.RecoveryData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.RecoveryData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: RecoveryData.ToDef()
+  fullName: TDMaker.Unity.Authoring.RecoveryData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the recovery, or null when disabled.
+  example: []
+  syntax:
+    content: public RecoveryDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.RecoveryDef
+    content.vb: Public Function ToDef() As RecoveryDef
+  overload: TDMaker.Unity.Authoring.RecoveryData.ToDef*
+- uid: TDMaker.Unity.Authoring.RecoveryData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.RecoveryData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.RecoveryData
+  langs:
+  - csharp
+  - vb
+  name: RecoveryData()
+  nameWithType: RecoveryData.RecoveryData()
+  fullName: TDMaker.Unity.Authoring.RecoveryData.RecoveryData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public RecoveryData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.RecoveryData.#ctor*
+  nameWithType.vb: RecoveryData.New()
+  fullName.vb: TDMaker.Unity.Authoring.RecoveryData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Core.Defs.RecoveryDef
+  commentId: T:TDMaker.Core.Defs.RecoveryDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.RecoveryDef.html
+  name: RecoveryDef
+  nameWithType: RecoveryDef
+  fullName: TDMaker.Core.Defs.RecoveryDef
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.RecoveryData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.RecoveryData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RecoveryData.html#TDMaker_Unity_Authoring_RecoveryData_ToDef
+  name: ToDef
+  nameWithType: RecoveryData.ToDef
+  fullName: TDMaker.Unity.Authoring.RecoveryData.ToDef
+- uid: TDMaker.Unity.Authoring.RecoveryData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.RecoveryData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RecoveryData.html#TDMaker_Unity_Authoring_RecoveryData__ctor
+  name: RecoveryData
+  nameWithType: RecoveryData.RecoveryData
+  fullName: TDMaker.Unity.Authoring.RecoveryData.RecoveryData
+  nameWithType.vb: RecoveryData.New
+  fullName.vb: TDMaker.Unity.Authoring.RecoveryData.New
+  name.vb: New

@@ -1,0 +1,434 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.EngagementGuestData
+  commentId: T:TDMaker.Unity.Authoring.EngagementGuestData
+  id: EngagementGuestData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.EngagementGuestData.#ctor
+  - TDMaker.Unity.Authoring.EngagementGuestData.ToDef
+  - TDMaker.Unity.Authoring.EngagementGuestData.contactBias
+  langs:
+  - csharp
+  - vb
+  name: EngagementGuestData
+  nameWithType: EngagementGuestData
+  fullName: TDMaker.Unity.Authoring.EngagementGuestData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Where this soldier or hero stands when it blocks an enemy (the engagement guest): its share of the horizontal
+    gap,
+
+    added to the enemy''s share. See <xref href="TDMaker.Unity.Authoring.EngagementHostData" data-throw-if-not-resolved="false"></xref>.'
+  example: []
+  syntax:
+    content: public sealed class EngagementGuestData
+    content.vb: Public NotInheritable Class EngagementGuestData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.EngagementGuestData.contactBias
+  commentId: F:TDMaker.Unity.Authoring.EngagementGuestData.contactBias
+  id: contactBias
+  parent: TDMaker.Unity.Authoring.EngagementGuestData
+  langs:
+  - csharp
+  - vb
+  name: contactBias
+  nameWithType: EngagementGuestData.contactBias
+  fullName: TDMaker.Unity.Authoring.EngagementGuestData.contactBias
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: This unit's share of the horizontal gap (X, at least 0) and a signed world-Y shift (Y).
+  example: []
+  syntax:
+    content: '[Tooltip("This unit''s share of the horizontal distance to the enemy it blocks (X ≥ 0) and a signed world-Y
+      shift (Y). Usually half the drawn body width plus a small gap.")]
+
+      public Vector2 contactBias'
+    return:
+      type: UnityEngine.Vector2
+    content.vb: '<Tooltip("This unit''s share of the horizontal distance to the enemy it blocks (X ≥ 0) and a signed world-Y
+      shift (Y). Usually half the drawn body width plus a small gap.")>
+
+      Public contactBias As Vector2'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This unit's share of the horizontal distance to the enemy it blocks (X ≥ 0) and a signed world-Y shift (Y). Usually
+        half the drawn body width plus a small gap.
+- uid: TDMaker.Unity.Authoring.EngagementGuestData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.EngagementGuestData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.EngagementGuestData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: EngagementGuestData.ToDef()
+  fullName: TDMaker.Unity.Authoring.EngagementGuestData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the guest geometry (the host share and row spacing keep their defaults; they come from the enemy).
+  example: []
+  syntax:
+    content: public MeleeEngagementDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.MeleeEngagementDef
+    content.vb: Public Function ToDef() As MeleeEngagementDef
+  overload: TDMaker.Unity.Authoring.EngagementGuestData.ToDef*
+- uid: TDMaker.Unity.Authoring.EngagementGuestData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.EngagementGuestData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.EngagementGuestData
+  langs:
+  - csharp
+  - vb
+  name: EngagementGuestData()
+  nameWithType: EngagementGuestData.EngagementGuestData()
+  fullName: TDMaker.Unity.Authoring.EngagementGuestData.EngagementGuestData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public EngagementGuestData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.EngagementGuestData.#ctor*
+  nameWithType.vb: EngagementGuestData.New()
+  fullName.vb: TDMaker.Unity.Authoring.EngagementGuestData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Unity.Authoring.EngagementHostData
+  commentId: T:TDMaker.Unity.Authoring.EngagementHostData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EngagementHostData.html
+  name: EngagementHostData
+  nameWithType: EngagementHostData
+  fullName: TDMaker.Unity.Authoring.EngagementHostData
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Authoring.EngagementGuestData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.EngagementGuestData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EngagementGuestData.html#TDMaker_Unity_Authoring_EngagementGuestData_ToDef
+  name: ToDef
+  nameWithType: EngagementGuestData.ToDef
+  fullName: TDMaker.Unity.Authoring.EngagementGuestData.ToDef
+- uid: TDMaker.Core.Defs.MeleeEngagementDef
+  commentId: T:TDMaker.Core.Defs.MeleeEngagementDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.MeleeEngagementDef.html
+  name: MeleeEngagementDef
+  nameWithType: MeleeEngagementDef
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.EngagementGuestData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.EngagementGuestData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EngagementGuestData.html#TDMaker_Unity_Authoring_EngagementGuestData__ctor
+  name: EngagementGuestData
+  nameWithType: EngagementGuestData.EngagementGuestData
+  fullName: TDMaker.Unity.Authoring.EngagementGuestData.EngagementGuestData
+  nameWithType.vb: EngagementGuestData.New
+  fullName.vb: TDMaker.Unity.Authoring.EngagementGuestData.New
+  name.vb: New

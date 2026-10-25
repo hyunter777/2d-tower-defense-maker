@@ -1,0 +1,216 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.DamageFlags
+  commentId: T:TDMaker.Core.Defs.DamageFlags
+  id: DamageFlags
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.DamageFlags.Despawn
+  - TDMaker.Core.Defs.DamageFlags.Execute
+  - TDMaker.Core.Defs.DamageFlags.NonLethal
+  - TDMaker.Core.Defs.DamageFlags.None
+  - TDMaker.Core.Defs.DamageFlags.ReduceMagicalArmor
+  - TDMaker.Core.Defs.DamageFlags.ReducePhysicalArmor
+  - TDMaker.Core.Defs.DamageFlags.SuppressDeathSummons
+  langs:
+  - csharp
+  - vb
+  name: DamageFlags
+  nameWithType: DamageFlags
+  fullName: TDMaker.Core.Defs.DamageFlags
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Independent damage control behaviors.
+  example: []
+  syntax:
+    content: '[Flags]
+
+      public enum DamageFlags'
+    content.vb: '<Flags>
+
+      Public Enum DamageFlags'
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: TDMaker.Core.Defs.DamageFlags.None
+  commentId: F:TDMaker.Core.Defs.DamageFlags.None
+  id: None
+  parent: TDMaker.Core.Defs.DamageFlags
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: DamageFlags.None
+  fullName: TDMaker.Core.Defs.DamageFlags.None
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Normal mitigated damage.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+- uid: TDMaker.Core.Defs.DamageFlags.NonLethal
+  commentId: F:TDMaker.Core.Defs.DamageFlags.NonLethal
+  id: NonLethal
+  parent: TDMaker.Core.Defs.DamageFlags
+  langs:
+  - csharp
+  - vb
+  name: NonLethal
+  nameWithType: DamageFlags.NonLethal
+  fullName: TDMaker.Core.Defs.DamageFlags.NonLethal
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Leaves at least the configured survival amount.
+  example: []
+  syntax:
+    content: NonLethal = 1
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+- uid: TDMaker.Core.Defs.DamageFlags.Execute
+  commentId: F:TDMaker.Core.Defs.DamageFlags.Execute
+  id: Execute
+  parent: TDMaker.Core.Defs.DamageFlags
+  langs:
+  - csharp
+  - vb
+  name: Execute
+  nameWithType: DamageFlags.Execute
+  fullName: TDMaker.Core.Defs.DamageFlags.Execute
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Consumes remaining health, after immunity checks.
+  example: []
+  syntax:
+    content: Execute = 2
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+- uid: TDMaker.Core.Defs.DamageFlags.Despawn
+  commentId: F:TDMaker.Core.Defs.DamageFlags.Despawn
+  id: Despawn
+  parent: TDMaker.Core.Defs.DamageFlags
+  langs:
+  - csharp
+  - vb
+  name: Despawn
+  nameWithType: DamageFlags.Despawn
+  fullName: TDMaker.Core.Defs.DamageFlags.Despawn
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Removes without a kill or leak reward.
+  example: []
+  syntax:
+    content: Despawn = 4
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+- uid: TDMaker.Core.Defs.DamageFlags.SuppressDeathSummons
+  commentId: F:TDMaker.Core.Defs.DamageFlags.SuppressDeathSummons
+  id: SuppressDeathSummons
+  parent: TDMaker.Core.Defs.DamageFlags
+  langs:
+  - csharp
+  - vb
+  name: SuppressDeathSummons
+  nameWithType: DamageFlags.SuppressDeathSummons
+  fullName: TDMaker.Core.Defs.DamageFlags.SuppressDeathSummons
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Disables the victim's death summon.
+  example: []
+  syntax:
+    content: SuppressDeathSummons = 8
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+- uid: TDMaker.Core.Defs.DamageFlags.ReducePhysicalArmor
+  commentId: F:TDMaker.Core.Defs.DamageFlags.ReducePhysicalArmor
+  id: ReducePhysicalArmor
+  parent: TDMaker.Core.Defs.DamageFlags
+  langs:
+  - csharp
+  - vb
+  name: ReducePhysicalArmor
+  nameWithType: DamageFlags.ReducePhysicalArmor
+  fullName: TDMaker.Core.Defs.DamageFlags.ReducePhysicalArmor
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Changes physical defense instead of health.
+  example: []
+  syntax:
+    content: ReducePhysicalArmor = 16
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+- uid: TDMaker.Core.Defs.DamageFlags.ReduceMagicalArmor
+  commentId: F:TDMaker.Core.Defs.DamageFlags.ReduceMagicalArmor
+  id: ReduceMagicalArmor
+  parent: TDMaker.Core.Defs.DamageFlags
+  langs:
+  - csharp
+  - vb
+  name: ReduceMagicalArmor
+  nameWithType: DamageFlags.ReduceMagicalArmor
+  fullName: TDMaker.Core.Defs.DamageFlags.ReduceMagicalArmor
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Changes magical defense instead of health.
+  example: []
+  syntax:
+    content: ReduceMagicalArmor = 32
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.DamageFlags
+  commentId: T:TDMaker.Core.Defs.DamageFlags
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageFlags.html
+  name: DamageFlags
+  nameWithType: DamageFlags
+  fullName: TDMaker.Core.Defs.DamageFlags

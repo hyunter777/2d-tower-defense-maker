@@ -1,0 +1,697 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.PathDef
+  commentId: T:TDMaker.Core.Defs.PathDef
+  id: PathDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.PathDef.#ctor(TDMaker.Core.Vec2[][])
+  - TDMaker.Core.Defs.PathDef.#ctor(TDMaker.Core.Vec2[][],System.Int32,System.Int32)
+  - TDMaker.Core.Defs.PathDef.EntryNode
+  - TDMaker.Core.Defs.PathDef.ExitNode
+  - TDMaker.Core.Defs.PathDef.FollowingPathIndex
+  - TDMaker.Core.Defs.PathDef.GetNode(System.Int32,System.Int32)
+  - TDMaker.Core.Defs.PathDef.GetRemainingDistance(System.Int32,System.Int32)
+  - TDMaker.Core.Defs.PathDef.LaneCount
+  - TDMaker.Core.Defs.PathDef.NodeCount
+  - TDMaker.Core.Defs.PathDef.WithFollowingPath(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: PathDef
+  nameWithType: PathDef
+  fullName: TDMaker.Core.Defs.PathDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: A path consisting of lanes with matching node counts.
+  example: []
+  syntax:
+    content: public sealed class PathDef
+    content.vb: Public NotInheritable Class PathDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.PathDef.#ctor(TDMaker.Core.Vec2[][])
+  commentId: M:TDMaker.Core.Defs.PathDef.#ctor(TDMaker.Core.Vec2[][])
+  id: '#ctor(TDMaker.Core.Vec2[][])'
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: PathDef(params Vec2[][])
+  nameWithType: PathDef.PathDef(params Vec2[][])
+  fullName: TDMaker.Core.Defs.PathDef.PathDef(params TDMaker.Core.Vec2[][])
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies and validates lane geometry; duplicate adjacent nodes are permitted.
+  example: []
+  syntax:
+    content: public PathDef(params Vec2[][] lanes)
+    parameters:
+    - id: lanes
+      type: TDMaker.Core.Vec2[][]
+    content.vb: Public Sub New(ParamArray lanes As Vec2()())
+  overload: TDMaker.Core.Defs.PathDef.#ctor*
+  nameWithType.vb: PathDef.New(ParamArray Vec2()())
+  fullName.vb: TDMaker.Core.Defs.PathDef.New(ParamArray TDMaker.Core.Vec2()())
+  name.vb: New(ParamArray Vec2()())
+- uid: TDMaker.Core.Defs.PathDef.#ctor(TDMaker.Core.Vec2[][],System.Int32,System.Int32)
+  commentId: M:TDMaker.Core.Defs.PathDef.#ctor(TDMaker.Core.Vec2[][],System.Int32,System.Int32)
+  id: '#ctor(TDMaker.Core.Vec2[][],System.Int32,System.Int32)'
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: PathDef(Vec2[][], int, int)
+  nameWithType: PathDef.PathDef(Vec2[][], int, int)
+  fullName: TDMaker.Core.Defs.PathDef.PathDef(TDMaker.Core.Vec2[][], int, int)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a path with explicit entry and exit markers.
+  example: []
+  syntax:
+    content: public PathDef(Vec2[][] lanes, int entryNode, int exitNode)
+    parameters:
+    - id: lanes
+      type: TDMaker.Core.Vec2[][]
+    - id: entryNode
+      type: System.Int32
+    - id: exitNode
+      type: System.Int32
+    content.vb: Public Sub New(lanes As Vec2()(), entryNode As Integer, exitNode As Integer)
+  overload: TDMaker.Core.Defs.PathDef.#ctor*
+  nameWithType.vb: PathDef.New(Vec2()(), Integer, Integer)
+  fullName.vb: TDMaker.Core.Defs.PathDef.New(TDMaker.Core.Vec2()(), Integer, Integer)
+  name.vb: New(Vec2()(), Integer, Integer)
+- uid: TDMaker.Core.Defs.PathDef.GetNode(System.Int32,System.Int32)
+  commentId: M:TDMaker.Core.Defs.PathDef.GetNode(System.Int32,System.Int32)
+  id: GetNode(System.Int32,System.Int32)
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: GetNode(int, int)
+  nameWithType: PathDef.GetNode(int, int)
+  fullName: TDMaker.Core.Defs.PathDef.GetNode(int, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reads a node without exposing mutable arrays.
+  example: []
+  syntax:
+    content: public Vec2 GetNode(int lane, int node)
+    parameters:
+    - id: lane
+      type: System.Int32
+    - id: node
+      type: System.Int32
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public Function GetNode(lane As Integer, node As Integer) As Vec2
+  overload: TDMaker.Core.Defs.PathDef.GetNode*
+  nameWithType.vb: PathDef.GetNode(Integer, Integer)
+  fullName.vb: TDMaker.Core.Defs.PathDef.GetNode(Integer, Integer)
+  name.vb: GetNode(Integer, Integer)
+- uid: TDMaker.Core.Defs.PathDef.GetRemainingDistance(System.Int32,System.Int32)
+  commentId: M:TDMaker.Core.Defs.PathDef.GetRemainingDistance(System.Int32,System.Int32)
+  id: GetRemainingDistance(System.Int32,System.Int32)
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: GetRemainingDistance(int, int)
+  nameWithType: PathDef.GetRemainingDistance(int, int)
+  fullName: TDMaker.Core.Defs.PathDef.GetRemainingDistance(int, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reads distance from a node to the exit along its lane.
+  example: []
+  syntax:
+    content: public float GetRemainingDistance(int lane, int node)
+    parameters:
+    - id: lane
+      type: System.Int32
+    - id: node
+      type: System.Int32
+    return:
+      type: System.Single
+    content.vb: Public Function GetRemainingDistance(lane As Integer, node As Integer) As Single
+  overload: TDMaker.Core.Defs.PathDef.GetRemainingDistance*
+  nameWithType.vb: PathDef.GetRemainingDistance(Integer, Integer)
+  fullName.vb: TDMaker.Core.Defs.PathDef.GetRemainingDistance(Integer, Integer)
+  name.vb: GetRemainingDistance(Integer, Integer)
+- uid: TDMaker.Core.Defs.PathDef.WithFollowingPath(System.Int32)
+  commentId: M:TDMaker.Core.Defs.PathDef.WithFollowingPath(System.Int32)
+  id: WithFollowingPath(System.Int32)
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: WithFollowingPath(int)
+  nameWithType: PathDef.WithFollowingPath(int)
+  fullName: TDMaker.Core.Defs.PathDef.WithFollowingPath(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies immutable geometry with a forward path connection; the level validates references and cycles.
+  example: []
+  syntax:
+    content: public PathDef WithFollowingPath(int followingPathIndex)
+    parameters:
+    - id: followingPathIndex
+      type: System.Int32
+    return:
+      type: TDMaker.Core.Defs.PathDef
+    content.vb: Public Function WithFollowingPath(followingPathIndex As Integer) As PathDef
+  overload: TDMaker.Core.Defs.PathDef.WithFollowingPath*
+  nameWithType.vb: PathDef.WithFollowingPath(Integer)
+  fullName.vb: TDMaker.Core.Defs.PathDef.WithFollowingPath(Integer)
+  name.vb: WithFollowingPath(Integer)
+- uid: TDMaker.Core.Defs.PathDef.LaneCount
+  commentId: P:TDMaker.Core.Defs.PathDef.LaneCount
+  id: LaneCount
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: LaneCount
+  nameWithType: PathDef.LaneCount
+  fullName: TDMaker.Core.Defs.PathDef.LaneCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Number of parallel lanes.
+  example: []
+  syntax:
+    content: public int LaneCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LaneCount As Integer
+  overload: TDMaker.Core.Defs.PathDef.LaneCount*
+- uid: TDMaker.Core.Defs.PathDef.NodeCount
+  commentId: P:TDMaker.Core.Defs.PathDef.NodeCount
+  id: NodeCount
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: NodeCount
+  nameWithType: PathDef.NodeCount
+  fullName: TDMaker.Core.Defs.PathDef.NodeCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Number of nodes per lane.
+  example: []
+  syntax:
+    content: public int NodeCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property NodeCount As Integer
+  overload: TDMaker.Core.Defs.PathDef.NodeCount*
+- uid: TDMaker.Core.Defs.PathDef.EntryNode
+  commentId: P:TDMaker.Core.Defs.PathDef.EntryNode
+  id: EntryNode
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: EntryNode
+  nameWithType: PathDef.EntryNode
+  fullName: TDMaker.Core.Defs.PathDef.EntryNode
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Node at which enemies enter the lane.
+  example: []
+  syntax:
+    content: public int EntryNode { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property EntryNode As Integer
+  overload: TDMaker.Core.Defs.PathDef.EntryNode*
+- uid: TDMaker.Core.Defs.PathDef.ExitNode
+  commentId: P:TDMaker.Core.Defs.PathDef.ExitNode
+  id: ExitNode
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: ExitNode
+  nameWithType: PathDef.ExitNode
+  fullName: TDMaker.Core.Defs.PathDef.ExitNode
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Node at which enemies leave the level.
+  example: []
+  syntax:
+    content: public int ExitNode { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ExitNode As Integer
+  overload: TDMaker.Core.Defs.PathDef.ExitNode*
+- uid: TDMaker.Core.Defs.PathDef.FollowingPathIndex
+  commentId: P:TDMaker.Core.Defs.PathDef.FollowingPathIndex
+  id: FollowingPathIndex
+  parent: TDMaker.Core.Defs.PathDef
+  langs:
+  - csharp
+  - vb
+  name: FollowingPathIndex
+  nameWithType: PathDef.FollowingPathIndex
+  fullName: TDMaker.Core.Defs.PathDef.FollowingPathIndex
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Next path index, or minus one for a final exit.
+  example: []
+  syntax:
+    content: public int FollowingPathIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property FollowingPathIndex As Integer
+  overload: TDMaker.Core.Defs.PathDef.FollowingPathIndex*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.PathDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.PathDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html#TDMaker_Core_Defs_PathDef__ctor_TDMaker_Core_Vec2_____
+  name: PathDef
+  nameWithType: PathDef.PathDef
+  fullName: TDMaker.Core.Defs.PathDef.PathDef
+  nameWithType.vb: PathDef.New
+  fullName.vb: TDMaker.Core.Defs.PathDef.New
+  name.vb: New
+- uid: TDMaker.Core.Vec2[][]
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2[][]
+  nameWithType: Vec2[][]
+  fullName: TDMaker.Core.Vec2[][]
+  nameWithType.vb: Vec2()()
+  fullName.vb: TDMaker.Core.Vec2()()
+  name.vb: Vec2()()
+  spec.csharp:
+  - uid: TDMaker.Core.Vec2
+    name: Vec2
+    isExternal: true
+    href: TDMaker.Core.Vec2.html
+  - name: '['
+  - name: ']'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Vec2
+    name: Vec2
+    isExternal: true
+    href: TDMaker.Core.Vec2.html
+  - name: (
+  - name: )
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.PathDef.GetNode*
+  commentId: Overload:TDMaker.Core.Defs.PathDef.GetNode
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html#TDMaker_Core_Defs_PathDef_GetNode_System_Int32_System_Int32_
+  name: GetNode
+  nameWithType: PathDef.GetNode
+  fullName: TDMaker.Core.Defs.PathDef.GetNode
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.Defs.PathDef.GetRemainingDistance*
+  commentId: Overload:TDMaker.Core.Defs.PathDef.GetRemainingDistance
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html#TDMaker_Core_Defs_PathDef_GetRemainingDistance_System_Int32_System_Int32_
+  name: GetRemainingDistance
+  nameWithType: PathDef.GetRemainingDistance
+  fullName: TDMaker.Core.Defs.PathDef.GetRemainingDistance
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.PathDef.WithFollowingPath*
+  commentId: Overload:TDMaker.Core.Defs.PathDef.WithFollowingPath
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html#TDMaker_Core_Defs_PathDef_WithFollowingPath_System_Int32_
+  name: WithFollowingPath
+  nameWithType: PathDef.WithFollowingPath
+  fullName: TDMaker.Core.Defs.PathDef.WithFollowingPath
+- uid: TDMaker.Core.Defs.PathDef
+  commentId: T:TDMaker.Core.Defs.PathDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html
+  name: PathDef
+  nameWithType: PathDef
+  fullName: TDMaker.Core.Defs.PathDef
+- uid: TDMaker.Core.Defs.PathDef.LaneCount*
+  commentId: Overload:TDMaker.Core.Defs.PathDef.LaneCount
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html#TDMaker_Core_Defs_PathDef_LaneCount
+  name: LaneCount
+  nameWithType: PathDef.LaneCount
+  fullName: TDMaker.Core.Defs.PathDef.LaneCount
+- uid: TDMaker.Core.Defs.PathDef.NodeCount*
+  commentId: Overload:TDMaker.Core.Defs.PathDef.NodeCount
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html#TDMaker_Core_Defs_PathDef_NodeCount
+  name: NodeCount
+  nameWithType: PathDef.NodeCount
+  fullName: TDMaker.Core.Defs.PathDef.NodeCount
+- uid: TDMaker.Core.Defs.PathDef.EntryNode*
+  commentId: Overload:TDMaker.Core.Defs.PathDef.EntryNode
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html#TDMaker_Core_Defs_PathDef_EntryNode
+  name: EntryNode
+  nameWithType: PathDef.EntryNode
+  fullName: TDMaker.Core.Defs.PathDef.EntryNode
+- uid: TDMaker.Core.Defs.PathDef.ExitNode*
+  commentId: Overload:TDMaker.Core.Defs.PathDef.ExitNode
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html#TDMaker_Core_Defs_PathDef_ExitNode
+  name: ExitNode
+  nameWithType: PathDef.ExitNode
+  fullName: TDMaker.Core.Defs.PathDef.ExitNode
+- uid: TDMaker.Core.Defs.PathDef.FollowingPathIndex*
+  commentId: Overload:TDMaker.Core.Defs.PathDef.FollowingPathIndex
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html#TDMaker_Core_Defs_PathDef_FollowingPathIndex
+  name: FollowingPathIndex
+  nameWithType: PathDef.FollowingPathIndex
+  fullName: TDMaker.Core.Defs.PathDef.FollowingPathIndex

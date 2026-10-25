@@ -1,0 +1,473 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.WaveTotals
+  commentId: T:TDMaker.Editor.WaveTotals
+  id: WaveTotals
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.WaveTotals.Add(TDMaker.Editor.WaveTotals)
+  - TDMaker.Editor.WaveTotals.Duration
+  - TDMaker.Editor.WaveTotals.Enemies
+  - TDMaker.Editor.WaveTotals.Gold
+  - TDMaker.Editor.WaveTotals.Health
+  - TDMaker.Editor.WaveTotals.Lives
+  - TDMaker.Editor.WaveTotals.MissingEnemies
+  langs:
+  - csharp
+  - vb
+  name: WaveTotals
+  nameWithType: WaveTotals
+  fullName: TDMaker.Editor.WaveTotals
+  type: Struct
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Aggregate numbers for a wave.
+  example: []
+  syntax:
+    content: public struct WaveTotals
+    content.vb: Public Structure WaveTotals
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Editor.WaveTotals.Enemies
+  commentId: F:TDMaker.Editor.WaveTotals.Enemies
+  id: Enemies
+  parent: TDMaker.Editor.WaveTotals
+  langs:
+  - csharp
+  - vb
+  name: Enemies
+  nameWithType: WaveTotals.Enemies
+  fullName: TDMaker.Editor.WaveTotals.Enemies
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Enemies spawned.
+  example: []
+  syntax:
+    content: public int Enemies
+    return:
+      type: System.Int32
+    content.vb: Public Enemies As Integer
+- uid: TDMaker.Editor.WaveTotals.Health
+  commentId: F:TDMaker.Editor.WaveTotals.Health
+  id: Health
+  parent: TDMaker.Editor.WaveTotals
+  langs:
+  - csharp
+  - vb
+  name: Health
+  nameWithType: WaveTotals.Health
+  fullName: TDMaker.Editor.WaveTotals.Health
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Sum of enemy hit points.
+  example: []
+  syntax:
+    content: public double Health
+    return:
+      type: System.Double
+    content.vb: Public Health As Double
+- uid: TDMaker.Editor.WaveTotals.Gold
+  commentId: F:TDMaker.Editor.WaveTotals.Gold
+  id: Gold
+  parent: TDMaker.Editor.WaveTotals
+  langs:
+  - csharp
+  - vb
+  name: Gold
+  nameWithType: WaveTotals.Gold
+  fullName: TDMaker.Editor.WaveTotals.Gold
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Sum of gold bounties.
+  example: []
+  syntax:
+    content: public int Gold
+    return:
+      type: System.Int32
+    content.vb: Public Gold As Integer
+- uid: TDMaker.Editor.WaveTotals.Lives
+  commentId: F:TDMaker.Editor.WaveTotals.Lives
+  id: Lives
+  parent: TDMaker.Editor.WaveTotals
+  langs:
+  - csharp
+  - vb
+  name: Lives
+  nameWithType: WaveTotals.Lives
+  fullName: TDMaker.Editor.WaveTotals.Lives
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Lives lost if every enemy leaks.
+  example: []
+  syntax:
+    content: public int Lives
+    return:
+      type: System.Int32
+    content.vb: Public Lives As Integer
+- uid: TDMaker.Editor.WaveTotals.Duration
+  commentId: F:TDMaker.Editor.WaveTotals.Duration
+  id: Duration
+  parent: TDMaker.Editor.WaveTotals
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: WaveTotals.Duration
+  fullName: TDMaker.Editor.WaveTotals.Duration
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Seconds until the last group finishes emitting.
+  example: []
+  syntax:
+    content: public float Duration
+    return:
+      type: System.Single
+    content.vb: Public Duration As Single
+- uid: TDMaker.Editor.WaveTotals.MissingEnemies
+  commentId: F:TDMaker.Editor.WaveTotals.MissingEnemies
+  id: MissingEnemies
+  parent: TDMaker.Editor.WaveTotals
+  langs:
+  - csharp
+  - vb
+  name: MissingEnemies
+  nameWithType: WaveTotals.MissingEnemies
+  fullName: TDMaker.Editor.WaveTotals.MissingEnemies
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Entries without an enemy (skipped when baking).
+  example: []
+  syntax:
+    content: public int MissingEnemies
+    return:
+      type: System.Int32
+    content.vb: Public MissingEnemies As Integer
+- uid: TDMaker.Editor.WaveTotals.Add(TDMaker.Editor.WaveTotals)
+  commentId: M:TDMaker.Editor.WaveTotals.Add(TDMaker.Editor.WaveTotals)
+  id: Add(TDMaker.Editor.WaveTotals)
+  parent: TDMaker.Editor.WaveTotals
+  langs:
+  - csharp
+  - vb
+  name: Add(WaveTotals)
+  nameWithType: WaveTotals.Add(WaveTotals)
+  fullName: TDMaker.Editor.WaveTotals.Add(TDMaker.Editor.WaveTotals)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Adds another total (durations are summed).
+  example: []
+  syntax:
+    content: public void Add(WaveTotals other)
+    parameters:
+    - id: other
+      type: TDMaker.Editor.WaveTotals
+    content.vb: Public Sub Add(other As WaveTotals)
+  overload: TDMaker.Editor.WaveTotals.Add*
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Editor.WaveTotals.Add*
+  commentId: Overload:TDMaker.Editor.WaveTotals.Add
+  isExternal: true
+  href: TDMaker.Editor.WaveTotals.html#TDMaker_Editor_WaveTotals_Add_TDMaker_Editor_WaveTotals_
+  name: Add
+  nameWithType: WaveTotals.Add
+  fullName: TDMaker.Editor.WaveTotals.Add
+- uid: TDMaker.Editor.WaveTotals
+  commentId: T:TDMaker.Editor.WaveTotals
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.WaveTotals.html
+  name: WaveTotals
+  nameWithType: WaveTotals
+  fullName: TDMaker.Editor.WaveTotals

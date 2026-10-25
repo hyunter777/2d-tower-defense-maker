@@ -1,0 +1,142 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.IDamageHook
+  commentId: T:TDMaker.Core.IDamageHook
+  id: IDamageHook
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.IDamageHook.AfterDamage(TDMaker.Core.Simulation,TDMaker.Core.DamageResult@)
+  - TDMaker.Core.IDamageHook.BeforeDamage(TDMaker.Core.Simulation,TDMaker.Core.DamageContext@)
+  langs:
+  - csharp
+  - vb
+  name: IDamageHook
+  nameWithType: IDamageHook
+  fullName: TDMaker.Core.IDamageHook
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Damage hooks run in registration order. Implementations must not allocate or recursively request damage in BeforeDamage.
+  example:
+  - <pre><code class="lang-csharp">public void BeforeDamage(Simulation sim, ref DamageContext hit) { hit.Amount *= 0.8f; }</code></pre>
+  syntax:
+    content: public interface IDamageHook
+    content.vb: Public Interface IDamageHook
+- uid: TDMaker.Core.IDamageHook.BeforeDamage(TDMaker.Core.Simulation,TDMaker.Core.DamageContext@)
+  commentId: M:TDMaker.Core.IDamageHook.BeforeDamage(TDMaker.Core.Simulation,TDMaker.Core.DamageContext@)
+  id: BeforeDamage(TDMaker.Core.Simulation,TDMaker.Core.DamageContext@)
+  parent: TDMaker.Core.IDamageHook
+  langs:
+  - csharp
+  - vb
+  name: BeforeDamage(Simulation, ref DamageContext)
+  nameWithType: IDamageHook.BeforeDamage(Simulation, ref DamageContext)
+  fullName: TDMaker.Core.IDamageHook.BeforeDamage(TDMaker.Core.Simulation, ref TDMaker.Core.DamageContext)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adjusts or cancels a request immediately before it enters the FIFO.
+  example: []
+  syntax:
+    content: void BeforeDamage(Simulation simulation, ref DamageContext request)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    - id: request
+      type: TDMaker.Core.DamageContext
+    content.vb: Sub BeforeDamage(simulation As Simulation, request As DamageContext)
+  overload: TDMaker.Core.IDamageHook.BeforeDamage*
+  nameWithType.vb: IDamageHook.BeforeDamage(Simulation, DamageContext)
+  fullName.vb: TDMaker.Core.IDamageHook.BeforeDamage(TDMaker.Core.Simulation, TDMaker.Core.DamageContext)
+  name.vb: BeforeDamage(Simulation, DamageContext)
+- uid: TDMaker.Core.IDamageHook.AfterDamage(TDMaker.Core.Simulation,TDMaker.Core.DamageResult@)
+  commentId: M:TDMaker.Core.IDamageHook.AfterDamage(TDMaker.Core.Simulation,TDMaker.Core.DamageResult@)
+  id: AfterDamage(TDMaker.Core.Simulation,TDMaker.Core.DamageResult@)
+  parent: TDMaker.Core.IDamageHook
+  langs:
+  - csharp
+  - vb
+  name: AfterDamage(Simulation, in DamageResult)
+  nameWithType: IDamageHook.AfterDamage(Simulation, in DamageResult)
+  fullName: TDMaker.Core.IDamageHook.AfterDamage(TDMaker.Core.Simulation, in TDMaker.Core.DamageResult)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Observes each accepted request after resolution, even when it applied zero damage.
+  example: []
+  syntax:
+    content: void AfterDamage(Simulation simulation, in DamageResult result)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    - id: result
+      type: TDMaker.Core.DamageResult
+    content.vb: Sub AfterDamage(simulation As Simulation, result As DamageResult)
+  overload: TDMaker.Core.IDamageHook.AfterDamage*
+  nameWithType.vb: IDamageHook.AfterDamage(Simulation, DamageResult)
+  fullName.vb: TDMaker.Core.IDamageHook.AfterDamage(TDMaker.Core.Simulation, TDMaker.Core.DamageResult)
+  name.vb: AfterDamage(Simulation, DamageResult)
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.IDamageHook.BeforeDamage*
+  commentId: Overload:TDMaker.Core.IDamageHook.BeforeDamage
+  isExternal: true
+  href: TDMaker.Core.IDamageHook.html#TDMaker_Core_IDamageHook_BeforeDamage_TDMaker_Core_Simulation_TDMaker_Core_DamageContext__
+  name: BeforeDamage
+  nameWithType: IDamageHook.BeforeDamage
+  fullName: TDMaker.Core.IDamageHook.BeforeDamage
+- uid: TDMaker.Core.Simulation
+  commentId: T:TDMaker.Core.Simulation
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Simulation.html
+  name: Simulation
+  nameWithType: Simulation
+  fullName: TDMaker.Core.Simulation
+- uid: TDMaker.Core.DamageContext
+  commentId: T:TDMaker.Core.DamageContext
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html
+  name: DamageContext
+  nameWithType: DamageContext
+  fullName: TDMaker.Core.DamageContext
+- uid: TDMaker.Core.IDamageHook.AfterDamage*
+  commentId: Overload:TDMaker.Core.IDamageHook.AfterDamage
+  isExternal: true
+  href: TDMaker.Core.IDamageHook.html#TDMaker_Core_IDamageHook_AfterDamage_TDMaker_Core_Simulation_TDMaker_Core_DamageResult__
+  name: AfterDamage
+  nameWithType: IDamageHook.AfterDamage
+  fullName: TDMaker.Core.IDamageHook.AfterDamage
+- uid: TDMaker.Core.DamageResult
+  commentId: T:TDMaker.Core.DamageResult
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.DamageResult.html
+  name: DamageResult
+  nameWithType: DamageResult
+  fullName: TDMaker.Core.DamageResult

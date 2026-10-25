@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.RevivalPhase
+  commentId: T:TDMaker.Core.RevivalPhase
+  id: RevivalPhase
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.RevivalPhase.Active
+  - TDMaker.Core.RevivalPhase.Down
+  - TDMaker.Core.RevivalPhase.Rising
+  langs:
+  - csharp
+  - vb
+  name: RevivalPhase
+  nameWithType: RevivalPhase
+  fullName: TDMaker.Core.RevivalPhase
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Same-identity down/rise state; only Active may move or attack.
+  example: []
+  syntax:
+    content: public enum RevivalPhase
+    content.vb: Public Enum RevivalPhase
+- uid: TDMaker.Core.RevivalPhase.Active
+  commentId: F:TDMaker.Core.RevivalPhase.Active
+  id: Active
+  parent: TDMaker.Core.RevivalPhase
+  langs:
+  - csharp
+  - vb
+  name: Active
+  nameWithType: RevivalPhase.Active
+  fullName: TDMaker.Core.RevivalPhase.Active
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: No recovery preparation.
+  example: []
+  syntax:
+    content: Active = 0
+    return:
+      type: TDMaker.Core.RevivalPhase
+- uid: TDMaker.Core.RevivalPhase.Down
+  commentId: F:TDMaker.Core.RevivalPhase.Down
+  id: Down
+  parent: TDMaker.Core.RevivalPhase
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: RevivalPhase.Down
+  fullName: TDMaker.Core.RevivalPhase.Down
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Dead, retained until a finite return.
+  example: []
+  syntax:
+    content: Down = 1
+    return:
+      type: TDMaker.Core.RevivalPhase
+- uid: TDMaker.Core.RevivalPhase.Rising
+  commentId: F:TDMaker.Core.RevivalPhase.Rising
+  id: Rising
+  parent: TDMaker.Core.RevivalPhase
+  langs:
+  - csharp
+  - vb
+  name: Rising
+  nameWithType: RevivalPhase.Rising
+  fullName: TDMaker.Core.RevivalPhase.Rising
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Health restored, still preparing.
+  example: []
+  syntax:
+    content: Rising = 2
+    return:
+      type: TDMaker.Core.RevivalPhase
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.RevivalPhase
+  commentId: T:TDMaker.Core.RevivalPhase
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.RevivalPhase.html
+  name: RevivalPhase
+  nameWithType: RevivalPhase
+  fullName: TDMaker.Core.RevivalPhase

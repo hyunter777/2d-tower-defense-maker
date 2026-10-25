@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.TrapPlacement
+  commentId: T:TDMaker.Core.Defs.TrapPlacement
+  id: TrapPlacement
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.TrapPlacement.Opponent
+  - TDMaker.Core.Defs.TrapPlacement.Rally
+  - TDMaker.Core.Defs.TrapPlacement.Source
+  langs:
+  - csharp
+  - vb
+  name: TrapPlacement
+  nameWithType: TrapPlacement
+  fullName: TDMaker.Core.Defs.TrapPlacement
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Automatic placement origin for an ability-created trap.
+  example: []
+  syntax:
+    content: public enum TrapPlacement
+    content.vb: Public Enum TrapPlacement
+- uid: TDMaker.Core.Defs.TrapPlacement.Source
+  commentId: F:TDMaker.Core.Defs.TrapPlacement.Source
+  id: Source
+  parent: TDMaker.Core.Defs.TrapPlacement
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: TrapPlacement.Source
+  fullName: TDMaker.Core.Defs.TrapPlacement.Source
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Use the acting entity's position.
+  example: []
+  syntax:
+    content: Source = 0
+    return:
+      type: TDMaker.Core.Defs.TrapPlacement
+- uid: TDMaker.Core.Defs.TrapPlacement.Rally
+  commentId: F:TDMaker.Core.Defs.TrapPlacement.Rally
+  id: Rally
+  parent: TDMaker.Core.Defs.TrapPlacement
+  langs:
+  - csharp
+  - vb
+  name: Rally
+  nameWithType: TrapPlacement.Rally
+  fullName: TDMaker.Core.Defs.TrapPlacement.Rally
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Use barracks/hero rally center, falling back to source position.
+  example: []
+  syntax:
+    content: Rally = 1
+    return:
+      type: TDMaker.Core.Defs.TrapPlacement
+- uid: TDMaker.Core.Defs.TrapPlacement.Opponent
+  commentId: F:TDMaker.Core.Defs.TrapPlacement.Opponent
+  id: Opponent
+  parent: TDMaker.Core.Defs.TrapPlacement
+  langs:
+  - csharp
+  - vb
+  name: Opponent
+  nameWithType: TrapPlacement.Opponent
+  fullName: TDMaker.Core.Defs.TrapPlacement.Opponent
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Use the nearest eligible trigger recipient within PlacementRange.
+  example: []
+  syntax:
+    content: Opponent = 2
+    return:
+      type: TDMaker.Core.Defs.TrapPlacement
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.TrapPlacement
+  commentId: T:TDMaker.Core.Defs.TrapPlacement
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapPlacement.html
+  name: TrapPlacement
+  nameWithType: TrapPlacement
+  fullName: TDMaker.Core.Defs.TrapPlacement

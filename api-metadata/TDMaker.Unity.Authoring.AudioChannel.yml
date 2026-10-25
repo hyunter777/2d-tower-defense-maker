@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.AudioChannel
+  commentId: T:TDMaker.Unity.Authoring.AudioChannel
+  id: AudioChannel
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.AudioChannel.Master
+  - TDMaker.Unity.Authoring.AudioChannel.Music
+  - TDMaker.Unity.Authoring.AudioChannel.Sfx
+  - TDMaker.Unity.Authoring.AudioChannel.Ui
+  langs:
+  - csharp
+  - vb
+  name: AudioChannel
+  nameWithType: AudioChannel
+  fullName: TDMaker.Unity.Authoring.AudioChannel
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Volume channel of a sound. Every cue and music track is scaled by <xref href="TDMaker.Unity.Authoring.AudioChannel.Master"
+    data-throw-if-not-resolved="false"></xref> and its own channel
+
+    (see <code>TDMaker.Unity.View.TDGameSettings</code>), and routed to that channel''s optional AudioMixerGroup.'
+  example: []
+  syntax:
+    content: public enum AudioChannel
+    content.vb: Public Enum AudioChannel
+- uid: TDMaker.Unity.Authoring.AudioChannel.Master
+  commentId: F:TDMaker.Unity.Authoring.AudioChannel.Master
+  id: Master
+  parent: TDMaker.Unity.Authoring.AudioChannel
+  langs:
+  - csharp
+  - vb
+  name: Master
+  nameWithType: AudioChannel.Master
+  fullName: TDMaker.Unity.Authoring.AudioChannel.Master
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Scales every channel.
+  example: []
+  syntax:
+    content: Master = 0
+    return:
+      type: TDMaker.Unity.Authoring.AudioChannel
+- uid: TDMaker.Unity.Authoring.AudioChannel.Music
+  commentId: F:TDMaker.Unity.Authoring.AudioChannel.Music
+  id: Music
+  parent: TDMaker.Unity.Authoring.AudioChannel
+  langs:
+  - csharp
+  - vb
+  name: Music
+  nameWithType: AudioChannel.Music
+  fullName: TDMaker.Unity.Authoring.AudioChannel.Music
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Music loops and stingers.
+  example: []
+  syntax:
+    content: Music = 1
+    return:
+      type: TDMaker.Unity.Authoring.AudioChannel
+- uid: TDMaker.Unity.Authoring.AudioChannel.Sfx
+  commentId: F:TDMaker.Unity.Authoring.AudioChannel.Sfx
+  id: Sfx
+  parent: TDMaker.Unity.Authoring.AudioChannel
+  langs:
+  - csharp
+  - vb
+  name: Sfx
+  nameWithType: AudioChannel.Sfx
+  fullName: TDMaker.Unity.Authoring.AudioChannel.Sfx
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Gameplay sounds (attacks, hits, deaths, spells, mechanics, building).
+  example: []
+  syntax:
+    content: Sfx = 2
+    return:
+      type: TDMaker.Unity.Authoring.AudioChannel
+- uid: TDMaker.Unity.Authoring.AudioChannel.Ui
+  commentId: F:TDMaker.Unity.Authoring.AudioChannel.Ui
+  id: Ui
+  parent: TDMaker.Unity.Authoring.AudioChannel
+  langs:
+  - csharp
+  - vb
+  name: Ui
+  nameWithType: AudioChannel.Ui
+  fullName: TDMaker.Unity.Authoring.AudioChannel.Ui
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Interface sounds (button clicks, menus).
+  example: []
+  syntax:
+    content: Ui = 3
+    return:
+      type: TDMaker.Unity.Authoring.AudioChannel
+references:
+- uid: TDMaker.Unity.Authoring.AudioChannel.Master
+  commentId: F:TDMaker.Unity.Authoring.AudioChannel.Master
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AudioChannel.html#TDMaker_Unity_Authoring_AudioChannel_Master
+  name: Master
+  nameWithType: AudioChannel.Master
+  fullName: TDMaker.Unity.Authoring.AudioChannel.Master
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.AudioChannel
+  commentId: T:TDMaker.Unity.Authoring.AudioChannel
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AudioChannel.html
+  name: AudioChannel
+  nameWithType: AudioChannel
+  fullName: TDMaker.Unity.Authoring.AudioChannel

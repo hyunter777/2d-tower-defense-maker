@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.ILevelCompletionRule
+  commentId: T:TDMaker.Core.Defs.ILevelCompletionRule
+  id: ILevelCompletionRule
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.ILevelCompletionRule.IsComplete(TDMaker.Core.Simulation)
+  langs:
+  - csharp
+  - vb
+  name: ILevelCompletionRule
+  nameWithType: ILevelCompletionRule
+  fullName: TDMaker.Core.Defs.ILevelCompletionRule
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional level action completion beyond waves and enemy accounting.
+  example: []
+  syntax:
+    content: public interface ILevelCompletionRule
+    content.vb: Public Interface ILevelCompletionRule
+- uid: TDMaker.Core.Defs.ILevelCompletionRule.IsComplete(TDMaker.Core.Simulation)
+  commentId: M:TDMaker.Core.Defs.ILevelCompletionRule.IsComplete(TDMaker.Core.Simulation)
+  id: IsComplete(TDMaker.Core.Simulation)
+  parent: TDMaker.Core.Defs.ILevelCompletionRule
+  langs:
+  - csharp
+  - vb
+  name: IsComplete(Simulation)
+  nameWithType: ILevelCompletionRule.IsComplete(Simulation)
+  fullName: TDMaker.Core.Defs.ILevelCompletionRule.IsComplete(TDMaker.Core.Simulation)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Returns true once authored level actions have finished; called only for a running world.
+  example: []
+  syntax:
+    content: bool IsComplete(Simulation simulation)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    return:
+      type: System.Boolean
+    content.vb: Function IsComplete(simulation As Simulation) As Boolean
+  overload: TDMaker.Core.Defs.ILevelCompletionRule.IsComplete*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.ILevelCompletionRule.IsComplete*
+  commentId: Overload:TDMaker.Core.Defs.ILevelCompletionRule.IsComplete
+  isExternal: true
+  href: TDMaker.Core.Defs.ILevelCompletionRule.html#TDMaker_Core_Defs_ILevelCompletionRule_IsComplete_TDMaker_Core_Simulation_
+  name: IsComplete
+  nameWithType: ILevelCompletionRule.IsComplete
+  fullName: TDMaker.Core.Defs.ILevelCompletionRule.IsComplete
+- uid: TDMaker.Core.Simulation
+  commentId: T:TDMaker.Core.Simulation
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Simulation.html
+  name: Simulation
+  nameWithType: Simulation
+  fullName: TDMaker.Core.Simulation
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

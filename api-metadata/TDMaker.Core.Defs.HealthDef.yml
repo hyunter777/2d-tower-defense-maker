@@ -1,0 +1,421 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.HealthDef
+  commentId: T:TDMaker.Core.Defs.HealthDef
+  id: HealthDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.HealthDef.#ctor(System.Single,System.Single,System.Single)
+  - TDMaker.Core.Defs.HealthDef.IncomingMultiplier
+  - TDMaker.Core.Defs.HealthDef.MagicalIncomingMultiplier
+  - TDMaker.Core.Defs.HealthDef.Maximum
+  langs:
+  - csharp
+  - vb
+  name: HealthDef
+  nameWithType: HealthDef
+  fullName: TDMaker.Core.Defs.HealthDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Immutable maximum health.
+  example: []
+  syntax:
+    content: public sealed class HealthDef
+    content.vb: Public NotInheritable Class HealthDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.HealthDef.#ctor(System.Single,System.Single,System.Single)
+  commentId: M:TDMaker.Core.Defs.HealthDef.#ctor(System.Single,System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single,System.Single)'
+  parent: TDMaker.Core.Defs.HealthDef
+  langs:
+  - csharp
+  - vb
+  name: HealthDef(float, float, float)
+  nameWithType: HealthDef.HealthDef(float, float, float)
+  fullName: TDMaker.Core.Defs.HealthDef.HealthDef(float, float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates health data.
+  example: []
+  syntax:
+    content: public HealthDef(float maximum, float incomingMultiplier = 1, float magicalIncomingMultiplier = 1)
+    parameters:
+    - id: maximum
+      type: System.Single
+    - id: incomingMultiplier
+      type: System.Single
+    - id: magicalIncomingMultiplier
+      type: System.Single
+    content.vb: Public Sub New(maximum As Single, incomingMultiplier As Single = 1, magicalIncomingMultiplier As Single =
+      1)
+  overload: TDMaker.Core.Defs.HealthDef.#ctor*
+  nameWithType.vb: HealthDef.New(Single, Single, Single)
+  fullName.vb: TDMaker.Core.Defs.HealthDef.New(Single, Single, Single)
+  name.vb: New(Single, Single, Single)
+- uid: TDMaker.Core.Defs.HealthDef.Maximum
+  commentId: P:TDMaker.Core.Defs.HealthDef.Maximum
+  id: Maximum
+  parent: TDMaker.Core.Defs.HealthDef
+  langs:
+  - csharp
+  - vb
+  name: Maximum
+  nameWithType: HealthDef.Maximum
+  fullName: TDMaker.Core.Defs.HealthDef.Maximum
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum and initial hit points.
+  example: []
+  syntax:
+    content: public float Maximum { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Maximum As Single
+  overload: TDMaker.Core.Defs.HealthDef.Maximum*
+- uid: TDMaker.Core.Defs.HealthDef.IncomingMultiplier
+  commentId: P:TDMaker.Core.Defs.HealthDef.IncomingMultiplier
+  id: IncomingMultiplier
+  parent: TDMaker.Core.Defs.HealthDef
+  langs:
+  - csharp
+  - vb
+  name: IncomingMultiplier
+  nameWithType: HealthDef.IncomingMultiplier
+  fullName: TDMaker.Core.Defs.HealthDef.IncomingMultiplier
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Multiplier on all incoming normal damage.
+  example: []
+  syntax:
+    content: public float IncomingMultiplier { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property IncomingMultiplier As Single
+  overload: TDMaker.Core.Defs.HealthDef.IncomingMultiplier*
+- uid: TDMaker.Core.Defs.HealthDef.MagicalIncomingMultiplier
+  commentId: P:TDMaker.Core.Defs.HealthDef.MagicalIncomingMultiplier
+  id: MagicalIncomingMultiplier
+  parent: TDMaker.Core.Defs.HealthDef
+  langs:
+  - csharp
+  - vb
+  name: MagicalIncomingMultiplier
+  nameWithType: HealthDef.MagicalIncomingMultiplier
+  fullName: TDMaker.Core.Defs.HealthDef.MagicalIncomingMultiplier
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Additional multiplier on incoming magical damage.
+  example: []
+  syntax:
+    content: public float MagicalIncomingMultiplier { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MagicalIncomingMultiplier As Single
+  overload: TDMaker.Core.Defs.HealthDef.MagicalIncomingMultiplier*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.HealthDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.HealthDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.HealthDef.html#TDMaker_Core_Defs_HealthDef__ctor_System_Single_System_Single_System_Single_
+  name: HealthDef
+  nameWithType: HealthDef.HealthDef
+  fullName: TDMaker.Core.Defs.HealthDef.HealthDef
+  nameWithType.vb: HealthDef.New
+  fullName.vb: TDMaker.Core.Defs.HealthDef.New
+  name.vb: New
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.HealthDef.Maximum*
+  commentId: Overload:TDMaker.Core.Defs.HealthDef.Maximum
+  isExternal: true
+  href: TDMaker.Core.Defs.HealthDef.html#TDMaker_Core_Defs_HealthDef_Maximum
+  name: Maximum
+  nameWithType: HealthDef.Maximum
+  fullName: TDMaker.Core.Defs.HealthDef.Maximum
+- uid: TDMaker.Core.Defs.HealthDef.IncomingMultiplier*
+  commentId: Overload:TDMaker.Core.Defs.HealthDef.IncomingMultiplier
+  isExternal: true
+  href: TDMaker.Core.Defs.HealthDef.html#TDMaker_Core_Defs_HealthDef_IncomingMultiplier
+  name: IncomingMultiplier
+  nameWithType: HealthDef.IncomingMultiplier
+  fullName: TDMaker.Core.Defs.HealthDef.IncomingMultiplier
+- uid: TDMaker.Core.Defs.HealthDef.MagicalIncomingMultiplier*
+  commentId: Overload:TDMaker.Core.Defs.HealthDef.MagicalIncomingMultiplier
+  isExternal: true
+  href: TDMaker.Core.Defs.HealthDef.html#TDMaker_Core_Defs_HealthDef_MagicalIncomingMultiplier
+  name: MagicalIncomingMultiplier
+  nameWithType: HealthDef.MagicalIncomingMultiplier
+  fullName: TDMaker.Core.Defs.HealthDef.MagicalIncomingMultiplier

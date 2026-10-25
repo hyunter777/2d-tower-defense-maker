@@ -1,0 +1,633 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.SpawnEntryData
+  commentId: T:TDMaker.Unity.Authoring.SpawnEntryData
+  id: SpawnEntryData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.SpawnEntryData.#ctor
+  - TDMaker.Unity.Authoring.SpawnEntryData.alternateEnemy
+  - TDMaker.Unity.Authoring.SpawnEntryData.count
+  - TDMaker.Unity.Authoring.SpawnEntryData.enemy
+  - TDMaker.Unity.Authoring.SpawnEntryData.followingGap
+  - TDMaker.Unity.Authoring.SpawnEntryData.interval
+  - TDMaker.Unity.Authoring.SpawnEntryData.laneIndex
+  - TDMaker.Unity.Authoring.SpawnEntryData.laneSelection
+  - TDMaker.Unity.Authoring.SpawnEntryData.sameKindLimit
+  - TDMaker.Unity.Authoring.SpawnEntryData.startDelay
+  langs:
+  - csharp
+  - vb
+  name: SpawnEntryData
+  nameWithType: SpawnEntryData
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: A timed run of identical enemies inside a wave group.
+  example: []
+  syntax:
+    content: public sealed class SpawnEntryData
+    content.vb: Public NotInheritable Class SpawnEntryData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.enemy
+  commentId: F:TDMaker.Unity.Authoring.SpawnEntryData.enemy
+  id: enemy
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: enemy
+  nameWithType: SpawnEntryData.enemy
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.enemy
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Enemy spawned by this entry.
+  example: []
+  syntax:
+    content: public EnemyAsset enemy
+    return:
+      type: TDMaker.Unity.Authoring.EnemyAsset
+    content.vb: Public enemy As EnemyAsset
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.count
+  commentId: F:TDMaker.Unity.Authoring.SpawnEntryData.count
+  id: count
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: count
+  nameWithType: SpawnEntryData.count
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.count
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Number of enemies.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public int count'
+    return:
+      type: System.Int32
+    content.vb: '<Min(0)>
+
+      Public count As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.interval
+  commentId: F:TDMaker.Unity.Authoring.SpawnEntryData.interval
+  id: interval
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: interval
+  nameWithType: SpawnEntryData.interval
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.interval
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Seconds between spawns.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float interval'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public interval As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.startDelay
+  commentId: F:TDMaker.Unity.Authoring.SpawnEntryData.startDelay
+  id: startDelay
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: startDelay
+  nameWithType: SpawnEntryData.startDelay
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.startDelay
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Extra delay relative to the group start.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float startDelay'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public startDelay As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.laneSelection
+  commentId: F:TDMaker.Unity.Authoring.SpawnEntryData.laneSelection
+  id: laneSelection
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: laneSelection
+  nameWithType: SpawnEntryData.laneSelection
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.laneSelection
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: How each enemy picks a sub-lane.
+  example: []
+  syntax:
+    content: public LaneSelection laneSelection
+    return:
+      type: TDMaker.Core.Defs.LaneSelection
+    content.vb: Public laneSelection As LaneSelection
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.laneIndex
+  commentId: F:TDMaker.Unity.Authoring.SpawnEntryData.laneIndex
+  id: laneIndex
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: laneIndex
+  nameWithType: SpawnEntryData.laneIndex
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.laneIndex
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Fixed lane, or first lane for round-robin.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public int laneIndex'
+    return:
+      type: System.Int32
+    content.vb: '<Min(0)>
+
+      Public laneIndex As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.followingGap
+  commentId: F:TDMaker.Unity.Authoring.SpawnEntryData.followingGap
+  id: followingGap
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: followingGap
+  nameWithType: SpawnEntryData.followingGap
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.followingGap
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Delay before the next entry in this group starts.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float followingGap'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public followingGap As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.alternateEnemy
+  commentId: F:TDMaker.Unity.Authoring.SpawnEntryData.alternateEnemy
+  id: alternateEnemy
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: alternateEnemy
+  nameWithType: SpawnEntryData.alternateEnemy
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.alternateEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional alternate enemy sharing the same count.
+  example: []
+  syntax:
+    content: public EnemyAsset alternateEnemy
+    return:
+      type: TDMaker.Unity.Authoring.EnemyAsset
+    content.vb: Public alternateEnemy As EnemyAsset
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.sameKindLimit
+  commentId: F:TDMaker.Unity.Authoring.SpawnEntryData.sameKindLimit
+  id: sameKindLimit
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: sameKindLimit
+  nameWithType: SpawnEntryData.sameKindLimit
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.sameKindLimit
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Consecutive spawns before switching to the alternate; zero disables alternation.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public int sameKindLimit'
+    return:
+      type: System.Int32
+    content.vb: '<Min(0)>
+
+      Public sameKindLimit As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.SpawnEntryData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.SpawnEntryData
+  langs:
+  - csharp
+  - vb
+  name: SpawnEntryData()
+  nameWithType: SpawnEntryData.SpawnEntryData()
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.SpawnEntryData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public SpawnEntryData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.SpawnEntryData.#ctor*
+  nameWithType.vb: SpawnEntryData.New()
+  fullName.vb: TDMaker.Unity.Authoring.SpawnEntryData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Authoring.EnemyAsset
+  commentId: T:TDMaker.Unity.Authoring.EnemyAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EnemyAsset.html
+  name: EnemyAsset
+  nameWithType: EnemyAsset
+  fullName: TDMaker.Unity.Authoring.EnemyAsset
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.LaneSelection
+  commentId: T:TDMaker.Core.Defs.LaneSelection
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.LaneSelection.html
+  name: LaneSelection
+  nameWithType: LaneSelection
+  fullName: TDMaker.Core.Defs.LaneSelection
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.SpawnEntryData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.SpawnEntryData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.SpawnEntryData.html#TDMaker_Unity_Authoring_SpawnEntryData__ctor
+  name: SpawnEntryData
+  nameWithType: SpawnEntryData.SpawnEntryData
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData.SpawnEntryData
+  nameWithType.vb: SpawnEntryData.New
+  fullName.vb: TDMaker.Unity.Authoring.SpawnEntryData.New
+  name.vb: New

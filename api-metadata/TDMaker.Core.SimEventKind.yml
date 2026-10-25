@@ -1,0 +1,1634 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.SimEventKind
+  commentId: T:TDMaker.Core.SimEventKind
+  id: SimEventKind
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.SimEventKind.AbilityPurchased
+  - TDMaker.Core.SimEventKind.AreaPulsed
+  - TDMaker.Core.SimEventKind.AttackRangeChanged
+  - TDMaker.Core.SimEventKind.AttackStarted
+  - TDMaker.Core.SimEventKind.BeamEnded
+  - TDMaker.Core.SimEventKind.BeamPulsed
+  - TDMaker.Core.SimEventKind.BeamStarted
+  - TDMaker.Core.SimEventKind.CapacityExceeded
+  - TDMaker.Core.SimEventKind.ChainEnded
+  - TDMaker.Core.SimEventKind.ChainLinked
+  - TDMaker.Core.SimEventKind.ChainStarted
+  - TDMaker.Core.SimEventKind.CombatControlChanged
+  - TDMaker.Core.SimEventKind.CommandRejected
+  - TDMaker.Core.SimEventKind.CompanionDetached
+  - TDMaker.Core.SimEventKind.CompanionReconnected
+  - TDMaker.Core.SimEventKind.CompanionRetired
+  - TDMaker.Core.SimEventKind.CompanionSpawned
+  - TDMaker.Core.SimEventKind.CompanionWaiting
+  - TDMaker.Core.SimEventKind.CustomEnd
+  - TDMaker.Core.SimEventKind.CustomStart
+  - TDMaker.Core.SimEventKind.DamageReflected
+  - TDMaker.Core.SimEventKind.Damaged
+  - TDMaker.Core.SimEventKind.Defeat
+  - TDMaker.Core.SimEventKind.DeploymentInTransit
+  - TDMaker.Core.SimEventKind.DeploymentLanded
+  - TDMaker.Core.SimEventKind.DeploymentReserved
+  - TDMaker.Core.SimEventKind.Died
+  - TDMaker.Core.SimEventKind.Displaced
+  - TDMaker.Core.SimEventKind.Dodged
+  - TDMaker.Core.SimEventKind.EffectAttached
+  - TDMaker.Core.SimEventKind.EffectRefreshed
+  - TDMaker.Core.SimEventKind.EffectRemoved
+  - TDMaker.Core.SimEventKind.GoldChanged
+  - TDMaker.Core.SimEventKind.Healed
+  - TDMaker.Core.SimEventKind.HeroLevelChanged
+  - TDMaker.Core.SimEventKind.HeroMoved
+  - TDMaker.Core.SimEventKind.HeroReturning
+  - TDMaker.Core.SimEventKind.HeroRevived
+  - TDMaker.Core.SimEventKind.HeroSkillChanged
+  - TDMaker.Core.SimEventKind.ImpactAreaCreated
+  - TDMaker.Core.SimEventKind.ImpactPayloadTriggered
+  - TDMaker.Core.SimEventKind.LifeStolen
+  - TDMaker.Core.SimEventKind.LivesChanged
+  - TDMaker.Core.SimEventKind.MechanicActivated
+  - TDMaker.Core.SimEventKind.MechanicMissed
+  - TDMaker.Core.SimEventKind.MechanicTargeted
+  - TDMaker.Core.SimEventKind.PathTransferred
+  - TDMaker.Core.SimEventKind.ProjectileFired
+  - TDMaker.Core.SimEventKind.ProjectileHit
+  - TDMaker.Core.SimEventKind.RemainsConsumed
+  - TDMaker.Core.SimEventKind.RemainsCreated
+  - TDMaker.Core.SimEventKind.RemainsReleased
+  - TDMaker.Core.SimEventKind.RemainsReserved
+  - TDMaker.Core.SimEventKind.Removed
+  - TDMaker.Core.SimEventKind.ShieldAbsorbed
+  - TDMaker.Core.SimEventKind.ShieldChanged
+  - TDMaker.Core.SimEventKind.Spawned
+  - TDMaker.Core.SimEventKind.SpellCast
+  - TDMaker.Core.SimEventKind.SpellReady
+  - TDMaker.Core.SimEventKind.TargetPriorityChanged
+  - TDMaker.Core.SimEventKind.TowerBuilt
+  - TDMaker.Core.SimEventKind.TowerSold
+  - TDMaker.Core.SimEventKind.TowerUpgraded
+  - TDMaker.Core.SimEventKind.TrapArmed
+  - TDMaker.Core.SimEventKind.TrapPlaced
+  - TDMaker.Core.SimEventKind.TrapRemoved
+  - TDMaker.Core.SimEventKind.TrapTriggered
+  - TDMaker.Core.SimEventKind.UnitChanged
+  - TDMaker.Core.SimEventKind.UnitDowned
+  - TDMaker.Core.SimEventKind.UnitRevived
+  - TDMaker.Core.SimEventKind.UnitRising
+  - TDMaker.Core.SimEventKind.UnitSummoned
+  - TDMaker.Core.SimEventKind.Victory
+  - TDMaker.Core.SimEventKind.WaveCallable
+  - TDMaker.Core.SimEventKind.WaveStarted
+  langs:
+  - csharp
+  - vb
+  name: SimEventKind
+  nameWithType: SimEventKind
+  fullName: TDMaker.Core.SimEventKind
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: View-facing notifications in simulation processing order.
+  example: []
+  syntax:
+    content: public enum SimEventKind
+    content.vb: Public Enum SimEventKind
+- uid: TDMaker.Core.SimEventKind.Spawned
+  commentId: F:TDMaker.Core.SimEventKind.Spawned
+  id: Spawned
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: Spawned
+  nameWithType: SimEventKind.Spawned
+  fullName: TDMaker.Core.SimEventKind.Spawned
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An entity was committed at Flush.
+  example: []
+  syntax:
+    content: Spawned = 0
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.Removed
+  commentId: F:TDMaker.Core.SimEventKind.Removed
+  id: Removed
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: Removed
+  nameWithType: SimEventKind.Removed
+  fullName: TDMaker.Core.SimEventKind.Removed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An active entity was detached at Flush.
+  example: []
+  syntax:
+    content: Removed = 1
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.Damaged
+  commentId: F:TDMaker.Core.SimEventKind.Damaged
+  id: Damaged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: Damaged
+  nameWithType: SimEventKind.Damaged
+  fullName: TDMaker.Core.SimEventKind.Damaged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Value is applied damage; OtherId identifies the source.
+  example: []
+  syntax:
+    content: Damaged = 2
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.Died
+  commentId: F:TDMaker.Core.SimEventKind.Died
+  id: Died
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: Died
+  nameWithType: SimEventKind.Died
+  fullName: TDMaker.Core.SimEventKind.Died
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An entity's health was exhausted.
+  example: []
+  syntax:
+    content: Died = 3
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.AttackStarted
+  commentId: F:TDMaker.Core.SimEventKind.AttackStarted
+  id: AttackStarted
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: AttackStarted
+  nameWithType: SimEventKind.AttackStarted
+  fullName: TDMaker.Core.SimEventKind.AttackStarted
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An actor began an attack against OtherId.
+  example: []
+  syntax:
+    content: AttackStarted = 4
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.ProjectileFired
+  commentId: F:TDMaker.Core.SimEventKind.ProjectileFired
+  id: ProjectileFired
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: ProjectileFired
+  nameWithType: SimEventKind.ProjectileFired
+  fullName: TDMaker.Core.SimEventKind.ProjectileFired
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A shot was emitted; instant shots use the attacker's Id, flight shots store the source in IntValue.
+  example: []
+  syntax:
+    content: ProjectileFired = 5
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.ProjectileHit
+  commentId: F:TDMaker.Core.SimEventKind.ProjectileHit
+  id: ProjectileHit
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: ProjectileHit
+  nameWithType: SimEventKind.ProjectileHit
+  fullName: TDMaker.Core.SimEventKind.ProjectileHit
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A projectile arrived at its aim point, including misses. Instant impacts carry their damage radius in Value, or
+    zero for single-target damage.
+  example: []
+  syntax:
+    content: ProjectileHit = 6
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.GoldChanged
+  commentId: F:TDMaker.Core.SimEventKind.GoldChanged
+  id: GoldChanged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: GoldChanged
+  nameWithType: SimEventKind.GoldChanged
+  fullName: TDMaker.Core.SimEventKind.GoldChanged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Value is the gold total; IntValue is its signed delta.
+  example: []
+  syntax:
+    content: GoldChanged = 7
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.LivesChanged
+  commentId: F:TDMaker.Core.SimEventKind.LivesChanged
+  id: LivesChanged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: LivesChanged
+  nameWithType: SimEventKind.LivesChanged
+  fullName: TDMaker.Core.SimEventKind.LivesChanged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Value is the lives total; IntValue is its signed delta.
+  example: []
+  syntax:
+    content: LivesChanged = 8
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.WaveStarted
+  commentId: F:TDMaker.Core.SimEventKind.WaveStarted
+  id: WaveStarted
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: WaveStarted
+  nameWithType: SimEventKind.WaveStarted
+  fullName: TDMaker.Core.SimEventKind.WaveStarted
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: IntValue is the wave number; Value is rounded early-call time credit for M2 spell cooldowns.
+  example: []
+  syntax:
+    content: WaveStarted = 9
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.WaveCallable
+  commentId: F:TDMaker.Core.SimEventKind.WaveCallable
+  id: WaveCallable
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: WaveCallable
+  nameWithType: SimEventKind.WaveCallable
+  fullName: TDMaker.Core.SimEventKind.WaveCallable
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: IntValue is the next callable one-based wave number.
+  example: []
+  syntax:
+    content: WaveCallable = 10
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.TowerBuilt
+  commentId: F:TDMaker.Core.SimEventKind.TowerBuilt
+  id: TowerBuilt
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: TowerBuilt
+  nameWithType: SimEventKind.TowerBuilt
+  fullName: TDMaker.Core.SimEventKind.TowerBuilt
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A tower reserved IntValue's build slot.
+  example: []
+  syntax:
+    content: TowerBuilt = 11
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.TowerUpgraded
+  commentId: F:TDMaker.Core.SimEventKind.TowerUpgraded
+  id: TowerUpgraded
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: TowerUpgraded
+  nameWithType: SimEventKind.TowerUpgraded
+  fullName: TDMaker.Core.SimEventKind.TowerUpgraded
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A tower changed template, retaining its entity identifier.
+  example: []
+  syntax:
+    content: TowerUpgraded = 12
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.TowerSold
+  commentId: F:TDMaker.Core.SimEventKind.TowerSold
+  id: TowerSold
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: TowerSold
+  nameWithType: SimEventKind.TowerSold
+  fullName: TDMaker.Core.SimEventKind.TowerSold
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A tower was sold; Value is its refund.
+  example: []
+  syntax:
+    content: TowerSold = 13
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CommandRejected
+  commentId: F:TDMaker.Core.SimEventKind.CommandRejected
+  id: CommandRejected
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CommandRejected
+  nameWithType: SimEventKind.CommandRejected
+  fullName: TDMaker.Core.SimEventKind.CommandRejected
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Failure explains why Key's command was rejected.
+  example: []
+  syntax:
+    content: CommandRejected = 14
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.Victory
+  commentId: F:TDMaker.Core.SimEventKind.Victory
+  id: Victory
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: Victory
+  nameWithType: SimEventKind.Victory
+  fullName: TDMaker.Core.SimEventKind.Victory
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The simulation entered its terminal victory phase; IntValue is the final star rating.
+  example: []
+  syntax:
+    content: Victory = 15
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.Defeat
+  commentId: F:TDMaker.Core.SimEventKind.Defeat
+  id: Defeat
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: Defeat
+  nameWithType: SimEventKind.Defeat
+  fullName: TDMaker.Core.SimEventKind.Defeat
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The simulation entered its terminal defeat phase.
+  example: []
+  syntax:
+    content: Defeat = 16
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.EffectAttached
+  commentId: F:TDMaker.Core.SimEventKind.EffectAttached
+  id: EffectAttached
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: EffectAttached
+  nameWithType: SimEventKind.EffectAttached
+  fullName: TDMaker.Core.SimEventKind.EffectAttached
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An effect was attached.
+  example: []
+  syntax:
+    content: EffectAttached = 17
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.EffectRefreshed
+  commentId: F:TDMaker.Core.SimEventKind.EffectRefreshed
+  id: EffectRefreshed
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: EffectRefreshed
+  nameWithType: SimEventKind.EffectRefreshed
+  fullName: TDMaker.Core.SimEventKind.EffectRefreshed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An effect lifetime was refreshed without reapplying its modifiers.
+  example: []
+  syntax:
+    content: EffectRefreshed = 18
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.EffectRemoved
+  commentId: F:TDMaker.Core.SimEventKind.EffectRemoved
+  id: EffectRemoved
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: EffectRemoved
+  nameWithType: SimEventKind.EffectRemoved
+  fullName: TDMaker.Core.SimEventKind.EffectRemoved
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An effect was removed; IntValue is the removal reason.
+  example: []
+  syntax:
+    content: EffectRemoved = 19
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.AbilityPurchased
+  commentId: F:TDMaker.Core.SimEventKind.AbilityPurchased
+  id: AbilityPurchased
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: AbilityPurchased
+  nameWithType: SimEventKind.AbilityPurchased
+  fullName: TDMaker.Core.SimEventKind.AbilityPurchased
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A tower ability rank was purchased.
+  example: []
+  syntax:
+    content: AbilityPurchased = 20
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.HeroLevelChanged
+  commentId: F:TDMaker.Core.SimEventKind.HeroLevelChanged
+  id: HeroLevelChanged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: HeroLevelChanged
+  nameWithType: SimEventKind.HeroLevelChanged
+  fullName: TDMaker.Core.SimEventKind.HeroLevelChanged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A hero acquired another level.
+  example: []
+  syntax:
+    content: HeroLevelChanged = 21
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.HeroSkillChanged
+  commentId: F:TDMaker.Core.SimEventKind.HeroSkillChanged
+  id: HeroSkillChanged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: HeroSkillChanged
+  nameWithType: SimEventKind.HeroSkillChanged
+  fullName: TDMaker.Core.SimEventKind.HeroSkillChanged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A hero skill rank changed.
+  example: []
+  syntax:
+    content: HeroSkillChanged = 22
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.HeroMoved
+  commentId: F:TDMaker.Core.SimEventKind.HeroMoved
+  id: HeroMoved
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: HeroMoved
+  nameWithType: SimEventKind.HeroMoved
+  fullName: TDMaker.Core.SimEventKind.HeroMoved
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A hero movement order was approved.
+  example: []
+  syntax:
+    content: HeroMoved = 23
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.HeroReturning
+  commentId: F:TDMaker.Core.SimEventKind.HeroReturning
+  id: HeroReturning
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: HeroReturning
+  nameWithType: SimEventKind.HeroReturning
+  fullName: TDMaker.Core.SimEventKind.HeroReturning
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A dead hero began returning.
+  example: []
+  syntax:
+    content: HeroReturning = 24
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.HeroRevived
+  commentId: F:TDMaker.Core.SimEventKind.HeroRevived
+  id: HeroRevived
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: HeroRevived
+  nameWithType: SimEventKind.HeroRevived
+  fullName: TDMaker.Core.SimEventKind.HeroRevived
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A hero became active again.
+  example: []
+  syntax:
+    content: HeroRevived = 25
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.SpellCast
+  commentId: F:TDMaker.Core.SimEventKind.SpellCast
+  id: SpellCast
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: SpellCast
+  nameWithType: SimEventKind.SpellCast
+  fullName: TDMaker.Core.SimEventKind.SpellCast
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A spell cast was approved.
+  example: []
+  syntax:
+    content: SpellCast = 26
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.SpellReady
+  commentId: F:TDMaker.Core.SimEventKind.SpellReady
+  id: SpellReady
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: SpellReady
+  nameWithType: SimEventKind.SpellReady
+  fullName: TDMaker.Core.SimEventKind.SpellReady
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A spell became ready.
+  example: []
+  syntax:
+    content: SpellReady = 27
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.UnitSummoned
+  commentId: F:TDMaker.Core.SimEventKind.UnitSummoned
+  id: UnitSummoned
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: UnitSummoned
+  nameWithType: SimEventKind.UnitSummoned
+  fullName: TDMaker.Core.SimEventKind.UnitSummoned
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A generic summon was queued for insertion.
+  example: []
+  syntax:
+    content: UnitSummoned = 28
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.UnitChanged
+  commentId: F:TDMaker.Core.SimEventKind.UnitChanged
+  id: UnitChanged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: UnitChanged
+  nameWithType: SimEventKind.UnitChanged
+  fullName: TDMaker.Core.SimEventKind.UnitChanged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A living soldier changed template after an ability purchase.
+  example: []
+  syntax:
+    content: UnitChanged = 29
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.Healed
+  commentId: F:TDMaker.Core.SimEventKind.Healed
+  id: Healed
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: Healed
+  nameWithType: SimEventKind.Healed
+  fullName: TDMaker.Core.SimEventKind.Healed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A unit restored health.
+  example: []
+  syntax:
+    content: Healed = 30
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.Dodged
+  commentId: F:TDMaker.Core.SimEventKind.Dodged
+  id: Dodged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: Dodged
+  nameWithType: SimEventKind.Dodged
+  fullName: TDMaker.Core.SimEventKind.Dodged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A recipient avoided a melee strike.
+  example: []
+  syntax:
+    content: Dodged = 31
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CapacityExceeded
+  commentId: F:TDMaker.Core.SimEventKind.CapacityExceeded
+  id: CapacityExceeded
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CapacityExceeded
+  nameWithType: SimEventKind.CapacityExceeded
+  fullName: TDMaker.Core.SimEventKind.CapacityExceeded
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A configured pool or queue limit was reached.
+  example: []
+  syntax:
+    content: CapacityExceeded = 32
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.TargetPriorityChanged
+  commentId: F:TDMaker.Core.SimEventKind.TargetPriorityChanged
+  id: TargetPriorityChanged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: TargetPriorityChanged
+  nameWithType: SimEventKind.TargetPriorityChanged
+  fullName: TDMaker.Core.SimEventKind.TargetPriorityChanged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A tower's runtime target priority changed; IntValue is the new TargetPriority.
+  example: []
+  syntax:
+    content: TargetPriorityChanged = 33
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.ChainStarted
+  commentId: F:TDMaker.Core.SimEventKind.ChainStarted
+  id: ChainStarted
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: ChainStarted
+  nameWithType: SimEventKind.ChainStarted
+  fullName: TDMaker.Core.SimEventKind.ChainStarted
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A pooled chain began; IntValue is its stable execution Id and Position its first origin.
+  example: []
+  syntax:
+    content: ChainStarted = 34
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.ChainLinked
+  commentId: F:TDMaker.Core.SimEventKind.ChainLinked
+  id: ChainLinked
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: ChainLinked
+  nameWithType: SimEventKind.ChainLinked
+  fullName: TDMaker.Core.SimEventKind.ChainLinked
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A chain requested a link impact; IntValue is its execution Id, OtherId its victim, Value the output scale.
+  example: []
+  syntax:
+    content: ChainLinked = 35
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.ChainEnded
+  commentId: F:TDMaker.Core.SimEventKind.ChainEnded
+  id: ChainEnded
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: ChainEnded
+  nameWithType: SimEventKind.ChainEnded
+  fullName: TDMaker.Core.SimEventKind.ChainEnded
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A chain completed or was cancelled; IntValue is its execution Id and Value its visited count.
+  example: []
+  syntax:
+    content: ChainEnded = 36
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.MechanicActivated
+  commentId: F:TDMaker.Core.SimEventKind.MechanicActivated
+  id: MechanicActivated
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: MechanicActivated
+  nameWithType: SimEventKind.MechanicActivated
+  fullName: TDMaker.Core.SimEventKind.MechanicActivated
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A data-driven multiple-target activation ran; IntValue is its primary target count and Key its definition Id.
+  example: []
+  syntax:
+    content: MechanicActivated = 37
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.MechanicMissed
+  commentId: F:TDMaker.Core.SimEventKind.MechanicMissed
+  id: MechanicMissed
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: MechanicMissed
+  nameWithType: SimEventKind.MechanicMissed
+  fullName: TDMaker.Core.SimEventKind.MechanicMissed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An eligible activation failed its one probability roll; cooldown is still consumed.
+  example: []
+  syntax:
+    content: MechanicMissed = 38
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.AreaPulsed
+  commentId: F:TDMaker.Core.SimEventKind.AreaPulsed
+  id: AreaPulsed
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: AreaPulsed
+  nameWithType: SimEventKind.AreaPulsed
+  fullName: TDMaker.Core.SimEventKind.AreaPulsed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A direct region pulse ran; Position is its center, Value its radius, IntValue its accepted target count.
+  example: []
+  syntax:
+    content: AreaPulsed = 39
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.ShieldChanged
+  commentId: F:TDMaker.Core.SimEventKind.ShieldChanged
+  id: ShieldChanged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: ShieldChanged
+  nameWithType: SimEventKind.ShieldChanged
+  fullName: TDMaker.Core.SimEventKind.ShieldChanged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Value is one binding's new shield capacity; Key identifies the effect.
+  example: []
+  syntax:
+    content: ShieldChanged = 40
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.ShieldAbsorbed
+  commentId: F:TDMaker.Core.SimEventKind.ShieldAbsorbed
+  id: ShieldAbsorbed
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: ShieldAbsorbed
+  nameWithType: SimEventKind.ShieldAbsorbed
+  fullName: TDMaker.Core.SimEventKind.ShieldAbsorbed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Value is post-mitigation damage absorbed by one shield; OtherId identifies the attacker.
+  example: []
+  syntax:
+    content: ShieldAbsorbed = 41
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CombatControlChanged
+  commentId: F:TDMaker.Core.SimEventKind.CombatControlChanged
+  id: CombatControlChanged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CombatControlChanged
+  nameWithType: SimEventKind.CombatControlChanged
+  fullName: TDMaker.Core.SimEventKind.CombatControlChanged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: 'IntValue contains active control bits: attack disabled=1, interception ignored=2, untargetable=4.'
+  example: []
+  syntax:
+    content: CombatControlChanged = 42
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.AttackRangeChanged
+  commentId: F:TDMaker.Core.SimEventKind.AttackRangeChanged
+  id: AttackRangeChanged
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: AttackRangeChanged
+  nameWithType: SimEventKind.AttackRangeChanged
+  fullName: TDMaker.Core.SimEventKind.AttackRangeChanged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Value is the new effective attack-range multiplier.
+  example: []
+  syntax:
+    content: AttackRangeChanged = 43
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.Displaced
+  commentId: F:TDMaker.Core.SimEventKind.Displaced
+  id: Displaced
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: Displaced
+  nameWithType: SimEventKind.Displaced
+  fullName: TDMaker.Core.SimEventKind.Displaced
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A path shift occurred; EntityId is the recipient, OtherId the source, Value the signed actual distance, IntValue
+    the path index.
+  example: []
+  syntax:
+    content: Displaced = 44
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.MechanicTargeted
+  commentId: F:TDMaker.Core.SimEventKind.MechanicTargeted
+  id: MechanicTargeted
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: MechanicTargeted
+  nameWithType: SimEventKind.MechanicTargeted
+  fullName: TDMaker.Core.SimEventKind.MechanicTargeted
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A multiple-target mechanic requested one hit; OtherId is the victim, IntValue its one-based index, Key the mechanic
+    Id.
+  example: []
+  syntax:
+    content: MechanicTargeted = 45
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.ImpactPayloadTriggered
+  commentId: F:TDMaker.Core.SimEventKind.ImpactPayloadTriggered
+  id: ImpactPayloadTriggered
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: ImpactPayloadTriggered
+  nameWithType: SimEventKind.ImpactPayloadTriggered
+  fullName: TDMaker.Core.SimEventKind.ImpactPayloadTriggered
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: 'An impact payload triggered at Position; IntValue contains operations: secondary damage=1, area=2, displacement=4,
+    path transfer=8.'
+  example: []
+  syntax:
+    content: ImpactPayloadTriggered = 46
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.ImpactAreaCreated
+  commentId: F:TDMaker.Core.SimEventKind.ImpactAreaCreated
+  id: ImpactAreaCreated
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: ImpactAreaCreated
+  nameWithType: SimEventKind.ImpactAreaCreated
+  fullName: TDMaker.Core.SimEventKind.ImpactAreaCreated
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A projectile created its once-per-arrival region; Value is radius, Position is impact, Key is the area payload
+    key.
+  example: []
+  syntax:
+    content: ImpactAreaCreated = 47
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.TrapPlaced
+  commentId: F:TDMaker.Core.SimEventKind.TrapPlaced
+  id: TrapPlaced
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: TrapPlaced
+  nameWithType: SimEventKind.TrapPlaced
+  fullName: TDMaker.Core.SimEventKind.TrapPlaced
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A deployment was accepted; IntValue is its Id, Value its lifetime, Key its definition.
+  example: []
+  syntax:
+    content: TrapPlaced = 48
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.TrapArmed
+  commentId: F:TDMaker.Core.SimEventKind.TrapArmed
+  id: TrapArmed
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: TrapArmed
+  nameWithType: SimEventKind.TrapArmed
+  fullName: TDMaker.Core.SimEventKind.TrapArmed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A deployment became active; IntValue is its Id and Value its detection radius.
+  example: []
+  syntax:
+    content: TrapArmed = 49
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.TrapTriggered
+  commentId: F:TDMaker.Core.SimEventKind.TrapTriggered
+  id: TrapTriggered
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: TrapTriggered
+  nameWithType: SimEventKind.TrapTriggered
+  fullName: TDMaker.Core.SimEventKind.TrapTriggered
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A deployment triggered; IntValue is its Id, OtherId the trigger recipient, Value the damage radius.
+  example: []
+  syntax:
+    content: TrapTriggered = 50
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.TrapRemoved
+  commentId: F:TDMaker.Core.SimEventKind.TrapRemoved
+  id: TrapRemoved
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: TrapRemoved
+  nameWithType: SimEventKind.TrapRemoved
+  fullName: TDMaker.Core.SimEventKind.TrapRemoved
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A deployment ended; IntValue is its Id and Value is MechanicEndReason.
+  example: []
+  syntax:
+    content: TrapRemoved = 51
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.BeamStarted
+  commentId: F:TDMaker.Core.SimEventKind.BeamStarted
+  id: BeamStarted
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: BeamStarted
+  nameWithType: SimEventKind.BeamStarted
+  fullName: TDMaker.Core.SimEventKind.BeamStarted
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A budget channel began; IntValue is its Id, OtherId the recipient, Value its captured raw budget.
+  example: []
+  syntax:
+    content: BeamStarted = 52
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.BeamPulsed
+  commentId: F:TDMaker.Core.SimEventKind.BeamPulsed
+  id: BeamPulsed
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: BeamPulsed
+  nameWithType: SimEventKind.BeamPulsed
+  fullName: TDMaker.Core.SimEventKind.BeamPulsed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A channel requested a pulse; IntValue is its Id and Value its exact raw slice before hooks and mitigation.
+  example: []
+  syntax:
+    content: BeamPulsed = 53
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.BeamEnded
+  commentId: F:TDMaker.Core.SimEventKind.BeamEnded
+  id: BeamEnded
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: BeamEnded
+  nameWithType: SimEventKind.BeamEnded
+  fullName: TDMaker.Core.SimEventKind.BeamEnded
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A channel ended; IntValue is its Id and Value is MechanicEndReason.
+  example: []
+  syntax:
+    content: BeamEnded = 54
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.PathTransferred
+  commentId: F:TDMaker.Core.SimEventKind.PathTransferred
+  id: PathTransferred
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: PathTransferred
+  nameWithType: SimEventKind.PathTransferred
+  fullName: TDMaker.Core.SimEventKind.PathTransferred
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A unit moved to an exact path cursor; IntValue is path index, Value segment fraction, Position the destination,
+    Key the action Id or explicit transfer key (null for unkeyed direct or legacy hit transfers).
+  example: []
+  syntax:
+    content: PathTransferred = 55
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.DamageReflected
+  commentId: F:TDMaker.Core.SimEventKind.DamageReflected
+  id: DamageReflected
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: DamageReflected
+  nameWithType: SimEventKind.DamageReflected
+  fullName: TDMaker.Core.SimEventKind.DamageReflected
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A one-bounce reflection was queued; OtherId is its recipient, Value the raw amount, Key its rule identity.
+  example: []
+  syntax:
+    content: DamageReflected = 56
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.LifeStolen
+  commentId: F:TDMaker.Core.SimEventKind.LifeStolen
+  id: LifeStolen
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: LifeStolen
+  nameWithType: SimEventKind.LifeStolen
+  fullName: TDMaker.Core.SimEventKind.LifeStolen
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Life steal restored actual health; OtherId is the damaged victim, Value the restored amount.
+  example: []
+  syntax:
+    content: LifeStolen = 57
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CustomStart
+  commentId: F:TDMaker.Core.SimEventKind.CustomStart
+  id: CustomStart
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CustomStart
+  nameWithType: SimEventKind.CustomStart
+  fullName: TDMaker.Core.SimEventKind.CustomStart
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: First application-defined event value; publish via Simulation.PublishEvent.
+  example: []
+  syntax:
+    content: CustomStart = 65536
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.DeploymentReserved
+  commentId: F:TDMaker.Core.SimEventKind.DeploymentReserved
+  id: DeploymentReserved
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: DeploymentReserved
+  nameWithType: SimEventKind.DeploymentReserved
+  fullName: TDMaker.Core.SimEventKind.DeploymentReserved
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Automatic site/capacity reservation; IntValue is the trap Id.
+  example: []
+  syntax:
+    content: DeploymentReserved = 128
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.DeploymentInTransit
+  commentId: F:TDMaker.Core.SimEventKind.DeploymentInTransit
+  id: DeploymentInTransit
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: DeploymentInTransit
+  nameWithType: SimEventKind.DeploymentInTransit
+  fullName: TDMaker.Core.SimEventKind.DeploymentInTransit
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Automatic deployment began flight; IntValue is the trap Id.
+  example: []
+  syntax:
+    content: DeploymentInTransit = 129
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.DeploymentLanded
+  commentId: F:TDMaker.Core.SimEventKind.DeploymentLanded
+  id: DeploymentLanded
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: DeploymentLanded
+  nameWithType: SimEventKind.DeploymentLanded
+  fullName: TDMaker.Core.SimEventKind.DeploymentLanded
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Automatic deployment landed; IntValue is the trap Id.
+  example: []
+  syntax:
+    content: DeploymentLanded = 130
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CompanionSpawned
+  commentId: F:TDMaker.Core.SimEventKind.CompanionSpawned
+  id: CompanionSpawned
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CompanionSpawned
+  nameWithType: SimEventKind.CompanionSpawned
+  fullName: TDMaker.Core.SimEventKind.CompanionSpawned
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Companion queued for insertion; EntityId is child, OtherId owner, IntValue slot.
+  example: []
+  syntax:
+    content: CompanionSpawned = 131
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CompanionWaiting
+  commentId: F:TDMaker.Core.SimEventKind.CompanionWaiting
+  id: CompanionWaiting
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CompanionWaiting
+  nameWithType: SimEventKind.CompanionWaiting
+  fullName: TDMaker.Core.SimEventKind.CompanionWaiting
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Companion stopped combat while its owner is dead.
+  example: []
+  syntax:
+    content: CompanionWaiting = 132
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CompanionReconnected
+  commentId: F:TDMaker.Core.SimEventKind.CompanionReconnected
+  id: CompanionReconnected
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CompanionReconnected
+  nameWithType: SimEventKind.CompanionReconnected
+  fullName: TDMaker.Core.SimEventKind.CompanionReconnected
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Companion reconnected after owner return.
+  example: []
+  syntax:
+    content: CompanionReconnected = 133
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CompanionRetired
+  commentId: F:TDMaker.Core.SimEventKind.CompanionRetired
+  id: CompanionRetired
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CompanionRetired
+  nameWithType: SimEventKind.CompanionRetired
+  fullName: TDMaker.Core.SimEventKind.CompanionRetired
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Companion retired with its owner.
+  example: []
+  syntax:
+    content: CompanionRetired = 134
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CompanionDetached
+  commentId: F:TDMaker.Core.SimEventKind.CompanionDetached
+  id: CompanionDetached
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CompanionDetached
+  nameWithType: SimEventKind.CompanionDetached
+  fullName: TDMaker.Core.SimEventKind.CompanionDetached
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Companion detached under an independent-removal policy.
+  example: []
+  syntax:
+    content: CompanionDetached = 135
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.UnitDowned
+  commentId: F:TDMaker.Core.SimEventKind.UnitDowned
+  id: UnitDowned
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: UnitDowned
+  nameWithType: SimEventKind.UnitDowned
+  fullName: TDMaker.Core.SimEventKind.UnitDowned
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Same entity entered its down delay; IntValue is used-return count.
+  example: []
+  syntax:
+    content: UnitDowned = 136
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.UnitRising
+  commentId: F:TDMaker.Core.SimEventKind.UnitRising
+  id: UnitRising
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: UnitRising
+  nameWithType: SimEventKind.UnitRising
+  fullName: TDMaker.Core.SimEventKind.UnitRising
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Health restored and rise preparation started; Value is its duration.
+  example: []
+  syntax:
+    content: UnitRising = 137
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.UnitRevived
+  commentId: F:TDMaker.Core.SimEventKind.UnitRevived
+  id: UnitRevived
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: UnitRevived
+  nameWithType: SimEventKind.UnitRevived
+  fullName: TDMaker.Core.SimEventKind.UnitRevived
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Entity finished preparation; Value is current health.
+  example: []
+  syntax:
+    content: UnitRevived = 138
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.RemainsCreated
+  commentId: F:TDMaker.Core.SimEventKind.RemainsCreated
+  id: RemainsCreated
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: RemainsCreated
+  nameWithType: SimEventKind.RemainsCreated
+  fullName: TDMaker.Core.SimEventKind.RemainsCreated
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Neutral body stored; IntValue is body Id.
+  example: []
+  syntax:
+    content: RemainsCreated = 139
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.RemainsReserved
+  commentId: F:TDMaker.Core.SimEventKind.RemainsReserved
+  id: RemainsReserved
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: RemainsReserved
+  nameWithType: SimEventKind.RemainsReserved
+  fullName: TDMaker.Core.SimEventKind.RemainsReserved
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Body exclusively reserved; EntityId is caster, OtherId original entity, IntValue body Id.
+  example: []
+  syntax:
+    content: RemainsReserved = 140
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.RemainsReleased
+  commentId: F:TDMaker.Core.SimEventKind.RemainsReleased
+  id: RemainsReleased
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: RemainsReleased
+  nameWithType: SimEventKind.RemainsReleased
+  fullName: TDMaker.Core.SimEventKind.RemainsReleased
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Body reservation cancelled without consumption.
+  example: []
+  syntax:
+    content: RemainsReleased = 141
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.RemainsConsumed
+  commentId: F:TDMaker.Core.SimEventKind.RemainsConsumed
+  id: RemainsConsumed
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: RemainsConsumed
+  nameWithType: SimEventKind.RemainsConsumed
+  fullName: TDMaker.Core.SimEventKind.RemainsConsumed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Body atomically consumed; OtherId is newly created entity, IntValue body Id.
+  example: []
+  syntax:
+    content: RemainsConsumed = 142
+    return:
+      type: TDMaker.Core.SimEventKind
+- uid: TDMaker.Core.SimEventKind.CustomEnd
+  commentId: F:TDMaker.Core.SimEventKind.CustomEnd
+  id: CustomEnd
+  parent: TDMaker.Core.SimEventKind
+  langs:
+  - csharp
+  - vb
+  name: CustomEnd
+  nameWithType: SimEventKind.CustomEnd
+  fullName: TDMaker.Core.SimEventKind.CustomEnd
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Last application-defined event value, inclusive.
+  example: []
+  syntax:
+    content: CustomEnd = 2147483647
+    return:
+      type: TDMaker.Core.SimEventKind
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.SimEventKind
+  commentId: T:TDMaker.Core.SimEventKind
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimEventKind.html
+  name: SimEventKind
+  nameWithType: SimEventKind
+  fullName: TDMaker.Core.SimEventKind

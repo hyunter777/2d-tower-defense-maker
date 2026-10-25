@@ -1,0 +1,764 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.AbilityData
+  commentId: T:TDMaker.Unity.Authoring.AbilityData
+  id: AbilityData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.AbilityData.#ctor
+  - TDMaker.Unity.Authoring.AbilityData.Id
+  - TDMaker.Unity.Authoring.AbilityData.RankCount
+  - TDMaker.Unity.Authoring.AbilityData.ToExecution
+  - TDMaker.Unity.Authoring.AbilityData.ToHeroSkill
+  - TDMaker.Unity.Authoring.AbilityData.ToTowerAbility
+  - TDMaker.Unity.Authoring.AbilityData.description
+  - TDMaker.Unity.Authoring.AbilityData.displayName
+  - TDMaker.Unity.Authoring.AbilityData.id
+  - TDMaker.Unity.Authoring.AbilityData.ranks
+  - TDMaker.Unity.Authoring.AbilityData.resetCooldownOnPurchase
+  langs:
+  - csharp
+  - vb
+  name: AbilityData
+  nameWithType: AbilityData
+  fullName: TDMaker.Unity.Authoring.AbilityData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: A purchasable tower ability or a hero skill with one or more ranks.
+  example: []
+  syntax:
+    content: public sealed class AbilityData
+    content.vb: Public NotInheritable Class AbilityData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.AbilityData.id
+  commentId: F:TDMaker.Unity.Authoring.AbilityData.id
+  id: id
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: AbilityData.id
+  fullName: TDMaker.Unity.Authoring.AbilityData.id
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Ability id; blank uses the display name.
+  example: []
+  syntax:
+    content: public string id
+    return:
+      type: System.String
+    content.vb: Public id As String
+- uid: TDMaker.Unity.Authoring.AbilityData.displayName
+  commentId: F:TDMaker.Unity.Authoring.AbilityData.displayName
+  id: displayName
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: displayName
+  nameWithType: AbilityData.displayName
+  fullName: TDMaker.Unity.Authoring.AbilityData.displayName
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Name shown on buttons.
+  example: []
+  syntax:
+    content: public string displayName
+    return:
+      type: System.String
+    content.vb: Public displayName As String
+- uid: TDMaker.Unity.Authoring.AbilityData.description
+  commentId: F:TDMaker.Unity.Authoring.AbilityData.description
+  id: description
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: description
+  nameWithType: AbilityData.description
+  fullName: TDMaker.Unity.Authoring.AbilityData.description
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Short description shown as a tooltip.
+  example: []
+  syntax:
+    content: '[TextArea]
+
+      public string description'
+    return:
+      type: System.String
+    content.vb: '<TextArea>
+
+      Public description As String'
+  attributes:
+  - type: UnityEngine.TextAreaAttribute
+    ctor: UnityEngine.TextAreaAttribute.#ctor
+    arguments: []
+- uid: TDMaker.Unity.Authoring.AbilityData.resetCooldownOnPurchase
+  commentId: F:TDMaker.Unity.Authoring.AbilityData.resetCooldownOnPurchase
+  id: resetCooldownOnPurchase
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: resetCooldownOnPurchase
+  nameWithType: AbilityData.resetCooldownOnPurchase
+  fullName: TDMaker.Unity.Authoring.AbilityData.resetCooldownOnPurchase
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Resets this ability's timers whenever a rank is bought.
+  example: []
+  syntax:
+    content: public bool resetCooldownOnPurchase
+    return:
+      type: System.Boolean
+    content.vb: Public resetCooldownOnPurchase As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityData.ranks
+  commentId: F:TDMaker.Unity.Authoring.AbilityData.ranks
+  id: ranks
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: ranks
+  nameWithType: AbilityData.ranks
+  fullName: TDMaker.Unity.Authoring.AbilityData.ranks
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Ranks in purchase order.
+  example: []
+  syntax:
+    content: public List<AbilityRankData> ranks
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.AbilityRankData}
+    content.vb: Public ranks As List(Of AbilityRankData)
+- uid: TDMaker.Unity.Authoring.AbilityData.ToExecution
+  commentId: M:TDMaker.Unity.Authoring.AbilityData.ToExecution
+  id: ToExecution
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: ToExecution()
+  nameWithType: AbilityData.ToExecution()
+  fullName: TDMaker.Unity.Authoring.AbilityData.ToExecution()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the executable rank payloads.
+  example: []
+  syntax:
+    content: public AbilityExecutionDef ToExecution()
+    return:
+      type: TDMaker.Core.Defs.AbilityExecutionDef
+    content.vb: Public Function ToExecution() As AbilityExecutionDef
+  overload: TDMaker.Unity.Authoring.AbilityData.ToExecution*
+- uid: TDMaker.Unity.Authoring.AbilityData.ToTowerAbility
+  commentId: M:TDMaker.Unity.Authoring.AbilityData.ToTowerAbility
+  id: ToTowerAbility
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: ToTowerAbility()
+  nameWithType: AbilityData.ToTowerAbility()
+  fullName: TDMaker.Unity.Authoring.AbilityData.ToTowerAbility()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes a purchasable tower ability (costs in gold).
+  example: []
+  syntax:
+    content: public AbilityDef ToTowerAbility()
+    return:
+      type: TDMaker.Core.Defs.AbilityDef
+    content.vb: Public Function ToTowerAbility() As AbilityDef
+  overload: TDMaker.Unity.Authoring.AbilityData.ToTowerAbility*
+- uid: TDMaker.Unity.Authoring.AbilityData.ToHeroSkill
+  commentId: M:TDMaker.Unity.Authoring.AbilityData.ToHeroSkill
+  id: ToHeroSkill
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: ToHeroSkill()
+  nameWithType: AbilityData.ToHeroSkill()
+  fullName: TDMaker.Unity.Authoring.AbilityData.ToHeroSkill()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes a hero skill (costs in skill points, with required levels).
+  example: []
+  syntax:
+    content: public HeroSkillDef ToHeroSkill()
+    return:
+      type: TDMaker.Core.Defs.HeroSkillDef
+    content.vb: Public Function ToHeroSkill() As HeroSkillDef
+  overload: TDMaker.Unity.Authoring.AbilityData.ToHeroSkill*
+- uid: TDMaker.Unity.Authoring.AbilityData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.AbilityData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: AbilityData()
+  nameWithType: AbilityData.AbilityData()
+  fullName: TDMaker.Unity.Authoring.AbilityData.AbilityData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public AbilityData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.AbilityData.#ctor*
+  nameWithType.vb: AbilityData.New()
+  fullName.vb: TDMaker.Unity.Authoring.AbilityData.New()
+  name.vb: New()
+- uid: TDMaker.Unity.Authoring.AbilityData.Id
+  commentId: P:TDMaker.Unity.Authoring.AbilityData.Id
+  id: Id
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: AbilityData.Id
+  fullName: TDMaker.Unity.Authoring.AbilityData.Id
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: The resolved id.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Unity.Authoring.AbilityData.Id*
+- uid: TDMaker.Unity.Authoring.AbilityData.RankCount
+  commentId: P:TDMaker.Unity.Authoring.AbilityData.RankCount
+  id: RankCount
+  parent: TDMaker.Unity.Authoring.AbilityData
+  langs:
+  - csharp
+  - vb
+  name: RankCount
+  nameWithType: AbilityData.RankCount
+  fullName: TDMaker.Unity.Authoring.AbilityData.RankCount
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Number of non-null ranks.
+  example: []
+  syntax:
+    content: public int RankCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property RankCount As Integer
+  overload: TDMaker.Unity.Authoring.AbilityData.RankCount*
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.AbilityRankData}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.AbilityRankData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<AbilityRankData>
+  nameWithType: List<AbilityRankData>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.AbilityRankData>
+  nameWithType.vb: List(Of AbilityRankData)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.AbilityRankData)
+  name.vb: List(Of AbilityRankData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.AbilityRankData
+    name: AbilityRankData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.AbilityRankData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.AbilityRankData
+    name: AbilityRankData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.AbilityRankData.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Unity.Authoring.AbilityData.ToExecution*
+  commentId: Overload:TDMaker.Unity.Authoring.AbilityData.ToExecution
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityData.html#TDMaker_Unity_Authoring_AbilityData_ToExecution
+  name: ToExecution
+  nameWithType: AbilityData.ToExecution
+  fullName: TDMaker.Unity.Authoring.AbilityData.ToExecution
+- uid: TDMaker.Core.Defs.AbilityExecutionDef
+  commentId: T:TDMaker.Core.Defs.AbilityExecutionDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityExecutionDef.html
+  name: AbilityExecutionDef
+  nameWithType: AbilityExecutionDef
+  fullName: TDMaker.Core.Defs.AbilityExecutionDef
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.AbilityData.ToTowerAbility*
+  commentId: Overload:TDMaker.Unity.Authoring.AbilityData.ToTowerAbility
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityData.html#TDMaker_Unity_Authoring_AbilityData_ToTowerAbility
+  name: ToTowerAbility
+  nameWithType: AbilityData.ToTowerAbility
+  fullName: TDMaker.Unity.Authoring.AbilityData.ToTowerAbility
+- uid: TDMaker.Core.Defs.AbilityDef
+  commentId: T:TDMaker.Core.Defs.AbilityDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityDef.html
+  name: AbilityDef
+  nameWithType: AbilityDef
+  fullName: TDMaker.Core.Defs.AbilityDef
+- uid: TDMaker.Unity.Authoring.AbilityData.ToHeroSkill*
+  commentId: Overload:TDMaker.Unity.Authoring.AbilityData.ToHeroSkill
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityData.html#TDMaker_Unity_Authoring_AbilityData_ToHeroSkill
+  name: ToHeroSkill
+  nameWithType: AbilityData.ToHeroSkill
+  fullName: TDMaker.Unity.Authoring.AbilityData.ToHeroSkill
+- uid: TDMaker.Core.Defs.HeroSkillDef
+  commentId: T:TDMaker.Core.Defs.HeroSkillDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.HeroSkillDef.html
+  name: HeroSkillDef
+  nameWithType: HeroSkillDef
+  fullName: TDMaker.Core.Defs.HeroSkillDef
+- uid: TDMaker.Unity.Authoring.AbilityData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.AbilityData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityData.html#TDMaker_Unity_Authoring_AbilityData__ctor
+  name: AbilityData
+  nameWithType: AbilityData.AbilityData
+  fullName: TDMaker.Unity.Authoring.AbilityData.AbilityData
+  nameWithType.vb: AbilityData.New
+  fullName.vb: TDMaker.Unity.Authoring.AbilityData.New
+  name.vb: New
+- uid: TDMaker.Unity.Authoring.AbilityData.Id*
+  commentId: Overload:TDMaker.Unity.Authoring.AbilityData.Id
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityData.html#TDMaker_Unity_Authoring_AbilityData_Id
+  name: Id
+  nameWithType: AbilityData.Id
+  fullName: TDMaker.Unity.Authoring.AbilityData.Id
+- uid: TDMaker.Unity.Authoring.AbilityData.RankCount*
+  commentId: Overload:TDMaker.Unity.Authoring.AbilityData.RankCount
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityData.html#TDMaker_Unity_Authoring_AbilityData_RankCount
+  name: RankCount
+  nameWithType: AbilityData.RankCount
+  fullName: TDMaker.Unity.Authoring.AbilityData.RankCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

@@ -1,0 +1,563 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.PathDestinationData
+  commentId: T:TDMaker.Unity.Authoring.PathDestinationData
+  id: PathDestinationData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.PathDestinationData.#ctor
+  - TDMaker.Unity.Authoring.PathDestinationData.ToDef
+  - TDMaker.Unity.Authoring.PathDestinationData.clearEffects
+  - TDMaker.Unity.Authoring.PathDestinationData.laneIndex
+  - TDMaker.Unity.Authoring.PathDestinationData.nodeIndex
+  - TDMaker.Unity.Authoring.PathDestinationData.pathIndex
+  - TDMaker.Unity.Authoring.PathDestinationData.progress
+  langs:
+  - csharp
+  - vb
+  name: PathDestinationData
+  nameWithType: PathDestinationData
+  fullName: TDMaker.Unity.Authoring.PathDestinationData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'An exact point on a level path, baked into <xref href="TDMaker.Core.Defs.PathDestinationDef" data-throw-if-not-resolved="false"></xref>.
+    Validated against the level when used:
+
+    an invalid destination (path, lane or node outside the path''s entry..exit range) moves nothing.'
+  example: []
+  syntax:
+    content: public sealed class PathDestinationData
+    content.vb: Public NotInheritable Class PathDestinationData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.PathDestinationData.pathIndex
+  commentId: F:TDMaker.Unity.Authoring.PathDestinationData.pathIndex
+  id: pathIndex
+  parent: TDMaker.Unity.Authoring.PathDestinationData
+  langs:
+  - csharp
+  - vb
+  name: pathIndex
+  nameWithType: PathDestinationData.pathIndex
+  fullName: TDMaker.Unity.Authoring.PathDestinationData.pathIndex
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Destination path index (order of the level's paths).
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public int pathIndex'
+    return:
+      type: System.Int32
+    content.vb: '<Min(0)>
+
+      Public pathIndex As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.PathDestinationData.nodeIndex
+  commentId: F:TDMaker.Unity.Authoring.PathDestinationData.nodeIndex
+  id: nodeIndex
+  parent: TDMaker.Unity.Authoring.PathDestinationData
+  langs:
+  - csharp
+  - vb
+  name: nodeIndex
+  nameWithType: PathDestinationData.nodeIndex
+  fullName: TDMaker.Unity.Authoring.PathDestinationData.nodeIndex
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Segment start node; must lie between the path's entry and exit nodes.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public int nodeIndex'
+    return:
+      type: System.Int32
+    content.vb: '<Min(0)>
+
+      Public nodeIndex As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.PathDestinationData.laneIndex
+  commentId: F:TDMaker.Unity.Authoring.PathDestinationData.laneIndex
+  id: laneIndex
+  parent: TDMaker.Unity.Authoring.PathDestinationData
+  langs:
+  - csharp
+  - vb
+  name: laneIndex
+  nameWithType: PathDestinationData.laneIndex
+  fullName: TDMaker.Unity.Authoring.PathDestinationData.laneIndex
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Fixed lane, or -1 to keep the unit's lane (modulo the destination lane count).
+  example: []
+  syntax:
+    content: '[Min(-1)]
+
+      public int laneIndex'
+    return:
+      type: System.Int32
+    content.vb: '<Min(-1)>
+
+      Public laneIndex As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: -1
+- uid: TDMaker.Unity.Authoring.PathDestinationData.progress
+  commentId: F:TDMaker.Unity.Authoring.PathDestinationData.progress
+  id: progress
+  parent: TDMaker.Unity.Authoring.PathDestinationData
+  langs:
+  - csharp
+  - vb
+  name: progress
+  nameWithType: PathDestinationData.progress
+  fullName: TDMaker.Unity.Authoring.PathDestinationData.progress
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Fraction along the destination segment (must be zero on the exit node).
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float progress'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public progress As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.PathDestinationData.clearEffects
+  commentId: F:TDMaker.Unity.Authoring.PathDestinationData.clearEffects
+  id: clearEffects
+  parent: TDMaker.Unity.Authoring.PathDestinationData
+  langs:
+  - csharp
+  - vb
+  name: clearEffects
+  nameWithType: PathDestinationData.clearEffects
+  fullName: TDMaker.Unity.Authoring.PathDestinationData.clearEffects
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Also removes the unit's attached effects.
+  example: []
+  syntax:
+    content: public bool clearEffects
+    return:
+      type: System.Boolean
+    content.vb: Public clearEffects As Boolean
+- uid: TDMaker.Unity.Authoring.PathDestinationData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.PathDestinationData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.PathDestinationData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: PathDestinationData.ToDef()
+  fullName: TDMaker.Unity.Authoring.PathDestinationData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the destination.
+  example: []
+  syntax:
+    content: public PathDestinationDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.PathDestinationDef
+    content.vb: Public Function ToDef() As PathDestinationDef
+  overload: TDMaker.Unity.Authoring.PathDestinationData.ToDef*
+- uid: TDMaker.Unity.Authoring.PathDestinationData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.PathDestinationData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.PathDestinationData
+  langs:
+  - csharp
+  - vb
+  name: PathDestinationData()
+  nameWithType: PathDestinationData.PathDestinationData()
+  fullName: TDMaker.Unity.Authoring.PathDestinationData.PathDestinationData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public PathDestinationData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.PathDestinationData.#ctor*
+  nameWithType.vb: PathDestinationData.New()
+  fullName.vb: TDMaker.Unity.Authoring.PathDestinationData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Core.Defs.PathDestinationDef
+  commentId: T:TDMaker.Core.Defs.PathDestinationDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDestinationDef.html
+  name: PathDestinationDef
+  nameWithType: PathDestinationDef
+  fullName: TDMaker.Core.Defs.PathDestinationDef
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.PathDestinationData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.PathDestinationData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathDestinationData.html#TDMaker_Unity_Authoring_PathDestinationData_ToDef
+  name: ToDef
+  nameWithType: PathDestinationData.ToDef
+  fullName: TDMaker.Unity.Authoring.PathDestinationData.ToDef
+- uid: TDMaker.Unity.Authoring.PathDestinationData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.PathDestinationData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathDestinationData.html#TDMaker_Unity_Authoring_PathDestinationData__ctor
+  name: PathDestinationData
+  nameWithType: PathDestinationData.PathDestinationData
+  fullName: TDMaker.Unity.Authoring.PathDestinationData.PathDestinationData
+  nameWithType.vb: PathDestinationData.New
+  fullName.vb: TDMaker.Unity.Authoring.PathDestinationData.New
+  name.vb: New

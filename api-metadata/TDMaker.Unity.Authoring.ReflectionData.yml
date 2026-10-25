@@ -1,0 +1,653 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.ReflectionData
+  commentId: T:TDMaker.Unity.Authoring.ReflectionData
+  id: ReflectionData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.ReflectionData.#ctor
+  - TDMaker.Unity.Authoring.ReflectionData.Id
+  - TDMaker.Unity.Authoring.ReflectionData.ToDef
+  - TDMaker.Unity.Authoring.ReflectionData.color
+  - TDMaker.Unity.Authoring.ReflectionData.enabled
+  - TDMaker.Unity.Authoring.ReflectionData.id
+  - TDMaker.Unity.Authoring.ReflectionData.kind
+  - TDMaker.Unity.Authoring.ReflectionData.magicalPierce
+  - TDMaker.Unity.Authoring.ReflectionData.physicalPierce
+  - TDMaker.Unity.Authoring.ReflectionData.share
+  langs:
+  - csharp
+  - vb
+  name: ReflectionData
+  nameWithType: ReflectionData
+  fullName: TDMaker.Unity.Authoring.ReflectionData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Returns a share of the health actually lost by this unit to its attacker as a single hit, baked into <xref href="TDMaker.Core.Defs.ReflectionDef"
+    data-throw-if-not-resolved="false"></xref>.
+
+    Shield absorption and overkill do not count; reflected hits never reflect again or steal life.'
+  example: []
+  syntax:
+    content: public sealed class ReflectionData
+    content.vb: Public NotInheritable Class ReflectionData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.ReflectionData.enabled
+  commentId: F:TDMaker.Unity.Authoring.ReflectionData.enabled
+  id: enabled
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: enabled
+  nameWithType: ReflectionData.enabled
+  fullName: TDMaker.Unity.Authoring.ReflectionData.enabled
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether the unit reflects damage.
+  example: []
+  syntax:
+    content: public bool enabled
+    return:
+      type: System.Boolean
+    content.vb: Public enabled As Boolean
+- uid: TDMaker.Unity.Authoring.ReflectionData.id
+  commentId: F:TDMaker.Unity.Authoring.ReflectionData.id
+  id: id
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: ReflectionData.id
+  fullName: TDMaker.Unity.Authoring.ReflectionData.id
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Event key (also selects the feedback colour in the view).
+  example: []
+  syntax:
+    content: public string id
+    return:
+      type: System.String
+    content.vb: Public id As String
+- uid: TDMaker.Unity.Authoring.ReflectionData.share
+  commentId: F:TDMaker.Unity.Authoring.ReflectionData.share
+  id: share
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: share
+  nameWithType: ReflectionData.share
+  fullName: TDMaker.Unity.Authoring.ReflectionData.share
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Share of actual health loss returned (rounded up).
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float share'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public share As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.ReflectionData.kind
+  commentId: F:TDMaker.Unity.Authoring.ReflectionData.kind
+  id: kind
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: kind
+  nameWithType: ReflectionData.kind
+  fullName: TDMaker.Unity.Authoring.ReflectionData.kind
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Defense channel of the returned hit.
+  example: []
+  syntax:
+    content: public DamageKind kind
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+    content.vb: Public kind As DamageKind
+- uid: TDMaker.Unity.Authoring.ReflectionData.physicalPierce
+  commentId: F:TDMaker.Unity.Authoring.ReflectionData.physicalPierce
+  id: physicalPierce
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: physicalPierce
+  nameWithType: ReflectionData.physicalPierce
+  fullName: TDMaker.Unity.Authoring.ReflectionData.physicalPierce
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Physical reduction ignored by the returned hit.
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float physicalPierce'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public physicalPierce As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.ReflectionData.magicalPierce
+  commentId: F:TDMaker.Unity.Authoring.ReflectionData.magicalPierce
+  id: magicalPierce
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: magicalPierce
+  nameWithType: ReflectionData.magicalPierce
+  fullName: TDMaker.Unity.Authoring.ReflectionData.magicalPierce
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Magical reduction ignored by the returned hit.
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float magicalPierce'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public magicalPierce As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.ReflectionData.color
+  commentId: F:TDMaker.Unity.Authoring.ReflectionData.color
+  id: color
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: color
+  nameWithType: ReflectionData.color
+  fullName: TDMaker.Unity.Authoring.ReflectionData.color
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Feedback colour.
+  example: []
+  syntax:
+    content: public Color color
+    return:
+      type: UnityEngine.Color
+    content.vb: Public color As Color
+- uid: TDMaker.Unity.Authoring.ReflectionData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.ReflectionData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: ReflectionData.ToDef()
+  fullName: TDMaker.Unity.Authoring.ReflectionData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the reflection, or null when disabled.
+  example: []
+  syntax:
+    content: public ReflectionDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.ReflectionDef
+    content.vb: Public Function ToDef() As ReflectionDef
+  overload: TDMaker.Unity.Authoring.ReflectionData.ToDef*
+- uid: TDMaker.Unity.Authoring.ReflectionData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.ReflectionData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: ReflectionData()
+  nameWithType: ReflectionData.ReflectionData()
+  fullName: TDMaker.Unity.Authoring.ReflectionData.ReflectionData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public ReflectionData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.ReflectionData.#ctor*
+  nameWithType.vb: ReflectionData.New()
+  fullName.vb: TDMaker.Unity.Authoring.ReflectionData.New()
+  name.vb: New()
+- uid: TDMaker.Unity.Authoring.ReflectionData.Id
+  commentId: P:TDMaker.Unity.Authoring.ReflectionData.Id
+  id: Id
+  parent: TDMaker.Unity.Authoring.ReflectionData
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ReflectionData.Id
+  fullName: TDMaker.Unity.Authoring.ReflectionData.Id
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: The resolved event key.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Unity.Authoring.ReflectionData.Id*
+references:
+- uid: TDMaker.Core.Defs.ReflectionDef
+  commentId: T:TDMaker.Core.Defs.ReflectionDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ReflectionDef.html
+  name: ReflectionDef
+  nameWithType: ReflectionDef
+  fullName: TDMaker.Core.Defs.ReflectionDef
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.DamageKind
+  commentId: T:TDMaker.Core.Defs.DamageKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageKind.html
+  name: DamageKind
+  nameWithType: DamageKind
+  fullName: TDMaker.Core.Defs.DamageKind
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Authoring.ReflectionData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.ReflectionData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.ReflectionData.html#TDMaker_Unity_Authoring_ReflectionData_ToDef
+  name: ToDef
+  nameWithType: ReflectionData.ToDef
+  fullName: TDMaker.Unity.Authoring.ReflectionData.ToDef
+- uid: TDMaker.Unity.Authoring.ReflectionData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.ReflectionData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.ReflectionData.html#TDMaker_Unity_Authoring_ReflectionData__ctor
+  name: ReflectionData
+  nameWithType: ReflectionData.ReflectionData
+  fullName: TDMaker.Unity.Authoring.ReflectionData.ReflectionData
+  nameWithType.vb: ReflectionData.New
+  fullName.vb: TDMaker.Unity.Authoring.ReflectionData.New
+  name.vb: New
+- uid: TDMaker.Unity.Authoring.ReflectionData.Id*
+  commentId: Overload:TDMaker.Unity.Authoring.ReflectionData.Id
+  isExternal: true
+  href: TDMaker.Unity.Authoring.ReflectionData.html#TDMaker_Unity_Authoring_ReflectionData_Id
+  name: Id
+  nameWithType: ReflectionData.Id
+  fullName: TDMaker.Unity.Authoring.ReflectionData.Id

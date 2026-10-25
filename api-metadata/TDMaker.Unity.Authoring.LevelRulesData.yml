@@ -1,0 +1,640 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.LevelRulesData
+  commentId: T:TDMaker.Unity.Authoring.LevelRulesData
+  id: LevelRulesData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.LevelRulesData.#ctor
+  - TDMaker.Unity.Authoring.LevelRulesData.ToDef(TDMaker.Core.Defs.SpellDef[])
+  - TDMaker.Unity.Authoring.LevelRulesData.earlyCallCutThreshold
+  - TDMaker.Unity.Authoring.LevelRulesData.earlyCallRewardRate
+  - TDMaker.Unity.Authoring.LevelRulesData.earlyCallSpellCooldownCut
+  - TDMaker.Unity.Authoring.LevelRulesData.leakBountyShare
+  - TDMaker.Unity.Authoring.LevelRulesData.overrideEarlyCallRate
+  - TDMaker.Unity.Authoring.LevelRulesData.refundShare
+  - TDMaker.Unity.Authoring.LevelRulesData.victoryRating
+  langs:
+  - csharp
+  - vb
+  name: LevelRulesData
+  nameWithType: LevelRulesData
+  fullName: TDMaker.Unity.Authoring.LevelRulesData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Level-wide economy and flow rules, baked into <xref href="TDMaker.Core.Defs.LevelRulesDef" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public sealed class LevelRulesData
+    content.vb: Public NotInheritable Class LevelRulesData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.LevelRulesData.leakBountyShare
+  commentId: F:TDMaker.Unity.Authoring.LevelRulesData.leakBountyShare
+  id: leakBountyShare
+  parent: TDMaker.Unity.Authoring.LevelRulesData
+  langs:
+  - csharp
+  - vb
+  name: leakBountyShare
+  nameWithType: LevelRulesData.leakBountyShare
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.leakBountyShare
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Share of an enemy's bounty still paid when it leaks.
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float leakBountyShare'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public leakBountyShare As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.LevelRulesData.refundShare
+  commentId: F:TDMaker.Unity.Authoring.LevelRulesData.refundShare
+  id: refundShare
+  parent: TDMaker.Unity.Authoring.LevelRulesData
+  langs:
+  - csharp
+  - vb
+  name: refundShare
+  nameWithType: LevelRulesData.refundShare
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.refundShare
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Share of total investment refunded when selling after the first wave has started.
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float refundShare'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public refundShare As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.LevelRulesData.overrideEarlyCallRate
+  commentId: F:TDMaker.Unity.Authoring.LevelRulesData.overrideEarlyCallRate
+  id: overrideEarlyCallRate
+  parent: TDMaker.Unity.Authoring.LevelRulesData
+  langs:
+  - csharp
+  - vb
+  name: overrideEarlyCallRate
+  nameWithType: LevelRulesData.overrideEarlyCallRate
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.overrideEarlyCallRate
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Uses <xref href="TDMaker.Unity.Authoring.LevelRulesData.earlyCallRewardRate" data-throw-if-not-resolved="false"></xref>
+    instead of each wave's own early gold rate.
+  example: []
+  syntax:
+    content: public bool overrideEarlyCallRate
+    return:
+      type: System.Boolean
+    content.vb: Public overrideEarlyCallRate As Boolean
+- uid: TDMaker.Unity.Authoring.LevelRulesData.earlyCallRewardRate
+  commentId: F:TDMaker.Unity.Authoring.LevelRulesData.earlyCallRewardRate
+  id: earlyCallRewardRate
+  parent: TDMaker.Unity.Authoring.LevelRulesData
+  langs:
+  - csharp
+  - vb
+  name: earlyCallRewardRate
+  nameWithType: LevelRulesData.earlyCallRewardRate
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.earlyCallRewardRate
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Gold per rounded remaining second when calling a wave early.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float earlyCallRewardRate'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public earlyCallRewardRate As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.LevelRulesData.earlyCallSpellCooldownCut
+  commentId: F:TDMaker.Unity.Authoring.LevelRulesData.earlyCallSpellCooldownCut
+  id: earlyCallSpellCooldownCut
+  parent: TDMaker.Unity.Authoring.LevelRulesData
+  langs:
+  - csharp
+  - vb
+  name: earlyCallSpellCooldownCut
+  nameWithType: LevelRulesData.earlyCallSpellCooldownCut
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.earlyCallSpellCooldownCut
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Calling a wave early also shortens cooling spells by the remaining time.
+  example: []
+  syntax:
+    content: public bool earlyCallSpellCooldownCut
+    return:
+      type: System.Boolean
+    content.vb: Public earlyCallSpellCooldownCut As Boolean
+- uid: TDMaker.Unity.Authoring.LevelRulesData.earlyCallCutThreshold
+  commentId: F:TDMaker.Unity.Authoring.LevelRulesData.earlyCallCutThreshold
+  id: earlyCallCutThreshold
+  parent: TDMaker.Unity.Authoring.LevelRulesData
+  langs:
+  - csharp
+  - vb
+  name: earlyCallCutThreshold
+  nameWithType: LevelRulesData.earlyCallCutThreshold
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.earlyCallCutThreshold
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: The remaining time must exceed this many seconds for the spell cut to apply.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float earlyCallCutThreshold'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public earlyCallCutThreshold As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.LevelRulesData.victoryRating
+  commentId: F:TDMaker.Unity.Authoring.LevelRulesData.victoryRating
+  id: victoryRating
+  parent: TDMaker.Unity.Authoring.LevelRulesData
+  langs:
+  - csharp
+  - vb
+  name: victoryRating
+  nameWithType: LevelRulesData.victoryRating
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.victoryRating
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Victory star bands, rated by the simulation (<code>GameState.VictoryStars</code>, Victory event <code>IntValue</code>).
+  example: []
+  syntax:
+    content: public VictoryRatingData victoryRating
+    return:
+      type: TDMaker.Unity.Authoring.VictoryRatingData
+    content.vb: Public victoryRating As VictoryRatingData
+- uid: TDMaker.Unity.Authoring.LevelRulesData.ToDef(TDMaker.Core.Defs.SpellDef[])
+  commentId: M:TDMaker.Unity.Authoring.LevelRulesData.ToDef(TDMaker.Core.Defs.SpellDef[])
+  id: ToDef(TDMaker.Core.Defs.SpellDef[])
+  parent: TDMaker.Unity.Authoring.LevelRulesData
+  langs:
+  - csharp
+  - vb
+  name: ToDef(SpellDef[])
+  nameWithType: LevelRulesData.ToDef(SpellDef[])
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.ToDef(TDMaker.Core.Defs.SpellDef[])
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the rules with the level's spell definitions.
+  example: []
+  syntax:
+    content: public LevelRulesDef ToDef(SpellDef[] spells)
+    parameters:
+    - id: spells
+      type: TDMaker.Core.Defs.SpellDef[]
+    return:
+      type: TDMaker.Core.Defs.LevelRulesDef
+    content.vb: Public Function ToDef(spells As SpellDef()) As LevelRulesDef
+  overload: TDMaker.Unity.Authoring.LevelRulesData.ToDef*
+  nameWithType.vb: LevelRulesData.ToDef(SpellDef())
+  fullName.vb: TDMaker.Unity.Authoring.LevelRulesData.ToDef(TDMaker.Core.Defs.SpellDef())
+  name.vb: ToDef(SpellDef())
+- uid: TDMaker.Unity.Authoring.LevelRulesData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.LevelRulesData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.LevelRulesData
+  langs:
+  - csharp
+  - vb
+  name: LevelRulesData()
+  nameWithType: LevelRulesData.LevelRulesData()
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.LevelRulesData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public LevelRulesData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.LevelRulesData.#ctor*
+  nameWithType.vb: LevelRulesData.New()
+  fullName.vb: TDMaker.Unity.Authoring.LevelRulesData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Core.Defs.LevelRulesDef
+  commentId: T:TDMaker.Core.Defs.LevelRulesDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelRulesDef.html
+  name: LevelRulesDef
+  nameWithType: LevelRulesDef
+  fullName: TDMaker.Core.Defs.LevelRulesDef
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.LevelRulesData.earlyCallRewardRate
+  commentId: F:TDMaker.Unity.Authoring.LevelRulesData.earlyCallRewardRate
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelRulesData.html#TDMaker_Unity_Authoring_LevelRulesData_earlyCallRewardRate
+  name: earlyCallRewardRate
+  nameWithType: LevelRulesData.earlyCallRewardRate
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.earlyCallRewardRate
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.VictoryRatingData
+  commentId: T:TDMaker.Unity.Authoring.VictoryRatingData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.VictoryRatingData.html
+  name: VictoryRatingData
+  nameWithType: VictoryRatingData
+  fullName: TDMaker.Unity.Authoring.VictoryRatingData
+- uid: TDMaker.Unity.Authoring.LevelRulesData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.LevelRulesData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelRulesData.html#TDMaker_Unity_Authoring_LevelRulesData_ToDef_TDMaker_Core_Defs_SpellDef___
+  name: ToDef
+  nameWithType: LevelRulesData.ToDef
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.ToDef
+- uid: TDMaker.Core.Defs.SpellDef[]
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html
+  name: SpellDef[]
+  nameWithType: SpellDef[]
+  fullName: TDMaker.Core.Defs.SpellDef[]
+  nameWithType.vb: SpellDef()
+  fullName.vb: TDMaker.Core.Defs.SpellDef()
+  name.vb: SpellDef()
+  spec.csharp:
+  - uid: TDMaker.Core.Defs.SpellDef
+    name: SpellDef
+    isExternal: true
+    href: TDMaker.Core.Defs.SpellDef.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Defs.SpellDef
+    name: SpellDef
+    isExternal: true
+    href: TDMaker.Core.Defs.SpellDef.html
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.Authoring.LevelRulesData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.LevelRulesData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelRulesData.html#TDMaker_Unity_Authoring_LevelRulesData__ctor
+  name: LevelRulesData
+  nameWithType: LevelRulesData.LevelRulesData
+  fullName: TDMaker.Unity.Authoring.LevelRulesData.LevelRulesData
+  nameWithType.vb: LevelRulesData.New
+  fullName.vb: TDMaker.Unity.Authoring.LevelRulesData.New
+  name.vb: New

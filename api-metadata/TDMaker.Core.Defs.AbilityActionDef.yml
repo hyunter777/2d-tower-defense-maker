@@ -1,0 +1,760 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.AbilityActionDef
+  commentId: T:TDMaker.Core.Defs.AbilityActionDef
+  id: AbilityActionDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.AbilityActionDef.#ctor(System.Single,TDMaker.Core.Defs.RangedAttackDef,TDMaker.Core.Defs.StatusEffectDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.AreaEffectDef,System.Single,System.Single)
+  - TDMaker.Core.Defs.AbilityActionDef.#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single)
+  - TDMaker.Core.Defs.AbilityActionDef.#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single,System.Single)
+  - TDMaker.Core.Defs.AbilityActionDef.Area
+  - TDMaker.Core.Defs.AbilityActionDef.Attack
+  - TDMaker.Core.Defs.AbilityActionDef.Cooldown
+  - TDMaker.Core.Defs.AbilityActionDef.CustomAction
+  - TDMaker.Core.Defs.AbilityActionDef.InitialDelay
+  - TDMaker.Core.Defs.AbilityActionDef.SelfEffect
+  - TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank
+  - TDMaker.Core.Defs.AbilityActionDef.Summon
+  - TDMaker.Core.Defs.AbilityActionDef.WithCustomAction(TDMaker.Core.IAbilityAction)
+  langs:
+  - csharp
+  - vb
+  name: AbilityActionDef
+  nameWithType: AbilityActionDef
+  fullName: TDMaker.Core.Defs.AbilityActionDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: A generic timed action channel; payloads can be combined.
+  example: []
+  syntax:
+    content: public sealed class AbilityActionDef
+    content.vb: Public NotInheritable Class AbilityActionDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.AbilityActionDef.#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single)
+  commentId: M:TDMaker.Core.Defs.AbilityActionDef.#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single)
+  id: '#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single)'
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: AbilityActionDef(IAbilityAction, float, float)
+  nameWithType: AbilityActionDef.AbilityActionDef(IAbilityAction, float, float)
+  fullName: TDMaker.Core.Defs.AbilityActionDef.AbilityActionDef(TDMaker.Core.IAbilityAction, float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a custom-only timed action without changing the original constructor.
+  example:
+  - '<pre><code class="lang-csharp">new AbilityActionDef(new ShieldPulse(), 2, initialDelay: 1);</code></pre>'
+  syntax:
+    content: public AbilityActionDef(IAbilityAction customAction, float cooldown, float initialDelay = 0)
+    parameters:
+    - id: customAction
+      type: TDMaker.Core.IAbilityAction
+    - id: cooldown
+      type: System.Single
+    - id: initialDelay
+      type: System.Single
+    content.vb: Public Sub New(customAction As IAbilityAction, cooldown As Single, initialDelay As Single = 0)
+  overload: TDMaker.Core.Defs.AbilityActionDef.#ctor*
+  nameWithType.vb: AbilityActionDef.New(IAbilityAction, Single, Single)
+  fullName.vb: TDMaker.Core.Defs.AbilityActionDef.New(TDMaker.Core.IAbilityAction, Single, Single)
+  name.vb: New(IAbilityAction, Single, Single)
+- uid: TDMaker.Core.Defs.AbilityActionDef.#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single,System.Single)
+  commentId: M:TDMaker.Core.Defs.AbilityActionDef.#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single,System.Single)
+  id: '#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single,System.Single)'
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: AbilityActionDef(IAbilityAction, float, float, float)
+  nameWithType: AbilityActionDef.AbilityActionDef(IAbilityAction, float, float, float)
+  fullName: TDMaker.Core.Defs.AbilityActionDef.AbilityActionDef(TDMaker.Core.IAbilityAction, float, float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a custom action awarding skill experience per active hero rank on successful activation.
+  example:
+  - '<pre><code class="lang-csharp">new AbilityActionDef(new ShieldPulse(), 2, initialDelay: 1, skillExperiencePerRank: 3);</code></pre>'
+  syntax:
+    content: public AbilityActionDef(IAbilityAction customAction, float cooldown, float initialDelay, float skillExperiencePerRank)
+    parameters:
+    - id: customAction
+      type: TDMaker.Core.IAbilityAction
+    - id: cooldown
+      type: System.Single
+    - id: initialDelay
+      type: System.Single
+    - id: skillExperiencePerRank
+      type: System.Single
+    content.vb: Public Sub New(customAction As IAbilityAction, cooldown As Single, initialDelay As Single, skillExperiencePerRank
+      As Single)
+  overload: TDMaker.Core.Defs.AbilityActionDef.#ctor*
+  nameWithType.vb: AbilityActionDef.New(IAbilityAction, Single, Single, Single)
+  fullName.vb: TDMaker.Core.Defs.AbilityActionDef.New(TDMaker.Core.IAbilityAction, Single, Single, Single)
+  name.vb: New(IAbilityAction, Single, Single, Single)
+- uid: TDMaker.Core.Defs.AbilityActionDef.WithCustomAction(TDMaker.Core.IAbilityAction)
+  commentId: M:TDMaker.Core.Defs.AbilityActionDef.WithCustomAction(TDMaker.Core.IAbilityAction)
+  id: WithCustomAction(TDMaker.Core.IAbilityAction)
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: WithCustomAction(IAbilityAction)
+  nameWithType: AbilityActionDef.WithCustomAction(IAbilityAction)
+  fullName: TDMaker.Core.Defs.AbilityActionDef.WithCustomAction(TDMaker.Core.IAbilityAction)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies a built-in or custom action and replaces its custom payload.
+  example:
+  - <pre><code class="lang-csharp">var combined = attackAction.WithCustomAction(new ShieldPulse());</code></pre>
+  syntax:
+    content: public AbilityActionDef WithCustomAction(IAbilityAction customAction)
+    parameters:
+    - id: customAction
+      type: TDMaker.Core.IAbilityAction
+    return:
+      type: TDMaker.Core.Defs.AbilityActionDef
+    content.vb: Public Function WithCustomAction(customAction As IAbilityAction) As AbilityActionDef
+  overload: TDMaker.Core.Defs.AbilityActionDef.WithCustomAction*
+- uid: TDMaker.Core.Defs.AbilityActionDef.#ctor(System.Single,TDMaker.Core.Defs.RangedAttackDef,TDMaker.Core.Defs.StatusEffectDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.AreaEffectDef,System.Single,System.Single)
+  commentId: M:TDMaker.Core.Defs.AbilityActionDef.#ctor(System.Single,TDMaker.Core.Defs.RangedAttackDef,TDMaker.Core.Defs.StatusEffectDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.AreaEffectDef,System.Single,System.Single)
+  id: '#ctor(System.Single,TDMaker.Core.Defs.RangedAttackDef,TDMaker.Core.Defs.StatusEffectDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.AreaEffectDef,System.Single,System.Single)'
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: AbilityActionDef(float, RangedAttackDef, StatusEffectDef, SummonDef, AreaEffectDef, float, float)
+  nameWithType: AbilityActionDef.AbilityActionDef(float, RangedAttackDef, StatusEffectDef, SummonDef, AreaEffectDef, float,
+    float)
+  fullName: TDMaker.Core.Defs.AbilityActionDef.AbilityActionDef(float, TDMaker.Core.Defs.RangedAttackDef, TDMaker.Core.Defs.StatusEffectDef,
+    TDMaker.Core.Defs.SummonDef, TDMaker.Core.Defs.AreaEffectDef, float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a generic activation channel.
+  example: []
+  syntax:
+    content: public AbilityActionDef(float cooldown, RangedAttackDef attack = null, StatusEffectDef selfEffect = null, SummonDef
+      summon = null, AreaEffectDef area = null, float skillExperiencePerRank = 0, float initialDelay = 0)
+    parameters:
+    - id: cooldown
+      type: System.Single
+    - id: attack
+      type: TDMaker.Core.Defs.RangedAttackDef
+    - id: selfEffect
+      type: TDMaker.Core.Defs.StatusEffectDef
+    - id: summon
+      type: TDMaker.Core.Defs.SummonDef
+    - id: area
+      type: TDMaker.Core.Defs.AreaEffectDef
+    - id: skillExperiencePerRank
+      type: System.Single
+    - id: initialDelay
+      type: System.Single
+    content.vb: Public Sub New(cooldown As Single, attack As RangedAttackDef = Nothing, selfEffect As StatusEffectDef = Nothing,
+      summon As SummonDef = Nothing, area As AreaEffectDef = Nothing, skillExperiencePerRank As Single = 0, initialDelay As
+      Single = 0)
+  overload: TDMaker.Core.Defs.AbilityActionDef.#ctor*
+  nameWithType.vb: AbilityActionDef.New(Single, RangedAttackDef, StatusEffectDef, SummonDef, AreaEffectDef, Single, Single)
+  fullName.vb: TDMaker.Core.Defs.AbilityActionDef.New(Single, TDMaker.Core.Defs.RangedAttackDef, TDMaker.Core.Defs.StatusEffectDef,
+    TDMaker.Core.Defs.SummonDef, TDMaker.Core.Defs.AreaEffectDef, Single, Single)
+  name.vb: New(Single, RangedAttackDef, StatusEffectDef, SummonDef, AreaEffectDef, Single, Single)
+- uid: TDMaker.Core.Defs.AbilityActionDef.CustomAction
+  commentId: P:TDMaker.Core.Defs.AbilityActionDef.CustomAction
+  id: CustomAction
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: CustomAction
+  nameWithType: AbilityActionDef.CustomAction
+  fullName: TDMaker.Core.Defs.AbilityActionDef.CustomAction
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional custom activation payload; shared configuration must remain immutable.
+  example: []
+  syntax:
+    content: public IAbilityAction CustomAction { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.IAbilityAction
+    content.vb: Public ReadOnly Property CustomAction As IAbilityAction
+  overload: TDMaker.Core.Defs.AbilityActionDef.CustomAction*
+- uid: TDMaker.Core.Defs.AbilityActionDef.Cooldown
+  commentId: P:TDMaker.Core.Defs.AbilityActionDef.Cooldown
+  id: Cooldown
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: Cooldown
+  nameWithType: AbilityActionDef.Cooldown
+  fullName: TDMaker.Core.Defs.AbilityActionDef.Cooldown
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Repeat delay measured from successful activation.
+  example: []
+  syntax:
+    content: public float Cooldown { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Cooldown As Single
+  overload: TDMaker.Core.Defs.AbilityActionDef.Cooldown*
+- uid: TDMaker.Core.Defs.AbilityActionDef.Attack
+  commentId: P:TDMaker.Core.Defs.AbilityActionDef.Attack
+  id: Attack
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: Attack
+  nameWithType: AbilityActionDef.Attack
+  fullName: TDMaker.Core.Defs.AbilityActionDef.Attack
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional additional ranged attack.
+  example: []
+  syntax:
+    content: public RangedAttackDef Attack { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.RangedAttackDef
+    content.vb: Public ReadOnly Property Attack As RangedAttackDef
+  overload: TDMaker.Core.Defs.AbilityActionDef.Attack*
+- uid: TDMaker.Core.Defs.AbilityActionDef.SelfEffect
+  commentId: P:TDMaker.Core.Defs.AbilityActionDef.SelfEffect
+  id: SelfEffect
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: SelfEffect
+  nameWithType: AbilityActionDef.SelfEffect
+  fullName: TDMaker.Core.Defs.AbilityActionDef.SelfEffect
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional self attachment.
+  example: []
+  syntax:
+    content: public StatusEffectDef SelfEffect { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.StatusEffectDef
+    content.vb: Public ReadOnly Property SelfEffect As StatusEffectDef
+  overload: TDMaker.Core.Defs.AbilityActionDef.SelfEffect*
+- uid: TDMaker.Core.Defs.AbilityActionDef.Summon
+  commentId: P:TDMaker.Core.Defs.AbilityActionDef.Summon
+  id: Summon
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: Summon
+  nameWithType: AbilityActionDef.Summon
+  fullName: TDMaker.Core.Defs.AbilityActionDef.Summon
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional summon sequence.
+  example: []
+  syntax:
+    content: public SummonDef Summon { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.SummonDef
+    content.vb: Public ReadOnly Property Summon As SummonDef
+  overload: TDMaker.Core.Defs.AbilityActionDef.Summon*
+- uid: TDMaker.Core.Defs.AbilityActionDef.Area
+  commentId: P:TDMaker.Core.Defs.AbilityActionDef.Area
+  id: Area
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: AbilityActionDef.Area
+  fullName: TDMaker.Core.Defs.AbilityActionDef.Area
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional emitted region.
+  example: []
+  syntax:
+    content: public AreaEffectDef Area { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.AreaEffectDef
+    content.vb: Public ReadOnly Property Area As AreaEffectDef
+  overload: TDMaker.Core.Defs.AbilityActionDef.Area*
+- uid: TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank
+  commentId: P:TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank
+  id: SkillExperiencePerRank
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: SkillExperiencePerRank
+  nameWithType: AbilityActionDef.SkillExperiencePerRank
+  fullName: TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional hero skill experience per active rank on successful activation.
+  example: []
+  syntax:
+    content: public float SkillExperiencePerRank { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property SkillExperiencePerRank As Single
+  overload: TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank*
+- uid: TDMaker.Core.Defs.AbilityActionDef.InitialDelay
+  commentId: P:TDMaker.Core.Defs.AbilityActionDef.InitialDelay
+  id: InitialDelay
+  parent: TDMaker.Core.Defs.AbilityActionDef
+  langs:
+  - csharp
+  - vb
+  name: InitialDelay
+  nameWithType: AbilityActionDef.InitialDelay
+  fullName: TDMaker.Core.Defs.AbilityActionDef.InitialDelay
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Delay before a newly activated channel can run.
+  example: []
+  syntax:
+    content: public float InitialDelay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property InitialDelay As Single
+  overload: TDMaker.Core.Defs.AbilityActionDef.InitialDelay*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.AbilityActionDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef__ctor_TDMaker_Core_IAbilityAction_System_Single_System_Single_
+  name: AbilityActionDef
+  nameWithType: AbilityActionDef.AbilityActionDef
+  fullName: TDMaker.Core.Defs.AbilityActionDef.AbilityActionDef
+  nameWithType.vb: AbilityActionDef.New
+  fullName.vb: TDMaker.Core.Defs.AbilityActionDef.New
+  name.vb: New
+- uid: TDMaker.Core.IAbilityAction
+  commentId: T:TDMaker.Core.IAbilityAction
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.IAbilityAction.html
+  name: IAbilityAction
+  nameWithType: IAbilityAction
+  fullName: TDMaker.Core.IAbilityAction
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.Defs.AbilityActionDef.WithCustomAction*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.WithCustomAction
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef_WithCustomAction_TDMaker_Core_IAbilityAction_
+  name: WithCustomAction
+  nameWithType: AbilityActionDef.WithCustomAction
+  fullName: TDMaker.Core.Defs.AbilityActionDef.WithCustomAction
+- uid: TDMaker.Core.Defs.AbilityActionDef
+  commentId: T:TDMaker.Core.Defs.AbilityActionDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html
+  name: AbilityActionDef
+  nameWithType: AbilityActionDef
+  fullName: TDMaker.Core.Defs.AbilityActionDef
+- uid: TDMaker.Core.Defs.RangedAttackDef
+  commentId: T:TDMaker.Core.Defs.RangedAttackDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.RangedAttackDef.html
+  name: RangedAttackDef
+  nameWithType: RangedAttackDef
+  fullName: TDMaker.Core.Defs.RangedAttackDef
+- uid: TDMaker.Core.Defs.StatusEffectDef
+  commentId: T:TDMaker.Core.Defs.StatusEffectDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.StatusEffectDef.html
+  name: StatusEffectDef
+  nameWithType: StatusEffectDef
+  fullName: TDMaker.Core.Defs.StatusEffectDef
+- uid: TDMaker.Core.Defs.SummonDef
+  commentId: T:TDMaker.Core.Defs.SummonDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.SummonDef.html
+  name: SummonDef
+  nameWithType: SummonDef
+  fullName: TDMaker.Core.Defs.SummonDef
+- uid: TDMaker.Core.Defs.AreaEffectDef
+  commentId: T:TDMaker.Core.Defs.AreaEffectDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AreaEffectDef.html
+  name: AreaEffectDef
+  nameWithType: AreaEffectDef
+  fullName: TDMaker.Core.Defs.AreaEffectDef
+- uid: TDMaker.Core.Defs.AbilityActionDef.CustomAction*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.CustomAction
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef_CustomAction
+  name: CustomAction
+  nameWithType: AbilityActionDef.CustomAction
+  fullName: TDMaker.Core.Defs.AbilityActionDef.CustomAction
+- uid: TDMaker.Core.Defs.AbilityActionDef.Cooldown*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.Cooldown
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef_Cooldown
+  name: Cooldown
+  nameWithType: AbilityActionDef.Cooldown
+  fullName: TDMaker.Core.Defs.AbilityActionDef.Cooldown
+- uid: TDMaker.Core.Defs.AbilityActionDef.Attack*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.Attack
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef_Attack
+  name: Attack
+  nameWithType: AbilityActionDef.Attack
+  fullName: TDMaker.Core.Defs.AbilityActionDef.Attack
+- uid: TDMaker.Core.Defs.AbilityActionDef.SelfEffect*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.SelfEffect
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef_SelfEffect
+  name: SelfEffect
+  nameWithType: AbilityActionDef.SelfEffect
+  fullName: TDMaker.Core.Defs.AbilityActionDef.SelfEffect
+- uid: TDMaker.Core.Defs.AbilityActionDef.Summon*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.Summon
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef_Summon
+  name: Summon
+  nameWithType: AbilityActionDef.Summon
+  fullName: TDMaker.Core.Defs.AbilityActionDef.Summon
+- uid: TDMaker.Core.Defs.AbilityActionDef.Area*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.Area
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef_Area
+  name: Area
+  nameWithType: AbilityActionDef.Area
+  fullName: TDMaker.Core.Defs.AbilityActionDef.Area
+- uid: TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef_SkillExperiencePerRank
+  name: SkillExperiencePerRank
+  nameWithType: AbilityActionDef.SkillExperiencePerRank
+  fullName: TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank
+- uid: TDMaker.Core.Defs.AbilityActionDef.InitialDelay*
+  commentId: Overload:TDMaker.Core.Defs.AbilityActionDef.InitialDelay
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html#TDMaker_Core_Defs_AbilityActionDef_InitialDelay
+  name: InitialDelay
+  nameWithType: AbilityActionDef.InitialDelay
+  fullName: TDMaker.Core.Defs.AbilityActionDef.InitialDelay

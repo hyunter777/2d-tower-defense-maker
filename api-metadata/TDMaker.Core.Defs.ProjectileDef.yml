@@ -1,0 +1,728 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.ProjectileDef
+  commentId: T:TDMaker.Core.Defs.ProjectileDef
+  id: ProjectileDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.ProjectileDef.#ctor(TDMaker.Core.Defs.ProjectileKind,System.Single,System.Single,System.Single,System.String,System.Single,System.Single)
+  - TDMaker.Core.Defs.ProjectileDef.ArcHeight
+  - TDMaker.Core.Defs.ProjectileDef.FlightTime
+  - TDMaker.Core.Defs.ProjectileDef.HitRadius
+  - TDMaker.Core.Defs.ProjectileDef.ImpactArea
+  - TDMaker.Core.Defs.ProjectileDef.Kind
+  - TDMaker.Core.Defs.ProjectileDef.Lifetime
+  - TDMaker.Core.Defs.ProjectileDef.Options
+  - TDMaker.Core.Defs.ProjectileDef.Speed
+  - TDMaker.Core.Defs.ProjectileDef.ViewKey
+  - TDMaker.Core.Defs.ProjectileDef.WithImpactArea(TDMaker.Core.Defs.AreaEffectDef)
+  - TDMaker.Core.Defs.ProjectileDef.WithOptions(TDMaker.Core.Defs.ProjectileOptions)
+  langs:
+  - csharp
+  - vb
+  name: ProjectileDef
+  nameWithType: ProjectileDef
+  fullName: TDMaker.Core.Defs.ProjectileDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Immutable projectile travel data.
+  example: []
+  syntax:
+    content: public sealed class ProjectileDef
+    content.vb: Public NotInheritable Class ProjectileDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.ProjectileDef.#ctor(TDMaker.Core.Defs.ProjectileKind,System.Single,System.Single,System.Single,System.String,System.Single,System.Single)
+  commentId: M:TDMaker.Core.Defs.ProjectileDef.#ctor(TDMaker.Core.Defs.ProjectileKind,System.Single,System.Single,System.Single,System.String,System.Single,System.Single)
+  id: '#ctor(TDMaker.Core.Defs.ProjectileKind,System.Single,System.Single,System.Single,System.String,System.Single,System.Single)'
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: ProjectileDef(ProjectileKind, float, float, float, string, float, float)
+  nameWithType: ProjectileDef.ProjectileDef(ProjectileKind, float, float, float, string, float, float)
+  fullName: TDMaker.Core.Defs.ProjectileDef.ProjectileDef(TDMaker.Core.Defs.ProjectileKind, float, float, float, string, float,
+    float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates projectile data.
+  example: []
+  syntax:
+    content: public ProjectileDef(ProjectileKind kind = ProjectileKind.Instant, float speed = 1, float arcHeight = 0, float
+      lifetime = 30, string viewKey = null, float flightTime = 0, float hitRadius = 0)
+    parameters:
+    - id: kind
+      type: TDMaker.Core.Defs.ProjectileKind
+    - id: speed
+      type: System.Single
+    - id: arcHeight
+      type: System.Single
+    - id: lifetime
+      type: System.Single
+    - id: viewKey
+      type: System.String
+    - id: flightTime
+      type: System.Single
+    - id: hitRadius
+      type: System.Single
+    content.vb: Public Sub New(kind As ProjectileKind = ProjectileKind.Instant, speed As Single = 1, arcHeight As Single =
+      0, lifetime As Single = 30, viewKey As String = Nothing, flightTime As Single = 0, hitRadius As Single = 0)
+  overload: TDMaker.Core.Defs.ProjectileDef.#ctor*
+  nameWithType.vb: ProjectileDef.New(ProjectileKind, Single, Single, Single, String, Single, Single)
+  fullName.vb: TDMaker.Core.Defs.ProjectileDef.New(TDMaker.Core.Defs.ProjectileKind, Single, Single, Single, String, Single,
+    Single)
+  name.vb: New(ProjectileKind, Single, Single, Single, String, Single, Single)
+- uid: TDMaker.Core.Defs.ProjectileDef.WithImpactArea(TDMaker.Core.Defs.AreaEffectDef)
+  commentId: M:TDMaker.Core.Defs.ProjectileDef.WithImpactArea(TDMaker.Core.Defs.AreaEffectDef)
+  id: WithImpactArea(TDMaker.Core.Defs.AreaEffectDef)
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: WithImpactArea(AreaEffectDef)
+  nameWithType: ProjectileDef.WithImpactArea(AreaEffectDef)
+  fullName: TDMaker.Core.Defs.ProjectileDef.WithImpactArea(TDMaker.Core.Defs.AreaEffectDef)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies flight data and adds a once-per-projectile residual region, distinct from per-victim damage payloads.
+  example: []
+  syntax:
+    content: public ProjectileDef WithImpactArea(AreaEffectDef area)
+    parameters:
+    - id: area
+      type: TDMaker.Core.Defs.AreaEffectDef
+    return:
+      type: TDMaker.Core.Defs.ProjectileDef
+    content.vb: Public Function WithImpactArea(area As AreaEffectDef) As ProjectileDef
+  overload: TDMaker.Core.Defs.ProjectileDef.WithImpactArea*
+- uid: TDMaker.Core.Defs.ProjectileDef.WithOptions(TDMaker.Core.Defs.ProjectileOptions)
+  commentId: M:TDMaker.Core.Defs.ProjectileDef.WithOptions(TDMaker.Core.Defs.ProjectileOptions)
+  id: WithOptions(TDMaker.Core.Defs.ProjectileOptions)
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: WithOptions(ProjectileOptions)
+  nameWithType: ProjectileDef.WithOptions(ProjectileOptions)
+  fullName: TDMaker.Core.Defs.ProjectileDef.WithOptions(TDMaker.Core.Defs.ProjectileOptions)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies projectile data with flight extensions.
+  example: []
+  syntax:
+    content: public ProjectileDef WithOptions(ProjectileOptions options)
+    parameters:
+    - id: options
+      type: TDMaker.Core.Defs.ProjectileOptions
+    return:
+      type: TDMaker.Core.Defs.ProjectileDef
+    content.vb: Public Function WithOptions(options As ProjectileOptions) As ProjectileDef
+  overload: TDMaker.Core.Defs.ProjectileDef.WithOptions*
+- uid: TDMaker.Core.Defs.ProjectileDef.Kind
+  commentId: P:TDMaker.Core.Defs.ProjectileDef.Kind
+  id: Kind
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: Kind
+  nameWithType: ProjectileDef.Kind
+  fullName: TDMaker.Core.Defs.ProjectileDef.Kind
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: The travel model.
+  example: []
+  syntax:
+    content: public ProjectileKind Kind { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.ProjectileKind
+    content.vb: Public ReadOnly Property Kind As ProjectileKind
+  overload: TDMaker.Core.Defs.ProjectileDef.Kind*
+- uid: TDMaker.Core.Defs.ProjectileDef.Speed
+  commentId: P:TDMaker.Core.Defs.ProjectileDef.Speed
+  id: Speed
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: Speed
+  nameWithType: ProjectileDef.Speed
+  fullName: TDMaker.Core.Defs.ProjectileDef.Speed
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Travel speed in world units per second.
+  example: []
+  syntax:
+    content: public float Speed { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Speed As Single
+  overload: TDMaker.Core.Defs.ProjectileDef.Speed*
+- uid: TDMaker.Core.Defs.ProjectileDef.ArcHeight
+  commentId: P:TDMaker.Core.Defs.ProjectileDef.ArcHeight
+  id: ArcHeight
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: ArcHeight
+  nameWithType: ProjectileDef.ArcHeight
+  fullName: TDMaker.Core.Defs.ProjectileDef.ArcHeight
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Visual ballistic height at the middle of the flight.
+  example: []
+  syntax:
+    content: public float ArcHeight { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property ArcHeight As Single
+  overload: TDMaker.Core.Defs.ProjectileDef.ArcHeight*
+- uid: TDMaker.Core.Defs.ProjectileDef.Lifetime
+  commentId: P:TDMaker.Core.Defs.ProjectileDef.Lifetime
+  id: Lifetime
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: Lifetime
+  nameWithType: ProjectileDef.Lifetime
+  fullName: TDMaker.Core.Defs.ProjectileDef.Lifetime
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum time before a projectile expires.
+  example: []
+  syntax:
+    content: public float Lifetime { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Lifetime As Single
+  overload: TDMaker.Core.Defs.ProjectileDef.Lifetime*
+- uid: TDMaker.Core.Defs.ProjectileDef.ViewKey
+  commentId: P:TDMaker.Core.Defs.ProjectileDef.ViewKey
+  id: ViewKey
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: ViewKey
+  nameWithType: ProjectileDef.ViewKey
+  fullName: TDMaker.Core.Defs.ProjectileDef.ViewKey
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional view lookup key.
+  example: []
+  syntax:
+    content: public string ViewKey { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ViewKey As String
+  overload: TDMaker.Core.Defs.ProjectileDef.ViewKey*
+- uid: TDMaker.Core.Defs.ProjectileDef.FlightTime
+  commentId: P:TDMaker.Core.Defs.ProjectileDef.FlightTime
+  id: FlightTime
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: FlightTime
+  nameWithType: ProjectileDef.FlightTime
+  fullName: TDMaker.Core.Defs.ProjectileDef.FlightTime
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional fixed flight duration; zero selects distance divided by speed.
+  example: []
+  syntax:
+    content: public float FlightTime { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property FlightTime As Single
+  overload: TDMaker.Core.Defs.ProjectileDef.FlightTime*
+- uid: TDMaker.Core.Defs.ProjectileDef.HitRadius
+  commentId: P:TDMaker.Core.Defs.ProjectileDef.HitRadius
+  id: HitRadius
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: HitRadius
+  nameWithType: ProjectileDef.HitRadius
+  fullName: TDMaker.Core.Defs.ProjectileDef.HitRadius
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Allowed distance between the aim point and a moving single target at impact.
+  example: []
+  syntax:
+    content: public float HitRadius { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property HitRadius As Single
+  overload: TDMaker.Core.Defs.ProjectileDef.HitRadius*
+- uid: TDMaker.Core.Defs.ProjectileDef.ImpactArea
+  commentId: P:TDMaker.Core.Defs.ProjectileDef.ImpactArea
+  id: ImpactArea
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: ImpactArea
+  nameWithType: ProjectileDef.ImpactArea
+  fullName: TDMaker.Core.Defs.ProjectileDef.ImpactArea
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional region created once at actual arrival, including an empty-ground impact. Cancellation and lifetime expiry
+    do not create it.
+  example: []
+  syntax:
+    content: public AreaEffectDef ImpactArea { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.AreaEffectDef
+    content.vb: Public ReadOnly Property ImpactArea As AreaEffectDef
+  overload: TDMaker.Core.Defs.ProjectileDef.ImpactArea*
+- uid: TDMaker.Core.Defs.ProjectileDef.Options
+  commentId: P:TDMaker.Core.Defs.ProjectileDef.Options
+  id: Options
+  parent: TDMaker.Core.Defs.ProjectileDef
+  langs:
+  - csharp
+  - vb
+  name: Options
+  nameWithType: ProjectileDef.Options
+  fullName: TDMaker.Core.Defs.ProjectileDef.Options
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Prediction and target-loss policy.
+  example: []
+  syntax:
+    content: public ProjectileOptions Options { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.ProjectileOptions
+    content.vb: Public ReadOnly Property Options As ProjectileOptions
+  overload: TDMaker.Core.Defs.ProjectileDef.Options*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.ProjectileDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef__ctor_TDMaker_Core_Defs_ProjectileKind_System_Single_System_Single_System_Single_System_String_System_Single_System_Single_
+  name: ProjectileDef
+  nameWithType: ProjectileDef.ProjectileDef
+  fullName: TDMaker.Core.Defs.ProjectileDef.ProjectileDef
+  nameWithType.vb: ProjectileDef.New
+  fullName.vb: TDMaker.Core.Defs.ProjectileDef.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.ProjectileKind
+  commentId: T:TDMaker.Core.Defs.ProjectileKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileKind.html
+  name: ProjectileKind
+  nameWithType: ProjectileKind
+  fullName: TDMaker.Core.Defs.ProjectileKind
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Defs.ProjectileDef.WithImpactArea*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.WithImpactArea
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_WithImpactArea_TDMaker_Core_Defs_AreaEffectDef_
+  name: WithImpactArea
+  nameWithType: ProjectileDef.WithImpactArea
+  fullName: TDMaker.Core.Defs.ProjectileDef.WithImpactArea
+- uid: TDMaker.Core.Defs.AreaEffectDef
+  commentId: T:TDMaker.Core.Defs.AreaEffectDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AreaEffectDef.html
+  name: AreaEffectDef
+  nameWithType: AreaEffectDef
+  fullName: TDMaker.Core.Defs.AreaEffectDef
+- uid: TDMaker.Core.Defs.ProjectileDef
+  commentId: T:TDMaker.Core.Defs.ProjectileDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html
+  name: ProjectileDef
+  nameWithType: ProjectileDef
+  fullName: TDMaker.Core.Defs.ProjectileDef
+- uid: TDMaker.Core.Defs.ProjectileDef.WithOptions*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.WithOptions
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_WithOptions_TDMaker_Core_Defs_ProjectileOptions_
+  name: WithOptions
+  nameWithType: ProjectileDef.WithOptions
+  fullName: TDMaker.Core.Defs.ProjectileDef.WithOptions
+- uid: TDMaker.Core.Defs.ProjectileOptions
+  commentId: T:TDMaker.Core.Defs.ProjectileOptions
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileOptions.html
+  name: ProjectileOptions
+  nameWithType: ProjectileOptions
+  fullName: TDMaker.Core.Defs.ProjectileOptions
+- uid: TDMaker.Core.Defs.ProjectileDef.Kind*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.Kind
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_Kind
+  name: Kind
+  nameWithType: ProjectileDef.Kind
+  fullName: TDMaker.Core.Defs.ProjectileDef.Kind
+- uid: TDMaker.Core.Defs.ProjectileDef.Speed*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.Speed
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_Speed
+  name: Speed
+  nameWithType: ProjectileDef.Speed
+  fullName: TDMaker.Core.Defs.ProjectileDef.Speed
+- uid: TDMaker.Core.Defs.ProjectileDef.ArcHeight*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.ArcHeight
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_ArcHeight
+  name: ArcHeight
+  nameWithType: ProjectileDef.ArcHeight
+  fullName: TDMaker.Core.Defs.ProjectileDef.ArcHeight
+- uid: TDMaker.Core.Defs.ProjectileDef.Lifetime*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.Lifetime
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_Lifetime
+  name: Lifetime
+  nameWithType: ProjectileDef.Lifetime
+  fullName: TDMaker.Core.Defs.ProjectileDef.Lifetime
+- uid: TDMaker.Core.Defs.ProjectileDef.ViewKey*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.ViewKey
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_ViewKey
+  name: ViewKey
+  nameWithType: ProjectileDef.ViewKey
+  fullName: TDMaker.Core.Defs.ProjectileDef.ViewKey
+- uid: TDMaker.Core.Defs.ProjectileDef.FlightTime*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.FlightTime
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_FlightTime
+  name: FlightTime
+  nameWithType: ProjectileDef.FlightTime
+  fullName: TDMaker.Core.Defs.ProjectileDef.FlightTime
+- uid: TDMaker.Core.Defs.ProjectileDef.HitRadius*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.HitRadius
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_HitRadius
+  name: HitRadius
+  nameWithType: ProjectileDef.HitRadius
+  fullName: TDMaker.Core.Defs.ProjectileDef.HitRadius
+- uid: TDMaker.Core.Defs.ProjectileDef.ImpactArea*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.ImpactArea
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_ImpactArea
+  name: ImpactArea
+  nameWithType: ProjectileDef.ImpactArea
+  fullName: TDMaker.Core.Defs.ProjectileDef.ImpactArea
+- uid: TDMaker.Core.Defs.ProjectileDef.Options*
+  commentId: Overload:TDMaker.Core.Defs.ProjectileDef.Options
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html#TDMaker_Core_Defs_ProjectileDef_Options
+  name: Options
+  nameWithType: ProjectileDef.Options
+  fullName: TDMaker.Core.Defs.ProjectileDef.Options

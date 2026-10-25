@@ -1,0 +1,143 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.IAbilityAction
+  commentId: T:TDMaker.Core.IAbilityAction
+  id: IAbilityAction
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.IAbilityAction.TryExecute(TDMaker.Core.Simulation,TDMaker.Core.Entity,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IAbilityAction
+  nameWithType: IAbilityAction
+  fullName: TDMaker.Core.IAbilityAction
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A custom ability payload; keep its immutable configuration here and per-entity state in custom components.
+  example:
+  - '<pre><code class="lang-csharp">var action = new AbilityActionDef(new ShieldPulse(), cooldown: 2);</code></pre>'
+  syntax:
+    content: public interface IAbilityAction
+    content.vb: Public Interface IAbilityAction
+  derivedClasses:
+  - TDMaker.Core.Defs.BeamDef
+  - TDMaker.Core.Defs.ChainAttackDef
+  - TDMaker.Core.Defs.DeploymentPlanDef
+  - TDMaker.Core.Defs.MultiTargetAttackDef
+  - TDMaker.Core.Defs.PathTransferDef
+  - TDMaker.Core.Defs.RaiseRemainsDef
+  - TDMaker.Core.Defs.TrapDef
+  - TDMaker.Unity.Authoring.CompositeAbilityAction
+- uid: TDMaker.Core.IAbilityAction.TryExecute(TDMaker.Core.Simulation,TDMaker.Core.Entity,System.Int32,System.Int32)
+  commentId: M:TDMaker.Core.IAbilityAction.TryExecute(TDMaker.Core.Simulation,TDMaker.Core.Entity,System.Int32,System.Int32)
+  id: TryExecute(TDMaker.Core.Simulation,TDMaker.Core.Entity,System.Int32,System.Int32)
+  parent: TDMaker.Core.IAbilityAction
+  langs:
+  - csharp
+  - vb
+  name: TryExecute(Simulation, Entity, int, int)
+  nameWithType: IAbilityAction.TryExecute(Simulation, Entity, int, int)
+  fullName: TDMaker.Core.IAbilityAction.TryExecute(TDMaker.Core.Simulation, TDMaker.Core.Entity, int, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Returns true on successful activation, consuming the channel cooldown.
+  example: []
+  syntax:
+    content: bool TryExecute(Simulation simulation, Entity actor, int slotIndex, int actionIndex)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    - id: actor
+      type: TDMaker.Core.Entity
+    - id: slotIndex
+      type: System.Int32
+    - id: actionIndex
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Function TryExecute(simulation As Simulation, actor As Entity, slotIndex As Integer, actionIndex As Integer)
+      As Boolean
+  overload: TDMaker.Core.IAbilityAction.TryExecute*
+  nameWithType.vb: IAbilityAction.TryExecute(Simulation, Entity, Integer, Integer)
+  fullName.vb: TDMaker.Core.IAbilityAction.TryExecute(TDMaker.Core.Simulation, TDMaker.Core.Entity, Integer, Integer)
+  name.vb: TryExecute(Simulation, Entity, Integer, Integer)
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.IAbilityAction.TryExecute*
+  commentId: Overload:TDMaker.Core.IAbilityAction.TryExecute
+  isExternal: true
+  href: TDMaker.Core.IAbilityAction.html#TDMaker_Core_IAbilityAction_TryExecute_TDMaker_Core_Simulation_TDMaker_Core_Entity_System_Int32_System_Int32_
+  name: TryExecute
+  nameWithType: IAbilityAction.TryExecute
+  fullName: TDMaker.Core.IAbilityAction.TryExecute
+- uid: TDMaker.Core.Simulation
+  commentId: T:TDMaker.Core.Simulation
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Simulation.html
+  name: Simulation
+  nameWithType: Simulation
+  fullName: TDMaker.Core.Simulation
+- uid: TDMaker.Core.Entity
+  commentId: T:TDMaker.Core.Entity
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: TDMaker.Core.Entity
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

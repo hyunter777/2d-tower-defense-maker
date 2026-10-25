@@ -1,0 +1,1200 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.TDEditorGUI
+  commentId: T:TDMaker.Editor.TDEditorGUI
+  id: TDEditorGUI
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.TDEditorGUI.Accent
+  - TDMaker.Editor.TDEditorGUI.BoldClipped
+  - TDMaker.Editor.TDEditorGUI.CanvasBackground
+  - TDMaker.Editor.TDEditorGUI.Compact(System.Double)
+  - TDMaker.Editor.TDEditorGUI.ContrastText(UnityEngine.Color)
+  - TDMaker.Editor.TDEditorGUI.DrawOutline(UnityEngine.Rect,UnityEngine.Color,System.Single)
+  - TDMaker.Editor.TDEditorGUI.EntryColor
+  - TDMaker.Editor.TDEditorGUI.ErrorColor
+  - TDMaker.Editor.TDEditorGUI.ExitColor
+  - TDMaker.Editor.TDEditorGUI.FindAll``1
+  - TDMaker.Editor.TDEditorGUI.Header
+  - TDMaker.Editor.TDEditorGUI.IsMissingReference(UnityEditor.SerializedProperty)
+  - TDMaker.Editor.TDEditorGUI.LineColor
+  - TDMaker.Editor.TDEditorGUI.MiniCentered
+  - TDMaker.Editor.TDEditorGUI.PanelBackground
+  - TDMaker.Editor.TDEditorGUI.RowTint
+  - TDMaker.Editor.TDEditorGUI.SceneLabel
+  - TDMaker.Editor.TDEditorGUI.Section(System.String,System.String,System.Boolean)
+  - TDMaker.Editor.TDEditorGUI.SelectAndPing(UnityEngine.Object)
+  - TDMaker.Editor.TDEditorGUI.Separator
+  - TDMaker.Editor.TDEditorGUI.StatRow(System.String,System.String)
+  - TDMaker.Editor.TDEditorGUI.StatValue
+  - TDMaker.Editor.TDEditorGUI.TintOf(TDMaker.Unity.Authoring.EntityAssetBase)
+  - TDMaker.Editor.TDEditorGUI.WarningColor
+  - TDMaker.Editor.TDEditorGUI.WrapMini
+  langs:
+  - csharp
+  - vb
+  name: TDEditorGUI
+  nameWithType: TDEditorGUI
+  fullName: TDMaker.Editor.TDEditorGUI
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Shared colors, styles and small IMGUI helpers for the 2D Tower Defense Maker editor tools.
+  example: []
+  syntax:
+    content: public static class TDEditorGUI
+    content.vb: Public Module TDEditorGUI
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.TDEditorGUI.Accent
+  commentId: F:TDMaker.Editor.TDEditorGUI.Accent
+  id: Accent
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: Accent
+  nameWithType: TDEditorGUI.Accent
+  fullName: TDMaker.Editor.TDEditorGUI.Accent
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Accent color used for selection and highlights.
+  example: []
+  syntax:
+    content: public static readonly Color Accent
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly Accent As Color
+- uid: TDMaker.Editor.TDEditorGUI.ErrorColor
+  commentId: F:TDMaker.Editor.TDEditorGUI.ErrorColor
+  id: ErrorColor
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: ErrorColor
+  nameWithType: TDEditorGUI.ErrorColor
+  fullName: TDMaker.Editor.TDEditorGUI.ErrorColor
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Error tint.
+  example: []
+  syntax:
+    content: public static readonly Color ErrorColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly ErrorColor As Color
+- uid: TDMaker.Editor.TDEditorGUI.WarningColor
+  commentId: F:TDMaker.Editor.TDEditorGUI.WarningColor
+  id: WarningColor
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: WarningColor
+  nameWithType: TDEditorGUI.WarningColor
+  fullName: TDMaker.Editor.TDEditorGUI.WarningColor
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Warning tint.
+  example: []
+  syntax:
+    content: public static readonly Color WarningColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly WarningColor As Color
+- uid: TDMaker.Editor.TDEditorGUI.EntryColor
+  commentId: F:TDMaker.Editor.TDEditorGUI.EntryColor
+  id: EntryColor
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: EntryColor
+  nameWithType: TDEditorGUI.EntryColor
+  fullName: TDMaker.Editor.TDEditorGUI.EntryColor
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Entry marker tint.
+  example: []
+  syntax:
+    content: public static readonly Color EntryColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly EntryColor As Color
+- uid: TDMaker.Editor.TDEditorGUI.ExitColor
+  commentId: F:TDMaker.Editor.TDEditorGUI.ExitColor
+  id: ExitColor
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: ExitColor
+  nameWithType: TDEditorGUI.ExitColor
+  fullName: TDMaker.Editor.TDEditorGUI.ExitColor
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Exit marker tint.
+  example: []
+  syntax:
+    content: public static readonly Color ExitColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly ExitColor As Color
+- uid: TDMaker.Editor.TDEditorGUI.Section(System.String,System.String,System.Boolean)
+  commentId: M:TDMaker.Editor.TDEditorGUI.Section(System.String,System.String,System.Boolean)
+  id: Section(System.String,System.String,System.Boolean)
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: Section(string, string, bool)
+  nameWithType: TDEditorGUI.Section(string, string, bool)
+  fullName: TDMaker.Editor.TDEditorGUI.Section(string, string, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws a foldout section header whose state persists for the editor session.
+  example: []
+  syntax:
+    content: public static bool Section(string key, string title, bool defaultOpen = true)
+    parameters:
+    - id: key
+      type: System.String
+    - id: title
+      type: System.String
+    - id: defaultOpen
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Section(key As String, title As String, defaultOpen As Boolean = True) As Boolean
+  overload: TDMaker.Editor.TDEditorGUI.Section*
+  nameWithType.vb: TDEditorGUI.Section(String, String, Boolean)
+  fullName.vb: TDMaker.Editor.TDEditorGUI.Section(String, String, Boolean)
+  name.vb: Section(String, String, Boolean)
+- uid: TDMaker.Editor.TDEditorGUI.Separator
+  commentId: M:TDMaker.Editor.TDEditorGUI.Separator
+  id: Separator
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: Separator()
+  nameWithType: TDEditorGUI.Separator()
+  fullName: TDMaker.Editor.TDEditorGUI.Separator()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws a one-pixel horizontal line.
+  example: []
+  syntax:
+    content: public static void Separator()
+    content.vb: Public Shared Sub Separator()
+  overload: TDMaker.Editor.TDEditorGUI.Separator*
+- uid: TDMaker.Editor.TDEditorGUI.DrawOutline(UnityEngine.Rect,UnityEngine.Color,System.Single)
+  commentId: M:TDMaker.Editor.TDEditorGUI.DrawOutline(UnityEngine.Rect,UnityEngine.Color,System.Single)
+  id: DrawOutline(UnityEngine.Rect,UnityEngine.Color,System.Single)
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: DrawOutline(Rect, Color, float)
+  nameWithType: TDEditorGUI.DrawOutline(Rect, Color, float)
+  fullName: TDMaker.Editor.TDEditorGUI.DrawOutline(UnityEngine.Rect, UnityEngine.Color, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws a rectangle outline.
+  example: []
+  syntax:
+    content: public static void DrawOutline(Rect rect, Color color, float width = 1)
+    parameters:
+    - id: rect
+      type: UnityEngine.Rect
+    - id: color
+      type: UnityEngine.Color
+    - id: width
+      type: System.Single
+    content.vb: Public Shared Sub DrawOutline(rect As Rect, color As Color, width As Single = 1)
+  overload: TDMaker.Editor.TDEditorGUI.DrawOutline*
+  nameWithType.vb: TDEditorGUI.DrawOutline(Rect, Color, Single)
+  fullName.vb: TDMaker.Editor.TDEditorGUI.DrawOutline(UnityEngine.Rect, UnityEngine.Color, Single)
+  name.vb: DrawOutline(Rect, Color, Single)
+- uid: TDMaker.Editor.TDEditorGUI.StatRow(System.String,System.String)
+  commentId: M:TDMaker.Editor.TDEditorGUI.StatRow(System.String,System.String)
+  id: StatRow(System.String,System.String)
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: StatRow(string, string)
+  nameWithType: TDEditorGUI.StatRow(string, string)
+  fullName: TDMaker.Editor.TDEditorGUI.StatRow(string, string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: A label/value row for stat tables.
+  example: []
+  syntax:
+    content: public static void StatRow(string label, string value)
+    parameters:
+    - id: label
+      type: System.String
+    - id: value
+      type: System.String
+    content.vb: Public Shared Sub StatRow(label As String, value As String)
+  overload: TDMaker.Editor.TDEditorGUI.StatRow*
+  nameWithType.vb: TDEditorGUI.StatRow(String, String)
+  fullName.vb: TDMaker.Editor.TDEditorGUI.StatRow(String, String)
+  name.vb: StatRow(String, String)
+- uid: TDMaker.Editor.TDEditorGUI.TintOf(TDMaker.Unity.Authoring.EntityAssetBase)
+  commentId: M:TDMaker.Editor.TDEditorGUI.TintOf(TDMaker.Unity.Authoring.EntityAssetBase)
+  id: TintOf(TDMaker.Unity.Authoring.EntityAssetBase)
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: TintOf(EntityAssetBase)
+  nameWithType: TDEditorGUI.TintOf(EntityAssetBase)
+  fullName: TDMaker.Editor.TDEditorGUI.TintOf(TDMaker.Unity.Authoring.EntityAssetBase)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Primary tint of an entity asset (its fallback view color), opaque.
+  example: []
+  syntax:
+    content: public static Color TintOf(EntityAssetBase asset)
+    parameters:
+    - id: asset
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared Function TintOf(asset As EntityAssetBase) As Color
+  overload: TDMaker.Editor.TDEditorGUI.TintOf*
+- uid: TDMaker.Editor.TDEditorGUI.ContrastText(UnityEngine.Color)
+  commentId: M:TDMaker.Editor.TDEditorGUI.ContrastText(UnityEngine.Color)
+  id: ContrastText(UnityEngine.Color)
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: ContrastText(Color)
+  nameWithType: TDEditorGUI.ContrastText(Color)
+  fullName: TDMaker.Editor.TDEditorGUI.ContrastText(UnityEngine.Color)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Black or white, whichever reads better on <code class="paramref">background</code>.
+  example: []
+  syntax:
+    content: public static Color ContrastText(Color background)
+    parameters:
+    - id: background
+      type: UnityEngine.Color
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared Function ContrastText(background As Color) As Color
+  overload: TDMaker.Editor.TDEditorGUI.ContrastText*
+- uid: TDMaker.Editor.TDEditorGUI.Compact(System.Double)
+  commentId: M:TDMaker.Editor.TDEditorGUI.Compact(System.Double)
+  id: Compact(System.Double)
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: Compact(double)
+  nameWithType: TDEditorGUI.Compact(double)
+  fullName: TDMaker.Editor.TDEditorGUI.Compact(double)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Formats a number compactly ("1.2k").
+  example: []
+  syntax:
+    content: public static string Compact(double value)
+    parameters:
+    - id: value
+      type: System.Double
+    return:
+      type: System.String
+    content.vb: Public Shared Function Compact(value As Double) As String
+  overload: TDMaker.Editor.TDEditorGUI.Compact*
+  nameWithType.vb: TDEditorGUI.Compact(Double)
+  fullName.vb: TDMaker.Editor.TDEditorGUI.Compact(Double)
+  name.vb: Compact(Double)
+- uid: TDMaker.Editor.TDEditorGUI.FindAll``1
+  commentId: M:TDMaker.Editor.TDEditorGUI.FindAll``1
+  id: FindAll``1
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: FindAll<T>()
+  nameWithType: TDEditorGUI.FindAll<T>()
+  fullName: TDMaker.Editor.TDEditorGUI.FindAll<T>()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: All loaded scene objects of a type (unsorted). Wraps the API that changed across Unity 6 minors.
+  example: []
+  syntax:
+    content: 'public static T[] FindAll<T>() where T : Object'
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function FindAll(Of T As [Object])() As T()
+  overload: TDMaker.Editor.TDEditorGUI.FindAll*
+  nameWithType.vb: TDEditorGUI.FindAll(Of T)()
+  fullName.vb: TDMaker.Editor.TDEditorGUI.FindAll(Of T)()
+  name.vb: FindAll(Of T)()
+- uid: TDMaker.Editor.TDEditorGUI.IsMissingReference(UnityEditor.SerializedProperty)
+  commentId: M:TDMaker.Editor.TDEditorGUI.IsMissingReference(UnityEditor.SerializedProperty)
+  id: IsMissingReference(UnityEditor.SerializedProperty)
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: IsMissingReference(SerializedProperty)
+  nameWithType: TDEditorGUI.IsMissingReference(SerializedProperty)
+  fullName: TDMaker.Editor.TDEditorGUI.IsMissingReference(UnityEditor.SerializedProperty)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether a serialized object reference points at a deleted or missing object.
+  example: []
+  syntax:
+    content: public static bool IsMissingReference(SerializedProperty property)
+    parameters:
+    - id: property
+      type: UnityEditor.SerializedProperty
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsMissingReference([property] As SerializedProperty) As Boolean
+  overload: TDMaker.Editor.TDEditorGUI.IsMissingReference*
+- uid: TDMaker.Editor.TDEditorGUI.SelectAndPing(UnityEngine.Object)
+  commentId: M:TDMaker.Editor.TDEditorGUI.SelectAndPing(UnityEngine.Object)
+  id: SelectAndPing(UnityEngine.Object)
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: SelectAndPing(Object)
+  nameWithType: TDEditorGUI.SelectAndPing(Object)
+  fullName: TDMaker.Editor.TDEditorGUI.SelectAndPing(UnityEngine.Object)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Selects and pings an object.
+  example: []
+  syntax:
+    content: public static void SelectAndPing(Object target)
+    parameters:
+    - id: target
+      type: UnityEngine.Object
+    content.vb: Public Shared Sub SelectAndPing(target As [Object])
+  overload: TDMaker.Editor.TDEditorGUI.SelectAndPing*
+- uid: TDMaker.Editor.TDEditorGUI.PanelBackground
+  commentId: P:TDMaker.Editor.TDEditorGUI.PanelBackground
+  id: PanelBackground
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: PanelBackground
+  nameWithType: TDEditorGUI.PanelBackground
+  fullName: TDMaker.Editor.TDEditorGUI.PanelBackground
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Panel background.
+  example: []
+  syntax:
+    content: public static Color PanelBackground { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly Property PanelBackground As Color
+  overload: TDMaker.Editor.TDEditorGUI.PanelBackground*
+- uid: TDMaker.Editor.TDEditorGUI.CanvasBackground
+  commentId: P:TDMaker.Editor.TDEditorGUI.CanvasBackground
+  id: CanvasBackground
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: CanvasBackground
+  nameWithType: TDEditorGUI.CanvasBackground
+  fullName: TDMaker.Editor.TDEditorGUI.CanvasBackground
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Darker canvas background for timelines and graphs.
+  example: []
+  syntax:
+    content: public static Color CanvasBackground { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly Property CanvasBackground As Color
+  overload: TDMaker.Editor.TDEditorGUI.CanvasBackground*
+- uid: TDMaker.Editor.TDEditorGUI.RowTint
+  commentId: P:TDMaker.Editor.TDEditorGUI.RowTint
+  id: RowTint
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: RowTint
+  nameWithType: TDEditorGUI.RowTint
+  fullName: TDMaker.Editor.TDEditorGUI.RowTint
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Alternating row tint.
+  example: []
+  syntax:
+    content: public static Color RowTint { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly Property RowTint As Color
+  overload: TDMaker.Editor.TDEditorGUI.RowTint*
+- uid: TDMaker.Editor.TDEditorGUI.LineColor
+  commentId: P:TDMaker.Editor.TDEditorGUI.LineColor
+  id: LineColor
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: LineColor
+  nameWithType: TDEditorGUI.LineColor
+  fullName: TDMaker.Editor.TDEditorGUI.LineColor
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Thin separator line color.
+  example: []
+  syntax:
+    content: public static Color LineColor { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly Property LineColor As Color
+  overload: TDMaker.Editor.TDEditorGUI.LineColor*
+- uid: TDMaker.Editor.TDEditorGUI.Header
+  commentId: P:TDMaker.Editor.TDEditorGUI.Header
+  id: Header
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: Header
+  nameWithType: TDEditorGUI.Header
+  fullName: TDMaker.Editor.TDEditorGUI.Header
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Bold section header.
+  example: []
+  syntax:
+    content: public static GUIStyle Header { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property Header As GUIStyle
+  overload: TDMaker.Editor.TDEditorGUI.Header*
+- uid: TDMaker.Editor.TDEditorGUI.MiniCentered
+  commentId: P:TDMaker.Editor.TDEditorGUI.MiniCentered
+  id: MiniCentered
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: MiniCentered
+  nameWithType: TDEditorGUI.MiniCentered
+  fullName: TDMaker.Editor.TDEditorGUI.MiniCentered
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Centered mini label.
+  example: []
+  syntax:
+    content: public static GUIStyle MiniCentered { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property MiniCentered As GUIStyle
+  overload: TDMaker.Editor.TDEditorGUI.MiniCentered*
+- uid: TDMaker.Editor.TDEditorGUI.BoldClipped
+  commentId: P:TDMaker.Editor.TDEditorGUI.BoldClipped
+  id: BoldClipped
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: BoldClipped
+  nameWithType: TDEditorGUI.BoldClipped
+  fullName: TDMaker.Editor.TDEditorGUI.BoldClipped
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Bold label without word wrap, clipped.
+  example: []
+  syntax:
+    content: public static GUIStyle BoldClipped { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property BoldClipped As GUIStyle
+  overload: TDMaker.Editor.TDEditorGUI.BoldClipped*
+- uid: TDMaker.Editor.TDEditorGUI.StatValue
+  commentId: P:TDMaker.Editor.TDEditorGUI.StatValue
+  id: StatValue
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: StatValue
+  nameWithType: TDEditorGUI.StatValue
+  fullName: TDMaker.Editor.TDEditorGUI.StatValue
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Right-aligned value label for stat tables.
+  example: []
+  syntax:
+    content: public static GUIStyle StatValue { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property StatValue As GUIStyle
+  overload: TDMaker.Editor.TDEditorGUI.StatValue*
+- uid: TDMaker.Editor.TDEditorGUI.WrapMini
+  commentId: P:TDMaker.Editor.TDEditorGUI.WrapMini
+  id: WrapMini
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: WrapMini
+  nameWithType: TDEditorGUI.WrapMini
+  fullName: TDMaker.Editor.TDEditorGUI.WrapMini
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Word-wrapped mini label.
+  example: []
+  syntax:
+    content: public static GUIStyle WrapMini { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property WrapMini As GUIStyle
+  overload: TDMaker.Editor.TDEditorGUI.WrapMini*
+- uid: TDMaker.Editor.TDEditorGUI.SceneLabel
+  commentId: P:TDMaker.Editor.TDEditorGUI.SceneLabel
+  id: SceneLabel
+  parent: TDMaker.Editor.TDEditorGUI
+  langs:
+  - csharp
+  - vb
+  name: SceneLabel
+  nameWithType: TDEditorGUI.SceneLabel
+  fullName: TDMaker.Editor.TDEditorGUI.SceneLabel
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Scene-view label with a dark backdrop for legibility on any background.
+  example: []
+  syntax:
+    content: public static GUIStyle SceneLabel { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property SceneLabel As GUIStyle
+  overload: TDMaker.Editor.TDEditorGUI.SceneLabel*
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Editor.TDEditorGUI.Section*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.Section
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_Section_System_String_System_String_System_Boolean_
+  name: Section
+  nameWithType: TDEditorGUI.Section
+  fullName: TDMaker.Editor.TDEditorGUI.Section
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.TDEditorGUI.Separator*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.Separator
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_Separator
+  name: Separator
+  nameWithType: TDEditorGUI.Separator
+  fullName: TDMaker.Editor.TDEditorGUI.Separator
+- uid: TDMaker.Editor.TDEditorGUI.DrawOutline*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.DrawOutline
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_DrawOutline_UnityEngine_Rect_UnityEngine_Color_System_Single_
+  name: DrawOutline
+  nameWithType: TDEditorGUI.DrawOutline
+  fullName: TDMaker.Editor.TDEditorGUI.DrawOutline
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Editor.TDEditorGUI.StatRow*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.StatRow
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_StatRow_System_String_System_String_
+  name: StatRow
+  nameWithType: TDEditorGUI.StatRow
+  fullName: TDMaker.Editor.TDEditorGUI.StatRow
+- uid: TDMaker.Editor.TDEditorGUI.TintOf*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.TintOf
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_TintOf_TDMaker_Unity_Authoring_EntityAssetBase_
+  name: TintOf
+  nameWithType: TDEditorGUI.TintOf
+  fullName: TDMaker.Editor.TDEditorGUI.TintOf
+- uid: TDMaker.Unity.Authoring.EntityAssetBase
+  commentId: T:TDMaker.Unity.Authoring.EntityAssetBase
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EntityAssetBase.html
+  name: EntityAssetBase
+  nameWithType: EntityAssetBase
+  fullName: TDMaker.Unity.Authoring.EntityAssetBase
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Editor.TDEditorGUI.ContrastText*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.ContrastText
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_ContrastText_UnityEngine_Color_
+  name: ContrastText
+  nameWithType: TDEditorGUI.ContrastText
+  fullName: TDMaker.Editor.TDEditorGUI.ContrastText
+- uid: TDMaker.Editor.TDEditorGUI.Compact*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.Compact
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_Compact_System_Double_
+  name: Compact
+  nameWithType: TDEditorGUI.Compact
+  fullName: TDMaker.Editor.TDEditorGUI.Compact
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TDMaker.Editor.TDEditorGUI.FindAll*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.FindAll
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_FindAll__1
+  name: FindAll
+  nameWithType: TDEditorGUI.FindAll
+  fullName: TDMaker.Editor.TDEditorGUI.FindAll
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: TDMaker.Editor.TDEditorGUI.IsMissingReference*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.IsMissingReference
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_IsMissingReference_UnityEditor_SerializedProperty_
+  name: IsMissingReference
+  nameWithType: TDEditorGUI.IsMissingReference
+  fullName: TDMaker.Editor.TDEditorGUI.IsMissingReference
+- uid: UnityEditor.SerializedProperty
+  commentId: T:UnityEditor.SerializedProperty
+  parent: UnityEditor
+  isExternal: true
+  name: SerializedProperty
+  nameWithType: SerializedProperty
+  fullName: UnityEditor.SerializedProperty
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: TDMaker.Editor.TDEditorGUI.SelectAndPing*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.SelectAndPing
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_SelectAndPing_UnityEngine_Object_
+  name: SelectAndPing
+  nameWithType: TDEditorGUI.SelectAndPing
+  fullName: TDMaker.Editor.TDEditorGUI.SelectAndPing
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: TDMaker.Editor.TDEditorGUI.PanelBackground*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.PanelBackground
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_PanelBackground
+  name: PanelBackground
+  nameWithType: TDEditorGUI.PanelBackground
+  fullName: TDMaker.Editor.TDEditorGUI.PanelBackground
+- uid: TDMaker.Editor.TDEditorGUI.CanvasBackground*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.CanvasBackground
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_CanvasBackground
+  name: CanvasBackground
+  nameWithType: TDEditorGUI.CanvasBackground
+  fullName: TDMaker.Editor.TDEditorGUI.CanvasBackground
+- uid: TDMaker.Editor.TDEditorGUI.RowTint*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.RowTint
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_RowTint
+  name: RowTint
+  nameWithType: TDEditorGUI.RowTint
+  fullName: TDMaker.Editor.TDEditorGUI.RowTint
+- uid: TDMaker.Editor.TDEditorGUI.LineColor*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.LineColor
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_LineColor
+  name: LineColor
+  nameWithType: TDEditorGUI.LineColor
+  fullName: TDMaker.Editor.TDEditorGUI.LineColor
+- uid: TDMaker.Editor.TDEditorGUI.Header*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.Header
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_Header
+  name: Header
+  nameWithType: TDEditorGUI.Header
+  fullName: TDMaker.Editor.TDEditorGUI.Header
+- uid: UnityEngine.GUIStyle
+  commentId: T:UnityEngine.GUIStyle
+  parent: UnityEngine
+  isExternal: true
+  name: GUIStyle
+  nameWithType: GUIStyle
+  fullName: UnityEngine.GUIStyle
+- uid: TDMaker.Editor.TDEditorGUI.MiniCentered*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.MiniCentered
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_MiniCentered
+  name: MiniCentered
+  nameWithType: TDEditorGUI.MiniCentered
+  fullName: TDMaker.Editor.TDEditorGUI.MiniCentered
+- uid: TDMaker.Editor.TDEditorGUI.BoldClipped*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.BoldClipped
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_BoldClipped
+  name: BoldClipped
+  nameWithType: TDEditorGUI.BoldClipped
+  fullName: TDMaker.Editor.TDEditorGUI.BoldClipped
+- uid: TDMaker.Editor.TDEditorGUI.StatValue*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.StatValue
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_StatValue
+  name: StatValue
+  nameWithType: TDEditorGUI.StatValue
+  fullName: TDMaker.Editor.TDEditorGUI.StatValue
+- uid: TDMaker.Editor.TDEditorGUI.WrapMini*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.WrapMini
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_WrapMini
+  name: WrapMini
+  nameWithType: TDEditorGUI.WrapMini
+  fullName: TDMaker.Editor.TDEditorGUI.WrapMini
+- uid: TDMaker.Editor.TDEditorGUI.SceneLabel*
+  commentId: Overload:TDMaker.Editor.TDEditorGUI.SceneLabel
+  isExternal: true
+  href: TDMaker.Editor.TDEditorGUI.html#TDMaker_Editor_TDEditorGUI_SceneLabel
+  name: SceneLabel
+  nameWithType: TDEditorGUI.SceneLabel
+  fullName: TDMaker.Editor.TDEditorGUI.SceneLabel

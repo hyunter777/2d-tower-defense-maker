@@ -1,0 +1,500 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.MeleeEngagementDef
+  commentId: T:TDMaker.Core.Defs.MeleeEngagementDef
+  id: MeleeEngagementDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.MeleeEngagementDef.#ctor(System.Nullable{TDMaker.Core.Vec2},System.Nullable{TDMaker.Core.Vec2},System.Single)
+  - TDMaker.Core.Defs.MeleeEngagementDef.GuestContactBias
+  - TDMaker.Core.Defs.MeleeEngagementDef.HostContactBias
+  - TDMaker.Core.Defs.MeleeEngagementDef.RowSpacing
+  langs:
+  - csharp
+  - vb
+  name: MeleeEngagementDef
+  nameWithType: MeleeEngagementDef
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Immutable template-data slot for world-axis contact geometry, independent of attack/search range.
+  example:
+  - '<pre><code class="lang-csharp">template.WithCustomData(new MeleeEngagementDef(hostContactBias: new Vec2(0.3f, 0)));</code></pre>'
+  syntax:
+    content: public sealed class MeleeEngagementDef
+    content.vb: Public NotInheritable Class MeleeEngagementDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.MeleeEngagementDef.#ctor(System.Nullable{TDMaker.Core.Vec2},System.Nullable{TDMaker.Core.Vec2},System.Single)
+  commentId: M:TDMaker.Core.Defs.MeleeEngagementDef.#ctor(System.Nullable{TDMaker.Core.Vec2},System.Nullable{TDMaker.Core.Vec2},System.Single)
+  id: '#ctor(System.Nullable{TDMaker.Core.Vec2},System.Nullable{TDMaker.Core.Vec2},System.Single)'
+  parent: TDMaker.Core.Defs.MeleeEngagementDef
+  langs:
+  - csharp
+  - vb
+  name: MeleeEngagementDef(Vec2?, Vec2?, float)
+  nameWithType: MeleeEngagementDef.MeleeEngagementDef(Vec2?, Vec2?, float)
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef.MeleeEngagementDef(TDMaker.Core.Vec2?, TDMaker.Core.Vec2?, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates newly authored geometry. Omitted biases are (0.25, 0), with row spacing 0.12 world units.
+  example: []
+  syntax:
+    content: public MeleeEngagementDef(Vec2? hostContactBias = null, Vec2? guestContactBias = null, float rowSpacing = 0.12)
+    parameters:
+    - id: hostContactBias
+      type: System.Nullable{TDMaker.Core.Vec2}
+    - id: guestContactBias
+      type: System.Nullable{TDMaker.Core.Vec2}
+    - id: rowSpacing
+      type: System.Single
+    content.vb: Public Sub New(hostContactBias As Vec2? = Nothing, guestContactBias As Vec2? = Nothing, rowSpacing As Single
+      = 0.12)
+  overload: TDMaker.Core.Defs.MeleeEngagementDef.#ctor*
+  nameWithType.vb: MeleeEngagementDef.New(Vec2?, Vec2?, Single)
+  fullName.vb: TDMaker.Core.Defs.MeleeEngagementDef.New(TDMaker.Core.Vec2?, TDMaker.Core.Vec2?, Single)
+  name.vb: New(Vec2?, Vec2?, Single)
+- uid: TDMaker.Core.Defs.MeleeEngagementDef.HostContactBias
+  commentId: P:TDMaker.Core.Defs.MeleeEngagementDef.HostContactBias
+  id: HostContactBias
+  parent: TDMaker.Core.Defs.MeleeEngagementDef
+  langs:
+  - csharp
+  - vb
+  name: HostContactBias
+  nameWithType: MeleeEngagementDef.HostContactBias
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef.HostContactBias
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Host contribution to horizontal separation and signed world-Y offset.
+  example: []
+  syntax:
+    content: public Vec2 HostContactBias { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property HostContactBias As Vec2
+  overload: TDMaker.Core.Defs.MeleeEngagementDef.HostContactBias*
+- uid: TDMaker.Core.Defs.MeleeEngagementDef.GuestContactBias
+  commentId: P:TDMaker.Core.Defs.MeleeEngagementDef.GuestContactBias
+  id: GuestContactBias
+  parent: TDMaker.Core.Defs.MeleeEngagementDef
+  langs:
+  - csharp
+  - vb
+  name: GuestContactBias
+  nameWithType: MeleeEngagementDef.GuestContactBias
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef.GuestContactBias
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Guest contribution to horizontal separation and signed world-Y offset.
+  example: []
+  syntax:
+    content: public Vec2 GuestContactBias { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property GuestContactBias As Vec2
+  overload: TDMaker.Core.Defs.MeleeEngagementDef.GuestContactBias*
+- uid: TDMaker.Core.Defs.MeleeEngagementDef.RowSpacing
+  commentId: P:TDMaker.Core.Defs.MeleeEngagementDef.RowSpacing
+  id: RowSpacing
+  parent: TDMaker.Core.Defs.MeleeEngagementDef
+  langs:
+  - csharp
+  - vb
+  name: RowSpacing
+  nameWithType: MeleeEngagementDef.RowSpacing
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef.RowSpacing
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Host's world-Y row spacing. Side rows retreat by half this distance on X.
+  example: []
+  syntax:
+    content: public float RowSpacing { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RowSpacing As Single
+  overload: TDMaker.Core.Defs.MeleeEngagementDef.RowSpacing*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.MeleeEngagementDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.MeleeEngagementDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.MeleeEngagementDef.html#TDMaker_Core_Defs_MeleeEngagementDef__ctor_System_Nullable_TDMaker_Core_Vec2__System_Nullable_TDMaker_Core_Vec2__System_Single_
+  name: MeleeEngagementDef
+  nameWithType: MeleeEngagementDef.MeleeEngagementDef
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef.MeleeEngagementDef
+  nameWithType.vb: MeleeEngagementDef.New
+  fullName.vb: TDMaker.Core.Defs.MeleeEngagementDef.New
+  name.vb: New
+- uid: System.Nullable{TDMaker.Core.Vec2}
+  commentId: T:System.Nullable{TDMaker.Core.Vec2}
+  parent: System
+  definition: System.Nullable`1
+  href: TDMaker.Core.Vec2.html
+  name: Vec2?
+  nameWithType: Vec2?
+  fullName: TDMaker.Core.Vec2?
+  spec.csharp:
+  - uid: TDMaker.Core.Vec2
+    name: Vec2
+    isExternal: true
+    href: TDMaker.Core.Vec2.html
+  - name: '?'
+  spec.vb:
+  - uid: TDMaker.Core.Vec2
+    name: Vec2
+    isExternal: true
+    href: TDMaker.Core.Vec2.html
+  - name: '?'
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Core.Defs.MeleeEngagementDef.HostContactBias*
+  commentId: Overload:TDMaker.Core.Defs.MeleeEngagementDef.HostContactBias
+  isExternal: true
+  href: TDMaker.Core.Defs.MeleeEngagementDef.html#TDMaker_Core_Defs_MeleeEngagementDef_HostContactBias
+  name: HostContactBias
+  nameWithType: MeleeEngagementDef.HostContactBias
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef.HostContactBias
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.Defs.MeleeEngagementDef.GuestContactBias*
+  commentId: Overload:TDMaker.Core.Defs.MeleeEngagementDef.GuestContactBias
+  isExternal: true
+  href: TDMaker.Core.Defs.MeleeEngagementDef.html#TDMaker_Core_Defs_MeleeEngagementDef_GuestContactBias
+  name: GuestContactBias
+  nameWithType: MeleeEngagementDef.GuestContactBias
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef.GuestContactBias
+- uid: TDMaker.Core.Defs.MeleeEngagementDef.RowSpacing*
+  commentId: Overload:TDMaker.Core.Defs.MeleeEngagementDef.RowSpacing
+  isExternal: true
+  href: TDMaker.Core.Defs.MeleeEngagementDef.html#TDMaker_Core_Defs_MeleeEngagementDef_RowSpacing
+  name: RowSpacing
+  nameWithType: MeleeEngagementDef.RowSpacing
+  fullName: TDMaker.Core.Defs.MeleeEngagementDef.RowSpacing

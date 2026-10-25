@@ -1,0 +1,1432 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.SampleAudio
+  commentId: T:TDMaker.Editor.SampleAudio
+  id: SampleAudio
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.SampleAudio.AllKeys
+  - TDMaker.Editor.SampleAudio.ApplyAssetCues(System.String[])
+  - TDMaker.Editor.SampleAudio.ApplyAssetCues(UnityEngine.ScriptableObject)
+  - TDMaker.Editor.SampleAudio.ApplyLevelMusic(TDMaker.Unity.Authoring.LevelAsset,System.Single)
+  - TDMaker.Editor.SampleAudio.ApplyMenuMusic(TDMaker.Unity.View.MusicPlayer)
+  - TDMaker.Editor.SampleAudio.ApplyPlayerCues(TDMaker.Unity.View.AudioCuePlayer)
+  - TDMaker.Editor.SampleAudio.Assign(TDMaker.Unity.Authoring.AudioCue,System.String,System.Single,System.Single,System.Single,System.Single)
+  - TDMaker.Editor.SampleAudio.Available
+  - TDMaker.Editor.SampleAudio.BattleMusic
+  - TDMaker.Editor.SampleAudio.BigEnemySize
+  - TDMaker.Editor.SampleAudio.DefeatMusic
+  - TDMaker.Editor.SampleAudio.EnemyDeathKey(System.Single)
+  - TDMaker.Editor.SampleAudio.GlobalCueKeys
+  - TDMaker.Editor.SampleAudio.HeroAttackKey(System.String)
+  - TDMaker.Editor.SampleAudio.IntenseMusic
+  - TDMaker.Editor.SampleAudio.MechanicCueKeys
+  - TDMaker.Editor.SampleAudio.MenuMusic
+  - TDMaker.Editor.SampleAudio.Music(System.String)
+  - TDMaker.Editor.SampleAudio.MusicFolder
+  - TDMaker.Editor.SampleAudio.ProjectileImpactKey(System.String)
+  - TDMaker.Editor.SampleAudio.Sfx(System.String)
+  - TDMaker.Editor.SampleAudio.SfxFolder
+  - TDMaker.Editor.SampleAudio.SpellCastKey(System.String)
+  - TDMaker.Editor.SampleAudio.TowerAttackKey(System.String)
+  - TDMaker.Editor.SampleAudio.VictoryMusic
+  langs:
+  - csharp
+  - vb
+  name: SampleAudio
+  nameWithType: SampleAudio
+  fullName: TDMaker.Editor.SampleAudio
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Assigns the optional sample audio (<code>Assets/TDMaker/Samples/Audio/Sfx/&lt;key&gt;.ogg</code> and <code>Music/&lt;key&gt;.ogg</code>)
+
+    to sample cues by key. A missing file leaves its cue empty, so sample generation is deterministic with or without the
+    audio.
+
+    The key tables are public so tests (and buyers copying the scheme) can check them.'
+  example: []
+  syntax:
+    content: public static class SampleAudio
+    content.vb: Public Module SampleAudio
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.SampleAudio.SfxFolder
+  commentId: F:TDMaker.Editor.SampleAudio.SfxFolder
+  id: SfxFolder
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: SfxFolder
+  nameWithType: SampleAudio.SfxFolder
+  fullName: TDMaker.Editor.SampleAudio.SfxFolder
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Folder of the sample sound effects.
+  example: []
+  syntax:
+    content: public const string SfxFolder = "Assets/TDMaker/Samples/Audio/Sfx"
+    return:
+      type: System.String
+    content.vb: Public Const SfxFolder As String = "Assets/TDMaker/Samples/Audio/Sfx"
+- uid: TDMaker.Editor.SampleAudio.MusicFolder
+  commentId: F:TDMaker.Editor.SampleAudio.MusicFolder
+  id: MusicFolder
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: MusicFolder
+  nameWithType: SampleAudio.MusicFolder
+  fullName: TDMaker.Editor.SampleAudio.MusicFolder
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Folder of the sample music.
+  example: []
+  syntax:
+    content: public const string MusicFolder = "Assets/TDMaker/Samples/Audio/Music"
+    return:
+      type: System.String
+    content.vb: Public Const MusicFolder As String = "Assets/TDMaker/Samples/Audio/Music"
+- uid: TDMaker.Editor.SampleAudio.MenuMusic
+  commentId: F:TDMaker.Editor.SampleAudio.MenuMusic
+  id: MenuMusic
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: MenuMusic
+  nameWithType: SampleAudio.MenuMusic
+  fullName: TDMaker.Editor.SampleAudio.MenuMusic
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.'
+  example: []
+  syntax:
+    content: public const string MenuMusic = "music_menu"
+    return:
+      type: System.String
+    content.vb: Public Const MenuMusic As String = "music_menu"
+- uid: TDMaker.Editor.SampleAudio.BattleMusic
+  commentId: F:TDMaker.Editor.SampleAudio.BattleMusic
+  id: BattleMusic
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: BattleMusic
+  nameWithType: SampleAudio.BattleMusic
+  fullName: TDMaker.Editor.SampleAudio.BattleMusic
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.'
+  example: []
+  syntax:
+    content: public const string BattleMusic = "music_battle"
+    return:
+      type: System.String
+    content.vb: Public Const BattleMusic As String = "music_battle"
+- uid: TDMaker.Editor.SampleAudio.IntenseMusic
+  commentId: F:TDMaker.Editor.SampleAudio.IntenseMusic
+  id: IntenseMusic
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: IntenseMusic
+  nameWithType: SampleAudio.IntenseMusic
+  fullName: TDMaker.Editor.SampleAudio.IntenseMusic
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.'
+  example: []
+  syntax:
+    content: public const string IntenseMusic = "music_battle_intense"
+    return:
+      type: System.String
+    content.vb: Public Const IntenseMusic As String = "music_battle_intense"
+- uid: TDMaker.Editor.SampleAudio.VictoryMusic
+  commentId: F:TDMaker.Editor.SampleAudio.VictoryMusic
+  id: VictoryMusic
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: VictoryMusic
+  nameWithType: SampleAudio.VictoryMusic
+  fullName: TDMaker.Editor.SampleAudio.VictoryMusic
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.'
+  example: []
+  syntax:
+    content: public const string VictoryMusic = "music_victory"
+    return:
+      type: System.String
+    content.vb: Public Const VictoryMusic As String = "music_victory"
+- uid: TDMaker.Editor.SampleAudio.DefeatMusic
+  commentId: F:TDMaker.Editor.SampleAudio.DefeatMusic
+  id: DefeatMusic
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: DefeatMusic
+  nameWithType: SampleAudio.DefeatMusic
+  fullName: TDMaker.Editor.SampleAudio.DefeatMusic
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.'
+  example: []
+  syntax:
+    content: public const string DefeatMusic = "music_defeat"
+    return:
+      type: System.String
+    content.vb: Public Const DefeatMusic As String = "music_defeat"
+- uid: TDMaker.Editor.SampleAudio.GlobalCueKeys
+  commentId: F:TDMaker.Editor.SampleAudio.GlobalCueKeys
+  id: GlobalCueKeys
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: GlobalCueKeys
+  nameWithType: SampleAudio.GlobalCueKeys
+  fullName: TDMaker.Editor.SampleAudio.GlobalCueKeys
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Which global <xref href="TDMaker.Unity.View.AudioCuePlayer.GlobalCues" data-throw-if-not-resolved="false"></xref>
+    slot uses which sound key (slots not listed stay empty).
+  example: []
+  syntax:
+    content: public static readonly KeyValuePair<string, string>[] GlobalCueKeys
+    return:
+      type: System.Collections.Generic.KeyValuePair{System.String,System.String}[]
+    content.vb: Public Shared ReadOnly GlobalCueKeys As KeyValuePair(Of String, String)()
+- uid: TDMaker.Editor.SampleAudio.MechanicCueKeys
+  commentId: F:TDMaker.Editor.SampleAudio.MechanicCueKeys
+  id: MechanicCueKeys
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: MechanicCueKeys
+  nameWithType: SampleAudio.MechanicCueKeys
+  fullName: TDMaker.Editor.SampleAudio.MechanicCueKeys
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Which <xref href="TDMaker.Unity.View.AudioCuePlayer.MechanicCues" data-throw-if-not-resolved="false"></xref> slot
+    uses which sound key.
+  example: []
+  syntax:
+    content: public static readonly KeyValuePair<string, string>[] MechanicCueKeys
+    return:
+      type: System.Collections.Generic.KeyValuePair{System.String,System.String}[]
+    content.vb: Public Shared ReadOnly MechanicCueKeys As KeyValuePair(Of String, String)()
+- uid: TDMaker.Editor.SampleAudio.BigEnemySize
+  commentId: F:TDMaker.Editor.SampleAudio.BigEnemySize
+  id: BigEnemySize
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: BigEnemySize
+  nameWithType: SampleAudio.BigEnemySize
+  fullName: TDMaker.Editor.SampleAudio.BigEnemySize
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Enemies at least this large (view size) use the big death sound.
+  example: []
+  syntax:
+    content: public const float BigEnemySize = 0.55
+    return:
+      type: System.Single
+    content.vb: Public Const BigEnemySize As Single = 0.55
+- uid: TDMaker.Editor.SampleAudio.TowerAttackKey(System.String)
+  commentId: M:TDMaker.Editor.SampleAudio.TowerAttackKey(System.String)
+  id: TowerAttackKey(System.String)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: TowerAttackKey(string)
+  nameWithType: SampleAudio.TowerAttackKey(string)
+  fullName: TDMaker.Editor.SampleAudio.TowerAttackKey(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Attack sound of a sample tower by template id (null: none, for example barracks).'
+  example: []
+  syntax:
+    content: public static string TowerAttackKey(string templateId)
+    parameters:
+    - id: templateId
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function TowerAttackKey(templateId As String) As String
+  overload: TDMaker.Editor.SampleAudio.TowerAttackKey*
+  nameWithType.vb: SampleAudio.TowerAttackKey(String)
+  fullName.vb: TDMaker.Editor.SampleAudio.TowerAttackKey(String)
+  name.vb: TowerAttackKey(String)
+- uid: TDMaker.Editor.SampleAudio.ProjectileImpactKey(System.String)
+  commentId: M:TDMaker.Editor.SampleAudio.ProjectileImpactKey(System.String)
+  id: ProjectileImpactKey(System.String)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: ProjectileImpactKey(string)
+  nameWithType: SampleAudio.ProjectileImpactKey(string)
+  fullName: TDMaker.Editor.SampleAudio.ProjectileImpactKey(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Impact sound of a sample projectile by asset name (null: none).'
+  example: []
+  syntax:
+    content: public static string ProjectileImpactKey(string assetName)
+    parameters:
+    - id: assetName
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function ProjectileImpactKey(assetName As String) As String
+  overload: TDMaker.Editor.SampleAudio.ProjectileImpactKey*
+  nameWithType.vb: SampleAudio.ProjectileImpactKey(String)
+  fullName.vb: TDMaker.Editor.SampleAudio.ProjectileImpactKey(String)
+  name.vb: ProjectileImpactKey(String)
+- uid: TDMaker.Editor.SampleAudio.EnemyDeathKey(System.Single)
+  commentId: M:TDMaker.Editor.SampleAudio.EnemyDeathKey(System.Single)
+  id: EnemyDeathKey(System.Single)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: EnemyDeathKey(float)
+  nameWithType: SampleAudio.EnemyDeathKey(float)
+  fullName: TDMaker.Editor.SampleAudio.EnemyDeathKey(float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Death sound of an enemy by its view size.
+  example: []
+  syntax:
+    content: public static string EnemyDeathKey(float viewSize)
+    parameters:
+    - id: viewSize
+      type: System.Single
+    return:
+      type: System.String
+    content.vb: Public Shared Function EnemyDeathKey(viewSize As Single) As String
+  overload: TDMaker.Editor.SampleAudio.EnemyDeathKey*
+  nameWithType.vb: SampleAudio.EnemyDeathKey(Single)
+  fullName.vb: TDMaker.Editor.SampleAudio.EnemyDeathKey(Single)
+  name.vb: EnemyDeathKey(Single)
+- uid: TDMaker.Editor.SampleAudio.HeroAttackKey(System.String)
+  commentId: M:TDMaker.Editor.SampleAudio.HeroAttackKey(System.String)
+  id: HeroAttackKey(System.String)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: HeroAttackKey(string)
+  nameWithType: SampleAudio.HeroAttackKey(string)
+  fullName: TDMaker.Editor.SampleAudio.HeroAttackKey(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Attack sound of a sample hero by template id.
+  example: []
+  syntax:
+    content: public static string HeroAttackKey(string templateId)
+    parameters:
+    - id: templateId
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function HeroAttackKey(templateId As String) As String
+  overload: TDMaker.Editor.SampleAudio.HeroAttackKey*
+  nameWithType.vb: SampleAudio.HeroAttackKey(String)
+  fullName.vb: TDMaker.Editor.SampleAudio.HeroAttackKey(String)
+  name.vb: HeroAttackKey(String)
+- uid: TDMaker.Editor.SampleAudio.SpellCastKey(System.String)
+  commentId: M:TDMaker.Editor.SampleAudio.SpellCastKey(System.String)
+  id: SpellCastKey(System.String)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: SpellCastKey(string)
+  nameWithType: SampleAudio.SpellCastKey(string)
+  fullName: TDMaker.Editor.SampleAudio.SpellCastKey(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Cast sound of a sample spell by spell id (null: none).'
+  example: []
+  syntax:
+    content: public static string SpellCastKey(string spellId)
+    parameters:
+    - id: spellId
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function SpellCastKey(spellId As String) As String
+  overload: TDMaker.Editor.SampleAudio.SpellCastKey*
+  nameWithType.vb: SampleAudio.SpellCastKey(String)
+  fullName.vb: TDMaker.Editor.SampleAudio.SpellCastKey(String)
+  name.vb: SpellCastKey(String)
+- uid: TDMaker.Editor.SampleAudio.AllKeys
+  commentId: M:TDMaker.Editor.SampleAudio.AllKeys
+  id: AllKeys
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: AllKeys()
+  nameWithType: SampleAudio.AllKeys()
+  fullName: TDMaker.Editor.SampleAudio.AllKeys()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Every key the sample mapping can use (sound effects and music).
+  example: []
+  syntax:
+    content: public static List<string> AllKeys()
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Shared Function AllKeys() As List(Of String)
+  overload: TDMaker.Editor.SampleAudio.AllKeys*
+- uid: TDMaker.Editor.SampleAudio.Sfx(System.String)
+  commentId: M:TDMaker.Editor.SampleAudio.Sfx(System.String)
+  id: Sfx(System.String)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: Sfx(string)
+  nameWithType: SampleAudio.Sfx(string)
+  fullName: TDMaker.Editor.SampleAudio.Sfx(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The sample sound effect for <code class="paramref">key</code>, or null when the file does not exist.
+  example: []
+  syntax:
+    content: public static AudioClip Sfx(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public Shared Function Sfx(key As String) As AudioClip
+  overload: TDMaker.Editor.SampleAudio.Sfx*
+  nameWithType.vb: SampleAudio.Sfx(String)
+  fullName.vb: TDMaker.Editor.SampleAudio.Sfx(String)
+  name.vb: Sfx(String)
+- uid: TDMaker.Editor.SampleAudio.Music(System.String)
+  commentId: M:TDMaker.Editor.SampleAudio.Music(System.String)
+  id: Music(System.String)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: Music(string)
+  nameWithType: SampleAudio.Music(string)
+  fullName: TDMaker.Editor.SampleAudio.Music(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The sample music track for <code class="paramref">key</code>, or null when the file does not exist.
+  example: []
+  syntax:
+    content: public static AudioClip Music(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public Shared Function Music(key As String) As AudioClip
+  overload: TDMaker.Editor.SampleAudio.Music*
+  nameWithType.vb: SampleAudio.Music(String)
+  fullName.vb: TDMaker.Editor.SampleAudio.Music(String)
+  name.vb: Music(String)
+- uid: TDMaker.Editor.SampleAudio.Assign(TDMaker.Unity.Authoring.AudioCue,System.String,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:TDMaker.Editor.SampleAudio.Assign(TDMaker.Unity.Authoring.AudioCue,System.String,System.Single,System.Single,System.Single,System.Single)
+  id: Assign(TDMaker.Unity.Authoring.AudioCue,System.String,System.Single,System.Single,System.Single,System.Single)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: Assign(AudioCue, string, float, float, float, float)
+  nameWithType: SampleAudio.Assign(AudioCue, string, float, float, float, float)
+  fullName: TDMaker.Editor.SampleAudio.Assign(TDMaker.Unity.Authoring.AudioCue, string, float, float, float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Sets a cue to the sample clip <code class="paramref">key</code> (or leaves it empty when the clip is missing)
+    with the given playback
+
+    settings. Returns whether a clip was assigned.'
+  example: []
+  syntax:
+    content: public static bool Assign(AudioCue cue, string key, float volume = 1, float minInterval = 0.05, float pitchMin
+      = 0.95, float pitchMax = 1.05)
+    parameters:
+    - id: cue
+      type: TDMaker.Unity.Authoring.AudioCue
+    - id: key
+      type: System.String
+    - id: volume
+      type: System.Single
+    - id: minInterval
+      type: System.Single
+    - id: pitchMin
+      type: System.Single
+    - id: pitchMax
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Assign(cue As AudioCue, key As String, volume As Single = 1, minInterval As Single
+      = 0.05, pitchMin As Single = 0.95, pitchMax As Single = 1.05) As Boolean
+  overload: TDMaker.Editor.SampleAudio.Assign*
+  nameWithType.vb: SampleAudio.Assign(AudioCue, String, Single, Single, Single, Single)
+  fullName.vb: TDMaker.Editor.SampleAudio.Assign(TDMaker.Unity.Authoring.AudioCue, String, Single, Single, Single, Single)
+  name.vb: Assign(AudioCue, String, Single, Single, Single, Single)
+- uid: TDMaker.Editor.SampleAudio.ApplyPlayerCues(TDMaker.Unity.View.AudioCuePlayer)
+  commentId: M:TDMaker.Editor.SampleAudio.ApplyPlayerCues(TDMaker.Unity.View.AudioCuePlayer)
+  id: ApplyPlayerCues(TDMaker.Unity.View.AudioCuePlayer)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: ApplyPlayerCues(AudioCuePlayer)
+  nameWithType: SampleAudio.ApplyPlayerCues(AudioCuePlayer)
+  fullName: TDMaker.Editor.SampleAudio.ApplyPlayerCues(TDMaker.Unity.View.AudioCuePlayer)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Fills the global and mechanic cues of a sample audio player.
+  example: []
+  syntax:
+    content: public static void ApplyPlayerCues(AudioCuePlayer player)
+    parameters:
+    - id: player
+      type: TDMaker.Unity.View.AudioCuePlayer
+    content.vb: Public Shared Sub ApplyPlayerCues(player As AudioCuePlayer)
+  overload: TDMaker.Editor.SampleAudio.ApplyPlayerCues*
+- uid: TDMaker.Editor.SampleAudio.ApplyMenuMusic(TDMaker.Unity.View.MusicPlayer)
+  commentId: M:TDMaker.Editor.SampleAudio.ApplyMenuMusic(TDMaker.Unity.View.MusicPlayer)
+  id: ApplyMenuMusic(TDMaker.Unity.View.MusicPlayer)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: ApplyMenuMusic(MusicPlayer)
+  nameWithType: SampleAudio.ApplyMenuMusic(MusicPlayer)
+  fullName: TDMaker.Editor.SampleAudio.ApplyMenuMusic(TDMaker.Unity.View.MusicPlayer)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Sets the menu loop of a sample music player (empty when the file is missing).
+  example: []
+  syntax:
+    content: public static void ApplyMenuMusic(MusicPlayer player)
+    parameters:
+    - id: player
+      type: TDMaker.Unity.View.MusicPlayer
+    content.vb: Public Shared Sub ApplyMenuMusic(player As MusicPlayer)
+  overload: TDMaker.Editor.SampleAudio.ApplyMenuMusic*
+- uid: TDMaker.Editor.SampleAudio.ApplyLevelMusic(TDMaker.Unity.Authoring.LevelAsset,System.Single)
+  commentId: M:TDMaker.Editor.SampleAudio.ApplyLevelMusic(TDMaker.Unity.Authoring.LevelAsset,System.Single)
+  id: ApplyLevelMusic(TDMaker.Unity.Authoring.LevelAsset,System.Single)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: ApplyLevelMusic(LevelAsset, float)
+  nameWithType: SampleAudio.ApplyLevelMusic(LevelAsset, float)
+  fullName: TDMaker.Editor.SampleAudio.ApplyLevelMusic(TDMaker.Unity.Authoring.LevelAsset, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Sets a sample level''s music: battle and intense loops (intense on the last and boss waves) and the stingers.'
+  example: []
+  syntax:
+    content: public static void ApplyLevelMusic(LevelAsset level, float volume = 0.8)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAsset
+    - id: volume
+      type: System.Single
+    content.vb: Public Shared Sub ApplyLevelMusic(level As LevelAsset, volume As Single = 0.8)
+  overload: TDMaker.Editor.SampleAudio.ApplyLevelMusic*
+  nameWithType.vb: SampleAudio.ApplyLevelMusic(LevelAsset, Single)
+  fullName.vb: TDMaker.Editor.SampleAudio.ApplyLevelMusic(TDMaker.Unity.Authoring.LevelAsset, Single)
+  name.vb: ApplyLevelMusic(LevelAsset, Single)
+- uid: TDMaker.Editor.SampleAudio.ApplyAssetCues(System.String[])
+  commentId: M:TDMaker.Editor.SampleAudio.ApplyAssetCues(System.String[])
+  id: ApplyAssetCues(System.String[])
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: ApplyAssetCues(params string[])
+  nameWithType: SampleAudio.ApplyAssetCues(params string[])
+  fullName: TDMaker.Editor.SampleAudio.ApplyAssetCues(params string[])
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Assigns cues to every sample asset found in <code class="paramref">dataFolders</code> by type and id: tower attacks,
+    projectile
+
+    impacts, enemy hits and deaths (small / big), soldier attacks and deaths, hero attacks and spell casts.'
+  example: []
+  syntax:
+    content: public static void ApplyAssetCues(params string[] dataFolders)
+    parameters:
+    - id: dataFolders
+      type: System.String[]
+    content.vb: Public Shared Sub ApplyAssetCues(ParamArray dataFolders As String())
+  overload: TDMaker.Editor.SampleAudio.ApplyAssetCues*
+  nameWithType.vb: SampleAudio.ApplyAssetCues(ParamArray String())
+  fullName.vb: TDMaker.Editor.SampleAudio.ApplyAssetCues(ParamArray String())
+  name.vb: ApplyAssetCues(ParamArray String())
+- uid: TDMaker.Editor.SampleAudio.ApplyAssetCues(UnityEngine.ScriptableObject)
+  commentId: M:TDMaker.Editor.SampleAudio.ApplyAssetCues(UnityEngine.ScriptableObject)
+  id: ApplyAssetCues(UnityEngine.ScriptableObject)
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: ApplyAssetCues(ScriptableObject)
+  nameWithType: SampleAudio.ApplyAssetCues(ScriptableObject)
+  fullName: TDMaker.Editor.SampleAudio.ApplyAssetCues(UnityEngine.ScriptableObject)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Assigns the sample cues of one asset; returns whether the asset type has sample cues.
+  example: []
+  syntax:
+    content: public static bool ApplyAssetCues(ScriptableObject asset)
+    parameters:
+    - id: asset
+      type: UnityEngine.ScriptableObject
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function ApplyAssetCues(asset As ScriptableObject) As Boolean
+  overload: TDMaker.Editor.SampleAudio.ApplyAssetCues*
+- uid: TDMaker.Editor.SampleAudio.Available
+  commentId: P:TDMaker.Editor.SampleAudio.Available
+  id: Available
+  parent: TDMaker.Editor.SampleAudio
+  langs:
+  - csharp
+  - vb
+  name: Available
+  nameWithType: SampleAudio.Available
+  fullName: TDMaker.Editor.SampleAudio.Available
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether the optional sample audio is in the project (at least one clip in <xref href="TDMaker.Editor.SampleAudio.SfxFolder"
+    data-throw-if-not-resolved="false"></xref> or <xref href="TDMaker.Editor.SampleAudio.MusicFolder" data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: public static bool Available { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property Available As Boolean
+  overload: TDMaker.Editor.SampleAudio.Available*
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  commentId: T:TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.AudioCuePlayer.html
+  name: AudioCuePlayer.GlobalCues
+  nameWithType: AudioCuePlayer.GlobalCues
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  spec.csharp:
+  - uid: TDMaker.Unity.View.AudioCuePlayer
+    name: AudioCuePlayer
+    isExternal: true
+    href: TDMaker.Unity.View.AudioCuePlayer.html
+  - name: .
+  - uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+    name: GlobalCues
+    isExternal: true
+    href: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.html
+  spec.vb:
+  - uid: TDMaker.Unity.View.AudioCuePlayer
+    name: AudioCuePlayer
+    isExternal: true
+    href: TDMaker.Unity.View.AudioCuePlayer.html
+  - name: .
+  - uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+    name: GlobalCues
+    isExternal: true
+    href: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.html
+- uid: System.Collections.Generic.KeyValuePair{System.String,System.String}[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<string, string>[]
+  nameWithType: KeyValuePair<string, string>[]
+  fullName: System.Collections.Generic.KeyValuePair<string, string>[]
+  nameWithType.vb: KeyValuePair(Of String, String)()
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of String, String)()
+  name.vb: KeyValuePair(Of String, String)()
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: TDMaker.Unity.View.AudioCuePlayer.MechanicCues
+  commentId: T:TDMaker.Unity.View.AudioCuePlayer.MechanicCues
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.AudioCuePlayer.html
+  name: AudioCuePlayer.MechanicCues
+  nameWithType: AudioCuePlayer.MechanicCues
+  fullName: TDMaker.Unity.View.AudioCuePlayer.MechanicCues
+  spec.csharp:
+  - uid: TDMaker.Unity.View.AudioCuePlayer
+    name: AudioCuePlayer
+    isExternal: true
+    href: TDMaker.Unity.View.AudioCuePlayer.html
+  - name: .
+  - uid: TDMaker.Unity.View.AudioCuePlayer.MechanicCues
+    name: MechanicCues
+    isExternal: true
+    href: TDMaker.Unity.View.AudioCuePlayer.MechanicCues.html
+  spec.vb:
+  - uid: TDMaker.Unity.View.AudioCuePlayer
+    name: AudioCuePlayer
+    isExternal: true
+    href: TDMaker.Unity.View.AudioCuePlayer.html
+  - name: .
+  - uid: TDMaker.Unity.View.AudioCuePlayer.MechanicCues
+    name: MechanicCues
+    isExternal: true
+    href: TDMaker.Unity.View.AudioCuePlayer.MechanicCues.html
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Editor.SampleAudio.TowerAttackKey*
+  commentId: Overload:TDMaker.Editor.SampleAudio.TowerAttackKey
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_TowerAttackKey_System_String_
+  name: TowerAttackKey
+  nameWithType: SampleAudio.TowerAttackKey
+  fullName: TDMaker.Editor.SampleAudio.TowerAttackKey
+- uid: TDMaker.Editor.SampleAudio.ProjectileImpactKey*
+  commentId: Overload:TDMaker.Editor.SampleAudio.ProjectileImpactKey
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_ProjectileImpactKey_System_String_
+  name: ProjectileImpactKey
+  nameWithType: SampleAudio.ProjectileImpactKey
+  fullName: TDMaker.Editor.SampleAudio.ProjectileImpactKey
+- uid: TDMaker.Editor.SampleAudio.EnemyDeathKey*
+  commentId: Overload:TDMaker.Editor.SampleAudio.EnemyDeathKey
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_EnemyDeathKey_System_Single_
+  name: EnemyDeathKey
+  nameWithType: SampleAudio.EnemyDeathKey
+  fullName: TDMaker.Editor.SampleAudio.EnemyDeathKey
+- uid: TDMaker.Editor.SampleAudio.HeroAttackKey*
+  commentId: Overload:TDMaker.Editor.SampleAudio.HeroAttackKey
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_HeroAttackKey_System_String_
+  name: HeroAttackKey
+  nameWithType: SampleAudio.HeroAttackKey
+  fullName: TDMaker.Editor.SampleAudio.HeroAttackKey
+- uid: TDMaker.Editor.SampleAudio.SpellCastKey*
+  commentId: Overload:TDMaker.Editor.SampleAudio.SpellCastKey
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_SpellCastKey_System_String_
+  name: SpellCastKey
+  nameWithType: SampleAudio.SpellCastKey
+  fullName: TDMaker.Editor.SampleAudio.SpellCastKey
+- uid: TDMaker.Editor.SampleAudio.AllKeys*
+  commentId: Overload:TDMaker.Editor.SampleAudio.AllKeys
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_AllKeys
+  name: AllKeys
+  nameWithType: SampleAudio.AllKeys
+  fullName: TDMaker.Editor.SampleAudio.AllKeys
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Editor.SampleAudio.Sfx*
+  commentId: Overload:TDMaker.Editor.SampleAudio.Sfx
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_Sfx_System_String_
+  name: Sfx
+  nameWithType: SampleAudio.Sfx
+  fullName: TDMaker.Editor.SampleAudio.Sfx
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Editor.SampleAudio.Music*
+  commentId: Overload:TDMaker.Editor.SampleAudio.Music
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_Music_System_String_
+  name: Music
+  nameWithType: SampleAudio.Music
+  fullName: TDMaker.Editor.SampleAudio.Music
+- uid: TDMaker.Editor.SampleAudio.Assign*
+  commentId: Overload:TDMaker.Editor.SampleAudio.Assign
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_Assign_TDMaker_Unity_Authoring_AudioCue_System_String_System_Single_System_Single_System_Single_System_Single_
+  name: Assign
+  nameWithType: SampleAudio.Assign
+  fullName: TDMaker.Editor.SampleAudio.Assign
+- uid: TDMaker.Unity.Authoring.AudioCue
+  commentId: T:TDMaker.Unity.Authoring.AudioCue
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AudioCue.html
+  name: AudioCue
+  nameWithType: AudioCue
+  fullName: TDMaker.Unity.Authoring.AudioCue
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Editor.SampleAudio.ApplyPlayerCues*
+  commentId: Overload:TDMaker.Editor.SampleAudio.ApplyPlayerCues
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_ApplyPlayerCues_TDMaker_Unity_View_AudioCuePlayer_
+  name: ApplyPlayerCues
+  nameWithType: SampleAudio.ApplyPlayerCues
+  fullName: TDMaker.Editor.SampleAudio.ApplyPlayerCues
+- uid: TDMaker.Unity.View.AudioCuePlayer
+  commentId: T:TDMaker.Unity.View.AudioCuePlayer
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.AudioCuePlayer.html
+  name: AudioCuePlayer
+  nameWithType: AudioCuePlayer
+  fullName: TDMaker.Unity.View.AudioCuePlayer
+- uid: TDMaker.Editor.SampleAudio.ApplyMenuMusic*
+  commentId: Overload:TDMaker.Editor.SampleAudio.ApplyMenuMusic
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_ApplyMenuMusic_TDMaker_Unity_View_MusicPlayer_
+  name: ApplyMenuMusic
+  nameWithType: SampleAudio.ApplyMenuMusic
+  fullName: TDMaker.Editor.SampleAudio.ApplyMenuMusic
+- uid: TDMaker.Unity.View.MusicPlayer
+  commentId: T:TDMaker.Unity.View.MusicPlayer
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.MusicPlayer.html
+  name: MusicPlayer
+  nameWithType: MusicPlayer
+  fullName: TDMaker.Unity.View.MusicPlayer
+- uid: TDMaker.Editor.SampleAudio.ApplyLevelMusic*
+  commentId: Overload:TDMaker.Editor.SampleAudio.ApplyLevelMusic
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_ApplyLevelMusic_TDMaker_Unity_Authoring_LevelAsset_System_Single_
+  name: ApplyLevelMusic
+  nameWithType: SampleAudio.ApplyLevelMusic
+  fullName: TDMaker.Editor.SampleAudio.ApplyLevelMusic
+- uid: TDMaker.Unity.Authoring.LevelAsset
+  commentId: T:TDMaker.Unity.Authoring.LevelAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelAsset.html
+  name: LevelAsset
+  nameWithType: LevelAsset
+  fullName: TDMaker.Unity.Authoring.LevelAsset
+- uid: TDMaker.Editor.SampleAudio.ApplyAssetCues*
+  commentId: Overload:TDMaker.Editor.SampleAudio.ApplyAssetCues
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_ApplyAssetCues_System_String___
+  name: ApplyAssetCues
+  nameWithType: SampleAudio.ApplyAssetCues
+  fullName: TDMaker.Editor.SampleAudio.ApplyAssetCues
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: TDMaker.Editor.SampleAudio.SfxFolder
+  commentId: F:TDMaker.Editor.SampleAudio.SfxFolder
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_SfxFolder
+  name: SfxFolder
+  nameWithType: SampleAudio.SfxFolder
+  fullName: TDMaker.Editor.SampleAudio.SfxFolder
+- uid: TDMaker.Editor.SampleAudio.MusicFolder
+  commentId: F:TDMaker.Editor.SampleAudio.MusicFolder
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_MusicFolder
+  name: MusicFolder
+  nameWithType: SampleAudio.MusicFolder
+  fullName: TDMaker.Editor.SampleAudio.MusicFolder
+- uid: TDMaker.Editor.SampleAudio.Available*
+  commentId: Overload:TDMaker.Editor.SampleAudio.Available
+  isExternal: true
+  href: TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_Available
+  name: Available
+  nameWithType: SampleAudio.Available
+  fullName: TDMaker.Editor.SampleAudio.Available

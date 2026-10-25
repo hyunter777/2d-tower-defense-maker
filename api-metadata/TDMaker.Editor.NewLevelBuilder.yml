@@ -1,0 +1,632 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.NewLevelBuilder
+  commentId: T:TDMaker.Editor.NewLevelBuilder
+  id: NewLevelBuilder
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.NewLevelBuilder.ContentRoot
+  - TDMaker.Editor.NewLevelBuilder.Create(TDMaker.Editor.NewLevelSettings)
+  - TDMaker.Editor.NewLevelBuilder.DefaultFolder(System.String)
+  - TDMaker.Editor.NewLevelBuilder.MaxWaves
+  - TDMaker.Editor.NewLevelBuilder.ResolveFolder(TDMaker.Editor.NewLevelSettings)
+  - TDMaker.Editor.NewLevelBuilder.SampleKitAvailable
+  - TDMaker.Editor.NewLevelBuilder.ScenePathFor(TDMaker.Editor.NewLevelSettings)
+  - TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)
+  langs:
+  - csharp
+  - vb
+  name: NewLevelBuilder
+  nameWithType: NewLevelBuilder
+  fullName: TDMaker.Editor.NewLevelBuilder
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Headless core of <b>Tools &gt; 2D Tower Defense Maker &gt; New Level</b>: creates a level folder with a Level
+    asset, a Wave Set, starter
+
+    units (sample kit or Unit Workshop presets), a HUD theme and a sprite material, and a scene built by the sample scene
+    builder
+
+    (Simulation Runner, Level Authoring, one path across the frame, six build slots with rally points on the road, camera,
+
+    Game HUD, Level View, audio and music players). The result passes the Project Validator and plays in the Dry Run: lost
+
+    without towers, won with a defense. Usable from tests and <code>-executeMethod</code>; the window only collects the settings.'
+  example: []
+  syntax:
+    content: public static class NewLevelBuilder
+    content.vb: Public Module NewLevelBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.NewLevelBuilder.ContentRoot
+  commentId: F:TDMaker.Editor.NewLevelBuilder.ContentRoot
+  id: ContentRoot
+  parent: TDMaker.Editor.NewLevelBuilder
+  langs:
+  - csharp
+  - vb
+  name: ContentRoot
+  nameWithType: NewLevelBuilder.ContentRoot
+  fullName: TDMaker.Editor.NewLevelBuilder.ContentRoot
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Parent of the default level folders.
+  example: []
+  syntax:
+    content: public const string ContentRoot = "Assets/TDMakerContent"
+    return:
+      type: System.String
+    content.vb: Public Const ContentRoot As String = "Assets/TDMakerContent"
+- uid: TDMaker.Editor.NewLevelBuilder.MaxWaves
+  commentId: F:TDMaker.Editor.NewLevelBuilder.MaxWaves
+  id: MaxWaves
+  parent: TDMaker.Editor.NewLevelBuilder
+  langs:
+  - csharp
+  - vb
+  name: MaxWaves
+  nameWithType: NewLevelBuilder.MaxWaves
+  fullName: TDMaker.Editor.NewLevelBuilder.MaxWaves
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Highest wave count the wizard accepts.
+  example: []
+  syntax:
+    content: public const int MaxWaves = 30
+    return:
+      type: System.Int32
+    content.vb: Public Const MaxWaves As Integer = 30
+- uid: TDMaker.Editor.NewLevelBuilder.DefaultFolder(System.String)
+  commentId: M:TDMaker.Editor.NewLevelBuilder.DefaultFolder(System.String)
+  id: DefaultFolder(System.String)
+  parent: TDMaker.Editor.NewLevelBuilder
+  langs:
+  - csharp
+  - vb
+  name: DefaultFolder(string)
+  nameWithType: NewLevelBuilder.DefaultFolder(string)
+  fullName: TDMaker.Editor.NewLevelBuilder.DefaultFolder(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'The default folder for a level name: <code>Assets/TDMakerContent/&lt;Name&gt;</code>.'
+  example: []
+  syntax:
+    content: public static string DefaultFolder(string levelName)
+    parameters:
+    - id: levelName
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function DefaultFolder(levelName As String) As String
+  overload: TDMaker.Editor.NewLevelBuilder.DefaultFolder*
+  nameWithType.vb: NewLevelBuilder.DefaultFolder(String)
+  fullName.vb: TDMaker.Editor.NewLevelBuilder.DefaultFolder(String)
+  name.vb: DefaultFolder(String)
+- uid: TDMaker.Editor.NewLevelBuilder.ResolveFolder(TDMaker.Editor.NewLevelSettings)
+  commentId: M:TDMaker.Editor.NewLevelBuilder.ResolveFolder(TDMaker.Editor.NewLevelSettings)
+  id: ResolveFolder(TDMaker.Editor.NewLevelSettings)
+  parent: TDMaker.Editor.NewLevelBuilder
+  langs:
+  - csharp
+  - vb
+  name: ResolveFolder(NewLevelSettings)
+  nameWithType: NewLevelBuilder.ResolveFolder(NewLevelSettings)
+  fullName: TDMaker.Editor.NewLevelBuilder.ResolveFolder(TDMaker.Editor.NewLevelSettings)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The folder <code class="paramref">settings</code> resolves to (normalized; the default folder when empty).
+  example: []
+  syntax:
+    content: public static string ResolveFolder(NewLevelSettings settings)
+    parameters:
+    - id: settings
+      type: TDMaker.Editor.NewLevelSettings
+    return:
+      type: System.String
+    content.vb: Public Shared Function ResolveFolder(settings As NewLevelSettings) As String
+  overload: TDMaker.Editor.NewLevelBuilder.ResolveFolder*
+- uid: TDMaker.Editor.NewLevelBuilder.ScenePathFor(TDMaker.Editor.NewLevelSettings)
+  commentId: M:TDMaker.Editor.NewLevelBuilder.ScenePathFor(TDMaker.Editor.NewLevelSettings)
+  id: ScenePathFor(TDMaker.Editor.NewLevelSettings)
+  parent: TDMaker.Editor.NewLevelBuilder
+  langs:
+  - csharp
+  - vb
+  name: ScenePathFor(NewLevelSettings)
+  nameWithType: NewLevelBuilder.ScenePathFor(NewLevelSettings)
+  fullName: TDMaker.Editor.NewLevelBuilder.ScenePathFor(TDMaker.Editor.NewLevelSettings)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The scene path the level will be saved to.
+  example: []
+  syntax:
+    content: public static string ScenePathFor(NewLevelSettings settings)
+    parameters:
+    - id: settings
+      type: TDMaker.Editor.NewLevelSettings
+    return:
+      type: System.String
+    content.vb: Public Shared Function ScenePathFor(settings As NewLevelSettings) As String
+  overload: TDMaker.Editor.NewLevelBuilder.ScenePathFor*
+- uid: TDMaker.Editor.NewLevelBuilder.SampleKitAvailable
+  commentId: M:TDMaker.Editor.NewLevelBuilder.SampleKitAvailable
+  id: SampleKitAvailable
+  parent: TDMaker.Editor.NewLevelBuilder
+  langs:
+  - csharp
+  - vb
+  name: SampleKitAvailable()
+  nameWithType: NewLevelBuilder.SampleKitAvailable()
+  fullName: TDMaker.Editor.NewLevelBuilder.SampleKitAvailable()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether the Basic sample assets the sample kit uses are in the project.
+  example: []
+  syntax:
+    content: public static bool SampleKitAvailable()
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function SampleKitAvailable() As Boolean
+  overload: TDMaker.Editor.NewLevelBuilder.SampleKitAvailable*
+- uid: TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)
+  commentId: M:TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)
+  id: Validate(TDMaker.Editor.NewLevelSettings)
+  parent: TDMaker.Editor.NewLevelBuilder
+  langs:
+  - csharp
+  - vb
+  name: Validate(NewLevelSettings)
+  nameWithType: NewLevelBuilder.Validate(NewLevelSettings)
+  fullName: TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Checks the settings; returns a message describing the first problem, or null when they can be used.
+  example: []
+  syntax:
+    content: public static string Validate(NewLevelSettings settings)
+    parameters:
+    - id: settings
+      type: TDMaker.Editor.NewLevelSettings
+    return:
+      type: System.String
+    content.vb: Public Shared Function Validate(settings As NewLevelSettings) As String
+  overload: TDMaker.Editor.NewLevelBuilder.Validate*
+- uid: TDMaker.Editor.NewLevelBuilder.Create(TDMaker.Editor.NewLevelSettings)
+  commentId: M:TDMaker.Editor.NewLevelBuilder.Create(TDMaker.Editor.NewLevelSettings)
+  id: Create(TDMaker.Editor.NewLevelSettings)
+  parent: TDMaker.Editor.NewLevelBuilder
+  langs:
+  - csharp
+  - vb
+  name: Create(NewLevelSettings)
+  nameWithType: NewLevelBuilder.Create(NewLevelSettings)
+  fullName: TDMaker.Editor.NewLevelBuilder.Create(TDMaker.Editor.NewLevelSettings)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Creates the level. Replaces the open scenes with the new scene (callers ask to save modified scenes first). Throws
+
+    <xref href="System.ArgumentException" data-throw-if-not-resolved="false"></xref> when <xref href="TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)"
+    data-throw-if-not-resolved="false"></xref> reports a problem.'
+  example: []
+  syntax:
+    content: public static NewLevelResult Create(NewLevelSettings settings)
+    parameters:
+    - id: settings
+      type: TDMaker.Editor.NewLevelSettings
+    return:
+      type: TDMaker.Editor.NewLevelResult
+    content.vb: Public Shared Function Create(settings As NewLevelSettings) As NewLevelResult
+  overload: TDMaker.Editor.NewLevelBuilder.Create*
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Editor.NewLevelBuilder.DefaultFolder*
+  commentId: Overload:TDMaker.Editor.NewLevelBuilder.DefaultFolder
+  isExternal: true
+  href: TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_DefaultFolder_System_String_
+  name: DefaultFolder
+  nameWithType: NewLevelBuilder.DefaultFolder
+  fullName: TDMaker.Editor.NewLevelBuilder.DefaultFolder
+- uid: TDMaker.Editor.NewLevelBuilder.ResolveFolder*
+  commentId: Overload:TDMaker.Editor.NewLevelBuilder.ResolveFolder
+  isExternal: true
+  href: TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_ResolveFolder_TDMaker_Editor_NewLevelSettings_
+  name: ResolveFolder
+  nameWithType: NewLevelBuilder.ResolveFolder
+  fullName: TDMaker.Editor.NewLevelBuilder.ResolveFolder
+- uid: TDMaker.Editor.NewLevelSettings
+  commentId: T:TDMaker.Editor.NewLevelSettings
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.NewLevelSettings.html
+  name: NewLevelSettings
+  nameWithType: NewLevelSettings
+  fullName: TDMaker.Editor.NewLevelSettings
+- uid: TDMaker.Editor.NewLevelBuilder.ScenePathFor*
+  commentId: Overload:TDMaker.Editor.NewLevelBuilder.ScenePathFor
+  isExternal: true
+  href: TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_ScenePathFor_TDMaker_Editor_NewLevelSettings_
+  name: ScenePathFor
+  nameWithType: NewLevelBuilder.ScenePathFor
+  fullName: TDMaker.Editor.NewLevelBuilder.ScenePathFor
+- uid: TDMaker.Editor.NewLevelBuilder.SampleKitAvailable*
+  commentId: Overload:TDMaker.Editor.NewLevelBuilder.SampleKitAvailable
+  isExternal: true
+  href: TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_SampleKitAvailable
+  name: SampleKitAvailable
+  nameWithType: NewLevelBuilder.SampleKitAvailable
+  fullName: TDMaker.Editor.NewLevelBuilder.SampleKitAvailable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.NewLevelBuilder.Validate*
+  commentId: Overload:TDMaker.Editor.NewLevelBuilder.Validate
+  isExternal: true
+  href: TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_Validate_TDMaker_Editor_NewLevelSettings_
+  name: Validate
+  nameWithType: NewLevelBuilder.Validate
+  fullName: TDMaker.Editor.NewLevelBuilder.Validate
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)
+  commentId: M:TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)
+  isExternal: true
+  href: TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_Validate_TDMaker_Editor_NewLevelSettings_
+  name: Validate(NewLevelSettings)
+  nameWithType: NewLevelBuilder.Validate(NewLevelSettings)
+  fullName: TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)
+  spec.csharp:
+  - uid: TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)
+    name: Validate
+    isExternal: true
+    href: TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_Validate_TDMaker_Editor_NewLevelSettings_
+  - name: (
+  - uid: TDMaker.Editor.NewLevelSettings
+    name: NewLevelSettings
+    isExternal: true
+    href: TDMaker.Editor.NewLevelSettings.html
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)
+    name: Validate
+    isExternal: true
+    href: TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_Validate_TDMaker_Editor_NewLevelSettings_
+  - name: (
+  - uid: TDMaker.Editor.NewLevelSettings
+    name: NewLevelSettings
+    isExternal: true
+    href: TDMaker.Editor.NewLevelSettings.html
+  - name: )
+- uid: TDMaker.Editor.NewLevelBuilder.Create*
+  commentId: Overload:TDMaker.Editor.NewLevelBuilder.Create
+  isExternal: true
+  href: TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_Create_TDMaker_Editor_NewLevelSettings_
+  name: Create
+  nameWithType: NewLevelBuilder.Create
+  fullName: TDMaker.Editor.NewLevelBuilder.Create
+- uid: TDMaker.Editor.NewLevelResult
+  commentId: T:TDMaker.Editor.NewLevelResult
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.NewLevelResult.html
+  name: NewLevelResult
+  nameWithType: NewLevelResult
+  fullName: TDMaker.Editor.NewLevelResult

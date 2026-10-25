@@ -1,0 +1,488 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Hud.ClickPicking
+  commentId: T:TDMaker.Unity.Hud.ClickPicking
+  id: ClickPicking
+  parent: TDMaker.Unity.Hud
+  children:
+  - TDMaker.Unity.Hud.ClickPicking.Contains(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  - TDMaker.Unity.Hud.ClickPicking.DefaultPriority
+  - TDMaker.Unity.Hud.ClickPicking.HeroPriority
+  - TDMaker.Unity.Hud.ClickPicking.IsBefore(System.Int32,System.Single,System.Int32,System.Single)
+  langs:
+  - csharp
+  - vb
+  name: ClickPicking
+  nameWithType: ClickPicking
+  fullName: TDMaker.Unity.Hud.ClickPicking
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'Battlefield click-target rules used by <xref href="TDMaker.Unity.Hud.GameHud" data-throw-if-not-resolved="false"></xref>
+    (input grammar, spec 14 §1): every clickable thing has an
+
+    axis-aligned world rectangle placed relative to its reference point; a click hits it only strictly inside (the border
+
+    is excluded). Among the hits the higher selection priority wins, then the lower world reference point (smaller y).
+
+    Equal priority and equal y keep the first candidate found.'
+  example: []
+  syntax:
+    content: public static class ClickPicking
+    content.vb: Public Module ClickPicking
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Hud.ClickPicking.HeroPriority
+  commentId: F:TDMaker.Unity.Hud.ClickPicking.HeroPriority
+  id: HeroPriority
+  parent: TDMaker.Unity.Hud.ClickPicking
+  langs:
+  - csharp
+  - vb
+  name: HeroPriority
+  nameWithType: ClickPicking.HeroPriority
+  fullName: TDMaker.Unity.Hud.ClickPicking.HeroPriority
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Default selection priority of heroes (above every other battlefield target).
+  example: []
+  syntax:
+    content: public const int HeroPriority = 1
+    return:
+      type: System.Int32
+    content.vb: Public Const HeroPriority As Integer = 1
+- uid: TDMaker.Unity.Hud.ClickPicking.DefaultPriority
+  commentId: F:TDMaker.Unity.Hud.ClickPicking.DefaultPriority
+  id: DefaultPriority
+  parent: TDMaker.Unity.Hud.ClickPicking
+  langs:
+  - csharp
+  - vb
+  name: DefaultPriority
+  nameWithType: ClickPicking.DefaultPriority
+  fullName: TDMaker.Unity.Hud.ClickPicking.DefaultPriority
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Default selection priority of soldiers, enemies, towers and empty build slots.
+  example: []
+  syntax:
+    content: public const int DefaultPriority = 0
+    return:
+      type: System.Int32
+    content.vb: Public Const DefaultPriority As Integer = 0
+- uid: TDMaker.Unity.Hud.ClickPicking.Contains(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  commentId: M:TDMaker.Unity.Hud.ClickPicking.Contains(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  id: Contains(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  parent: TDMaker.Unity.Hud.ClickPicking
+  langs:
+  - csharp
+  - vb
+  name: Contains(Vector2, Vector2, Vector2, Vector2)
+  nameWithType: ClickPicking.Contains(Vector2, Vector2, Vector2, Vector2)
+  fullName: TDMaker.Unity.Hud.ClickPicking.Contains(UnityEngine.Vector2, UnityEngine.Vector2, UnityEngine.Vector2, UnityEngine.Vector2)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Whether <code class="paramref">point</code> lies strictly inside the rectangle of <code class="paramref">size</code>
+    centred at <code class="paramref">reference</code> + <code class="paramref">offset</code>.
+  example: []
+  syntax:
+    content: public static bool Contains(Vector2 reference, Vector2 size, Vector2 offset, Vector2 point)
+    parameters:
+    - id: reference
+      type: UnityEngine.Vector2
+    - id: size
+      type: UnityEngine.Vector2
+    - id: offset
+      type: UnityEngine.Vector2
+    - id: point
+      type: UnityEngine.Vector2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Contains(reference As Vector2, size As Vector2, offset As Vector2, point As Vector2)
+      As Boolean
+  overload: TDMaker.Unity.Hud.ClickPicking.Contains*
+- uid: TDMaker.Unity.Hud.ClickPicking.IsBefore(System.Int32,System.Single,System.Int32,System.Single)
+  commentId: M:TDMaker.Unity.Hud.ClickPicking.IsBefore(System.Int32,System.Single,System.Int32,System.Single)
+  id: IsBefore(System.Int32,System.Single,System.Int32,System.Single)
+  parent: TDMaker.Unity.Hud.ClickPicking
+  langs:
+  - csharp
+  - vb
+  name: IsBefore(int, float, int, float)
+  nameWithType: ClickPicking.IsBefore(int, float, int, float)
+  fullName: TDMaker.Unity.Hud.ClickPicking.IsBefore(int, float, int, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Whether a candidate (priority, reference y) is picked before the current best one.
+  example: []
+  syntax:
+    content: public static bool IsBefore(int priority, float referenceY, int bestPriority, float bestReferenceY)
+    parameters:
+    - id: priority
+      type: System.Int32
+    - id: referenceY
+      type: System.Single
+    - id: bestPriority
+      type: System.Int32
+    - id: bestReferenceY
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsBefore(priority As Integer, referenceY As Single, bestPriority As Integer, bestReferenceY
+      As Single) As Boolean
+  overload: TDMaker.Unity.Hud.ClickPicking.IsBefore*
+  nameWithType.vb: ClickPicking.IsBefore(Integer, Single, Integer, Single)
+  fullName.vb: TDMaker.Unity.Hud.ClickPicking.IsBefore(Integer, Single, Integer, Single)
+  name.vb: IsBefore(Integer, Single, Integer, Single)
+references:
+- uid: TDMaker.Unity.Hud.GameHud
+  commentId: T:TDMaker.Unity.Hud.GameHud
+  isExternal: true
+  href: TDMaker.Unity.Hud.GameHud.html
+  name: GameHud
+  nameWithType: GameHud
+  fullName: TDMaker.Unity.Hud.GameHud
+- uid: TDMaker.Unity.Hud
+  commentId: N:TDMaker.Unity.Hud
+  isExternal: true
+  name: TDMaker.Unity.Hud
+  nameWithType: TDMaker.Unity.Hud
+  fullName: TDMaker.Unity.Hud
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.Hud.ClickPicking.Contains*
+  commentId: Overload:TDMaker.Unity.Hud.ClickPicking.Contains
+  isExternal: true
+  href: TDMaker.Unity.Hud.ClickPicking.html#TDMaker_Unity_Hud_ClickPicking_Contains_UnityEngine_Vector2_UnityEngine_Vector2_UnityEngine_Vector2_UnityEngine_Vector2_
+  name: Contains
+  nameWithType: ClickPicking.Contains
+  fullName: TDMaker.Unity.Hud.ClickPicking.Contains
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Hud.ClickPicking.IsBefore*
+  commentId: Overload:TDMaker.Unity.Hud.ClickPicking.IsBefore
+  isExternal: true
+  href: TDMaker.Unity.Hud.ClickPicking.html#TDMaker_Unity_Hud_ClickPicking_IsBefore_System_Int32_System_Single_System_Int32_System_Single_
+  name: IsBefore
+  nameWithType: ClickPicking.IsBefore
+  fullName: TDMaker.Unity.Hud.ClickPicking.IsBefore
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

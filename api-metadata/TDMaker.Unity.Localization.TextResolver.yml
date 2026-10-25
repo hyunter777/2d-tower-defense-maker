@@ -1,0 +1,1026 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Localization.TextResolver
+  commentId: T:TDMaker.Unity.Localization.TextResolver
+  id: TextResolver
+  parent: TDMaker.Unity.Localization
+  children:
+  - TDMaker.Unity.Localization.TextResolver.#ctor(System.String,System.Collections.Generic.IList{TDMaker.Unity.Localization.TextTable})
+  - TDMaker.Unity.Localization.TextResolver.EnglishCode
+  - TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object)
+  - TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object,System.Object)
+  - TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object,System.Object,System.Object)
+  - TDMaker.Unity.Localization.TextResolver.FormatText(System.String,System.Object)
+  - TDMaker.Unity.Localization.TextResolver.Get(System.String)
+  - TDMaker.Unity.Localization.TextResolver.Get(System.String,System.String)
+  - TDMaker.Unity.Localization.TextResolver.Has(System.String)
+  - TDMaker.Unity.Localization.TextResolver.Invalidate
+  - TDMaker.Unity.Localization.TextResolver.Language
+  - TDMaker.Unity.Localization.TextResolver.LanguageMatches(System.String,System.String)
+  - TDMaker.Unity.Localization.TextResolver.Provider
+  - TDMaker.Unity.Localization.TextResolver.Tables
+  - TDMaker.Unity.Localization.TextResolver.Version
+  langs:
+  - csharp
+  - vb
+  name: TextResolver
+  nameWithType: TextResolver
+  fullName: TDMaker.Unity.Localization.TextResolver
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: 'Resolves text keys for the selected language. Lookup order: the optional custom <xref href="TDMaker.Unity.Localization.TextResolver.Provider"
+    data-throw-if-not-resolved="false"></xref>, the
+
+    <xref href="TDMaker.Unity.Localization.TextResolver.Tables" data-throw-if-not-resolved="false"></xref> of the selected
+    <xref href="TDMaker.Unity.Localization.TextResolver.Language" data-throw-if-not-resolved="false"></xref>, the English
+    tables, the built-in English texts
+
+    (<xref href="TDMaker.Unity.Localization.HudTexts.English" data-throw-if-not-resolved="false"></xref>), then the caller''s
+    fallback, then the key itself. The merged table is rebuilt only when
+
+    the language, the table list or a table changes; lookups do not allocate. <xref href="TDMaker.Unity.Localization.TextResolver.Version"
+    data-throw-if-not-resolved="false"></xref> changes on every rebuild,
+
+    so views can cache formatted strings and refresh them only then. The scene''s instance is
+
+    <xref href="TDMaker.Unity.View.TDGameSettings.Texts" data-throw-if-not-resolved="false"></xref>.'
+  example: []
+  syntax:
+    content: public sealed class TextResolver
+    content.vb: Public NotInheritable Class TextResolver
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Localization.TextResolver.EnglishCode
+  commentId: F:TDMaker.Unity.Localization.TextResolver.EnglishCode
+  id: EnglishCode
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: EnglishCode
+  nameWithType: TextResolver.EnglishCode
+  fullName: TDMaker.Unity.Localization.TextResolver.EnglishCode
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Language of the built-in texts and the fallback language.
+  example: []
+  syntax:
+    content: public const string EnglishCode = "en"
+    return:
+      type: System.String
+    content.vb: Public Const EnglishCode As String = "en"
+- uid: TDMaker.Unity.Localization.TextResolver.#ctor(System.String,System.Collections.Generic.IList{TDMaker.Unity.Localization.TextTable})
+  commentId: M:TDMaker.Unity.Localization.TextResolver.#ctor(System.String,System.Collections.Generic.IList{TDMaker.Unity.Localization.TextTable})
+  id: '#ctor(System.String,System.Collections.Generic.IList{TDMaker.Unity.Localization.TextTable})'
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: TextResolver(string, IList<TextTable>)
+  nameWithType: TextResolver.TextResolver(string, IList<TextTable>)
+  fullName: TDMaker.Unity.Localization.TextResolver.TextResolver(string, System.Collections.Generic.IList<TDMaker.Unity.Localization.TextTable>)
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Creates a resolver for <code class="paramref">languageCode</code> over <code class="paramref">textTables</code>
+    (both optional).
+  example: []
+  syntax:
+    content: public TextResolver(string languageCode = "en", IList<TextTable> textTables = null)
+    parameters:
+    - id: languageCode
+      type: System.String
+    - id: textTables
+      type: System.Collections.Generic.IList{TDMaker.Unity.Localization.TextTable}
+    content.vb: Public Sub New(languageCode As String = "en", textTables As IList(Of TextTable) = Nothing)
+  overload: TDMaker.Unity.Localization.TextResolver.#ctor*
+  nameWithType.vb: TextResolver.New(String, IList(Of TextTable))
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.New(String, System.Collections.Generic.IList(Of TDMaker.Unity.Localization.TextTable))
+  name.vb: New(String, IList(Of TextTable))
+- uid: TDMaker.Unity.Localization.TextResolver.Invalidate
+  commentId: M:TDMaker.Unity.Localization.TextResolver.Invalidate
+  id: Invalidate
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Invalidate()
+  nameWithType: TextResolver.Invalidate()
+  fullName: TDMaker.Unity.Localization.TextResolver.Invalidate()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Forces a rebuild on next use (call after an external <xref href="TDMaker.Unity.Localization.TextResolver.Provider"
+    data-throw-if-not-resolved="false"></xref> switched language).
+  example: []
+  syntax:
+    content: public void Invalidate()
+    content.vb: Public Sub Invalidate()
+  overload: TDMaker.Unity.Localization.TextResolver.Invalidate*
+- uid: TDMaker.Unity.Localization.TextResolver.Get(System.String)
+  commentId: M:TDMaker.Unity.Localization.TextResolver.Get(System.String)
+  id: Get(System.String)
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Get(string)
+  nameWithType: TextResolver.Get(string)
+  fullName: TDMaker.Unity.Localization.TextResolver.Get(string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: The text for <code class="paramref">key</code>, or the key itself when no source has it.
+  example: []
+  syntax:
+    content: public string Get(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function [Get](key As String) As String
+  overload: TDMaker.Unity.Localization.TextResolver.Get*
+  nameWithType.vb: TextResolver.Get(String)
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.Get(String)
+  name.vb: Get(String)
+- uid: TDMaker.Unity.Localization.TextResolver.Get(System.String,System.String)
+  commentId: M:TDMaker.Unity.Localization.TextResolver.Get(System.String,System.String)
+  id: Get(System.String,System.String)
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Get(string, string)
+  nameWithType: TextResolver.Get(string, string)
+  fullName: TDMaker.Unity.Localization.TextResolver.Get(string, string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: The text for <code class="paramref">key</code>, or <code class="paramref">fallback</code> (then the key) when no
+    source has it.
+  example: []
+  syntax:
+    content: public string Get(string key, string fallback)
+    parameters:
+    - id: key
+      type: System.String
+    - id: fallback
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function [Get](key As String, fallback As String) As String
+  overload: TDMaker.Unity.Localization.TextResolver.Get*
+  nameWithType.vb: TextResolver.Get(String, String)
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.Get(String, String)
+  name.vb: Get(String, String)
+- uid: TDMaker.Unity.Localization.TextResolver.Has(System.String)
+  commentId: M:TDMaker.Unity.Localization.TextResolver.Has(System.String)
+  id: Has(System.String)
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Has(string)
+  nameWithType: TextResolver.Has(string)
+  fullName: TDMaker.Unity.Localization.TextResolver.Has(string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Whether any source (provider, tables, built-in English) has a text for <code class="paramref">key</code>.
+  example: []
+  syntax:
+    content: public bool Has(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function Has(key As String) As Boolean
+  overload: TDMaker.Unity.Localization.TextResolver.Has*
+  nameWithType.vb: TextResolver.Has(String)
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.Has(String)
+  name.vb: Has(String)
+- uid: TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object)
+  commentId: M:TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object)
+  id: Format(System.String,System.Object)
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Format(string, object)
+  nameWithType: TextResolver.Format(string, object)
+  fullName: TDMaker.Unity.Localization.TextResolver.Format(string, object)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Formats the text of <code class="paramref">key</code> with one argument (allocates; call when the value changes).
+  example: []
+  syntax:
+    content: public string Format(string key, object arg0)
+    parameters:
+    - id: key
+      type: System.String
+    - id: arg0
+      type: System.Object
+    return:
+      type: System.String
+    content.vb: Public Function Format(key As String, arg0 As Object) As String
+  overload: TDMaker.Unity.Localization.TextResolver.Format*
+  nameWithType.vb: TextResolver.Format(String, Object)
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.Format(String, Object)
+  name.vb: Format(String, Object)
+- uid: TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object,System.Object)
+  commentId: M:TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object,System.Object)
+  id: Format(System.String,System.Object,System.Object)
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Format(string, object, object)
+  nameWithType: TextResolver.Format(string, object, object)
+  fullName: TDMaker.Unity.Localization.TextResolver.Format(string, object, object)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Formats the text of <code class="paramref">key</code> with two arguments (allocates; call when a value changes).
+  example: []
+  syntax:
+    content: public string Format(string key, object arg0, object arg1)
+    parameters:
+    - id: key
+      type: System.String
+    - id: arg0
+      type: System.Object
+    - id: arg1
+      type: System.Object
+    return:
+      type: System.String
+    content.vb: Public Function Format(key As String, arg0 As Object, arg1 As Object) As String
+  overload: TDMaker.Unity.Localization.TextResolver.Format*
+  nameWithType.vb: TextResolver.Format(String, Object, Object)
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.Format(String, Object, Object)
+  name.vb: Format(String, Object, Object)
+- uid: TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object,System.Object,System.Object)
+  commentId: M:TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object,System.Object,System.Object)
+  id: Format(System.String,System.Object,System.Object,System.Object)
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Format(string, object, object, object)
+  nameWithType: TextResolver.Format(string, object, object, object)
+  fullName: TDMaker.Unity.Localization.TextResolver.Format(string, object, object, object)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Formats the text of <code class="paramref">key</code> with three arguments (allocates; call when a value changes).
+  example: []
+  syntax:
+    content: public string Format(string key, object arg0, object arg1, object arg2)
+    parameters:
+    - id: key
+      type: System.String
+    - id: arg0
+      type: System.Object
+    - id: arg1
+      type: System.Object
+    - id: arg2
+      type: System.Object
+    return:
+      type: System.String
+    content.vb: Public Function Format(key As String, arg0 As Object, arg1 As Object, arg2 As Object) As String
+  overload: TDMaker.Unity.Localization.TextResolver.Format*
+  nameWithType.vb: TextResolver.Format(String, Object, Object, Object)
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.Format(String, Object, Object, Object)
+  name.vb: Format(String, Object, Object, Object)
+- uid: TDMaker.Unity.Localization.TextResolver.FormatText(System.String,System.Object)
+  commentId: M:TDMaker.Unity.Localization.TextResolver.FormatText(System.String,System.Object)
+  id: FormatText(System.String,System.Object)
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: FormatText(string, object)
+  nameWithType: TextResolver.FormatText(string, object)
+  fullName: TDMaker.Unity.Localization.TextResolver.FormatText(string, object)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: 'Formats an already resolved <code class="paramref">format</code> text (for example from <xref href="TDMaker.Unity.Localization.TextResolver.Get(System.String%2cSystem.String)"
+    data-throw-if-not-resolved="false"></xref>) with one
+
+    argument; a text with broken placeholders is returned unformatted (and logged once) instead of throwing.'
+  example: []
+  syntax:
+    content: public string FormatText(string format, object arg0)
+    parameters:
+    - id: format
+      type: System.String
+    - id: arg0
+      type: System.Object
+    return:
+      type: System.String
+    content.vb: Public Function FormatText(format As String, arg0 As Object) As String
+  overload: TDMaker.Unity.Localization.TextResolver.FormatText*
+  nameWithType.vb: TextResolver.FormatText(String, Object)
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.FormatText(String, Object)
+  name.vb: FormatText(String, Object)
+- uid: TDMaker.Unity.Localization.TextResolver.LanguageMatches(System.String,System.String)
+  commentId: M:TDMaker.Unity.Localization.TextResolver.LanguageMatches(System.String,System.String)
+  id: LanguageMatches(System.String,System.String)
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: LanguageMatches(string, string)
+  nameWithType: TextResolver.LanguageMatches(string, string)
+  fullName: TDMaker.Unity.Localization.TextResolver.LanguageMatches(string, string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: 'Whether a table code serves a requested language: equal ignoring case, or equal primary subtags
+
+    ("ko" serves "ko-KR" and the other way round).'
+  example: []
+  syntax:
+    content: public static bool LanguageMatches(string tableCode, string language)
+    parameters:
+    - id: tableCode
+      type: System.String
+    - id: language
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function LanguageMatches(tableCode As String, language As String) As Boolean
+  overload: TDMaker.Unity.Localization.TextResolver.LanguageMatches*
+  nameWithType.vb: TextResolver.LanguageMatches(String, String)
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.LanguageMatches(String, String)
+  name.vb: LanguageMatches(String, String)
+- uid: TDMaker.Unity.Localization.TextResolver.Language
+  commentId: P:TDMaker.Unity.Localization.TextResolver.Language
+  id: Language
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Language
+  nameWithType: TextResolver.Language
+  fullName: TDMaker.Unity.Localization.TextResolver.Language
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: The selected language code (for example "en" or "ko"). Setting it rebuilds the lookup on next use.
+  example: []
+  syntax:
+    content: public string Language { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Language As String
+  overload: TDMaker.Unity.Localization.TextResolver.Language*
+- uid: TDMaker.Unity.Localization.TextResolver.Tables
+  commentId: P:TDMaker.Unity.Localization.TextResolver.Tables
+  id: Tables
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Tables
+  nameWithType: TextResolver.Tables
+  fullName: TDMaker.Unity.Localization.TextResolver.Tables
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Tables to search (any languages; those matching <xref href="TDMaker.Unity.Localization.TextResolver.Language" data-throw-if-not-resolved="false"></xref>
+    and English are used).
+  example: []
+  syntax:
+    content: public IList<TextTable> Tables { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{TDMaker.Unity.Localization.TextTable}
+    content.vb: Public Property Tables As IList(Of TextTable)
+  overload: TDMaker.Unity.Localization.TextResolver.Tables*
+- uid: TDMaker.Unity.Localization.TextResolver.Provider
+  commentId: P:TDMaker.Unity.Localization.TextResolver.Provider
+  id: Provider
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Provider
+  nameWithType: TextResolver.Provider
+  fullName: TDMaker.Unity.Localization.TextResolver.Provider
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Optional source consulted before the tables (for example an adapter to another localization system).
+  example: []
+  syntax:
+    content: public ITextProvider Provider { get; set; }
+    parameters: []
+    return:
+      type: TDMaker.Unity.Localization.ITextProvider
+    content.vb: Public Property Provider As ITextProvider
+  overload: TDMaker.Unity.Localization.TextResolver.Provider*
+- uid: TDMaker.Unity.Localization.TextResolver.Version
+  commentId: P:TDMaker.Unity.Localization.TextResolver.Version
+  id: Version
+  parent: TDMaker.Unity.Localization.TextResolver
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: TextResolver.Version
+  fullName: TDMaker.Unity.Localization.TextResolver.Version
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: 'Changes whenever the resolved texts may have changed (language, tables, provider, or a table edited). Unique across
+
+    resolvers, so a cached value never matches a different resolver by accident.'
+  example: []
+  syntax:
+    content: public int Version { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Version As Integer
+  overload: TDMaker.Unity.Localization.TextResolver.Version*
+references:
+- uid: TDMaker.Unity.Localization.TextResolver.Provider
+  commentId: P:TDMaker.Unity.Localization.TextResolver.Provider
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Provider
+  name: Provider
+  nameWithType: TextResolver.Provider
+  fullName: TDMaker.Unity.Localization.TextResolver.Provider
+- uid: TDMaker.Unity.Localization.TextResolver.Tables
+  commentId: P:TDMaker.Unity.Localization.TextResolver.Tables
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Tables
+  name: Tables
+  nameWithType: TextResolver.Tables
+  fullName: TDMaker.Unity.Localization.TextResolver.Tables
+- uid: TDMaker.Unity.Localization.TextResolver.Language
+  commentId: P:TDMaker.Unity.Localization.TextResolver.Language
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Language
+  name: Language
+  nameWithType: TextResolver.Language
+  fullName: TDMaker.Unity.Localization.TextResolver.Language
+- uid: TDMaker.Unity.Localization.HudTexts.English
+  commentId: P:TDMaker.Unity.Localization.HudTexts.English
+  isExternal: true
+  href: TDMaker.Unity.Localization.HudTexts.html#TDMaker_Unity_Localization_HudTexts_English
+  name: English
+  nameWithType: HudTexts.English
+  fullName: TDMaker.Unity.Localization.HudTexts.English
+- uid: TDMaker.Unity.Localization.TextResolver.Version
+  commentId: P:TDMaker.Unity.Localization.TextResolver.Version
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Version
+  name: Version
+  nameWithType: TextResolver.Version
+  fullName: TDMaker.Unity.Localization.TextResolver.Version
+- uid: TDMaker.Unity.View.TDGameSettings.Texts
+  commentId: P:TDMaker.Unity.View.TDGameSettings.Texts
+  isExternal: true
+  href: TDMaker.Unity.View.TDGameSettings.html#TDMaker_Unity_View_TDGameSettings_Texts
+  name: Texts
+  nameWithType: TDGameSettings.Texts
+  fullName: TDMaker.Unity.View.TDGameSettings.Texts
+- uid: TDMaker.Unity.Localization
+  commentId: N:TDMaker.Unity.Localization
+  isExternal: true
+  name: TDMaker.Unity.Localization
+  nameWithType: TDMaker.Unity.Localization
+  fullName: TDMaker.Unity.Localization
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Localization
+    name: Localization
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Localization
+    name: Localization
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Localization.TextResolver.#ctor*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver__ctor_System_String_System_Collections_Generic_IList_TDMaker_Unity_Localization_TextTable__
+  name: TextResolver
+  nameWithType: TextResolver.TextResolver
+  fullName: TDMaker.Unity.Localization.TextResolver.TextResolver
+  nameWithType.vb: TextResolver.New
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.New
+  name.vb: New
+- uid: System.Collections.Generic.IList{TDMaker.Unity.Localization.TextTable}
+  commentId: T:System.Collections.Generic.IList{TDMaker.Unity.Localization.TextTable}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<TextTable>
+  nameWithType: IList<TextTable>
+  fullName: System.Collections.Generic.IList<TDMaker.Unity.Localization.TextTable>
+  nameWithType.vb: IList(Of TextTable)
+  fullName.vb: System.Collections.Generic.IList(Of TDMaker.Unity.Localization.TextTable)
+  name.vb: IList(Of TextTable)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: TDMaker.Unity.Localization.TextTable
+    name: TextTable
+    isExternal: true
+    href: TDMaker.Unity.Localization.TextTable.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Localization.TextTable
+    name: TextTable
+    isExternal: true
+    href: TDMaker.Unity.Localization.TextTable.html
+  - name: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Unity.Localization.TextResolver.Invalidate*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.Invalidate
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Invalidate
+  name: Invalidate
+  nameWithType: TextResolver.Invalidate
+  fullName: TDMaker.Unity.Localization.TextResolver.Invalidate
+- uid: TDMaker.Unity.Localization.TextResolver.Get*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.Get
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Get_System_String_
+  name: Get
+  nameWithType: TextResolver.Get
+  fullName: TDMaker.Unity.Localization.TextResolver.Get
+- uid: TDMaker.Unity.Localization.TextResolver.Has*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.Has
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Has_System_String_
+  name: Has
+  nameWithType: TextResolver.Has
+  fullName: TDMaker.Unity.Localization.TextResolver.Has
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Localization.TextResolver.Format*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.Format
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Format_System_String_System_Object_
+  name: Format
+  nameWithType: TextResolver.Format
+  fullName: TDMaker.Unity.Localization.TextResolver.Format
+- uid: TDMaker.Unity.Localization.TextResolver.Get(System.String,System.String)
+  commentId: M:TDMaker.Unity.Localization.TextResolver.Get(System.String,System.String)
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Get_System_String_System_String_
+  name: Get(string, string)
+  nameWithType: TextResolver.Get(string, string)
+  fullName: TDMaker.Unity.Localization.TextResolver.Get(string, string)
+  nameWithType.vb: TextResolver.Get(String, String)
+  fullName.vb: TDMaker.Unity.Localization.TextResolver.Get(String, String)
+  name.vb: Get(String, String)
+  spec.csharp:
+  - uid: TDMaker.Unity.Localization.TextResolver.Get(System.String,System.String)
+    name: Get
+    isExternal: true
+    href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Get_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Unity.Localization.TextResolver.Get(System.String,System.String)
+    name: Get
+    isExternal: true
+    href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Get_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: TDMaker.Unity.Localization.TextResolver.FormatText*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.FormatText
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_FormatText_System_String_System_Object_
+  name: FormatText
+  nameWithType: TextResolver.FormatText
+  fullName: TDMaker.Unity.Localization.TextResolver.FormatText
+- uid: TDMaker.Unity.Localization.TextResolver.LanguageMatches*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.LanguageMatches
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_LanguageMatches_System_String_System_String_
+  name: LanguageMatches
+  nameWithType: TextResolver.LanguageMatches
+  fullName: TDMaker.Unity.Localization.TextResolver.LanguageMatches
+- uid: TDMaker.Unity.Localization.TextResolver.Language*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.Language
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Language
+  name: Language
+  nameWithType: TextResolver.Language
+  fullName: TDMaker.Unity.Localization.TextResolver.Language
+- uid: TDMaker.Unity.Localization.TextResolver.Tables*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.Tables
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Tables
+  name: Tables
+  nameWithType: TextResolver.Tables
+  fullName: TDMaker.Unity.Localization.TextResolver.Tables
+- uid: TDMaker.Unity.Localization.TextResolver.Provider*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.Provider
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Provider
+  name: Provider
+  nameWithType: TextResolver.Provider
+  fullName: TDMaker.Unity.Localization.TextResolver.Provider
+- uid: TDMaker.Unity.Localization.ITextProvider
+  commentId: T:TDMaker.Unity.Localization.ITextProvider
+  parent: TDMaker.Unity.Localization
+  isExternal: true
+  href: TDMaker.Unity.Localization.ITextProvider.html
+  name: ITextProvider
+  nameWithType: ITextProvider
+  fullName: TDMaker.Unity.Localization.ITextProvider
+- uid: TDMaker.Unity.Localization.TextResolver.Version*
+  commentId: Overload:TDMaker.Unity.Localization.TextResolver.Version
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Version
+  name: Version
+  nameWithType: TextResolver.Version
+  fullName: TDMaker.Unity.Localization.TextResolver.Version
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

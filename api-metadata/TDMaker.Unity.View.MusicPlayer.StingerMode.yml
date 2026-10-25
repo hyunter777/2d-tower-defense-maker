@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.View.MusicPlayer.StingerMode
+  commentId: T:TDMaker.Unity.View.MusicPlayer.StingerMode
+  id: MusicPlayer.StingerMode
+  parent: TDMaker.Unity.View
+  children:
+  - TDMaker.Unity.View.MusicPlayer.StingerMode.DuckLoop
+  - TDMaker.Unity.View.MusicPlayer.StingerMode.StopLoop
+  langs:
+  - csharp
+  - vb
+  name: MusicPlayer.StingerMode
+  nameWithType: MusicPlayer.StingerMode
+  fullName: TDMaker.Unity.View.MusicPlayer.StingerMode
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: What a victory or defeat stinger does to the battle loop.
+  example: []
+  syntax:
+    content: public enum MusicPlayer.StingerMode
+    content.vb: Public Enum MusicPlayer.StingerMode
+- uid: TDMaker.Unity.View.MusicPlayer.StingerMode.StopLoop
+  commentId: F:TDMaker.Unity.View.MusicPlayer.StingerMode.StopLoop
+  id: StopLoop
+  parent: TDMaker.Unity.View.MusicPlayer.StingerMode
+  langs:
+  - csharp
+  - vb
+  name: StopLoop
+  nameWithType: MusicPlayer.StingerMode.StopLoop
+  fullName: TDMaker.Unity.View.MusicPlayer.StingerMode.StopLoop
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Fades the loop out and leaves it stopped.
+  example: []
+  syntax:
+    content: StopLoop = 0
+    return:
+      type: TDMaker.Unity.View.MusicPlayer.StingerMode
+- uid: TDMaker.Unity.View.MusicPlayer.StingerMode.DuckLoop
+  commentId: F:TDMaker.Unity.View.MusicPlayer.StingerMode.DuckLoop
+  id: DuckLoop
+  parent: TDMaker.Unity.View.MusicPlayer.StingerMode
+  langs:
+  - csharp
+  - vb
+  name: DuckLoop
+  nameWithType: MusicPlayer.StingerMode.DuckLoop
+  fullName: TDMaker.Unity.View.MusicPlayer.StingerMode.DuckLoop
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Lowers the loop to <code>Duck Volume</code> while the stinger plays, then restores it.
+  example: []
+  syntax:
+    content: DuckLoop = 1
+    return:
+      type: TDMaker.Unity.View.MusicPlayer.StingerMode
+references:
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: TDMaker.Unity.View.MusicPlayer.StingerMode
+  commentId: T:TDMaker.Unity.View.MusicPlayer.StingerMode
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.MusicPlayer.html
+  name: MusicPlayer.StingerMode
+  nameWithType: MusicPlayer.StingerMode
+  fullName: TDMaker.Unity.View.MusicPlayer.StingerMode
+  spec.csharp:
+  - uid: TDMaker.Unity.View.MusicPlayer
+    name: MusicPlayer
+    isExternal: true
+    href: TDMaker.Unity.View.MusicPlayer.html
+  - name: .
+  - uid: TDMaker.Unity.View.MusicPlayer.StingerMode
+    name: StingerMode
+    isExternal: true
+    href: TDMaker.Unity.View.MusicPlayer.StingerMode.html
+  spec.vb:
+  - uid: TDMaker.Unity.View.MusicPlayer
+    name: MusicPlayer
+    isExternal: true
+    href: TDMaker.Unity.View.MusicPlayer.html
+  - name: .
+  - uid: TDMaker.Unity.View.MusicPlayer.StingerMode
+    name: StingerMode
+    isExternal: true
+    href: TDMaker.Unity.View.MusicPlayer.StingerMode.html

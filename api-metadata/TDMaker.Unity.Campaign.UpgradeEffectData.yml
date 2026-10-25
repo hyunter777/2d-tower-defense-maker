@@ -1,0 +1,776 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData
+  commentId: T:TDMaker.Unity.Campaign.UpgradeEffectData
+  id: UpgradeEffectData
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.UpgradeEffectData.#ctor
+  - TDMaker.Unity.Campaign.UpgradeEffectData.ToDef
+  - TDMaker.Unity.Campaign.UpgradeEffectData.field
+  - TDMaker.Unity.Campaign.UpgradeEffectData.kind
+  - TDMaker.Unity.Campaign.UpgradeEffectData.mechanic
+  - TDMaker.Unity.Campaign.UpgradeEffectData.mechanicKey
+  - TDMaker.Unity.Campaign.UpgradeEffectData.mechanicName
+  - TDMaker.Unity.Campaign.UpgradeEffectData.operation
+  - TDMaker.Unity.Campaign.UpgradeEffectData.swapFrom
+  - TDMaker.Unity.Campaign.UpgradeEffectData.swapTo
+  - TDMaker.Unity.Campaign.UpgradeEffectData.target
+  - TDMaker.Unity.Campaign.UpgradeEffectData.value
+  langs:
+  - csharp
+  - vb
+  name: UpgradeEffectData
+  nameWithType: UpgradeEffectData
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: One effect of an upgrade rank. Maps one to one to a core <xref href="TDMaker.Core.Defs.UpgradeEffectDef" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public sealed class UpgradeEffectData
+    content.vb: Public NotInheritable Class UpgradeEffectData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.kind
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.kind
+  id: kind
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: kind
+  nameWithType: UpgradeEffectData.kind
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.kind
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: What the effect does.
+  example: []
+  syntax:
+    content: public UpgradeEffectKind kind
+    return:
+      type: TDMaker.Unity.Campaign.UpgradeEffectKind
+    content.vb: Public kind As UpgradeEffectKind
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.target
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.target
+  id: target
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: target
+  nameWithType: UpgradeEffectData.target
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.target
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Which templates or spells it changes.
+  example: []
+  syntax:
+    content: public UpgradeTargetData target
+    return:
+      type: TDMaker.Unity.Campaign.UpgradeTargetData
+    content.vb: Public target As UpgradeTargetData
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.field
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.field
+  id: field
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: field
+  nameWithType: UpgradeEffectData.field
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.field
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Changed number (Stat only).
+  example: []
+  syntax:
+    content: '[Tooltip("The number to change (Stat effects). Every matching value inside the selected templates is changed
+      (all attacks, ability ranks ...).")]
+
+      public UpgradeField field'
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+    content.vb: '<Tooltip("The number to change (Stat effects). Every matching value inside the selected templates is changed
+      (all attacks, ability ranks ...).")>
+
+      Public field As UpgradeField'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: The number to change (Stat effects). Every matching value inside the selected templates is changed (all attacks,
+        ability ranks ...).
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.operation
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.operation
+  id: operation
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: operation
+  nameWithType: UpgradeEffectData.operation
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.operation
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Arithmetic (Stat only). Each effect is applied on its own, in order; rounding happens per effect.
+  example: []
+  syntax:
+    content: '[Tooltip("Multiply Ceil rounds up right after multiplying (use it for damage and health). Multiply keeps fractions
+      (ranges, cooldowns). Add / Subtract / Set change the current value. Effects apply one after another, in order.")]
+
+      public UpgradeOperation operation'
+    return:
+      type: TDMaker.Core.Defs.UpgradeOperation
+    content.vb: '<Tooltip("Multiply Ceil rounds up right after multiplying (use it for damage and health). Multiply keeps
+      fractions (ranges, cooldowns). Add / Subtract / Set change the current value. Effects apply one after another, in order.")>
+
+      Public operation As UpgradeOperation'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Multiply Ceil rounds up right after multiplying (use it for damage and health). Multiply keeps fractions (ranges,
+        cooldowns). Add / Subtract / Set change the current value. Effects apply one after another, in order.
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.value
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.value
+  id: value
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: value
+  nameWithType: UpgradeEffectData.value
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.value
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'Operand (Stat only): the factor for the multiply operations, the amount otherwise.'
+  example: []
+  syntax:
+    content: '[Tooltip("Factor for Multiply / Multiply Ceil (1.1 = +10%), amount for Add / Subtract / Set. Defenses are fractions
+      (0.1 = 10%).")]
+
+      public float value'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Factor for Multiply / Multiply Ceil (1.1 = +10%), amount for Add / Subtract / Set. Defenses are
+      fractions (0.1 = 10%).")>
+
+      Public value As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Factor for Multiply / Multiply Ceil (1.1 = +10%), amount for Add / Subtract / Set. Defenses are fractions (0.1
+        = 10%).
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.mechanicName
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.mechanicName
+  id: mechanicName
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: mechanicName
+  nameWithType: UpgradeEffectData.mechanicName
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.mechanicName
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: English name of the added mechanic shown in the shop (AddMechanic only; translated through <code>shop.mechanic.&lt;name
+    key&gt;</code>).
+  example: []
+  syntax:
+    content: '[Tooltip("Name of the added mechanic in the shop tooltip (AddMechanic). Translate it with the key shop.mechanic.<Mechanic
+      Key>.")]
+
+      public string mechanicName'
+    return:
+      type: System.String
+    content.vb: '<Tooltip("Name of the added mechanic in the shop tooltip (AddMechanic). Translate it with the key shop.mechanic.<Mechanic
+      Key>.")>
+
+      Public mechanicName As String'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Name of the added mechanic in the shop tooltip (AddMechanic). Translate it with the key shop.mechanic.<Mechanic
+        Key>.
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.mechanicKey
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.mechanicKey
+  id: mechanicKey
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: mechanicKey
+  nameWithType: UpgradeEffectData.mechanicKey
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.mechanicKey
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'Text key stem of <xref href="TDMaker.Unity.Campaign.UpgradeEffectData.mechanicName" data-throw-if-not-resolved="false"></xref>
+    (blank: no translation lookup).'
+  example: []
+  syntax:
+    content: public string mechanicKey
+    return:
+      type: System.String
+    content.vb: Public mechanicKey As String
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.mechanic
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.mechanic
+  id: mechanic
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: mechanic
+  nameWithType: UpgradeEffectData.mechanic
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.mechanic
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'The added behavior action (AddMechanic only): the same timed action the unit and tower behavior lists use.'
+  example: []
+  syntax:
+    content: public AbilityActionData mechanic
+    return:
+      type: TDMaker.Unity.Authoring.AbilityActionData
+    content.vb: Public mechanic As AbilityActionData
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.swapFrom
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.swapFrom
+  id: swapFrom
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: swapFrom
+  nameWithType: UpgradeEffectData.swapFrom
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.swapFrom
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Replaced unit (SwapTemplate only).
+  example: []
+  syntax:
+    content: '[Tooltip("Unit reference to replace (SwapTemplate), for example the soldier a spell or a barracks calls.")]
+
+      public EntityAssetBase swapFrom'
+    return:
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    content.vb: '<Tooltip("Unit reference to replace (SwapTemplate), for example the soldier a spell or a barracks calls.")>
+
+      Public swapFrom As EntityAssetBase'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Unit reference to replace (SwapTemplate), for example the soldier a spell or a barracks calls.
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.swapTo
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.swapTo
+  id: swapTo
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: swapTo
+  nameWithType: UpgradeEffectData.swapTo
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.swapTo
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Replacement unit (SwapTemplate only). It is added to the battle's templates automatically.
+  example: []
+  syntax:
+    content: '[Tooltip("Replacement unit (SwapTemplate). It is registered for the battle automatically.")]
+
+      public EntityAssetBase swapTo'
+    return:
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    content.vb: '<Tooltip("Replacement unit (SwapTemplate). It is registered for the battle automatically.")>
+
+      Public swapTo As EntityAssetBase'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Replacement unit (SwapTemplate). It is registered for the battle automatically.
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.ToDef
+  commentId: M:TDMaker.Unity.Campaign.UpgradeEffectData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: UpgradeEffectData.ToDef()
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Bakes the core effect.
+  example: []
+  syntax:
+    content: public UpgradeEffectDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.UpgradeEffectDef
+    content.vb: Public Function ToDef() As UpgradeEffectDef
+  overload: TDMaker.Unity.Campaign.UpgradeEffectData.ToDef*
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.#ctor
+  commentId: M:TDMaker.Unity.Campaign.UpgradeEffectData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Campaign.UpgradeEffectData
+  langs:
+  - csharp
+  - vb
+  name: UpgradeEffectData()
+  nameWithType: UpgradeEffectData.UpgradeEffectData()
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.UpgradeEffectData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  syntax:
+    content: public UpgradeEffectData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Campaign.UpgradeEffectData.#ctor*
+  nameWithType.vb: UpgradeEffectData.New()
+  fullName.vb: TDMaker.Unity.Campaign.UpgradeEffectData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Core.Defs.UpgradeEffectDef
+  commentId: T:TDMaker.Core.Defs.UpgradeEffectDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeEffectDef.html
+  name: UpgradeEffectDef
+  nameWithType: UpgradeEffectDef
+  fullName: TDMaker.Core.Defs.UpgradeEffectDef
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Campaign.UpgradeEffectKind
+  commentId: T:TDMaker.Unity.Campaign.UpgradeEffectKind
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeEffectKind.html
+  name: UpgradeEffectKind
+  nameWithType: UpgradeEffectKind
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectKind
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData
+  commentId: T:TDMaker.Unity.Campaign.UpgradeTargetData
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeTargetData.html
+  name: UpgradeTargetData
+  nameWithType: UpgradeTargetData
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData
+- uid: TDMaker.Core.Defs.UpgradeField
+  commentId: T:TDMaker.Core.Defs.UpgradeField
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeField.html
+  name: UpgradeField
+  nameWithType: UpgradeField
+  fullName: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeOperation
+  commentId: T:TDMaker.Core.Defs.UpgradeOperation
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeOperation.html
+  name: UpgradeOperation
+  nameWithType: UpgradeOperation
+  fullName: TDMaker.Core.Defs.UpgradeOperation
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.mechanicName
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectData.mechanicName
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeEffectData.html#TDMaker_Unity_Campaign_UpgradeEffectData_mechanicName
+  name: mechanicName
+  nameWithType: UpgradeEffectData.mechanicName
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.mechanicName
+- uid: TDMaker.Unity.Authoring.AbilityActionData
+  commentId: T:TDMaker.Unity.Authoring.AbilityActionData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html
+  name: AbilityActionData
+  nameWithType: AbilityActionData
+  fullName: TDMaker.Unity.Authoring.AbilityActionData
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.EntityAssetBase
+  commentId: T:TDMaker.Unity.Authoring.EntityAssetBase
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EntityAssetBase.html
+  name: EntityAssetBase
+  nameWithType: EntityAssetBase
+  fullName: TDMaker.Unity.Authoring.EntityAssetBase
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.ToDef*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeEffectData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeEffectData.html#TDMaker_Unity_Campaign_UpgradeEffectData_ToDef
+  name: ToDef
+  nameWithType: UpgradeEffectData.ToDef
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.ToDef
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData.#ctor*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeEffectData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeEffectData.html#TDMaker_Unity_Campaign_UpgradeEffectData__ctor
+  name: UpgradeEffectData
+  nameWithType: UpgradeEffectData.UpgradeEffectData
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData.UpgradeEffectData
+  nameWithType.vb: UpgradeEffectData.New
+  fullName.vb: TDMaker.Unity.Campaign.UpgradeEffectData.New
+  name.vb: New

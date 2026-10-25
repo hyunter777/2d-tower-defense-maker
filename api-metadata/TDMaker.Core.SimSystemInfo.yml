@@ -1,0 +1,473 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.SimSystemInfo
+  commentId: T:TDMaker.Core.SimSystemInfo
+  id: SimSystemInfo
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.SimSystemInfo.Index
+  - TDMaker.Core.SimSystemInfo.IsBuiltIn
+  - TDMaker.Core.SimSystemInfo.Name
+  - TDMaker.Core.SimSystemInfo.Stage
+  - TDMaker.Core.SimSystemInfo.SystemType
+  langs:
+  - csharp
+  - vb
+  name: SimSystemInfo
+  nameWithType: SimSystemInfo
+  fullName: TDMaker.Core.SimSystemInfo
+  type: Struct
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Immutable metadata for one pipeline entry, in actual execution order. No mutable system instance is exposed.
+  example: []
+  syntax:
+    content: public readonly struct SimSystemInfo
+    content.vb: Public Structure SimSystemInfo
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Core.SimSystemInfo.Index
+  commentId: P:TDMaker.Core.SimSystemInfo.Index
+  id: Index
+  parent: TDMaker.Core.SimSystemInfo
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: SimSystemInfo.Index
+  fullName: TDMaker.Core.SimSystemInfo.Index
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Index passed to ISimProfiler system callbacks.
+  example: []
+  syntax:
+    content: public int Index { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Index As Integer
+  overload: TDMaker.Core.SimSystemInfo.Index*
+- uid: TDMaker.Core.SimSystemInfo.Stage
+  commentId: P:TDMaker.Core.SimSystemInfo.Stage
+  id: Stage
+  parent: TDMaker.Core.SimSystemInfo
+  langs:
+  - csharp
+  - vb
+  name: Stage
+  nameWithType: SimSystemInfo.Stage
+  fullName: TDMaker.Core.SimSystemInfo.Stage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Built-in stage or the registered custom system's anchor.
+  example: []
+  syntax:
+    content: public SimStage Stage { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.SimStage
+    content.vb: Public ReadOnly Property Stage As SimStage
+  overload: TDMaker.Core.SimSystemInfo.Stage*
+- uid: TDMaker.Core.SimSystemInfo.SystemType
+  commentId: P:TDMaker.Core.SimSystemInfo.SystemType
+  id: SystemType
+  parent: TDMaker.Core.SimSystemInfo
+  langs:
+  - csharp
+  - vb
+  name: SystemType
+  nameWithType: SimSystemInfo.SystemType
+  fullName: TDMaker.Core.SimSystemInfo.SystemType
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Concrete runtime type of the system.
+  example: []
+  syntax:
+    content: public Type SystemType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property SystemType As Type
+  overload: TDMaker.Core.SimSystemInfo.SystemType*
+- uid: TDMaker.Core.SimSystemInfo.Name
+  commentId: P:TDMaker.Core.SimSystemInfo.Name
+  id: Name
+  parent: TDMaker.Core.SimSystemInfo
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: SimSystemInfo.Name
+  fullName: TDMaker.Core.SimSystemInfo.Name
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Type full name, falling back to the type name. Computed during setup for allocation-free marker lookup.
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: TDMaker.Core.SimSystemInfo.Name*
+- uid: TDMaker.Core.SimSystemInfo.IsBuiltIn
+  commentId: P:TDMaker.Core.SimSystemInfo.IsBuiltIn
+  id: IsBuiltIn
+  parent: TDMaker.Core.SimSystemInfo
+  langs:
+  - csharp
+  - vb
+  name: IsBuiltIn
+  nameWithType: SimSystemInfo.IsBuiltIn
+  fullName: TDMaker.Core.SimSystemInfo.IsBuiltIn
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: True for a built-in stage implementation.
+  example: []
+  syntax:
+    content: public bool IsBuiltIn { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBuiltIn As Boolean
+  overload: TDMaker.Core.SimSystemInfo.IsBuiltIn*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.SimSystemInfo.Index*
+  commentId: Overload:TDMaker.Core.SimSystemInfo.Index
+  isExternal: true
+  href: TDMaker.Core.SimSystemInfo.html#TDMaker_Core_SimSystemInfo_Index
+  name: Index
+  nameWithType: SimSystemInfo.Index
+  fullName: TDMaker.Core.SimSystemInfo.Index
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.SimSystemInfo.Stage*
+  commentId: Overload:TDMaker.Core.SimSystemInfo.Stage
+  isExternal: true
+  href: TDMaker.Core.SimSystemInfo.html#TDMaker_Core_SimSystemInfo_Stage
+  name: Stage
+  nameWithType: SimSystemInfo.Stage
+  fullName: TDMaker.Core.SimSystemInfo.Stage
+- uid: TDMaker.Core.SimStage
+  commentId: T:TDMaker.Core.SimStage
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimStage.html
+  name: SimStage
+  nameWithType: SimStage
+  fullName: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimSystemInfo.SystemType*
+  commentId: Overload:TDMaker.Core.SimSystemInfo.SystemType
+  isExternal: true
+  href: TDMaker.Core.SimSystemInfo.html#TDMaker_Core_SimSystemInfo_SystemType
+  name: SystemType
+  nameWithType: SimSystemInfo.SystemType
+  fullName: TDMaker.Core.SimSystemInfo.SystemType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: TDMaker.Core.SimSystemInfo.Name*
+  commentId: Overload:TDMaker.Core.SimSystemInfo.Name
+  isExternal: true
+  href: TDMaker.Core.SimSystemInfo.html#TDMaker_Core_SimSystemInfo_Name
+  name: Name
+  nameWithType: SimSystemInfo.Name
+  fullName: TDMaker.Core.SimSystemInfo.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.SimSystemInfo.IsBuiltIn*
+  commentId: Overload:TDMaker.Core.SimSystemInfo.IsBuiltIn
+  isExternal: true
+  href: TDMaker.Core.SimSystemInfo.html#TDMaker_Core_SimSystemInfo_IsBuiltIn
+  name: IsBuiltIn
+  nameWithType: SimSystemInfo.IsBuiltIn
+  fullName: TDMaker.Core.SimSystemInfo.IsBuiltIn
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

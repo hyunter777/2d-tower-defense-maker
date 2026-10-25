@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.RemainsFaction
+  commentId: T:TDMaker.Core.Defs.RemainsFaction
+  id: RemainsFaction
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.RemainsFaction.Any
+  - TDMaker.Core.Defs.RemainsFaction.Enemy
+  - TDMaker.Core.Defs.RemainsFaction.Friendly
+  langs:
+  - csharp
+  - vb
+  name: RemainsFaction
+  nameWithType: RemainsFaction
+  fullName: TDMaker.Core.Defs.RemainsFaction
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Body faction is independent from the faction of the raised result.
+  example: []
+  syntax:
+    content: public enum RemainsFaction
+    content.vb: Public Enum RemainsFaction
+- uid: TDMaker.Core.Defs.RemainsFaction.Any
+  commentId: F:TDMaker.Core.Defs.RemainsFaction.Any
+  id: Any
+  parent: TDMaker.Core.Defs.RemainsFaction
+  langs:
+  - csharp
+  - vb
+  name: Any
+  nameWithType: RemainsFaction.Any
+  fullName: TDMaker.Core.Defs.RemainsFaction.Any
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: No source-faction restriction.
+  example: []
+  syntax:
+    content: Any = 0
+    return:
+      type: TDMaker.Core.Defs.RemainsFaction
+- uid: TDMaker.Core.Defs.RemainsFaction.Enemy
+  commentId: F:TDMaker.Core.Defs.RemainsFaction.Enemy
+  id: Enemy
+  parent: TDMaker.Core.Defs.RemainsFaction
+  langs:
+  - csharp
+  - vb
+  name: Enemy
+  nameWithType: RemainsFaction.Enemy
+  fullName: TDMaker.Core.Defs.RemainsFaction.Enemy
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: A path-following enemy's body.
+  example: []
+  syntax:
+    content: Enemy = 1
+    return:
+      type: TDMaker.Core.Defs.RemainsFaction
+- uid: TDMaker.Core.Defs.RemainsFaction.Friendly
+  commentId: F:TDMaker.Core.Defs.RemainsFaction.Friendly
+  id: Friendly
+  parent: TDMaker.Core.Defs.RemainsFaction
+  langs:
+  - csharp
+  - vb
+  name: Friendly
+  nameWithType: RemainsFaction.Friendly
+  fullName: TDMaker.Core.Defs.RemainsFaction.Friendly
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: A friendly unit's body.
+  example: []
+  syntax:
+    content: Friendly = 2
+    return:
+      type: TDMaker.Core.Defs.RemainsFaction
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.RemainsFaction
+  commentId: T:TDMaker.Core.Defs.RemainsFaction
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.RemainsFaction.html
+  name: RemainsFaction
+  nameWithType: RemainsFaction
+  fullName: TDMaker.Core.Defs.RemainsFaction

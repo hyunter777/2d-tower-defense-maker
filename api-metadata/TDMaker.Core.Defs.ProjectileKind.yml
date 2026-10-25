@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.ProjectileKind
+  commentId: T:TDMaker.Core.Defs.ProjectileKind
+  id: ProjectileKind
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.ProjectileKind.Ballistic
+  - TDMaker.Core.Defs.ProjectileKind.Homing
+  - TDMaker.Core.Defs.ProjectileKind.Instant
+  - TDMaker.Core.Defs.ProjectileKind.Straight
+  langs:
+  - csharp
+  - vb
+  name: ProjectileKind
+  nameWithType: ProjectileKind
+  fullName: TDMaker.Core.Defs.ProjectileKind
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: The movement model of an attack projectile.
+  example: []
+  syntax:
+    content: public enum ProjectileKind
+    content.vb: Public Enum ProjectileKind
+- uid: TDMaker.Core.Defs.ProjectileKind.Instant
+  commentId: F:TDMaker.Core.Defs.ProjectileKind.Instant
+  id: Instant
+  parent: TDMaker.Core.Defs.ProjectileKind
+  langs:
+  - csharp
+  - vb
+  name: Instant
+  nameWithType: ProjectileKind.Instant
+  fullName: TDMaker.Core.Defs.ProjectileKind.Instant
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Applies impact immediately without a flight entity.
+  example: []
+  syntax:
+    content: Instant = 0
+    return:
+      type: TDMaker.Core.Defs.ProjectileKind
+- uid: TDMaker.Core.Defs.ProjectileKind.Straight
+  commentId: F:TDMaker.Core.Defs.ProjectileKind.Straight
+  id: Straight
+  parent: TDMaker.Core.Defs.ProjectileKind
+  langs:
+  - csharp
+  - vb
+  name: Straight
+  nameWithType: ProjectileKind.Straight
+  fullName: TDMaker.Core.Defs.ProjectileKind.Straight
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Travels to a fixed aim point.
+  example: []
+  syntax:
+    content: Straight = 1
+    return:
+      type: TDMaker.Core.Defs.ProjectileKind
+- uid: TDMaker.Core.Defs.ProjectileKind.Ballistic
+  commentId: F:TDMaker.Core.Defs.ProjectileKind.Ballistic
+  id: Ballistic
+  parent: TDMaker.Core.Defs.ProjectileKind
+  langs:
+  - csharp
+  - vb
+  name: Ballistic
+  nameWithType: ProjectileKind.Ballistic
+  fullName: TDMaker.Core.Defs.ProjectileKind.Ballistic
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Travels to a fixed aim point with a visual parabolic height.
+  example: []
+  syntax:
+    content: Ballistic = 2
+    return:
+      type: TDMaker.Core.Defs.ProjectileKind
+- uid: TDMaker.Core.Defs.ProjectileKind.Homing
+  commentId: F:TDMaker.Core.Defs.ProjectileKind.Homing
+  id: Homing
+  parent: TDMaker.Core.Defs.ProjectileKind
+  langs:
+  - csharp
+  - vb
+  name: Homing
+  nameWithType: ProjectileKind.Homing
+  fullName: TDMaker.Core.Defs.ProjectileKind.Homing
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Updates its destination from a living target.
+  example: []
+  syntax:
+    content: Homing = 3
+    return:
+      type: TDMaker.Core.Defs.ProjectileKind
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.ProjectileKind
+  commentId: T:TDMaker.Core.Defs.ProjectileKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileKind.html
+  name: ProjectileKind
+  nameWithType: ProjectileKind
+  fullName: TDMaker.Core.Defs.ProjectileKind

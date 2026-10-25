@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.CampaignUnlock
+  commentId: T:TDMaker.Unity.Campaign.CampaignUnlock
+  id: CampaignUnlock
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.CampaignUnlock.Always
+  - TDMaker.Unity.Campaign.CampaignUnlock.PreviousLevel
+  - TDMaker.Unity.Campaign.CampaignUnlock.RequiredLevels
+  langs:
+  - csharp
+  - vb
+  name: CampaignUnlock
+  nameWithType: CampaignUnlock
+  fullName: TDMaker.Unity.Campaign.CampaignUnlock
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: How a campaign level opens on the world map.
+  example: []
+  syntax:
+    content: public enum CampaignUnlock
+    content.vb: Public Enum CampaignUnlock
+- uid: TDMaker.Unity.Campaign.CampaignUnlock.PreviousLevel
+  commentId: F:TDMaker.Unity.Campaign.CampaignUnlock.PreviousLevel
+  id: PreviousLevel
+  parent: TDMaker.Unity.Campaign.CampaignUnlock
+  langs:
+  - csharp
+  - vb
+  name: PreviousLevel
+  nameWithType: CampaignUnlock.PreviousLevel
+  fullName: TDMaker.Unity.Campaign.CampaignUnlock.PreviousLevel
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Opens when the nearest earlier main-path level (not a branch) is won. The first main level is open from the start.
+  example: []
+  syntax:
+    content: PreviousLevel = 0
+    return:
+      type: TDMaker.Unity.Campaign.CampaignUnlock
+- uid: TDMaker.Unity.Campaign.CampaignUnlock.RequiredLevels
+  commentId: F:TDMaker.Unity.Campaign.CampaignUnlock.RequiredLevels
+  id: RequiredLevels
+  parent: TDMaker.Unity.Campaign.CampaignUnlock
+  langs:
+  - csharp
+  - vb
+  name: RequiredLevels
+  nameWithType: CampaignUnlock.RequiredLevels
+  fullName: TDMaker.Unity.Campaign.CampaignUnlock.RequiredLevels
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Opens when every level listed in <xref href="TDMaker.Unity.Campaign.CampaignLevel.requiredLevels" data-throw-if-not-resolved="false"></xref>
+    is won.
+  example: []
+  syntax:
+    content: RequiredLevels = 1
+    return:
+      type: TDMaker.Unity.Campaign.CampaignUnlock
+- uid: TDMaker.Unity.Campaign.CampaignUnlock.Always
+  commentId: F:TDMaker.Unity.Campaign.CampaignUnlock.Always
+  id: Always
+  parent: TDMaker.Unity.Campaign.CampaignUnlock
+  langs:
+  - csharp
+  - vb
+  name: Always
+  nameWithType: CampaignUnlock.Always
+  fullName: TDMaker.Unity.Campaign.CampaignUnlock.Always
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Open from the start.
+  example: []
+  syntax:
+    content: Always = 2
+    return:
+      type: TDMaker.Unity.Campaign.CampaignUnlock
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.CampaignUnlock
+  commentId: T:TDMaker.Unity.Campaign.CampaignUnlock
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignUnlock.html
+  name: CampaignUnlock
+  nameWithType: CampaignUnlock
+  fullName: TDMaker.Unity.Campaign.CampaignUnlock
+- uid: TDMaker.Unity.Campaign.CampaignLevel.requiredLevels
+  commentId: F:TDMaker.Unity.Campaign.CampaignLevel.requiredLevels
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignLevel.html#TDMaker_Unity_Campaign_CampaignLevel_requiredLevels
+  name: requiredLevels
+  nameWithType: CampaignLevel.requiredLevels
+  fullName: TDMaker.Unity.Campaign.CampaignLevel.requiredLevels

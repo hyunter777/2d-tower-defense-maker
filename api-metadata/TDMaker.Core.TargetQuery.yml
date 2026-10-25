@@ -1,0 +1,681 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.TargetQuery
+  commentId: T:TDMaker.Core.TargetQuery
+  id: TargetQuery
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.TargetQuery.#ctor(TDMaker.Core.Entity,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.TargetPriority)
+  - TDMaker.Core.TargetQuery.#ctor(TDMaker.Core.Entity,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.TargetPriority,System.Boolean)
+  - TDMaker.Core.TargetQuery.Actor
+  - TDMaker.Core.TargetQuery.IgnoreFlyingMinimumRange
+  - TDMaker.Core.TargetQuery.MinimumRange
+  - TDMaker.Core.TargetQuery.Priority
+  - TDMaker.Core.TargetQuery.Range
+  - TDMaker.Core.TargetQuery.TargetsEnemies
+  - TDMaker.Core.TargetQuery.TargetsFlying
+  - TDMaker.Core.TargetQuery.TargetsGround
+  langs:
+  - csharp
+  - vb
+  name: TargetQuery
+  nameWithType: TargetQuery
+  fullName: TDMaker.Core.TargetQuery
+  type: Struct
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A target request using the shared elliptical distance metric.
+  example: []
+  syntax:
+    content: public readonly struct TargetQuery
+    content.vb: Public Structure TargetQuery
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Core.TargetQuery.#ctor(TDMaker.Core.Entity,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.TargetPriority)
+  commentId: M:TDMaker.Core.TargetQuery.#ctor(TDMaker.Core.Entity,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.TargetPriority)
+  id: '#ctor(TDMaker.Core.Entity,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.TargetPriority)'
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: TargetQuery(Entity, float, float, bool, bool, bool, TargetPriority)
+  nameWithType: TargetQuery.TargetQuery(Entity, float, float, bool, bool, bool, TargetPriority)
+  fullName: TDMaker.Core.TargetQuery.TargetQuery(TDMaker.Core.Entity, float, float, bool, bool, bool, TDMaker.Core.Defs.TargetPriority)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Creates an allocation-free query.
+  example: []
+  syntax:
+    content: public TargetQuery(Entity actor, float range, float minimumRange = 0, bool targetsEnemies = true, bool targetsFlying
+      = true, bool targetsGround = true, TargetPriority priority = TargetPriority.First)
+    parameters:
+    - id: actor
+      type: TDMaker.Core.Entity
+    - id: range
+      type: System.Single
+    - id: minimumRange
+      type: System.Single
+    - id: targetsEnemies
+      type: System.Boolean
+    - id: targetsFlying
+      type: System.Boolean
+    - id: targetsGround
+      type: System.Boolean
+    - id: priority
+      type: TDMaker.Core.Defs.TargetPriority
+    content.vb: Public Sub New(actor As Entity, range As Single, minimumRange As Single = 0, targetsEnemies As Boolean = True,
+      targetsFlying As Boolean = True, targetsGround As Boolean = True, priority As TargetPriority = TargetPriority.First)
+  overload: TDMaker.Core.TargetQuery.#ctor*
+  nameWithType.vb: TargetQuery.New(Entity, Single, Single, Boolean, Boolean, Boolean, TargetPriority)
+  fullName.vb: TDMaker.Core.TargetQuery.New(TDMaker.Core.Entity, Single, Single, Boolean, Boolean, Boolean, TDMaker.Core.Defs.TargetPriority)
+  name.vb: New(Entity, Single, Single, Boolean, Boolean, Boolean, TargetPriority)
+- uid: TDMaker.Core.TargetQuery.#ctor(TDMaker.Core.Entity,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.TargetPriority,System.Boolean)
+  commentId: M:TDMaker.Core.TargetQuery.#ctor(TDMaker.Core.Entity,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.TargetPriority,System.Boolean)
+  id: '#ctor(TDMaker.Core.Entity,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.TargetPriority,System.Boolean)'
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: TargetQuery(Entity, float, float, bool, bool, bool, TargetPriority, bool)
+  nameWithType: TargetQuery.TargetQuery(Entity, float, float, bool, bool, bool, TargetPriority, bool)
+  fullName: TDMaker.Core.TargetQuery.TargetQuery(TDMaker.Core.Entity, float, float, bool, bool, bool, TDMaker.Core.Defs.TargetPriority,
+    bool)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Creates a query with an explicit optional flying-target minimum-range exception.
+  example: []
+  syntax:
+    content: public TargetQuery(Entity actor, float range, float minimumRange, bool targetsEnemies, bool targetsFlying, bool
+      targetsGround, TargetPriority priority, bool ignoreFlyingMinimumRange)
+    parameters:
+    - id: actor
+      type: TDMaker.Core.Entity
+    - id: range
+      type: System.Single
+    - id: minimumRange
+      type: System.Single
+    - id: targetsEnemies
+      type: System.Boolean
+    - id: targetsFlying
+      type: System.Boolean
+    - id: targetsGround
+      type: System.Boolean
+    - id: priority
+      type: TDMaker.Core.Defs.TargetPriority
+    - id: ignoreFlyingMinimumRange
+      type: System.Boolean
+    content.vb: Public Sub New(actor As Entity, range As Single, minimumRange As Single, targetsEnemies As Boolean, targetsFlying
+      As Boolean, targetsGround As Boolean, priority As TargetPriority, ignoreFlyingMinimumRange As Boolean)
+  overload: TDMaker.Core.TargetQuery.#ctor*
+  nameWithType.vb: TargetQuery.New(Entity, Single, Single, Boolean, Boolean, Boolean, TargetPriority, Boolean)
+  fullName.vb: TDMaker.Core.TargetQuery.New(TDMaker.Core.Entity, Single, Single, Boolean, Boolean, Boolean, TDMaker.Core.Defs.TargetPriority,
+    Boolean)
+  name.vb: New(Entity, Single, Single, Boolean, Boolean, Boolean, TargetPriority, Boolean)
+- uid: TDMaker.Core.TargetQuery.Actor
+  commentId: P:TDMaker.Core.TargetQuery.Actor
+  id: Actor
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: Actor
+  nameWithType: TargetQuery.Actor
+  fullName: TDMaker.Core.TargetQuery.Actor
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The attacking entity.
+  example: []
+  syntax:
+    content: public Entity Actor { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Entity
+    content.vb: Public ReadOnly Property Actor As Entity
+  overload: TDMaker.Core.TargetQuery.Actor*
+- uid: TDMaker.Core.TargetQuery.Range
+  commentId: P:TDMaker.Core.TargetQuery.Range
+  id: Range
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: TargetQuery.Range
+  fullName: TDMaker.Core.TargetQuery.Range
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Maximum horizontal range.
+  example: []
+  syntax:
+    content: public float Range { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Range As Single
+  overload: TDMaker.Core.TargetQuery.Range*
+- uid: TDMaker.Core.TargetQuery.MinimumRange
+  commentId: P:TDMaker.Core.TargetQuery.MinimumRange
+  id: MinimumRange
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: MinimumRange
+  nameWithType: TargetQuery.MinimumRange
+  fullName: TDMaker.Core.TargetQuery.MinimumRange
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Minimum horizontal range; a positive inner boundary is excluded. Zero permits the center.
+  example: []
+  syntax:
+    content: public float MinimumRange { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MinimumRange As Single
+  overload: TDMaker.Core.TargetQuery.MinimumRange*
+- uid: TDMaker.Core.TargetQuery.TargetsEnemies
+  commentId: P:TDMaker.Core.TargetQuery.TargetsEnemies
+  id: TargetsEnemies
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: TargetsEnemies
+  nameWithType: TargetQuery.TargetsEnemies
+  fullName: TDMaker.Core.TargetQuery.TargetsEnemies
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Selects enemies rather than friendly soldiers and heroes.
+  example: []
+  syntax:
+    content: public bool TargetsEnemies { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsEnemies As Boolean
+  overload: TDMaker.Core.TargetQuery.TargetsEnemies*
+- uid: TDMaker.Core.TargetQuery.TargetsFlying
+  commentId: P:TDMaker.Core.TargetQuery.TargetsFlying
+  id: TargetsFlying
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: TargetsFlying
+  nameWithType: TargetQuery.TargetsFlying
+  fullName: TDMaker.Core.TargetQuery.TargetsFlying
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Allows flying targets.
+  example: []
+  syntax:
+    content: public bool TargetsFlying { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsFlying As Boolean
+  overload: TDMaker.Core.TargetQuery.TargetsFlying*
+- uid: TDMaker.Core.TargetQuery.TargetsGround
+  commentId: P:TDMaker.Core.TargetQuery.TargetsGround
+  id: TargetsGround
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: TargetsGround
+  nameWithType: TargetQuery.TargetsGround
+  fullName: TDMaker.Core.TargetQuery.TargetsGround
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Allows ground targets.
+  example: []
+  syntax:
+    content: public bool TargetsGround { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsGround As Boolean
+  overload: TDMaker.Core.TargetQuery.TargetsGround*
+- uid: TDMaker.Core.TargetQuery.Priority
+  commentId: P:TDMaker.Core.TargetQuery.Priority
+  id: Priority
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: TargetQuery.Priority
+  fullName: TDMaker.Core.TargetQuery.Priority
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Default scoring rule when no custom selector is registered.
+  example: []
+  syntax:
+    content: public TargetPriority Priority { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TargetPriority
+    content.vb: Public ReadOnly Property Priority As TargetPriority
+  overload: TDMaker.Core.TargetQuery.Priority*
+- uid: TDMaker.Core.TargetQuery.IgnoreFlyingMinimumRange
+  commentId: P:TDMaker.Core.TargetQuery.IgnoreFlyingMinimumRange
+  id: IgnoreFlyingMinimumRange
+  parent: TDMaker.Core.TargetQuery
+  langs:
+  - csharp
+  - vb
+  name: IgnoreFlyingMinimumRange
+  nameWithType: TargetQuery.IgnoreFlyingMinimumRange
+  fullName: TDMaker.Core.TargetQuery.IgnoreFlyingMinimumRange
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Bypasses the inner range check for flying enemy candidates only; does not grant targeting or blocking permission.
+  example: []
+  syntax:
+    content: public bool IgnoreFlyingMinimumRange { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IgnoreFlyingMinimumRange As Boolean
+  overload: TDMaker.Core.TargetQuery.IgnoreFlyingMinimumRange*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.TargetQuery.#ctor*
+  commentId: Overload:TDMaker.Core.TargetQuery.#ctor
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html#TDMaker_Core_TargetQuery__ctor_TDMaker_Core_Entity_System_Single_System_Single_System_Boolean_System_Boolean_System_Boolean_TDMaker_Core_Defs_TargetPriority_
+  name: TargetQuery
+  nameWithType: TargetQuery.TargetQuery
+  fullName: TDMaker.Core.TargetQuery.TargetQuery
+  nameWithType.vb: TargetQuery.New
+  fullName.vb: TDMaker.Core.TargetQuery.New
+  name.vb: New
+- uid: TDMaker.Core.Entity
+  commentId: T:TDMaker.Core.Entity
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: TDMaker.Core.Entity
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.TargetPriority
+  commentId: T:TDMaker.Core.Defs.TargetPriority
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetPriority.html
+  name: TargetPriority
+  nameWithType: TargetPriority
+  fullName: TDMaker.Core.Defs.TargetPriority
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.TargetQuery.Actor*
+  commentId: Overload:TDMaker.Core.TargetQuery.Actor
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html#TDMaker_Core_TargetQuery_Actor
+  name: Actor
+  nameWithType: TargetQuery.Actor
+  fullName: TDMaker.Core.TargetQuery.Actor
+- uid: TDMaker.Core.TargetQuery.Range*
+  commentId: Overload:TDMaker.Core.TargetQuery.Range
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html#TDMaker_Core_TargetQuery_Range
+  name: Range
+  nameWithType: TargetQuery.Range
+  fullName: TDMaker.Core.TargetQuery.Range
+- uid: TDMaker.Core.TargetQuery.MinimumRange*
+  commentId: Overload:TDMaker.Core.TargetQuery.MinimumRange
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html#TDMaker_Core_TargetQuery_MinimumRange
+  name: MinimumRange
+  nameWithType: TargetQuery.MinimumRange
+  fullName: TDMaker.Core.TargetQuery.MinimumRange
+- uid: TDMaker.Core.TargetQuery.TargetsEnemies*
+  commentId: Overload:TDMaker.Core.TargetQuery.TargetsEnemies
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html#TDMaker_Core_TargetQuery_TargetsEnemies
+  name: TargetsEnemies
+  nameWithType: TargetQuery.TargetsEnemies
+  fullName: TDMaker.Core.TargetQuery.TargetsEnemies
+- uid: TDMaker.Core.TargetQuery.TargetsFlying*
+  commentId: Overload:TDMaker.Core.TargetQuery.TargetsFlying
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html#TDMaker_Core_TargetQuery_TargetsFlying
+  name: TargetsFlying
+  nameWithType: TargetQuery.TargetsFlying
+  fullName: TDMaker.Core.TargetQuery.TargetsFlying
+- uid: TDMaker.Core.TargetQuery.TargetsGround*
+  commentId: Overload:TDMaker.Core.TargetQuery.TargetsGround
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html#TDMaker_Core_TargetQuery_TargetsGround
+  name: TargetsGround
+  nameWithType: TargetQuery.TargetsGround
+  fullName: TDMaker.Core.TargetQuery.TargetsGround
+- uid: TDMaker.Core.TargetQuery.Priority*
+  commentId: Overload:TDMaker.Core.TargetQuery.Priority
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html#TDMaker_Core_TargetQuery_Priority
+  name: Priority
+  nameWithType: TargetQuery.Priority
+  fullName: TDMaker.Core.TargetQuery.Priority
+- uid: TDMaker.Core.TargetQuery.IgnoreFlyingMinimumRange*
+  commentId: Overload:TDMaker.Core.TargetQuery.IgnoreFlyingMinimumRange
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html#TDMaker_Core_TargetQuery_IgnoreFlyingMinimumRange
+  name: IgnoreFlyingMinimumRange
+  nameWithType: TargetQuery.IgnoreFlyingMinimumRange
+  fullName: TDMaker.Core.TargetQuery.IgnoreFlyingMinimumRange

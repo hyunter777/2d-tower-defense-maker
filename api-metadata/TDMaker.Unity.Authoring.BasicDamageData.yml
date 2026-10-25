@@ -1,0 +1,952 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.BasicDamageData
+  commentId: T:TDMaker.Unity.Authoring.BasicDamageData
+  id: BasicDamageData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.BasicDamageData.#ctor
+  - TDMaker.Unity.Authoring.BasicDamageData.Decorate(TDMaker.Core.Defs.DamageDef)
+  - TDMaker.Unity.Authoring.BasicDamageData.ToDef
+  - TDMaker.Unity.Authoring.BasicDamageData.ToDef(System.Single,System.Single)
+  - TDMaker.Unity.Authoring.BasicDamageData.ToDef(System.Single,System.Single,System.Boolean)
+  - TDMaker.Unity.Authoring.BasicDamageData.edgeMultiplier
+  - TDMaker.Unity.Authoring.BasicDamageData.effects
+  - TDMaker.Unity.Authoring.BasicDamageData.experienceRate
+  - TDMaker.Unity.Authoring.BasicDamageData.falloff
+  - TDMaker.Unity.Authoring.BasicDamageData.kind
+  - TDMaker.Unity.Authoring.BasicDamageData.magicalPierce
+  - TDMaker.Unity.Authoring.BasicDamageData.maximum
+  - TDMaker.Unity.Authoring.BasicDamageData.minimum
+  - TDMaker.Unity.Authoring.BasicDamageData.physicalPierce
+  - TDMaker.Unity.Authoring.BasicDamageData.radius
+  langs:
+  - csharp
+  - vb
+  name: BasicDamageData
+  nameWithType: BasicDamageData
+  fullName: TDMaker.Unity.Authoring.BasicDamageData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'A damage packet without an impact payload, baked into <xref href="TDMaker.Core.Defs.DamageDef" data-throw-if-not-resolved="false"></xref>.
+    Used where a payload would nest
+
+    (secondary blasts, region pulses); attacks use <xref href="TDMaker.Unity.Authoring.DamageData" data-throw-if-not-resolved="false"></xref>,
+    which adds <xref href="TDMaker.Unity.Authoring.DamageData.impact" data-throw-if-not-resolved="false"></xref>.'
+  example: []
+  syntax:
+    content: public class BasicDamageData
+    content.vb: Public Class BasicDamageData
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - TDMaker.Unity.Authoring.DamageData
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.BasicDamageData.kind
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.kind
+  id: kind
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: kind
+  nameWithType: BasicDamageData.kind
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.kind
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Defense channel.
+  example: []
+  syntax:
+    content: public DamageKind kind
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+    content.vb: Public kind As DamageKind
+- uid: TDMaker.Unity.Authoring.BasicDamageData.minimum
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.minimum
+  id: minimum
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: minimum
+  nameWithType: BasicDamageData.minimum
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.minimum
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Minimum rolled damage.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float minimum'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public minimum As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.BasicDamageData.maximum
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.maximum
+  id: maximum
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: maximum
+  nameWithType: BasicDamageData.maximum
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.maximum
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Maximum rolled damage.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float maximum'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public maximum As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.BasicDamageData.radius
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.radius
+  id: radius
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: radius
+  nameWithType: BasicDamageData.radius
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.radius
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Impact radius; zero hits a single target.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float radius'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public radius As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.BasicDamageData.edgeMultiplier
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.edgeMultiplier
+  id: edgeMultiplier
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: edgeMultiplier
+  nameWithType: BasicDamageData.edgeMultiplier
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.edgeMultiplier
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Damage multiplier at the edge of the impact radius.
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float edgeMultiplier'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public edgeMultiplier As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.BasicDamageData.falloff
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.falloff
+  id: falloff
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: falloff
+  nameWithType: BasicDamageData.falloff
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.falloff
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Area falloff model.
+  example: []
+  syntax:
+    content: public DamageFalloff falloff
+    return:
+      type: TDMaker.Core.Defs.DamageFalloff
+    content.vb: Public falloff As DamageFalloff
+- uid: TDMaker.Unity.Authoring.BasicDamageData.physicalPierce
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.physicalPierce
+  id: physicalPierce
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: physicalPierce
+  nameWithType: BasicDamageData.physicalPierce
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.physicalPierce
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Physical reduction ignored by this hit.
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float physicalPierce'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public physicalPierce As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.BasicDamageData.magicalPierce
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.magicalPierce
+  id: magicalPierce
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: magicalPierce
+  nameWithType: BasicDamageData.magicalPierce
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.magicalPierce
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Magical reduction ignored by this hit.
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float magicalPierce'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public magicalPierce As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.BasicDamageData.effects
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.effects
+  id: effects
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: effects
+  nameWithType: BasicDamageData.effects
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.effects
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Status effects requested on every target this hit damages (for example a slow or a poison).
+  example: []
+  syntax:
+    content: public List<StatusEffectAsset> effects
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.StatusEffectAsset}
+    content.vb: Public effects As List(Of StatusEffectAsset)
+- uid: TDMaker.Unity.Authoring.BasicDamageData.experienceRate
+  commentId: F:TDMaker.Unity.Authoring.BasicDamageData.experienceRate
+  id: experienceRate
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: experienceRate
+  nameWithType: BasicDamageData.experienceRate
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.experienceRate
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Hero experience per point of health removed (only meaningful for hero attacks).
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float experienceRate'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public experienceRate As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.BasicDamageData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.BasicDamageData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: BasicDamageData.ToDef()
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the immutable core definition.
+  example: []
+  syntax:
+    content: public DamageDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public Function ToDef() As DamageDef
+  overload: TDMaker.Unity.Authoring.BasicDamageData.ToDef*
+- uid: TDMaker.Unity.Authoring.BasicDamageData.ToDef(System.Single,System.Single)
+  commentId: M:TDMaker.Unity.Authoring.BasicDamageData.ToDef(System.Single,System.Single)
+  id: ToDef(System.Single,System.Single)
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: ToDef(float, float)
+  nameWithType: BasicDamageData.ToDef(float, float)
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.ToDef(float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes with an added experience rate and a damage multiplier (used by hero growth rows).
+  example: []
+  syntax:
+    content: public DamageDef ToDef(float extraExperienceRate, float damageScale)
+    parameters:
+    - id: extraExperienceRate
+      type: System.Single
+    - id: damageScale
+      type: System.Single
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public Function ToDef(extraExperienceRate As Single, damageScale As Single) As DamageDef
+  overload: TDMaker.Unity.Authoring.BasicDamageData.ToDef*
+  nameWithType.vb: BasicDamageData.ToDef(Single, Single)
+  fullName.vb: TDMaker.Unity.Authoring.BasicDamageData.ToDef(Single, Single)
+  name.vb: ToDef(Single, Single)
+- uid: TDMaker.Unity.Authoring.BasicDamageData.ToDef(System.Single,System.Single,System.Boolean)
+  commentId: M:TDMaker.Unity.Authoring.BasicDamageData.ToDef(System.Single,System.Single,System.Boolean)
+  id: ToDef(System.Single,System.Single,System.Boolean)
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: ToDef(float, float, bool)
+  nameWithType: BasicDamageData.ToDef(float, float, bool)
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.ToDef(float, float, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes, optionally forcing a single-target packet (region pulses require one).
+  example: []
+  syntax:
+    content: public DamageDef ToDef(float extraExperienceRate, float damageScale, bool singleTarget)
+    parameters:
+    - id: extraExperienceRate
+      type: System.Single
+    - id: damageScale
+      type: System.Single
+    - id: singleTarget
+      type: System.Boolean
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public Function ToDef(extraExperienceRate As Single, damageScale As Single, singleTarget As Boolean) As DamageDef
+  overload: TDMaker.Unity.Authoring.BasicDamageData.ToDef*
+  nameWithType.vb: BasicDamageData.ToDef(Single, Single, Boolean)
+  fullName.vb: TDMaker.Unity.Authoring.BasicDamageData.ToDef(Single, Single, Boolean)
+  name.vb: ToDef(Single, Single, Boolean)
+- uid: TDMaker.Unity.Authoring.BasicDamageData.Decorate(TDMaker.Core.Defs.DamageDef)
+  commentId: M:TDMaker.Unity.Authoring.BasicDamageData.Decorate(TDMaker.Core.Defs.DamageDef)
+  id: Decorate(TDMaker.Core.Defs.DamageDef)
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: Decorate(DamageDef)
+  nameWithType: BasicDamageData.Decorate(DamageDef)
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.Decorate(TDMaker.Core.Defs.DamageDef)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Lets derived packets add behavior (for example an impact payload) after the base bake.
+  example: []
+  syntax:
+    content: protected virtual DamageDef Decorate(DamageDef def)
+    parameters:
+    - id: def
+      type: TDMaker.Core.Defs.DamageDef
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Protected Overridable Function Decorate(def As DamageDef) As DamageDef
+  overload: TDMaker.Unity.Authoring.BasicDamageData.Decorate*
+- uid: TDMaker.Unity.Authoring.BasicDamageData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.BasicDamageData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.BasicDamageData
+  langs:
+  - csharp
+  - vb
+  name: BasicDamageData()
+  nameWithType: BasicDamageData.BasicDamageData()
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.BasicDamageData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public BasicDamageData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.BasicDamageData.#ctor*
+  nameWithType.vb: BasicDamageData.New()
+  fullName.vb: TDMaker.Unity.Authoring.BasicDamageData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+- uid: TDMaker.Unity.Authoring.DamageData
+  commentId: T:TDMaker.Unity.Authoring.DamageData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.DamageData.html
+  name: DamageData
+  nameWithType: DamageData
+  fullName: TDMaker.Unity.Authoring.DamageData
+- uid: TDMaker.Unity.Authoring.DamageData.impact
+  commentId: F:TDMaker.Unity.Authoring.DamageData.impact
+  isExternal: true
+  href: TDMaker.Unity.Authoring.DamageData.html#TDMaker_Unity_Authoring_DamageData_impact
+  name: impact
+  nameWithType: DamageData.impact
+  fullName: TDMaker.Unity.Authoring.DamageData.impact
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.DamageKind
+  commentId: T:TDMaker.Core.Defs.DamageKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageKind.html
+  name: DamageKind
+  nameWithType: DamageKind
+  fullName: TDMaker.Core.Defs.DamageKind
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.DamageFalloff
+  commentId: T:TDMaker.Core.Defs.DamageFalloff
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageFalloff.html
+  name: DamageFalloff
+  nameWithType: DamageFalloff
+  fullName: TDMaker.Core.Defs.DamageFalloff
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.StatusEffectAsset}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.StatusEffectAsset}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<StatusEffectAsset>
+  nameWithType: List<StatusEffectAsset>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.StatusEffectAsset>
+  nameWithType.vb: List(Of StatusEffectAsset)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.StatusEffectAsset)
+  name.vb: List(Of StatusEffectAsset)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.StatusEffectAsset
+    name: StatusEffectAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.StatusEffectAsset.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.StatusEffectAsset
+    name: StatusEffectAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.StatusEffectAsset.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Unity.Authoring.BasicDamageData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.BasicDamageData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BasicDamageData.html#TDMaker_Unity_Authoring_BasicDamageData_ToDef
+  name: ToDef
+  nameWithType: BasicDamageData.ToDef
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.ToDef
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.BasicDamageData.Decorate*
+  commentId: Overload:TDMaker.Unity.Authoring.BasicDamageData.Decorate
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BasicDamageData.html#TDMaker_Unity_Authoring_BasicDamageData_Decorate_TDMaker_Core_Defs_DamageDef_
+  name: Decorate
+  nameWithType: BasicDamageData.Decorate
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.Decorate
+- uid: TDMaker.Unity.Authoring.BasicDamageData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.BasicDamageData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BasicDamageData.html#TDMaker_Unity_Authoring_BasicDamageData__ctor
+  name: BasicDamageData
+  nameWithType: BasicDamageData.BasicDamageData
+  fullName: TDMaker.Unity.Authoring.BasicDamageData.BasicDamageData
+  nameWithType.vb: BasicDamageData.New
+  fullName.vb: TDMaker.Unity.Authoring.BasicDamageData.New
+  name.vb: New

@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.DamageMask
+  commentId: T:TDMaker.Core.Defs.DamageMask
+  id: DamageMask
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.DamageMask.All
+  - TDMaker.Core.Defs.DamageMask.Electric
+  - TDMaker.Core.Defs.DamageMask.Explosion
+  - TDMaker.Core.Defs.DamageMask.Magical
+  - TDMaker.Core.Defs.DamageMask.None
+  - TDMaker.Core.Defs.DamageMask.Physical
+  - TDMaker.Core.Defs.DamageMask.Poison
+  - TDMaker.Core.Defs.DamageMask.True
+  langs:
+  - csharp
+  - vb
+  name: DamageMask
+  nameWithType: DamageMask
+  fullName: TDMaker.Core.Defs.DamageMask
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Damage channels that may be independently immunized.
+  example: []
+  syntax:
+    content: '[Flags]
+
+      public enum DamageMask'
+    content.vb: '<Flags>
+
+      Public Enum DamageMask'
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: TDMaker.Core.Defs.DamageMask.None
+  commentId: F:TDMaker.Core.Defs.DamageMask.None
+  id: None
+  parent: TDMaker.Core.Defs.DamageMask
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: DamageMask.None
+  fullName: TDMaker.Core.Defs.DamageMask.None
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: No channels.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TDMaker.Core.Defs.DamageMask
+- uid: TDMaker.Core.Defs.DamageMask.Physical
+  commentId: F:TDMaker.Core.Defs.DamageMask.Physical
+  id: Physical
+  parent: TDMaker.Core.Defs.DamageMask
+  langs:
+  - csharp
+  - vb
+  name: Physical
+  nameWithType: DamageMask.Physical
+  fullName: TDMaker.Core.Defs.DamageMask.Physical
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Physical damage.
+  example: []
+  syntax:
+    content: Physical = 1
+    return:
+      type: TDMaker.Core.Defs.DamageMask
+- uid: TDMaker.Core.Defs.DamageMask.Magical
+  commentId: F:TDMaker.Core.Defs.DamageMask.Magical
+  id: Magical
+  parent: TDMaker.Core.Defs.DamageMask
+  langs:
+  - csharp
+  - vb
+  name: Magical
+  nameWithType: DamageMask.Magical
+  fullName: TDMaker.Core.Defs.DamageMask.Magical
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Magical damage.
+  example: []
+  syntax:
+    content: Magical = 2
+    return:
+      type: TDMaker.Core.Defs.DamageMask
+- uid: TDMaker.Core.Defs.DamageMask.True
+  commentId: F:TDMaker.Core.Defs.DamageMask.True
+  id: 'True'
+  parent: TDMaker.Core.Defs.DamageMask
+  langs:
+  - csharp
+  - vb
+  name: 'True'
+  nameWithType: DamageMask.True
+  fullName: TDMaker.Core.Defs.DamageMask.True
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Armor-bypassing damage.
+  example: []
+  syntax:
+    content: True = 4
+    return:
+      type: TDMaker.Core.Defs.DamageMask
+- uid: TDMaker.Core.Defs.DamageMask.Explosion
+  commentId: F:TDMaker.Core.Defs.DamageMask.Explosion
+  id: Explosion
+  parent: TDMaker.Core.Defs.DamageMask
+  langs:
+  - csharp
+  - vb
+  name: Explosion
+  nameWithType: DamageMask.Explosion
+  fullName: TDMaker.Core.Defs.DamageMask.Explosion
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Explosion damage.
+  example: []
+  syntax:
+    content: Explosion = 8
+    return:
+      type: TDMaker.Core.Defs.DamageMask
+- uid: TDMaker.Core.Defs.DamageMask.Electric
+  commentId: F:TDMaker.Core.Defs.DamageMask.Electric
+  id: Electric
+  parent: TDMaker.Core.Defs.DamageMask
+  langs:
+  - csharp
+  - vb
+  name: Electric
+  nameWithType: DamageMask.Electric
+  fullName: TDMaker.Core.Defs.DamageMask.Electric
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Electric damage.
+  example: []
+  syntax:
+    content: Electric = 16
+    return:
+      type: TDMaker.Core.Defs.DamageMask
+- uid: TDMaker.Core.Defs.DamageMask.Poison
+  commentId: F:TDMaker.Core.Defs.DamageMask.Poison
+  id: Poison
+  parent: TDMaker.Core.Defs.DamageMask
+  langs:
+  - csharp
+  - vb
+  name: Poison
+  nameWithType: DamageMask.Poison
+  fullName: TDMaker.Core.Defs.DamageMask.Poison
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Poison damage.
+  example: []
+  syntax:
+    content: Poison = 32
+    return:
+      type: TDMaker.Core.Defs.DamageMask
+- uid: TDMaker.Core.Defs.DamageMask.All
+  commentId: F:TDMaker.Core.Defs.DamageMask.All
+  id: All
+  parent: TDMaker.Core.Defs.DamageMask
+  langs:
+  - csharp
+  - vb
+  name: All
+  nameWithType: DamageMask.All
+  fullName: TDMaker.Core.Defs.DamageMask.All
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: All defined channels.
+  example: []
+  syntax:
+    content: All = Physical | Magical | True | Explosion | Electric | Poison
+    return:
+      type: TDMaker.Core.Defs.DamageMask
+    content.vb: All = Physical Or Magical Or True Or Explosion Or Electric Or Poison
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.DamageMask
+  commentId: T:TDMaker.Core.Defs.DamageMask
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageMask.html
+  name: DamageMask
+  nameWithType: DamageMask
+  fullName: TDMaker.Core.Defs.DamageMask

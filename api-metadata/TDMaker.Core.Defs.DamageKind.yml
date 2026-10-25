@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.DamageKind
+  commentId: T:TDMaker.Core.Defs.DamageKind
+  id: DamageKind
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.DamageKind.Electric
+  - TDMaker.Core.Defs.DamageKind.Explosion
+  - TDMaker.Core.Defs.DamageKind.Magical
+  - TDMaker.Core.Defs.DamageKind.Physical
+  - TDMaker.Core.Defs.DamageKind.Poison
+  - TDMaker.Core.Defs.DamageKind.True
+  langs:
+  - csharp
+  - vb
+  name: DamageKind
+  nameWithType: DamageKind
+  fullName: TDMaker.Core.Defs.DamageKind
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: The defense channel used by a damage packet.
+  example: []
+  syntax:
+    content: public enum DamageKind
+    content.vb: Public Enum DamageKind
+- uid: TDMaker.Core.Defs.DamageKind.Physical
+  commentId: F:TDMaker.Core.Defs.DamageKind.Physical
+  id: Physical
+  parent: TDMaker.Core.Defs.DamageKind
+  langs:
+  - csharp
+  - vb
+  name: Physical
+  nameWithType: DamageKind.Physical
+  fullName: TDMaker.Core.Defs.DamageKind.Physical
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reduced by physical armor.
+  example: []
+  syntax:
+    content: Physical = 0
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+- uid: TDMaker.Core.Defs.DamageKind.Magical
+  commentId: F:TDMaker.Core.Defs.DamageKind.Magical
+  id: Magical
+  parent: TDMaker.Core.Defs.DamageKind
+  langs:
+  - csharp
+  - vb
+  name: Magical
+  nameWithType: DamageKind.Magical
+  fullName: TDMaker.Core.Defs.DamageKind.Magical
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reduced by magical resistance.
+  example: []
+  syntax:
+    content: Magical = 1
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+- uid: TDMaker.Core.Defs.DamageKind.True
+  commentId: F:TDMaker.Core.Defs.DamageKind.True
+  id: 'True'
+  parent: TDMaker.Core.Defs.DamageKind
+  langs:
+  - csharp
+  - vb
+  name: 'True'
+  nameWithType: DamageKind.True
+  fullName: TDMaker.Core.Defs.DamageKind.True
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Bypasses armor and resistance.
+  example: []
+  syntax:
+    content: True = 2
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+- uid: TDMaker.Core.Defs.DamageKind.Explosion
+  commentId: F:TDMaker.Core.Defs.DamageKind.Explosion
+  id: Explosion
+  parent: TDMaker.Core.Defs.DamageKind
+  langs:
+  - csharp
+  - vb
+  name: Explosion
+  nameWithType: DamageKind.Explosion
+  fullName: TDMaker.Core.Defs.DamageKind.Explosion
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reduced by half of effective physical armor.
+  example: []
+  syntax:
+    content: Explosion = 3
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+- uid: TDMaker.Core.Defs.DamageKind.Electric
+  commentId: F:TDMaker.Core.Defs.DamageKind.Electric
+  id: Electric
+  parent: TDMaker.Core.Defs.DamageKind
+  langs:
+  - csharp
+  - vb
+  name: Electric
+  nameWithType: DamageKind.Electric
+  fullName: TDMaker.Core.Defs.DamageKind.Electric
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reduced by half of effective physical armor.
+  example: []
+  syntax:
+    content: Electric = 4
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+- uid: TDMaker.Core.Defs.DamageKind.Poison
+  commentId: F:TDMaker.Core.Defs.DamageKind.Poison
+  id: Poison
+  parent: TDMaker.Core.Defs.DamageKind
+  langs:
+  - csharp
+  - vb
+  name: Poison
+  nameWithType: DamageKind.Poison
+  fullName: TDMaker.Core.Defs.DamageKind.Poison
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reduced by poison resistance.
+  example: []
+  syntax:
+    content: Poison = 5
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.DamageKind
+  commentId: T:TDMaker.Core.Defs.DamageKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageKind.html
+  name: DamageKind
+  nameWithType: DamageKind
+  fullName: TDMaker.Core.Defs.DamageKind

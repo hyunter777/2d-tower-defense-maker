@@ -1,0 +1,1464 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.UnitMath
+  commentId: T:TDMaker.Editor.UnitMath
+  id: UnitMath
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.UnitMath.BountyDensity(TDMaker.Unity.Authoring.EnemyAsset)
+  - TDMaker.Editor.UnitMath.Defenses(TDMaker.Unity.Authoring.EntityAssetBase,System.Single@,System.Single@,System.Single@)
+  - TDMaker.Editor.UnitMath.Dps(TDMaker.Unity.Authoring.MeleeData,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},System.Single,System.Single,System.Single,System.Single,System.Boolean)
+  - TDMaker.Editor.UnitMath.EffectiveHealth(System.Single,System.Single)
+  - TDMaker.Editor.UnitMath.EngagementSlot(System.Int32,UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Boolean)
+  - TDMaker.Editor.UnitMath.ExpectedHit(TDMaker.Unity.Authoring.BasicDamageData,System.Single,System.Boolean,System.Boolean)
+  - TDMaker.Editor.UnitMath.Health(TDMaker.Unity.Authoring.EntityAssetBase)
+  - TDMaker.Editor.UnitMath.HeroRows(TDMaker.Unity.Authoring.HeroAsset)
+  - TDMaker.Editor.UnitMath.HitDamage(System.Single,System.Single,System.Boolean)
+  - TDMaker.Editor.UnitMath.HitsToKill(System.Single,System.Double)
+  - TDMaker.Editor.UnitMath.Kill(TDMaker.Unity.Authoring.TowerAsset,TDMaker.Unity.Authoring.EnemyAsset,System.Int32)
+  - TDMaker.Editor.UnitMath.Kinds
+  - TDMaker.Editor.UnitMath.MedianBountyDensity(System.Collections.Generic.List{TDMaker.Unity.Authoring.EnemyAsset})
+  - TDMaker.Editor.UnitMath.Outliers(TDMaker.Unity.Authoring.EntityAssetBase,System.Single)
+  - TDMaker.Editor.UnitMath.Reduction(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,System.Single)
+  - TDMaker.Editor.UnitMath.TowerTiers(System.Collections.Generic.List{TDMaker.Unity.Authoring.TowerAsset})
+  langs:
+  - csharp
+  - vb
+  name: UnitMath
+  nameWithType: UnitMath
+  fullName: TDMaker.Editor.UnitMath
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Unit Workshop numbers that follow the simulation''s integer damage rules exactly (single-target hits without status
+    effects
+
+    or incoming multipliers): a hit rolls <code>ceil(lerp(min, max, u))</code>, projectile hits deal at least 1, the target
+    keeps
+
+    <code>floor(rolled × (1 − reduction))</code> (soldiers: <code>round(rolled − floor(rolled × reduction))</code>), and the
+    reduction is the
+
+    matching defense minus pierce (explosion and electric use half the physical armor), clamped to [0, 1].
+
+    Ratio checks use the bands of the balance notes (new content starting points, not rules).'
+  example: []
+  syntax:
+    content: public static class UnitMath
+    content.vb: Public Module UnitMath
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.UnitMath.Kinds
+  commentId: F:TDMaker.Editor.UnitMath.Kinds
+  id: Kinds
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: Kinds
+  nameWithType: UnitMath.Kinds
+  fullName: TDMaker.Editor.UnitMath.Kinds
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The damage kinds listed in stat tables.
+  example: []
+  syntax:
+    content: public static readonly DamageKind[] Kinds
+    return:
+      type: TDMaker.Core.Defs.DamageKind[]
+    content.vb: Public Shared ReadOnly Kinds As DamageKind()
+- uid: TDMaker.Editor.UnitMath.Reduction(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:TDMaker.Editor.UnitMath.Reduction(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,System.Single)
+  id: Reduction(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,System.Single)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: Reduction(DamageKind, float, float, float, float, float)
+  nameWithType: UnitMath.Reduction(DamageKind, float, float, float, float, float)
+  fullName: TDMaker.Editor.UnitMath.Reduction(TDMaker.Core.Defs.DamageKind, float, float, float, float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Reduction against a hit of <code class="paramref">kind</code> for a target with the given defenses (the simulation's
+    switch).
+  example: []
+  syntax:
+    content: public static float Reduction(DamageKind kind, float physical, float magical, float poison, float physicalPierce
+      = 0, float magicalPierce = 0)
+    parameters:
+    - id: kind
+      type: TDMaker.Core.Defs.DamageKind
+    - id: physical
+      type: System.Single
+    - id: magical
+      type: System.Single
+    - id: poison
+      type: System.Single
+    - id: physicalPierce
+      type: System.Single
+    - id: magicalPierce
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function Reduction(kind As DamageKind, physical As Single, magical As Single, poison As Single,
+      physicalPierce As Single = 0, magicalPierce As Single = 0) As Single
+  overload: TDMaker.Editor.UnitMath.Reduction*
+  nameWithType.vb: UnitMath.Reduction(DamageKind, Single, Single, Single, Single, Single)
+  fullName.vb: TDMaker.Editor.UnitMath.Reduction(TDMaker.Core.Defs.DamageKind, Single, Single, Single, Single, Single)
+  name.vb: Reduction(DamageKind, Single, Single, Single, Single, Single)
+- uid: TDMaker.Editor.UnitMath.HitDamage(System.Single,System.Single,System.Boolean)
+  commentId: M:TDMaker.Editor.UnitMath.HitDamage(System.Single,System.Single,System.Boolean)
+  id: HitDamage(System.Single,System.Single,System.Boolean)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: HitDamage(float, float, bool)
+  nameWithType: UnitMath.HitDamage(float, float, bool)
+  fullName: TDMaker.Editor.UnitMath.HitDamage(float, float, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Health removed by one hit of <code class="paramref">rolled</code> raw damage through <code class="paramref">reduction</code>.
+  example: []
+  syntax:
+    content: public static float HitDamage(float rolled, float reduction, bool friendlyTarget = false)
+    parameters:
+    - id: rolled
+      type: System.Single
+    - id: reduction
+      type: System.Single
+    - id: friendlyTarget
+      type: System.Boolean
+    return:
+      type: System.Single
+    content.vb: Public Shared Function HitDamage(rolled As Single, reduction As Single, friendlyTarget As Boolean = False)
+      As Single
+  overload: TDMaker.Editor.UnitMath.HitDamage*
+  nameWithType.vb: UnitMath.HitDamage(Single, Single, Boolean)
+  fullName.vb: TDMaker.Editor.UnitMath.HitDamage(Single, Single, Boolean)
+  name.vb: HitDamage(Single, Single, Boolean)
+- uid: TDMaker.Editor.UnitMath.ExpectedHit(TDMaker.Unity.Authoring.BasicDamageData,System.Single,System.Boolean,System.Boolean)
+  commentId: M:TDMaker.Editor.UnitMath.ExpectedHit(TDMaker.Unity.Authoring.BasicDamageData,System.Single,System.Boolean,System.Boolean)
+  id: ExpectedHit(TDMaker.Unity.Authoring.BasicDamageData,System.Single,System.Boolean,System.Boolean)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: ExpectedHit(BasicDamageData, float, bool, bool)
+  nameWithType: UnitMath.ExpectedHit(BasicDamageData, float, bool, bool)
+  fullName: TDMaker.Editor.UnitMath.ExpectedHit(TDMaker.Unity.Authoring.BasicDamageData, float, bool, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Expected health removed by one single-target hit of a damage packet: every integer roll between <code>ceil(min)</code>
+    and
+
+    <code>ceil(max)</code> weighted by its probability.'
+  example: []
+  syntax:
+    content: public static double ExpectedHit(BasicDamageData damage, float reduction, bool projectile = true, bool friendlyTarget
+      = false)
+    parameters:
+    - id: damage
+      type: TDMaker.Unity.Authoring.BasicDamageData
+    - id: reduction
+      type: System.Single
+    - id: projectile
+      type: System.Boolean
+    - id: friendlyTarget
+      type: System.Boolean
+    return:
+      type: System.Double
+    content.vb: Public Shared Function ExpectedHit(damage As BasicDamageData, reduction As Single, projectile As Boolean =
+      True, friendlyTarget As Boolean = False) As Double
+  overload: TDMaker.Editor.UnitMath.ExpectedHit*
+  nameWithType.vb: UnitMath.ExpectedHit(BasicDamageData, Single, Boolean, Boolean)
+  fullName.vb: TDMaker.Editor.UnitMath.ExpectedHit(TDMaker.Unity.Authoring.BasicDamageData, Single, Boolean, Boolean)
+  name.vb: ExpectedHit(BasicDamageData, Single, Boolean, Boolean)
+- uid: TDMaker.Editor.UnitMath.HitsToKill(System.Single,System.Double)
+  commentId: M:TDMaker.Editor.UnitMath.HitsToKill(System.Single,System.Double)
+  id: HitsToKill(System.Single,System.Double)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: HitsToKill(float, double)
+  nameWithType: UnitMath.HitsToKill(float, double)
+  fullName: TDMaker.Editor.UnitMath.HitsToKill(float, double)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Hits needed to remove <code class="paramref">health</code> with a fixed per-hit amount; infinite when hits do nothing.
+  example: []
+  syntax:
+    content: public static double HitsToKill(float health, double perHit)
+    parameters:
+    - id: health
+      type: System.Single
+    - id: perHit
+      type: System.Double
+    return:
+      type: System.Double
+    content.vb: Public Shared Function HitsToKill(health As Single, perHit As Double) As Double
+  overload: TDMaker.Editor.UnitMath.HitsToKill*
+  nameWithType.vb: UnitMath.HitsToKill(Single, Double)
+  fullName.vb: TDMaker.Editor.UnitMath.HitsToKill(Single, Double)
+  name.vb: HitsToKill(Single, Double)
+- uid: TDMaker.Editor.UnitMath.EffectiveHealth(System.Single,System.Single)
+  commentId: M:TDMaker.Editor.UnitMath.EffectiveHealth(System.Single,System.Single)
+  id: EffectiveHealth(System.Single,System.Single)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: EffectiveHealth(float, float)
+  nameWithType: UnitMath.EffectiveHealth(float, float)
+  fullName: TDMaker.Editor.UnitMath.EffectiveHealth(float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Effective health against a damage kind: health / (1 − reduction), infinite at full reduction.'
+  example: []
+  syntax:
+    content: public static double EffectiveHealth(float health, float reduction)
+    parameters:
+    - id: health
+      type: System.Single
+    - id: reduction
+      type: System.Single
+    return:
+      type: System.Double
+    content.vb: Public Shared Function EffectiveHealth(health As Single, reduction As Single) As Double
+  overload: TDMaker.Editor.UnitMath.EffectiveHealth*
+  nameWithType.vb: UnitMath.EffectiveHealth(Single, Single)
+  fullName.vb: TDMaker.Editor.UnitMath.EffectiveHealth(Single, Single)
+  name.vb: EffectiveHealth(Single, Single)
+- uid: TDMaker.Editor.UnitMath.Defenses(TDMaker.Unity.Authoring.EntityAssetBase,System.Single@,System.Single@,System.Single@)
+  commentId: M:TDMaker.Editor.UnitMath.Defenses(TDMaker.Unity.Authoring.EntityAssetBase,System.Single@,System.Single@,System.Single@)
+  id: Defenses(TDMaker.Unity.Authoring.EntityAssetBase,System.Single@,System.Single@,System.Single@)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: Defenses(EntityAssetBase, out float, out float, out float)
+  nameWithType: UnitMath.Defenses(EntityAssetBase, out float, out float, out float)
+  fullName: TDMaker.Editor.UnitMath.Defenses(TDMaker.Unity.Authoring.EntityAssetBase, out float, out float, out float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Defenses of an enemy, soldier or hero asset (zero for other types).
+  example: []
+  syntax:
+    content: public static void Defenses(EntityAssetBase unit, out float physical, out float magical, out float poison)
+    parameters:
+    - id: unit
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    - id: physical
+      type: System.Single
+    - id: magical
+      type: System.Single
+    - id: poison
+      type: System.Single
+    content.vb: Public Shared Sub Defenses(unit As EntityAssetBase, physical As Single, magical As Single, poison As Single)
+  overload: TDMaker.Editor.UnitMath.Defenses*
+  nameWithType.vb: UnitMath.Defenses(EntityAssetBase, Single, Single, Single)
+  fullName.vb: TDMaker.Editor.UnitMath.Defenses(TDMaker.Unity.Authoring.EntityAssetBase, Single, Single, Single)
+  name.vb: Defenses(EntityAssetBase, Single, Single, Single)
+- uid: TDMaker.Editor.UnitMath.Health(TDMaker.Unity.Authoring.EntityAssetBase)
+  commentId: M:TDMaker.Editor.UnitMath.Health(TDMaker.Unity.Authoring.EntityAssetBase)
+  id: Health(TDMaker.Unity.Authoring.EntityAssetBase)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: Health(EntityAssetBase)
+  nameWithType: UnitMath.Health(EntityAssetBase)
+  fullName: TDMaker.Editor.UnitMath.Health(TDMaker.Unity.Authoring.EntityAssetBase)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Maximum health of a unit asset (zero for other types).
+  example: []
+  syntax:
+    content: public static float Health(EntityAssetBase unit)
+    parameters:
+    - id: unit
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    return:
+      type: System.Single
+    content.vb: Public Shared Function Health(unit As EntityAssetBase) As Single
+  overload: TDMaker.Editor.UnitMath.Health*
+- uid: TDMaker.Editor.UnitMath.Kill(TDMaker.Unity.Authoring.TowerAsset,TDMaker.Unity.Authoring.EnemyAsset,System.Int32)
+  commentId: M:TDMaker.Editor.UnitMath.Kill(TDMaker.Unity.Authoring.TowerAsset,TDMaker.Unity.Authoring.EnemyAsset,System.Int32)
+  id: Kill(TDMaker.Unity.Authoring.TowerAsset,TDMaker.Unity.Authoring.EnemyAsset,System.Int32)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: Kill(TowerAsset, EnemyAsset, int)
+  nameWithType: UnitMath.Kill(TowerAsset, EnemyAsset, int)
+  fullName: TDMaker.Editor.UnitMath.Kill(TDMaker.Unity.Authoring.TowerAsset, TDMaker.Unity.Authoring.EnemyAsset, int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Expected time and hits for <code class="paramref">tower</code> to kill <code class="paramref">enemy</code>.
+  example: []
+  syntax:
+    content: public static UnitMath.KillEstimate Kill(TowerAsset tower, EnemyAsset enemy, int tier = 1)
+    parameters:
+    - id: tower
+      type: TDMaker.Unity.Authoring.TowerAsset
+    - id: enemy
+      type: TDMaker.Unity.Authoring.EnemyAsset
+    - id: tier
+      type: System.Int32
+    return:
+      type: TDMaker.Editor.UnitMath.KillEstimate
+    content.vb: Public Shared Function Kill(tower As TowerAsset, enemy As EnemyAsset, tier As Integer = 1) As UnitMath.KillEstimate
+  overload: TDMaker.Editor.UnitMath.Kill*
+  nameWithType.vb: UnitMath.Kill(TowerAsset, EnemyAsset, Integer)
+  fullName.vb: TDMaker.Editor.UnitMath.Kill(TDMaker.Unity.Authoring.TowerAsset, TDMaker.Unity.Authoring.EnemyAsset, Integer)
+  name.vb: Kill(TowerAsset, EnemyAsset, Integer)
+- uid: TDMaker.Editor.UnitMath.TowerTiers(System.Collections.Generic.List{TDMaker.Unity.Authoring.TowerAsset})
+  commentId: M:TDMaker.Editor.UnitMath.TowerTiers(System.Collections.Generic.List{TDMaker.Unity.Authoring.TowerAsset})
+  id: TowerTiers(System.Collections.Generic.List{TDMaker.Unity.Authoring.TowerAsset})
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: TowerTiers(List<TowerAsset>)
+  nameWithType: UnitMath.TowerTiers(List<TowerAsset>)
+  fullName: TDMaker.Editor.UnitMath.TowerTiers(System.Collections.Generic.List<TDMaker.Unity.Authoring.TowerAsset>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Every tower tier in the project ordered by tree (root name) and depth.
+  example: []
+  syntax:
+    content: public static List<KeyValuePair<TowerAsset, int>> TowerTiers(List<TowerAsset> all = null)
+    parameters:
+    - id: all
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.TowerAsset}
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{TDMaker.Unity.Authoring.TowerAsset,System.Int32}}
+    content.vb: Public Shared Function TowerTiers(all As List(Of TowerAsset) = Nothing) As List(Of KeyValuePair(Of TowerAsset,
+      Integer))
+  overload: TDMaker.Editor.UnitMath.TowerTiers*
+  nameWithType.vb: UnitMath.TowerTiers(List(Of TowerAsset))
+  fullName.vb: TDMaker.Editor.UnitMath.TowerTiers(System.Collections.Generic.List(Of TDMaker.Unity.Authoring.TowerAsset))
+  name.vb: TowerTiers(List(Of TowerAsset))
+- uid: TDMaker.Editor.UnitMath.BountyDensity(TDMaker.Unity.Authoring.EnemyAsset)
+  commentId: M:TDMaker.Editor.UnitMath.BountyDensity(TDMaker.Unity.Authoring.EnemyAsset)
+  id: BountyDensity(TDMaker.Unity.Authoring.EnemyAsset)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: BountyDensity(EnemyAsset)
+  nameWithType: UnitMath.BountyDensity(EnemyAsset)
+  fullName: TDMaker.Editor.UnitMath.BountyDensity(TDMaker.Unity.Authoring.EnemyAsset)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Gold per health point; the reference is the project's median over enemies (or this enemy alone).
+  example: []
+  syntax:
+    content: public static float BountyDensity(EnemyAsset enemy)
+    parameters:
+    - id: enemy
+      type: TDMaker.Unity.Authoring.EnemyAsset
+    return:
+      type: System.Single
+    content.vb: Public Shared Function BountyDensity(enemy As EnemyAsset) As Single
+  overload: TDMaker.Editor.UnitMath.BountyDensity*
+- uid: TDMaker.Editor.UnitMath.MedianBountyDensity(System.Collections.Generic.List{TDMaker.Unity.Authoring.EnemyAsset})
+  commentId: M:TDMaker.Editor.UnitMath.MedianBountyDensity(System.Collections.Generic.List{TDMaker.Unity.Authoring.EnemyAsset})
+  id: MedianBountyDensity(System.Collections.Generic.List{TDMaker.Unity.Authoring.EnemyAsset})
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: MedianBountyDensity(List<EnemyAsset>)
+  nameWithType: UnitMath.MedianBountyDensity(List<EnemyAsset>)
+  fullName: TDMaker.Editor.UnitMath.MedianBountyDensity(System.Collections.Generic.List<TDMaker.Unity.Authoring.EnemyAsset>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Median bounty density of the given enemies (zero when there are none).
+  example: []
+  syntax:
+    content: public static float MedianBountyDensity(List<EnemyAsset> enemies)
+    parameters:
+    - id: enemies
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.EnemyAsset}
+    return:
+      type: System.Single
+    content.vb: Public Shared Function MedianBountyDensity(enemies As List(Of EnemyAsset)) As Single
+  overload: TDMaker.Editor.UnitMath.MedianBountyDensity*
+  nameWithType.vb: UnitMath.MedianBountyDensity(List(Of EnemyAsset))
+  fullName.vb: TDMaker.Editor.UnitMath.MedianBountyDensity(System.Collections.Generic.List(Of TDMaker.Unity.Authoring.EnemyAsset))
+  name.vb: MedianBountyDensity(List(Of EnemyAsset))
+- uid: TDMaker.Editor.UnitMath.Dps(TDMaker.Unity.Authoring.MeleeData,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},System.Single,System.Single,System.Single,System.Single,System.Boolean)
+  commentId: M:TDMaker.Editor.UnitMath.Dps(TDMaker.Unity.Authoring.MeleeData,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},System.Single,System.Single,System.Single,System.Single,System.Boolean)
+  id: Dps(TDMaker.Unity.Authoring.MeleeData,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},System.Single,System.Single,System.Single,System.Single,System.Boolean)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: Dps(MeleeData, List<RangedAttackData>, float, float, float, float, bool)
+  nameWithType: UnitMath.Dps(MeleeData, List<RangedAttackData>, float, float, float, float, bool)
+  fullName: TDMaker.Editor.UnitMath.Dps(TDMaker.Unity.Authoring.MeleeData, System.Collections.Generic.List<TDMaker.Unity.Authoring.RangedAttackData>,
+    float, float, float, float, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Expected damage per second of a melee attack and ranged channels against a target with the given defenses.
+  example: []
+  syntax:
+    content: public static double Dps(MeleeData melee, List<RangedAttackData> ranged, float scale, float physical, float magical,
+      float poison, bool friendlyTarget = false)
+    parameters:
+    - id: melee
+      type: TDMaker.Unity.Authoring.MeleeData
+    - id: ranged
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData}
+    - id: scale
+      type: System.Single
+    - id: physical
+      type: System.Single
+    - id: magical
+      type: System.Single
+    - id: poison
+      type: System.Single
+    - id: friendlyTarget
+      type: System.Boolean
+    return:
+      type: System.Double
+    content.vb: Public Shared Function Dps(melee As MeleeData, ranged As List(Of RangedAttackData), scale As Single, physical
+      As Single, magical As Single, poison As Single, friendlyTarget As Boolean = False) As Double
+  overload: TDMaker.Editor.UnitMath.Dps*
+  nameWithType.vb: UnitMath.Dps(MeleeData, List(Of RangedAttackData), Single, Single, Single, Single, Boolean)
+  fullName.vb: TDMaker.Editor.UnitMath.Dps(TDMaker.Unity.Authoring.MeleeData, System.Collections.Generic.List(Of TDMaker.Unity.Authoring.RangedAttackData),
+    Single, Single, Single, Single, Boolean)
+  name.vb: Dps(MeleeData, List(Of RangedAttackData), Single, Single, Single, Single, Boolean)
+- uid: TDMaker.Editor.UnitMath.HeroRows(TDMaker.Unity.Authoring.HeroAsset)
+  commentId: M:TDMaker.Editor.UnitMath.HeroRows(TDMaker.Unity.Authoring.HeroAsset)
+  id: HeroRows(TDMaker.Unity.Authoring.HeroAsset)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: HeroRows(HeroAsset)
+  nameWithType: UnitMath.HeroRows(HeroAsset)
+  fullName: TDMaker.Editor.UnitMath.HeroRows(TDMaker.Unity.Authoring.HeroAsset)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Hero growth rows with the bake's threshold and point rules.
+  example: []
+  syntax:
+    content: public static List<UnitMath.HeroRow> HeroRows(HeroAsset hero)
+    parameters:
+    - id: hero
+      type: TDMaker.Unity.Authoring.HeroAsset
+    return:
+      type: System.Collections.Generic.List{TDMaker.Editor.UnitMath.HeroRow}
+    content.vb: Public Shared Function HeroRows(hero As HeroAsset) As List(Of UnitMath.HeroRow)
+  overload: TDMaker.Editor.UnitMath.HeroRows*
+- uid: TDMaker.Editor.UnitMath.Outliers(TDMaker.Unity.Authoring.EntityAssetBase,System.Single)
+  commentId: M:TDMaker.Editor.UnitMath.Outliers(TDMaker.Unity.Authoring.EntityAssetBase,System.Single)
+  id: Outliers(TDMaker.Unity.Authoring.EntityAssetBase,System.Single)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: Outliers(EntityAssetBase, float)
+  nameWithType: UnitMath.Outliers(EntityAssetBase, float)
+  fullName: TDMaker.Editor.UnitMath.Outliers(TDMaker.Unity.Authoring.EntityAssetBase, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Ratio checks for a unit (balance-note bands; product starting points, not rules).
+  example: []
+  syntax:
+    content: public static List<UnitMath.Outlier> Outliers(EntityAssetBase unit, float referenceBountyDensity)
+    parameters:
+    - id: unit
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    - id: referenceBountyDensity
+      type: System.Single
+    return:
+      type: System.Collections.Generic.List{TDMaker.Editor.UnitMath.Outlier}
+    content.vb: Public Shared Function Outliers(unit As EntityAssetBase, referenceBountyDensity As Single) As List(Of UnitMath.Outlier)
+  overload: TDMaker.Editor.UnitMath.Outliers*
+  nameWithType.vb: UnitMath.Outliers(EntityAssetBase, Single)
+  fullName.vb: TDMaker.Editor.UnitMath.Outliers(TDMaker.Unity.Authoring.EntityAssetBase, Single)
+  name.vb: Outliers(EntityAssetBase, Single)
+- uid: TDMaker.Editor.UnitMath.EngagementSlot(System.Int32,UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Boolean)
+  commentId: M:TDMaker.Editor.UnitMath.EngagementSlot(System.Int32,UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Boolean)
+  id: EngagementSlot(System.Int32,UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Boolean)
+  parent: TDMaker.Editor.UnitMath
+  langs:
+  - csharp
+  - vb
+  name: EngagementSlot(int, Vector2, Vector2, float, bool)
+  nameWithType: UnitMath.EngagementSlot(int, Vector2, Vector2, float, bool)
+  fullName: TDMaker.Editor.UnitMath.EngagementSlot(int, UnityEngine.Vector2, UnityEngine.Vector2, float, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Engagement slot offset of a rank (1-based) relative to the enemy: <code>(s × (D + h × u), Y + h × v)</code>.'
+  example: []
+  syntax:
+    content: public static Vector2 EngagementSlot(int rank, Vector2 hostBias, Vector2 guestBias, float rowSpacing, bool movingRight)
+    parameters:
+    - id: rank
+      type: System.Int32
+    - id: hostBias
+      type: UnityEngine.Vector2
+    - id: guestBias
+      type: UnityEngine.Vector2
+    - id: rowSpacing
+      type: System.Single
+    - id: movingRight
+      type: System.Boolean
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Function EngagementSlot(rank As Integer, hostBias As Vector2, guestBias As Vector2, rowSpacing
+      As Single, movingRight As Boolean) As Vector2
+  overload: TDMaker.Editor.UnitMath.EngagementSlot*
+  nameWithType.vb: UnitMath.EngagementSlot(Integer, Vector2, Vector2, Single, Boolean)
+  fullName.vb: TDMaker.Editor.UnitMath.EngagementSlot(Integer, UnityEngine.Vector2, UnityEngine.Vector2, Single, Boolean)
+  name.vb: EngagementSlot(Integer, Vector2, Vector2, Single, Boolean)
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.DamageKind[]
+  isExternal: true
+  name: DamageKind[]
+  nameWithType: DamageKind[]
+  fullName: TDMaker.Core.Defs.DamageKind[]
+  nameWithType.vb: DamageKind()
+  fullName.vb: TDMaker.Core.Defs.DamageKind()
+  name.vb: DamageKind()
+  spec.csharp:
+  - uid: TDMaker.Core.Defs.DamageKind
+    name: DamageKind
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Defs.DamageKind
+    name: DamageKind
+    isExternal: true
+  - name: (
+  - name: )
+- uid: TDMaker.Editor.UnitMath.Reduction*
+  commentId: Overload:TDMaker.Editor.UnitMath.Reduction
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_Reduction_TDMaker_Core_Defs_DamageKind_System_Single_System_Single_System_Single_System_Single_System_Single_
+  name: Reduction
+  nameWithType: UnitMath.Reduction
+  fullName: TDMaker.Editor.UnitMath.Reduction
+- uid: TDMaker.Core.Defs.DamageKind
+  commentId: T:TDMaker.Core.Defs.DamageKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageKind.html
+  name: DamageKind
+  nameWithType: DamageKind
+  fullName: TDMaker.Core.Defs.DamageKind
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Editor.UnitMath.HitDamage*
+  commentId: Overload:TDMaker.Editor.UnitMath.HitDamage
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_HitDamage_System_Single_System_Single_System_Boolean_
+  name: HitDamage
+  nameWithType: UnitMath.HitDamage
+  fullName: TDMaker.Editor.UnitMath.HitDamage
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.UnitMath.ExpectedHit*
+  commentId: Overload:TDMaker.Editor.UnitMath.ExpectedHit
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_ExpectedHit_TDMaker_Unity_Authoring_BasicDamageData_System_Single_System_Boolean_System_Boolean_
+  name: ExpectedHit
+  nameWithType: UnitMath.ExpectedHit
+  fullName: TDMaker.Editor.UnitMath.ExpectedHit
+- uid: TDMaker.Unity.Authoring.BasicDamageData
+  commentId: T:TDMaker.Unity.Authoring.BasicDamageData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BasicDamageData.html
+  name: BasicDamageData
+  nameWithType: BasicDamageData
+  fullName: TDMaker.Unity.Authoring.BasicDamageData
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Editor.UnitMath.HitsToKill*
+  commentId: Overload:TDMaker.Editor.UnitMath.HitsToKill
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_HitsToKill_System_Single_System_Double_
+  name: HitsToKill
+  nameWithType: UnitMath.HitsToKill
+  fullName: TDMaker.Editor.UnitMath.HitsToKill
+- uid: TDMaker.Editor.UnitMath.EffectiveHealth*
+  commentId: Overload:TDMaker.Editor.UnitMath.EffectiveHealth
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_EffectiveHealth_System_Single_System_Single_
+  name: EffectiveHealth
+  nameWithType: UnitMath.EffectiveHealth
+  fullName: TDMaker.Editor.UnitMath.EffectiveHealth
+- uid: TDMaker.Editor.UnitMath.Defenses*
+  commentId: Overload:TDMaker.Editor.UnitMath.Defenses
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_Defenses_TDMaker_Unity_Authoring_EntityAssetBase_System_Single__System_Single__System_Single__
+  name: Defenses
+  nameWithType: UnitMath.Defenses
+  fullName: TDMaker.Editor.UnitMath.Defenses
+- uid: TDMaker.Unity.Authoring.EntityAssetBase
+  commentId: T:TDMaker.Unity.Authoring.EntityAssetBase
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EntityAssetBase.html
+  name: EntityAssetBase
+  nameWithType: EntityAssetBase
+  fullName: TDMaker.Unity.Authoring.EntityAssetBase
+- uid: TDMaker.Editor.UnitMath.Health*
+  commentId: Overload:TDMaker.Editor.UnitMath.Health
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_Health_TDMaker_Unity_Authoring_EntityAssetBase_
+  name: Health
+  nameWithType: UnitMath.Health
+  fullName: TDMaker.Editor.UnitMath.Health
+- uid: TDMaker.Editor.UnitMath.Kill*
+  commentId: Overload:TDMaker.Editor.UnitMath.Kill
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_Kill_TDMaker_Unity_Authoring_TowerAsset_TDMaker_Unity_Authoring_EnemyAsset_System_Int32_
+  name: Kill
+  nameWithType: UnitMath.Kill
+  fullName: TDMaker.Editor.UnitMath.Kill
+- uid: TDMaker.Unity.Authoring.TowerAsset
+  commentId: T:TDMaker.Unity.Authoring.TowerAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TowerAsset.html
+  name: TowerAsset
+  nameWithType: TowerAsset
+  fullName: TDMaker.Unity.Authoring.TowerAsset
+- uid: TDMaker.Unity.Authoring.EnemyAsset
+  commentId: T:TDMaker.Unity.Authoring.EnemyAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EnemyAsset.html
+  name: EnemyAsset
+  nameWithType: EnemyAsset
+  fullName: TDMaker.Unity.Authoring.EnemyAsset
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Editor.UnitMath.KillEstimate
+  commentId: T:TDMaker.Editor.UnitMath.KillEstimate
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html
+  name: UnitMath.KillEstimate
+  nameWithType: UnitMath.KillEstimate
+  fullName: TDMaker.Editor.UnitMath.KillEstimate
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitMath
+    name: UnitMath
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.html
+  - name: .
+  - uid: TDMaker.Editor.UnitMath.KillEstimate
+    name: KillEstimate
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.KillEstimate.html
+  spec.vb:
+  - uid: TDMaker.Editor.UnitMath
+    name: UnitMath
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.html
+  - name: .
+  - uid: TDMaker.Editor.UnitMath.KillEstimate
+    name: KillEstimate
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.KillEstimate.html
+- uid: TDMaker.Editor.UnitMath.TowerTiers*
+  commentId: Overload:TDMaker.Editor.UnitMath.TowerTiers
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_TowerTiers_System_Collections_Generic_List_TDMaker_Unity_Authoring_TowerAsset__
+  name: TowerTiers
+  nameWithType: UnitMath.TowerTiers
+  fullName: TDMaker.Editor.UnitMath.TowerTiers
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.TowerAsset}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.TowerAsset}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<TowerAsset>
+  nameWithType: List<TowerAsset>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.TowerAsset>
+  nameWithType.vb: List(Of TowerAsset)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.TowerAsset)
+  name.vb: List(Of TowerAsset)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.TowerAsset
+    name: TowerAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.TowerAsset.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.TowerAsset
+    name: TowerAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.TowerAsset.html
+  - name: )
+- uid: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{TDMaker.Unity.Authoring.TowerAsset,System.Int32}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{TDMaker.Unity.Authoring.TowerAsset,System.Int32}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<KeyValuePair<TowerAsset, int>>
+  nameWithType: List<KeyValuePair<TowerAsset, int>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<TDMaker.Unity.Authoring.TowerAsset, int>>
+  nameWithType.vb: List(Of KeyValuePair(Of TowerAsset, Integer))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.KeyValuePair(Of TDMaker.Unity.Authoring.TowerAsset,
+    Integer))
+  name.vb: List(Of KeyValuePair(Of TowerAsset, Integer))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - uid: TDMaker.Unity.Authoring.TowerAsset
+    name: TowerAsset
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.TowerAsset
+    name: TowerAsset
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Editor.UnitMath.BountyDensity*
+  commentId: Overload:TDMaker.Editor.UnitMath.BountyDensity
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_BountyDensity_TDMaker_Unity_Authoring_EnemyAsset_
+  name: BountyDensity
+  nameWithType: UnitMath.BountyDensity
+  fullName: TDMaker.Editor.UnitMath.BountyDensity
+- uid: TDMaker.Editor.UnitMath.MedianBountyDensity*
+  commentId: Overload:TDMaker.Editor.UnitMath.MedianBountyDensity
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_MedianBountyDensity_System_Collections_Generic_List_TDMaker_Unity_Authoring_EnemyAsset__
+  name: MedianBountyDensity
+  nameWithType: UnitMath.MedianBountyDensity
+  fullName: TDMaker.Editor.UnitMath.MedianBountyDensity
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.EnemyAsset}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.EnemyAsset}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EnemyAsset>
+  nameWithType: List<EnemyAsset>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.EnemyAsset>
+  nameWithType.vb: List(Of EnemyAsset)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.EnemyAsset)
+  name.vb: List(Of EnemyAsset)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.EnemyAsset
+    name: EnemyAsset
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.EnemyAsset
+    name: EnemyAsset
+    isExternal: true
+  - name: )
+- uid: TDMaker.Editor.UnitMath.Dps*
+  commentId: Overload:TDMaker.Editor.UnitMath.Dps
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_Dps_TDMaker_Unity_Authoring_MeleeData_System_Collections_Generic_List_TDMaker_Unity_Authoring_RangedAttackData__System_Single_System_Single_System_Single_System_Single_System_Boolean_
+  name: Dps
+  nameWithType: UnitMath.Dps
+  fullName: TDMaker.Editor.UnitMath.Dps
+- uid: TDMaker.Unity.Authoring.MeleeData
+  commentId: T:TDMaker.Unity.Authoring.MeleeData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MeleeData.html
+  name: MeleeData
+  nameWithType: MeleeData
+  fullName: TDMaker.Unity.Authoring.MeleeData
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<RangedAttackData>
+  nameWithType: List<RangedAttackData>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.RangedAttackData>
+  nameWithType.vb: List(Of RangedAttackData)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.RangedAttackData)
+  name.vb: List(Of RangedAttackData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.RangedAttackData
+    name: RangedAttackData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.RangedAttackData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.RangedAttackData
+    name: RangedAttackData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.RangedAttackData.html
+  - name: )
+- uid: TDMaker.Editor.UnitMath.HeroRows*
+  commentId: Overload:TDMaker.Editor.UnitMath.HeroRows
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_HeroRows_TDMaker_Unity_Authoring_HeroAsset_
+  name: HeroRows
+  nameWithType: UnitMath.HeroRows
+  fullName: TDMaker.Editor.UnitMath.HeroRows
+- uid: TDMaker.Unity.Authoring.HeroAsset
+  commentId: T:TDMaker.Unity.Authoring.HeroAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.HeroAsset.html
+  name: HeroAsset
+  nameWithType: HeroAsset
+  fullName: TDMaker.Unity.Authoring.HeroAsset
+- uid: System.Collections.Generic.List{TDMaker.Editor.UnitMath.HeroRow}
+  commentId: T:System.Collections.Generic.List{TDMaker.Editor.UnitMath.HeroRow}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<UnitMath.HeroRow>
+  nameWithType: List<UnitMath.HeroRow>
+  fullName: System.Collections.Generic.List<TDMaker.Editor.UnitMath.HeroRow>
+  nameWithType.vb: List(Of UnitMath.HeroRow)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Editor.UnitMath.HeroRow)
+  name.vb: List(Of UnitMath.HeroRow)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Editor.UnitMath
+    name: UnitMath
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.html
+  - name: .
+  - uid: TDMaker.Editor.UnitMath.HeroRow
+    name: HeroRow
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.HeroRow.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Editor.UnitMath
+    name: UnitMath
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.html
+  - name: .
+  - uid: TDMaker.Editor.UnitMath.HeroRow
+    name: HeroRow
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.HeroRow.html
+  - name: )
+- uid: TDMaker.Editor.UnitMath.Outliers*
+  commentId: Overload:TDMaker.Editor.UnitMath.Outliers
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_Outliers_TDMaker_Unity_Authoring_EntityAssetBase_System_Single_
+  name: Outliers
+  nameWithType: UnitMath.Outliers
+  fullName: TDMaker.Editor.UnitMath.Outliers
+- uid: System.Collections.Generic.List{TDMaker.Editor.UnitMath.Outlier}
+  commentId: T:System.Collections.Generic.List{TDMaker.Editor.UnitMath.Outlier}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<UnitMath.Outlier>
+  nameWithType: List<UnitMath.Outlier>
+  fullName: System.Collections.Generic.List<TDMaker.Editor.UnitMath.Outlier>
+  nameWithType.vb: List(Of UnitMath.Outlier)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Editor.UnitMath.Outlier)
+  name.vb: List(Of UnitMath.Outlier)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Editor.UnitMath
+    name: UnitMath
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.html
+  - name: .
+  - uid: TDMaker.Editor.UnitMath.Outlier
+    name: Outlier
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.Outlier.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Editor.UnitMath
+    name: UnitMath
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.html
+  - name: .
+  - uid: TDMaker.Editor.UnitMath.Outlier
+    name: Outlier
+    isExternal: true
+    href: TDMaker.Editor.UnitMath.Outlier.html
+  - name: )
+- uid: TDMaker.Editor.UnitMath.EngagementSlot*
+  commentId: Overload:TDMaker.Editor.UnitMath.EngagementSlot
+  isExternal: true
+  href: TDMaker.Editor.UnitMath.html#TDMaker_Editor_UnitMath_EngagementSlot_System_Int32_UnityEngine_Vector2_UnityEngine_Vector2_System_Single_System_Boolean_
+  name: EngagementSlot
+  nameWithType: UnitMath.EngagementSlot
+  fullName: TDMaker.Editor.UnitMath.EngagementSlot
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

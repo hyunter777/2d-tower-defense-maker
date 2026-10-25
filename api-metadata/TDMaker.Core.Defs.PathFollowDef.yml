@@ -1,0 +1,398 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.PathFollowDef
+  commentId: T:TDMaker.Core.Defs.PathFollowDef
+  id: PathFollowDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.PathFollowDef.#ctor(System.Boolean,System.Int32)
+  - TDMaker.Core.Defs.PathFollowDef.Blockable
+  - TDMaker.Core.Defs.PathFollowDef.BlockerCapacity
+  langs:
+  - csharp
+  - vb
+  name: PathFollowDef
+  nameWithType: PathFollowDef
+  fullName: TDMaker.Core.Defs.PathFollowDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Path-following configuration.
+  example: []
+  syntax:
+    content: public sealed class PathFollowDef
+    content.vb: Public NotInheritable Class PathFollowDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.PathFollowDef.#ctor(System.Boolean,System.Int32)
+  commentId: M:TDMaker.Core.Defs.PathFollowDef.#ctor(System.Boolean,System.Int32)
+  id: '#ctor(System.Boolean,System.Int32)'
+  parent: TDMaker.Core.Defs.PathFollowDef
+  langs:
+  - csharp
+  - vb
+  name: PathFollowDef(bool, int)
+  nameWithType: PathFollowDef.PathFollowDef(bool, int)
+  fullName: TDMaker.Core.Defs.PathFollowDef.PathFollowDef(bool, int)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates path-following data.
+  example: []
+  syntax:
+    content: public PathFollowDef(bool blockable = true, int blockerCapacity = 1)
+    parameters:
+    - id: blockable
+      type: System.Boolean
+    - id: blockerCapacity
+      type: System.Int32
+    content.vb: Public Sub New(blockable As Boolean = True, blockerCapacity As Integer = 1)
+  overload: TDMaker.Core.Defs.PathFollowDef.#ctor*
+  nameWithType.vb: PathFollowDef.New(Boolean, Integer)
+  fullName.vb: TDMaker.Core.Defs.PathFollowDef.New(Boolean, Integer)
+  name.vb: New(Boolean, Integer)
+- uid: TDMaker.Core.Defs.PathFollowDef.Blockable
+  commentId: P:TDMaker.Core.Defs.PathFollowDef.Blockable
+  id: Blockable
+  parent: TDMaker.Core.Defs.PathFollowDef
+  langs:
+  - csharp
+  - vb
+  name: Blockable
+  nameWithType: PathFollowDef.Blockable
+  fullName: TDMaker.Core.Defs.PathFollowDef.Blockable
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Whether soldiers may block this unit.
+  example: []
+  syntax:
+    content: public bool Blockable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Blockable As Boolean
+  overload: TDMaker.Core.Defs.PathFollowDef.Blockable*
+- uid: TDMaker.Core.Defs.PathFollowDef.BlockerCapacity
+  commentId: P:TDMaker.Core.Defs.PathFollowDef.BlockerCapacity
+  id: BlockerCapacity
+  parent: TDMaker.Core.Defs.PathFollowDef
+  langs:
+  - csharp
+  - vb
+  name: BlockerCapacity
+  nameWithType: PathFollowDef.BlockerCapacity
+  fullName: TDMaker.Core.Defs.PathFollowDef.BlockerCapacity
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum simultaneous blocking soldiers, chosen by content authors.
+  example: []
+  syntax:
+    content: public int BlockerCapacity { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property BlockerCapacity As Integer
+  overload: TDMaker.Core.Defs.PathFollowDef.BlockerCapacity*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.PathFollowDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.PathFollowDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.PathFollowDef.html#TDMaker_Core_Defs_PathFollowDef__ctor_System_Boolean_System_Int32_
+  name: PathFollowDef
+  nameWithType: PathFollowDef.PathFollowDef
+  fullName: TDMaker.Core.Defs.PathFollowDef.PathFollowDef
+  nameWithType.vb: PathFollowDef.New
+  fullName.vb: TDMaker.Core.Defs.PathFollowDef.New
+  name.vb: New
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.PathFollowDef.Blockable*
+  commentId: Overload:TDMaker.Core.Defs.PathFollowDef.Blockable
+  isExternal: true
+  href: TDMaker.Core.Defs.PathFollowDef.html#TDMaker_Core_Defs_PathFollowDef_Blockable
+  name: Blockable
+  nameWithType: PathFollowDef.Blockable
+  fullName: TDMaker.Core.Defs.PathFollowDef.Blockable
+- uid: TDMaker.Core.Defs.PathFollowDef.BlockerCapacity*
+  commentId: Overload:TDMaker.Core.Defs.PathFollowDef.BlockerCapacity
+  isExternal: true
+  href: TDMaker.Core.Defs.PathFollowDef.html#TDMaker_Core_Defs_PathFollowDef_BlockerCapacity
+  name: BlockerCapacity
+  nameWithType: PathFollowDef.BlockerCapacity
+  fullName: TDMaker.Core.Defs.PathFollowDef.BlockerCapacity

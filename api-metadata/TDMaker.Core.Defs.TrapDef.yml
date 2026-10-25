@@ -1,0 +1,1043 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.TrapDef
+  commentId: T:TDMaker.Core.Defs.TrapDef
+  id: TrapDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.TrapDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Single,System.Single,System.Single,System.Int32,System.Single,System.Int32,TDMaker.Core.Defs.AreaEffectDef,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.TrapPlacement,System.Single,TDMaker.Core.Vec2)
+  - TDMaker.Core.Defs.TrapDef.Area
+  - TDMaker.Core.Defs.TrapDef.ArmDelay
+  - TDMaker.Core.Defs.TrapDef.CancelWithSource
+  - TDMaker.Core.Defs.TrapDef.Damage
+  - TDMaker.Core.Defs.TrapDef.Id
+  - TDMaker.Core.Defs.TrapDef.Lifetime
+  - TDMaker.Core.Defs.TrapDef.MaxTriggers
+  - TDMaker.Core.Defs.TrapDef.Offset
+  - TDMaker.Core.Defs.TrapDef.Placement
+  - TDMaker.Core.Defs.TrapDef.PlacementRange
+  - TDMaker.Core.Defs.TrapDef.PointRule
+  - TDMaker.Core.Defs.TrapDef.PopulationLimit
+  - TDMaker.Core.Defs.TrapDef.Targets
+  - TDMaker.Core.Defs.TrapDef.TargetsEnemies
+  - TDMaker.Core.Defs.TrapDef.TargetsFlying
+  - TDMaker.Core.Defs.TrapDef.TargetsGround
+  - TDMaker.Core.Defs.TrapDef.TriggerCooldown
+  - TDMaker.Core.Defs.TrapDef.TriggerRadius
+  langs:
+  - csharp
+  - vb
+  name: TrapDef
+  nameWithType: TrapDef
+  fullName: TDMaker.Core.Defs.TrapDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: A fixed-position deployment with separate arming, detection, trigger count and lifetime.
+  example: []
+  syntax:
+    content: 'public sealed class TrapDef : IAbilityAction'
+    content.vb: Public NotInheritable Class TrapDef Implements IAbilityAction
+  inheritance:
+  - System.Object
+  implements:
+  - TDMaker.Core.IAbilityAction
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.TrapDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Single,System.Single,System.Single,System.Int32,System.Single,System.Int32,TDMaker.Core.Defs.AreaEffectDef,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.TrapPlacement,System.Single,TDMaker.Core.Vec2)
+  commentId: M:TDMaker.Core.Defs.TrapDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Single,System.Single,System.Single,System.Int32,System.Single,System.Int32,TDMaker.Core.Defs.AreaEffectDef,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.TrapPlacement,System.Single,TDMaker.Core.Vec2)
+  id: '#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Single,System.Single,System.Single,System.Int32,System.Single,System.Int32,TDMaker.Core.Defs.AreaEffectDef,System.Boolean,System.Boolean,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.TrapPlacement,System.Single,TDMaker.Core.Vec2)'
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: TrapDef(string, DamageDef, float, float, float, int, float, int, AreaEffectDef, bool, bool, bool, MechanicTargetDef,
+    bool, PointRuleDef, TrapPlacement, float, Vec2)
+  nameWithType: TrapDef.TrapDef(string, DamageDef, float, float, float, int, float, int, AreaEffectDef, bool, bool, bool,
+    MechanicTargetDef, bool, PointRuleDef, TrapPlacement, float, Vec2)
+  fullName: TDMaker.Core.Defs.TrapDef.TrapDef(string, TDMaker.Core.Defs.DamageDef, float, float, float, int, float, int, TDMaker.Core.Defs.AreaEffectDef,
+    bool, bool, bool, TDMaker.Core.Defs.MechanicTargetDef, bool, TDMaker.Core.Defs.PointRuleDef, TDMaker.Core.Defs.TrapPlacement,
+    float, TDMaker.Core.Vec2)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a finite data-only deployment. Public PlaceTrap can supply an explicit point instead of automatic placement.
+  example: []
+  syntax:
+    content: public TrapDef(string id, DamageDef damage, float triggerRadius, float lifetime, float armDelay = 0, int maxTriggers
+      = 1, float triggerCooldown = 0, int populationLimit = 0, AreaEffectDef area = null, bool targetsEnemies = true, bool
+      targetsFlying = false, bool targetsGround = true, MechanicTargetDef targets = null, bool cancelWithSource = false, PointRuleDef
+      pointRule = null, TrapPlacement placement = TrapPlacement.Rally, float placementRange = 0, Vec2 offset = default)
+    parameters:
+    - id: id
+      type: System.String
+    - id: damage
+      type: TDMaker.Core.Defs.DamageDef
+    - id: triggerRadius
+      type: System.Single
+    - id: lifetime
+      type: System.Single
+    - id: armDelay
+      type: System.Single
+    - id: maxTriggers
+      type: System.Int32
+    - id: triggerCooldown
+      type: System.Single
+    - id: populationLimit
+      type: System.Int32
+    - id: area
+      type: TDMaker.Core.Defs.AreaEffectDef
+    - id: targetsEnemies
+      type: System.Boolean
+    - id: targetsFlying
+      type: System.Boolean
+    - id: targetsGround
+      type: System.Boolean
+    - id: targets
+      type: TDMaker.Core.Defs.MechanicTargetDef
+    - id: cancelWithSource
+      type: System.Boolean
+    - id: pointRule
+      type: TDMaker.Core.Defs.PointRuleDef
+    - id: placement
+      type: TDMaker.Core.Defs.TrapPlacement
+    - id: placementRange
+      type: System.Single
+    - id: offset
+      type: TDMaker.Core.Vec2
+    content.vb: Public Sub New(id As String, damage As DamageDef, triggerRadius As Single, lifetime As Single, armDelay As
+      Single = 0, maxTriggers As Integer = 1, triggerCooldown As Single = 0, populationLimit As Integer = 0, area As AreaEffectDef
+      = Nothing, targetsEnemies As Boolean = True, targetsFlying As Boolean = False, targetsGround As Boolean = True, targets
+      As MechanicTargetDef = Nothing, cancelWithSource As Boolean = False, pointRule As PointRuleDef = Nothing, placement
+      As TrapPlacement = TrapPlacement.Rally, placementRange As Single = 0, offset As Vec2 = Nothing)
+  overload: TDMaker.Core.Defs.TrapDef.#ctor*
+  nameWithType.vb: TrapDef.New(String, DamageDef, Single, Single, Single, Integer, Single, Integer, AreaEffectDef, Boolean,
+    Boolean, Boolean, MechanicTargetDef, Boolean, PointRuleDef, TrapPlacement, Single, Vec2)
+  fullName.vb: TDMaker.Core.Defs.TrapDef.New(String, TDMaker.Core.Defs.DamageDef, Single, Single, Single, Integer, Single,
+    Integer, TDMaker.Core.Defs.AreaEffectDef, Boolean, Boolean, Boolean, TDMaker.Core.Defs.MechanicTargetDef, Boolean, TDMaker.Core.Defs.PointRuleDef,
+    TDMaker.Core.Defs.TrapPlacement, Single, TDMaker.Core.Vec2)
+  name.vb: New(String, DamageDef, Single, Single, Single, Integer, Single, Integer, AreaEffectDef, Boolean, Boolean, Boolean,
+    MechanicTargetDef, Boolean, PointRuleDef, TrapPlacement, Single, Vec2)
+- uid: TDMaker.Core.Defs.TrapDef.Id
+  commentId: P:TDMaker.Core.Defs.TrapDef.Id
+  id: Id
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: TrapDef.Id
+  fullName: TDMaker.Core.Defs.TrapDef.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Neutral deployment/event identity.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Core.Defs.TrapDef.Id*
+- uid: TDMaker.Core.Defs.TrapDef.Damage
+  commentId: P:TDMaker.Core.Defs.TrapDef.Damage
+  id: Damage
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: Damage
+  nameWithType: TrapDef.Damage
+  fullName: TDMaker.Core.Defs.TrapDef.Damage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Hit payload; area damage is centered on the trap, single damage on the trigger recipient.
+  example: []
+  syntax:
+    content: public DamageDef Damage { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public ReadOnly Property Damage As DamageDef
+  overload: TDMaker.Core.Defs.TrapDef.Damage*
+- uid: TDMaker.Core.Defs.TrapDef.TriggerRadius
+  commentId: P:TDMaker.Core.Defs.TrapDef.TriggerRadius
+  id: TriggerRadius
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: TriggerRadius
+  nameWithType: TrapDef.TriggerRadius
+  fullName: TDMaker.Core.Defs.TrapDef.TriggerRadius
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Horizontal detection radius, independent of damage radius.
+  example: []
+  syntax:
+    content: public float TriggerRadius { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property TriggerRadius As Single
+  overload: TDMaker.Core.Defs.TrapDef.TriggerRadius*
+- uid: TDMaker.Core.Defs.TrapDef.Lifetime
+  commentId: P:TDMaker.Core.Defs.TrapDef.Lifetime
+  id: Lifetime
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: Lifetime
+  nameWithType: TrapDef.Lifetime
+  fullName: TDMaker.Core.Defs.TrapDef.Lifetime
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Total game lifetime, including arming.
+  example: []
+  syntax:
+    content: public float Lifetime { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Lifetime As Single
+  overload: TDMaker.Core.Defs.TrapDef.Lifetime*
+- uid: TDMaker.Core.Defs.TrapDef.ArmDelay
+  commentId: P:TDMaker.Core.Defs.TrapDef.ArmDelay
+  id: ArmDelay
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: ArmDelay
+  nameWithType: TrapDef.ArmDelay
+  fullName: TDMaker.Core.Defs.TrapDef.ArmDelay
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Game delay before detection. New deployments never act in their creation tick.
+  example: []
+  syntax:
+    content: public float ArmDelay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property ArmDelay As Single
+  overload: TDMaker.Core.Defs.TrapDef.ArmDelay*
+- uid: TDMaker.Core.Defs.TrapDef.MaxTriggers
+  commentId: P:TDMaker.Core.Defs.TrapDef.MaxTriggers
+  id: MaxTriggers
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: MaxTriggers
+  nameWithType: TrapDef.MaxTriggers
+  fullName: TDMaker.Core.Defs.TrapDef.MaxTriggers
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum activations before removal.
+  example: []
+  syntax:
+    content: public int MaxTriggers { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxTriggers As Integer
+  overload: TDMaker.Core.Defs.TrapDef.MaxTriggers*
+- uid: TDMaker.Core.Defs.TrapDef.TriggerCooldown
+  commentId: P:TDMaker.Core.Defs.TrapDef.TriggerCooldown
+  id: TriggerCooldown
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: TriggerCooldown
+  nameWithType: TrapDef.TriggerCooldown
+  fullName: TDMaker.Core.Defs.TrapDef.TriggerCooldown
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Delay between activations; zero still permits at most one per fixed tick.
+  example: []
+  syntax:
+    content: public float TriggerCooldown { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property TriggerCooldown As Single
+  overload: TDMaker.Core.Defs.TrapDef.TriggerCooldown*
+- uid: TDMaker.Core.Defs.TrapDef.PopulationLimit
+  commentId: P:TDMaker.Core.Defs.TrapDef.PopulationLimit
+  id: PopulationLimit
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: PopulationLimit
+  nameWithType: TrapDef.PopulationLimit
+  fullName: TDMaker.Core.Defs.TrapDef.PopulationLimit
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum live deployments per source and Id; zero disables this authoring limit.
+  example: []
+  syntax:
+    content: public int PopulationLimit { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PopulationLimit As Integer
+  overload: TDMaker.Core.Defs.TrapDef.PopulationLimit*
+- uid: TDMaker.Core.Defs.TrapDef.Area
+  commentId: P:TDMaker.Core.Defs.TrapDef.Area
+  id: Area
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: TrapDef.Area
+  fullName: TDMaker.Core.Defs.TrapDef.Area
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional region created once per trigger.
+  example: []
+  syntax:
+    content: public AreaEffectDef Area { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.AreaEffectDef
+    content.vb: Public ReadOnly Property Area As AreaEffectDef
+  overload: TDMaker.Core.Defs.TrapDef.Area*
+- uid: TDMaker.Core.Defs.TrapDef.TargetsEnemies
+  commentId: P:TDMaker.Core.Defs.TrapDef.TargetsEnemies
+  id: TargetsEnemies
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: TargetsEnemies
+  nameWithType: TrapDef.TargetsEnemies
+  fullName: TDMaker.Core.Defs.TrapDef.TargetsEnemies
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Global enemy faction rather than friendly soldiers/heroes.
+  example: []
+  syntax:
+    content: public bool TargetsEnemies { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsEnemies As Boolean
+  overload: TDMaker.Core.Defs.TrapDef.TargetsEnemies*
+- uid: TDMaker.Core.Defs.TrapDef.TargetsFlying
+  commentId: P:TDMaker.Core.Defs.TrapDef.TargetsFlying
+  id: TargetsFlying
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: TargetsFlying
+  nameWithType: TrapDef.TargetsFlying
+  fullName: TDMaker.Core.Defs.TrapDef.TargetsFlying
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Allows flying trigger recipients.
+  example: []
+  syntax:
+    content: public bool TargetsFlying { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsFlying As Boolean
+  overload: TDMaker.Core.Defs.TrapDef.TargetsFlying*
+- uid: TDMaker.Core.Defs.TrapDef.TargetsGround
+  commentId: P:TDMaker.Core.Defs.TrapDef.TargetsGround
+  id: TargetsGround
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: TargetsGround
+  nameWithType: TrapDef.TargetsGround
+  fullName: TDMaker.Core.Defs.TrapDef.TargetsGround
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Allows ground trigger recipients.
+  example: []
+  syntax:
+    content: public bool TargetsGround { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsGround As Boolean
+  overload: TDMaker.Core.Defs.TrapDef.TargetsGround*
+- uid: TDMaker.Core.Defs.TrapDef.Targets
+  commentId: P:TDMaker.Core.Defs.TrapDef.Targets
+  id: Targets
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: Targets
+  nameWithType: TrapDef.Targets
+  fullName: TDMaker.Core.Defs.TrapDef.Targets
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Additional trigger eligibility; collateral area victims use their normal damage eligibility.
+  example: []
+  syntax:
+    content: public MechanicTargetDef Targets { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.MechanicTargetDef
+    content.vb: Public ReadOnly Property Targets As MechanicTargetDef
+  overload: TDMaker.Core.Defs.TrapDef.Targets*
+- uid: TDMaker.Core.Defs.TrapDef.CancelWithSource
+  commentId: P:TDMaker.Core.Defs.TrapDef.CancelWithSource
+  id: CancelWithSource
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: CancelWithSource
+  nameWithType: TrapDef.CancelWithSource
+  fullName: TDMaker.Core.Defs.TrapDef.CancelWithSource
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Removes deployments when their source dies or disappears; false preserves captured output and credit.
+  example: []
+  syntax:
+    content: public bool CancelWithSource { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CancelWithSource As Boolean
+  overload: TDMaker.Core.Defs.TrapDef.CancelWithSource*
+- uid: TDMaker.Core.Defs.TrapDef.PointRule
+  commentId: P:TDMaker.Core.Defs.TrapDef.PointRule
+  id: PointRule
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: PointRule
+  nameWithType: TrapDef.PointRule
+  fullName: TDMaker.Core.Defs.TrapDef.PointRule
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Shared placement policy; null selects the standard on-path policy.
+  example: []
+  syntax:
+    content: public PointRuleDef PointRule { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.PointRuleDef
+    content.vb: Public ReadOnly Property PointRule As PointRuleDef
+  overload: TDMaker.Core.Defs.TrapDef.PointRule*
+- uid: TDMaker.Core.Defs.TrapDef.Placement
+  commentId: P:TDMaker.Core.Defs.TrapDef.Placement
+  id: Placement
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: Placement
+  nameWithType: TrapDef.Placement
+  fullName: TDMaker.Core.Defs.TrapDef.Placement
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Automatic ability placement mode.
+  example: []
+  syntax:
+    content: public TrapPlacement Placement { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TrapPlacement
+    content.vb: Public ReadOnly Property Placement As TrapPlacement
+  overload: TDMaker.Core.Defs.TrapDef.Placement*
+- uid: TDMaker.Core.Defs.TrapDef.PlacementRange
+  commentId: P:TDMaker.Core.Defs.TrapDef.PlacementRange
+  id: PlacementRange
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: PlacementRange
+  nameWithType: TrapDef.PlacementRange
+  fullName: TDMaker.Core.Defs.TrapDef.PlacementRange
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Opponent placement search range, affected by attack range modifiers.
+  example: []
+  syntax:
+    content: public float PlacementRange { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property PlacementRange As Single
+  overload: TDMaker.Core.Defs.TrapDef.PlacementRange*
+- uid: TDMaker.Core.Defs.TrapDef.Offset
+  commentId: P:TDMaker.Core.Defs.TrapDef.Offset
+  id: Offset
+  parent: TDMaker.Core.Defs.TrapDef
+  langs:
+  - csharp
+  - vb
+  name: Offset
+  nameWithType: TrapDef.Offset
+  fullName: TDMaker.Core.Defs.TrapDef.Offset
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Offset applied before point validation, in world coordinates.
+  example: []
+  syntax:
+    content: public Vec2 Offset { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property Offset As Vec2
+  overload: TDMaker.Core.Defs.TrapDef.Offset*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TDMaker.Core.IAbilityAction
+  commentId: T:TDMaker.Core.IAbilityAction
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.IAbilityAction.html
+  name: IAbilityAction
+  nameWithType: IAbilityAction
+  fullName: TDMaker.Core.IAbilityAction
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.Defs.TrapDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef__ctor_System_String_TDMaker_Core_Defs_DamageDef_System_Single_System_Single_System_Single_System_Int32_System_Single_System_Int32_TDMaker_Core_Defs_AreaEffectDef_System_Boolean_System_Boolean_System_Boolean_TDMaker_Core_Defs_MechanicTargetDef_System_Boolean_TDMaker_Core_Defs_PointRuleDef_TDMaker_Core_Defs_TrapPlacement_System_Single_TDMaker_Core_Vec2_
+  name: TrapDef
+  nameWithType: TrapDef.TrapDef
+  fullName: TDMaker.Core.Defs.TrapDef.TrapDef
+  nameWithType.vb: TrapDef.New
+  fullName.vb: TDMaker.Core.Defs.TrapDef.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.AreaEffectDef
+  commentId: T:TDMaker.Core.Defs.AreaEffectDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AreaEffectDef.html
+  name: AreaEffectDef
+  nameWithType: AreaEffectDef
+  fullName: TDMaker.Core.Defs.AreaEffectDef
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.MechanicTargetDef
+  commentId: T:TDMaker.Core.Defs.MechanicTargetDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html
+  name: MechanicTargetDef
+  nameWithType: MechanicTargetDef
+  fullName: TDMaker.Core.Defs.MechanicTargetDef
+- uid: TDMaker.Core.Defs.PointRuleDef
+  commentId: T:TDMaker.Core.Defs.PointRuleDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PointRuleDef.html
+  name: PointRuleDef
+  nameWithType: PointRuleDef
+  fullName: TDMaker.Core.Defs.PointRuleDef
+- uid: TDMaker.Core.Defs.TrapPlacement
+  commentId: T:TDMaker.Core.Defs.TrapPlacement
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapPlacement.html
+  name: TrapPlacement
+  nameWithType: TrapPlacement
+  fullName: TDMaker.Core.Defs.TrapPlacement
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core.Defs.TrapDef.Id*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.Id
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_Id
+  name: Id
+  nameWithType: TrapDef.Id
+  fullName: TDMaker.Core.Defs.TrapDef.Id
+- uid: TDMaker.Core.Defs.TrapDef.Damage*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.Damage
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_Damage
+  name: Damage
+  nameWithType: TrapDef.Damage
+  fullName: TDMaker.Core.Defs.TrapDef.Damage
+- uid: TDMaker.Core.Defs.TrapDef.TriggerRadius*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.TriggerRadius
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_TriggerRadius
+  name: TriggerRadius
+  nameWithType: TrapDef.TriggerRadius
+  fullName: TDMaker.Core.Defs.TrapDef.TriggerRadius
+- uid: TDMaker.Core.Defs.TrapDef.Lifetime*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.Lifetime
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_Lifetime
+  name: Lifetime
+  nameWithType: TrapDef.Lifetime
+  fullName: TDMaker.Core.Defs.TrapDef.Lifetime
+- uid: TDMaker.Core.Defs.TrapDef.ArmDelay*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.ArmDelay
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_ArmDelay
+  name: ArmDelay
+  nameWithType: TrapDef.ArmDelay
+  fullName: TDMaker.Core.Defs.TrapDef.ArmDelay
+- uid: TDMaker.Core.Defs.TrapDef.MaxTriggers*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.MaxTriggers
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_MaxTriggers
+  name: MaxTriggers
+  nameWithType: TrapDef.MaxTriggers
+  fullName: TDMaker.Core.Defs.TrapDef.MaxTriggers
+- uid: TDMaker.Core.Defs.TrapDef.TriggerCooldown*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.TriggerCooldown
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_TriggerCooldown
+  name: TriggerCooldown
+  nameWithType: TrapDef.TriggerCooldown
+  fullName: TDMaker.Core.Defs.TrapDef.TriggerCooldown
+- uid: TDMaker.Core.Defs.TrapDef.PopulationLimit*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.PopulationLimit
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_PopulationLimit
+  name: PopulationLimit
+  nameWithType: TrapDef.PopulationLimit
+  fullName: TDMaker.Core.Defs.TrapDef.PopulationLimit
+- uid: TDMaker.Core.Defs.TrapDef.Area*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.Area
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_Area
+  name: Area
+  nameWithType: TrapDef.Area
+  fullName: TDMaker.Core.Defs.TrapDef.Area
+- uid: TDMaker.Core.Defs.TrapDef.TargetsEnemies*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.TargetsEnemies
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_TargetsEnemies
+  name: TargetsEnemies
+  nameWithType: TrapDef.TargetsEnemies
+  fullName: TDMaker.Core.Defs.TrapDef.TargetsEnemies
+- uid: TDMaker.Core.Defs.TrapDef.TargetsFlying*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.TargetsFlying
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_TargetsFlying
+  name: TargetsFlying
+  nameWithType: TrapDef.TargetsFlying
+  fullName: TDMaker.Core.Defs.TrapDef.TargetsFlying
+- uid: TDMaker.Core.Defs.TrapDef.TargetsGround*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.TargetsGround
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_TargetsGround
+  name: TargetsGround
+  nameWithType: TrapDef.TargetsGround
+  fullName: TDMaker.Core.Defs.TrapDef.TargetsGround
+- uid: TDMaker.Core.Defs.TrapDef.Targets*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.Targets
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_Targets
+  name: Targets
+  nameWithType: TrapDef.Targets
+  fullName: TDMaker.Core.Defs.TrapDef.Targets
+- uid: TDMaker.Core.Defs.TrapDef.CancelWithSource*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.CancelWithSource
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_CancelWithSource
+  name: CancelWithSource
+  nameWithType: TrapDef.CancelWithSource
+  fullName: TDMaker.Core.Defs.TrapDef.CancelWithSource
+- uid: TDMaker.Core.Defs.TrapDef.PointRule*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.PointRule
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_PointRule
+  name: PointRule
+  nameWithType: TrapDef.PointRule
+  fullName: TDMaker.Core.Defs.TrapDef.PointRule
+- uid: TDMaker.Core.Defs.TrapDef.Placement*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.Placement
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_Placement
+  name: Placement
+  nameWithType: TrapDef.Placement
+  fullName: TDMaker.Core.Defs.TrapDef.Placement
+- uid: TDMaker.Core.Defs.TrapDef.PlacementRange*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.PlacementRange
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_PlacementRange
+  name: PlacementRange
+  nameWithType: TrapDef.PlacementRange
+  fullName: TDMaker.Core.Defs.TrapDef.PlacementRange
+- uid: TDMaker.Core.Defs.TrapDef.Offset*
+  commentId: Overload:TDMaker.Core.Defs.TrapDef.Offset
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html#TDMaker_Core_Defs_TrapDef_Offset
+  name: Offset
+  nameWithType: TrapDef.Offset
+  fullName: TDMaker.Core.Defs.TrapDef.Offset

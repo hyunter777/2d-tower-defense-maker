@@ -1,0 +1,326 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.UnitPreset
+  commentId: T:TDMaker.Editor.UnitPreset
+  id: UnitPreset
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.UnitPreset.ArmoredEnemy
+  - TDMaker.Editor.UnitPreset.BarracksSoldier
+  - TDMaker.Editor.UnitPreset.BossEnemy
+  - TDMaker.Editor.UnitPreset.FastEnemy
+  - TDMaker.Editor.UnitPreset.FlyingEnemy
+  - TDMaker.Editor.UnitPreset.HealerEnemy
+  - TDMaker.Editor.UnitPreset.MagicResistantEnemy
+  - TDMaker.Editor.UnitPreset.MeleeHero
+  - TDMaker.Editor.UnitPreset.NecromancerEnemy
+  - TDMaker.Editor.UnitPreset.RangedHero
+  - TDMaker.Editor.UnitPreset.RevenantEnemy
+  - TDMaker.Editor.UnitPreset.SplitterEnemy
+  - TDMaker.Editor.UnitPreset.StandardEnemy
+  langs:
+  - csharp
+  - vb
+  name: UnitPreset
+  nameWithType: UnitPreset
+  fullName: TDMaker.Editor.UnitPreset
+  type: Enum
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Starting points offered by the Unit Workshop's New menu.
+  example: []
+  syntax:
+    content: public enum UnitPreset
+    content.vb: Public Enum UnitPreset
+- uid: TDMaker.Editor.UnitPreset.StandardEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.StandardEnemy
+  id: StandardEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: StandardEnemy
+  nameWithType: UnitPreset.StandardEnemy
+  fullName: TDMaker.Editor.UnitPreset.StandardEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Baseline enemy every other preset is measured against.
+  example: []
+  syntax:
+    content: StandardEnemy = 0
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.FastEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.FastEnemy
+  id: FastEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: FastEnemy
+  nameWithType: UnitPreset.FastEnemy
+  fullName: TDMaker.Editor.UnitPreset.FastEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Low health, high speed, dodges some melee strikes.
+  example: []
+  syntax:
+    content: FastEnemy = 1
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.ArmoredEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.ArmoredEnemy
+  id: ArmoredEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: ArmoredEnemy
+  nameWithType: UnitPreset.ArmoredEnemy
+  fullName: TDMaker.Editor.UnitPreset.ArmoredEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: High health, slow, strong physical armor.
+  example: []
+  syntax:
+    content: ArmoredEnemy = 2
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.MagicResistantEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.MagicResistantEnemy
+  id: MagicResistantEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: MagicResistantEnemy
+  nameWithType: UnitPreset.MagicResistantEnemy
+  fullName: TDMaker.Editor.UnitPreset.MagicResistantEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Medium health, strong magic resistance.
+  example: []
+  syntax:
+    content: MagicResistantEnemy = 3
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.HealerEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.HealerEnemy
+  id: HealerEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: HealerEnemy
+  nameWithType: UnitPreset.HealerEnemy
+  fullName: TDMaker.Editor.UnitPreset.HealerEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Support enemy with a permanent healing aura.
+  example: []
+  syntax:
+    content: HealerEnemy = 4
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.SplitterEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.SplitterEnemy
+  id: SplitterEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: SplitterEnemy
+  nameWithType: UnitPreset.SplitterEnemy
+  fullName: TDMaker.Editor.UnitPreset.SplitterEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Splits into smaller enemies when it dies.
+  example: []
+  syntax:
+    content: SplitterEnemy = 5
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.FlyingEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.FlyingEnemy
+  id: FlyingEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: FlyingEnemy
+  nameWithType: UnitPreset.FlyingEnemy
+  fullName: TDMaker.Editor.UnitPreset.FlyingEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Flies over blockers; only anti-air attacks reach it.
+  example: []
+  syntax:
+    content: FlyingEnemy = 6
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.BossEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.BossEnemy
+  id: BossEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: BossEnemy
+  nameWithType: UnitPreset.BossEnemy
+  fullName: TDMaker.Editor.UnitPreset.BossEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Very high health, mixed defenses, costs many lives, needs several blockers.
+  example: []
+  syntax:
+    content: BossEnemy = 7
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.MeleeHero
+  commentId: F:TDMaker.Editor.UnitPreset.MeleeHero
+  id: MeleeHero
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: MeleeHero
+  nameWithType: UnitPreset.MeleeHero
+  fullName: TDMaker.Editor.UnitPreset.MeleeHero
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Blocking hero with a melee attack and a growth table.
+  example: []
+  syntax:
+    content: MeleeHero = 8
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.RangedHero
+  commentId: F:TDMaker.Editor.UnitPreset.RangedHero
+  id: RangedHero
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: RangedHero
+  nameWithType: UnitPreset.RangedHero
+  fullName: TDMaker.Editor.UnitPreset.RangedHero
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Hero with a ranged attack and a light melee strike.
+  example: []
+  syntax:
+    content: RangedHero = 9
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.BarracksSoldier
+  commentId: F:TDMaker.Editor.UnitPreset.BarracksSoldier
+  id: BarracksSoldier
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: BarracksSoldier
+  nameWithType: UnitPreset.BarracksSoldier
+  fullName: TDMaker.Editor.UnitPreset.BarracksSoldier
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Barracks soldier.
+  example: []
+  syntax:
+    content: BarracksSoldier = 10
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.NecromancerEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.NecromancerEnemy
+  id: NecromancerEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: NecromancerEnemy
+  nameWithType: UnitPreset.NecromancerEnemy
+  fullName: TDMaker.Editor.UnitPreset.NecromancerEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Caster that raises weak enemies from the bodies of the fallen.
+  example: []
+  syntax:
+    content: NecromancerEnemy = 11
+    return:
+      type: TDMaker.Editor.UnitPreset
+- uid: TDMaker.Editor.UnitPreset.RevenantEnemy
+  commentId: F:TDMaker.Editor.UnitPreset.RevenantEnemy
+  id: RevenantEnemy
+  parent: TDMaker.Editor.UnitPreset
+  langs:
+  - csharp
+  - vb
+  name: RevenantEnemy
+  nameWithType: UnitPreset.RevenantEnemy
+  fullName: TDMaker.Editor.UnitPreset.RevenantEnemy
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Lies down once when killed and rises again with half its health.
+  example: []
+  syntax:
+    content: RevenantEnemy = 12
+    return:
+      type: TDMaker.Editor.UnitPreset
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: TDMaker.Editor.UnitPreset
+  commentId: T:TDMaker.Editor.UnitPreset
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UnitPreset.html
+  name: UnitPreset
+  nameWithType: UnitPreset
+  fullName: TDMaker.Editor.UnitPreset

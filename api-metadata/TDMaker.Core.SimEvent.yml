@@ -1,0 +1,630 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.SimEvent
+  commentId: T:TDMaker.Core.SimEvent
+  id: SimEvent
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.SimEvent.#ctor(TDMaker.Core.SimEventKind,System.Int32,System.Int32,System.Single,System.Int32,TDMaker.Core.Vec2,TDMaker.Core.CommandFailure,System.String)
+  - TDMaker.Core.SimEvent.EntityId
+  - TDMaker.Core.SimEvent.Failure
+  - TDMaker.Core.SimEvent.IntValue
+  - TDMaker.Core.SimEvent.Key
+  - TDMaker.Core.SimEvent.Kind
+  - TDMaker.Core.SimEvent.OtherId
+  - TDMaker.Core.SimEvent.Position
+  - TDMaker.Core.SimEvent.Value
+  langs:
+  - csharp
+  - vb
+  name: SimEvent
+  nameWithType: SimEvent
+  fullName: TDMaker.Core.SimEvent
+  type: Struct
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A value event. Value is damage or state total; IntValue is a slot, wave, or state delta.
+  example: []
+  syntax:
+    content: public readonly struct SimEvent
+    content.vb: Public Structure SimEvent
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Core.SimEvent.#ctor(TDMaker.Core.SimEventKind,System.Int32,System.Int32,System.Single,System.Int32,TDMaker.Core.Vec2,TDMaker.Core.CommandFailure,System.String)
+  commentId: M:TDMaker.Core.SimEvent.#ctor(TDMaker.Core.SimEventKind,System.Int32,System.Int32,System.Single,System.Int32,TDMaker.Core.Vec2,TDMaker.Core.CommandFailure,System.String)
+  id: '#ctor(TDMaker.Core.SimEventKind,System.Int32,System.Int32,System.Single,System.Int32,TDMaker.Core.Vec2,TDMaker.Core.CommandFailure,System.String)'
+  parent: TDMaker.Core.SimEvent
+  langs:
+  - csharp
+  - vb
+  name: SimEvent(SimEventKind, int, int, float, int, Vec2, CommandFailure, string)
+  nameWithType: SimEvent.SimEvent(SimEventKind, int, int, float, int, Vec2, CommandFailure, string)
+  fullName: TDMaker.Core.SimEvent.SimEvent(TDMaker.Core.SimEventKind, int, int, float, int, TDMaker.Core.Vec2, TDMaker.Core.CommandFailure,
+    string)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Creates a compact event.
+  example: []
+  syntax:
+    content: public SimEvent(SimEventKind kind, int entityId = 0, int otherId = 0, float value = 0, int intValue = 0, Vec2
+      position = default, CommandFailure failure = CommandFailure.None, string key = null)
+    parameters:
+    - id: kind
+      type: TDMaker.Core.SimEventKind
+    - id: entityId
+      type: System.Int32
+    - id: otherId
+      type: System.Int32
+    - id: value
+      type: System.Single
+    - id: intValue
+      type: System.Int32
+    - id: position
+      type: TDMaker.Core.Vec2
+    - id: failure
+      type: TDMaker.Core.CommandFailure
+    - id: key
+      type: System.String
+    content.vb: Public Sub New(kind As SimEventKind, entityId As Integer = 0, otherId As Integer = 0, value As Single = 0,
+      intValue As Integer = 0, position As Vec2 = Nothing, failure As CommandFailure = CommandFailure.None, key As String
+      = Nothing)
+  overload: TDMaker.Core.SimEvent.#ctor*
+  nameWithType.vb: SimEvent.New(SimEventKind, Integer, Integer, Single, Integer, Vec2, CommandFailure, String)
+  fullName.vb: TDMaker.Core.SimEvent.New(TDMaker.Core.SimEventKind, Integer, Integer, Single, Integer, TDMaker.Core.Vec2,
+    TDMaker.Core.CommandFailure, String)
+  name.vb: New(SimEventKind, Integer, Integer, Single, Integer, Vec2, CommandFailure, String)
+- uid: TDMaker.Core.SimEvent.Kind
+  commentId: P:TDMaker.Core.SimEvent.Kind
+  id: Kind
+  parent: TDMaker.Core.SimEvent
+  langs:
+  - csharp
+  - vb
+  name: Kind
+  nameWithType: SimEvent.Kind
+  fullName: TDMaker.Core.SimEvent.Kind
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Event category.
+  example: []
+  syntax:
+    content: public SimEventKind Kind { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.SimEventKind
+    content.vb: Public ReadOnly Property Kind As SimEventKind
+  overload: TDMaker.Core.SimEvent.Kind*
+- uid: TDMaker.Core.SimEvent.EntityId
+  commentId: P:TDMaker.Core.SimEvent.EntityId
+  id: EntityId
+  parent: TDMaker.Core.SimEvent
+  langs:
+  - csharp
+  - vb
+  name: EntityId
+  nameWithType: SimEvent.EntityId
+  fullName: TDMaker.Core.SimEvent.EntityId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Primary entity identifier; zero for global events.
+  example: []
+  syntax:
+    content: public int EntityId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property EntityId As Integer
+  overload: TDMaker.Core.SimEvent.EntityId*
+- uid: TDMaker.Core.SimEvent.OtherId
+  commentId: P:TDMaker.Core.SimEvent.OtherId
+  id: OtherId
+  parent: TDMaker.Core.SimEvent
+  langs:
+  - csharp
+  - vb
+  name: OtherId
+  nameWithType: SimEvent.OtherId
+  fullName: TDMaker.Core.SimEvent.OtherId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Related target or source identifier.
+  example: []
+  syntax:
+    content: public int OtherId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property OtherId As Integer
+  overload: TDMaker.Core.SimEvent.OtherId*
+- uid: TDMaker.Core.SimEvent.Value
+  commentId: P:TDMaker.Core.SimEvent.Value
+  id: Value
+  parent: TDMaker.Core.SimEvent
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: SimEvent.Value
+  fullName: TDMaker.Core.SimEvent.Value
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Damage amount or new global state total.
+  example: []
+  syntax:
+    content: public float Value { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Value As Single
+  overload: TDMaker.Core.SimEvent.Value*
+- uid: TDMaker.Core.SimEvent.IntValue
+  commentId: P:TDMaker.Core.SimEvent.IntValue
+  id: IntValue
+  parent: TDMaker.Core.SimEvent
+  langs:
+  - csharp
+  - vb
+  name: IntValue
+  nameWithType: SimEvent.IntValue
+  fullName: TDMaker.Core.SimEvent.IntValue
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Context index or signed global state delta.
+  example: []
+  syntax:
+    content: public int IntValue { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property IntValue As Integer
+  overload: TDMaker.Core.SimEvent.IntValue*
+- uid: TDMaker.Core.SimEvent.Position
+  commentId: P:TDMaker.Core.SimEvent.Position
+  id: Position
+  parent: TDMaker.Core.SimEvent
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: SimEvent.Position
+  fullName: TDMaker.Core.SimEvent.Position
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Simulation-space event location.
+  example: []
+  syntax:
+    content: public Vec2 Position { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property Position As Vec2
+  overload: TDMaker.Core.SimEvent.Position*
+- uid: TDMaker.Core.SimEvent.Failure
+  commentId: P:TDMaker.Core.SimEvent.Failure
+  id: Failure
+  parent: TDMaker.Core.SimEvent
+  langs:
+  - csharp
+  - vb
+  name: Failure
+  nameWithType: SimEvent.Failure
+  fullName: TDMaker.Core.SimEvent.Failure
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Rejection reason for CommandRejected events.
+  example: []
+  syntax:
+    content: public CommandFailure Failure { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.CommandFailure
+    content.vb: Public ReadOnly Property Failure As CommandFailure
+  overload: TDMaker.Core.SimEvent.Failure*
+- uid: TDMaker.Core.SimEvent.Key
+  commentId: P:TDMaker.Core.SimEvent.Key
+  id: Key
+  parent: TDMaker.Core.SimEvent
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: SimEvent.Key
+  fullName: TDMaker.Core.SimEvent.Key
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Template, view, or command lookup key when applicable.
+  example: []
+  syntax:
+    content: public string Key { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Key As String
+  overload: TDMaker.Core.SimEvent.Key*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.SimEvent.#ctor*
+  commentId: Overload:TDMaker.Core.SimEvent.#ctor
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html#TDMaker_Core_SimEvent__ctor_TDMaker_Core_SimEventKind_System_Int32_System_Int32_System_Single_System_Int32_TDMaker_Core_Vec2_TDMaker_Core_CommandFailure_System_String_
+  name: SimEvent
+  nameWithType: SimEvent.SimEvent
+  fullName: TDMaker.Core.SimEvent.SimEvent
+  nameWithType.vb: SimEvent.New
+  fullName.vb: TDMaker.Core.SimEvent.New
+  name.vb: New
+- uid: TDMaker.Core.SimEventKind
+  commentId: T:TDMaker.Core.SimEventKind
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimEventKind.html
+  name: SimEventKind
+  nameWithType: SimEventKind
+  fullName: TDMaker.Core.SimEventKind
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core.CommandFailure
+  commentId: T:TDMaker.Core.CommandFailure
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.CommandFailure.html
+  name: CommandFailure
+  nameWithType: CommandFailure
+  fullName: TDMaker.Core.CommandFailure
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.SimEvent.Kind*
+  commentId: Overload:TDMaker.Core.SimEvent.Kind
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html#TDMaker_Core_SimEvent_Kind
+  name: Kind
+  nameWithType: SimEvent.Kind
+  fullName: TDMaker.Core.SimEvent.Kind
+- uid: TDMaker.Core.SimEvent.EntityId*
+  commentId: Overload:TDMaker.Core.SimEvent.EntityId
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html#TDMaker_Core_SimEvent_EntityId
+  name: EntityId
+  nameWithType: SimEvent.EntityId
+  fullName: TDMaker.Core.SimEvent.EntityId
+- uid: TDMaker.Core.SimEvent.OtherId*
+  commentId: Overload:TDMaker.Core.SimEvent.OtherId
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html#TDMaker_Core_SimEvent_OtherId
+  name: OtherId
+  nameWithType: SimEvent.OtherId
+  fullName: TDMaker.Core.SimEvent.OtherId
+- uid: TDMaker.Core.SimEvent.Value*
+  commentId: Overload:TDMaker.Core.SimEvent.Value
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html#TDMaker_Core_SimEvent_Value
+  name: Value
+  nameWithType: SimEvent.Value
+  fullName: TDMaker.Core.SimEvent.Value
+- uid: TDMaker.Core.SimEvent.IntValue*
+  commentId: Overload:TDMaker.Core.SimEvent.IntValue
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html#TDMaker_Core_SimEvent_IntValue
+  name: IntValue
+  nameWithType: SimEvent.IntValue
+  fullName: TDMaker.Core.SimEvent.IntValue
+- uid: TDMaker.Core.SimEvent.Position*
+  commentId: Overload:TDMaker.Core.SimEvent.Position
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html#TDMaker_Core_SimEvent_Position
+  name: Position
+  nameWithType: SimEvent.Position
+  fullName: TDMaker.Core.SimEvent.Position
+- uid: TDMaker.Core.SimEvent.Failure*
+  commentId: Overload:TDMaker.Core.SimEvent.Failure
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html#TDMaker_Core_SimEvent_Failure
+  name: Failure
+  nameWithType: SimEvent.Failure
+  fullName: TDMaker.Core.SimEvent.Failure
+- uid: TDMaker.Core.SimEvent.Key*
+  commentId: Overload:TDMaker.Core.SimEvent.Key
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html#TDMaker_Core_SimEvent_Key
+  name: Key
+  nameWithType: SimEvent.Key
+  fullName: TDMaker.Core.SimEvent.Key

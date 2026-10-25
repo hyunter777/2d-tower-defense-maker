@@ -1,0 +1,478 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.UnitMath.HeroRow
+  commentId: T:TDMaker.Editor.UnitMath.HeroRow
+  id: UnitMath.HeroRow
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.UnitMath.HeroRow.Armor
+  - TDMaker.Editor.UnitMath.HeroRow.Dps
+  - TDMaker.Editor.UnitMath.HeroRow.Experience
+  - TDMaker.Editor.UnitMath.HeroRow.Health
+  - TDMaker.Editor.UnitMath.HeroRow.Level
+  - TDMaker.Editor.UnitMath.HeroRow.MagicResist
+  - TDMaker.Editor.UnitMath.HeroRow.SkillPoints
+  - TDMaker.Editor.UnitMath.HeroRow.Survivability
+  langs:
+  - csharp
+  - vb
+  name: UnitMath.HeroRow
+  nameWithType: UnitMath.HeroRow
+  fullName: TDMaker.Editor.UnitMath.HeroRow
+  type: Struct
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: One growth row of a hero, as the bake computes it.
+  example: []
+  syntax:
+    content: public struct UnitMath.HeroRow
+    content.vb: Public Structure UnitMath.HeroRow
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Editor.UnitMath.HeroRow.Level
+  commentId: F:TDMaker.Editor.UnitMath.HeroRow.Level
+  id: Level
+  parent: TDMaker.Editor.UnitMath.HeroRow
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: UnitMath.HeroRow.Level
+  fullName: TDMaker.Editor.UnitMath.HeroRow.Level
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: One-based level.
+  example: []
+  syntax:
+    content: public int Level
+    return:
+      type: System.Int32
+    content.vb: Public Level As Integer
+- uid: TDMaker.Editor.UnitMath.HeroRow.Experience
+  commentId: F:TDMaker.Editor.UnitMath.HeroRow.Experience
+  id: Experience
+  parent: TDMaker.Editor.UnitMath.HeroRow
+  langs:
+  - csharp
+  - vb
+  name: Experience
+  nameWithType: UnitMath.HeroRow.Experience
+  fullName: TDMaker.Editor.UnitMath.HeroRow.Experience
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Cumulative experience threshold.
+  example: []
+  syntax:
+    content: public double Experience
+    return:
+      type: System.Double
+    content.vb: Public Experience As Double
+- uid: TDMaker.Editor.UnitMath.HeroRow.Health
+  commentId: F:TDMaker.Editor.UnitMath.HeroRow.Health
+  id: Health
+  parent: TDMaker.Editor.UnitMath.HeroRow
+  langs:
+  - csharp
+  - vb
+  name: Health
+  nameWithType: UnitMath.HeroRow.Health
+  fullName: TDMaker.Editor.UnitMath.HeroRow.Health
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Maximum health.
+  example: []
+  syntax:
+    content: public float Health
+    return:
+      type: System.Single
+    content.vb: Public Health As Single
+- uid: TDMaker.Editor.UnitMath.HeroRow.Armor
+  commentId: F:TDMaker.Editor.UnitMath.HeroRow.Armor
+  id: Armor
+  parent: TDMaker.Editor.UnitMath.HeroRow
+  langs:
+  - csharp
+  - vb
+  name: Armor
+  nameWithType: UnitMath.HeroRow.Armor
+  fullName: TDMaker.Editor.UnitMath.HeroRow.Armor
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Physical armor and magical resistance.
+  example: []
+  syntax:
+    content: public float Armor
+    return:
+      type: System.Single
+    content.vb: Public Armor As Single
+- uid: TDMaker.Editor.UnitMath.HeroRow.MagicResist
+  commentId: F:TDMaker.Editor.UnitMath.HeroRow.MagicResist
+  id: MagicResist
+  parent: TDMaker.Editor.UnitMath.HeroRow
+  langs:
+  - csharp
+  - vb
+  name: MagicResist
+  nameWithType: UnitMath.HeroRow.MagicResist
+  fullName: TDMaker.Editor.UnitMath.HeroRow.MagicResist
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Physical armor and magical resistance.
+  example: []
+  syntax:
+    content: public float MagicResist
+    return:
+      type: System.Single
+    content.vb: Public MagicResist As Single
+- uid: TDMaker.Editor.UnitMath.HeroRow.Dps
+  commentId: F:TDMaker.Editor.UnitMath.HeroRow.Dps
+  id: Dps
+  parent: TDMaker.Editor.UnitMath.HeroRow
+  langs:
+  - csharp
+  - vb
+  name: Dps
+  nameWithType: UnitMath.HeroRow.Dps
+  fullName: TDMaker.Editor.UnitMath.HeroRow.Dps
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Expected DPS against an unarmored target.
+  example: []
+  syntax:
+    content: public double Dps
+    return:
+      type: System.Double
+    content.vb: Public Dps As Double
+- uid: TDMaker.Editor.UnitMath.HeroRow.Survivability
+  commentId: F:TDMaker.Editor.UnitMath.HeroRow.Survivability
+  id: Survivability
+  parent: TDMaker.Editor.UnitMath.HeroRow
+  langs:
+  - csharp
+  - vb
+  name: Survivability
+  nameWithType: UnitMath.HeroRow.Survivability
+  fullName: TDMaker.Editor.UnitMath.HeroRow.Survivability
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Effective health against physical hits.
+  example: []
+  syntax:
+    content: public double Survivability
+    return:
+      type: System.Double
+    content.vb: Public Survivability As Double
+- uid: TDMaker.Editor.UnitMath.HeroRow.SkillPoints
+  commentId: F:TDMaker.Editor.UnitMath.HeroRow.SkillPoints
+  id: SkillPoints
+  parent: TDMaker.Editor.UnitMath.HeroRow
+  langs:
+  - csharp
+  - vb
+  name: SkillPoints
+  nameWithType: UnitMath.HeroRow.SkillPoints
+  fullName: TDMaker.Editor.UnitMath.HeroRow.SkillPoints
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Skill points available.
+  example: []
+  syntax:
+    content: public int SkillPoints
+    return:
+      type: System.Int32
+    content.vb: Public SkillPoints As Integer
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

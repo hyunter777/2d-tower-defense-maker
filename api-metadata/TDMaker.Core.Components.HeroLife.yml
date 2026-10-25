@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Components.HeroLife
+  commentId: T:TDMaker.Core.Components.HeroLife
+  id: HeroLife
+  parent: TDMaker.Core.Components
+  children:
+  - TDMaker.Core.Components.HeroLife.Active
+  - TDMaker.Core.Components.HeroLife.Returning
+  - TDMaker.Core.Components.HeroLife.Waiting
+  langs:
+  - csharp
+  - vb
+  name: HeroLife
+  nameWithType: HeroLife
+  fullName: TDMaker.Core.Components.HeroLife
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Life stages that remain separate from structural removal.
+  example: []
+  syntax:
+    content: public enum HeroLife
+    content.vb: Public Enum HeroLife
+- uid: TDMaker.Core.Components.HeroLife.Active
+  commentId: F:TDMaker.Core.Components.HeroLife.Active
+  id: Active
+  parent: TDMaker.Core.Components.HeroLife
+  langs:
+  - csharp
+  - vb
+  name: Active
+  nameWithType: HeroLife.Active
+  fullName: TDMaker.Core.Components.HeroLife.Active
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Alive and controllable.
+  example: []
+  syntax:
+    content: Active = 0
+    return:
+      type: TDMaker.Core.Components.HeroLife
+- uid: TDMaker.Core.Components.HeroLife.Waiting
+  commentId: F:TDMaker.Core.Components.HeroLife.Waiting
+  id: Waiting
+  parent: TDMaker.Core.Components.HeroLife
+  langs:
+  - csharp
+  - vb
+  name: Waiting
+  nameWithType: HeroLife.Waiting
+  fullName: TDMaker.Core.Components.HeroLife.Waiting
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Dead and waiting to return.
+  example: []
+  syntax:
+    content: Waiting = 1
+    return:
+      type: TDMaker.Core.Components.HeroLife
+- uid: TDMaker.Core.Components.HeroLife.Returning
+  commentId: F:TDMaker.Core.Components.HeroLife.Returning
+  id: Returning
+  parent: TDMaker.Core.Components.HeroLife
+  langs:
+  - csharp
+  - vb
+  name: Returning
+  nameWithType: HeroLife.Returning
+  fullName: TDMaker.Core.Components.HeroLife.Returning
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Returning presentation; immune and not controllable.
+  example: []
+  syntax:
+    content: Returning = 2
+    return:
+      type: TDMaker.Core.Components.HeroLife
+references:
+- uid: TDMaker.Core.Components
+  commentId: N:TDMaker.Core.Components
+  isExternal: true
+  name: TDMaker.Core.Components
+  nameWithType: TDMaker.Core.Components
+  fullName: TDMaker.Core.Components
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+- uid: TDMaker.Core.Components.HeroLife
+  commentId: T:TDMaker.Core.Components.HeroLife
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.HeroLife.html
+  name: HeroLife
+  nameWithType: HeroLife
+  fullName: TDMaker.Core.Components.HeroLife

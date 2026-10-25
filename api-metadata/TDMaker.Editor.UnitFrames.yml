@@ -1,0 +1,1180 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.UnitFrames
+  commentId: T:TDMaker.Editor.UnitFrames
+  id: UnitFrames
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.UnitFrames.Classify(System.String)
+  - TDMaker.Editor.UnitFrames.CollectTexturePaths(System.Collections.Generic.IEnumerable{System.String})
+  - TDMaker.Editor.UnitFrames.ConfigureImporter(System.String)
+  - TDMaker.Editor.UnitFrames.LoadSprites(System.Collections.Generic.IList{System.String})
+  - TDMaker.Editor.UnitFrames.Register(TDMaker.Unity.View.ArtSet,TDMaker.Unity.View.ArtSet.Entry,System.Collections.Generic.IEnumerable{System.String},System.Boolean)
+  - TDMaker.Editor.UnitFrames.Sort``1(System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,``0}},System.Collections.Generic.List{``0})
+  - TDMaker.Editor.UnitFrames.Tokens(System.String)
+  langs:
+  - csharp
+  - vb
+  name: UnitFrames
+  nameWithType: UnitFrames
+  fullName: TDMaker.Editor.UnitFrames
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Bulk frame registration for the Unit Workshop: sorts sprite files into walk / idle / attack / hurt / death sequences
+    by
+
+    file name ("Orc_Walk_003", "walk (2)", "1_ATTACK_005", "goblinRun07", "Hit1"), fixes their texture import settings
+
+    (single sprite, pivot at the feet, compressed) and writes the sequences into an <xref href="TDMaker.Unity.View.ArtSet.Entry"
+    data-throw-if-not-resolved="false"></xref>.
+
+    Facing is never guessed; the author ticks Faces Left.'
+  example: []
+  syntax:
+    content: public static class UnitFrames
+    content.vb: Public Module UnitFrames
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.UnitFrames.Tokens(System.String)
+  commentId: M:TDMaker.Editor.UnitFrames.Tokens(System.String)
+  id: Tokens(System.String)
+  parent: TDMaker.Editor.UnitFrames
+  langs:
+  - csharp
+  - vb
+  name: Tokens(string)
+  nameWithType: UnitFrames.Tokens(string)
+  fullName: TDMaker.Editor.UnitFrames.Tokens(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Splits a file name into lower-case word and number tokens (camelCase, separators and digits split).
+  example: []
+  syntax:
+    content: public static List<string> Tokens(string fileName)
+    parameters:
+    - id: fileName
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Shared Function Tokens(fileName As String) As List(Of String)
+  overload: TDMaker.Editor.UnitFrames.Tokens*
+  nameWithType.vb: UnitFrames.Tokens(String)
+  fullName.vb: TDMaker.Editor.UnitFrames.Tokens(String)
+  name.vb: Tokens(String)
+- uid: TDMaker.Editor.UnitFrames.Classify(System.String)
+  commentId: M:TDMaker.Editor.UnitFrames.Classify(System.String)
+  id: Classify(System.String)
+  parent: TDMaker.Editor.UnitFrames
+  langs:
+  - csharp
+  - vb
+  name: Classify(string)
+  nameWithType: UnitFrames.Classify(string)
+  fullName: TDMaker.Editor.UnitFrames.Classify(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Guesses the action and frame number of a sprite file name.
+  example: []
+  syntax:
+    content: public static UnitFrames.Classified Classify(string fileName)
+    parameters:
+    - id: fileName
+      type: System.String
+    return:
+      type: TDMaker.Editor.UnitFrames.Classified
+    content.vb: Public Shared Function Classify(fileName As String) As UnitFrames.Classified
+  overload: TDMaker.Editor.UnitFrames.Classify*
+  nameWithType.vb: UnitFrames.Classify(String)
+  fullName.vb: TDMaker.Editor.UnitFrames.Classify(String)
+  name.vb: Classify(String)
+- uid: TDMaker.Editor.UnitFrames.Sort``1(System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,``0}},System.Collections.Generic.List{``0})
+  commentId: M:TDMaker.Editor.UnitFrames.Sort``1(System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,``0}},System.Collections.Generic.List{``0})
+  id: Sort``1(System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,``0}},System.Collections.Generic.List{``0})
+  parent: TDMaker.Editor.UnitFrames
+  langs:
+  - csharp
+  - vb
+  name: Sort<T>(IList<KeyValuePair<string, T>>, List<T>)
+  nameWithType: UnitFrames.Sort<T>(IList<KeyValuePair<string, T>>, List<T>)
+  fullName: TDMaker.Editor.UnitFrames.Sort<T>(System.Collections.Generic.IList<System.Collections.Generic.KeyValuePair<string,
+    T>>, System.Collections.Generic.List<T>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Groups named items into sequences: each action keeps its lowest variant, frames are ordered by frame number then
+    name.
+
+    Items without an action word are returned in <code class="paramref">unsorted</code>.'
+  example: []
+  syntax:
+    content: public static Dictionary<FrameAction, List<T>> Sort<T>(IList<KeyValuePair<string, T>> items, List<T> unsorted
+      = null)
+    parameters:
+    - id: items
+      type: System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,{T}}}
+    - id: unsorted
+      type: System.Collections.Generic.List{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.Dictionary{TDMaker.Editor.FrameAction,System.Collections.Generic.List{{T}}}
+    content.vb: Public Shared Function Sort(Of T)(items As IList(Of KeyValuePair(Of String, T)), unsorted As List(Of T) =
+      Nothing) As Dictionary(Of FrameAction, List(Of T))
+  overload: TDMaker.Editor.UnitFrames.Sort*
+  nameWithType.vb: UnitFrames.Sort(Of T)(IList(Of KeyValuePair(Of String, T)), List(Of T))
+  fullName.vb: TDMaker.Editor.UnitFrames.Sort(Of T)(System.Collections.Generic.IList(Of System.Collections.Generic.KeyValuePair(Of
+    String, T)), System.Collections.Generic.List(Of T))
+  name.vb: Sort(Of T)(IList(Of KeyValuePair(Of String, T)), List(Of T))
+- uid: TDMaker.Editor.UnitFrames.CollectTexturePaths(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:TDMaker.Editor.UnitFrames.CollectTexturePaths(System.Collections.Generic.IEnumerable{System.String})
+  id: CollectTexturePaths(System.Collections.Generic.IEnumerable{System.String})
+  parent: TDMaker.Editor.UnitFrames
+  langs:
+  - csharp
+  - vb
+  name: CollectTexturePaths(IEnumerable<string>)
+  nameWithType: UnitFrames.CollectTexturePaths(IEnumerable<string>)
+  fullName: TDMaker.Editor.UnitFrames.CollectTexturePaths(System.Collections.Generic.IEnumerable<string>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Texture files (png, psd, tga, jpg) under the dropped paths, folders searched recursively, in name order.
+  example: []
+  syntax:
+    content: public static List<string> CollectTexturePaths(IEnumerable<string> assetPaths)
+    parameters:
+    - id: assetPaths
+      type: System.Collections.Generic.IEnumerable{System.String}
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Shared Function CollectTexturePaths(assetPaths As IEnumerable(Of String)) As List(Of String)
+  overload: TDMaker.Editor.UnitFrames.CollectTexturePaths*
+  nameWithType.vb: UnitFrames.CollectTexturePaths(IEnumerable(Of String))
+  fullName.vb: TDMaker.Editor.UnitFrames.CollectTexturePaths(System.Collections.Generic.IEnumerable(Of String))
+  name.vb: CollectTexturePaths(IEnumerable(Of String))
+- uid: TDMaker.Editor.UnitFrames.ConfigureImporter(System.String)
+  commentId: M:TDMaker.Editor.UnitFrames.ConfigureImporter(System.String)
+  id: ConfigureImporter(System.String)
+  parent: TDMaker.Editor.UnitFrames
+  langs:
+  - csharp
+  - vb
+  name: ConfigureImporter(string)
+  nameWithType: UnitFrames.ConfigureImporter(string)
+  fullName: TDMaker.Editor.UnitFrames.ConfigureImporter(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Sets sprite import settings for unit frames: Sprite (single unless the file is already sliced), pivot at the bottom
+
+    centre (the feet), no mip maps, alpha is transparency, normal-quality compression. Returns true when it changed anything.'
+  example: []
+  syntax:
+    content: public static bool ConfigureImporter(string texturePath)
+    parameters:
+    - id: texturePath
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function ConfigureImporter(texturePath As String) As Boolean
+  overload: TDMaker.Editor.UnitFrames.ConfigureImporter*
+  nameWithType.vb: UnitFrames.ConfigureImporter(String)
+  fullName.vb: TDMaker.Editor.UnitFrames.ConfigureImporter(String)
+  name.vb: ConfigureImporter(String)
+- uid: TDMaker.Editor.UnitFrames.LoadSprites(System.Collections.Generic.IList{System.String})
+  commentId: M:TDMaker.Editor.UnitFrames.LoadSprites(System.Collections.Generic.IList{System.String})
+  id: LoadSprites(System.Collections.Generic.IList{System.String})
+  parent: TDMaker.Editor.UnitFrames
+  langs:
+  - csharp
+  - vb
+  name: LoadSprites(IList<string>)
+  nameWithType: UnitFrames.LoadSprites(IList<string>)
+  fullName: TDMaker.Editor.UnitFrames.LoadSprites(System.Collections.Generic.IList<string>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: First sprite of each texture (sliced textures add every sub-sprite in name order).
+  example: []
+  syntax:
+    content: public static List<KeyValuePair<string, Sprite>> LoadSprites(IList<string> texturePaths)
+    parameters:
+    - id: texturePaths
+      type: System.Collections.Generic.IList{System.String}
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,UnityEngine.Sprite}}
+    content.vb: Public Shared Function LoadSprites(texturePaths As IList(Of String)) As List(Of KeyValuePair(Of String, Sprite))
+  overload: TDMaker.Editor.UnitFrames.LoadSprites*
+  nameWithType.vb: UnitFrames.LoadSprites(IList(Of String))
+  fullName.vb: TDMaker.Editor.UnitFrames.LoadSprites(System.Collections.Generic.IList(Of String))
+  name.vb: LoadSprites(IList(Of String))
+- uid: TDMaker.Editor.UnitFrames.Register(TDMaker.Unity.View.ArtSet,TDMaker.Unity.View.ArtSet.Entry,System.Collections.Generic.IEnumerable{System.String},System.Boolean)
+  commentId: M:TDMaker.Editor.UnitFrames.Register(TDMaker.Unity.View.ArtSet,TDMaker.Unity.View.ArtSet.Entry,System.Collections.Generic.IEnumerable{System.String},System.Boolean)
+  id: Register(TDMaker.Unity.View.ArtSet,TDMaker.Unity.View.ArtSet.Entry,System.Collections.Generic.IEnumerable{System.String},System.Boolean)
+  parent: TDMaker.Editor.UnitFrames
+  langs:
+  - csharp
+  - vb
+  name: Register(ArtSet, Entry, IEnumerable<string>, bool)
+  nameWithType: UnitFrames.Register(ArtSet, ArtSet.Entry, IEnumerable<string>, bool)
+  fullName: TDMaker.Editor.UnitFrames.Register(TDMaker.Unity.View.ArtSet, TDMaker.Unity.View.ArtSet.Entry, System.Collections.Generic.IEnumerable<string>,
+    bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Registers dropped files or folders into <code class="paramref">entry</code> of <code class="paramref">set</code>
+    (with Undo): sequences that
+
+    were found replace the entry''s arrays, the idle sprite is the first idle (or walk) frame when the entry has none.'
+  example: []
+  syntax:
+    content: public static UnitFrames.Report Register(ArtSet set, ArtSet.Entry entry, IEnumerable<string> droppedPaths, bool
+      fixImport = true)
+    parameters:
+    - id: set
+      type: TDMaker.Unity.View.ArtSet
+    - id: entry
+      type: TDMaker.Unity.View.ArtSet.Entry
+    - id: droppedPaths
+      type: System.Collections.Generic.IEnumerable{System.String}
+    - id: fixImport
+      type: System.Boolean
+    return:
+      type: TDMaker.Editor.UnitFrames.Report
+    content.vb: Public Shared Function Register([set] As ArtSet, entry As ArtSet.Entry, droppedPaths As IEnumerable(Of String),
+      fixImport As Boolean = True) As UnitFrames.Report
+  overload: TDMaker.Editor.UnitFrames.Register*
+  nameWithType.vb: UnitFrames.Register(ArtSet, ArtSet.Entry, IEnumerable(Of String), Boolean)
+  fullName.vb: TDMaker.Editor.UnitFrames.Register(TDMaker.Unity.View.ArtSet, TDMaker.Unity.View.ArtSet.Entry, System.Collections.Generic.IEnumerable(Of
+    String), Boolean)
+  name.vb: Register(ArtSet, Entry, IEnumerable(Of String), Boolean)
+references:
+- uid: TDMaker.Unity.View.ArtSet.Entry
+  commentId: T:TDMaker.Unity.View.ArtSet.Entry
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.ArtSet.html
+  name: ArtSet.Entry
+  nameWithType: ArtSet.Entry
+  fullName: TDMaker.Unity.View.ArtSet.Entry
+  spec.csharp:
+  - uid: TDMaker.Unity.View.ArtSet
+    name: ArtSet
+    isExternal: true
+    href: TDMaker.Unity.View.ArtSet.html
+  - name: .
+  - uid: TDMaker.Unity.View.ArtSet.Entry
+    name: Entry
+    isExternal: true
+    href: TDMaker.Unity.View.ArtSet.Entry.html
+  spec.vb:
+  - uid: TDMaker.Unity.View.ArtSet
+    name: ArtSet
+    isExternal: true
+    href: TDMaker.Unity.View.ArtSet.html
+  - name: .
+  - uid: TDMaker.Unity.View.ArtSet.Entry
+    name: Entry
+    isExternal: true
+    href: TDMaker.Unity.View.ArtSet.Entry.html
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Editor.UnitFrames.Tokens*
+  commentId: Overload:TDMaker.Editor.UnitFrames.Tokens
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_Tokens_System_String_
+  name: Tokens
+  nameWithType: UnitFrames.Tokens
+  fullName: TDMaker.Editor.UnitFrames.Tokens
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Editor.UnitFrames.Classify*
+  commentId: Overload:TDMaker.Editor.UnitFrames.Classify
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_Classify_System_String_
+  name: Classify
+  nameWithType: UnitFrames.Classify
+  fullName: TDMaker.Editor.UnitFrames.Classify
+- uid: TDMaker.Editor.UnitFrames.Classified
+  commentId: T:TDMaker.Editor.UnitFrames.Classified
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html
+  name: UnitFrames.Classified
+  nameWithType: UnitFrames.Classified
+  fullName: TDMaker.Editor.UnitFrames.Classified
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitFrames
+    name: UnitFrames
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.html
+  - name: .
+  - uid: TDMaker.Editor.UnitFrames.Classified
+    name: Classified
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.Classified.html
+  spec.vb:
+  - uid: TDMaker.Editor.UnitFrames
+    name: UnitFrames
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.html
+  - name: .
+  - uid: TDMaker.Editor.UnitFrames.Classified
+    name: Classified
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.Classified.html
+- uid: TDMaker.Editor.UnitFrames.Sort*
+  commentId: Overload:TDMaker.Editor.UnitFrames.Sort
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_Sort__1_System_Collections_Generic_IList_System_Collections_Generic_KeyValuePair_System_String___0___System_Collections_Generic_List___0__
+  name: Sort
+  nameWithType: UnitFrames.Sort
+  fullName: TDMaker.Editor.UnitFrames.Sort
+- uid: System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,{T}}}
+  commentId: T:System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,``0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<KeyValuePair<string, T>>
+  nameWithType: IList<KeyValuePair<string, T>>
+  fullName: System.Collections.Generic.IList<System.Collections.Generic.KeyValuePair<string, T>>
+  nameWithType.vb: IList(Of KeyValuePair(Of String, T))
+  fullName.vb: System.Collections.Generic.IList(Of System.Collections.Generic.KeyValuePair(Of String, T))
+  name.vb: IList(Of KeyValuePair(Of String, T))
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.Dictionary{TDMaker.Editor.FrameAction,System.Collections.Generic.List{{T}}}
+  commentId: T:System.Collections.Generic.Dictionary{TDMaker.Editor.FrameAction,System.Collections.Generic.List{``0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<FrameAction, List<T>>
+  nameWithType: Dictionary<FrameAction, List<T>>
+  fullName: System.Collections.Generic.Dictionary<TDMaker.Editor.FrameAction, System.Collections.Generic.List<T>>
+  nameWithType.vb: Dictionary(Of FrameAction, List(Of T))
+  fullName.vb: System.Collections.Generic.Dictionary(Of TDMaker.Editor.FrameAction, System.Collections.Generic.List(Of T))
+  name.vb: Dictionary(Of FrameAction, List(Of T))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: TDMaker.Editor.FrameAction
+    name: FrameAction
+    isExternal: true
+    href: TDMaker.Editor.FrameAction.html
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Editor.FrameAction
+    name: FrameAction
+    isExternal: true
+    href: TDMaker.Editor.FrameAction.html
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: ' '
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: TKey
+  - name: ','
+  - name: ' '
+  - name: TValue
+  - name: )
+- uid: TDMaker.Editor.UnitFrames.CollectTexturePaths*
+  commentId: Overload:TDMaker.Editor.UnitFrames.CollectTexturePaths
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_CollectTexturePaths_System_Collections_Generic_IEnumerable_System_String__
+  name: CollectTexturePaths
+  nameWithType: UnitFrames.CollectTexturePaths
+  fullName: TDMaker.Editor.UnitFrames.CollectTexturePaths
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Editor.UnitFrames.ConfigureImporter*
+  commentId: Overload:TDMaker.Editor.UnitFrames.ConfigureImporter
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_ConfigureImporter_System_String_
+  name: ConfigureImporter
+  nameWithType: UnitFrames.ConfigureImporter
+  fullName: TDMaker.Editor.UnitFrames.ConfigureImporter
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.UnitFrames.LoadSprites*
+  commentId: Overload:TDMaker.Editor.UnitFrames.LoadSprites
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_LoadSprites_System_Collections_Generic_IList_System_String__
+  name: LoadSprites
+  nameWithType: UnitFrames.LoadSprites
+  fullName: TDMaker.Editor.UnitFrames.LoadSprites
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: T:System.Collections.Generic.IList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<string>
+  nameWithType: IList<string>
+  fullName: System.Collections.Generic.IList<string>
+  nameWithType.vb: IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of String)
+  name.vb: IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,UnityEngine.Sprite}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,UnityEngine.Sprite}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<KeyValuePair<string, Sprite>>
+  nameWithType: List<KeyValuePair<string, Sprite>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<string, UnityEngine.Sprite>>
+  nameWithType.vb: List(Of KeyValuePair(Of String, Sprite))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.KeyValuePair(Of String, UnityEngine.Sprite))
+  name.vb: List(Of KeyValuePair(Of String, Sprite))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: )
+  - name: )
+- uid: TDMaker.Editor.UnitFrames.Register*
+  commentId: Overload:TDMaker.Editor.UnitFrames.Register
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_Register_TDMaker_Unity_View_ArtSet_TDMaker_Unity_View_ArtSet_Entry_System_Collections_Generic_IEnumerable_System_String__System_Boolean_
+  name: Register
+  nameWithType: UnitFrames.Register
+  fullName: TDMaker.Editor.UnitFrames.Register
+- uid: TDMaker.Unity.View.ArtSet
+  commentId: T:TDMaker.Unity.View.ArtSet
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.ArtSet.html
+  name: ArtSet
+  nameWithType: ArtSet
+  fullName: TDMaker.Unity.View.ArtSet
+- uid: TDMaker.Editor.UnitFrames.Report
+  commentId: T:TDMaker.Editor.UnitFrames.Report
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html
+  name: UnitFrames.Report
+  nameWithType: UnitFrames.Report
+  fullName: TDMaker.Editor.UnitFrames.Report
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitFrames
+    name: UnitFrames
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.html
+  - name: .
+  - uid: TDMaker.Editor.UnitFrames.Report
+    name: Report
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.Report.html
+  spec.vb:
+  - uid: TDMaker.Editor.UnitFrames
+    name: UnitFrames
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.html
+  - name: .
+  - uid: TDMaker.Editor.UnitFrames.Report
+    name: Report
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.Report.html

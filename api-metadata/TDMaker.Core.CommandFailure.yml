@@ -1,0 +1,473 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.CommandFailure
+  commentId: T:TDMaker.Core.CommandFailure
+  id: CommandFailure
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.CommandFailure.CapacityExceeded
+  - TDMaker.Core.CommandFailure.GameEnded
+  - TDMaker.Core.CommandFailure.InsufficientGold
+  - TDMaker.Core.CommandFailure.InsufficientPoints
+  - TDMaker.Core.CommandFailure.InvalidAbility
+  - TDMaker.Core.CommandFailure.InvalidCommand
+  - TDMaker.Core.CommandFailure.InvalidEntity
+  - TDMaker.Core.CommandFailure.InvalidPoint
+  - TDMaker.Core.CommandFailure.InvalidRallyPoint
+  - TDMaker.Core.CommandFailure.InvalidSlot
+  - TDMaker.Core.CommandFailure.InvalidUpgrade
+  - TDMaker.Core.CommandFailure.None
+  - TDMaker.Core.CommandFailure.NotImplemented
+  - TDMaker.Core.CommandFailure.RankLimit
+  - TDMaker.Core.CommandFailure.SlotOccupied
+  - TDMaker.Core.CommandFailure.SpellUnavailable
+  - TDMaker.Core.CommandFailure.UnavailableTower
+  - TDMaker.Core.CommandFailure.UnknownSpell
+  - TDMaker.Core.CommandFailure.UnknownTemplate
+  - TDMaker.Core.CommandFailure.WaveUnavailable
+  langs:
+  - csharp
+  - vb
+  name: CommandFailure
+  nameWithType: CommandFailure
+  fullName: TDMaker.Core.CommandFailure
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Machine-readable command failure reasons.
+  example: []
+  syntax:
+    content: public enum CommandFailure
+    content.vb: Public Enum CommandFailure
+- uid: TDMaker.Core.CommandFailure.None
+  commentId: F:TDMaker.Core.CommandFailure.None
+  id: None
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: CommandFailure.None
+  fullName: TDMaker.Core.CommandFailure.None
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: No failure applies.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.GameEnded
+  commentId: F:TDMaker.Core.CommandFailure.GameEnded
+  id: GameEnded
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: GameEnded
+  nameWithType: CommandFailure.GameEnded
+  fullName: TDMaker.Core.CommandFailure.GameEnded
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The game has a terminal outcome.
+  example: []
+  syntax:
+    content: GameEnded = 1
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.InvalidSlot
+  commentId: F:TDMaker.Core.CommandFailure.InvalidSlot
+  id: InvalidSlot
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: InvalidSlot
+  nameWithType: CommandFailure.InvalidSlot
+  fullName: TDMaker.Core.CommandFailure.InvalidSlot
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The build slot index is outside the level.
+  example: []
+  syntax:
+    content: InvalidSlot = 2
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.SlotOccupied
+  commentId: F:TDMaker.Core.CommandFailure.SlotOccupied
+  id: SlotOccupied
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: SlotOccupied
+  nameWithType: CommandFailure.SlotOccupied
+  fullName: TDMaker.Core.CommandFailure.SlotOccupied
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The build slot is already reserved.
+  example: []
+  syntax:
+    content: SlotOccupied = 3
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.UnknownTemplate
+  commentId: F:TDMaker.Core.CommandFailure.UnknownTemplate
+  id: UnknownTemplate
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: UnknownTemplate
+  nameWithType: CommandFailure.UnknownTemplate
+  fullName: TDMaker.Core.CommandFailure.UnknownTemplate
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The requested tower template does not exist.
+  example: []
+  syntax:
+    content: UnknownTemplate = 4
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.UnavailableTower
+  commentId: F:TDMaker.Core.CommandFailure.UnavailableTower
+  id: UnavailableTower
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: UnavailableTower
+  nameWithType: CommandFailure.UnavailableTower
+  fullName: TDMaker.Core.CommandFailure.UnavailableTower
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The tower is not available for construction in this level.
+  example: []
+  syntax:
+    content: UnavailableTower = 5
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.InsufficientGold
+  commentId: F:TDMaker.Core.CommandFailure.InsufficientGold
+  id: InsufficientGold
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: InsufficientGold
+  nameWithType: CommandFailure.InsufficientGold
+  fullName: TDMaker.Core.CommandFailure.InsufficientGold
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The purchase cannot be funded or its investment ledger would overflow.
+  example: []
+  syntax:
+    content: InsufficientGold = 6
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.InvalidEntity
+  commentId: F:TDMaker.Core.CommandFailure.InvalidEntity
+  id: InvalidEntity
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: InvalidEntity
+  nameWithType: CommandFailure.InvalidEntity
+  fullName: TDMaker.Core.CommandFailure.InvalidEntity
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The required entity or component does not exist.
+  example: []
+  syntax:
+    content: InvalidEntity = 7
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.InvalidUpgrade
+  commentId: F:TDMaker.Core.CommandFailure.InvalidUpgrade
+  id: InvalidUpgrade
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: InvalidUpgrade
+  nameWithType: CommandFailure.InvalidUpgrade
+  fullName: TDMaker.Core.CommandFailure.InvalidUpgrade
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The destination is not an immediate upgrade target.
+  example: []
+  syntax:
+    content: InvalidUpgrade = 8
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.InvalidRallyPoint
+  commentId: F:TDMaker.Core.CommandFailure.InvalidRallyPoint
+  id: InvalidRallyPoint
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: InvalidRallyPoint
+  nameWithType: CommandFailure.InvalidRallyPoint
+  fullName: TDMaker.Core.CommandFailure.InvalidRallyPoint
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The point is invalid or no lane placement exists within the rally radius.
+  example: []
+  syntax:
+    content: InvalidRallyPoint = 9
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.WaveUnavailable
+  commentId: F:TDMaker.Core.CommandFailure.WaveUnavailable
+  id: WaveUnavailable
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: WaveUnavailable
+  nameWithType: CommandFailure.WaveUnavailable
+  fullName: TDMaker.Core.CommandFailure.WaveUnavailable
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The next wave cannot currently be called.
+  example: []
+  syntax:
+    content: WaveUnavailable = 10
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.NotImplemented
+  commentId: F:TDMaker.Core.CommandFailure.NotImplemented
+  id: NotImplemented
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: NotImplemented
+  nameWithType: CommandFailure.NotImplemented
+  fullName: TDMaker.Core.CommandFailure.NotImplemented
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The command is reserved for a later milestone.
+  example: []
+  syntax:
+    content: NotImplemented = 11
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.InvalidCommand
+  commentId: F:TDMaker.Core.CommandFailure.InvalidCommand
+  id: InvalidCommand
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: InvalidCommand
+  nameWithType: CommandFailure.InvalidCommand
+  fullName: TDMaker.Core.CommandFailure.InvalidCommand
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The command type is not supported.
+  example: []
+  syntax:
+    content: InvalidCommand = 12
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.InvalidAbility
+  commentId: F:TDMaker.Core.CommandFailure.InvalidAbility
+  id: InvalidAbility
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: InvalidAbility
+  nameWithType: CommandFailure.InvalidAbility
+  fullName: TDMaker.Core.CommandFailure.InvalidAbility
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The ability or skill slot does not exist.
+  example: []
+  syntax:
+    content: InvalidAbility = 13
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.RankLimit
+  commentId: F:TDMaker.Core.CommandFailure.RankLimit
+  id: RankLimit
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: RankLimit
+  nameWithType: CommandFailure.RankLimit
+  fullName: TDMaker.Core.CommandFailure.RankLimit
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The ability or skill has reached its rank cap.
+  example: []
+  syntax:
+    content: RankLimit = 14
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.InsufficientPoints
+  commentId: F:TDMaker.Core.CommandFailure.InsufficientPoints
+  id: InsufficientPoints
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: InsufficientPoints
+  nameWithType: CommandFailure.InsufficientPoints
+  fullName: TDMaker.Core.CommandFailure.InsufficientPoints
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The required hero level or free point budget is missing.
+  example: []
+  syntax:
+    content: InsufficientPoints = 15
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.InvalidPoint
+  commentId: F:TDMaker.Core.CommandFailure.InvalidPoint
+  id: InvalidPoint
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: InvalidPoint
+  nameWithType: CommandFailure.InvalidPoint
+  fullName: TDMaker.Core.CommandFailure.InvalidPoint
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The shared placement policy rejected the point.
+  example: []
+  syntax:
+    content: InvalidPoint = 16
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.UnknownSpell
+  commentId: F:TDMaker.Core.CommandFailure.UnknownSpell
+  id: UnknownSpell
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: UnknownSpell
+  nameWithType: CommandFailure.UnknownSpell
+  fullName: TDMaker.Core.CommandFailure.UnknownSpell
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The spell slot has no authored definition.
+  example: []
+  syntax:
+    content: UnknownSpell = 17
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.SpellUnavailable
+  commentId: F:TDMaker.Core.CommandFailure.SpellUnavailable
+  id: SpellUnavailable
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: SpellUnavailable
+  nameWithType: CommandFailure.SpellUnavailable
+  fullName: TDMaker.Core.CommandFailure.SpellUnavailable
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The spell is locked, cooling, or already cast this tick.
+  example: []
+  syntax:
+    content: SpellUnavailable = 18
+    return:
+      type: TDMaker.Core.CommandFailure
+- uid: TDMaker.Core.CommandFailure.CapacityExceeded
+  commentId: F:TDMaker.Core.CommandFailure.CapacityExceeded
+  id: CapacityExceeded
+  parent: TDMaker.Core.CommandFailure
+  langs:
+  - csharp
+  - vb
+  name: CapacityExceeded
+  nameWithType: CommandFailure.CapacityExceeded
+  fullName: TDMaker.Core.CommandFailure.CapacityExceeded
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A required fixed pool or input queue is full.
+  example: []
+  syntax:
+    content: CapacityExceeded = 19
+    return:
+      type: TDMaker.Core.CommandFailure
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.CommandFailure
+  commentId: T:TDMaker.Core.CommandFailure
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.CommandFailure.html
+  name: CommandFailure
+  nameWithType: CommandFailure
+  fullName: TDMaker.Core.CommandFailure

@@ -1,0 +1,507 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.PresentationHooks
+  commentId: T:TDMaker.Unity.Authoring.PresentationHooks
+  id: PresentationHooks
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.PresentationHooks.#ctor
+  - TDMaker.Unity.Authoring.PresentationHooks.attackCue
+  - TDMaker.Unity.Authoring.PresentationHooks.attackVfx
+  - TDMaker.Unity.Authoring.PresentationHooks.deathCue
+  - TDMaker.Unity.Authoring.PresentationHooks.deathVfx
+  - TDMaker.Unity.Authoring.PresentationHooks.hitCue
+  - TDMaker.Unity.Authoring.PresentationHooks.hitVfx
+  - TDMaker.Unity.Authoring.PresentationHooks.spawnCue
+  - TDMaker.Unity.Authoring.PresentationHooks.spawnVfx
+  langs:
+  - csharp
+  - vb
+  name: PresentationHooks
+  nameWithType: PresentationHooks
+  fullName: TDMaker.Unity.Authoring.PresentationHooks
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Optional per-template presentation hooks: VFX prefabs (pooled) and audio cues for the standard moments of a unit''s
+    life.
+
+    Every field may be left empty.'
+  example: []
+  syntax:
+    content: public sealed class PresentationHooks
+    content.vb: Public NotInheritable Class PresentationHooks
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.PresentationHooks.spawnVfx
+  commentId: F:TDMaker.Unity.Authoring.PresentationHooks.spawnVfx
+  id: spawnVfx
+  parent: TDMaker.Unity.Authoring.PresentationHooks
+  langs:
+  - csharp
+  - vb
+  name: spawnVfx
+  nameWithType: PresentationHooks.spawnVfx
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.spawnVfx
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Spawned when the entity appears.
+  example: []
+  syntax:
+    content: public GameObject spawnVfx
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public spawnVfx As GameObject
+- uid: TDMaker.Unity.Authoring.PresentationHooks.attackVfx
+  commentId: F:TDMaker.Unity.Authoring.PresentationHooks.attackVfx
+  id: attackVfx
+  parent: TDMaker.Unity.Authoring.PresentationHooks
+  langs:
+  - csharp
+  - vb
+  name: attackVfx
+  nameWithType: PresentationHooks.attackVfx
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.attackVfx
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Spawned on the entity when it starts an attack.
+  example: []
+  syntax:
+    content: public GameObject attackVfx
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public attackVfx As GameObject
+- uid: TDMaker.Unity.Authoring.PresentationHooks.hitVfx
+  commentId: F:TDMaker.Unity.Authoring.PresentationHooks.hitVfx
+  id: hitVfx
+  parent: TDMaker.Unity.Authoring.PresentationHooks
+  langs:
+  - csharp
+  - vb
+  name: hitVfx
+  nameWithType: PresentationHooks.hitVfx
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.hitVfx
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Spawned on the entity when it takes damage.
+  example: []
+  syntax:
+    content: public GameObject hitVfx
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public hitVfx As GameObject
+- uid: TDMaker.Unity.Authoring.PresentationHooks.deathVfx
+  commentId: F:TDMaker.Unity.Authoring.PresentationHooks.deathVfx
+  id: deathVfx
+  parent: TDMaker.Unity.Authoring.PresentationHooks
+  langs:
+  - csharp
+  - vb
+  name: deathVfx
+  nameWithType: PresentationHooks.deathVfx
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.deathVfx
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Spawned where the entity dies.
+  example: []
+  syntax:
+    content: public GameObject deathVfx
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public deathVfx As GameObject
+- uid: TDMaker.Unity.Authoring.PresentationHooks.spawnCue
+  commentId: F:TDMaker.Unity.Authoring.PresentationHooks.spawnCue
+  id: spawnCue
+  parent: TDMaker.Unity.Authoring.PresentationHooks
+  langs:
+  - csharp
+  - vb
+  name: spawnCue
+  nameWithType: PresentationHooks.spawnCue
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.spawnCue
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Played when the entity appears.
+  example: []
+  syntax:
+    content: public AudioCue spawnCue
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public spawnCue As AudioCue
+- uid: TDMaker.Unity.Authoring.PresentationHooks.attackCue
+  commentId: F:TDMaker.Unity.Authoring.PresentationHooks.attackCue
+  id: attackCue
+  parent: TDMaker.Unity.Authoring.PresentationHooks
+  langs:
+  - csharp
+  - vb
+  name: attackCue
+  nameWithType: PresentationHooks.attackCue
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.attackCue
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Played when the entity starts an attack.
+  example: []
+  syntax:
+    content: public AudioCue attackCue
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public attackCue As AudioCue
+- uid: TDMaker.Unity.Authoring.PresentationHooks.hitCue
+  commentId: F:TDMaker.Unity.Authoring.PresentationHooks.hitCue
+  id: hitCue
+  parent: TDMaker.Unity.Authoring.PresentationHooks
+  langs:
+  - csharp
+  - vb
+  name: hitCue
+  nameWithType: PresentationHooks.hitCue
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.hitCue
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Played when the entity takes damage.
+  example: []
+  syntax:
+    content: public AudioCue hitCue
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public hitCue As AudioCue
+- uid: TDMaker.Unity.Authoring.PresentationHooks.deathCue
+  commentId: F:TDMaker.Unity.Authoring.PresentationHooks.deathCue
+  id: deathCue
+  parent: TDMaker.Unity.Authoring.PresentationHooks
+  langs:
+  - csharp
+  - vb
+  name: deathCue
+  nameWithType: PresentationHooks.deathCue
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.deathCue
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Played when the entity dies.
+  example: []
+  syntax:
+    content: public AudioCue deathCue
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public deathCue As AudioCue
+- uid: TDMaker.Unity.Authoring.PresentationHooks.#ctor
+  commentId: M:TDMaker.Unity.Authoring.PresentationHooks.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.PresentationHooks
+  langs:
+  - csharp
+  - vb
+  name: PresentationHooks()
+  nameWithType: PresentationHooks.PresentationHooks()
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.PresentationHooks()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public PresentationHooks()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.PresentationHooks.#ctor*
+  nameWithType.vb: PresentationHooks.New()
+  fullName.vb: TDMaker.Unity.Authoring.PresentationHooks.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Authoring.AudioCue
+  commentId: T:TDMaker.Unity.Authoring.AudioCue
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AudioCue.html
+  name: AudioCue
+  nameWithType: AudioCue
+  fullName: TDMaker.Unity.Authoring.AudioCue
+- uid: TDMaker.Unity.Authoring.PresentationHooks.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.PresentationHooks.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PresentationHooks.html#TDMaker_Unity_Authoring_PresentationHooks__ctor
+  name: PresentationHooks
+  nameWithType: PresentationHooks.PresentationHooks
+  fullName: TDMaker.Unity.Authoring.PresentationHooks.PresentationHooks
+  nameWithType.vb: PresentationHooks.New
+  fullName.vb: TDMaker.Unity.Authoring.PresentationHooks.New
+  name.vb: New

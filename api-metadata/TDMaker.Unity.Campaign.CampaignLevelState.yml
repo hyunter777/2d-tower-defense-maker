@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.CampaignLevelState
+  commentId: T:TDMaker.Unity.Campaign.CampaignLevelState
+  id: CampaignLevelState
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.CampaignLevelState.Completed
+  - TDMaker.Unity.Campaign.CampaignLevelState.Locked
+  - TDMaker.Unity.Campaign.CampaignLevelState.Open
+  langs:
+  - csharp
+  - vb
+  name: CampaignLevelState
+  nameWithType: CampaignLevelState
+  fullName: TDMaker.Unity.Campaign.CampaignLevelState
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Map state of a campaign level.
+  example: []
+  syntax:
+    content: public enum CampaignLevelState
+    content.vb: Public Enum CampaignLevelState
+- uid: TDMaker.Unity.Campaign.CampaignLevelState.Locked
+  commentId: F:TDMaker.Unity.Campaign.CampaignLevelState.Locked
+  id: Locked
+  parent: TDMaker.Unity.Campaign.CampaignLevelState
+  langs:
+  - csharp
+  - vb
+  name: Locked
+  nameWithType: CampaignLevelState.Locked
+  fullName: TDMaker.Unity.Campaign.CampaignLevelState.Locked
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Not open yet.
+  example: []
+  syntax:
+    content: Locked = 0
+    return:
+      type: TDMaker.Unity.Campaign.CampaignLevelState
+- uid: TDMaker.Unity.Campaign.CampaignLevelState.Open
+  commentId: F:TDMaker.Unity.Campaign.CampaignLevelState.Open
+  id: Open
+  parent: TDMaker.Unity.Campaign.CampaignLevelState
+  langs:
+  - csharp
+  - vb
+  name: Open
+  nameWithType: CampaignLevelState.Open
+  fullName: TDMaker.Unity.Campaign.CampaignLevelState.Open
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Open, never won.
+  example: []
+  syntax:
+    content: Open = 1
+    return:
+      type: TDMaker.Unity.Campaign.CampaignLevelState
+- uid: TDMaker.Unity.Campaign.CampaignLevelState.Completed
+  commentId: F:TDMaker.Unity.Campaign.CampaignLevelState.Completed
+  id: Completed
+  parent: TDMaker.Unity.Campaign.CampaignLevelState
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: CampaignLevelState.Completed
+  fullName: TDMaker.Unity.Campaign.CampaignLevelState.Completed
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Won at least once.
+  example: []
+  syntax:
+    content: Completed = 2
+    return:
+      type: TDMaker.Unity.Campaign.CampaignLevelState
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.CampaignLevelState
+  commentId: T:TDMaker.Unity.Campaign.CampaignLevelState
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignLevelState.html
+  name: CampaignLevelState
+  nameWithType: CampaignLevelState
+  fullName: TDMaker.Unity.Campaign.CampaignLevelState

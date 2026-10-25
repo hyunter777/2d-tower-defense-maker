@@ -1,0 +1,216 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.UpgradeTargetKind
+  commentId: T:TDMaker.Core.Defs.UpgradeTargetKind
+  id: UpgradeTargetKind
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.UpgradeTargetKind.Any
+  - TDMaker.Core.Defs.UpgradeTargetKind.Enemy
+  - TDMaker.Core.Defs.UpgradeTargetKind.Hero
+  - TDMaker.Core.Defs.UpgradeTargetKind.Projectile
+  - TDMaker.Core.Defs.UpgradeTargetKind.Soldier
+  - TDMaker.Core.Defs.UpgradeTargetKind.Spell
+  - TDMaker.Core.Defs.UpgradeTargetKind.Tower
+  langs:
+  - csharp
+  - vb
+  name: UpgradeTargetKind
+  nameWithType: UpgradeTargetKind
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Template roles used by permanent-upgrade selectors. Multiple roles are alternatives.
+  example: []
+  syntax:
+    content: '[Flags]
+
+      public enum UpgradeTargetKind'
+    content.vb: '<Flags>
+
+      Public Enum UpgradeTargetKind'
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: TDMaker.Core.Defs.UpgradeTargetKind.Any
+  commentId: F:TDMaker.Core.Defs.UpgradeTargetKind.Any
+  id: Any
+  parent: TDMaker.Core.Defs.UpgradeTargetKind
+  langs:
+  - csharp
+  - vb
+  name: Any
+  nameWithType: UpgradeTargetKind.Any
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind.Any
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: No role filter.
+  example: []
+  syntax:
+    content: Any = 0
+    return:
+      type: TDMaker.Core.Defs.UpgradeTargetKind
+- uid: TDMaker.Core.Defs.UpgradeTargetKind.Tower
+  commentId: F:TDMaker.Core.Defs.UpgradeTargetKind.Tower
+  id: Tower
+  parent: TDMaker.Core.Defs.UpgradeTargetKind
+  langs:
+  - csharp
+  - vb
+  name: Tower
+  nameWithType: UpgradeTargetKind.Tower
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind.Tower
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Tower templates.
+  example: []
+  syntax:
+    content: Tower = 1
+    return:
+      type: TDMaker.Core.Defs.UpgradeTargetKind
+- uid: TDMaker.Core.Defs.UpgradeTargetKind.Soldier
+  commentId: F:TDMaker.Core.Defs.UpgradeTargetKind.Soldier
+  id: Soldier
+  parent: TDMaker.Core.Defs.UpgradeTargetKind
+  langs:
+  - csharp
+  - vb
+  name: Soldier
+  nameWithType: UpgradeTargetKind.Soldier
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind.Soldier
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ground soldier templates.
+  example: []
+  syntax:
+    content: Soldier = 2
+    return:
+      type: TDMaker.Core.Defs.UpgradeTargetKind
+- uid: TDMaker.Core.Defs.UpgradeTargetKind.Hero
+  commentId: F:TDMaker.Core.Defs.UpgradeTargetKind.Hero
+  id: Hero
+  parent: TDMaker.Core.Defs.UpgradeTargetKind
+  langs:
+  - csharp
+  - vb
+  name: Hero
+  nameWithType: UpgradeTargetKind.Hero
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind.Hero
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Hero templates.
+  example: []
+  syntax:
+    content: Hero = 4
+    return:
+      type: TDMaker.Core.Defs.UpgradeTargetKind
+- uid: TDMaker.Core.Defs.UpgradeTargetKind.Spell
+  commentId: F:TDMaker.Core.Defs.UpgradeTargetKind.Spell
+  id: Spell
+  parent: TDMaker.Core.Defs.UpgradeTargetKind
+  langs:
+  - csharp
+  - vb
+  name: Spell
+  nameWithType: UpgradeTargetKind.Spell
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind.Spell
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Player spell definitions, selected by spell identifier.
+  example: []
+  syntax:
+    content: Spell = 8
+    return:
+      type: TDMaker.Core.Defs.UpgradeTargetKind
+- uid: TDMaker.Core.Defs.UpgradeTargetKind.Projectile
+  commentId: F:TDMaker.Core.Defs.UpgradeTargetKind.Projectile
+  id: Projectile
+  parent: TDMaker.Core.Defs.UpgradeTargetKind
+  langs:
+  - csharp
+  - vb
+  name: Projectile
+  nameWithType: UpgradeTargetKind.Projectile
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind.Projectile
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Projectile templates.
+  example: []
+  syntax:
+    content: Projectile = 16
+    return:
+      type: TDMaker.Core.Defs.UpgradeTargetKind
+- uid: TDMaker.Core.Defs.UpgradeTargetKind.Enemy
+  commentId: F:TDMaker.Core.Defs.UpgradeTargetKind.Enemy
+  id: Enemy
+  parent: TDMaker.Core.Defs.UpgradeTargetKind
+  langs:
+  - csharp
+  - vb
+  name: Enemy
+  nameWithType: UpgradeTargetKind.Enemy
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind.Enemy
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Path-following enemy templates.
+  example: []
+  syntax:
+    content: Enemy = 32
+    return:
+      type: TDMaker.Core.Defs.UpgradeTargetKind
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.UpgradeTargetKind
+  commentId: T:TDMaker.Core.Defs.UpgradeTargetKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeTargetKind.html
+  name: UpgradeTargetKind
+  nameWithType: UpgradeTargetKind
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind

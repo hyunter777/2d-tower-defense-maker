@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.ICustomComponent
+  commentId: T:TDMaker.Core.ICustomComponent
+  id: ICustomComponent
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.ICustomComponent.Reset(TDMaker.Core.Defs.EntityTemplate)
+  langs:
+  - csharp
+  - vb
+  name: ICustomComponent
+  nameWithType: ICustomComponent
+  fullName: TDMaker.Core.ICustomComponent
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A prewarmed custom component; its reset must not allocate.
+  example:
+  - <pre><code class="lang-csharp">public void Reset(EntityTemplate template) { charge = template?.CustomData.Get&lt;ChargeDef&gt;()?.Initial
+    ?? 0; }</code></pre>
+  syntax:
+    content: public interface ICustomComponent
+    content.vb: Public Interface ICustomComponent
+- uid: TDMaker.Core.ICustomComponent.Reset(TDMaker.Core.Defs.EntityTemplate)
+  commentId: M:TDMaker.Core.ICustomComponent.Reset(TDMaker.Core.Defs.EntityTemplate)
+  id: Reset(TDMaker.Core.Defs.EntityTemplate)
+  parent: TDMaker.Core.ICustomComponent
+  langs:
+  - csharp
+  - vb
+  name: Reset(EntityTemplate)
+  nameWithType: ICustomComponent.Reset(EntityTemplate)
+  fullName: TDMaker.Core.ICustomComponent.Reset(TDMaker.Core.Defs.EntityTemplate)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Resets every runtime field on spawn or template replacement; null identifies an unused pool bundle.
+  example: []
+  syntax:
+    content: void Reset(EntityTemplate template)
+    parameters:
+    - id: template
+      type: TDMaker.Core.Defs.EntityTemplate
+    content.vb: Sub Reset(template As EntityTemplate)
+  overload: TDMaker.Core.ICustomComponent.Reset*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.ICustomComponent.Reset*
+  commentId: Overload:TDMaker.Core.ICustomComponent.Reset
+  isExternal: true
+  href: TDMaker.Core.ICustomComponent.html#TDMaker_Core_ICustomComponent_Reset_TDMaker_Core_Defs_EntityTemplate_
+  name: Reset
+  nameWithType: ICustomComponent.Reset
+  fullName: TDMaker.Core.ICustomComponent.Reset
+- uid: TDMaker.Core.Defs.EntityTemplate
+  commentId: T:TDMaker.Core.Defs.EntityTemplate
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html
+  name: EntityTemplate
+  nameWithType: EntityTemplate
+  fullName: TDMaker.Core.Defs.EntityTemplate
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true

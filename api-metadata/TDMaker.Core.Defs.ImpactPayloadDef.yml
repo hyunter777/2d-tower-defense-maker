@@ -1,0 +1,770 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.ImpactPayloadDef
+  commentId: T:TDMaker.Core.Defs.ImpactPayloadDef
+  id: ImpactPayloadDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.ImpactPayloadDef.#ctor(TDMaker.Core.Defs.DamageDef,TDMaker.Core.Defs.AreaEffectDef,TDMaker.Core.Defs.PathDisplacementDef,System.Single,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef)
+  - TDMaker.Core.Defs.ImpactPayloadDef.Area
+  - TDMaker.Core.Defs.ImpactPayloadDef.Chance
+  - TDMaker.Core.Defs.ImpactPayloadDef.CreateTransfer(TDMaker.Core.Defs.PathDestinationDef,System.Single,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef)
+  - TDMaker.Core.Defs.ImpactPayloadDef.Displacement
+  - TDMaker.Core.Defs.ImpactPayloadDef.SecondaryDamage
+  - TDMaker.Core.Defs.ImpactPayloadDef.Targets
+  - TDMaker.Core.Defs.ImpactPayloadDef.Transfer
+  - TDMaker.Core.Defs.ImpactPayloadDef.TransferKey
+  - TDMaker.Core.Defs.ImpactPayloadDef.TriggerOnZeroDamage
+  - TDMaker.Core.Defs.ImpactPayloadDef.WithTransfer(TDMaker.Core.Defs.PathDestinationDef)
+  - TDMaker.Core.Defs.ImpactPayloadDef.WithTransferKey(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ImpactPayloadDef
+  nameWithType: ImpactPayloadDef
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional payload after a resolved health packet. Despawn and defense-only packets do not trigger it. One roll gates
+    all operations.
+  example: []
+  syntax:
+    content: public sealed class ImpactPayloadDef
+    content.vb: Public NotInheritable Class ImpactPayloadDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.WithTransfer(TDMaker.Core.Defs.PathDestinationDef)
+  commentId: M:TDMaker.Core.Defs.ImpactPayloadDef.WithTransfer(TDMaker.Core.Defs.PathDestinationDef)
+  id: WithTransfer(TDMaker.Core.Defs.PathDestinationDef)
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: WithTransfer(PathDestinationDef)
+  nameWithType: ImpactPayloadDef.WithTransfer(PathDestinationDef)
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.WithTransfer(TDMaker.Core.Defs.PathDestinationDef)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies the payload and adds exact relocation.
+  example: []
+  syntax:
+    content: public ImpactPayloadDef WithTransfer(PathDestinationDef destination)
+    parameters:
+    - id: destination
+      type: TDMaker.Core.Defs.PathDestinationDef
+    return:
+      type: TDMaker.Core.Defs.ImpactPayloadDef
+    content.vb: Public Function WithTransfer(destination As PathDestinationDef) As ImpactPayloadDef
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.WithTransfer*
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.WithTransferKey(System.String)
+  commentId: M:TDMaker.Core.Defs.ImpactPayloadDef.WithTransferKey(System.String)
+  id: WithTransferKey(System.String)
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: WithTransferKey(string)
+  nameWithType: ImpactPayloadDef.WithTransferKey(string)
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.WithTransferKey(string)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies all payload operations and assigns the authored relocation identity. Requires an existing Transfer operation.
+  example:
+  - <pre><code class="lang-csharp">ImpactPayloadDef.CreateTransfer(destination).WithTransferKey("relocate");</code></pre>
+  syntax:
+    content: public ImpactPayloadDef WithTransferKey(string mechanismKey)
+    parameters:
+    - id: mechanismKey
+      type: System.String
+    return:
+      type: TDMaker.Core.Defs.ImpactPayloadDef
+    content.vb: Public Function WithTransferKey(mechanismKey As String) As ImpactPayloadDef
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.WithTransferKey*
+  nameWithType.vb: ImpactPayloadDef.WithTransferKey(String)
+  fullName.vb: TDMaker.Core.Defs.ImpactPayloadDef.WithTransferKey(String)
+  name.vb: WithTransferKey(String)
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.CreateTransfer(TDMaker.Core.Defs.PathDestinationDef,System.Single,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef)
+  commentId: M:TDMaker.Core.Defs.ImpactPayloadDef.CreateTransfer(TDMaker.Core.Defs.PathDestinationDef,System.Single,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef)
+  id: CreateTransfer(TDMaker.Core.Defs.PathDestinationDef,System.Single,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef)
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: CreateTransfer(PathDestinationDef, float, bool, MechanicTargetDef)
+  nameWithType: ImpactPayloadDef.CreateTransfer(PathDestinationDef, float, bool, MechanicTargetDef)
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.CreateTransfer(TDMaker.Core.Defs.PathDestinationDef, float, bool, TDMaker.Core.Defs.MechanicTargetDef)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a relocation-only hit payload without dummy damage or displacement operations.
+  example: []
+  syntax:
+    content: public static ImpactPayloadDef CreateTransfer(PathDestinationDef destination, float chance = 1, bool triggerOnZeroDamage
+      = false, MechanicTargetDef targets = null)
+    parameters:
+    - id: destination
+      type: TDMaker.Core.Defs.PathDestinationDef
+    - id: chance
+      type: System.Single
+    - id: triggerOnZeroDamage
+      type: System.Boolean
+    - id: targets
+      type: TDMaker.Core.Defs.MechanicTargetDef
+    return:
+      type: TDMaker.Core.Defs.ImpactPayloadDef
+    content.vb: Public Shared Function CreateTransfer(destination As PathDestinationDef, chance As Single = 1, triggerOnZeroDamage
+      As Boolean = False, targets As MechanicTargetDef = Nothing) As ImpactPayloadDef
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.CreateTransfer*
+  nameWithType.vb: ImpactPayloadDef.CreateTransfer(PathDestinationDef, Single, Boolean, MechanicTargetDef)
+  fullName.vb: TDMaker.Core.Defs.ImpactPayloadDef.CreateTransfer(TDMaker.Core.Defs.PathDestinationDef, Single, Boolean, TDMaker.Core.Defs.MechanicTargetDef)
+  name.vb: CreateTransfer(PathDestinationDef, Single, Boolean, MechanicTargetDef)
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.#ctor(TDMaker.Core.Defs.DamageDef,TDMaker.Core.Defs.AreaEffectDef,TDMaker.Core.Defs.PathDisplacementDef,System.Single,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef)
+  commentId: M:TDMaker.Core.Defs.ImpactPayloadDef.#ctor(TDMaker.Core.Defs.DamageDef,TDMaker.Core.Defs.AreaEffectDef,TDMaker.Core.Defs.PathDisplacementDef,System.Single,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef)
+  id: '#ctor(TDMaker.Core.Defs.DamageDef,TDMaker.Core.Defs.AreaEffectDef,TDMaker.Core.Defs.PathDisplacementDef,System.Single,System.Boolean,TDMaker.Core.Defs.MechanicTargetDef)'
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: ImpactPayloadDef(DamageDef, AreaEffectDef, PathDisplacementDef, float, bool, MechanicTargetDef)
+  nameWithType: ImpactPayloadDef.ImpactPayloadDef(DamageDef, AreaEffectDef, PathDisplacementDef, float, bool, MechanicTargetDef)
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.ImpactPayloadDef(TDMaker.Core.Defs.DamageDef, TDMaker.Core.Defs.AreaEffectDef,
+    TDMaker.Core.Defs.PathDisplacementDef, float, bool, TDMaker.Core.Defs.MechanicTargetDef)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates extra blast, residual field and/or displacement data.
+  example: []
+  syntax:
+    content: public ImpactPayloadDef(DamageDef secondaryDamage = null, AreaEffectDef area = null, PathDisplacementDef displacement
+      = null, float chance = 1, bool triggerOnZeroDamage = false, MechanicTargetDef targets = null)
+    parameters:
+    - id: secondaryDamage
+      type: TDMaker.Core.Defs.DamageDef
+    - id: area
+      type: TDMaker.Core.Defs.AreaEffectDef
+    - id: displacement
+      type: TDMaker.Core.Defs.PathDisplacementDef
+    - id: chance
+      type: System.Single
+    - id: triggerOnZeroDamage
+      type: System.Boolean
+    - id: targets
+      type: TDMaker.Core.Defs.MechanicTargetDef
+    content.vb: Public Sub New(secondaryDamage As DamageDef = Nothing, area As AreaEffectDef = Nothing, displacement As PathDisplacementDef
+      = Nothing, chance As Single = 1, triggerOnZeroDamage As Boolean = False, targets As MechanicTargetDef = Nothing)
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.#ctor*
+  nameWithType.vb: ImpactPayloadDef.New(DamageDef, AreaEffectDef, PathDisplacementDef, Single, Boolean, MechanicTargetDef)
+  fullName.vb: TDMaker.Core.Defs.ImpactPayloadDef.New(TDMaker.Core.Defs.DamageDef, TDMaker.Core.Defs.AreaEffectDef, TDMaker.Core.Defs.PathDisplacementDef,
+    Single, Boolean, TDMaker.Core.Defs.MechanicTargetDef)
+  name.vb: New(DamageDef, AreaEffectDef, PathDisplacementDef, Single, Boolean, MechanicTargetDef)
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Transfer
+  commentId: P:TDMaker.Core.Defs.ImpactPayloadDef.Transfer
+  id: Transfer
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: Transfer
+  nameWithType: ImpactPayloadDef.Transfer
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Transfer
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional exact path destination for a surviving victim, applied after relative displacement.
+  example: []
+  syntax:
+    content: public PathDestinationDef Transfer { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.PathDestinationDef
+    content.vb: Public ReadOnly Property Transfer As PathDestinationDef
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.Transfer*
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.TransferKey
+  commentId: P:TDMaker.Core.Defs.ImpactPayloadDef.TransferKey
+  id: TransferKey
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: TransferKey
+  nameWithType: ImpactPayloadDef.TransferKey
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.TransferKey
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional mechanism identity for PathTransferred.Key when this hit relocates its victim.
+  example: []
+  syntax:
+    content: public string TransferKey { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property TransferKey As String
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.TransferKey*
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.SecondaryDamage
+  commentId: P:TDMaker.Core.Defs.ImpactPayloadDef.SecondaryDamage
+  id: SecondaryDamage
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: SecondaryDamage
+  nameWithType: ImpactPayloadDef.SecondaryDamage
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.SecondaryDamage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Additional independent impact centered on the victim's impact position, with the original source and credit.
+  example: []
+  syntax:
+    content: public DamageDef SecondaryDamage { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public ReadOnly Property SecondaryDamage As DamageDef
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.SecondaryDamage*
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Area
+  commentId: P:TDMaker.Core.Defs.ImpactPayloadDef.Area
+  id: Area
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: ImpactPayloadDef.Area
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Area
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Residual region centered on the impact position, even when the victim died.
+  example: []
+  syntax:
+    content: public AreaEffectDef Area { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.AreaEffectDef
+    content.vb: Public ReadOnly Property Area As AreaEffectDef
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.Area*
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Displacement
+  commentId: P:TDMaker.Core.Defs.ImpactPayloadDef.Displacement
+  id: Displacement
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: Displacement
+  nameWithType: ImpactPayloadDef.Displacement
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Displacement
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Path shift applied only if the victim is still alive.
+  example: []
+  syntax:
+    content: public PathDisplacementDef Displacement { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.PathDisplacementDef
+    content.vb: Public ReadOnly Property Displacement As PathDisplacementDef
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.Displacement*
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Chance
+  commentId: P:TDMaker.Core.Defs.ImpactPayloadDef.Chance
+  id: Chance
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: Chance
+  nameWithType: ImpactPayloadDef.Chance
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Chance
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Probability per eligible resolved hit.
+  example: []
+  syntax:
+    content: public float Chance { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Chance As Single
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.Chance*
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.TriggerOnZeroDamage
+  commentId: P:TDMaker.Core.Defs.ImpactPayloadDef.TriggerOnZeroDamage
+  id: TriggerOnZeroDamage
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: TriggerOnZeroDamage
+  nameWithType: ImpactPayloadDef.TriggerOnZeroDamage
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.TriggerOnZeroDamage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Also permits zero-health-loss packets, useful for control-only impacts; immunity-rejected requests never trigger.
+  example: []
+  syntax:
+    content: public bool TriggerOnZeroDamage { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TriggerOnZeroDamage As Boolean
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.TriggerOnZeroDamage*
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Targets
+  commentId: P:TDMaker.Core.Defs.ImpactPayloadDef.Targets
+  id: Targets
+  parent: TDMaker.Core.Defs.ImpactPayloadDef
+  langs:
+  - csharp
+  - vb
+  name: Targets
+  nameWithType: ImpactPayloadDef.Targets
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Targets
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Additional victim eligibility, checked at impact before damage is applied.
+  example: []
+  syntax:
+    content: public MechanicTargetDef Targets { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.MechanicTargetDef
+    content.vb: Public ReadOnly Property Targets As MechanicTargetDef
+  overload: TDMaker.Core.Defs.ImpactPayloadDef.Targets*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.WithTransfer*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.WithTransfer
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_WithTransfer_TDMaker_Core_Defs_PathDestinationDef_
+  name: WithTransfer
+  nameWithType: ImpactPayloadDef.WithTransfer
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.WithTransfer
+- uid: TDMaker.Core.Defs.PathDestinationDef
+  commentId: T:TDMaker.Core.Defs.PathDestinationDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDestinationDef.html
+  name: PathDestinationDef
+  nameWithType: PathDestinationDef
+  fullName: TDMaker.Core.Defs.PathDestinationDef
+- uid: TDMaker.Core.Defs.ImpactPayloadDef
+  commentId: T:TDMaker.Core.Defs.ImpactPayloadDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html
+  name: ImpactPayloadDef
+  nameWithType: ImpactPayloadDef
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.WithTransferKey*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.WithTransferKey
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_WithTransferKey_System_String_
+  name: WithTransferKey
+  nameWithType: ImpactPayloadDef.WithTransferKey
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.WithTransferKey
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.CreateTransfer*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.CreateTransfer
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_CreateTransfer_TDMaker_Core_Defs_PathDestinationDef_System_Single_System_Boolean_TDMaker_Core_Defs_MechanicTargetDef_
+  name: CreateTransfer
+  nameWithType: ImpactPayloadDef.CreateTransfer
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.CreateTransfer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.MechanicTargetDef
+  commentId: T:TDMaker.Core.Defs.MechanicTargetDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html
+  name: MechanicTargetDef
+  nameWithType: MechanicTargetDef
+  fullName: TDMaker.Core.Defs.MechanicTargetDef
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef__ctor_TDMaker_Core_Defs_DamageDef_TDMaker_Core_Defs_AreaEffectDef_TDMaker_Core_Defs_PathDisplacementDef_System_Single_System_Boolean_TDMaker_Core_Defs_MechanicTargetDef_
+  name: ImpactPayloadDef
+  nameWithType: ImpactPayloadDef.ImpactPayloadDef
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.ImpactPayloadDef
+  nameWithType.vb: ImpactPayloadDef.New
+  fullName.vb: TDMaker.Core.Defs.ImpactPayloadDef.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+- uid: TDMaker.Core.Defs.AreaEffectDef
+  commentId: T:TDMaker.Core.Defs.AreaEffectDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AreaEffectDef.html
+  name: AreaEffectDef
+  nameWithType: AreaEffectDef
+  fullName: TDMaker.Core.Defs.AreaEffectDef
+- uid: TDMaker.Core.Defs.PathDisplacementDef
+  commentId: T:TDMaker.Core.Defs.PathDisplacementDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDisplacementDef.html
+  name: PathDisplacementDef
+  nameWithType: PathDisplacementDef
+  fullName: TDMaker.Core.Defs.PathDisplacementDef
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Transfer*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.Transfer
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_Transfer
+  name: Transfer
+  nameWithType: ImpactPayloadDef.Transfer
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Transfer
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.TransferKey*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.TransferKey
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_TransferKey
+  name: TransferKey
+  nameWithType: ImpactPayloadDef.TransferKey
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.TransferKey
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.SecondaryDamage*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.SecondaryDamage
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_SecondaryDamage
+  name: SecondaryDamage
+  nameWithType: ImpactPayloadDef.SecondaryDamage
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.SecondaryDamage
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Area*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.Area
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_Area
+  name: Area
+  nameWithType: ImpactPayloadDef.Area
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Area
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Displacement*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.Displacement
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_Displacement
+  name: Displacement
+  nameWithType: ImpactPayloadDef.Displacement
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Displacement
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Chance*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.Chance
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_Chance
+  name: Chance
+  nameWithType: ImpactPayloadDef.Chance
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Chance
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.TriggerOnZeroDamage*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.TriggerOnZeroDamage
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_TriggerOnZeroDamage
+  name: TriggerOnZeroDamage
+  nameWithType: ImpactPayloadDef.TriggerOnZeroDamage
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.TriggerOnZeroDamage
+- uid: TDMaker.Core.Defs.ImpactPayloadDef.Targets*
+  commentId: Overload:TDMaker.Core.Defs.ImpactPayloadDef.Targets
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html#TDMaker_Core_Defs_ImpactPayloadDef_Targets
+  name: Targets
+  nameWithType: ImpactPayloadDef.Targets
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef.Targets

@@ -1,0 +1,445 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.EntrySpan
+  commentId: T:TDMaker.Editor.EntrySpan
+  id: EntrySpan
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.EntrySpan.End
+  - TDMaker.Editor.EntrySpan.Enter
+  - TDMaker.Editor.EntrySpan.Entry
+  - TDMaker.Editor.EntrySpan.Group
+  - TDMaker.Editor.EntrySpan.Interval
+  - TDMaker.Editor.EntrySpan.Next
+  - TDMaker.Editor.EntrySpan.Start
+  langs:
+  - csharp
+  - vb
+  name: EntrySpan
+  nameWithType: EntrySpan
+  fullName: TDMaker.Editor.EntrySpan
+  type: Struct
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timing of one spawn entry inside its group, in seconds from the wave start.
+  example: []
+  syntax:
+    content: public struct EntrySpan
+    content.vb: Public Structure EntrySpan
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Editor.EntrySpan.Group
+  commentId: F:TDMaker.Editor.EntrySpan.Group
+  id: Group
+  parent: TDMaker.Editor.EntrySpan
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: EntrySpan.Group
+  fullName: TDMaker.Editor.EntrySpan.Group
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Group index inside the wave.
+  example: []
+  syntax:
+    content: public int Group
+    return:
+      type: System.Int32
+    content.vb: Public Group As Integer
+- uid: TDMaker.Editor.EntrySpan.Entry
+  commentId: F:TDMaker.Editor.EntrySpan.Entry
+  id: Entry
+  parent: TDMaker.Editor.EntrySpan
+  langs:
+  - csharp
+  - vb
+  name: Entry
+  nameWithType: EntrySpan.Entry
+  fullName: TDMaker.Editor.EntrySpan.Entry
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Entry index inside the group.
+  example: []
+  syntax:
+    content: public int Entry
+    return:
+      type: System.Int32
+    content.vb: Public Entry As Integer
+- uid: TDMaker.Editor.EntrySpan.Enter
+  commentId: F:TDMaker.Editor.EntrySpan.Enter
+  id: Enter
+  parent: TDMaker.Editor.EntrySpan
+  langs:
+  - csharp
+  - vb
+  name: Enter
+  nameWithType: EntrySpan.Enter
+  fullName: TDMaker.Editor.EntrySpan.Enter
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Time the entry is entered (before its own start delay).
+  example: []
+  syntax:
+    content: public float Enter
+    return:
+      type: System.Single
+    content.vb: Public Enter As Single
+- uid: TDMaker.Editor.EntrySpan.Start
+  commentId: F:TDMaker.Editor.EntrySpan.Start
+  id: Start
+  parent: TDMaker.Editor.EntrySpan
+  langs:
+  - csharp
+  - vb
+  name: Start
+  nameWithType: EntrySpan.Start
+  fullName: TDMaker.Editor.EntrySpan.Start
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Enter + start delay; the first spawn happens one interval later.
+  example: []
+  syntax:
+    content: public float Start
+    return:
+      type: System.Single
+    content.vb: Public Start As Single
+- uid: TDMaker.Editor.EntrySpan.End
+  commentId: F:TDMaker.Editor.EntrySpan.End
+  id: End
+  parent: TDMaker.Editor.EntrySpan
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: EntrySpan.End
+  fullName: TDMaker.Editor.EntrySpan.End
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Time the entry finishes, including the wait after the last spawn.
+  example: []
+  syntax:
+    content: public float End
+    return:
+      type: System.Single
+    content.vb: Public [End] As Single
+- uid: TDMaker.Editor.EntrySpan.Interval
+  commentId: F:TDMaker.Editor.EntrySpan.Interval
+  id: Interval
+  parent: TDMaker.Editor.EntrySpan
+  langs:
+  - csharp
+  - vb
+  name: Interval
+  nameWithType: EntrySpan.Interval
+  fullName: TDMaker.Editor.EntrySpan.Interval
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Effective interval (a zero interval spawns one per tick).
+  example: []
+  syntax:
+    content: public float Interval
+    return:
+      type: System.Single
+    content.vb: Public Interval As Single
+- uid: TDMaker.Editor.EntrySpan.Next
+  commentId: F:TDMaker.Editor.EntrySpan.Next
+  id: Next
+  parent: TDMaker.Editor.EntrySpan
+  langs:
+  - csharp
+  - vb
+  name: Next
+  nameWithType: EntrySpan.Next
+  fullName: TDMaker.Editor.EntrySpan.Next
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Time the next entry is entered (End + following gap).
+  example: []
+  syntax:
+    content: public float Next
+    return:
+      type: System.Single
+    content.vb: Public [Next] As Single
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.MapEditorWindow.Tool
+  commentId: T:TDMaker.Editor.MapEditorWindow.Tool
+  id: MapEditorWindow.Tool
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.MapEditorWindow.Tool.Background
+  - TDMaker.Editor.MapEditorWindow.Tool.None
+  - TDMaker.Editor.MapEditorWindow.Tool.Paths
+  - TDMaker.Editor.MapEditorWindow.Tool.Slots
+  - TDMaker.Editor.MapEditorWindow.Tool.WaveCall
+  langs:
+  - csharp
+  - vb
+  name: MapEditorWindow.Tool
+  nameWithType: MapEditorWindow.Tool
+  fullName: TDMaker.Editor.MapEditorWindow.Tool
+  type: Enum
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The Map Editor's Scene-view tools.
+  example: []
+  syntax:
+    content: public enum MapEditorWindow.Tool
+    content.vb: Public Enum MapEditorWindow.Tool
+- uid: TDMaker.Editor.MapEditorWindow.Tool.None
+  commentId: F:TDMaker.Editor.MapEditorWindow.Tool.None
+  id: None
+  parent: TDMaker.Editor.MapEditorWindow.Tool
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: MapEditorWindow.Tool.None
+  fullName: TDMaker.Editor.MapEditorWindow.Tool.None
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Scene view behaves normally; the level is only drawn.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TDMaker.Editor.MapEditorWindow.Tool
+- uid: TDMaker.Editor.MapEditorWindow.Tool.Background
+  commentId: F:TDMaker.Editor.MapEditorWindow.Tool.Background
+  id: Background
+  parent: TDMaker.Editor.MapEditorWindow.Tool
+  langs:
+  - csharp
+  - vb
+  name: Background
+  nameWithType: MapEditorWindow.Tool.Background
+  fullName: TDMaker.Editor.MapEditorWindow.Tool.Background
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Move the background (when unlocked).
+  example: []
+  syntax:
+    content: Background = 1
+    return:
+      type: TDMaker.Editor.MapEditorWindow.Tool
+- uid: TDMaker.Editor.MapEditorWindow.Tool.Paths
+  commentId: F:TDMaker.Editor.MapEditorWindow.Tool.Paths
+  id: Paths
+  parent: TDMaker.Editor.MapEditorWindow.Tool
+  langs:
+  - csharp
+  - vb
+  name: Paths
+  nameWithType: MapEditorWindow.Tool.Paths
+  fullName: TDMaker.Editor.MapEditorWindow.Tool.Paths
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Place and edit path points.
+  example: []
+  syntax:
+    content: Paths = 2
+    return:
+      type: TDMaker.Editor.MapEditorWindow.Tool
+- uid: TDMaker.Editor.MapEditorWindow.Tool.Slots
+  commentId: F:TDMaker.Editor.MapEditorWindow.Tool.Slots
+  id: Slots
+  parent: TDMaker.Editor.MapEditorWindow.Tool
+  langs:
+  - csharp
+  - vb
+  name: Slots
+  nameWithType: MapEditorWindow.Tool.Slots
+  fullName: TDMaker.Editor.MapEditorWindow.Tool.Slots
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Place and edit build slots.
+  example: []
+  syntax:
+    content: Slots = 3
+    return:
+      type: TDMaker.Editor.MapEditorWindow.Tool
+- uid: TDMaker.Editor.MapEditorWindow.Tool.WaveCall
+  commentId: F:TDMaker.Editor.MapEditorWindow.Tool.WaveCall
+  id: WaveCall
+  parent: TDMaker.Editor.MapEditorWindow.Tool
+  langs:
+  - csharp
+  - vb
+  name: WaveCall
+  nameWithType: MapEditorWindow.Tool.WaveCall
+  fullName: TDMaker.Editor.MapEditorWindow.Tool.WaveCall
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Place the wave-call buttons.
+  example: []
+  syntax:
+    content: WaveCall = 4
+    return:
+      type: TDMaker.Editor.MapEditorWindow.Tool
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: TDMaker.Editor.MapEditorWindow.Tool
+  commentId: T:TDMaker.Editor.MapEditorWindow.Tool
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.MapEditorWindow.html
+  name: MapEditorWindow.Tool
+  nameWithType: MapEditorWindow.Tool
+  fullName: TDMaker.Editor.MapEditorWindow.Tool
+  spec.csharp:
+  - uid: TDMaker.Editor.MapEditorWindow
+    name: MapEditorWindow
+    isExternal: true
+    href: TDMaker.Editor.MapEditorWindow.html
+  - name: .
+  - uid: TDMaker.Editor.MapEditorWindow.Tool
+    name: Tool
+    isExternal: true
+    href: TDMaker.Editor.MapEditorWindow.Tool.html
+  spec.vb:
+  - uid: TDMaker.Editor.MapEditorWindow
+    name: MapEditorWindow
+    isExternal: true
+    href: TDMaker.Editor.MapEditorWindow.html
+  - name: .
+  - uid: TDMaker.Editor.MapEditorWindow.Tool
+    name: Tool
+    isExternal: true
+    href: TDMaker.Editor.MapEditorWindow.Tool.html

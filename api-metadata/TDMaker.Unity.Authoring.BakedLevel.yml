@@ -1,0 +1,1345 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.BakedLevel
+  commentId: T:TDMaker.Unity.Authoring.BakedLevel
+  id: BakedLevel
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.BakedLevel.CameraFraming
+  - TDMaker.Unity.Authoring.BakedLevel.GetHero(System.String)
+  - TDMaker.Unity.Authoring.BakedLevel.GetSpell(System.Int32)
+  - TDMaker.Unity.Authoring.BakedLevel.GetTower(System.String)
+  - TDMaker.Unity.Authoring.BakedLevel.GetTowerTier(System.String)
+  - TDMaker.Unity.Authoring.BakedLevel.HeroSpawns
+  - TDMaker.Unity.Authoring.BakedLevel.Heroes
+  - TDMaker.Unity.Authoring.BakedLevel.IsBossWave(System.Int32)
+  - TDMaker.Unity.Authoring.BakedLevel.Level
+  - TDMaker.Unity.Authoring.BakedLevel.Music
+  - TDMaker.Unity.Authoring.BakedLevel.Paths
+  - TDMaker.Unity.Authoring.BakedLevel.RaisesRemains
+  - TDMaker.Unity.Authoring.BakedLevel.RateVictory(System.Int32)
+  - TDMaker.Unity.Authoring.BakedLevel.Spells
+  - TDMaker.Unity.Authoring.BakedLevel.Templates
+  - TDMaker.Unity.Authoring.BakedLevel.TryGetAsset(System.String,TDMaker.Unity.Authoring.EntityAssetBase@)
+  - TDMaker.Unity.Authoring.BakedLevel.TryGetEffect(System.String,TDMaker.Unity.Authoring.StatusEffectAsset@)
+  - TDMaker.Unity.Authoring.BakedLevel.TryGetMechanicVisual(System.String,TDMaker.Unity.Authoring.MechanicVisual@)
+  - TDMaker.Unity.Authoring.BakedLevel.TryGetProjectile(System.String,TDMaker.Unity.Authoring.ProjectileAsset@)
+  - TDMaker.Unity.Authoring.BakedLevel.WithTemplates(TDMaker.Core.Defs.TemplateRegistry)
+  langs:
+  - csharp
+  - vb
+  name: BakedLevel
+  nameWithType: BakedLevel
+  fullName: TDMaker.Unity.Authoring.BakedLevel
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'The result of baking a level: core inputs plus lookups back to authoring assets for the view.'
+  example: []
+  syntax:
+    content: public sealed class BakedLevel
+    content.vb: Public NotInheritable Class BakedLevel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.BakedLevel.IsBossWave(System.Int32)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.IsBossWave(System.Int32)
+  id: IsBossWave(System.Int32)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: IsBossWave(int)
+  nameWithType: BakedLevel.IsBossWave(int)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.IsBossWave(int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether the one-based wave <code class="paramref">waveNumber</code> is flagged as a boss wave (presentation hint).
+  example: []
+  syntax:
+    content: public bool IsBossWave(int waveNumber)
+    parameters:
+    - id: waveNumber
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsBossWave(waveNumber As Integer) As Boolean
+  overload: TDMaker.Unity.Authoring.BakedLevel.IsBossWave*
+  nameWithType.vb: BakedLevel.IsBossWave(Integer)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.IsBossWave(Integer)
+  name.vb: IsBossWave(Integer)
+- uid: TDMaker.Unity.Authoring.BakedLevel.WithTemplates(TDMaker.Core.Defs.TemplateRegistry)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.WithTemplates(TDMaker.Core.Defs.TemplateRegistry)
+  id: WithTemplates(TDMaker.Core.Defs.TemplateRegistry)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: WithTemplates(TemplateRegistry)
+  nameWithType: BakedLevel.WithTemplates(TemplateRegistry)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.WithTemplates(TDMaker.Core.Defs.TemplateRegistry)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Returns a copy that uses <code class="paramref">templates</code> (for example decorated by
+
+    <code>SimulationRunner.AddTemplateDecorator</code>) and keeps every authoring lookup.'
+  example: []
+  syntax:
+    content: public BakedLevel WithTemplates(TemplateRegistry templates)
+    parameters:
+    - id: templates
+      type: TDMaker.Core.Defs.TemplateRegistry
+    return:
+      type: TDMaker.Unity.Authoring.BakedLevel
+    content.vb: Public Function WithTemplates(templates As TemplateRegistry) As BakedLevel
+  overload: TDMaker.Unity.Authoring.BakedLevel.WithTemplates*
+- uid: TDMaker.Unity.Authoring.BakedLevel.TryGetMechanicVisual(System.String,TDMaker.Unity.Authoring.MechanicVisual@)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.TryGetMechanicVisual(System.String,TDMaker.Unity.Authoring.MechanicVisual@)
+  id: TryGetMechanicVisual(System.String,TDMaker.Unity.Authoring.MechanicVisual@)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: TryGetMechanicVisual(string, out MechanicVisual)
+  nameWithType: BakedLevel.TryGetMechanicVisual(string, out MechanicVisual)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.TryGetMechanicVisual(string, out TDMaker.Unity.Authoring.MechanicVisual)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Finds the colour and VFX of a keyed mechanic (chain, multi-target attack or region pulse) from its event key.
+  example: []
+  syntax:
+    content: public bool TryGetMechanicVisual(string key, out MechanicVisual visual)
+    parameters:
+    - id: key
+      type: System.String
+    - id: visual
+      type: TDMaker.Unity.Authoring.MechanicVisual
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetMechanicVisual(key As String, visual As MechanicVisual) As Boolean
+  overload: TDMaker.Unity.Authoring.BakedLevel.TryGetMechanicVisual*
+  nameWithType.vb: BakedLevel.TryGetMechanicVisual(String, MechanicVisual)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.TryGetMechanicVisual(String, TDMaker.Unity.Authoring.MechanicVisual)
+  name.vb: TryGetMechanicVisual(String, MechanicVisual)
+- uid: TDMaker.Unity.Authoring.BakedLevel.GetTowerTier(System.String)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.GetTowerTier(System.String)
+  id: GetTowerTier(System.String)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: GetTowerTier(string)
+  nameWithType: BakedLevel.GetTowerTier(string)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.GetTowerTier(string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: One-based upgrade depth of a tower template (1 = buildable base), or 0 when unknown.
+  example: []
+  syntax:
+    content: public int GetTowerTier(string templateId)
+    parameters:
+    - id: templateId
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Public Function GetTowerTier(templateId As String) As Integer
+  overload: TDMaker.Unity.Authoring.BakedLevel.GetTowerTier*
+  nameWithType.vb: BakedLevel.GetTowerTier(String)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.GetTowerTier(String)
+  name.vb: GetTowerTier(String)
+- uid: TDMaker.Unity.Authoring.BakedLevel.RateVictory(System.Int32)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.RateVictory(System.Int32)
+  id: RateVictory(System.Int32)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: RateVictory(int)
+  nameWithType: BakedLevel.RateVictory(int)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.RateVictory(int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Stars (0..3) the level''s <xref href="TDMaker.Core.Defs.LevelRulesDef.VictoryRating" data-throw-if-not-resolved="false"></xref>
+    gives for <code class="paramref">lives</code> remaining.
+
+    During play read <code>GameState.VictoryStars</code> or the Victory event''s <code>IntValue</code> instead.'
+  example: []
+  syntax:
+    content: public int RateVictory(int lives)
+    parameters:
+    - id: lives
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function RateVictory(lives As Integer) As Integer
+  overload: TDMaker.Unity.Authoring.BakedLevel.RateVictory*
+  nameWithType.vb: BakedLevel.RateVictory(Integer)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.RateVictory(Integer)
+  name.vb: RateVictory(Integer)
+- uid: TDMaker.Unity.Authoring.BakedLevel.TryGetEffect(System.String,TDMaker.Unity.Authoring.StatusEffectAsset@)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.TryGetEffect(System.String,TDMaker.Unity.Authoring.StatusEffectAsset@)
+  id: TryGetEffect(System.String,TDMaker.Unity.Authoring.StatusEffectAsset@)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: TryGetEffect(string, out StatusEffectAsset)
+  nameWithType: BakedLevel.TryGetEffect(string, out StatusEffectAsset)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.TryGetEffect(string, out TDMaker.Unity.Authoring.StatusEffectAsset)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Finds the status effect asset for an effect id (from effect events).
+  example: []
+  syntax:
+    content: public bool TryGetEffect(string effectId, out StatusEffectAsset asset)
+    parameters:
+    - id: effectId
+      type: System.String
+    - id: asset
+      type: TDMaker.Unity.Authoring.StatusEffectAsset
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetEffect(effectId As String, asset As StatusEffectAsset) As Boolean
+  overload: TDMaker.Unity.Authoring.BakedLevel.TryGetEffect*
+  nameWithType.vb: BakedLevel.TryGetEffect(String, StatusEffectAsset)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.TryGetEffect(String, TDMaker.Unity.Authoring.StatusEffectAsset)
+  name.vb: TryGetEffect(String, StatusEffectAsset)
+- uid: TDMaker.Unity.Authoring.BakedLevel.GetHero(System.String)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.GetHero(System.String)
+  id: GetHero(System.String)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: GetHero(string)
+  nameWithType: BakedLevel.GetHero(string)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.GetHero(string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Finds the hero asset for a template id.
+  example: []
+  syntax:
+    content: public HeroAsset GetHero(string templateId)
+    parameters:
+    - id: templateId
+      type: System.String
+    return:
+      type: TDMaker.Unity.Authoring.HeroAsset
+    content.vb: Public Function GetHero(templateId As String) As HeroAsset
+  overload: TDMaker.Unity.Authoring.BakedLevel.GetHero*
+  nameWithType.vb: BakedLevel.GetHero(String)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.GetHero(String)
+  name.vb: GetHero(String)
+- uid: TDMaker.Unity.Authoring.BakedLevel.GetSpell(System.Int32)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.GetSpell(System.Int32)
+  id: GetSpell(System.Int32)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: GetSpell(int)
+  nameWithType: BakedLevel.GetSpell(int)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.GetSpell(int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Finds the spell asset for a spell index (Simulation.Spells order).
+  example: []
+  syntax:
+    content: public SpellAsset GetSpell(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: TDMaker.Unity.Authoring.SpellAsset
+    content.vb: Public Function GetSpell(index As Integer) As SpellAsset
+  overload: TDMaker.Unity.Authoring.BakedLevel.GetSpell*
+  nameWithType.vb: BakedLevel.GetSpell(Integer)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.GetSpell(Integer)
+  name.vb: GetSpell(Integer)
+- uid: TDMaker.Unity.Authoring.BakedLevel.TryGetAsset(System.String,TDMaker.Unity.Authoring.EntityAssetBase@)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.TryGetAsset(System.String,TDMaker.Unity.Authoring.EntityAssetBase@)
+  id: TryGetAsset(System.String,TDMaker.Unity.Authoring.EntityAssetBase@)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: TryGetAsset(string, out EntityAssetBase)
+  nameWithType: BakedLevel.TryGetAsset(string, out EntityAssetBase)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.TryGetAsset(string, out TDMaker.Unity.Authoring.EntityAssetBase)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Finds the authoring asset for a template id.
+  example: []
+  syntax:
+    content: public bool TryGetAsset(string templateId, out EntityAssetBase asset)
+    parameters:
+    - id: templateId
+      type: System.String
+    - id: asset
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetAsset(templateId As String, asset As EntityAssetBase) As Boolean
+  overload: TDMaker.Unity.Authoring.BakedLevel.TryGetAsset*
+  nameWithType.vb: BakedLevel.TryGetAsset(String, EntityAssetBase)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.TryGetAsset(String, TDMaker.Unity.Authoring.EntityAssetBase)
+  name.vb: TryGetAsset(String, EntityAssetBase)
+- uid: TDMaker.Unity.Authoring.BakedLevel.GetTower(System.String)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.GetTower(System.String)
+  id: GetTower(System.String)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: GetTower(string)
+  nameWithType: BakedLevel.GetTower(string)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.GetTower(string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Finds the tower asset for a template id.
+  example: []
+  syntax:
+    content: public TowerAsset GetTower(string templateId)
+    parameters:
+    - id: templateId
+      type: System.String
+    return:
+      type: TDMaker.Unity.Authoring.TowerAsset
+    content.vb: Public Function GetTower(templateId As String) As TowerAsset
+  overload: TDMaker.Unity.Authoring.BakedLevel.GetTower*
+  nameWithType.vb: BakedLevel.GetTower(String)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.GetTower(String)
+  name.vb: GetTower(String)
+- uid: TDMaker.Unity.Authoring.BakedLevel.TryGetProjectile(System.String,TDMaker.Unity.Authoring.ProjectileAsset@)
+  commentId: M:TDMaker.Unity.Authoring.BakedLevel.TryGetProjectile(System.String,TDMaker.Unity.Authoring.ProjectileAsset@)
+  id: TryGetProjectile(System.String,TDMaker.Unity.Authoring.ProjectileAsset@)
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: TryGetProjectile(string, out ProjectileAsset)
+  nameWithType: BakedLevel.TryGetProjectile(string, out ProjectileAsset)
+  fullName: TDMaker.Unity.Authoring.BakedLevel.TryGetProjectile(string, out TDMaker.Unity.Authoring.ProjectileAsset)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Finds a projectile asset by view key.
+  example: []
+  syntax:
+    content: public bool TryGetProjectile(string viewKey, out ProjectileAsset asset)
+    parameters:
+    - id: viewKey
+      type: System.String
+    - id: asset
+      type: TDMaker.Unity.Authoring.ProjectileAsset
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetProjectile(viewKey As String, asset As ProjectileAsset) As Boolean
+  overload: TDMaker.Unity.Authoring.BakedLevel.TryGetProjectile*
+  nameWithType.vb: BakedLevel.TryGetProjectile(String, ProjectileAsset)
+  fullName.vb: TDMaker.Unity.Authoring.BakedLevel.TryGetProjectile(String, TDMaker.Unity.Authoring.ProjectileAsset)
+  name.vb: TryGetProjectile(String, ProjectileAsset)
+- uid: TDMaker.Unity.Authoring.BakedLevel.Templates
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.Templates
+  id: Templates
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: Templates
+  nameWithType: BakedLevel.Templates
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Templates
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Resolved templates for the simulation.
+  example: []
+  syntax:
+    content: public TemplateRegistry Templates { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TemplateRegistry
+    content.vb: Public ReadOnly Property Templates As TemplateRegistry
+  overload: TDMaker.Unity.Authoring.BakedLevel.Templates*
+- uid: TDMaker.Unity.Authoring.BakedLevel.Level
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.Level
+  id: Level
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: BakedLevel.Level
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Level
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Level definition for the simulation.
+  example: []
+  syntax:
+    content: public LevelDef Level { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.LevelDef
+    content.vb: Public ReadOnly Property Level As LevelDef
+  overload: TDMaker.Unity.Authoring.BakedLevel.Level*
+- uid: TDMaker.Unity.Authoring.BakedLevel.Paths
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.Paths
+  id: Paths
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: Paths
+  nameWithType: BakedLevel.Paths
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Paths
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Authoring paths (with lane settings) used to build the level.
+  example: []
+  syntax:
+    content: public IReadOnlyList<PathData> Paths { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData}
+    content.vb: Public ReadOnly Property Paths As IReadOnlyList(Of PathData)
+  overload: TDMaker.Unity.Authoring.BakedLevel.Paths*
+- uid: TDMaker.Unity.Authoring.BakedLevel.CameraFraming
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.CameraFraming
+  id: CameraFraming
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: CameraFraming
+  nameWithType: BakedLevel.CameraFraming
+  fullName: TDMaker.Unity.Authoring.BakedLevel.CameraFraming
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Camera framing of the level (from its <xref href="TDMaker.Unity.Authoring.LevelAsset" data-throw-if-not-resolved="false"></xref>
+    or a scene override); never null after baking.
+  example: []
+  syntax:
+    content: public CameraFramingData CameraFraming { get; }
+    parameters: []
+    return:
+      type: TDMaker.Unity.Authoring.CameraFramingData
+    content.vb: Public ReadOnly Property CameraFraming As CameraFramingData
+  overload: TDMaker.Unity.Authoring.BakedLevel.CameraFraming*
+- uid: TDMaker.Unity.Authoring.BakedLevel.Music
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.Music
+  id: Music
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: Music
+  nameWithType: BakedLevel.Music
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Music
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Music of the level (from its <xref href="TDMaker.Unity.Authoring.LevelAsset" data-throw-if-not-resolved="false"></xref>);
+    never null after baking.
+  example: []
+  syntax:
+    content: public LevelMusicData Music { get; }
+    parameters: []
+    return:
+      type: TDMaker.Unity.Authoring.LevelMusicData
+    content.vb: Public ReadOnly Property Music As LevelMusicData
+  overload: TDMaker.Unity.Authoring.BakedLevel.Music*
+- uid: TDMaker.Unity.Authoring.BakedLevel.Spells
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.Spells
+  id: Spells
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: Spells
+  nameWithType: BakedLevel.Spells
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Spells
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Spell assets in <code>Level.AvailableSpells</code> (and <code>Simulation.Spells</code>) order.
+  example: []
+  syntax:
+    content: public IReadOnlyList<SpellAsset> Spells { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.SpellAsset}
+    content.vb: Public ReadOnly Property Spells As IReadOnlyList(Of SpellAsset)
+  overload: TDMaker.Unity.Authoring.BakedLevel.Spells*
+- uid: TDMaker.Unity.Authoring.BakedLevel.Heroes
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.Heroes
+  id: Heroes
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: Heroes
+  nameWithType: BakedLevel.Heroes
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Heroes
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Hero assets in <code>Level.AvailableHeroes</code> order.
+  example: []
+  syntax:
+    content: public IReadOnlyList<HeroAsset> Heroes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.HeroAsset}
+    content.vb: Public ReadOnly Property Heroes As IReadOnlyList(Of HeroAsset)
+  overload: TDMaker.Unity.Authoring.BakedLevel.Heroes*
+- uid: TDMaker.Unity.Authoring.BakedLevel.HeroSpawns
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.HeroSpawns
+  id: HeroSpawns
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: HeroSpawns
+  nameWithType: BakedLevel.HeroSpawns
+  fullName: TDMaker.Unity.Authoring.BakedLevel.HeroSpawns
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Spawn position for each hero, index-aligned with <xref href="TDMaker.Unity.Authoring.BakedLevel.Heroes" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IReadOnlyList<Vector2> HeroSpawns { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2}
+    content.vb: Public ReadOnly Property HeroSpawns As IReadOnlyList(Of Vector2)
+  overload: TDMaker.Unity.Authoring.BakedLevel.HeroSpawns*
+- uid: TDMaker.Unity.Authoring.BakedLevel.RaisesRemains
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.RaisesRemains
+  id: RaisesRemains
+  parent: TDMaker.Unity.Authoring.BakedLevel
+  langs:
+  - csharp
+  - vb
+  name: RaisesRemains
+  nameWithType: BakedLevel.RaisesRemains
+  fullName: TDMaker.Unity.Authoring.BakedLevel.RaisesRemains
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether any baked template raises bodies (the view then draws body markers).
+  example: []
+  syntax:
+    content: public bool RaisesRemains { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RaisesRemains As Boolean
+  overload: TDMaker.Unity.Authoring.BakedLevel.RaisesRemains*
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Authoring.BakedLevel.IsBossWave*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.IsBossWave
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_IsBossWave_System_Int32_
+  name: IsBossWave
+  nameWithType: BakedLevel.IsBossWave
+  fullName: TDMaker.Unity.Authoring.BakedLevel.IsBossWave
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.BakedLevel.WithTemplates*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.WithTemplates
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_WithTemplates_TDMaker_Core_Defs_TemplateRegistry_
+  name: WithTemplates
+  nameWithType: BakedLevel.WithTemplates
+  fullName: TDMaker.Unity.Authoring.BakedLevel.WithTemplates
+- uid: TDMaker.Core.Defs.TemplateRegistry
+  commentId: T:TDMaker.Core.Defs.TemplateRegistry
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TemplateRegistry.html
+  name: TemplateRegistry
+  nameWithType: TemplateRegistry
+  fullName: TDMaker.Core.Defs.TemplateRegistry
+- uid: TDMaker.Unity.Authoring.BakedLevel
+  commentId: T:TDMaker.Unity.Authoring.BakedLevel
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html
+  name: BakedLevel
+  nameWithType: BakedLevel
+  fullName: TDMaker.Unity.Authoring.BakedLevel
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.BakedLevel.TryGetMechanicVisual*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.TryGetMechanicVisual
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_TryGetMechanicVisual_System_String_TDMaker_Unity_Authoring_MechanicVisual__
+  name: TryGetMechanicVisual
+  nameWithType: BakedLevel.TryGetMechanicVisual
+  fullName: TDMaker.Unity.Authoring.BakedLevel.TryGetMechanicVisual
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Authoring.MechanicVisual
+  commentId: T:TDMaker.Unity.Authoring.MechanicVisual
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicVisual.html
+  name: MechanicVisual
+  nameWithType: MechanicVisual
+  fullName: TDMaker.Unity.Authoring.MechanicVisual
+- uid: TDMaker.Unity.Authoring.BakedLevel.GetTowerTier*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.GetTowerTier
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_GetTowerTier_System_String_
+  name: GetTowerTier
+  nameWithType: BakedLevel.GetTowerTier
+  fullName: TDMaker.Unity.Authoring.BakedLevel.GetTowerTier
+- uid: TDMaker.Core.Defs.LevelRulesDef.VictoryRating
+  commentId: P:TDMaker.Core.Defs.LevelRulesDef.VictoryRating
+  isExternal: true
+  name: VictoryRating
+  nameWithType: LevelRulesDef.VictoryRating
+  fullName: TDMaker.Core.Defs.LevelRulesDef.VictoryRating
+- uid: TDMaker.Unity.Authoring.BakedLevel.RateVictory*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.RateVictory
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_RateVictory_System_Int32_
+  name: RateVictory
+  nameWithType: BakedLevel.RateVictory
+  fullName: TDMaker.Unity.Authoring.BakedLevel.RateVictory
+- uid: TDMaker.Unity.Authoring.BakedLevel.TryGetEffect*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.TryGetEffect
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_TryGetEffect_System_String_TDMaker_Unity_Authoring_StatusEffectAsset__
+  name: TryGetEffect
+  nameWithType: BakedLevel.TryGetEffect
+  fullName: TDMaker.Unity.Authoring.BakedLevel.TryGetEffect
+- uid: TDMaker.Unity.Authoring.StatusEffectAsset
+  commentId: T:TDMaker.Unity.Authoring.StatusEffectAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.StatusEffectAsset.html
+  name: StatusEffectAsset
+  nameWithType: StatusEffectAsset
+  fullName: TDMaker.Unity.Authoring.StatusEffectAsset
+- uid: TDMaker.Unity.Authoring.BakedLevel.GetHero*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.GetHero
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_GetHero_System_String_
+  name: GetHero
+  nameWithType: BakedLevel.GetHero
+  fullName: TDMaker.Unity.Authoring.BakedLevel.GetHero
+- uid: TDMaker.Unity.Authoring.HeroAsset
+  commentId: T:TDMaker.Unity.Authoring.HeroAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.HeroAsset.html
+  name: HeroAsset
+  nameWithType: HeroAsset
+  fullName: TDMaker.Unity.Authoring.HeroAsset
+- uid: TDMaker.Unity.Authoring.BakedLevel.GetSpell*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.GetSpell
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_GetSpell_System_Int32_
+  name: GetSpell
+  nameWithType: BakedLevel.GetSpell
+  fullName: TDMaker.Unity.Authoring.BakedLevel.GetSpell
+- uid: TDMaker.Unity.Authoring.SpellAsset
+  commentId: T:TDMaker.Unity.Authoring.SpellAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.SpellAsset.html
+  name: SpellAsset
+  nameWithType: SpellAsset
+  fullName: TDMaker.Unity.Authoring.SpellAsset
+- uid: TDMaker.Unity.Authoring.BakedLevel.TryGetAsset*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.TryGetAsset
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_TryGetAsset_System_String_TDMaker_Unity_Authoring_EntityAssetBase__
+  name: TryGetAsset
+  nameWithType: BakedLevel.TryGetAsset
+  fullName: TDMaker.Unity.Authoring.BakedLevel.TryGetAsset
+- uid: TDMaker.Unity.Authoring.EntityAssetBase
+  commentId: T:TDMaker.Unity.Authoring.EntityAssetBase
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EntityAssetBase.html
+  name: EntityAssetBase
+  nameWithType: EntityAssetBase
+  fullName: TDMaker.Unity.Authoring.EntityAssetBase
+- uid: TDMaker.Unity.Authoring.BakedLevel.GetTower*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.GetTower
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_GetTower_System_String_
+  name: GetTower
+  nameWithType: BakedLevel.GetTower
+  fullName: TDMaker.Unity.Authoring.BakedLevel.GetTower
+- uid: TDMaker.Unity.Authoring.TowerAsset
+  commentId: T:TDMaker.Unity.Authoring.TowerAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TowerAsset.html
+  name: TowerAsset
+  nameWithType: TowerAsset
+  fullName: TDMaker.Unity.Authoring.TowerAsset
+- uid: TDMaker.Unity.Authoring.BakedLevel.TryGetProjectile*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.TryGetProjectile
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_TryGetProjectile_System_String_TDMaker_Unity_Authoring_ProjectileAsset__
+  name: TryGetProjectile
+  nameWithType: BakedLevel.TryGetProjectile
+  fullName: TDMaker.Unity.Authoring.BakedLevel.TryGetProjectile
+- uid: TDMaker.Unity.Authoring.ProjectileAsset
+  commentId: T:TDMaker.Unity.Authoring.ProjectileAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.ProjectileAsset.html
+  name: ProjectileAsset
+  nameWithType: ProjectileAsset
+  fullName: TDMaker.Unity.Authoring.ProjectileAsset
+- uid: TDMaker.Unity.Authoring.BakedLevel.Templates*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.Templates
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_Templates
+  name: Templates
+  nameWithType: BakedLevel.Templates
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Templates
+- uid: TDMaker.Unity.Authoring.BakedLevel.Level*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.Level
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_Level
+  name: Level
+  nameWithType: BakedLevel.Level
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Level
+- uid: TDMaker.Core.Defs.LevelDef
+  commentId: T:TDMaker.Core.Defs.LevelDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html
+  name: LevelDef
+  nameWithType: LevelDef
+  fullName: TDMaker.Core.Defs.LevelDef
+- uid: TDMaker.Unity.Authoring.BakedLevel.Paths*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.Paths
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_Paths
+  name: Paths
+  nameWithType: BakedLevel.Paths
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Paths
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<PathData>
+  nameWithType: IReadOnlyList<PathData>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Unity.Authoring.PathData>
+  nameWithType.vb: IReadOnlyList(Of PathData)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Unity.Authoring.PathData)
+  name.vb: IReadOnlyList(Of PathData)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.PathData
+    name: PathData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.PathData
+    name: PathData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathData.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Unity.Authoring.LevelAsset
+  commentId: T:TDMaker.Unity.Authoring.LevelAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelAsset.html
+  name: LevelAsset
+  nameWithType: LevelAsset
+  fullName: TDMaker.Unity.Authoring.LevelAsset
+- uid: TDMaker.Unity.Authoring.BakedLevel.CameraFraming*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.CameraFraming
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_CameraFraming
+  name: CameraFraming
+  nameWithType: BakedLevel.CameraFraming
+  fullName: TDMaker.Unity.Authoring.BakedLevel.CameraFraming
+- uid: TDMaker.Unity.Authoring.CameraFramingData
+  commentId: T:TDMaker.Unity.Authoring.CameraFramingData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraFramingData.html
+  name: CameraFramingData
+  nameWithType: CameraFramingData
+  fullName: TDMaker.Unity.Authoring.CameraFramingData
+- uid: TDMaker.Unity.Authoring.BakedLevel.Music*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.Music
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_Music
+  name: Music
+  nameWithType: BakedLevel.Music
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Music
+- uid: TDMaker.Unity.Authoring.LevelMusicData
+  commentId: T:TDMaker.Unity.Authoring.LevelMusicData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelMusicData.html
+  name: LevelMusicData
+  nameWithType: LevelMusicData
+  fullName: TDMaker.Unity.Authoring.LevelMusicData
+- uid: TDMaker.Unity.Authoring.BakedLevel.Spells*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.Spells
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_Spells
+  name: Spells
+  nameWithType: BakedLevel.Spells
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Spells
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.SpellAsset}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.SpellAsset}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<SpellAsset>
+  nameWithType: IReadOnlyList<SpellAsset>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Unity.Authoring.SpellAsset>
+  nameWithType.vb: IReadOnlyList(Of SpellAsset)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Unity.Authoring.SpellAsset)
+  name.vb: IReadOnlyList(Of SpellAsset)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.SpellAsset
+    name: SpellAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.SpellAsset.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.SpellAsset
+    name: SpellAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.SpellAsset.html
+  - name: )
+- uid: TDMaker.Unity.Authoring.BakedLevel.Heroes*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.Heroes
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_Heroes
+  name: Heroes
+  nameWithType: BakedLevel.Heroes
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Heroes
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.HeroAsset}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.HeroAsset}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<HeroAsset>
+  nameWithType: IReadOnlyList<HeroAsset>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Unity.Authoring.HeroAsset>
+  nameWithType.vb: IReadOnlyList(Of HeroAsset)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Unity.Authoring.HeroAsset)
+  name.vb: IReadOnlyList(Of HeroAsset)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.HeroAsset
+    name: HeroAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.HeroAsset.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.HeroAsset
+    name: HeroAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.HeroAsset.html
+  - name: )
+- uid: TDMaker.Unity.Authoring.BakedLevel.Heroes
+  commentId: P:TDMaker.Unity.Authoring.BakedLevel.Heroes
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_Heroes
+  name: Heroes
+  nameWithType: BakedLevel.Heroes
+  fullName: TDMaker.Unity.Authoring.BakedLevel.Heroes
+- uid: TDMaker.Unity.Authoring.BakedLevel.HeroSpawns*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.HeroSpawns
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_HeroSpawns
+  name: HeroSpawns
+  nameWithType: BakedLevel.HeroSpawns
+  fullName: TDMaker.Unity.Authoring.BakedLevel.HeroSpawns
+- uid: System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2}
+  commentId: T:System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<Vector2>
+  nameWithType: IReadOnlyList<Vector2>
+  fullName: System.Collections.Generic.IReadOnlyList<UnityEngine.Vector2>
+  nameWithType.vb: IReadOnlyList(Of Vector2)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of UnityEngine.Vector2)
+  name.vb: IReadOnlyList(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: TDMaker.Unity.Authoring.BakedLevel.RaisesRemains*
+  commentId: Overload:TDMaker.Unity.Authoring.BakedLevel.RaisesRemains
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BakedLevel.html#TDMaker_Unity_Authoring_BakedLevel_RaisesRemains
+  name: RaisesRemains
+  nameWithType: BakedLevel.RaisesRemains
+  fullName: TDMaker.Unity.Authoring.BakedLevel.RaisesRemains

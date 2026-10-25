@@ -1,0 +1,746 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Components.ProjectileComponent
+  commentId: T:TDMaker.Core.Components.ProjectileComponent
+  id: ProjectileComponent
+  parent: TDMaker.Core.Components
+  children:
+  - TDMaker.Core.Components.ProjectileComponent.#ctor
+  - TDMaker.Core.Components.ProjectileComponent.Damage
+  - TDMaker.Core.Components.ProjectileComponent.Definition
+  - TDMaker.Core.Components.ProjectileComponent.Destination
+  - TDMaker.Core.Components.ProjectileComponent.Duration
+  - TDMaker.Core.Components.ProjectileComponent.Elapsed
+  - TDMaker.Core.Components.ProjectileComponent.ExperienceRecipientId
+  - TDMaker.Core.Components.ProjectileComponent.Height
+  - TDMaker.Core.Components.ProjectileComponent.Origin
+  - TDMaker.Core.Components.ProjectileComponent.OutputScale
+  - TDMaker.Core.Components.ProjectileComponent.SourceId
+  - TDMaker.Core.Components.ProjectileComponent.TargetId
+  langs:
+  - csharp
+  - vb
+  name: ProjectileComponent
+  nameWithType: ProjectileComponent
+  fullName: TDMaker.Core.Components.ProjectileComponent
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Runtime travel and impact data for a pooled projectile.
+  example: []
+  syntax:
+    content: public sealed class ProjectileComponent
+    content.vb: Public NotInheritable Class ProjectileComponent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Components.ProjectileComponent.#ctor
+  commentId: M:TDMaker.Core.Components.ProjectileComponent.#ctor
+  id: '#ctor'
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: ProjectileComponent()
+  nameWithType: ProjectileComponent.ProjectileComponent()
+  fullName: TDMaker.Core.Components.ProjectileComponent.ProjectileComponent()
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  syntax:
+    content: public ProjectileComponent()
+    content.vb: Public Sub New()
+  overload: TDMaker.Core.Components.ProjectileComponent.#ctor*
+  nameWithType.vb: ProjectileComponent.New()
+  fullName.vb: TDMaker.Core.Components.ProjectileComponent.New()
+  name.vb: New()
+- uid: TDMaker.Core.Components.ProjectileComponent.Definition
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.Definition
+  id: Definition
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: Definition
+  nameWithType: ProjectileComponent.Definition
+  fullName: TDMaker.Core.Components.ProjectileComponent.Definition
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Projectile travel definition.
+  example: []
+  syntax:
+    content: public ProjectileDef Definition { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.ProjectileDef
+    content.vb: Public ReadOnly Property Definition As ProjectileDef
+  overload: TDMaker.Core.Components.ProjectileComponent.Definition*
+- uid: TDMaker.Core.Components.ProjectileComponent.Damage
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.Damage
+  id: Damage
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: Damage
+  nameWithType: ProjectileComponent.Damage
+  fullName: TDMaker.Core.Components.ProjectileComponent.Damage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Damage definition.
+  example: []
+  syntax:
+    content: public DamageDef Damage { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public ReadOnly Property Damage As DamageDef
+  overload: TDMaker.Core.Components.ProjectileComponent.Damage*
+- uid: TDMaker.Core.Components.ProjectileComponent.SourceId
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.SourceId
+  id: SourceId
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: SourceId
+  nameWithType: ProjectileComponent.SourceId
+  fullName: TDMaker.Core.Components.ProjectileComponent.SourceId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Source entity identifier.
+  example: []
+  syntax:
+    content: public int SourceId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SourceId As Integer
+  overload: TDMaker.Core.Components.ProjectileComponent.SourceId*
+- uid: TDMaker.Core.Components.ProjectileComponent.TargetId
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.TargetId
+  id: TargetId
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: TargetId
+  nameWithType: ProjectileComponent.TargetId
+  fullName: TDMaker.Core.Components.ProjectileComponent.TargetId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Target entity identifier.
+  example: []
+  syntax:
+    content: public int TargetId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TargetId As Integer
+  overload: TDMaker.Core.Components.ProjectileComponent.TargetId*
+- uid: TDMaker.Core.Components.ProjectileComponent.Origin
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.Origin
+  id: Origin
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: ProjectileComponent.Origin
+  fullName: TDMaker.Core.Components.ProjectileComponent.Origin
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Launch position.
+  example: []
+  syntax:
+    content: public Vec2 Origin { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property Origin As Vec2
+  overload: TDMaker.Core.Components.ProjectileComponent.Origin*
+- uid: TDMaker.Core.Components.ProjectileComponent.Destination
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.Destination
+  id: Destination
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: Destination
+  nameWithType: ProjectileComponent.Destination
+  fullName: TDMaker.Core.Components.ProjectileComponent.Destination
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Fixed aim point, or current homing destination.
+  example: []
+  syntax:
+    content: public Vec2 Destination { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property Destination As Vec2
+  overload: TDMaker.Core.Components.ProjectileComponent.Destination*
+- uid: TDMaker.Core.Components.ProjectileComponent.Elapsed
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.Elapsed
+  id: Elapsed
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: Elapsed
+  nameWithType: ProjectileComponent.Elapsed
+  fullName: TDMaker.Core.Components.ProjectileComponent.Elapsed
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Seconds since launch.
+  example: []
+  syntax:
+    content: public float Elapsed { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Elapsed As Single
+  overload: TDMaker.Core.Components.ProjectileComponent.Elapsed*
+- uid: TDMaker.Core.Components.ProjectileComponent.Duration
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.Duration
+  id: Duration
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: ProjectileComponent.Duration
+  fullName: TDMaker.Core.Components.ProjectileComponent.Duration
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Initial flight duration for straight and ballistic travel.
+  example: []
+  syntax:
+    content: public float Duration { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Duration As Single
+  overload: TDMaker.Core.Components.ProjectileComponent.Duration*
+- uid: TDMaker.Core.Components.ProjectileComponent.Height
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.Height
+  id: Height
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: ProjectileComponent.Height
+  fullName: TDMaker.Core.Components.ProjectileComponent.Height
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Visual height above the simulation plane.
+  example: []
+  syntax:
+    content: public float Height { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Height As Single
+  overload: TDMaker.Core.Components.ProjectileComponent.Height*
+- uid: TDMaker.Core.Components.ProjectileComponent.OutputScale
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.OutputScale
+  id: OutputScale
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: OutputScale
+  nameWithType: ProjectileComponent.OutputScale
+  fullName: TDMaker.Core.Components.ProjectileComponent.OutputScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Outgoing damage multiplier captured at launch.
+  example: []
+  syntax:
+    content: public float OutputScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property OutputScale As Single
+  overload: TDMaker.Core.Components.ProjectileComponent.OutputScale*
+- uid: TDMaker.Core.Components.ProjectileComponent.ExperienceRecipientId
+  commentId: P:TDMaker.Core.Components.ProjectileComponent.ExperienceRecipientId
+  id: ExperienceRecipientId
+  parent: TDMaker.Core.Components.ProjectileComponent
+  langs:
+  - csharp
+  - vb
+  name: ExperienceRecipientId
+  nameWithType: ProjectileComponent.ExperienceRecipientId
+  fullName: TDMaker.Core.Components.ProjectileComponent.ExperienceRecipientId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Hero experience recipient captured at launch.
+  example: []
+  syntax:
+    content: public int ExperienceRecipientId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ExperienceRecipientId As Integer
+  overload: TDMaker.Core.Components.ProjectileComponent.ExperienceRecipientId*
+references:
+- uid: TDMaker.Core.Components
+  commentId: N:TDMaker.Core.Components
+  isExternal: true
+  name: TDMaker.Core.Components
+  nameWithType: TDMaker.Core.Components
+  fullName: TDMaker.Core.Components
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Components.ProjectileComponent.#ctor*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.#ctor
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent__ctor
+  name: ProjectileComponent
+  nameWithType: ProjectileComponent.ProjectileComponent
+  fullName: TDMaker.Core.Components.ProjectileComponent.ProjectileComponent
+  nameWithType.vb: ProjectileComponent.New
+  fullName.vb: TDMaker.Core.Components.ProjectileComponent.New
+  name.vb: New
+- uid: TDMaker.Core.Components.ProjectileComponent.Definition*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.Definition
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_Definition
+  name: Definition
+  nameWithType: ProjectileComponent.Definition
+  fullName: TDMaker.Core.Components.ProjectileComponent.Definition
+- uid: TDMaker.Core.Defs.ProjectileDef
+  commentId: T:TDMaker.Core.Defs.ProjectileDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html
+  name: ProjectileDef
+  nameWithType: ProjectileDef
+  fullName: TDMaker.Core.Defs.ProjectileDef
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Components.ProjectileComponent.Damage*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.Damage
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_Damage
+  name: Damage
+  nameWithType: ProjectileComponent.Damage
+  fullName: TDMaker.Core.Components.ProjectileComponent.Damage
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+- uid: TDMaker.Core.Components.ProjectileComponent.SourceId*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.SourceId
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_SourceId
+  name: SourceId
+  nameWithType: ProjectileComponent.SourceId
+  fullName: TDMaker.Core.Components.ProjectileComponent.SourceId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Components.ProjectileComponent.TargetId*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.TargetId
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_TargetId
+  name: TargetId
+  nameWithType: ProjectileComponent.TargetId
+  fullName: TDMaker.Core.Components.ProjectileComponent.TargetId
+- uid: TDMaker.Core.Components.ProjectileComponent.Origin*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.Origin
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_Origin
+  name: Origin
+  nameWithType: ProjectileComponent.Origin
+  fullName: TDMaker.Core.Components.ProjectileComponent.Origin
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.Components.ProjectileComponent.Destination*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.Destination
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_Destination
+  name: Destination
+  nameWithType: ProjectileComponent.Destination
+  fullName: TDMaker.Core.Components.ProjectileComponent.Destination
+- uid: TDMaker.Core.Components.ProjectileComponent.Elapsed*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.Elapsed
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_Elapsed
+  name: Elapsed
+  nameWithType: ProjectileComponent.Elapsed
+  fullName: TDMaker.Core.Components.ProjectileComponent.Elapsed
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Components.ProjectileComponent.Duration*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.Duration
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_Duration
+  name: Duration
+  nameWithType: ProjectileComponent.Duration
+  fullName: TDMaker.Core.Components.ProjectileComponent.Duration
+- uid: TDMaker.Core.Components.ProjectileComponent.Height*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.Height
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_Height
+  name: Height
+  nameWithType: ProjectileComponent.Height
+  fullName: TDMaker.Core.Components.ProjectileComponent.Height
+- uid: TDMaker.Core.Components.ProjectileComponent.OutputScale*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.OutputScale
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_OutputScale
+  name: OutputScale
+  nameWithType: ProjectileComponent.OutputScale
+  fullName: TDMaker.Core.Components.ProjectileComponent.OutputScale
+- uid: TDMaker.Core.Components.ProjectileComponent.ExperienceRecipientId*
+  commentId: Overload:TDMaker.Core.Components.ProjectileComponent.ExperienceRecipientId
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html#TDMaker_Core_Components_ProjectileComponent_ExperienceRecipientId
+  name: ExperienceRecipientId
+  nameWithType: ProjectileComponent.ExperienceRecipientId
+  fullName: TDMaker.Core.Components.ProjectileComponent.ExperienceRecipientId

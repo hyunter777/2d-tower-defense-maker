@@ -1,0 +1,510 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.AbilityExecutionDef
+  commentId: T:TDMaker.Core.Defs.AbilityExecutionDef
+  id: AbilityExecutionDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.AbilityExecutionDef.#ctor(TDMaker.Core.Defs.AbilityRankDef[],System.Boolean)
+  - TDMaker.Core.Defs.AbilityExecutionDef.Ranks
+  - TDMaker.Core.Defs.AbilityExecutionDef.ResetCooldownOnPurchase
+  langs:
+  - csharp
+  - vb
+  name: AbilityExecutionDef
+  nameWithType: AbilityExecutionDef
+  fullName: TDMaker.Core.Defs.AbilityExecutionDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Executable payloads for each purchase rank.
+  example: []
+  syntax:
+    content: public sealed class AbilityExecutionDef
+    content.vb: Public NotInheritable Class AbilityExecutionDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.AbilityExecutionDef.#ctor(TDMaker.Core.Defs.AbilityRankDef[],System.Boolean)
+  commentId: M:TDMaker.Core.Defs.AbilityExecutionDef.#ctor(TDMaker.Core.Defs.AbilityRankDef[],System.Boolean)
+  id: '#ctor(TDMaker.Core.Defs.AbilityRankDef[],System.Boolean)'
+  parent: TDMaker.Core.Defs.AbilityExecutionDef
+  langs:
+  - csharp
+  - vb
+  name: AbilityExecutionDef(AbilityRankDef[], bool)
+  nameWithType: AbilityExecutionDef.AbilityExecutionDef(AbilityRankDef[], bool)
+  fullName: TDMaker.Core.Defs.AbilityExecutionDef.AbilityExecutionDef(TDMaker.Core.Defs.AbilityRankDef[], bool)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates rank execution data.
+  example: []
+  syntax:
+    content: public AbilityExecutionDef(AbilityRankDef[] ranks, bool resetCooldownOnPurchase = false)
+    parameters:
+    - id: ranks
+      type: TDMaker.Core.Defs.AbilityRankDef[]
+    - id: resetCooldownOnPurchase
+      type: System.Boolean
+    content.vb: Public Sub New(ranks As AbilityRankDef(), resetCooldownOnPurchase As Boolean = False)
+  overload: TDMaker.Core.Defs.AbilityExecutionDef.#ctor*
+  nameWithType.vb: AbilityExecutionDef.New(AbilityRankDef(), Boolean)
+  fullName.vb: TDMaker.Core.Defs.AbilityExecutionDef.New(TDMaker.Core.Defs.AbilityRankDef(), Boolean)
+  name.vb: New(AbilityRankDef(), Boolean)
+- uid: TDMaker.Core.Defs.AbilityExecutionDef.Ranks
+  commentId: P:TDMaker.Core.Defs.AbilityExecutionDef.Ranks
+  id: Ranks
+  parent: TDMaker.Core.Defs.AbilityExecutionDef
+  langs:
+  - csharp
+  - vb
+  name: Ranks
+  nameWithType: AbilityExecutionDef.Ranks
+  fullName: TDMaker.Core.Defs.AbilityExecutionDef.Ranks
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Payload indexed by purchased rank minus one.
+  example: []
+  syntax:
+    content: public IReadOnlyList<AbilityRankDef> Ranks { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.AbilityRankDef}
+    content.vb: Public ReadOnly Property Ranks As IReadOnlyList(Of AbilityRankDef)
+  overload: TDMaker.Core.Defs.AbilityExecutionDef.Ranks*
+- uid: TDMaker.Core.Defs.AbilityExecutionDef.ResetCooldownOnPurchase
+  commentId: P:TDMaker.Core.Defs.AbilityExecutionDef.ResetCooldownOnPurchase
+  id: ResetCooldownOnPurchase
+  parent: TDMaker.Core.Defs.AbilityExecutionDef
+  langs:
+  - csharp
+  - vb
+  name: ResetCooldownOnPurchase
+  nameWithType: AbilityExecutionDef.ResetCooldownOnPurchase
+  fullName: TDMaker.Core.Defs.AbilityExecutionDef.ResetCooldownOnPurchase
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Explicitly resets this ability's timers on a rank purchase.
+  example: []
+  syntax:
+    content: public bool ResetCooldownOnPurchase { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ResetCooldownOnPurchase As Boolean
+  overload: TDMaker.Core.Defs.AbilityExecutionDef.ResetCooldownOnPurchase*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.AbilityExecutionDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.AbilityExecutionDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityExecutionDef.html#TDMaker_Core_Defs_AbilityExecutionDef__ctor_TDMaker_Core_Defs_AbilityRankDef___System_Boolean_
+  name: AbilityExecutionDef
+  nameWithType: AbilityExecutionDef.AbilityExecutionDef
+  fullName: TDMaker.Core.Defs.AbilityExecutionDef.AbilityExecutionDef
+  nameWithType.vb: AbilityExecutionDef.New
+  fullName.vb: TDMaker.Core.Defs.AbilityExecutionDef.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.AbilityRankDef[]
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityRankDef.html
+  name: AbilityRankDef[]
+  nameWithType: AbilityRankDef[]
+  fullName: TDMaker.Core.Defs.AbilityRankDef[]
+  nameWithType.vb: AbilityRankDef()
+  fullName.vb: TDMaker.Core.Defs.AbilityRankDef()
+  name.vb: AbilityRankDef()
+  spec.csharp:
+  - uid: TDMaker.Core.Defs.AbilityRankDef
+    name: AbilityRankDef
+    isExternal: true
+    href: TDMaker.Core.Defs.AbilityRankDef.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Defs.AbilityRankDef
+    name: AbilityRankDef
+    isExternal: true
+    href: TDMaker.Core.Defs.AbilityRankDef.html
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.AbilityExecutionDef.Ranks*
+  commentId: Overload:TDMaker.Core.Defs.AbilityExecutionDef.Ranks
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityExecutionDef.html#TDMaker_Core_Defs_AbilityExecutionDef_Ranks
+  name: Ranks
+  nameWithType: AbilityExecutionDef.Ranks
+  fullName: TDMaker.Core.Defs.AbilityExecutionDef.Ranks
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.AbilityRankDef}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.AbilityRankDef}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<AbilityRankDef>
+  nameWithType: IReadOnlyList<AbilityRankDef>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Defs.AbilityRankDef>
+  nameWithType.vb: IReadOnlyList(Of AbilityRankDef)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Defs.AbilityRankDef)
+  name.vb: IReadOnlyList(Of AbilityRankDef)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Defs.AbilityRankDef
+    name: AbilityRankDef
+    isExternal: true
+    href: TDMaker.Core.Defs.AbilityRankDef.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Defs.AbilityRankDef
+    name: AbilityRankDef
+    isExternal: true
+    href: TDMaker.Core.Defs.AbilityRankDef.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Core.Defs.AbilityExecutionDef.ResetCooldownOnPurchase*
+  commentId: Overload:TDMaker.Core.Defs.AbilityExecutionDef.ResetCooldownOnPurchase
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityExecutionDef.html#TDMaker_Core_Defs_AbilityExecutionDef_ResetCooldownOnPurchase
+  name: ResetCooldownOnPurchase
+  nameWithType: AbilityExecutionDef.ResetCooldownOnPurchase
+  fullName: TDMaker.Core.Defs.AbilityExecutionDef.ResetCooldownOnPurchase

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Effects.EffectRemoval
+  commentId: T:TDMaker.Core.Effects.EffectRemoval
+  id: EffectRemoval
+  parent: TDMaker.Core.Effects
+  children:
+  - TDMaker.Core.Effects.EffectRemoval.Dispelled
+  - TDMaker.Core.Effects.EffectRemoval.Expired
+  - TDMaker.Core.Effects.EffectRemoval.Ineligible
+  - TDMaker.Core.Effects.EffectRemoval.Replaced
+  - TDMaker.Core.Effects.EffectRemoval.SourceLost
+  - TDMaker.Core.Effects.EffectRemoval.TargetLost
+  langs:
+  - csharp
+  - vb
+  name: EffectRemoval
+  nameWithType: EffectRemoval
+  fullName: TDMaker.Core.Effects.EffectRemoval
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: Stable removal reasons, independent of damage and entity resolution.
+  example: []
+  syntax:
+    content: public enum EffectRemoval
+    content.vb: Public Enum EffectRemoval
+- uid: TDMaker.Core.Effects.EffectRemoval.Expired
+  commentId: F:TDMaker.Core.Effects.EffectRemoval.Expired
+  id: Expired
+  parent: TDMaker.Core.Effects.EffectRemoval
+  langs:
+  - csharp
+  - vb
+  name: Expired
+  nameWithType: EffectRemoval.Expired
+  fullName: TDMaker.Core.Effects.EffectRemoval.Expired
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: The lifetime expired naturally.
+  example: []
+  syntax:
+    content: Expired = 0
+    return:
+      type: TDMaker.Core.Effects.EffectRemoval
+- uid: TDMaker.Core.Effects.EffectRemoval.Dispelled
+  commentId: F:TDMaker.Core.Effects.EffectRemoval.Dispelled
+  id: Dispelled
+  parent: TDMaker.Core.Effects.EffectRemoval
+  langs:
+  - csharp
+  - vb
+  name: Dispelled
+  nameWithType: EffectRemoval.Dispelled
+  fullName: TDMaker.Core.Effects.EffectRemoval.Dispelled
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: An explicit dispel removed the binding.
+  example: []
+  syntax:
+    content: Dispelled = 1
+    return:
+      type: TDMaker.Core.Effects.EffectRemoval
+- uid: TDMaker.Core.Effects.EffectRemoval.Replaced
+  commentId: F:TDMaker.Core.Effects.EffectRemoval.Replaced
+  id: Replaced
+  parent: TDMaker.Core.Effects.EffectRemoval
+  langs:
+  - csharp
+  - vb
+  name: Replaced
+  nameWithType: EffectRemoval.Replaced
+  fullName: TDMaker.Core.Effects.EffectRemoval.Replaced
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: A higher rank or suppression replaced the binding.
+  example: []
+  syntax:
+    content: Replaced = 2
+    return:
+      type: TDMaker.Core.Effects.EffectRemoval
+- uid: TDMaker.Core.Effects.EffectRemoval.TargetLost
+  commentId: F:TDMaker.Core.Effects.EffectRemoval.TargetLost
+  id: TargetLost
+  parent: TDMaker.Core.Effects.EffectRemoval
+  langs:
+  - csharp
+  - vb
+  name: TargetLost
+  nameWithType: EffectRemoval.TargetLost
+  fullName: TDMaker.Core.Effects.EffectRemoval.TargetLost
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: The target died or disappeared.
+  example: []
+  syntax:
+    content: TargetLost = 3
+    return:
+      type: TDMaker.Core.Effects.EffectRemoval
+- uid: TDMaker.Core.Effects.EffectRemoval.SourceLost
+  commentId: F:TDMaker.Core.Effects.EffectRemoval.SourceLost
+  id: SourceLost
+  parent: TDMaker.Core.Effects.EffectRemoval
+  langs:
+  - csharp
+  - vb
+  name: SourceLost
+  nameWithType: EffectRemoval.SourceLost
+  fullName: TDMaker.Core.Effects.EffectRemoval.SourceLost
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: An owning region or source ended.
+  example: []
+  syntax:
+    content: SourceLost = 4
+    return:
+      type: TDMaker.Core.Effects.EffectRemoval
+- uid: TDMaker.Core.Effects.EffectRemoval.Ineligible
+  commentId: F:TDMaker.Core.Effects.EffectRemoval.Ineligible
+  id: Ineligible
+  parent: TDMaker.Core.Effects.EffectRemoval
+  langs:
+  - csharp
+  - vb
+  name: Ineligible
+  nameWithType: EffectRemoval.Ineligible
+  fullName: TDMaker.Core.Effects.EffectRemoval.Ineligible
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: Eligibility or immunity changed.
+  example: []
+  syntax:
+    content: Ineligible = 5
+    return:
+      type: TDMaker.Core.Effects.EffectRemoval
+references:
+- uid: TDMaker.Core.Effects
+  commentId: N:TDMaker.Core.Effects
+  isExternal: true
+  name: TDMaker.Core.Effects
+  nameWithType: TDMaker.Core.Effects
+  fullName: TDMaker.Core.Effects
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Effects
+    name: Effects
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Effects
+    name: Effects
+    isExternal: true
+- uid: TDMaker.Core.Effects.EffectRemoval
+  commentId: T:TDMaker.Core.Effects.EffectRemoval
+  parent: TDMaker.Core.Effects
+  isExternal: true
+  href: TDMaker.Core.Effects.EffectRemoval.html
+  name: EffectRemoval
+  nameWithType: EffectRemoval
+  fullName: TDMaker.Core.Effects.EffectRemoval

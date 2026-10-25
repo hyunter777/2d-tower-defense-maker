@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.UpgradeRankState
+  commentId: T:TDMaker.Unity.Campaign.UpgradeRankState
+  id: UpgradeRankState
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.UpgradeRankState.Locked
+  - TDMaker.Unity.Campaign.UpgradeRankState.Owned
+  - TDMaker.Unity.Campaign.UpgradeRankState.Purchasable
+  - TDMaker.Unity.Campaign.UpgradeRankState.TooExpensive
+  langs:
+  - csharp
+  - vb
+  name: UpgradeRankState
+  nameWithType: UpgradeRankState
+  fullName: TDMaker.Unity.Campaign.UpgradeRankState
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: What a rank node of the shop shows.
+  example: []
+  syntax:
+    content: public enum UpgradeRankState
+    content.vb: Public Enum UpgradeRankState
+- uid: TDMaker.Unity.Campaign.UpgradeRankState.Owned
+  commentId: F:TDMaker.Unity.Campaign.UpgradeRankState.Owned
+  id: Owned
+  parent: TDMaker.Unity.Campaign.UpgradeRankState
+  langs:
+  - csharp
+  - vb
+  name: Owned
+  nameWithType: UpgradeRankState.Owned
+  fullName: TDMaker.Unity.Campaign.UpgradeRankState.Owned
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Bought (this rank or a higher one of the track).
+  example: []
+  syntax:
+    content: Owned = 0
+    return:
+      type: TDMaker.Unity.Campaign.UpgradeRankState
+- uid: TDMaker.Unity.Campaign.UpgradeRankState.Purchasable
+  commentId: F:TDMaker.Unity.Campaign.UpgradeRankState.Purchasable
+  id: Purchasable
+  parent: TDMaker.Unity.Campaign.UpgradeRankState
+  langs:
+  - csharp
+  - vb
+  name: Purchasable
+  nameWithType: UpgradeRankState.Purchasable
+  fullName: TDMaker.Unity.Campaign.UpgradeRankState.Purchasable
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'The next rank of its track and affordable: one click buys it.'
+  example: []
+  syntax:
+    content: Purchasable = 1
+    return:
+      type: TDMaker.Unity.Campaign.UpgradeRankState
+- uid: TDMaker.Unity.Campaign.UpgradeRankState.TooExpensive
+  commentId: F:TDMaker.Unity.Campaign.UpgradeRankState.TooExpensive
+  id: TooExpensive
+  parent: TDMaker.Unity.Campaign.UpgradeRankState
+  langs:
+  - csharp
+  - vb
+  name: TooExpensive
+  nameWithType: UpgradeRankState.TooExpensive
+  fullName: TDMaker.Unity.Campaign.UpgradeRankState.TooExpensive
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The next rank of its track, but the stars are not enough.
+  example: []
+  syntax:
+    content: TooExpensive = 2
+    return:
+      type: TDMaker.Unity.Campaign.UpgradeRankState
+- uid: TDMaker.Unity.Campaign.UpgradeRankState.Locked
+  commentId: F:TDMaker.Unity.Campaign.UpgradeRankState.Locked
+  id: Locked
+  parent: TDMaker.Unity.Campaign.UpgradeRankState
+  langs:
+  - csharp
+  - vb
+  name: Locked
+  nameWithType: UpgradeRankState.Locked
+  fullName: TDMaker.Unity.Campaign.UpgradeRankState.Locked
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: A lower rank of its track must be bought first.
+  example: []
+  syntax:
+    content: Locked = 3
+    return:
+      type: TDMaker.Unity.Campaign.UpgradeRankState
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.UpgradeRankState
+  commentId: T:TDMaker.Unity.Campaign.UpgradeRankState
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeRankState.html
+  name: UpgradeRankState
+  nameWithType: UpgradeRankState
+  fullName: TDMaker.Unity.Campaign.UpgradeRankState

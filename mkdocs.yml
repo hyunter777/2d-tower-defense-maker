@@ -1,0 +1,78 @@
+site_name: 2D Tower Defense Maker
+site_description: English guides and API reference for building 2D tower defense games in Unity 6.
+site_url: https://hyunter777.github.io/2d-tower-defense-maker/
+repo_url: https://github.com/hyunter777/2d-tower-defense-maker
+edit_uri: ''
+copyright: Copyright © FlyCat
+docs_dir: docs/en
+site_dir: site
+theme:
+  name: material
+  language: en
+  font: false
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+extra_css:
+  - assets/styles.css
+plugins:
+  - search:
+      lang: en
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+nav:
+  - Start here:
+      - Welcome: index.md
+      - Quick start: quick-start.md
+      - Sample gallery: samples.md
+  - Build your game:
+      - Core concepts: concepts.md
+      - Content authoring: authoring.md
+      - Editor tools: editor-tools.md
+      - Gameplay mechanics: mechanics.md
+      - Campaigns and upgrades: campaign.md
+  - Customize and extend:
+      - HUD, fonts and audio: presentation.md
+      - Extending the framework: extending.md
+      - Determinism and replay: determinism-and-replay.md
+      - Performance: performance.md
+  - Reference and support:
+      - API reference: reference/api.md
+      - FAQ: faq.md
+      - Release notes: changelog.md
+      - Support and licenses: support-license.md
+validation:
+  links:
+    not_found: warn
+    unrecognized_links: warn
+    anchors: warn
+  nav:
+    not_found: warn
+    omitted_files: warn

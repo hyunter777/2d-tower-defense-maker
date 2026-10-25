@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.SpellKind
+  commentId: T:TDMaker.Unity.Authoring.SpellKind
+  id: SpellKind
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.SpellKind.AreaEffect
+  - TDMaker.Unity.Authoring.SpellKind.AreaStrike
+  - TDMaker.Unity.Authoring.SpellKind.Reinforcement
+  langs:
+  - csharp
+  - vb
+  name: SpellKind
+  nameWithType: SpellKind
+  fullName: TDMaker.Unity.Authoring.SpellKind
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Main payload of a player spell.
+  example: []
+  syntax:
+    content: public enum SpellKind
+    content.vb: Public Enum SpellKind
+- uid: TDMaker.Unity.Authoring.SpellKind.Reinforcement
+  commentId: F:TDMaker.Unity.Authoring.SpellKind.Reinforcement
+  id: Reinforcement
+  parent: TDMaker.Unity.Authoring.SpellKind
+  langs:
+  - csharp
+  - vb
+  name: Reinforcement
+  nameWithType: SpellKind.Reinforcement
+  fullName: TDMaker.Unity.Authoring.SpellKind.Reinforcement
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Calls temporary friendly units to the target point.
+  example: []
+  syntax:
+    content: Reinforcement = 0
+    return:
+      type: TDMaker.Unity.Authoring.SpellKind
+- uid: TDMaker.Unity.Authoring.SpellKind.AreaStrike
+  commentId: F:TDMaker.Unity.Authoring.SpellKind.AreaStrike
+  id: AreaStrike
+  parent: TDMaker.Unity.Authoring.SpellKind
+  langs:
+  - csharp
+  - vb
+  name: AreaStrike
+  nameWithType: SpellKind.AreaStrike
+  fullName: TDMaker.Unity.Authoring.SpellKind.AreaStrike
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Drops scattered, individually timed area strikes around the target point.
+  example: []
+  syntax:
+    content: AreaStrike = 1
+    return:
+      type: TDMaker.Unity.Authoring.SpellKind
+- uid: TDMaker.Unity.Authoring.SpellKind.AreaEffect
+  commentId: F:TDMaker.Unity.Authoring.SpellKind.AreaEffect
+  id: AreaEffect
+  parent: TDMaker.Unity.Authoring.SpellKind
+  langs:
+  - csharp
+  - vb
+  name: AreaEffect
+  nameWithType: SpellKind.AreaEffect
+  fullName: TDMaker.Unity.Authoring.SpellKind.AreaEffect
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Only emits the residual area effect.
+  example: []
+  syntax:
+    content: AreaEffect = 2
+    return:
+      type: TDMaker.Unity.Authoring.SpellKind
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.SpellKind
+  commentId: T:TDMaker.Unity.Authoring.SpellKind
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.SpellKind.html
+  name: SpellKind
+  nameWithType: SpellKind
+  fullName: TDMaker.Unity.Authoring.SpellKind

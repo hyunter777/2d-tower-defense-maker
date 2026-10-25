@@ -1,0 +1,520 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.EarlyCallRewardPreview
+  commentId: T:TDMaker.Core.EarlyCallRewardPreview
+  id: EarlyCallRewardPreview
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.EarlyCallRewardPreview.CanCall
+  - TDMaker.Core.EarlyCallRewardPreview.GoldGain
+  - TDMaker.Core.EarlyCallRewardPreview.GoldReward
+  - TDMaker.Core.EarlyCallRewardPreview.SpellCooldownCut
+  - TDMaker.Core.EarlyCallRewardPreview.SpellCooldownsAffected
+  - TDMaker.Core.EarlyCallRewardPreview.TimeCredit
+  - TDMaker.Core.EarlyCallRewardPreview.WaveNumber
+  langs:
+  - csharp
+  - vb
+  name: EarlyCallRewardPreview
+  nameWithType: EarlyCallRewardPreview
+  fullName: TDMaker.Core.EarlyCallRewardPreview
+  type: Struct
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Allocation-free snapshot of calling the next wave now; obtaining it does not mutate the simulation or emit events.
+  example: []
+  syntax:
+    content: public readonly struct EarlyCallRewardPreview
+    content.vb: Public Structure EarlyCallRewardPreview
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Core.EarlyCallRewardPreview.CanCall
+  commentId: P:TDMaker.Core.EarlyCallRewardPreview.CanCall
+  id: CanCall
+  parent: TDMaker.Core.EarlyCallRewardPreview
+  langs:
+  - csharp
+  - vb
+  name: CanCall
+  nameWithType: EarlyCallRewardPreview.CanCall
+  fullName: TDMaker.Core.EarlyCallRewardPreview.CanCall
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Whether a CallNextWave command can currently be accepted.
+  example: []
+  syntax:
+    content: public bool CanCall { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanCall As Boolean
+  overload: TDMaker.Core.EarlyCallRewardPreview.CanCall*
+- uid: TDMaker.Core.EarlyCallRewardPreview.WaveNumber
+  commentId: P:TDMaker.Core.EarlyCallRewardPreview.WaveNumber
+  id: WaveNumber
+  parent: TDMaker.Core.EarlyCallRewardPreview
+  langs:
+  - csharp
+  - vb
+  name: WaveNumber
+  nameWithType: EarlyCallRewardPreview.WaveNumber
+  fullName: TDMaker.Core.EarlyCallRewardPreview.WaveNumber
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: One-based next wave number, or zero when no call is currently accepted.
+  example: []
+  syntax:
+    content: public int WaveNumber { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property WaveNumber As Integer
+  overload: TDMaker.Core.EarlyCallRewardPreview.WaveNumber*
+- uid: TDMaker.Core.EarlyCallRewardPreview.GoldReward
+  commentId: P:TDMaker.Core.EarlyCallRewardPreview.GoldReward
+  id: GoldReward
+  parent: TDMaker.Core.EarlyCallRewardPreview
+  langs:
+  - csharp
+  - vb
+  name: GoldReward
+  nameWithType: EarlyCallRewardPreview.GoldReward
+  fullName: TDMaker.Core.EarlyCallRewardPreview.GoldReward
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Authored gold award before wallet saturation.
+  example: []
+  syntax:
+    content: public int GoldReward { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property GoldReward As Integer
+  overload: TDMaker.Core.EarlyCallRewardPreview.GoldReward*
+- uid: TDMaker.Core.EarlyCallRewardPreview.GoldGain
+  commentId: P:TDMaker.Core.EarlyCallRewardPreview.GoldGain
+  id: GoldGain
+  parent: TDMaker.Core.EarlyCallRewardPreview
+  langs:
+  - csharp
+  - vb
+  name: GoldGain
+  nameWithType: EarlyCallRewardPreview.GoldGain
+  fullName: TDMaker.Core.EarlyCallRewardPreview.GoldGain
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Actual gold gain after the wallet's integer limit.
+  example: []
+  syntax:
+    content: public int GoldGain { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property GoldGain As Integer
+  overload: TDMaker.Core.EarlyCallRewardPreview.GoldGain*
+- uid: TDMaker.Core.EarlyCallRewardPreview.TimeCredit
+  commentId: P:TDMaker.Core.EarlyCallRewardPreview.TimeCredit
+  id: TimeCredit
+  parent: TDMaker.Core.EarlyCallRewardPreview
+  langs:
+  - csharp
+  - vb
+  name: TimeCredit
+  nameWithType: EarlyCallRewardPreview.TimeCredit
+  fullName: TDMaker.Core.EarlyCallRewardPreview.TimeCredit
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Rounded remaining wait in game seconds; first-wave calls have zero credit.
+  example: []
+  syntax:
+    content: public double TimeCredit { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property TimeCredit As Double
+  overload: TDMaker.Core.EarlyCallRewardPreview.TimeCredit*
+- uid: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownCut
+  commentId: P:TDMaker.Core.EarlyCallRewardPreview.SpellCooldownCut
+  id: SpellCooldownCut
+  parent: TDMaker.Core.EarlyCallRewardPreview
+  langs:
+  - csharp
+  - vb
+  name: SpellCooldownCut
+  nameWithType: EarlyCallRewardPreview.SpellCooldownCut
+  fullName: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownCut
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Maximum time cut for each eligible spell, after enable/threshold rules. Each spell is clamped by its remaining
+    cooldown.
+  example: []
+  syntax:
+    content: public double SpellCooldownCut { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property SpellCooldownCut As Double
+  overload: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownCut*
+- uid: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownsAffected
+  commentId: P:TDMaker.Core.EarlyCallRewardPreview.SpellCooldownsAffected
+  id: SpellCooldownsAffected
+  parent: TDMaker.Core.EarlyCallRewardPreview
+  langs:
+  - csharp
+  - vb
+  name: SpellCooldownsAffected
+  nameWithType: EarlyCallRewardPreview.SpellCooldownsAffected
+  fullName: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownsAffected
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Number of cooling spells eligible after the call starts its wave.
+  example: []
+  syntax:
+    content: public int SpellCooldownsAffected { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SpellCooldownsAffected As Integer
+  overload: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownsAffected*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.EarlyCallRewardPreview.CanCall*
+  commentId: Overload:TDMaker.Core.EarlyCallRewardPreview.CanCall
+  isExternal: true
+  href: TDMaker.Core.EarlyCallRewardPreview.html#TDMaker_Core_EarlyCallRewardPreview_CanCall
+  name: CanCall
+  nameWithType: EarlyCallRewardPreview.CanCall
+  fullName: TDMaker.Core.EarlyCallRewardPreview.CanCall
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.EarlyCallRewardPreview.WaveNumber*
+  commentId: Overload:TDMaker.Core.EarlyCallRewardPreview.WaveNumber
+  isExternal: true
+  href: TDMaker.Core.EarlyCallRewardPreview.html#TDMaker_Core_EarlyCallRewardPreview_WaveNumber
+  name: WaveNumber
+  nameWithType: EarlyCallRewardPreview.WaveNumber
+  fullName: TDMaker.Core.EarlyCallRewardPreview.WaveNumber
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.EarlyCallRewardPreview.GoldReward*
+  commentId: Overload:TDMaker.Core.EarlyCallRewardPreview.GoldReward
+  isExternal: true
+  href: TDMaker.Core.EarlyCallRewardPreview.html#TDMaker_Core_EarlyCallRewardPreview_GoldReward
+  name: GoldReward
+  nameWithType: EarlyCallRewardPreview.GoldReward
+  fullName: TDMaker.Core.EarlyCallRewardPreview.GoldReward
+- uid: TDMaker.Core.EarlyCallRewardPreview.GoldGain*
+  commentId: Overload:TDMaker.Core.EarlyCallRewardPreview.GoldGain
+  isExternal: true
+  href: TDMaker.Core.EarlyCallRewardPreview.html#TDMaker_Core_EarlyCallRewardPreview_GoldGain
+  name: GoldGain
+  nameWithType: EarlyCallRewardPreview.GoldGain
+  fullName: TDMaker.Core.EarlyCallRewardPreview.GoldGain
+- uid: TDMaker.Core.EarlyCallRewardPreview.TimeCredit*
+  commentId: Overload:TDMaker.Core.EarlyCallRewardPreview.TimeCredit
+  isExternal: true
+  href: TDMaker.Core.EarlyCallRewardPreview.html#TDMaker_Core_EarlyCallRewardPreview_TimeCredit
+  name: TimeCredit
+  nameWithType: EarlyCallRewardPreview.TimeCredit
+  fullName: TDMaker.Core.EarlyCallRewardPreview.TimeCredit
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownCut*
+  commentId: Overload:TDMaker.Core.EarlyCallRewardPreview.SpellCooldownCut
+  isExternal: true
+  href: TDMaker.Core.EarlyCallRewardPreview.html#TDMaker_Core_EarlyCallRewardPreview_SpellCooldownCut
+  name: SpellCooldownCut
+  nameWithType: EarlyCallRewardPreview.SpellCooldownCut
+  fullName: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownCut
+- uid: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownsAffected*
+  commentId: Overload:TDMaker.Core.EarlyCallRewardPreview.SpellCooldownsAffected
+  isExternal: true
+  href: TDMaker.Core.EarlyCallRewardPreview.html#TDMaker_Core_EarlyCallRewardPreview_SpellCooldownsAffected
+  name: SpellCooldownsAffected
+  nameWithType: EarlyCallRewardPreview.SpellCooldownsAffected
+  fullName: TDMaker.Core.EarlyCallRewardPreview.SpellCooldownsAffected

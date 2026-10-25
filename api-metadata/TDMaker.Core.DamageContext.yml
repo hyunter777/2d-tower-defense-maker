@@ -1,0 +1,790 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.DamageContext
+  commentId: T:TDMaker.Core.DamageContext
+  id: DamageContext
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.DamageContext.#ctor(System.Int32,System.Int32,System.Single,TDMaker.Core.Defs.DamageDef,System.Int32,System.Single)
+  - TDMaker.Core.DamageContext.Amount
+  - TDMaker.Core.DamageContext.Cancelled
+  - TDMaker.Core.DamageContext.Definition
+  - TDMaker.Core.DamageContext.ExperienceRecipientId
+  - TDMaker.Core.DamageContext.Origin
+  - TDMaker.Core.DamageContext.OutputScale
+  - TDMaker.Core.DamageContext.RequestId
+  - TDMaker.Core.DamageContext.RootRequestId
+  - TDMaker.Core.DamageContext.RootSourceId
+  - TDMaker.Core.DamageContext.SourceId
+  - TDMaker.Core.DamageContext.TargetId
+  - TDMaker.Core.DamageContext.WithOrigin(TDMaker.Core.DamageOrigin)
+  langs:
+  - csharp
+  - vb
+  name: DamageContext
+  nameWithType: DamageContext
+  fullName: TDMaker.Core.DamageContext
+  type: Struct
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A modifiable raw damage request, before defense and incoming multipliers.
+  example: []
+  syntax:
+    content: public struct DamageContext
+    content.vb: Public Structure DamageContext
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Core.DamageContext.#ctor(System.Int32,System.Int32,System.Single,TDMaker.Core.Defs.DamageDef,System.Int32,System.Single)
+  commentId: M:TDMaker.Core.DamageContext.#ctor(System.Int32,System.Int32,System.Single,TDMaker.Core.Defs.DamageDef,System.Int32,System.Single)
+  id: '#ctor(System.Int32,System.Int32,System.Single,TDMaker.Core.Defs.DamageDef,System.Int32,System.Single)'
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: DamageContext(int, int, float, DamageDef, int, float)
+  nameWithType: DamageContext.DamageContext(int, int, float, DamageDef, int, float)
+  fullName: TDMaker.Core.DamageContext.DamageContext(int, int, float, TDMaker.Core.Defs.DamageDef, int, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Creates a raw damage request; Amount is already scaled by its caller.
+  example: []
+  syntax:
+    content: public DamageContext(int sourceId, int targetId, float amount, DamageDef definition, int experienceRecipientId
+      = 0, float outputScale = 1)
+    parameters:
+    - id: sourceId
+      type: System.Int32
+    - id: targetId
+      type: System.Int32
+    - id: amount
+      type: System.Single
+    - id: definition
+      type: TDMaker.Core.Defs.DamageDef
+    - id: experienceRecipientId
+      type: System.Int32
+    - id: outputScale
+      type: System.Single
+    content.vb: Public Sub New(sourceId As Integer, targetId As Integer, amount As Single, definition As DamageDef, experienceRecipientId
+      As Integer = 0, outputScale As Single = 1)
+  overload: TDMaker.Core.DamageContext.#ctor*
+  nameWithType.vb: DamageContext.New(Integer, Integer, Single, DamageDef, Integer, Single)
+  fullName.vb: TDMaker.Core.DamageContext.New(Integer, Integer, Single, TDMaker.Core.Defs.DamageDef, Integer, Single)
+  name.vb: New(Integer, Integer, Single, DamageDef, Integer, Single)
+- uid: TDMaker.Core.DamageContext.WithOrigin(TDMaker.Core.DamageOrigin)
+  commentId: M:TDMaker.Core.DamageContext.WithOrigin(TDMaker.Core.DamageOrigin)
+  id: WithOrigin(TDMaker.Core.DamageOrigin)
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: WithOrigin(DamageOrigin)
+  nameWithType: DamageContext.WithOrigin(DamageOrigin)
+  fullName: TDMaker.Core.DamageContext.WithOrigin(TDMaker.Core.DamageOrigin)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Marks an extension-created packet before RequestDamage. Pre-damage hooks cannot replace admitted provenance.
+  example: []
+  syntax:
+    content: public DamageContext WithOrigin(DamageOrigin origin)
+    parameters:
+    - id: origin
+      type: TDMaker.Core.DamageOrigin
+    return:
+      type: TDMaker.Core.DamageContext
+    content.vb: Public Function WithOrigin(origin As DamageOrigin) As DamageContext
+  overload: TDMaker.Core.DamageContext.WithOrigin*
+- uid: TDMaker.Core.DamageContext.SourceId
+  commentId: P:TDMaker.Core.DamageContext.SourceId
+  id: SourceId
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: SourceId
+  nameWithType: DamageContext.SourceId
+  fullName: TDMaker.Core.DamageContext.SourceId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Originating entity, or zero.
+  example: []
+  syntax:
+    content: public readonly int SourceId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SourceId As Integer
+  overload: TDMaker.Core.DamageContext.SourceId*
+- uid: TDMaker.Core.DamageContext.TargetId
+  commentId: P:TDMaker.Core.DamageContext.TargetId
+  id: TargetId
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: TargetId
+  nameWithType: DamageContext.TargetId
+  fullName: TDMaker.Core.DamageContext.TargetId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Recipient entity.
+  example: []
+  syntax:
+    content: public readonly int TargetId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TargetId As Integer
+  overload: TDMaker.Core.DamageContext.TargetId*
+- uid: TDMaker.Core.DamageContext.Definition
+  commentId: P:TDMaker.Core.DamageContext.Definition
+  id: Definition
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: Definition
+  nameWithType: DamageContext.Definition
+  fullName: TDMaker.Core.DamageContext.Definition
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Immutable damage behavior.
+  example: []
+  syntax:
+    content: public readonly DamageDef Definition { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public ReadOnly Property Definition As DamageDef
+  overload: TDMaker.Core.DamageContext.Definition*
+- uid: TDMaker.Core.DamageContext.Amount
+  commentId: P:TDMaker.Core.DamageContext.Amount
+  id: Amount
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: DamageContext.Amount
+  fullName: TDMaker.Core.DamageContext.Amount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Raw damage amount; hooks may change it to a finite nonnegative value.
+  example: []
+  syntax:
+    content: public float Amount { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Amount As Single
+  overload: TDMaker.Core.DamageContext.Amount*
+- uid: TDMaker.Core.DamageContext.Cancelled
+  commentId: P:TDMaker.Core.DamageContext.Cancelled
+  id: Cancelled
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: Cancelled
+  nameWithType: DamageContext.Cancelled
+  fullName: TDMaker.Core.DamageContext.Cancelled
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Whether a pre-queue hook cancels the request.
+  example: []
+  syntax:
+    content: public bool Cancelled { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Cancelled As Boolean
+  overload: TDMaker.Core.DamageContext.Cancelled*
+- uid: TDMaker.Core.DamageContext.ExperienceRecipientId
+  commentId: P:TDMaker.Core.DamageContext.ExperienceRecipientId
+  id: ExperienceRecipientId
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: ExperienceRecipientId
+  nameWithType: DamageContext.ExperienceRecipientId
+  fullName: TDMaker.Core.DamageContext.ExperienceRecipientId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Explicit hero experience recipient, or zero.
+  example: []
+  syntax:
+    content: public readonly int ExperienceRecipientId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ExperienceRecipientId As Integer
+  overload: TDMaker.Core.DamageContext.ExperienceRecipientId*
+- uid: TDMaker.Core.DamageContext.OutputScale
+  commentId: P:TDMaker.Core.DamageContext.OutputScale
+  id: OutputScale
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: OutputScale
+  nameWithType: DamageContext.OutputScale
+  fullName: TDMaker.Core.DamageContext.OutputScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Outgoing scale inherited by attached effects.
+  example: []
+  syntax:
+    content: public readonly float OutputScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property OutputScale As Single
+  overload: TDMaker.Core.DamageContext.OutputScale*
+- uid: TDMaker.Core.DamageContext.Origin
+  commentId: P:TDMaker.Core.DamageContext.Origin
+  id: Origin
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: DamageContext.Origin
+  fullName: TDMaker.Core.DamageContext.Origin
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Original mechanism classification, retained through native secondary impacts.
+  example: []
+  syntax:
+    content: public readonly DamageOrigin Origin { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.DamageOrigin
+    content.vb: Public ReadOnly Property Origin As DamageOrigin
+  overload: TDMaker.Core.DamageContext.Origin*
+- uid: TDMaker.Core.DamageContext.RequestId
+  commentId: P:TDMaker.Core.DamageContext.RequestId
+  id: RequestId
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: RequestId
+  nameWithType: DamageContext.RequestId
+  fullName: TDMaker.Core.DamageContext.RequestId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Unique admitted queue-attempt identifier, assigned before pre-damage hooks; cancellation can leave gaps.
+  example: []
+  syntax:
+    content: public readonly long RequestId { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property RequestId As Long
+  overload: TDMaker.Core.DamageContext.RequestId*
+- uid: TDMaker.Core.DamageContext.RootRequestId
+  commentId: P:TDMaker.Core.DamageContext.RootRequestId
+  id: RootRequestId
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: RootRequestId
+  nameWithType: DamageContext.RootRequestId
+  fullName: TDMaker.Core.DamageContext.RootRequestId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: First request in this native secondary/reflection causal lineage.
+  example: []
+  syntax:
+    content: public readonly long RootRequestId { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property RootRequestId As Long
+  overload: TDMaker.Core.DamageContext.RootRequestId*
+- uid: TDMaker.Core.DamageContext.RootSourceId
+  commentId: P:TDMaker.Core.DamageContext.RootSourceId
+  id: RootSourceId
+  parent: TDMaker.Core.DamageContext
+  langs:
+  - csharp
+  - vb
+  name: RootSourceId
+  nameWithType: DamageContext.RootSourceId
+  fullName: TDMaker.Core.DamageContext.RootSourceId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Source of the lineage root, even if that entity no longer exists.
+  example: []
+  syntax:
+    content: public readonly int RootSourceId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property RootSourceId As Integer
+  overload: TDMaker.Core.DamageContext.RootSourceId*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.DamageContext.#ctor*
+  commentId: Overload:TDMaker.Core.DamageContext.#ctor
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext__ctor_System_Int32_System_Int32_System_Single_TDMaker_Core_Defs_DamageDef_System_Int32_System_Single_
+  name: DamageContext
+  nameWithType: DamageContext.DamageContext
+  fullName: TDMaker.Core.DamageContext.DamageContext
+  nameWithType.vb: DamageContext.New
+  fullName.vb: TDMaker.Core.DamageContext.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.DamageContext.WithOrigin*
+  commentId: Overload:TDMaker.Core.DamageContext.WithOrigin
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_WithOrigin_TDMaker_Core_DamageOrigin_
+  name: WithOrigin
+  nameWithType: DamageContext.WithOrigin
+  fullName: TDMaker.Core.DamageContext.WithOrigin
+- uid: TDMaker.Core.DamageOrigin
+  commentId: T:TDMaker.Core.DamageOrigin
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.DamageOrigin.html
+  name: DamageOrigin
+  nameWithType: DamageOrigin
+  fullName: TDMaker.Core.DamageOrigin
+- uid: TDMaker.Core.DamageContext
+  commentId: T:TDMaker.Core.DamageContext
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html
+  name: DamageContext
+  nameWithType: DamageContext
+  fullName: TDMaker.Core.DamageContext
+- uid: TDMaker.Core.DamageContext.SourceId*
+  commentId: Overload:TDMaker.Core.DamageContext.SourceId
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_SourceId
+  name: SourceId
+  nameWithType: DamageContext.SourceId
+  fullName: TDMaker.Core.DamageContext.SourceId
+- uid: TDMaker.Core.DamageContext.TargetId*
+  commentId: Overload:TDMaker.Core.DamageContext.TargetId
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_TargetId
+  name: TargetId
+  nameWithType: DamageContext.TargetId
+  fullName: TDMaker.Core.DamageContext.TargetId
+- uid: TDMaker.Core.DamageContext.Definition*
+  commentId: Overload:TDMaker.Core.DamageContext.Definition
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_Definition
+  name: Definition
+  nameWithType: DamageContext.Definition
+  fullName: TDMaker.Core.DamageContext.Definition
+- uid: TDMaker.Core.DamageContext.Amount*
+  commentId: Overload:TDMaker.Core.DamageContext.Amount
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_Amount
+  name: Amount
+  nameWithType: DamageContext.Amount
+  fullName: TDMaker.Core.DamageContext.Amount
+- uid: TDMaker.Core.DamageContext.Cancelled*
+  commentId: Overload:TDMaker.Core.DamageContext.Cancelled
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_Cancelled
+  name: Cancelled
+  nameWithType: DamageContext.Cancelled
+  fullName: TDMaker.Core.DamageContext.Cancelled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.DamageContext.ExperienceRecipientId*
+  commentId: Overload:TDMaker.Core.DamageContext.ExperienceRecipientId
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_ExperienceRecipientId
+  name: ExperienceRecipientId
+  nameWithType: DamageContext.ExperienceRecipientId
+  fullName: TDMaker.Core.DamageContext.ExperienceRecipientId
+- uid: TDMaker.Core.DamageContext.OutputScale*
+  commentId: Overload:TDMaker.Core.DamageContext.OutputScale
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_OutputScale
+  name: OutputScale
+  nameWithType: DamageContext.OutputScale
+  fullName: TDMaker.Core.DamageContext.OutputScale
+- uid: TDMaker.Core.DamageContext.Origin*
+  commentId: Overload:TDMaker.Core.DamageContext.Origin
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_Origin
+  name: Origin
+  nameWithType: DamageContext.Origin
+  fullName: TDMaker.Core.DamageContext.Origin
+- uid: TDMaker.Core.DamageContext.RequestId*
+  commentId: Overload:TDMaker.Core.DamageContext.RequestId
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_RequestId
+  name: RequestId
+  nameWithType: DamageContext.RequestId
+  fullName: TDMaker.Core.DamageContext.RequestId
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: TDMaker.Core.DamageContext.RootRequestId*
+  commentId: Overload:TDMaker.Core.DamageContext.RootRequestId
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_RootRequestId
+  name: RootRequestId
+  nameWithType: DamageContext.RootRequestId
+  fullName: TDMaker.Core.DamageContext.RootRequestId
+- uid: TDMaker.Core.DamageContext.RootSourceId*
+  commentId: Overload:TDMaker.Core.DamageContext.RootSourceId
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html#TDMaker_Core_DamageContext_RootSourceId
+  name: RootSourceId
+  nameWithType: DamageContext.RootSourceId
+  fullName: TDMaker.Core.DamageContext.RootSourceId

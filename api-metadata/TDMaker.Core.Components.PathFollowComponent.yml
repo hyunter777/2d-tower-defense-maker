@@ -1,0 +1,748 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Components.PathFollowComponent
+  commentId: T:TDMaker.Core.Components.PathFollowComponent
+  id: PathFollowComponent
+  parent: TDMaker.Core.Components
+  children:
+  - TDMaker.Core.Components.PathFollowComponent.#ctor
+  - TDMaker.Core.Components.PathFollowComponent.BlockerCount
+  - TDMaker.Core.Components.PathFollowComponent.BlockerId
+  - TDMaker.Core.Components.PathFollowComponent.GetBlockerId(System.Int32)
+  - TDMaker.Core.Components.PathFollowComponent.IsConnecting
+  - TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact
+  - TDMaker.Core.Components.PathFollowComponent.LaneIndex
+  - TDMaker.Core.Components.PathFollowComponent.NodeIndex
+  - TDMaker.Core.Components.PathFollowComponent.PathIndex
+  - TDMaker.Core.Components.PathFollowComponent.ReachedExit
+  - TDMaker.Core.Components.PathFollowComponent.RemainingDistance
+  - TDMaker.Core.Components.PathFollowComponent.RepresentativeId
+  - TDMaker.Core.Components.PathFollowComponent.SegmentProgress
+  - TDMaker.Core.Components.PathFollowComponent.TravelAngle
+  langs:
+  - csharp
+  - vb
+  name: PathFollowComponent
+  nameWithType: PathFollowComponent
+  fullName: TDMaker.Core.Components.PathFollowComponent
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Path and engagement state for an enemy.
+  example: []
+  syntax:
+    content: public sealed class PathFollowComponent
+    content.vb: Public NotInheritable Class PathFollowComponent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Components.PathFollowComponent.GetBlockerId(System.Int32)
+  commentId: M:TDMaker.Core.Components.PathFollowComponent.GetBlockerId(System.Int32)
+  id: GetBlockerId(System.Int32)
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: GetBlockerId(int)
+  nameWithType: PathFollowComponent.GetBlockerId(int)
+  fullName: TDMaker.Core.Components.PathFollowComponent.GetBlockerId(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Reads an assigned soldier identifier by engagement rank.
+  example: []
+  syntax:
+    content: public int GetBlockerId(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetBlockerId(index As Integer) As Integer
+  overload: TDMaker.Core.Components.PathFollowComponent.GetBlockerId*
+  nameWithType.vb: PathFollowComponent.GetBlockerId(Integer)
+  fullName.vb: TDMaker.Core.Components.PathFollowComponent.GetBlockerId(Integer)
+  name.vb: GetBlockerId(Integer)
+- uid: TDMaker.Core.Components.PathFollowComponent.#ctor
+  commentId: M:TDMaker.Core.Components.PathFollowComponent.#ctor
+  id: '#ctor'
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: PathFollowComponent()
+  nameWithType: PathFollowComponent.PathFollowComponent()
+  fullName: TDMaker.Core.Components.PathFollowComponent.PathFollowComponent()
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  syntax:
+    content: public PathFollowComponent()
+    content.vb: Public Sub New()
+  overload: TDMaker.Core.Components.PathFollowComponent.#ctor*
+  nameWithType.vb: PathFollowComponent.New()
+  fullName.vb: TDMaker.Core.Components.PathFollowComponent.New()
+  name.vb: New()
+- uid: TDMaker.Core.Components.PathFollowComponent.PathIndex
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.PathIndex
+  id: PathIndex
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: PathIndex
+  nameWithType: PathFollowComponent.PathIndex
+  fullName: TDMaker.Core.Components.PathFollowComponent.PathIndex
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Level path index.
+  example: []
+  syntax:
+    content: public int PathIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PathIndex As Integer
+  overload: TDMaker.Core.Components.PathFollowComponent.PathIndex*
+- uid: TDMaker.Core.Components.PathFollowComponent.LaneIndex
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.LaneIndex
+  id: LaneIndex
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: LaneIndex
+  nameWithType: PathFollowComponent.LaneIndex
+  fullName: TDMaker.Core.Components.PathFollowComponent.LaneIndex
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Sub-lane index.
+  example: []
+  syntax:
+    content: public int LaneIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LaneIndex As Integer
+  overload: TDMaker.Core.Components.PathFollowComponent.LaneIndex*
+- uid: TDMaker.Core.Components.PathFollowComponent.NodeIndex
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.NodeIndex
+  id: NodeIndex
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: NodeIndex
+  nameWithType: PathFollowComponent.NodeIndex
+  fullName: TDMaker.Core.Components.PathFollowComponent.NodeIndex
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Index of the current segment's starting node.
+  example: []
+  syntax:
+    content: public int NodeIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property NodeIndex As Integer
+  overload: TDMaker.Core.Components.PathFollowComponent.NodeIndex*
+- uid: TDMaker.Core.Components.PathFollowComponent.SegmentProgress
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.SegmentProgress
+  id: SegmentProgress
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: SegmentProgress
+  nameWithType: PathFollowComponent.SegmentProgress
+  fullName: TDMaker.Core.Components.PathFollowComponent.SegmentProgress
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Normalized progress along the current segment.
+  example: []
+  syntax:
+    content: public float SegmentProgress { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property SegmentProgress As Single
+  overload: TDMaker.Core.Components.PathFollowComponent.SegmentProgress*
+- uid: TDMaker.Core.Components.PathFollowComponent.RemainingDistance
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.RemainingDistance
+  id: RemainingDistance
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: RemainingDistance
+  nameWithType: PathFollowComponent.RemainingDistance
+  fullName: TDMaker.Core.Components.PathFollowComponent.RemainingDistance
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Distance remaining to the exit, used for target priority.
+  example: []
+  syntax:
+    content: public float RemainingDistance { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RemainingDistance As Single
+  overload: TDMaker.Core.Components.PathFollowComponent.RemainingDistance*
+- uid: TDMaker.Core.Components.PathFollowComponent.BlockerId
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.BlockerId
+  id: BlockerId
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: BlockerId
+  nameWithType: PathFollowComponent.BlockerId
+  fullName: TDMaker.Core.Components.PathFollowComponent.BlockerId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: First contact-rank soldier identifier, or zero. It need not be the retained melee representative.
+  example: []
+  syntax:
+    content: public int BlockerId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property BlockerId As Integer
+  overload: TDMaker.Core.Components.PathFollowComponent.BlockerId*
+- uid: TDMaker.Core.Components.PathFollowComponent.TravelAngle
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.TravelAngle
+  id: TravelAngle
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: TravelAngle
+  nameWithType: PathFollowComponent.TravelAngle
+  fullName: TDMaker.Core.Components.PathFollowComponent.TravelAngle
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Last general travel angle in radians, retained while stopped.
+  example: []
+  syntax:
+    content: public float TravelAngle { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property TravelAngle As Single
+  overload: TDMaker.Core.Components.PathFollowComponent.TravelAngle*
+- uid: TDMaker.Core.Components.PathFollowComponent.RepresentativeId
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.RepresentativeId
+  id: RepresentativeId
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: RepresentativeId
+  nameWithType: PathFollowComponent.RepresentativeId
+  fullName: TDMaker.Core.Components.PathFollowComponent.RepresentativeId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Retained melee representative. May differ from BlockerId after rank rotation; zero before observation/after loss.
+  example: []
+  syntax:
+    content: public int RepresentativeId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property RepresentativeId As Integer
+  overload: TDMaker.Core.Components.PathFollowComponent.RepresentativeId*
+- uid: TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact
+  id: IsWaitingForContact
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: IsWaitingForContact
+  nameWithType: PathFollowComponent.IsWaitingForContact
+  fullName: TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Whether the observed representative has not reached its contact goal.
+  example: []
+  syntax:
+    content: public bool IsWaitingForContact { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWaitingForContact As Boolean
+  overload: TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact*
+- uid: TDMaker.Core.Components.PathFollowComponent.BlockerCount
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.BlockerCount
+  id: BlockerCount
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: BlockerCount
+  nameWithType: PathFollowComponent.BlockerCount
+  fullName: TDMaker.Core.Components.PathFollowComponent.BlockerCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Number of assigned soldiers in current contact-rank order.
+  example: []
+  syntax:
+    content: public int BlockerCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property BlockerCount As Integer
+  overload: TDMaker.Core.Components.PathFollowComponent.BlockerCount*
+- uid: TDMaker.Core.Components.PathFollowComponent.ReachedExit
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.ReachedExit
+  id: ReachedExit
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: ReachedExit
+  nameWithType: PathFollowComponent.ReachedExit
+  fullName: TDMaker.Core.Components.PathFollowComponent.ReachedExit
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Whether the unit has crossed the exit.
+  example: []
+  syntax:
+    content: public bool ReachedExit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ReachedExit As Boolean
+  overload: TDMaker.Core.Components.PathFollowComponent.ReachedExit*
+- uid: TDMaker.Core.Components.PathFollowComponent.IsConnecting
+  commentId: P:TDMaker.Core.Components.PathFollowComponent.IsConnecting
+  id: IsConnecting
+  parent: TDMaker.Core.Components.PathFollowComponent
+  langs:
+  - csharp
+  - vb
+  name: IsConnecting
+  nameWithType: PathFollowComponent.IsConnecting
+  fullName: TDMaker.Core.Components.PathFollowComponent.IsConnecting
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Whether the unit is crossing to the current path's entry from a previous path.
+  example: []
+  syntax:
+    content: public bool IsConnecting { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsConnecting As Boolean
+  overload: TDMaker.Core.Components.PathFollowComponent.IsConnecting*
+references:
+- uid: TDMaker.Core.Components
+  commentId: N:TDMaker.Core.Components
+  isExternal: true
+  name: TDMaker.Core.Components
+  nameWithType: TDMaker.Core.Components
+  fullName: TDMaker.Core.Components
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Components.PathFollowComponent.GetBlockerId*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.GetBlockerId
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_GetBlockerId_System_Int32_
+  name: GetBlockerId
+  nameWithType: PathFollowComponent.GetBlockerId
+  fullName: TDMaker.Core.Components.PathFollowComponent.GetBlockerId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Components.PathFollowComponent.#ctor*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.#ctor
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent__ctor
+  name: PathFollowComponent
+  nameWithType: PathFollowComponent.PathFollowComponent
+  fullName: TDMaker.Core.Components.PathFollowComponent.PathFollowComponent
+  nameWithType.vb: PathFollowComponent.New
+  fullName.vb: TDMaker.Core.Components.PathFollowComponent.New
+  name.vb: New
+- uid: TDMaker.Core.Components.PathFollowComponent.PathIndex*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.PathIndex
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_PathIndex
+  name: PathIndex
+  nameWithType: PathFollowComponent.PathIndex
+  fullName: TDMaker.Core.Components.PathFollowComponent.PathIndex
+- uid: TDMaker.Core.Components.PathFollowComponent.LaneIndex*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.LaneIndex
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_LaneIndex
+  name: LaneIndex
+  nameWithType: PathFollowComponent.LaneIndex
+  fullName: TDMaker.Core.Components.PathFollowComponent.LaneIndex
+- uid: TDMaker.Core.Components.PathFollowComponent.NodeIndex*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.NodeIndex
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_NodeIndex
+  name: NodeIndex
+  nameWithType: PathFollowComponent.NodeIndex
+  fullName: TDMaker.Core.Components.PathFollowComponent.NodeIndex
+- uid: TDMaker.Core.Components.PathFollowComponent.SegmentProgress*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.SegmentProgress
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_SegmentProgress
+  name: SegmentProgress
+  nameWithType: PathFollowComponent.SegmentProgress
+  fullName: TDMaker.Core.Components.PathFollowComponent.SegmentProgress
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Components.PathFollowComponent.RemainingDistance*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.RemainingDistance
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_RemainingDistance
+  name: RemainingDistance
+  nameWithType: PathFollowComponent.RemainingDistance
+  fullName: TDMaker.Core.Components.PathFollowComponent.RemainingDistance
+- uid: TDMaker.Core.Components.PathFollowComponent.BlockerId*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.BlockerId
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_BlockerId
+  name: BlockerId
+  nameWithType: PathFollowComponent.BlockerId
+  fullName: TDMaker.Core.Components.PathFollowComponent.BlockerId
+- uid: TDMaker.Core.Components.PathFollowComponent.TravelAngle*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.TravelAngle
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_TravelAngle
+  name: TravelAngle
+  nameWithType: PathFollowComponent.TravelAngle
+  fullName: TDMaker.Core.Components.PathFollowComponent.TravelAngle
+- uid: TDMaker.Core.Components.PathFollowComponent.RepresentativeId*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.RepresentativeId
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_RepresentativeId
+  name: RepresentativeId
+  nameWithType: PathFollowComponent.RepresentativeId
+  fullName: TDMaker.Core.Components.PathFollowComponent.RepresentativeId
+- uid: TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_IsWaitingForContact
+  name: IsWaitingForContact
+  nameWithType: PathFollowComponent.IsWaitingForContact
+  fullName: TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Components.PathFollowComponent.BlockerCount*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.BlockerCount
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_BlockerCount
+  name: BlockerCount
+  nameWithType: PathFollowComponent.BlockerCount
+  fullName: TDMaker.Core.Components.PathFollowComponent.BlockerCount
+- uid: TDMaker.Core.Components.PathFollowComponent.ReachedExit*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.ReachedExit
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_ReachedExit
+  name: ReachedExit
+  nameWithType: PathFollowComponent.ReachedExit
+  fullName: TDMaker.Core.Components.PathFollowComponent.ReachedExit
+- uid: TDMaker.Core.Components.PathFollowComponent.IsConnecting*
+  commentId: Overload:TDMaker.Core.Components.PathFollowComponent.IsConnecting
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html#TDMaker_Core_Components_PathFollowComponent_IsConnecting
+  name: IsConnecting
+  nameWithType: PathFollowComponent.IsConnecting
+  fullName: TDMaker.Core.Components.PathFollowComponent.IsConnecting

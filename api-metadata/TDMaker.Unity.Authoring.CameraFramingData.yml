@@ -1,0 +1,618 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.CameraFramingData
+  commentId: T:TDMaker.Unity.Authoring.CameraFramingData
+  id: CameraFramingData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.CameraFramingData.#ctor
+  - TDMaker.Unity.Authoring.CameraFramingData.Clone
+  - TDMaker.Unity.Authoring.CameraFramingData.OrthographicSize(UnityEngine.Rect,System.Single,System.Boolean)
+  - TDMaker.Unity.Authoring.CameraFramingData.introPan
+  - TDMaker.Unity.Authoring.CameraFramingData.introPanSeconds
+  - TDMaker.Unity.Authoring.CameraFramingData.mode
+  - TDMaker.Unity.Authoring.CameraFramingData.startFocus
+  - TDMaker.Unity.Authoring.CameraFramingData.viewHeight
+  langs:
+  - csharp
+  - vb
+  name: CameraFramingData
+  nameWithType: CameraFramingData
+  fullName: TDMaker.Unity.Authoring.CameraFramingData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Per-level camera framing for maps larger than the screen: how much of the map one screen shows, where the view
+    starts and
+
+    an optional intro pan along the first path. Read by <code>TDCameraController</code>; presentation only (no simulation
+    effect).'
+  example: []
+  syntax:
+    content: public sealed class CameraFramingData
+    content.vb: Public NotInheritable Class CameraFramingData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.CameraFramingData.mode
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingData.mode
+  id: mode
+  parent: TDMaker.Unity.Authoring.CameraFramingData
+  langs:
+  - csharp
+  - vb
+  name: mode
+  nameWithType: CameraFramingData.mode
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.mode
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: How the view is sized.
+  example: []
+  syntax:
+    content: '[Tooltip("Fit Whole Map, fit the map height (scroll sideways), fit the map width (scroll up/down) or a fixed
+      view size (scroll both ways).")]
+
+      public CameraFramingMode mode'
+    return:
+      type: TDMaker.Unity.Authoring.CameraFramingMode
+    content.vb: '<Tooltip("Fit Whole Map, fit the map height (scroll sideways), fit the map width (scroll up/down) or a fixed
+      view size (scroll both ways).")>
+
+      Public mode As CameraFramingMode'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Fit Whole Map, fit the map height (scroll sideways), fit the map width (scroll up/down) or a fixed view size
+        (scroll both ways).
+- uid: TDMaker.Unity.Authoring.CameraFramingData.viewHeight
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingData.viewHeight
+  id: viewHeight
+  parent: TDMaker.Unity.Authoring.CameraFramingData
+  langs:
+  - csharp
+  - vb
+  name: viewHeight
+  nameWithType: CameraFramingData.viewHeight
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.viewHeight
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Visible world height for <xref href="TDMaker.Unity.Authoring.CameraFramingMode.FixedViewSize" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: '[Tooltip("Visible world height (units) for Fixed View Size. Capped so the view never shows past the map.")]
+
+      [Min(1)]
+
+      public float viewHeight'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Visible world height (units) for Fixed View Size. Capped so the view never shows past the map.")>
+
+      <Min(1)>
+
+      Public viewHeight As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Visible world height (units) for Fixed View Size. Capped so the view never shows past the map.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.CameraFramingData.startFocus
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingData.startFocus
+  id: startFocus
+  parent: TDMaker.Unity.Authoring.CameraFramingData
+  langs:
+  - csharp
+  - vb
+  name: startFocus
+  nameWithType: CameraFramingData.startFocus
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.startFocus
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Where the view starts.
+  example: []
+  syntax:
+    content: public CameraStartFocus startFocus
+    return:
+      type: TDMaker.Unity.Authoring.CameraStartFocus
+    content.vb: Public startFocus As CameraStartFocus
+- uid: TDMaker.Unity.Authoring.CameraFramingData.introPan
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingData.introPan
+  id: introPan
+  parent: TDMaker.Unity.Authoring.CameraFramingData
+  langs:
+  - csharp
+  - vb
+  name: introPan
+  nameWithType: CameraFramingData.introPan
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.introPan
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Pans along the first path from its entrance to its exit when the level starts (any pan input skips it).
+  example: []
+  syntax:
+    content: '[Tooltip("Pan along the first path from its entrance to its exit when the level starts, then settle on the start
+      focus. Any pan input skips it.")]
+
+      public bool introPan'
+    return:
+      type: System.Boolean
+    content.vb: '<Tooltip("Pan along the first path from its entrance to its exit when the level starts, then settle on the
+      start focus. Any pan input skips it.")>
+
+      Public introPan As Boolean'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Pan along the first path from its entrance to its exit when the level starts, then settle on the start focus.
+        Any pan input skips it.
+- uid: TDMaker.Unity.Authoring.CameraFramingData.introPanSeconds
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingData.introPanSeconds
+  id: introPanSeconds
+  parent: TDMaker.Unity.Authoring.CameraFramingData
+  langs:
+  - csharp
+  - vb
+  name: introPanSeconds
+  nameWithType: CameraFramingData.introPanSeconds
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.introPanSeconds
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Intro pan duration in seconds (unscaled time).
+  example: []
+  syntax:
+    content: '[Min(0.1)]
+
+      public float introPanSeconds'
+    return:
+      type: System.Single
+    content.vb: '<Min(0.1)>
+
+      Public introPanSeconds As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0.1
+- uid: TDMaker.Unity.Authoring.CameraFramingData.Clone
+  commentId: M:TDMaker.Unity.Authoring.CameraFramingData.Clone
+  id: Clone
+  parent: TDMaker.Unity.Authoring.CameraFramingData
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: CameraFramingData.Clone()
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.Clone()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Creates a deep copy.
+  example: []
+  syntax:
+    content: public CameraFramingData Clone()
+    return:
+      type: TDMaker.Unity.Authoring.CameraFramingData
+    content.vb: Public Function Clone() As CameraFramingData
+  overload: TDMaker.Unity.Authoring.CameraFramingData.Clone*
+- uid: TDMaker.Unity.Authoring.CameraFramingData.OrthographicSize(UnityEngine.Rect,System.Single,System.Boolean)
+  commentId: M:TDMaker.Unity.Authoring.CameraFramingData.OrthographicSize(UnityEngine.Rect,System.Single,System.Boolean)
+  id: OrthographicSize(UnityEngine.Rect,System.Single,System.Boolean)
+  parent: TDMaker.Unity.Authoring.CameraFramingData
+  langs:
+  - csharp
+  - vb
+  name: OrthographicSize(Rect, float, bool)
+  nameWithType: CameraFramingData.OrthographicSize(Rect, float, bool)
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.OrthographicSize(UnityEngine.Rect, float, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Orthographic size (half the view height) for this framing: <code class="paramref">bounds</code> are the camera
+    bounds,
+
+    <code class="paramref">aspect</code> the screen aspect, and <code class="paramref">cover</code> caps the view inside the
+    bounds (fixed map
+
+    rectangles) instead of fitting the bounds whole.'
+  example: []
+  syntax:
+    content: public float OrthographicSize(Rect bounds, float aspect, bool cover)
+    parameters:
+    - id: bounds
+      type: UnityEngine.Rect
+    - id: aspect
+      type: System.Single
+    - id: cover
+      type: System.Boolean
+    return:
+      type: System.Single
+    content.vb: Public Function OrthographicSize(bounds As Rect, aspect As Single, cover As Boolean) As Single
+  overload: TDMaker.Unity.Authoring.CameraFramingData.OrthographicSize*
+  nameWithType.vb: CameraFramingData.OrthographicSize(Rect, Single, Boolean)
+  fullName.vb: TDMaker.Unity.Authoring.CameraFramingData.OrthographicSize(UnityEngine.Rect, Single, Boolean)
+  name.vb: OrthographicSize(Rect, Single, Boolean)
+- uid: TDMaker.Unity.Authoring.CameraFramingData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.CameraFramingData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.CameraFramingData
+  langs:
+  - csharp
+  - vb
+  name: CameraFramingData()
+  nameWithType: CameraFramingData.CameraFramingData()
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.CameraFramingData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public CameraFramingData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.CameraFramingData.#ctor*
+  nameWithType.vb: CameraFramingData.New()
+  fullName.vb: TDMaker.Unity.Authoring.CameraFramingData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Authoring.CameraFramingMode
+  commentId: T:TDMaker.Unity.Authoring.CameraFramingMode
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraFramingMode.html
+  name: CameraFramingMode
+  nameWithType: CameraFramingMode
+  fullName: TDMaker.Unity.Authoring.CameraFramingMode
+- uid: TDMaker.Unity.Authoring.CameraFramingMode.FixedViewSize
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingMode.FixedViewSize
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraFramingMode.html#TDMaker_Unity_Authoring_CameraFramingMode_FixedViewSize
+  name: FixedViewSize
+  nameWithType: CameraFramingMode.FixedViewSize
+  fullName: TDMaker.Unity.Authoring.CameraFramingMode.FixedViewSize
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.CameraStartFocus
+  commentId: T:TDMaker.Unity.Authoring.CameraStartFocus
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraStartFocus.html
+  name: CameraStartFocus
+  nameWithType: CameraStartFocus
+  fullName: TDMaker.Unity.Authoring.CameraStartFocus
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.CameraFramingData.Clone*
+  commentId: Overload:TDMaker.Unity.Authoring.CameraFramingData.Clone
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraFramingData.html#TDMaker_Unity_Authoring_CameraFramingData_Clone
+  name: Clone
+  nameWithType: CameraFramingData.Clone
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.Clone
+- uid: TDMaker.Unity.Authoring.CameraFramingData
+  commentId: T:TDMaker.Unity.Authoring.CameraFramingData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraFramingData.html
+  name: CameraFramingData
+  nameWithType: CameraFramingData
+  fullName: TDMaker.Unity.Authoring.CameraFramingData
+- uid: TDMaker.Unity.Authoring.CameraFramingData.OrthographicSize*
+  commentId: Overload:TDMaker.Unity.Authoring.CameraFramingData.OrthographicSize
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraFramingData.html#TDMaker_Unity_Authoring_CameraFramingData_OrthographicSize_UnityEngine_Rect_System_Single_System_Boolean_
+  name: OrthographicSize
+  nameWithType: CameraFramingData.OrthographicSize
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.OrthographicSize
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Authoring.CameraFramingData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.CameraFramingData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraFramingData.html#TDMaker_Unity_Authoring_CameraFramingData__ctor
+  name: CameraFramingData
+  nameWithType: CameraFramingData.CameraFramingData
+  fullName: TDMaker.Unity.Authoring.CameraFramingData.CameraFramingData
+  nameWithType.vb: CameraFramingData.New
+  fullName.vb: TDMaker.Unity.Authoring.CameraFramingData.New
+  name.vb: New

@@ -1,0 +1,703 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.LevelMusicData
+  commentId: T:TDMaker.Unity.Authoring.LevelMusicData
+  id: LevelMusicData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.LevelMusicData.#ctor
+  - TDMaker.Unity.Authoring.LevelMusicData.Clone
+  - TDMaker.Unity.Authoring.LevelMusicData.IsIntense(System.Int32,System.Int32,System.Boolean)
+  - TDMaker.Unity.Authoring.LevelMusicData.battle
+  - TDMaker.Unity.Authoring.LevelMusicData.defeat
+  - TDMaker.Unity.Authoring.LevelMusicData.intense
+  - TDMaker.Unity.Authoring.LevelMusicData.intenseFromWave
+  - TDMaker.Unity.Authoring.LevelMusicData.intenseOnBossWaves
+  - TDMaker.Unity.Authoring.LevelMusicData.intenseOnLastWave
+  - TDMaker.Unity.Authoring.LevelMusicData.victory
+  - TDMaker.Unity.Authoring.LevelMusicData.volume
+  langs:
+  - csharp
+  - vb
+  name: LevelMusicData
+  nameWithType: LevelMusicData
+  fullName: TDMaker.Unity.Authoring.LevelMusicData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Music of one level, played by <code>TDMaker.Unity.View.MusicPlayer</code>: a battle loop, an optional intense
+    loop for
+
+    late or boss waves, and victory / defeat stingers that stop or duck the loop. Empty clips fall back to the music
+
+    player''s defaults, so every field is optional.'
+  example: []
+  syntax:
+    content: public sealed class LevelMusicData
+    content.vb: Public NotInheritable Class LevelMusicData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.LevelMusicData.battle
+  commentId: F:TDMaker.Unity.Authoring.LevelMusicData.battle
+  id: battle
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: battle
+  nameWithType: LevelMusicData.battle
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.battle
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Loop played during the battle.
+  example: []
+  syntax:
+    content: '[Tooltip("Loop played during the battle (empty: the Music Player''s default battle loop).")]
+
+      public AudioClip battle'
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: '<Tooltip("Loop played during the battle (empty: the Music Player''s default battle loop).")>
+
+      Public battle As AudioClip'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Loop played during the battle (empty: the Music Player''s default battle loop).'
+- uid: TDMaker.Unity.Authoring.LevelMusicData.intense
+  commentId: F:TDMaker.Unity.Authoring.LevelMusicData.intense
+  id: intense
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: intense
+  nameWithType: LevelMusicData.intense
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.intense
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Loop crossfaded in on intense waves (see the rules below).
+  example: []
+  syntax:
+    content: '[Tooltip("Loop crossfaded in on intense waves (empty: the Music Player''s default, or keep the battle loop).")]
+
+      public AudioClip intense'
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: '<Tooltip("Loop crossfaded in on intense waves (empty: the Music Player''s default, or keep the battle loop).")>
+
+      Public intense As AudioClip'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Loop crossfaded in on intense waves (empty: the Music Player''s default, or keep the battle loop).'
+- uid: TDMaker.Unity.Authoring.LevelMusicData.intenseOnLastWave
+  commentId: F:TDMaker.Unity.Authoring.LevelMusicData.intenseOnLastWave
+  id: intenseOnLastWave
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: intenseOnLastWave
+  nameWithType: LevelMusicData.intenseOnLastWave
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.intenseOnLastWave
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Switches to the intense loop when the last wave starts.
+  example: []
+  syntax:
+    content: '[Tooltip("Switch to the intense loop when the last wave starts.")]
+
+      public bool intenseOnLastWave'
+    return:
+      type: System.Boolean
+    content.vb: '<Tooltip("Switch to the intense loop when the last wave starts.")>
+
+      Public intenseOnLastWave As Boolean'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Switch to the intense loop when the last wave starts.
+- uid: TDMaker.Unity.Authoring.LevelMusicData.intenseOnBossWaves
+  commentId: F:TDMaker.Unity.Authoring.LevelMusicData.intenseOnBossWaves
+  id: intenseOnBossWaves
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: intenseOnBossWaves
+  nameWithType: LevelMusicData.intenseOnBossWaves
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.intenseOnBossWaves
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Switches to the intense loop when a wave flagged <code>Boss Wave</code> starts.
+  example: []
+  syntax:
+    content: '[Tooltip("Switch to the intense loop when a wave flagged ''Boss Wave'' (Wave Set) starts.")]
+
+      public bool intenseOnBossWaves'
+    return:
+      type: System.Boolean
+    content.vb: '<Tooltip("Switch to the intense loop when a wave flagged ''Boss Wave'' (Wave Set) starts.")>
+
+      Public intenseOnBossWaves As Boolean'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Switch to the intense loop when a wave flagged 'Boss Wave' (Wave Set) starts.
+- uid: TDMaker.Unity.Authoring.LevelMusicData.intenseFromWave
+  commentId: F:TDMaker.Unity.Authoring.LevelMusicData.intenseFromWave
+  id: intenseFromWave
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: intenseFromWave
+  nameWithType: LevelMusicData.intenseFromWave
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.intenseFromWave
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: One-based wave number from which the intense loop plays; 0 turns this rule off.
+  example: []
+  syntax:
+    content: '[Tooltip("One-based wave number from which the intense loop plays (0 = off).")]
+
+      [Min(0)]
+
+      public int intenseFromWave'
+    return:
+      type: System.Int32
+    content.vb: '<Tooltip("One-based wave number from which the intense loop plays (0 = off).")>
+
+      <Min(0)>
+
+      Public intenseFromWave As Integer'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: One-based wave number from which the intense loop plays (0 = off).
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.LevelMusicData.victory
+  commentId: F:TDMaker.Unity.Authoring.LevelMusicData.victory
+  id: victory
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: victory
+  nameWithType: LevelMusicData.victory
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.victory
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Stinger played on victory.
+  example: []
+  syntax:
+    content: '[Tooltip("Stinger played on victory (empty: the Music Player''s default).")]
+
+      public AudioClip victory'
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: '<Tooltip("Stinger played on victory (empty: the Music Player''s default).")>
+
+      Public victory As AudioClip'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Stinger played on victory (empty: the Music Player''s default).'
+- uid: TDMaker.Unity.Authoring.LevelMusicData.defeat
+  commentId: F:TDMaker.Unity.Authoring.LevelMusicData.defeat
+  id: defeat
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: defeat
+  nameWithType: LevelMusicData.defeat
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.defeat
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Stinger played on defeat.
+  example: []
+  syntax:
+    content: '[Tooltip("Stinger played on defeat (empty: the Music Player''s default).")]
+
+      public AudioClip defeat'
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: '<Tooltip("Stinger played on defeat (empty: the Music Player''s default).")>
+
+      Public defeat As AudioClip'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Stinger played on defeat (empty: the Music Player''s default).'
+- uid: TDMaker.Unity.Authoring.LevelMusicData.volume
+  commentId: F:TDMaker.Unity.Authoring.LevelMusicData.volume
+  id: volume
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: volume
+  nameWithType: LevelMusicData.volume
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.volume
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Volume of this level's music (before the Music and Master volumes).
+  example: []
+  syntax:
+    content: '[Range(0, 1)]
+
+      public float volume'
+    return:
+      type: System.Single
+    content.vb: '<Range(0, 1)>
+
+      Public volume As Single'
+  attributes:
+  - type: UnityEngine.RangeAttribute
+    ctor: UnityEngine.RangeAttribute.#ctor(System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.LevelMusicData.IsIntense(System.Int32,System.Int32,System.Boolean)
+  commentId: M:TDMaker.Unity.Authoring.LevelMusicData.IsIntense(System.Int32,System.Int32,System.Boolean)
+  id: IsIntense(System.Int32,System.Int32,System.Boolean)
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: IsIntense(int, int, bool)
+  nameWithType: LevelMusicData.IsIntense(int, int, bool)
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.IsIntense(int, int, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether the intense loop should play once wave <code class="paramref">waveNumber</code> (one-based) has started.
+  example: []
+  syntax:
+    content: public bool IsIntense(int waveNumber, int waveCount, bool bossWave)
+    parameters:
+    - id: waveNumber
+      type: System.Int32
+    - id: waveCount
+      type: System.Int32
+    - id: bossWave
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsIntense(waveNumber As Integer, waveCount As Integer, bossWave As Boolean) As Boolean
+  overload: TDMaker.Unity.Authoring.LevelMusicData.IsIntense*
+  nameWithType.vb: LevelMusicData.IsIntense(Integer, Integer, Boolean)
+  fullName.vb: TDMaker.Unity.Authoring.LevelMusicData.IsIntense(Integer, Integer, Boolean)
+  name.vb: IsIntense(Integer, Integer, Boolean)
+- uid: TDMaker.Unity.Authoring.LevelMusicData.Clone
+  commentId: M:TDMaker.Unity.Authoring.LevelMusicData.Clone
+  id: Clone
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: LevelMusicData.Clone()
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.Clone()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: A shallow copy (clips are shared).
+  example: []
+  syntax:
+    content: public LevelMusicData Clone()
+    return:
+      type: TDMaker.Unity.Authoring.LevelMusicData
+    content.vb: Public Function Clone() As LevelMusicData
+  overload: TDMaker.Unity.Authoring.LevelMusicData.Clone*
+- uid: TDMaker.Unity.Authoring.LevelMusicData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.LevelMusicData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.LevelMusicData
+  langs:
+  - csharp
+  - vb
+  name: LevelMusicData()
+  nameWithType: LevelMusicData.LevelMusicData()
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.LevelMusicData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public LevelMusicData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.LevelMusicData.#ctor*
+  nameWithType.vb: LevelMusicData.New()
+  fullName.vb: TDMaker.Unity.Authoring.LevelMusicData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.LevelMusicData.IsIntense*
+  commentId: Overload:TDMaker.Unity.Authoring.LevelMusicData.IsIntense
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelMusicData.html#TDMaker_Unity_Authoring_LevelMusicData_IsIntense_System_Int32_System_Int32_System_Boolean_
+  name: IsIntense
+  nameWithType: LevelMusicData.IsIntense
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.IsIntense
+- uid: TDMaker.Unity.Authoring.LevelMusicData.Clone*
+  commentId: Overload:TDMaker.Unity.Authoring.LevelMusicData.Clone
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelMusicData.html#TDMaker_Unity_Authoring_LevelMusicData_Clone
+  name: Clone
+  nameWithType: LevelMusicData.Clone
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.Clone
+- uid: TDMaker.Unity.Authoring.LevelMusicData
+  commentId: T:TDMaker.Unity.Authoring.LevelMusicData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelMusicData.html
+  name: LevelMusicData
+  nameWithType: LevelMusicData
+  fullName: TDMaker.Unity.Authoring.LevelMusicData
+- uid: TDMaker.Unity.Authoring.LevelMusicData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.LevelMusicData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelMusicData.html#TDMaker_Unity_Authoring_LevelMusicData__ctor
+  name: LevelMusicData
+  nameWithType: LevelMusicData.LevelMusicData
+  fullName: TDMaker.Unity.Authoring.LevelMusicData.LevelMusicData
+  nameWithType.vb: LevelMusicData.New
+  fullName.vb: TDMaker.Unity.Authoring.LevelMusicData.New
+  name.vb: New

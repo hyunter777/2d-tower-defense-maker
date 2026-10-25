@@ -1,0 +1,600 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData
+  commentId: T:TDMaker.Unity.Authoring.PeriodicDamageData
+  id: PeriodicDamageData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.PeriodicDamageData.#ctor
+  - TDMaker.Unity.Authoring.PeriodicDamageData.ToDef
+  - TDMaker.Unity.Authoring.PeriodicDamageData.enabled
+  - TDMaker.Unity.Authoring.PeriodicDamageData.firstDamage
+  - TDMaker.Unity.Authoring.PeriodicDamageData.interval
+  - TDMaker.Unity.Authoring.PeriodicDamageData.kind
+  - TDMaker.Unity.Authoring.PeriodicDamageData.lastDamage
+  - TDMaker.Unity.Authoring.PeriodicDamageData.maximum
+  - TDMaker.Unity.Authoring.PeriodicDamageData.minimum
+  langs:
+  - csharp
+  - vb
+  name: PeriodicDamageData
+  nameWithType: PeriodicDamageData
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Damage over time with integer rolls, baked into <xref href="TDMaker.Core.Defs.PeriodicDamageDef" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public sealed class PeriodicDamageData
+    content.vb: Public NotInheritable Class PeriodicDamageData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.enabled
+  commentId: F:TDMaker.Unity.Authoring.PeriodicDamageData.enabled
+  id: enabled
+  parent: TDMaker.Unity.Authoring.PeriodicDamageData
+  langs:
+  - csharp
+  - vb
+  name: enabled
+  nameWithType: PeriodicDamageData.enabled
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.enabled
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether the effect deals periodic damage.
+  example: []
+  syntax:
+    content: public bool enabled
+    return:
+      type: System.Boolean
+    content.vb: Public enabled As Boolean
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.kind
+  commentId: F:TDMaker.Unity.Authoring.PeriodicDamageData.kind
+  id: kind
+  parent: TDMaker.Unity.Authoring.PeriodicDamageData
+  langs:
+  - csharp
+  - vb
+  name: kind
+  nameWithType: PeriodicDamageData.kind
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.kind
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Damage channel.
+  example: []
+  syntax:
+    content: public DamageKind kind
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+    content.vb: Public kind As DamageKind
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.minimum
+  commentId: F:TDMaker.Unity.Authoring.PeriodicDamageData.minimum
+  id: minimum
+  parent: TDMaker.Unity.Authoring.PeriodicDamageData
+  langs:
+  - csharp
+  - vb
+  name: minimum
+  nameWithType: PeriodicDamageData.minimum
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.minimum
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Minimum damage per tick (inclusive).
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public int minimum'
+    return:
+      type: System.Int32
+    content.vb: '<Min(0)>
+
+      Public minimum As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.maximum
+  commentId: F:TDMaker.Unity.Authoring.PeriodicDamageData.maximum
+  id: maximum
+  parent: TDMaker.Unity.Authoring.PeriodicDamageData
+  langs:
+  - csharp
+  - vb
+  name: maximum
+  nameWithType: PeriodicDamageData.maximum
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.maximum
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Maximum damage per tick (inclusive).
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public int maximum'
+    return:
+      type: System.Int32
+    content.vb: '<Min(0)>
+
+      Public maximum As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.interval
+  commentId: F:TDMaker.Unity.Authoring.PeriodicDamageData.interval
+  id: interval
+  parent: TDMaker.Unity.Authoring.PeriodicDamageData
+  langs:
+  - csharp
+  - vb
+  name: interval
+  nameWithType: PeriodicDamageData.interval
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.interval
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Seconds between ticks.
+  example: []
+  syntax:
+    content: '[Min(0.01)]
+
+      public float interval'
+    return:
+      type: System.Single
+    content.vb: '<Min(0.01)>
+
+      Public interval As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0.01
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.firstDamage
+  commentId: F:TDMaker.Unity.Authoring.PeriodicDamageData.firstDamage
+  id: firstDamage
+  parent: TDMaker.Unity.Authoring.PeriodicDamageData
+  langs:
+  - csharp
+  - vb
+  name: firstDamage
+  nameWithType: PeriodicDamageData.firstDamage
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.firstDamage
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional hit on attachment; negative disables it.
+  example: []
+  syntax:
+    content: public float firstDamage
+    return:
+      type: System.Single
+    content.vb: Public firstDamage As Single
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.lastDamage
+  commentId: F:TDMaker.Unity.Authoring.PeriodicDamageData.lastDamage
+  id: lastDamage
+  parent: TDMaker.Unity.Authoring.PeriodicDamageData
+  langs:
+  - csharp
+  - vb
+  name: lastDamage
+  nameWithType: PeriodicDamageData.lastDamage
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.lastDamage
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional hit when the effect expires naturally; negative disables it.
+  example: []
+  syntax:
+    content: public float lastDamage
+    return:
+      type: System.Single
+    content.vb: Public lastDamage As Single
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.PeriodicDamageData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.PeriodicDamageData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: PeriodicDamageData.ToDef()
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the periodic damage.
+  example: []
+  syntax:
+    content: public PeriodicDamageDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.PeriodicDamageDef
+    content.vb: Public Function ToDef() As PeriodicDamageDef
+  overload: TDMaker.Unity.Authoring.PeriodicDamageData.ToDef*
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.PeriodicDamageData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.PeriodicDamageData
+  langs:
+  - csharp
+  - vb
+  name: PeriodicDamageData()
+  nameWithType: PeriodicDamageData.PeriodicDamageData()
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.PeriodicDamageData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public PeriodicDamageData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.PeriodicDamageData.#ctor*
+  nameWithType.vb: PeriodicDamageData.New()
+  fullName.vb: TDMaker.Unity.Authoring.PeriodicDamageData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Core.Defs.PeriodicDamageDef
+  commentId: T:TDMaker.Core.Defs.PeriodicDamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PeriodicDamageDef.html
+  name: PeriodicDamageDef
+  nameWithType: PeriodicDamageDef
+  fullName: TDMaker.Core.Defs.PeriodicDamageDef
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.DamageKind
+  commentId: T:TDMaker.Core.Defs.DamageKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageKind.html
+  name: DamageKind
+  nameWithType: DamageKind
+  fullName: TDMaker.Core.Defs.DamageKind
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.PeriodicDamageData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PeriodicDamageData.html#TDMaker_Unity_Authoring_PeriodicDamageData_ToDef
+  name: ToDef
+  nameWithType: PeriodicDamageData.ToDef
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.ToDef
+- uid: TDMaker.Unity.Authoring.PeriodicDamageData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.PeriodicDamageData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PeriodicDamageData.html#TDMaker_Unity_Authoring_PeriodicDamageData__ctor
+  name: PeriodicDamageData
+  nameWithType: PeriodicDamageData.PeriodicDamageData
+  fullName: TDMaker.Unity.Authoring.PeriodicDamageData.PeriodicDamageData
+  nameWithType.vb: PeriodicDamageData.New
+  fullName.vb: TDMaker.Unity.Authoring.PeriodicDamageData.New
+  name.vb: New

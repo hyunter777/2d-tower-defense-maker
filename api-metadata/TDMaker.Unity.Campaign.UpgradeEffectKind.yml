@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.UpgradeEffectKind
+  commentId: T:TDMaker.Unity.Campaign.UpgradeEffectKind
+  id: UpgradeEffectKind
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.UpgradeEffectKind.AddMechanic
+  - TDMaker.Unity.Campaign.UpgradeEffectKind.Stat
+  - TDMaker.Unity.Campaign.UpgradeEffectKind.SwapTemplate
+  langs:
+  - csharp
+  - vb
+  name: UpgradeEffectKind
+  nameWithType: UpgradeEffectKind
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectKind
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: What one authored permanent-upgrade effect does.
+  example: []
+  syntax:
+    content: public enum UpgradeEffectKind
+    content.vb: Public Enum UpgradeEffectKind
+- uid: TDMaker.Unity.Campaign.UpgradeEffectKind.Stat
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectKind.Stat
+  id: Stat
+  parent: TDMaker.Unity.Campaign.UpgradeEffectKind
+  langs:
+  - csharp
+  - vb
+  name: Stat
+  nameWithType: UpgradeEffectKind.Stat
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectKind.Stat
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Changes a number (range, damage, cost, cooldown ...) of the selected templates or spells.
+  example: []
+  syntax:
+    content: Stat = 0
+    return:
+      type: TDMaker.Unity.Campaign.UpgradeEffectKind
+- uid: TDMaker.Unity.Campaign.UpgradeEffectKind.AddMechanic
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectKind.AddMechanic
+  id: AddMechanic
+  parent: TDMaker.Unity.Campaign.UpgradeEffectKind
+  langs:
+  - csharp
+  - vb
+  name: AddMechanic
+  nameWithType: UpgradeEffectKind.AddMechanic
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectKind.AddMechanic
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Adds an always-active behavior action (an extra attack, a self buff, a summon ...) to the selected units or towers.
+  example: []
+  syntax:
+    content: AddMechanic = 1
+    return:
+      type: TDMaker.Unity.Campaign.UpgradeEffectKind
+- uid: TDMaker.Unity.Campaign.UpgradeEffectKind.SwapTemplate
+  commentId: F:TDMaker.Unity.Campaign.UpgradeEffectKind.SwapTemplate
+  id: SwapTemplate
+  parent: TDMaker.Unity.Campaign.UpgradeEffectKind
+  langs:
+  - csharp
+  - vb
+  name: SwapTemplate
+  nameWithType: UpgradeEffectKind.SwapTemplate
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectKind.SwapTemplate
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Replaces a unit reference (barracks soldier, spell reinforcement, summon) inside the selected templates or spells.
+  example: []
+  syntax:
+    content: SwapTemplate = 2
+    return:
+      type: TDMaker.Unity.Campaign.UpgradeEffectKind
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.UpgradeEffectKind
+  commentId: T:TDMaker.Unity.Campaign.UpgradeEffectKind
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeEffectKind.html
+  name: UpgradeEffectKind
+  nameWithType: UpgradeEffectKind
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectKind

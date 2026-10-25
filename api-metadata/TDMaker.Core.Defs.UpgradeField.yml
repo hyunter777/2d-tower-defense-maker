@@ -1,0 +1,544 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.UpgradeField
+  commentId: T:TDMaker.Core.Defs.UpgradeField
+  id: UpgradeField
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.UpgradeField.AbilityCooldown
+  - TDMaker.Core.Defs.UpgradeField.AbilityRankCost
+  - TDMaker.Core.Defs.UpgradeField.AttackCooldown
+  - TDMaker.Core.Defs.UpgradeField.AttackRange
+  - TDMaker.Core.Defs.UpgradeField.DamageMaximum
+  - TDMaker.Core.Defs.UpgradeField.DamageMinimum
+  - TDMaker.Core.Defs.UpgradeField.DamageRadius
+  - TDMaker.Core.Defs.UpgradeField.EffectDuration
+  - TDMaker.Core.Defs.UpgradeField.MagicalResistance
+  - TDMaker.Core.Defs.UpgradeField.MaximumHealth
+  - TDMaker.Core.Defs.UpgradeField.MinimumRange
+  - TDMaker.Core.Defs.UpgradeField.MovementSpeed
+  - TDMaker.Core.Defs.UpgradeField.PhysicalArmor
+  - TDMaker.Core.Defs.UpgradeField.PoisonResistance
+  - TDMaker.Core.Defs.UpgradeField.RallyRadius
+  - TDMaker.Core.Defs.UpgradeField.Regeneration
+  - TDMaker.Core.Defs.UpgradeField.RespawnDelay
+  - TDMaker.Core.Defs.UpgradeField.SpellCooldown
+  - TDMaker.Core.Defs.UpgradeField.StrikeCount
+  - TDMaker.Core.Defs.UpgradeField.StrikeScatterRadius
+  - TDMaker.Core.Defs.UpgradeField.SummonCount
+  - TDMaker.Core.Defs.UpgradeField.SummonLifetime
+  - TDMaker.Core.Defs.UpgradeField.TowerCost
+  langs:
+  - csharp
+  - vb
+  name: UpgradeField
+  nameWithType: UpgradeField
+  fullName: TDMaker.Core.Defs.UpgradeField
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Supported numerical destinations. All matching nested payloads in the selected template are visited.
+  example: []
+  syntax:
+    content: public enum UpgradeField
+    content.vb: Public Enum UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.AttackRange
+  commentId: F:TDMaker.Core.Defs.UpgradeField.AttackRange
+  id: AttackRange
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: AttackRange
+  nameWithType: UpgradeField.AttackRange
+  fullName: TDMaker.Core.Defs.UpgradeField.AttackRange
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Melee, ranged and channel range.
+  example: []
+  syntax:
+    content: AttackRange = 0
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.MinimumRange
+  commentId: F:TDMaker.Core.Defs.UpgradeField.MinimumRange
+  id: MinimumRange
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: MinimumRange
+  nameWithType: UpgradeField.MinimumRange
+  fullName: TDMaker.Core.Defs.UpgradeField.MinimumRange
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ranged inner exclusion radius.
+  example: []
+  syntax:
+    content: MinimumRange = 1
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.DamageMinimum
+  commentId: F:TDMaker.Core.Defs.UpgradeField.DamageMinimum
+  id: DamageMinimum
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: DamageMinimum
+  nameWithType: UpgradeField.DamageMinimum
+  fullName: TDMaker.Core.Defs.UpgradeField.DamageMinimum
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Damage roll minimum, including spell and mechanism payloads.
+  example: []
+  syntax:
+    content: DamageMinimum = 2
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.DamageMaximum
+  commentId: F:TDMaker.Core.Defs.UpgradeField.DamageMaximum
+  id: DamageMaximum
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: DamageMaximum
+  nameWithType: UpgradeField.DamageMaximum
+  fullName: TDMaker.Core.Defs.UpgradeField.DamageMaximum
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Damage roll maximum, including spell and mechanism payloads.
+  example: []
+  syntax:
+    content: DamageMaximum = 3
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.AttackCooldown
+  commentId: F:TDMaker.Core.Defs.UpgradeField.AttackCooldown
+  id: AttackCooldown
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: AttackCooldown
+  nameWithType: UpgradeField.AttackCooldown
+  fullName: TDMaker.Core.Defs.UpgradeField.AttackCooldown
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Melee and ranged repeat interval.
+  example: []
+  syntax:
+    content: AttackCooldown = 4
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.AbilityCooldown
+  commentId: F:TDMaker.Core.Defs.UpgradeField.AbilityCooldown
+  id: AbilityCooldown
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: AbilityCooldown
+  nameWithType: UpgradeField.AbilityCooldown
+  fullName: TDMaker.Core.Defs.UpgradeField.AbilityCooldown
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Generic behavior action repeat interval.
+  example: []
+  syntax:
+    content: AbilityCooldown = 5
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.TowerCost
+  commentId: F:TDMaker.Core.Defs.UpgradeField.TowerCost
+  id: TowerCost
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: TowerCost
+  nameWithType: UpgradeField.TowerCost
+  fullName: TDMaker.Core.Defs.UpgradeField.TowerCost
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Build price and incremental price of upgrading into the template.
+  example: []
+  syntax:
+    content: TowerCost = 6
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.AbilityRankCost
+  commentId: F:TDMaker.Core.Defs.UpgradeField.AbilityRankCost
+  id: AbilityRankCost
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: AbilityRankCost
+  nameWithType: UpgradeField.AbilityRankCost
+  fullName: TDMaker.Core.Defs.UpgradeField.AbilityRankCost
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Each independently authored ability rank price.
+  example: []
+  syntax:
+    content: AbilityRankCost = 7
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.MaximumHealth
+  commentId: F:TDMaker.Core.Defs.UpgradeField.MaximumHealth
+  id: MaximumHealth
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: MaximumHealth
+  nameWithType: UpgradeField.MaximumHealth
+  fullName: TDMaker.Core.Defs.UpgradeField.MaximumHealth
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum health, including hero growth replacements.
+  example: []
+  syntax:
+    content: MaximumHealth = 8
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.PhysicalArmor
+  commentId: F:TDMaker.Core.Defs.UpgradeField.PhysicalArmor
+  id: PhysicalArmor
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: PhysicalArmor
+  nameWithType: UpgradeField.PhysicalArmor
+  fullName: TDMaker.Core.Defs.UpgradeField.PhysicalArmor
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Physical fractional defense.
+  example: []
+  syntax:
+    content: PhysicalArmor = 9
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.MagicalResistance
+  commentId: F:TDMaker.Core.Defs.UpgradeField.MagicalResistance
+  id: MagicalResistance
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: MagicalResistance
+  nameWithType: UpgradeField.MagicalResistance
+  fullName: TDMaker.Core.Defs.UpgradeField.MagicalResistance
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Magical fractional defense.
+  example: []
+  syntax:
+    content: MagicalResistance = 10
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.PoisonResistance
+  commentId: F:TDMaker.Core.Defs.UpgradeField.PoisonResistance
+  id: PoisonResistance
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: PoisonResistance
+  nameWithType: UpgradeField.PoisonResistance
+  fullName: TDMaker.Core.Defs.UpgradeField.PoisonResistance
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Poison fractional defense.
+  example: []
+  syntax:
+    content: PoisonResistance = 11
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.Regeneration
+  commentId: F:TDMaker.Core.Defs.UpgradeField.Regeneration
+  id: Regeneration
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: Regeneration
+  nameWithType: UpgradeField.Regeneration
+  fullName: TDMaker.Core.Defs.UpgradeField.Regeneration
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: General recovery health per pulse.
+  example: []
+  syntax:
+    content: Regeneration = 12
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.RallyRadius
+  commentId: F:TDMaker.Core.Defs.UpgradeField.RallyRadius
+  id: RallyRadius
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: RallyRadius
+  nameWithType: UpgradeField.RallyRadius
+  fullName: TDMaker.Core.Defs.UpgradeField.RallyRadius
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Barracks rally radius.
+  example: []
+  syntax:
+    content: RallyRadius = 13
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.RespawnDelay
+  commentId: F:TDMaker.Core.Defs.UpgradeField.RespawnDelay
+  id: RespawnDelay
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: RespawnDelay
+  nameWithType: UpgradeField.RespawnDelay
+  fullName: TDMaker.Core.Defs.UpgradeField.RespawnDelay
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Barracks replacement delay.
+  example: []
+  syntax:
+    content: RespawnDelay = 14
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.SpellCooldown
+  commentId: F:TDMaker.Core.Defs.UpgradeField.SpellCooldown
+  id: SpellCooldown
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: SpellCooldown
+  nameWithType: UpgradeField.SpellCooldown
+  fullName: TDMaker.Core.Defs.UpgradeField.SpellCooldown
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Spell cooldown; subtraction is not clamped to zero.
+  example: []
+  syntax:
+    content: SpellCooldown = 15
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.SummonCount
+  commentId: F:TDMaker.Core.Defs.UpgradeField.SummonCount
+  id: SummonCount
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: SummonCount
+  nameWithType: UpgradeField.SummonCount
+  fullName: TDMaker.Core.Defs.UpgradeField.SummonCount
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Summoned unit count.
+  example: []
+  syntax:
+    content: SummonCount = 16
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.SummonLifetime
+  commentId: F:TDMaker.Core.Defs.UpgradeField.SummonLifetime
+  id: SummonLifetime
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: SummonLifetime
+  nameWithType: UpgradeField.SummonLifetime
+  fullName: TDMaker.Core.Defs.UpgradeField.SummonLifetime
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Summoned unit lifetime.
+  example: []
+  syntax:
+    content: SummonLifetime = 17
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.EffectDuration
+  commentId: F:TDMaker.Core.Defs.UpgradeField.EffectDuration
+  id: EffectDuration
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: EffectDuration
+  nameWithType: UpgradeField.EffectDuration
+  fullName: TDMaker.Core.Defs.UpgradeField.EffectDuration
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Timed attached-effect and region duration.
+  example: []
+  syntax:
+    content: EffectDuration = 18
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.DamageRadius
+  commentId: F:TDMaker.Core.Defs.UpgradeField.DamageRadius
+  id: DamageRadius
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: DamageRadius
+  nameWithType: UpgradeField.DamageRadius
+  fullName: TDMaker.Core.Defs.UpgradeField.DamageRadius
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Damage impact radius.
+  example: []
+  syntax:
+    content: DamageRadius = 19
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.MovementSpeed
+  commentId: F:TDMaker.Core.Defs.UpgradeField.MovementSpeed
+  id: MovementSpeed
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: MovementSpeed
+  nameWithType: UpgradeField.MovementSpeed
+  fullName: TDMaker.Core.Defs.UpgradeField.MovementSpeed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Unit travel speed.
+  example: []
+  syntax:
+    content: MovementSpeed = 20
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.StrikeCount
+  commentId: F:TDMaker.Core.Defs.UpgradeField.StrikeCount
+  id: StrikeCount
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: StrikeCount
+  nameWithType: UpgradeField.StrikeCount
+  fullName: TDMaker.Core.Defs.UpgradeField.StrikeCount
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Spell strike count.
+  example: []
+  syntax:
+    content: StrikeCount = 21
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+- uid: TDMaker.Core.Defs.UpgradeField.StrikeScatterRadius
+  commentId: F:TDMaker.Core.Defs.UpgradeField.StrikeScatterRadius
+  id: StrikeScatterRadius
+  parent: TDMaker.Core.Defs.UpgradeField
+  langs:
+  - csharp
+  - vb
+  name: StrikeScatterRadius
+  nameWithType: UpgradeField.StrikeScatterRadius
+  fullName: TDMaker.Core.Defs.UpgradeField.StrikeScatterRadius
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Spell strike scatter radius.
+  example: []
+  syntax:
+    content: StrikeScatterRadius = 22
+    return:
+      type: TDMaker.Core.Defs.UpgradeField
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.UpgradeField
+  commentId: T:TDMaker.Core.Defs.UpgradeField
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeField.html
+  name: UpgradeField
+  nameWithType: UpgradeField
+  fullName: TDMaker.Core.Defs.UpgradeField

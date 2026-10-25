@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.DamageFalloff
+  commentId: T:TDMaker.Core.Defs.DamageFalloff
+  id: DamageFalloff
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.DamageFalloff.ConstantMaximum
+  - TDMaker.Core.Defs.DamageFalloff.DistanceEndpoints
+  - TDMaker.Core.Defs.DamageFalloff.RolledLinear
+  langs:
+  - csharp
+  - vb
+  name: DamageFalloff
+  nameWithType: DamageFalloff
+  fullName: TDMaker.Core.Defs.DamageFalloff
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: How impact area damage depends on distance.
+  example: []
+  syntax:
+    content: public enum DamageFalloff
+    content.vb: Public Enum DamageFalloff
+- uid: TDMaker.Core.Defs.DamageFalloff.DistanceEndpoints
+  commentId: F:TDMaker.Core.Defs.DamageFalloff.DistanceEndpoints
+  id: DistanceEndpoints
+  parent: TDMaker.Core.Defs.DamageFalloff
+  langs:
+  - csharp
+  - vb
+  name: DistanceEndpoints
+  nameWithType: DamageFalloff.DistanceEndpoints
+  fullName: TDMaker.Core.Defs.DamageFalloff.DistanceEndpoints
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Interpolates maximum to minimum damage from center to edge.
+  example: []
+  syntax:
+    content: DistanceEndpoints = 0
+    return:
+      type: TDMaker.Core.Defs.DamageFalloff
+- uid: TDMaker.Core.Defs.DamageFalloff.RolledLinear
+  commentId: F:TDMaker.Core.Defs.DamageFalloff.RolledLinear
+  id: RolledLinear
+  parent: TDMaker.Core.Defs.DamageFalloff
+  langs:
+  - csharp
+  - vb
+  name: RolledLinear
+  nameWithType: DamageFalloff.RolledLinear
+  fullName: TDMaker.Core.Defs.DamageFalloff.RolledLinear
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Rolls once per impact and scales by the edge multiplier.
+  example: []
+  syntax:
+    content: RolledLinear = 1
+    return:
+      type: TDMaker.Core.Defs.DamageFalloff
+- uid: TDMaker.Core.Defs.DamageFalloff.ConstantMaximum
+  commentId: F:TDMaker.Core.Defs.DamageFalloff.ConstantMaximum
+  id: ConstantMaximum
+  parent: TDMaker.Core.Defs.DamageFalloff
+  langs:
+  - csharp
+  - vb
+  name: ConstantMaximum
+  nameWithType: DamageFalloff.ConstantMaximum
+  fullName: TDMaker.Core.Defs.DamageFalloff.ConstantMaximum
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Uses maximum damage before applying the optional edge multiplier.
+  example: []
+  syntax:
+    content: ConstantMaximum = 2
+    return:
+      type: TDMaker.Core.Defs.DamageFalloff
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.DamageFalloff
+  commentId: T:TDMaker.Core.Defs.DamageFalloff
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageFalloff.html
+  name: DamageFalloff
+  nameWithType: DamageFalloff
+  fullName: TDMaker.Core.Defs.DamageFalloff

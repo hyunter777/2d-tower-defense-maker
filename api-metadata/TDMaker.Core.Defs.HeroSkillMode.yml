@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.HeroSkillMode
+  commentId: T:TDMaker.Core.Defs.HeroSkillMode
+  id: HeroSkillMode
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.HeroSkillMode.AutoUnlock
+  - TDMaker.Core.Defs.HeroSkillMode.SpendPoints
+  langs:
+  - csharp
+  - vb
+  name: HeroSkillMode
+  nameWithType: HeroSkillMode
+  fullName: TDMaker.Core.Defs.HeroSkillMode
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: How hero skill ranks become active.
+  example: []
+  syntax:
+    content: public enum HeroSkillMode
+    content.vb: Public Enum HeroSkillMode
+- uid: TDMaker.Core.Defs.HeroSkillMode.AutoUnlock
+  commentId: F:TDMaker.Core.Defs.HeroSkillMode.AutoUnlock
+  id: AutoUnlock
+  parent: TDMaker.Core.Defs.HeroSkillMode
+  langs:
+  - csharp
+  - vb
+  name: AutoUnlock
+  nameWithType: HeroSkillMode.AutoUnlock
+  fullName: TDMaker.Core.Defs.HeroSkillMode.AutoUnlock
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Activates authored ranks at their required levels.
+  example: []
+  syntax:
+    content: AutoUnlock = 0
+    return:
+      type: TDMaker.Core.Defs.HeroSkillMode
+- uid: TDMaker.Core.Defs.HeroSkillMode.SpendPoints
+  commentId: F:TDMaker.Core.Defs.HeroSkillMode.SpendPoints
+  id: SpendPoints
+  parent: TDMaker.Core.Defs.HeroSkillMode
+  langs:
+  - csharp
+  - vb
+  name: SpendPoints
+  nameWithType: HeroSkillMode.SpendPoints
+  fullName: TDMaker.Core.Defs.HeroSkillMode.SpendPoints
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Requires explicit skill-point purchases.
+  example: []
+  syntax:
+    content: SpendPoints = 1
+    return:
+      type: TDMaker.Core.Defs.HeroSkillMode
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.HeroSkillMode
+  commentId: T:TDMaker.Core.Defs.HeroSkillMode
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.HeroSkillMode.html
+  name: HeroSkillMode
+  nameWithType: HeroSkillMode
+  fullName: TDMaker.Core.Defs.HeroSkillMode

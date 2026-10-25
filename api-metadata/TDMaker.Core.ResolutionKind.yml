@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.ResolutionKind
+  commentId: T:TDMaker.Core.ResolutionKind
+  id: ResolutionKind
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.ResolutionKind.Despawned
+  - TDMaker.Core.ResolutionKind.Killed
+  - TDMaker.Core.ResolutionKind.Leaked
+  - TDMaker.Core.ResolutionKind.None
+  langs:
+  - csharp
+  - vb
+  name: ResolutionKind
+  nameWithType: ResolutionKind
+  fullName: TDMaker.Core.ResolutionKind
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A unit's one-time resolution cause; live units have None.
+  example: []
+  syntax:
+    content: public enum ResolutionKind
+    content.vb: Public Enum ResolutionKind
+- uid: TDMaker.Core.ResolutionKind.None
+  commentId: F:TDMaker.Core.ResolutionKind.None
+  id: None
+  parent: TDMaker.Core.ResolutionKind
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: ResolutionKind.None
+  fullName: TDMaker.Core.ResolutionKind.None
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: No terminal resolution.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TDMaker.Core.ResolutionKind
+- uid: TDMaker.Core.ResolutionKind.Killed
+  commentId: F:TDMaker.Core.ResolutionKind.Killed
+  id: Killed
+  parent: TDMaker.Core.ResolutionKind
+  langs:
+  - csharp
+  - vb
+  name: Killed
+  nameWithType: ResolutionKind.Killed
+  fullName: TDMaker.Core.ResolutionKind.Killed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Health was exhausted by damage.
+  example: []
+  syntax:
+    content: Killed = 1
+    return:
+      type: TDMaker.Core.ResolutionKind
+- uid: TDMaker.Core.ResolutionKind.Leaked
+  commentId: F:TDMaker.Core.ResolutionKind.Leaked
+  id: Leaked
+  parent: TDMaker.Core.ResolutionKind
+  langs:
+  - csharp
+  - vb
+  name: Leaked
+  nameWithType: ResolutionKind.Leaked
+  fullName: TDMaker.Core.ResolutionKind.Leaked
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: An enemy escaped at its final exit.
+  example: []
+  syntax:
+    content: Leaked = 2
+    return:
+      type: TDMaker.Core.ResolutionKind
+- uid: TDMaker.Core.ResolutionKind.Despawned
+  commentId: F:TDMaker.Core.ResolutionKind.Despawned
+  id: Despawned
+  parent: TDMaker.Core.ResolutionKind
+  langs:
+  - csharp
+  - vb
+  name: Despawned
+  nameWithType: ResolutionKind.Despawned
+  fullName: TDMaker.Core.ResolutionKind.Despawned
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Explicit structural removal or temporary expiration.
+  example: []
+  syntax:
+    content: Despawned = 3
+    return:
+      type: TDMaker.Core.ResolutionKind
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.ResolutionKind
+  commentId: T:TDMaker.Core.ResolutionKind
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.ResolutionKind.html
+  name: ResolutionKind
+  nameWithType: ResolutionKind
+  fullName: TDMaker.Core.ResolutionKind

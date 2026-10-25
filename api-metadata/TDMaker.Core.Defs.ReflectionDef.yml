@@ -1,0 +1,439 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.ReflectionDef
+  commentId: T:TDMaker.Core.Defs.ReflectionDef
+  id: ReflectionDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.ReflectionDef.#ctor(System.String,System.Single,TDMaker.Core.Defs.DamageDef)
+  - TDMaker.Core.Defs.ReflectionDef.Damage
+  - TDMaker.Core.Defs.ReflectionDef.Id
+  - TDMaker.Core.Defs.ReflectionDef.Share
+  langs:
+  - csharp
+  - vb
+  name: ReflectionDef
+  nameWithType: ReflectionDef
+  fullName: TDMaker.Core.Defs.ReflectionDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: One-bounce reflection from actual health loss, not raw input or shield absorption.
+  example: []
+  syntax:
+    content: public sealed class ReflectionDef
+    content.vb: Public NotInheritable Class ReflectionDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.ReflectionDef.#ctor(System.String,System.Single,TDMaker.Core.Defs.DamageDef)
+  commentId: M:TDMaker.Core.Defs.ReflectionDef.#ctor(System.String,System.Single,TDMaker.Core.Defs.DamageDef)
+  id: '#ctor(System.String,System.Single,TDMaker.Core.Defs.DamageDef)'
+  parent: TDMaker.Core.Defs.ReflectionDef
+  langs:
+  - csharp
+  - vb
+  name: ReflectionDef(string, float, DamageDef)
+  nameWithType: ReflectionDef.ReflectionDef(string, float, DamageDef)
+  fullName: TDMaker.Core.Defs.ReflectionDef.ReflectionDef(string, float, TDMaker.Core.Defs.DamageDef)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates reflection. Reflected packets cannot activate native reflection or life steal again.
+  example: []
+  syntax:
+    content: public ReflectionDef(string id, float share, DamageDef damage)
+    parameters:
+    - id: id
+      type: System.String
+    - id: share
+      type: System.Single
+    - id: damage
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public Sub New(id As String, share As Single, damage As DamageDef)
+  overload: TDMaker.Core.Defs.ReflectionDef.#ctor*
+  nameWithType.vb: ReflectionDef.New(String, Single, DamageDef)
+  fullName.vb: TDMaker.Core.Defs.ReflectionDef.New(String, Single, TDMaker.Core.Defs.DamageDef)
+  name.vb: New(String, Single, DamageDef)
+- uid: TDMaker.Core.Defs.ReflectionDef.Id
+  commentId: P:TDMaker.Core.Defs.ReflectionDef.Id
+  id: Id
+  parent: TDMaker.Core.Defs.ReflectionDef
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ReflectionDef.Id
+  fullName: TDMaker.Core.Defs.ReflectionDef.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Neutral event identity.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Core.Defs.ReflectionDef.Id*
+- uid: TDMaker.Core.Defs.ReflectionDef.Share
+  commentId: P:TDMaker.Core.Defs.ReflectionDef.Share
+  id: Share
+  parent: TDMaker.Core.Defs.ReflectionDef
+  langs:
+  - csharp
+  - vb
+  name: Share
+  nameWithType: ReflectionDef.Share
+  fullName: TDMaker.Core.Defs.ReflectionDef.Share
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Share of positive applied health loss, rounded up once.
+  example: []
+  syntax:
+    content: public float Share { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Share As Single
+  overload: TDMaker.Core.Defs.ReflectionDef.Share*
+- uid: TDMaker.Core.Defs.ReflectionDef.Damage
+  commentId: P:TDMaker.Core.Defs.ReflectionDef.Damage
+  id: Damage
+  parent: TDMaker.Core.Defs.ReflectionDef
+  langs:
+  - csharp
+  - vb
+  name: Damage
+  nameWithType: ReflectionDef.Damage
+  fullName: TDMaker.Core.Defs.ReflectionDef.Damage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Leaf damage channel/options; endpoints are ignored. No area, terminal flags, on-hit effects, payload or life steal.
+  example: []
+  syntax:
+    content: public DamageDef Damage { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public ReadOnly Property Damage As DamageDef
+  overload: TDMaker.Core.Defs.ReflectionDef.Damage*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.ReflectionDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.ReflectionDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.ReflectionDef.html#TDMaker_Core_Defs_ReflectionDef__ctor_System_String_System_Single_TDMaker_Core_Defs_DamageDef_
+  name: ReflectionDef
+  nameWithType: ReflectionDef.ReflectionDef
+  fullName: TDMaker.Core.Defs.ReflectionDef.ReflectionDef
+  nameWithType.vb: ReflectionDef.New
+  fullName.vb: TDMaker.Core.Defs.ReflectionDef.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+- uid: TDMaker.Core.Defs.ReflectionDef.Id*
+  commentId: Overload:TDMaker.Core.Defs.ReflectionDef.Id
+  isExternal: true
+  href: TDMaker.Core.Defs.ReflectionDef.html#TDMaker_Core_Defs_ReflectionDef_Id
+  name: Id
+  nameWithType: ReflectionDef.Id
+  fullName: TDMaker.Core.Defs.ReflectionDef.Id
+- uid: TDMaker.Core.Defs.ReflectionDef.Share*
+  commentId: Overload:TDMaker.Core.Defs.ReflectionDef.Share
+  isExternal: true
+  href: TDMaker.Core.Defs.ReflectionDef.html#TDMaker_Core_Defs_ReflectionDef_Share
+  name: Share
+  nameWithType: ReflectionDef.Share
+  fullName: TDMaker.Core.Defs.ReflectionDef.Share
+- uid: TDMaker.Core.Defs.ReflectionDef.Damage*
+  commentId: Overload:TDMaker.Core.Defs.ReflectionDef.Damage
+  isExternal: true
+  href: TDMaker.Core.Defs.ReflectionDef.html#TDMaker_Core_Defs_ReflectionDef_Damage
+  name: Damage
+  nameWithType: ReflectionDef.Damage
+  fullName: TDMaker.Core.Defs.ReflectionDef.Damage

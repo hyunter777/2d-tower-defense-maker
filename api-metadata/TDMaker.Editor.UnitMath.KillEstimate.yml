@@ -1,0 +1,472 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.UnitMath.KillEstimate
+  commentId: T:TDMaker.Editor.UnitMath.KillEstimate
+  id: UnitMath.KillEstimate
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.UnitMath.KillEstimate.CannotHit
+  - TDMaker.Editor.UnitMath.KillEstimate.Dps
+  - TDMaker.Editor.UnitMath.KillEstimate.Hits
+  - TDMaker.Editor.UnitMath.KillEstimate.Seconds
+  - TDMaker.Editor.UnitMath.KillEstimate.Tier
+  - TDMaker.Editor.UnitMath.KillEstimate.Tower
+  langs:
+  - csharp
+  - vb
+  name: UnitMath.KillEstimate
+  nameWithType: UnitMath.KillEstimate
+  fullName: TDMaker.Editor.UnitMath.KillEstimate
+  type: Struct
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Kill estimate of one tower tier against one unit.
+  example: []
+  syntax:
+    content: public struct UnitMath.KillEstimate
+    content.vb: Public Structure UnitMath.KillEstimate
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Editor.UnitMath.KillEstimate.Tower
+  commentId: F:TDMaker.Editor.UnitMath.KillEstimate.Tower
+  id: Tower
+  parent: TDMaker.Editor.UnitMath.KillEstimate
+  langs:
+  - csharp
+  - vb
+  name: Tower
+  nameWithType: UnitMath.KillEstimate.Tower
+  fullName: TDMaker.Editor.UnitMath.KillEstimate.Tower
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The tower tier.
+  example: []
+  syntax:
+    content: public TowerAsset Tower
+    return:
+      type: TDMaker.Unity.Authoring.TowerAsset
+    content.vb: Public Tower As TowerAsset
+- uid: TDMaker.Editor.UnitMath.KillEstimate.Tier
+  commentId: F:TDMaker.Editor.UnitMath.KillEstimate.Tier
+  id: Tier
+  parent: TDMaker.Editor.UnitMath.KillEstimate
+  langs:
+  - csharp
+  - vb
+  name: Tier
+  nameWithType: UnitMath.KillEstimate.Tier
+  fullName: TDMaker.Editor.UnitMath.KillEstimate.Tier
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: One-based upgrade depth inside its tree.
+  example: []
+  syntax:
+    content: public int Tier
+    return:
+      type: System.Int32
+    content.vb: Public Tier As Integer
+- uid: TDMaker.Editor.UnitMath.KillEstimate.Hits
+  commentId: F:TDMaker.Editor.UnitMath.KillEstimate.Hits
+  id: Hits
+  parent: TDMaker.Editor.UnitMath.KillEstimate
+  langs:
+  - csharp
+  - vb
+  name: Hits
+  nameWithType: UnitMath.KillEstimate.Hits
+  fullName: TDMaker.Editor.UnitMath.KillEstimate.Hits
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Hits of the strongest channel needed alone.
+  example: []
+  syntax:
+    content: public double Hits
+    return:
+      type: System.Double
+    content.vb: Public Hits As Double
+- uid: TDMaker.Editor.UnitMath.KillEstimate.Seconds
+  commentId: F:TDMaker.Editor.UnitMath.KillEstimate.Seconds
+  id: Seconds
+  parent: TDMaker.Editor.UnitMath.KillEstimate
+  langs:
+  - csharp
+  - vb
+  name: Seconds
+  nameWithType: UnitMath.KillEstimate.Seconds
+  fullName: TDMaker.Editor.UnitMath.KillEstimate.Seconds
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Seconds with every channel firing (and every soldier hitting), ignoring travel and range.
+  example: []
+  syntax:
+    content: public double Seconds
+    return:
+      type: System.Double
+    content.vb: Public Seconds As Double
+- uid: TDMaker.Editor.UnitMath.KillEstimate.Dps
+  commentId: F:TDMaker.Editor.UnitMath.KillEstimate.Dps
+  id: Dps
+  parent: TDMaker.Editor.UnitMath.KillEstimate
+  langs:
+  - csharp
+  - vb
+  name: Dps
+  nameWithType: UnitMath.KillEstimate.Dps
+  fullName: TDMaker.Editor.UnitMath.KillEstimate.Dps
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Damage per second against this unit (expected, after defenses).
+  example: []
+  syntax:
+    content: public double Dps
+    return:
+      type: System.Double
+    content.vb: Public Dps As Double
+- uid: TDMaker.Editor.UnitMath.KillEstimate.CannotHit
+  commentId: F:TDMaker.Editor.UnitMath.KillEstimate.CannotHit
+  id: CannotHit
+  parent: TDMaker.Editor.UnitMath.KillEstimate
+  langs:
+  - csharp
+  - vb
+  name: CannotHit
+  nameWithType: UnitMath.KillEstimate.CannotHit
+  fullName: TDMaker.Editor.UnitMath.KillEstimate.CannotHit
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether no channel can hit this unit (for example ground-only attacks against a flyer).
+  example: []
+  syntax:
+    content: public bool CannotHit
+    return:
+      type: System.Boolean
+    content.vb: Public CannotHit As Boolean
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Authoring.TowerAsset
+  commentId: T:TDMaker.Unity.Authoring.TowerAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TowerAsset.html
+  name: TowerAsset
+  nameWithType: TowerAsset
+  fullName: TDMaker.Unity.Authoring.TowerAsset
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

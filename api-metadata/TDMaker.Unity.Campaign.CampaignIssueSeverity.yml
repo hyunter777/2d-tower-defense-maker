@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.CampaignIssueSeverity
+  commentId: T:TDMaker.Unity.Campaign.CampaignIssueSeverity
+  id: CampaignIssueSeverity
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.CampaignIssueSeverity.Error
+  - TDMaker.Unity.Campaign.CampaignIssueSeverity.Warning
+  langs:
+  - csharp
+  - vb
+  name: CampaignIssueSeverity
+  nameWithType: CampaignIssueSeverity
+  fullName: TDMaker.Unity.Campaign.CampaignIssueSeverity
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Severity of a <xref href="TDMaker.Unity.Campaign.CampaignIssue" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public enum CampaignIssueSeverity
+    content.vb: Public Enum CampaignIssueSeverity
+- uid: TDMaker.Unity.Campaign.CampaignIssueSeverity.Error
+  commentId: F:TDMaker.Unity.Campaign.CampaignIssueSeverity.Error
+  id: Error
+  parent: TDMaker.Unity.Campaign.CampaignIssueSeverity
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: CampaignIssueSeverity.Error
+  fullName: TDMaker.Unity.Campaign.CampaignIssueSeverity.Error
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The campaign cannot work as authored.
+  example: []
+  syntax:
+    content: Error = 0
+    return:
+      type: TDMaker.Unity.Campaign.CampaignIssueSeverity
+- uid: TDMaker.Unity.Campaign.CampaignIssueSeverity.Warning
+  commentId: F:TDMaker.Unity.Campaign.CampaignIssueSeverity.Warning
+  id: Warning
+  parent: TDMaker.Unity.Campaign.CampaignIssueSeverity
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: CampaignIssueSeverity.Warning
+  fullName: TDMaker.Unity.Campaign.CampaignIssueSeverity.Warning
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Probably a mistake.
+  example: []
+  syntax:
+    content: Warning = 1
+    return:
+      type: TDMaker.Unity.Campaign.CampaignIssueSeverity
+references:
+- uid: TDMaker.Unity.Campaign.CampaignIssue
+  commentId: T:TDMaker.Unity.Campaign.CampaignIssue
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignIssue.html
+  name: CampaignIssue
+  nameWithType: CampaignIssue
+  fullName: TDMaker.Unity.Campaign.CampaignIssue
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.CampaignIssueSeverity
+  commentId: T:TDMaker.Unity.Campaign.CampaignIssueSeverity
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignIssueSeverity.html
+  name: CampaignIssueSeverity
+  nameWithType: CampaignIssueSeverity
+  fullName: TDMaker.Unity.Campaign.CampaignIssueSeverity

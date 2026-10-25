@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.IStateHashContributor
+  commentId: T:TDMaker.Core.IStateHashContributor
+  id: IStateHashContributor
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.IStateHashContributor.AppendStateHash(TDMaker.Core.StateHasher@)
+  langs:
+  - csharp
+  - vb
+  name: IStateHashContributor
+  nameWithType: IStateHashContributor
+  fullName: TDMaker.Core.IStateHashContributor
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Optional deterministic state hashing for custom components, commands, systems, and other extension state.
+  example:
+  - <pre><code class="lang-csharp">public void AppendStateHash(ref StateHasher hash) { hash.Add(shieldPoints); }</code></pre>
+  syntax:
+    content: public interface IStateHashContributor
+    content.vb: Public Interface IStateHashContributor
+- uid: TDMaker.Core.IStateHashContributor.AppendStateHash(TDMaker.Core.StateHasher@)
+  commentId: M:TDMaker.Core.IStateHashContributor.AppendStateHash(TDMaker.Core.StateHasher@)
+  id: AppendStateHash(TDMaker.Core.StateHasher@)
+  parent: TDMaker.Core.IStateHashContributor
+  langs:
+  - csharp
+  - vb
+  name: AppendStateHash(ref StateHasher)
+  nameWithType: IStateHashContributor.AppendStateHash(ref StateHasher)
+  fullName: TDMaker.Core.IStateHashContributor.AppendStateHash(ref TDMaker.Core.StateHasher)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds all mutable state using a stable field order.
+  example: []
+  syntax:
+    content: void AppendStateHash(ref StateHasher hash)
+    parameters:
+    - id: hash
+      type: TDMaker.Core.StateHasher
+    content.vb: Sub AppendStateHash(hash As StateHasher)
+  overload: TDMaker.Core.IStateHashContributor.AppendStateHash*
+  nameWithType.vb: IStateHashContributor.AppendStateHash(StateHasher)
+  fullName.vb: TDMaker.Core.IStateHashContributor.AppendStateHash(TDMaker.Core.StateHasher)
+  name.vb: AppendStateHash(StateHasher)
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.IStateHashContributor.AppendStateHash*
+  commentId: Overload:TDMaker.Core.IStateHashContributor.AppendStateHash
+  isExternal: true
+  href: TDMaker.Core.IStateHashContributor.html#TDMaker_Core_IStateHashContributor_AppendStateHash_TDMaker_Core_StateHasher__
+  name: AppendStateHash
+  nameWithType: IStateHashContributor.AppendStateHash
+  fullName: TDMaker.Core.IStateHashContributor.AppendStateHash
+- uid: TDMaker.Core.StateHasher
+  commentId: T:TDMaker.Core.StateHasher
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.StateHasher.html
+  name: StateHasher
+  nameWithType: StateHasher
+  fullName: TDMaker.Core.StateHasher

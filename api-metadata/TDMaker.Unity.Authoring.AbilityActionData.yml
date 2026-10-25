@@ -1,0 +1,1156 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.AbilityActionData
+  commentId: T:TDMaker.Unity.Authoring.AbilityActionData
+  id: AbilityActionData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.AbilityActionData.#ctor
+  - TDMaker.Unity.Authoring.AbilityActionData.ToDef
+  - TDMaker.Unity.Authoring.AbilityActionData.area
+  - TDMaker.Unity.Authoring.AbilityActionData.attack
+  - TDMaker.Unity.Authoring.AbilityActionData.beam
+  - TDMaker.Unity.Authoring.AbilityActionData.chain
+  - TDMaker.Unity.Authoring.AbilityActionData.cooldown
+  - TDMaker.Unity.Authoring.AbilityActionData.customAction
+  - TDMaker.Unity.Authoring.AbilityActionData.initialDelay
+  - TDMaker.Unity.Authoring.AbilityActionData.mines
+  - TDMaker.Unity.Authoring.AbilityActionData.multiTarget
+  - TDMaker.Unity.Authoring.AbilityActionData.raise
+  - TDMaker.Unity.Authoring.AbilityActionData.selfEffect
+  - TDMaker.Unity.Authoring.AbilityActionData.skillExperiencePerRank
+  - TDMaker.Unity.Authoring.AbilityActionData.summon
+  - TDMaker.Unity.Authoring.AbilityActionData.transfer
+  - TDMaker.Unity.Authoring.AbilityActionData.trap
+  - TDMaker.Unity.Authoring.AbilityActionData.useAttack
+  - TDMaker.Unity.Authoring.AbilityActionData.useBeam
+  - TDMaker.Unity.Authoring.AbilityActionData.useChain
+  - TDMaker.Unity.Authoring.AbilityActionData.useMines
+  - TDMaker.Unity.Authoring.AbilityActionData.useMultiTarget
+  - TDMaker.Unity.Authoring.AbilityActionData.useRaise
+  - TDMaker.Unity.Authoring.AbilityActionData.useSelfEffect
+  - TDMaker.Unity.Authoring.AbilityActionData.useSummon
+  - TDMaker.Unity.Authoring.AbilityActionData.useTransfer
+  - TDMaker.Unity.Authoring.AbilityActionData.useTrap
+  langs:
+  - csharp
+  - vb
+  name: AbilityActionData
+  nameWithType: AbilityActionData
+  fullName: TDMaker.Unity.Authoring.AbilityActionData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: One timed action channel of an ability rank, baked into <xref href="TDMaker.Core.Defs.AbilityActionDef" data-throw-if-not-resolved="false"></xref>.
+    Payloads can be combined.
+  example: []
+  syntax:
+    content: public sealed class AbilityActionData
+    content.vb: Public NotInheritable Class AbilityActionData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.AbilityActionData.cooldown
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.cooldown
+  id: cooldown
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: cooldown
+  nameWithType: AbilityActionData.cooldown
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.cooldown
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Seconds between activations.
+  example: []
+  syntax:
+    content: '[Min(0.05)]
+
+      public float cooldown'
+    return:
+      type: System.Single
+    content.vb: '<Min(0.05)>
+
+      Public cooldown As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0.05
+- uid: TDMaker.Unity.Authoring.AbilityActionData.initialDelay
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.initialDelay
+  id: initialDelay
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: initialDelay
+  nameWithType: AbilityActionData.initialDelay
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.initialDelay
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Delay before a newly purchased channel can run.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float initialDelay'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public initialDelay As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.AbilityActionData.skillExperiencePerRank
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.skillExperiencePerRank
+  id: skillExperiencePerRank
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: skillExperiencePerRank
+  nameWithType: AbilityActionData.skillExperiencePerRank
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.skillExperiencePerRank
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Hero skill experience per rank on activation (heroes only).
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float skillExperiencePerRank'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public skillExperiencePerRank As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useAttack
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useAttack
+  id: useAttack
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useAttack
+  nameWithType: AbilityActionData.useAttack
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useAttack
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <xref href="TDMaker.Unity.Authoring.AbilityActionData.attack" data-throw-if-not-resolved="false"></xref>
+    is fired.
+  example: []
+  syntax:
+    content: public bool useAttack
+    return:
+      type: System.Boolean
+    content.vb: Public useAttack As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.attack
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.attack
+  id: attack
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: attack
+  nameWithType: AbilityActionData.attack
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.attack
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Additional ranged attack.
+  example: []
+  syntax:
+    content: public RangedAttackData attack
+    return:
+      type: TDMaker.Unity.Authoring.RangedAttackData
+    content.vb: Public attack As RangedAttackData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useSelfEffect
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useSelfEffect
+  id: useSelfEffect
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useSelfEffect
+  nameWithType: AbilityActionData.useSelfEffect
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useSelfEffect
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Editor marker: this action is a self buff (kept while no <xref href="TDMaker.Unity.Authoring.AbilityActionData.selfEffect"
+    data-throw-if-not-resolved="false"></xref> is picked yet). Baking only uses <xref href="TDMaker.Unity.Authoring.AbilityActionData.selfEffect"
+    data-throw-if-not-resolved="false"></xref>.'
+  example: []
+  syntax:
+    content: public bool useSelfEffect
+    return:
+      type: System.Boolean
+    content.vb: Public useSelfEffect As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.selfEffect
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.selfEffect
+  id: selfEffect
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: selfEffect
+  nameWithType: AbilityActionData.selfEffect
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.selfEffect
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional effect attached to the owner on activation.
+  example: []
+  syntax:
+    content: public StatusEffectAsset selfEffect
+    return:
+      type: TDMaker.Unity.Authoring.StatusEffectAsset
+    content.vb: Public selfEffect As StatusEffectAsset
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useSummon
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useSummon
+  id: useSummon
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useSummon
+  nameWithType: AbilityActionData.useSummon
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useSummon
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <xref href="TDMaker.Unity.Authoring.AbilityActionData.summon" data-throw-if-not-resolved="false"></xref>
+    is used.
+  example: []
+  syntax:
+    content: public bool useSummon
+    return:
+      type: System.Boolean
+    content.vb: Public useSummon As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.summon
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.summon
+  id: summon
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: summon
+  nameWithType: AbilityActionData.summon
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.summon
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Units created on activation.
+  example: []
+  syntax:
+    content: public SummonData summon
+    return:
+      type: TDMaker.Unity.Authoring.SummonData
+    content.vb: Public summon As SummonData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.area
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.area
+  id: area
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: area
+  nameWithType: AbilityActionData.area
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.area
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Region emitted on activation.
+  example: []
+  syntax:
+    content: public AreaEffectData area
+    return:
+      type: TDMaker.Unity.Authoring.AreaEffectData
+    content.vb: Public area As AreaEffectData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useChain
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useChain
+  id: useChain
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useChain
+  nameWithType: AbilityActionData.useChain
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useChain
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <xref href="TDMaker.Unity.Authoring.AbilityActionData.chain" data-throw-if-not-resolved="false"></xref>
+    runs on activation.
+  example: []
+  syntax:
+    content: public bool useChain
+    return:
+      type: System.Boolean
+    content.vb: Public useChain As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.chain
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.chain
+  id: chain
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: chain
+  nameWithType: AbilityActionData.chain
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.chain
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Chained attack jumping between nearby targets.
+  example: []
+  syntax:
+    content: public ChainAttackData chain
+    return:
+      type: TDMaker.Unity.Authoring.ChainAttackData
+    content.vb: Public chain As ChainAttackData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useMultiTarget
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useMultiTarget
+  id: useMultiTarget
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useMultiTarget
+  nameWithType: AbilityActionData.useMultiTarget
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useMultiTarget
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <xref href="TDMaker.Unity.Authoring.AbilityActionData.multiTarget" data-throw-if-not-resolved="false"></xref>
+    runs on activation.
+  example: []
+  syntax:
+    content: public bool useMultiTarget
+    return:
+      type: System.Boolean
+    content.vb: Public useMultiTarget As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.multiTarget
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.multiTarget
+  id: multiTarget
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: multiTarget
+  nameWithType: AbilityActionData.multiTarget
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.multiTarget
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Attack hitting several distinct targets at once.
+  example: []
+  syntax:
+    content: public MultiTargetAttackData multiTarget
+    return:
+      type: TDMaker.Unity.Authoring.MultiTargetAttackData
+    content.vb: Public multiTarget As MultiTargetAttackData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useTrap
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useTrap
+  id: useTrap
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useTrap
+  nameWithType: AbilityActionData.useTrap
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useTrap
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <xref href="TDMaker.Unity.Authoring.AbilityActionData.trap" data-throw-if-not-resolved="false"></xref>
+    is placed on activation.
+  example: []
+  syntax:
+    content: public bool useTrap
+    return:
+      type: System.Boolean
+    content.vb: Public useTrap As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.trap
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.trap
+  id: trap
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: trap
+  nameWithType: AbilityActionData.trap
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.trap
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Fixed-position deployment that arms and triggers on nearby units.
+  example: []
+  syntax:
+    content: public TrapData trap
+    return:
+      type: TDMaker.Unity.Authoring.TrapData
+    content.vb: Public trap As TrapData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useBeam
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useBeam
+  id: useBeam
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useBeam
+  nameWithType: AbilityActionData.useBeam
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useBeam
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <xref href="TDMaker.Unity.Authoring.AbilityActionData.beam" data-throw-if-not-resolved="false"></xref>
+    starts on activation.
+  example: []
+  syntax:
+    content: public bool useBeam
+    return:
+      type: System.Boolean
+    content.vb: Public useBeam As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.beam
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.beam
+  id: beam
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: beam
+  nameWithType: AbilityActionData.beam
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.beam
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Continuous single-target channel with an exact damage budget.
+  example: []
+  syntax:
+    content: public BeamData beam
+    return:
+      type: TDMaker.Unity.Authoring.BeamData
+    content.vb: Public beam As BeamData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useTransfer
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useTransfer
+  id: useTransfer
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useTransfer
+  nameWithType: AbilityActionData.useTransfer
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useTransfer
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <xref href="TDMaker.Unity.Authoring.AbilityActionData.transfer" data-throw-if-not-resolved="false"></xref>
+    runs on activation.
+  example: []
+  syntax:
+    content: public bool useTransfer
+    return:
+      type: System.Boolean
+    content.vb: Public useTransfer As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.transfer
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.transfer
+  id: transfer
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: transfer
+  nameWithType: AbilityActionData.transfer
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.transfer
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Moves nearby enemies to an exact path destination.
+  example: []
+  syntax:
+    content: public PathTransferData transfer
+    return:
+      type: TDMaker.Unity.Authoring.PathTransferData
+    content.vb: Public transfer As PathTransferData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useMines
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useMines
+  id: useMines
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useMines
+  nameWithType: AbilityActionData.useMines
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useMines
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <xref href="TDMaker.Unity.Authoring.AbilityActionData.mines" data-throw-if-not-resolved="false"></xref>
+    throws a mine on activation.
+  example: []
+  syntax:
+    content: public bool useMines
+    return:
+      type: System.Boolean
+    content.vb: Public useMines As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.mines
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.mines
+  id: mines
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: mines
+  nameWithType: AbilityActionData.mines
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.mines
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Automatic mine laying on lane nodes around the actor (flight, landing, arming, burst).
+  example: []
+  syntax:
+    content: public MineFieldData mines
+    return:
+      type: TDMaker.Unity.Authoring.MineFieldData
+    content.vb: Public mines As MineFieldData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useRaise
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useRaise
+  id: useRaise
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: useRaise
+  nameWithType: AbilityActionData.useRaise
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useRaise
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <xref href="TDMaker.Unity.Authoring.AbilityActionData.raise" data-throw-if-not-resolved="false"></xref>
+    raises bodies on activation.
+  example: []
+  syntax:
+    content: public bool useRaise
+    return:
+      type: System.Boolean
+    content.vb: Public useRaise As Boolean
+- uid: TDMaker.Unity.Authoring.AbilityActionData.raise
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.raise
+  id: raise
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: raise
+  nameWithType: AbilityActionData.raise
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.raise
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Raises new units from nearby bodies of the fallen.
+  example: []
+  syntax:
+    content: public RaiseRemainsData raise
+    return:
+      type: TDMaker.Unity.Authoring.RaiseRemainsData
+    content.vb: Public raise As RaiseRemainsData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.customAction
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.customAction
+  id: customAction
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: customAction
+  nameWithType: AbilityActionData.customAction
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.customAction
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional custom action (your own <xref href="TDMaker.Unity.Authoring.AbilityActionAsset" data-throw-if-not-resolved="false"></xref>
+    subclass).
+  example: []
+  syntax:
+    content: public AbilityActionAsset customAction
+    return:
+      type: TDMaker.Unity.Authoring.AbilityActionAsset
+    content.vb: Public customAction As AbilityActionAsset
+- uid: TDMaker.Unity.Authoring.AbilityActionData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.AbilityActionData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: AbilityActionData.ToDef()
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the action, or null when it has no payload.
+  example: []
+  syntax:
+    content: public AbilityActionDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.AbilityActionDef
+    content.vb: Public Function ToDef() As AbilityActionDef
+  overload: TDMaker.Unity.Authoring.AbilityActionData.ToDef*
+- uid: TDMaker.Unity.Authoring.AbilityActionData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.AbilityActionData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.AbilityActionData
+  langs:
+  - csharp
+  - vb
+  name: AbilityActionData()
+  nameWithType: AbilityActionData.AbilityActionData()
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.AbilityActionData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public AbilityActionData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.AbilityActionData.#ctor*
+  nameWithType.vb: AbilityActionData.New()
+  fullName.vb: TDMaker.Unity.Authoring.AbilityActionData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Core.Defs.AbilityActionDef
+  commentId: T:TDMaker.Core.Defs.AbilityActionDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityActionDef.html
+  name: AbilityActionDef
+  nameWithType: AbilityActionDef
+  fullName: TDMaker.Core.Defs.AbilityActionDef
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.AbilityActionData.attack
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.attack
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_attack
+  name: attack
+  nameWithType: AbilityActionData.attack
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.attack
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.RangedAttackData
+  commentId: T:TDMaker.Unity.Authoring.RangedAttackData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RangedAttackData.html
+  name: RangedAttackData
+  nameWithType: RangedAttackData
+  fullName: TDMaker.Unity.Authoring.RangedAttackData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.selfEffect
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.selfEffect
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_selfEffect
+  name: selfEffect
+  nameWithType: AbilityActionData.selfEffect
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.selfEffect
+- uid: TDMaker.Unity.Authoring.StatusEffectAsset
+  commentId: T:TDMaker.Unity.Authoring.StatusEffectAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.StatusEffectAsset.html
+  name: StatusEffectAsset
+  nameWithType: StatusEffectAsset
+  fullName: TDMaker.Unity.Authoring.StatusEffectAsset
+- uid: TDMaker.Unity.Authoring.AbilityActionData.summon
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.summon
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_summon
+  name: summon
+  nameWithType: AbilityActionData.summon
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.summon
+- uid: TDMaker.Unity.Authoring.SummonData
+  commentId: T:TDMaker.Unity.Authoring.SummonData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.SummonData.html
+  name: SummonData
+  nameWithType: SummonData
+  fullName: TDMaker.Unity.Authoring.SummonData
+- uid: TDMaker.Unity.Authoring.AreaEffectData
+  commentId: T:TDMaker.Unity.Authoring.AreaEffectData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AreaEffectData.html
+  name: AreaEffectData
+  nameWithType: AreaEffectData
+  fullName: TDMaker.Unity.Authoring.AreaEffectData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.chain
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.chain
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_chain
+  name: chain
+  nameWithType: AbilityActionData.chain
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.chain
+- uid: TDMaker.Unity.Authoring.ChainAttackData
+  commentId: T:TDMaker.Unity.Authoring.ChainAttackData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.ChainAttackData.html
+  name: ChainAttackData
+  nameWithType: ChainAttackData
+  fullName: TDMaker.Unity.Authoring.ChainAttackData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.multiTarget
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.multiTarget
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_multiTarget
+  name: multiTarget
+  nameWithType: AbilityActionData.multiTarget
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.multiTarget
+- uid: TDMaker.Unity.Authoring.MultiTargetAttackData
+  commentId: T:TDMaker.Unity.Authoring.MultiTargetAttackData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MultiTargetAttackData.html
+  name: MultiTargetAttackData
+  nameWithType: MultiTargetAttackData
+  fullName: TDMaker.Unity.Authoring.MultiTargetAttackData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.trap
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.trap
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_trap
+  name: trap
+  nameWithType: AbilityActionData.trap
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.trap
+- uid: TDMaker.Unity.Authoring.TrapData
+  commentId: T:TDMaker.Unity.Authoring.TrapData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TrapData.html
+  name: TrapData
+  nameWithType: TrapData
+  fullName: TDMaker.Unity.Authoring.TrapData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.beam
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.beam
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_beam
+  name: beam
+  nameWithType: AbilityActionData.beam
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.beam
+- uid: TDMaker.Unity.Authoring.BeamData
+  commentId: T:TDMaker.Unity.Authoring.BeamData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BeamData.html
+  name: BeamData
+  nameWithType: BeamData
+  fullName: TDMaker.Unity.Authoring.BeamData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.transfer
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.transfer
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_transfer
+  name: transfer
+  nameWithType: AbilityActionData.transfer
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.transfer
+- uid: TDMaker.Unity.Authoring.PathTransferData
+  commentId: T:TDMaker.Unity.Authoring.PathTransferData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathTransferData.html
+  name: PathTransferData
+  nameWithType: PathTransferData
+  fullName: TDMaker.Unity.Authoring.PathTransferData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.mines
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.mines
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_mines
+  name: mines
+  nameWithType: AbilityActionData.mines
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.mines
+- uid: TDMaker.Unity.Authoring.MineFieldData
+  commentId: T:TDMaker.Unity.Authoring.MineFieldData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MineFieldData.html
+  name: MineFieldData
+  nameWithType: MineFieldData
+  fullName: TDMaker.Unity.Authoring.MineFieldData
+- uid: TDMaker.Unity.Authoring.AbilityActionData.raise
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.raise
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_raise
+  name: raise
+  nameWithType: AbilityActionData.raise
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.raise
+- uid: TDMaker.Unity.Authoring.RaiseRemainsData
+  commentId: T:TDMaker.Unity.Authoring.RaiseRemainsData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RaiseRemainsData.html
+  name: RaiseRemainsData
+  nameWithType: RaiseRemainsData
+  fullName: TDMaker.Unity.Authoring.RaiseRemainsData
+- uid: TDMaker.Unity.Authoring.AbilityActionAsset
+  commentId: T:TDMaker.Unity.Authoring.AbilityActionAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionAsset.html
+  name: AbilityActionAsset
+  nameWithType: AbilityActionAsset
+  fullName: TDMaker.Unity.Authoring.AbilityActionAsset
+- uid: TDMaker.Unity.Authoring.AbilityActionData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.AbilityActionData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_ToDef
+  name: ToDef
+  nameWithType: AbilityActionData.ToDef
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.ToDef
+- uid: TDMaker.Unity.Authoring.AbilityActionData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.AbilityActionData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData__ctor
+  name: AbilityActionData
+  nameWithType: AbilityActionData.AbilityActionData
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.AbilityActionData
+  nameWithType.vb: AbilityActionData.New
+  fullName.vb: TDMaker.Unity.Authoring.AbilityActionData.New
+  name.vb: New

@@ -1,0 +1,153 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.CameraFramingMode
+  commentId: T:TDMaker.Unity.Authoring.CameraFramingMode
+  id: CameraFramingMode
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.CameraFramingMode.FitHeightScrollHorizontally
+  - TDMaker.Unity.Authoring.CameraFramingMode.FitWholeMap
+  - TDMaker.Unity.Authoring.CameraFramingMode.FitWidthScrollVertically
+  - TDMaker.Unity.Authoring.CameraFramingMode.FixedViewSize
+  langs:
+  - csharp
+  - vb
+  name: CameraFramingMode
+  nameWithType: CameraFramingMode
+  fullName: TDMaker.Unity.Authoring.CameraFramingMode
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: How the game camera frames a level on start (see <xref href="TDMaker.Unity.Authoring.CameraFramingData" data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: public enum CameraFramingMode
+    content.vb: Public Enum CameraFramingMode
+- uid: TDMaker.Unity.Authoring.CameraFramingMode.FitWholeMap
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingMode.FitWholeMap
+  id: FitWholeMap
+  parent: TDMaker.Unity.Authoring.CameraFramingMode
+  langs:
+  - csharp
+  - vb
+  name: FitWholeMap
+  nameWithType: CameraFramingMode.FitWholeMap
+  fullName: TDMaker.Unity.Authoring.CameraFramingMode.FitWholeMap
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: The whole level (or fixed map rectangle) fits on one screen; no player pan or zoom (default).
+  example: []
+  syntax:
+    content: FitWholeMap = 0
+    return:
+      type: TDMaker.Unity.Authoring.CameraFramingMode
+- uid: TDMaker.Unity.Authoring.CameraFramingMode.FitHeightScrollHorizontally
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingMode.FitHeightScrollHorizontally
+  id: FitHeightScrollHorizontally
+  parent: TDMaker.Unity.Authoring.CameraFramingMode
+  langs:
+  - csharp
+  - vb
+  name: FitHeightScrollHorizontally
+  nameWithType: CameraFramingMode.FitHeightScrollHorizontally
+  fullName: TDMaker.Unity.Authoring.CameraFramingMode.FitHeightScrollHorizontally
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: View height = map height; wider maps scroll left/right.
+  example: []
+  syntax:
+    content: FitHeightScrollHorizontally = 1
+    return:
+      type: TDMaker.Unity.Authoring.CameraFramingMode
+- uid: TDMaker.Unity.Authoring.CameraFramingMode.FitWidthScrollVertically
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingMode.FitWidthScrollVertically
+  id: FitWidthScrollVertically
+  parent: TDMaker.Unity.Authoring.CameraFramingMode
+  langs:
+  - csharp
+  - vb
+  name: FitWidthScrollVertically
+  nameWithType: CameraFramingMode.FitWidthScrollVertically
+  fullName: TDMaker.Unity.Authoring.CameraFramingMode.FitWidthScrollVertically
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: View width = map width; taller maps scroll up/down.
+  example: []
+  syntax:
+    content: FitWidthScrollVertically = 2
+    return:
+      type: TDMaker.Unity.Authoring.CameraFramingMode
+- uid: TDMaker.Unity.Authoring.CameraFramingMode.FixedViewSize
+  commentId: F:TDMaker.Unity.Authoring.CameraFramingMode.FixedViewSize
+  id: FixedViewSize
+  parent: TDMaker.Unity.Authoring.CameraFramingMode
+  langs:
+  - csharp
+  - vb
+  name: FixedViewSize
+  nameWithType: CameraFramingMode.FixedViewSize
+  fullName: TDMaker.Unity.Authoring.CameraFramingMode.FixedViewSize
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: A fixed view height in world units; the map scrolls on both axes.
+  example: []
+  syntax:
+    content: FixedViewSize = 3
+    return:
+      type: TDMaker.Unity.Authoring.CameraFramingMode
+references:
+- uid: TDMaker.Unity.Authoring.CameraFramingData
+  commentId: T:TDMaker.Unity.Authoring.CameraFramingData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraFramingData.html
+  name: CameraFramingData
+  nameWithType: CameraFramingData
+  fullName: TDMaker.Unity.Authoring.CameraFramingData
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.CameraFramingMode
+  commentId: T:TDMaker.Unity.Authoring.CameraFramingMode
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.CameraFramingMode.html
+  name: CameraFramingMode
+  nameWithType: CameraFramingMode
+  fullName: TDMaker.Unity.Authoring.CameraFramingMode

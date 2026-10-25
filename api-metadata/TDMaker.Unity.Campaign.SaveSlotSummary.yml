@@ -1,0 +1,563 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary
+  commentId: T:TDMaker.Unity.Campaign.SaveSlotSummary
+  id: SaveSlotSummary
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.SaveSlotSummary.#ctor(System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Nullable{System.DateTime},TDMaker.Unity.Campaign.SaveLoadStatus)
+  - TDMaker.Unity.Campaign.SaveSlotSummary.Completed
+  - TDMaker.Unity.Campaign.SaveSlotSummary.Exists
+  - TDMaker.Unity.Campaign.SaveSlotSummary.MaxStars
+  - TDMaker.Unity.Campaign.SaveSlotSummary.Saved
+  - TDMaker.Unity.Campaign.SaveSlotSummary.Slot
+  - TDMaker.Unity.Campaign.SaveSlotSummary.Stars
+  - TDMaker.Unity.Campaign.SaveSlotSummary.Status
+  langs:
+  - csharp
+  - vb
+  name: SaveSlotSummary
+  nameWithType: SaveSlotSummary
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary
+  type: Struct
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: What a slot picker shows for one slot without opening it.
+  example: []
+  syntax:
+    content: public readonly struct SaveSlotSummary
+    content.vb: Public Structure SaveSlotSummary
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary.Slot
+  commentId: F:TDMaker.Unity.Campaign.SaveSlotSummary.Slot
+  id: Slot
+  parent: TDMaker.Unity.Campaign.SaveSlotSummary
+  langs:
+  - csharp
+  - vb
+  name: Slot
+  nameWithType: SaveSlotSummary.Slot
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary.Slot
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Slot number (0-based).
+  example: []
+  syntax:
+    content: public readonly int Slot
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Slot As Integer
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary.Exists
+  commentId: F:TDMaker.Unity.Campaign.SaveSlotSummary.Exists
+  id: Exists
+  parent: TDMaker.Unity.Campaign.SaveSlotSummary
+  langs:
+  - csharp
+  - vb
+  name: Exists
+  nameWithType: SaveSlotSummary.Exists
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary.Exists
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Whether the slot holds a profile.
+  example: []
+  syntax:
+    content: public readonly bool Exists
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Exists As Boolean
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary.Stars
+  commentId: F:TDMaker.Unity.Campaign.SaveSlotSummary.Stars
+  id: Stars
+  parent: TDMaker.Unity.Campaign.SaveSlotSummary
+  langs:
+  - csharp
+  - vb
+  name: Stars
+  nameWithType: SaveSlotSummary.Stars
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary.Stars
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Stars including victories not merged into the map yet (never counted twice).
+  example: []
+  syntax:
+    content: public readonly int Stars
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Stars As Integer
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary.MaxStars
+  commentId: F:TDMaker.Unity.Campaign.SaveSlotSummary.MaxStars
+  id: MaxStars
+  parent: TDMaker.Unity.Campaign.SaveSlotSummary
+  langs:
+  - csharp
+  - vb
+  name: MaxStars
+  nameWithType: SaveSlotSummary.MaxStars
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary.MaxStars
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Highest star total of the campaign.
+  example: []
+  syntax:
+    content: public readonly int MaxStars
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly MaxStars As Integer
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary.Completed
+  commentId: F:TDMaker.Unity.Campaign.SaveSlotSummary.Completed
+  id: Completed
+  parent: TDMaker.Unity.Campaign.SaveSlotSummary
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: SaveSlotSummary.Completed
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary.Completed
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Completed levels.
+  example: []
+  syntax:
+    content: public readonly int Completed
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Completed As Integer
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary.Saved
+  commentId: F:TDMaker.Unity.Campaign.SaveSlotSummary.Saved
+  id: Saved
+  parent: TDMaker.Unity.Campaign.SaveSlotSummary
+  langs:
+  - csharp
+  - vb
+  name: Saved
+  nameWithType: SaveSlotSummary.Saved
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary.Saved
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Last save time (local), or null.
+  example: []
+  syntax:
+    content: public readonly DateTime? Saved
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public ReadOnly Saved As Date?
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary.Status
+  commentId: F:TDMaker.Unity.Campaign.SaveSlotSummary.Status
+  id: Status
+  parent: TDMaker.Unity.Campaign.SaveSlotSummary
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: SaveSlotSummary.Status
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary.Status
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: How the slot read (Corrupt / NewerVersion slots were backed up and show as empty).
+  example: []
+  syntax:
+    content: public readonly SaveLoadStatus Status
+    return:
+      type: TDMaker.Unity.Campaign.SaveLoadStatus
+    content.vb: Public ReadOnly Status As SaveLoadStatus
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary.#ctor(System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Nullable{System.DateTime},TDMaker.Unity.Campaign.SaveLoadStatus)
+  commentId: M:TDMaker.Unity.Campaign.SaveSlotSummary.#ctor(System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Nullable{System.DateTime},TDMaker.Unity.Campaign.SaveLoadStatus)
+  id: '#ctor(System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Nullable{System.DateTime},TDMaker.Unity.Campaign.SaveLoadStatus)'
+  parent: TDMaker.Unity.Campaign.SaveSlotSummary
+  langs:
+  - csharp
+  - vb
+  name: SaveSlotSummary(int, bool, int, int, int, DateTime?, SaveLoadStatus)
+  nameWithType: SaveSlotSummary.SaveSlotSummary(int, bool, int, int, int, DateTime?, SaveLoadStatus)
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary.SaveSlotSummary(int, bool, int, int, int, System.DateTime?, TDMaker.Unity.Campaign.SaveLoadStatus)
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Creates a summary.
+  example: []
+  syntax:
+    content: public SaveSlotSummary(int slot, bool exists, int stars, int maxStars, int completed, DateTime? saved, SaveLoadStatus
+      status)
+    parameters:
+    - id: slot
+      type: System.Int32
+    - id: exists
+      type: System.Boolean
+    - id: stars
+      type: System.Int32
+    - id: maxStars
+      type: System.Int32
+    - id: completed
+      type: System.Int32
+    - id: saved
+      type: System.Nullable{System.DateTime}
+    - id: status
+      type: TDMaker.Unity.Campaign.SaveLoadStatus
+    content.vb: Public Sub New(slot As Integer, exists As Boolean, stars As Integer, maxStars As Integer, completed As Integer,
+      saved As Date?, status As SaveLoadStatus)
+  overload: TDMaker.Unity.Campaign.SaveSlotSummary.#ctor*
+  nameWithType.vb: SaveSlotSummary.New(Integer, Boolean, Integer, Integer, Integer, Date?, SaveLoadStatus)
+  fullName.vb: TDMaker.Unity.Campaign.SaveSlotSummary.New(Integer, Boolean, Integer, Integer, Integer, Date?, TDMaker.Unity.Campaign.SaveLoadStatus)
+  name.vb: New(Integer, Boolean, Integer, Integer, Integer, Date?, SaveLoadStatus)
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus
+  commentId: T:TDMaker.Unity.Campaign.SaveLoadStatus
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.SaveLoadStatus.html
+  name: SaveLoadStatus
+  nameWithType: SaveLoadStatus
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus
+- uid: TDMaker.Unity.Campaign.SaveSlotSummary.#ctor*
+  commentId: Overload:TDMaker.Unity.Campaign.SaveSlotSummary.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Campaign.SaveSlotSummary.html#TDMaker_Unity_Campaign_SaveSlotSummary__ctor_System_Int32_System_Boolean_System_Int32_System_Int32_System_Int32_System_Nullable_System_DateTime__TDMaker_Unity_Campaign_SaveLoadStatus_
+  name: SaveSlotSummary
+  nameWithType: SaveSlotSummary.SaveSlotSummary
+  fullName: TDMaker.Unity.Campaign.SaveSlotSummary.SaveSlotSummary
+  nameWithType.vb: SaveSlotSummary.New
+  fullName.vb: TDMaker.Unity.Campaign.SaveSlotSummary.New
+  name.vb: New

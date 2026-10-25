@@ -1,0 +1,701 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Components.ModifierComponent
+  commentId: T:TDMaker.Core.Components.ModifierComponent
+  id: ModifierComponent
+  parent: TDMaker.Core.Components
+  children:
+  - TDMaker.Core.Components.ModifierComponent.#ctor
+  - TDMaker.Core.Components.ModifierComponent.BlockImmuneCount
+  - TDMaker.Core.Components.ModifierComponent.DisarmCount
+  - TDMaker.Core.Components.ModifierComponent.InputScale
+  - TDMaker.Core.Components.ModifierComponent.MagicalInputScale
+  - TDMaker.Core.Components.ModifierComponent.MagicalShift
+  - TDMaker.Core.Components.ModifierComponent.OutputScale
+  - TDMaker.Core.Components.ModifierComponent.PhysicalShift
+  - TDMaker.Core.Components.ModifierComponent.PoisonShift
+  - TDMaker.Core.Components.ModifierComponent.RangeScale
+  - TDMaker.Core.Components.ModifierComponent.SpeedScale
+  - TDMaker.Core.Components.ModifierComponent.StunCount
+  - TDMaker.Core.Components.ModifierComponent.UntargetableCount
+  langs:
+  - csharp
+  - vb
+  name: ModifierComponent
+  nameWithType: ModifierComponent
+  fullName: TDMaker.Core.Components.ModifierComponent
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Recomputed modifier totals; expired effects never invert or divide previous values.
+  example: []
+  syntax:
+    content: public sealed class ModifierComponent
+    content.vb: Public NotInheritable Class ModifierComponent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Components.ModifierComponent.#ctor
+  commentId: M:TDMaker.Core.Components.ModifierComponent.#ctor
+  id: '#ctor'
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: ModifierComponent()
+  nameWithType: ModifierComponent.ModifierComponent()
+  fullName: TDMaker.Core.Components.ModifierComponent.ModifierComponent()
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  syntax:
+    content: public ModifierComponent()
+    content.vb: Public Sub New()
+  overload: TDMaker.Core.Components.ModifierComponent.#ctor*
+  nameWithType.vb: ModifierComponent.New()
+  fullName.vb: TDMaker.Core.Components.ModifierComponent.New()
+  name.vb: New()
+- uid: TDMaker.Core.Components.ModifierComponent.SpeedScale
+  commentId: P:TDMaker.Core.Components.ModifierComponent.SpeedScale
+  id: SpeedScale
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: SpeedScale
+  nameWithType: ModifierComponent.SpeedScale
+  fullName: TDMaker.Core.Components.ModifierComponent.SpeedScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Effective movement multiplier.
+  example: []
+  syntax:
+    content: public float SpeedScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property SpeedScale As Single
+  overload: TDMaker.Core.Components.ModifierComponent.SpeedScale*
+- uid: TDMaker.Core.Components.ModifierComponent.OutputScale
+  commentId: P:TDMaker.Core.Components.ModifierComponent.OutputScale
+  id: OutputScale
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: OutputScale
+  nameWithType: ModifierComponent.OutputScale
+  fullName: TDMaker.Core.Components.ModifierComponent.OutputScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Effective outgoing damage multiplier.
+  example: []
+  syntax:
+    content: public float OutputScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property OutputScale As Single
+  overload: TDMaker.Core.Components.ModifierComponent.OutputScale*
+- uid: TDMaker.Core.Components.ModifierComponent.InputScale
+  commentId: P:TDMaker.Core.Components.ModifierComponent.InputScale
+  id: InputScale
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: InputScale
+  nameWithType: ModifierComponent.InputScale
+  fullName: TDMaker.Core.Components.ModifierComponent.InputScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Effective incoming damage multiplier.
+  example: []
+  syntax:
+    content: public float InputScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property InputScale As Single
+  overload: TDMaker.Core.Components.ModifierComponent.InputScale*
+- uid: TDMaker.Core.Components.ModifierComponent.MagicalInputScale
+  commentId: P:TDMaker.Core.Components.ModifierComponent.MagicalInputScale
+  id: MagicalInputScale
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: MagicalInputScale
+  nameWithType: ModifierComponent.MagicalInputScale
+  fullName: TDMaker.Core.Components.ModifierComponent.MagicalInputScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Additional incoming magical damage multiplier.
+  example: []
+  syntax:
+    content: public float MagicalInputScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MagicalInputScale As Single
+  overload: TDMaker.Core.Components.ModifierComponent.MagicalInputScale*
+- uid: TDMaker.Core.Components.ModifierComponent.PhysicalShift
+  commentId: P:TDMaker.Core.Components.ModifierComponent.PhysicalShift
+  id: PhysicalShift
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: PhysicalShift
+  nameWithType: ModifierComponent.PhysicalShift
+  fullName: TDMaker.Core.Components.ModifierComponent.PhysicalShift
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Temporary additive physical armor change.
+  example: []
+  syntax:
+    content: public float PhysicalShift { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property PhysicalShift As Single
+  overload: TDMaker.Core.Components.ModifierComponent.PhysicalShift*
+- uid: TDMaker.Core.Components.ModifierComponent.MagicalShift
+  commentId: P:TDMaker.Core.Components.ModifierComponent.MagicalShift
+  id: MagicalShift
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: MagicalShift
+  nameWithType: ModifierComponent.MagicalShift
+  fullName: TDMaker.Core.Components.ModifierComponent.MagicalShift
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Temporary additive magical resistance change.
+  example: []
+  syntax:
+    content: public float MagicalShift { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MagicalShift As Single
+  overload: TDMaker.Core.Components.ModifierComponent.MagicalShift*
+- uid: TDMaker.Core.Components.ModifierComponent.PoisonShift
+  commentId: P:TDMaker.Core.Components.ModifierComponent.PoisonShift
+  id: PoisonShift
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: PoisonShift
+  nameWithType: ModifierComponent.PoisonShift
+  fullName: TDMaker.Core.Components.ModifierComponent.PoisonShift
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Temporary additive poison resistance change.
+  example: []
+  syntax:
+    content: public float PoisonShift { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property PoisonShift As Single
+  overload: TDMaker.Core.Components.ModifierComponent.PoisonShift*
+- uid: TDMaker.Core.Components.ModifierComponent.StunCount
+  commentId: P:TDMaker.Core.Components.ModifierComponent.StunCount
+  id: StunCount
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: StunCount
+  nameWithType: ModifierComponent.StunCount
+  fullName: TDMaker.Core.Components.ModifierComponent.StunCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Independent active stun references.
+  example: []
+  syntax:
+    content: public int StunCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property StunCount As Integer
+  overload: TDMaker.Core.Components.ModifierComponent.StunCount*
+- uid: TDMaker.Core.Components.ModifierComponent.RangeScale
+  commentId: P:TDMaker.Core.Components.ModifierComponent.RangeScale
+  id: RangeScale
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: RangeScale
+  nameWithType: ModifierComponent.RangeScale
+  fullName: TDMaker.Core.Components.ModifierComponent.RangeScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Effective attack-range multiplier.
+  example: []
+  syntax:
+    content: public float RangeScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RangeScale As Single
+  overload: TDMaker.Core.Components.ModifierComponent.RangeScale*
+- uid: TDMaker.Core.Components.ModifierComponent.DisarmCount
+  commentId: P:TDMaker.Core.Components.ModifierComponent.DisarmCount
+  id: DisarmCount
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: DisarmCount
+  nameWithType: ModifierComponent.DisarmCount
+  fullName: TDMaker.Core.Components.ModifierComponent.DisarmCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Independent active attack-disable references.
+  example: []
+  syntax:
+    content: public int DisarmCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property DisarmCount As Integer
+  overload: TDMaker.Core.Components.ModifierComponent.DisarmCount*
+- uid: TDMaker.Core.Components.ModifierComponent.BlockImmuneCount
+  commentId: P:TDMaker.Core.Components.ModifierComponent.BlockImmuneCount
+  id: BlockImmuneCount
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: BlockImmuneCount
+  nameWithType: ModifierComponent.BlockImmuneCount
+  fullName: TDMaker.Core.Components.ModifierComponent.BlockImmuneCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Independent active interception-ignore references.
+  example: []
+  syntax:
+    content: public int BlockImmuneCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property BlockImmuneCount As Integer
+  overload: TDMaker.Core.Components.ModifierComponent.BlockImmuneCount*
+- uid: TDMaker.Core.Components.ModifierComponent.UntargetableCount
+  commentId: P:TDMaker.Core.Components.ModifierComponent.UntargetableCount
+  id: UntargetableCount
+  parent: TDMaker.Core.Components.ModifierComponent
+  langs:
+  - csharp
+  - vb
+  name: UntargetableCount
+  nameWithType: ModifierComponent.UntargetableCount
+  fullName: TDMaker.Core.Components.ModifierComponent.UntargetableCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Independent active attack-target exclusion references.
+  example: []
+  syntax:
+    content: public int UntargetableCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property UntargetableCount As Integer
+  overload: TDMaker.Core.Components.ModifierComponent.UntargetableCount*
+references:
+- uid: TDMaker.Core.Components
+  commentId: N:TDMaker.Core.Components
+  isExternal: true
+  name: TDMaker.Core.Components
+  nameWithType: TDMaker.Core.Components
+  fullName: TDMaker.Core.Components
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Components.ModifierComponent.#ctor*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.#ctor
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent__ctor
+  name: ModifierComponent
+  nameWithType: ModifierComponent.ModifierComponent
+  fullName: TDMaker.Core.Components.ModifierComponent.ModifierComponent
+  nameWithType.vb: ModifierComponent.New
+  fullName.vb: TDMaker.Core.Components.ModifierComponent.New
+  name.vb: New
+- uid: TDMaker.Core.Components.ModifierComponent.SpeedScale*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.SpeedScale
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_SpeedScale
+  name: SpeedScale
+  nameWithType: ModifierComponent.SpeedScale
+  fullName: TDMaker.Core.Components.ModifierComponent.SpeedScale
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Components.ModifierComponent.OutputScale*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.OutputScale
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_OutputScale
+  name: OutputScale
+  nameWithType: ModifierComponent.OutputScale
+  fullName: TDMaker.Core.Components.ModifierComponent.OutputScale
+- uid: TDMaker.Core.Components.ModifierComponent.InputScale*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.InputScale
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_InputScale
+  name: InputScale
+  nameWithType: ModifierComponent.InputScale
+  fullName: TDMaker.Core.Components.ModifierComponent.InputScale
+- uid: TDMaker.Core.Components.ModifierComponent.MagicalInputScale*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.MagicalInputScale
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_MagicalInputScale
+  name: MagicalInputScale
+  nameWithType: ModifierComponent.MagicalInputScale
+  fullName: TDMaker.Core.Components.ModifierComponent.MagicalInputScale
+- uid: TDMaker.Core.Components.ModifierComponent.PhysicalShift*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.PhysicalShift
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_PhysicalShift
+  name: PhysicalShift
+  nameWithType: ModifierComponent.PhysicalShift
+  fullName: TDMaker.Core.Components.ModifierComponent.PhysicalShift
+- uid: TDMaker.Core.Components.ModifierComponent.MagicalShift*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.MagicalShift
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_MagicalShift
+  name: MagicalShift
+  nameWithType: ModifierComponent.MagicalShift
+  fullName: TDMaker.Core.Components.ModifierComponent.MagicalShift
+- uid: TDMaker.Core.Components.ModifierComponent.PoisonShift*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.PoisonShift
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_PoisonShift
+  name: PoisonShift
+  nameWithType: ModifierComponent.PoisonShift
+  fullName: TDMaker.Core.Components.ModifierComponent.PoisonShift
+- uid: TDMaker.Core.Components.ModifierComponent.StunCount*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.StunCount
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_StunCount
+  name: StunCount
+  nameWithType: ModifierComponent.StunCount
+  fullName: TDMaker.Core.Components.ModifierComponent.StunCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Components.ModifierComponent.RangeScale*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.RangeScale
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_RangeScale
+  name: RangeScale
+  nameWithType: ModifierComponent.RangeScale
+  fullName: TDMaker.Core.Components.ModifierComponent.RangeScale
+- uid: TDMaker.Core.Components.ModifierComponent.DisarmCount*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.DisarmCount
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_DisarmCount
+  name: DisarmCount
+  nameWithType: ModifierComponent.DisarmCount
+  fullName: TDMaker.Core.Components.ModifierComponent.DisarmCount
+- uid: TDMaker.Core.Components.ModifierComponent.BlockImmuneCount*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.BlockImmuneCount
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_BlockImmuneCount
+  name: BlockImmuneCount
+  nameWithType: ModifierComponent.BlockImmuneCount
+  fullName: TDMaker.Core.Components.ModifierComponent.BlockImmuneCount
+- uid: TDMaker.Core.Components.ModifierComponent.UntargetableCount*
+  commentId: Overload:TDMaker.Core.Components.ModifierComponent.UntargetableCount
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html#TDMaker_Core_Components_ModifierComponent_UntargetableCount
+  name: UntargetableCount
+  nameWithType: ModifierComponent.UntargetableCount
+  fullName: TDMaker.Core.Components.ModifierComponent.UntargetableCount

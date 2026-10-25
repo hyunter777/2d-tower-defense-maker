@@ -1,0 +1,263 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.ProfileMigration
+  commentId: T:TDMaker.Unity.Campaign.ProfileMigration
+  id: ProfileMigration
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.ProfileMigration.#ctor(System.Object,System.IntPtr)
+  - TDMaker.Unity.Campaign.ProfileMigration.BeginInvoke(TDMaker.Unity.Campaign.ProfileData,System.Int32,System.AsyncCallback,System.Object)
+  - TDMaker.Unity.Campaign.ProfileMigration.EndInvoke(System.IAsyncResult)
+  - TDMaker.Unity.Campaign.ProfileMigration.Invoke(TDMaker.Unity.Campaign.ProfileData,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: ProfileMigration
+  nameWithType: ProfileMigration
+  fullName: TDMaker.Unity.Campaign.ProfileMigration
+  type: Delegate
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'One migration step: upgrades data read with schema <code class="paramref">fromVersion</code> to <code>fromVersion
+    + 1</code>.'
+  example: []
+  syntax:
+    content: public delegate void ProfileMigration(ProfileData data, int fromVersion)
+    parameters:
+    - id: data
+      type: TDMaker.Unity.Campaign.ProfileData
+    - id: fromVersion
+      type: System.Int32
+    content.vb: Public Delegate Sub ProfileMigration(data As ProfileData, fromVersion As Integer)
+- uid: TDMaker.Unity.Campaign.ProfileMigration.#ctor(System.Object,System.IntPtr)
+  commentId: M:TDMaker.Unity.Campaign.ProfileMigration.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: TDMaker.Unity.Campaign.ProfileMigration
+  langs:
+  - csharp
+  - vb
+  name: ProfileMigration(object, IntPtr)
+  nameWithType: ProfileMigration.ProfileMigration(object, IntPtr)
+  fullName: TDMaker.Unity.Campaign.ProfileMigration.ProfileMigration(object, System.IntPtr)
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  syntax:
+    content: public ProfileMigration(object @object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New([object] As Object, method As IntPtr)
+  overload: TDMaker.Unity.Campaign.ProfileMigration.#ctor*
+  nameWithType.vb: ProfileMigration.New(Object, IntPtr)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileMigration.New(Object, System.IntPtr)
+  name.vb: New(Object, IntPtr)
+- uid: TDMaker.Unity.Campaign.ProfileMigration.Invoke(TDMaker.Unity.Campaign.ProfileData,System.Int32)
+  commentId: M:TDMaker.Unity.Campaign.ProfileMigration.Invoke(TDMaker.Unity.Campaign.ProfileData,System.Int32)
+  id: Invoke(TDMaker.Unity.Campaign.ProfileData,System.Int32)
+  parent: TDMaker.Unity.Campaign.ProfileMigration
+  langs:
+  - csharp
+  - vb
+  name: Invoke(ProfileData, int)
+  nameWithType: ProfileMigration.Invoke(ProfileData, int)
+  fullName: TDMaker.Unity.Campaign.ProfileMigration.Invoke(TDMaker.Unity.Campaign.ProfileData, int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  syntax:
+    content: public virtual void Invoke(ProfileData data, int fromVersion)
+    parameters:
+    - id: data
+      type: TDMaker.Unity.Campaign.ProfileData
+    - id: fromVersion
+      type: System.Int32
+    content.vb: Public Overridable Sub Invoke(data As ProfileData, fromVersion As Integer)
+  overload: TDMaker.Unity.Campaign.ProfileMigration.Invoke*
+  nameWithType.vb: ProfileMigration.Invoke(ProfileData, Integer)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileMigration.Invoke(TDMaker.Unity.Campaign.ProfileData, Integer)
+  name.vb: Invoke(ProfileData, Integer)
+- uid: TDMaker.Unity.Campaign.ProfileMigration.BeginInvoke(TDMaker.Unity.Campaign.ProfileData,System.Int32,System.AsyncCallback,System.Object)
+  commentId: M:TDMaker.Unity.Campaign.ProfileMigration.BeginInvoke(TDMaker.Unity.Campaign.ProfileData,System.Int32,System.AsyncCallback,System.Object)
+  id: BeginInvoke(TDMaker.Unity.Campaign.ProfileData,System.Int32,System.AsyncCallback,System.Object)
+  parent: TDMaker.Unity.Campaign.ProfileMigration
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(ProfileData, int, AsyncCallback, object)
+  nameWithType: ProfileMigration.BeginInvoke(ProfileData, int, AsyncCallback, object)
+  fullName: TDMaker.Unity.Campaign.ProfileMigration.BeginInvoke(TDMaker.Unity.Campaign.ProfileData, int, System.AsyncCallback,
+    object)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(ProfileData data, int fromVersion, AsyncCallback callback, object @object)
+    parameters:
+    - id: data
+      type: TDMaker.Unity.Campaign.ProfileData
+    - id: fromVersion
+      type: System.Int32
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(data As ProfileData, fromVersion As Integer, callback As AsyncCallback,
+      [object] As Object) As IAsyncResult
+  overload: TDMaker.Unity.Campaign.ProfileMigration.BeginInvoke*
+  nameWithType.vb: ProfileMigration.BeginInvoke(ProfileData, Integer, AsyncCallback, Object)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileMigration.BeginInvoke(TDMaker.Unity.Campaign.ProfileData, Integer, System.AsyncCallback,
+    Object)
+  name.vb: BeginInvoke(ProfileData, Integer, AsyncCallback, Object)
+- uid: TDMaker.Unity.Campaign.ProfileMigration.EndInvoke(System.IAsyncResult)
+  commentId: M:TDMaker.Unity.Campaign.ProfileMigration.EndInvoke(System.IAsyncResult)
+  id: EndInvoke(System.IAsyncResult)
+  parent: TDMaker.Unity.Campaign.ProfileMigration
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(IAsyncResult)
+  nameWithType: ProfileMigration.EndInvoke(IAsyncResult)
+  fullName: TDMaker.Unity.Campaign.ProfileMigration.EndInvoke(System.IAsyncResult)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  syntax:
+    content: public virtual void EndInvoke(IAsyncResult result)
+    parameters:
+    - id: result
+      type: System.IAsyncResult
+    content.vb: Public Overridable Sub EndInvoke(result As IAsyncResult)
+  overload: TDMaker.Unity.Campaign.ProfileMigration.EndInvoke*
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.ProfileData
+  commentId: T:TDMaker.Unity.Campaign.ProfileData
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html
+  name: ProfileData
+  nameWithType: ProfileData
+  fullName: TDMaker.Unity.Campaign.ProfileData
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Campaign.ProfileMigration.#ctor*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileMigration.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileMigration.html#TDMaker_Unity_Campaign_ProfileMigration__ctor_System_Object_System_IntPtr_
+  name: ProfileMigration
+  nameWithType: ProfileMigration.ProfileMigration
+  fullName: TDMaker.Unity.Campaign.ProfileMigration.ProfileMigration
+  nameWithType.vb: ProfileMigration.New
+  fullName.vb: TDMaker.Unity.Campaign.ProfileMigration.New
+  name.vb: New
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: TDMaker.Unity.Campaign.ProfileMigration.Invoke*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileMigration.Invoke
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileMigration.html#TDMaker_Unity_Campaign_ProfileMigration_Invoke_TDMaker_Unity_Campaign_ProfileData_System_Int32_
+  name: Invoke
+  nameWithType: ProfileMigration.Invoke
+  fullName: TDMaker.Unity.Campaign.ProfileMigration.Invoke
+- uid: TDMaker.Unity.Campaign.ProfileMigration.BeginInvoke*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileMigration.BeginInvoke
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileMigration.html#TDMaker_Unity_Campaign_ProfileMigration_BeginInvoke_TDMaker_Unity_Campaign_ProfileData_System_Int32_System_AsyncCallback_System_Object_
+  name: BeginInvoke
+  nameWithType: ProfileMigration.BeginInvoke
+  fullName: TDMaker.Unity.Campaign.ProfileMigration.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.asynccallback
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncresult
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: TDMaker.Unity.Campaign.ProfileMigration.EndInvoke*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileMigration.EndInvoke
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileMigration.html#TDMaker_Unity_Campaign_ProfileMigration_EndInvoke_System_IAsyncResult_
+  name: EndInvoke
+  nameWithType: ProfileMigration.EndInvoke
+  fullName: TDMaker.Unity.Campaign.ProfileMigration.EndInvoke

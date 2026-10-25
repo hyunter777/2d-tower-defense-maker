@@ -1,0 +1,673 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.UpgradeShopRules
+  commentId: T:TDMaker.Core.UpgradeShopRules
+  id: UpgradeShopRules
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.UpgradeShopRules.Available(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64)
+  - TDMaker.Core.UpgradeShopRules.CanPurchase(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64,System.String,System.Int32)
+  - TDMaker.Core.UpgradeShopRules.CanRevert(TDMaker.Core.Defs.UpgradeSnapshot,TDMaker.Core.Defs.UpgradeSnapshot)
+  - TDMaker.Core.UpgradeShopRules.Open(TDMaker.Core.Defs.UpgradeSnapshot)
+  - TDMaker.Core.UpgradeShopRules.ResetAll(TDMaker.Core.Defs.UpgradeSnapshot,TDMaker.Core.Defs.UpgradeSnapshot@)
+  - TDMaker.Core.UpgradeShopRules.Revert(TDMaker.Core.Defs.UpgradeSnapshot)
+  - TDMaker.Core.UpgradeShopRules.Spent(TDMaker.Core.Defs.UpgradeSnapshot)
+  - TDMaker.Core.UpgradeShopRules.TryPurchase(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64,System.String,System.Int32,TDMaker.Core.Defs.UpgradeSnapshot@)
+  langs:
+  - csharp
+  - vb
+  name: UpgradeShopRules
+  nameWithType: UpgradeShopRules
+  fullName: TDMaker.Core.UpgradeShopRules
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Storage-independent immutable star-shop transitions. Forced battle ranks never affect spending.
+  example: []
+  syntax:
+    content: public static class UpgradeShopRules
+    content.vb: Public Module UpgradeShopRules
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.UpgradeShopRules.Spent(TDMaker.Core.Defs.UpgradeSnapshot)
+  commentId: M:TDMaker.Core.UpgradeShopRules.Spent(TDMaker.Core.Defs.UpgradeSnapshot)
+  id: Spent(TDMaker.Core.Defs.UpgradeSnapshot)
+  parent: TDMaker.Core.UpgradeShopRules
+  langs:
+  - csharp
+  - vb
+  name: Spent(UpgradeSnapshot)
+  nameWithType: UpgradeShopRules.Spent(UpgradeSnapshot)
+  fullName: TDMaker.Core.UpgradeShopRules.Spent(TDMaker.Core.Defs.UpgradeSnapshot)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Sum of every purchased stage's incremental cost; checked for overflow.
+  example: []
+  syntax:
+    content: public static long Spent(UpgradeSnapshot state)
+    parameters:
+    - id: state
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    return:
+      type: System.Int64
+    content.vb: Public Shared Function Spent(state As UpgradeSnapshot) As Long
+  overload: TDMaker.Core.UpgradeShopRules.Spent*
+- uid: TDMaker.Core.UpgradeShopRules.Available(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64)
+  commentId: M:TDMaker.Core.UpgradeShopRules.Available(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64)
+  id: Available(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64)
+  parent: TDMaker.Core.UpgradeShopRules
+  langs:
+  - csharp
+  - vb
+  name: Available(UpgradeSnapshot, long)
+  nameWithType: UpgradeShopRules.Available(UpgradeSnapshot, long)
+  fullName: TDMaker.Core.UpgradeShopRules.Available(TDMaker.Core.Defs.UpgradeSnapshot, long)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Earned total minus spending. A negative balance remains visible for invalid imported profiles.
+  example: []
+  syntax:
+    content: public static long Available(UpgradeSnapshot state, long earnedTotal)
+    parameters:
+    - id: state
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    - id: earnedTotal
+      type: System.Int64
+    return:
+      type: System.Int64
+    content.vb: Public Shared Function Available(state As UpgradeSnapshot, earnedTotal As Long) As Long
+  overload: TDMaker.Core.UpgradeShopRules.Available*
+  nameWithType.vb: UpgradeShopRules.Available(UpgradeSnapshot, Long)
+  fullName.vb: TDMaker.Core.UpgradeShopRules.Available(TDMaker.Core.Defs.UpgradeSnapshot, Long)
+  name.vb: Available(UpgradeSnapshot, Long)
+- uid: TDMaker.Core.UpgradeShopRules.CanPurchase(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64,System.String,System.Int32)
+  commentId: M:TDMaker.Core.UpgradeShopRules.CanPurchase(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64,System.String,System.Int32)
+  id: CanPurchase(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64,System.String,System.Int32)
+  parent: TDMaker.Core.UpgradeShopRules
+  langs:
+  - csharp
+  - vb
+  name: CanPurchase(UpgradeSnapshot, long, string, int)
+  nameWithType: UpgradeShopRules.CanPurchase(UpgradeSnapshot, long, string, int)
+  fullName: TDMaker.Core.UpgradeShopRules.CanPurchase(TDMaker.Core.Defs.UpgradeSnapshot, long, string, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Accepts only the immediate next rank with sufficient stars.
+  example: []
+  syntax:
+    content: public static bool CanPurchase(UpgradeSnapshot state, long earnedTotal, string trackId, int rank)
+    parameters:
+    - id: state
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    - id: earnedTotal
+      type: System.Int64
+    - id: trackId
+      type: System.String
+    - id: rank
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function CanPurchase(state As UpgradeSnapshot, earnedTotal As Long, trackId As String, rank
+      As Integer) As Boolean
+  overload: TDMaker.Core.UpgradeShopRules.CanPurchase*
+  nameWithType.vb: UpgradeShopRules.CanPurchase(UpgradeSnapshot, Long, String, Integer)
+  fullName.vb: TDMaker.Core.UpgradeShopRules.CanPurchase(TDMaker.Core.Defs.UpgradeSnapshot, Long, String, Integer)
+  name.vb: CanPurchase(UpgradeSnapshot, Long, String, Integer)
+- uid: TDMaker.Core.UpgradeShopRules.TryPurchase(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64,System.String,System.Int32,TDMaker.Core.Defs.UpgradeSnapshot@)
+  commentId: M:TDMaker.Core.UpgradeShopRules.TryPurchase(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64,System.String,System.Int32,TDMaker.Core.Defs.UpgradeSnapshot@)
+  id: TryPurchase(TDMaker.Core.Defs.UpgradeSnapshot,System.Int64,System.String,System.Int32,TDMaker.Core.Defs.UpgradeSnapshot@)
+  parent: TDMaker.Core.UpgradeShopRules
+  langs:
+  - csharp
+  - vb
+  name: TryPurchase(UpgradeSnapshot, long, string, int, out UpgradeSnapshot)
+  nameWithType: UpgradeShopRules.TryPurchase(UpgradeSnapshot, long, string, int, out UpgradeSnapshot)
+  fullName: TDMaker.Core.UpgradeShopRules.TryPurchase(TDMaker.Core.Defs.UpgradeSnapshot, long, string, int, out TDMaker.Core.Defs.UpgradeSnapshot)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Returns a purchased copy, or the unchanged state on refusal.
+  example: []
+  syntax:
+    content: public static bool TryPurchase(UpgradeSnapshot state, long earnedTotal, string trackId, int rank, out UpgradeSnapshot
+      result)
+    parameters:
+    - id: state
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    - id: earnedTotal
+      type: System.Int64
+    - id: trackId
+      type: System.String
+    - id: rank
+      type: System.Int32
+    - id: result
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryPurchase(state As UpgradeSnapshot, earnedTotal As Long, trackId As String, rank
+      As Integer, result As UpgradeSnapshot) As Boolean
+  overload: TDMaker.Core.UpgradeShopRules.TryPurchase*
+  nameWithType.vb: UpgradeShopRules.TryPurchase(UpgradeSnapshot, Long, String, Integer, UpgradeSnapshot)
+  fullName.vb: TDMaker.Core.UpgradeShopRules.TryPurchase(TDMaker.Core.Defs.UpgradeSnapshot, Long, String, Integer, TDMaker.Core.Defs.UpgradeSnapshot)
+  name.vb: TryPurchase(UpgradeSnapshot, Long, String, Integer, UpgradeSnapshot)
+- uid: TDMaker.Core.UpgradeShopRules.Open(TDMaker.Core.Defs.UpgradeSnapshot)
+  commentId: M:TDMaker.Core.UpgradeShopRules.Open(TDMaker.Core.Defs.UpgradeSnapshot)
+  id: Open(TDMaker.Core.Defs.UpgradeSnapshot)
+  parent: TDMaker.Core.UpgradeShopRules
+  langs:
+  - csharp
+  - vb
+  name: Open(UpgradeSnapshot)
+  nameWithType: UpgradeShopRules.Open(UpgradeSnapshot)
+  fullName: TDMaker.Core.UpgradeShopRules.Open(TDMaker.Core.Defs.UpgradeSnapshot)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Captures the complete purchase state on opening the shop. Immutable snapshots need no mutable copy.
+  example: []
+  syntax:
+    content: public static UpgradeSnapshot Open(UpgradeSnapshot state)
+    parameters:
+    - id: state
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    return:
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    content.vb: Public Shared Function Open(state As UpgradeSnapshot) As UpgradeSnapshot
+  overload: TDMaker.Core.UpgradeShopRules.Open*
+- uid: TDMaker.Core.UpgradeShopRules.Revert(TDMaker.Core.Defs.UpgradeSnapshot)
+  commentId: M:TDMaker.Core.UpgradeShopRules.Revert(TDMaker.Core.Defs.UpgradeSnapshot)
+  id: Revert(TDMaker.Core.Defs.UpgradeSnapshot)
+  parent: TDMaker.Core.UpgradeShopRules
+  langs:
+  - csharp
+  - vb
+  name: Revert(UpgradeSnapshot)
+  nameWithType: UpgradeShopRules.Revert(UpgradeSnapshot)
+  fullName: TDMaker.Core.UpgradeShopRules.Revert(TDMaker.Core.Defs.UpgradeSnapshot)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Restores the opening baseline, rather than undoing one purchase.
+  example: []
+  syntax:
+    content: public static UpgradeSnapshot Revert(UpgradeSnapshot openingBaseline)
+    parameters:
+    - id: openingBaseline
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    return:
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    content.vb: Public Shared Function Revert(openingBaseline As UpgradeSnapshot) As UpgradeSnapshot
+  overload: TDMaker.Core.UpgradeShopRules.Revert*
+- uid: TDMaker.Core.UpgradeShopRules.CanRevert(TDMaker.Core.Defs.UpgradeSnapshot,TDMaker.Core.Defs.UpgradeSnapshot)
+  commentId: M:TDMaker.Core.UpgradeShopRules.CanRevert(TDMaker.Core.Defs.UpgradeSnapshot,TDMaker.Core.Defs.UpgradeSnapshot)
+  id: CanRevert(TDMaker.Core.Defs.UpgradeSnapshot,TDMaker.Core.Defs.UpgradeSnapshot)
+  parent: TDMaker.Core.UpgradeShopRules
+  langs:
+  - csharp
+  - vb
+  name: CanRevert(UpgradeSnapshot, UpgradeSnapshot)
+  nameWithType: UpgradeShopRules.CanRevert(UpgradeSnapshot, UpgradeSnapshot)
+  fullName: TDMaker.Core.UpgradeShopRules.CanRevert(TDMaker.Core.Defs.UpgradeSnapshot, TDMaker.Core.Defs.UpgradeSnapshot)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Tests purchased-state equality against the opening baseline.
+  example: []
+  syntax:
+    content: public static bool CanRevert(UpgradeSnapshot state, UpgradeSnapshot openingBaseline)
+    parameters:
+    - id: state
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    - id: openingBaseline
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function CanRevert(state As UpgradeSnapshot, openingBaseline As UpgradeSnapshot) As Boolean
+  overload: TDMaker.Core.UpgradeShopRules.CanRevert*
+- uid: TDMaker.Core.UpgradeShopRules.ResetAll(TDMaker.Core.Defs.UpgradeSnapshot,TDMaker.Core.Defs.UpgradeSnapshot@)
+  commentId: M:TDMaker.Core.UpgradeShopRules.ResetAll(TDMaker.Core.Defs.UpgradeSnapshot,TDMaker.Core.Defs.UpgradeSnapshot@)
+  id: ResetAll(TDMaker.Core.Defs.UpgradeSnapshot,TDMaker.Core.Defs.UpgradeSnapshot@)
+  parent: TDMaker.Core.UpgradeShopRules
+  langs:
+  - csharp
+  - vb
+  name: ResetAll(UpgradeSnapshot, out UpgradeSnapshot)
+  nameWithType: UpgradeShopRules.ResetAll(UpgradeSnapshot, out UpgradeSnapshot)
+  fullName: TDMaker.Core.UpgradeShopRules.ResetAll(TDMaker.Core.Defs.UpgradeSnapshot, out TDMaker.Core.Defs.UpgradeSnapshot)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Clears every purchase and replaces the revert baseline with that same empty state.
+  example: []
+  syntax:
+    content: public static UpgradeSnapshot ResetAll(UpgradeSnapshot state, out UpgradeSnapshot openingBaseline)
+    parameters:
+    - id: state
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    - id: openingBaseline
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    return:
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    content.vb: Public Shared Function ResetAll(state As UpgradeSnapshot, openingBaseline As UpgradeSnapshot) As UpgradeSnapshot
+  overload: TDMaker.Core.UpgradeShopRules.ResetAll*
+  nameWithType.vb: UpgradeShopRules.ResetAll(UpgradeSnapshot, UpgradeSnapshot)
+  fullName.vb: TDMaker.Core.UpgradeShopRules.ResetAll(TDMaker.Core.Defs.UpgradeSnapshot, TDMaker.Core.Defs.UpgradeSnapshot)
+  name.vb: ResetAll(UpgradeSnapshot, UpgradeSnapshot)
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.UpgradeShopRules.Spent*
+  commentId: Overload:TDMaker.Core.UpgradeShopRules.Spent
+  isExternal: true
+  href: TDMaker.Core.UpgradeShopRules.html#TDMaker_Core_UpgradeShopRules_Spent_TDMaker_Core_Defs_UpgradeSnapshot_
+  name: Spent
+  nameWithType: UpgradeShopRules.Spent
+  fullName: TDMaker.Core.UpgradeShopRules.Spent
+- uid: TDMaker.Core.Defs.UpgradeSnapshot
+  commentId: T:TDMaker.Core.Defs.UpgradeSnapshot
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeSnapshot.html
+  name: UpgradeSnapshot
+  nameWithType: UpgradeSnapshot
+  fullName: TDMaker.Core.Defs.UpgradeSnapshot
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.UpgradeShopRules.Available*
+  commentId: Overload:TDMaker.Core.UpgradeShopRules.Available
+  isExternal: true
+  href: TDMaker.Core.UpgradeShopRules.html#TDMaker_Core_UpgradeShopRules_Available_TDMaker_Core_Defs_UpgradeSnapshot_System_Int64_
+  name: Available
+  nameWithType: UpgradeShopRules.Available
+  fullName: TDMaker.Core.UpgradeShopRules.Available
+- uid: TDMaker.Core.UpgradeShopRules.CanPurchase*
+  commentId: Overload:TDMaker.Core.UpgradeShopRules.CanPurchase
+  isExternal: true
+  href: TDMaker.Core.UpgradeShopRules.html#TDMaker_Core_UpgradeShopRules_CanPurchase_TDMaker_Core_Defs_UpgradeSnapshot_System_Int64_System_String_System_Int32_
+  name: CanPurchase
+  nameWithType: UpgradeShopRules.CanPurchase
+  fullName: TDMaker.Core.UpgradeShopRules.CanPurchase
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.UpgradeShopRules.TryPurchase*
+  commentId: Overload:TDMaker.Core.UpgradeShopRules.TryPurchase
+  isExternal: true
+  href: TDMaker.Core.UpgradeShopRules.html#TDMaker_Core_UpgradeShopRules_TryPurchase_TDMaker_Core_Defs_UpgradeSnapshot_System_Int64_System_String_System_Int32_TDMaker_Core_Defs_UpgradeSnapshot__
+  name: TryPurchase
+  nameWithType: UpgradeShopRules.TryPurchase
+  fullName: TDMaker.Core.UpgradeShopRules.TryPurchase
+- uid: TDMaker.Core.UpgradeShopRules.Open*
+  commentId: Overload:TDMaker.Core.UpgradeShopRules.Open
+  isExternal: true
+  href: TDMaker.Core.UpgradeShopRules.html#TDMaker_Core_UpgradeShopRules_Open_TDMaker_Core_Defs_UpgradeSnapshot_
+  name: Open
+  nameWithType: UpgradeShopRules.Open
+  fullName: TDMaker.Core.UpgradeShopRules.Open
+- uid: TDMaker.Core.UpgradeShopRules.Revert*
+  commentId: Overload:TDMaker.Core.UpgradeShopRules.Revert
+  isExternal: true
+  href: TDMaker.Core.UpgradeShopRules.html#TDMaker_Core_UpgradeShopRules_Revert_TDMaker_Core_Defs_UpgradeSnapshot_
+  name: Revert
+  nameWithType: UpgradeShopRules.Revert
+  fullName: TDMaker.Core.UpgradeShopRules.Revert
+- uid: TDMaker.Core.UpgradeShopRules.CanRevert*
+  commentId: Overload:TDMaker.Core.UpgradeShopRules.CanRevert
+  isExternal: true
+  href: TDMaker.Core.UpgradeShopRules.html#TDMaker_Core_UpgradeShopRules_CanRevert_TDMaker_Core_Defs_UpgradeSnapshot_TDMaker_Core_Defs_UpgradeSnapshot_
+  name: CanRevert
+  nameWithType: UpgradeShopRules.CanRevert
+  fullName: TDMaker.Core.UpgradeShopRules.CanRevert
+- uid: TDMaker.Core.UpgradeShopRules.ResetAll*
+  commentId: Overload:TDMaker.Core.UpgradeShopRules.ResetAll
+  isExternal: true
+  href: TDMaker.Core.UpgradeShopRules.html#TDMaker_Core_UpgradeShopRules_ResetAll_TDMaker_Core_Defs_UpgradeSnapshot_TDMaker_Core_Defs_UpgradeSnapshot__
+  name: ResetAll
+  nameWithType: UpgradeShopRules.ResetAll
+  fullName: TDMaker.Core.UpgradeShopRules.ResetAll

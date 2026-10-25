@@ -1,0 +1,697 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.WorkshopDirtyState
+  commentId: T:TDMaker.Editor.WorkshopDirtyState
+  id: WorkshopDirtyState
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.WorkshopDirtyState.#ctor
+  - TDMaker.Editor.WorkshopDirtyState.Clear
+  - TDMaker.Editor.WorkshopDirtyState.Discard(UnityEngine.Object)
+  - TDMaker.Editor.WorkshopDirtyState.HasSnapshot(UnityEngine.Object)
+  - TDMaker.Editor.WorkshopDirtyState.IsModified(UnityEngine.Object)
+  - TDMaker.Editor.WorkshopDirtyState.Observe(UnityEngine.Object)
+  - TDMaker.Editor.WorkshopDirtyState.Reconcile(System.Collections.Generic.IEnumerable{UnityEngine.Object})
+  - TDMaker.Editor.WorkshopDirtyState.ReconcileAll
+  - TDMaker.Editor.WorkshopDirtyState.Save(UnityEngine.Object)
+  langs:
+  - csharp
+  - vb
+  name: WorkshopDirtyState
+  nameWithType: WorkshopDirtyState
+  fullName: TDMaker.Editor.WorkshopDirtyState
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Remembers the last saved (clean) state of the assets an editor window edits, so that Undo back to that state clears
+    the
+
+    "modified" mark again (Unity keeps an asset dirty after Undo), and so that unsaved edits can be discarded on request.
+
+    Snapshots are taken once per clean period (when an asset is first seen not dirty), not every frame.'
+  example: []
+  syntax:
+    content: public sealed class WorkshopDirtyState
+    content.vb: Public NotInheritable Class WorkshopDirtyState
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.WorkshopDirtyState.Observe(UnityEngine.Object)
+  commentId: M:TDMaker.Editor.WorkshopDirtyState.Observe(UnityEngine.Object)
+  id: Observe(UnityEngine.Object)
+  parent: TDMaker.Editor.WorkshopDirtyState
+  langs:
+  - csharp
+  - vb
+  name: Observe(Object)
+  nameWithType: WorkshopDirtyState.Observe(Object)
+  fullName: TDMaker.Editor.WorkshopDirtyState.Observe(UnityEngine.Object)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Records the clean state of <code class="paramref">asset</code> when it is not dirty (call before it gets edited).
+  example: []
+  syntax:
+    content: public void Observe(Object asset)
+    parameters:
+    - id: asset
+      type: UnityEngine.Object
+    content.vb: Public Sub Observe(asset As [Object])
+  overload: TDMaker.Editor.WorkshopDirtyState.Observe*
+- uid: TDMaker.Editor.WorkshopDirtyState.IsModified(UnityEngine.Object)
+  commentId: M:TDMaker.Editor.WorkshopDirtyState.IsModified(UnityEngine.Object)
+  id: IsModified(UnityEngine.Object)
+  parent: TDMaker.Editor.WorkshopDirtyState
+  langs:
+  - csharp
+  - vb
+  name: IsModified(Object)
+  nameWithType: WorkshopDirtyState.IsModified(Object)
+  fullName: TDMaker.Editor.WorkshopDirtyState.IsModified(UnityEngine.Object)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether <code class="paramref">asset</code> has edits that are not on disk.
+  example: []
+  syntax:
+    content: public static bool IsModified(Object asset)
+    parameters:
+    - id: asset
+      type: UnityEngine.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsModified(asset As [Object]) As Boolean
+  overload: TDMaker.Editor.WorkshopDirtyState.IsModified*
+- uid: TDMaker.Editor.WorkshopDirtyState.HasSnapshot(UnityEngine.Object)
+  commentId: M:TDMaker.Editor.WorkshopDirtyState.HasSnapshot(UnityEngine.Object)
+  id: HasSnapshot(UnityEngine.Object)
+  parent: TDMaker.Editor.WorkshopDirtyState
+  langs:
+  - csharp
+  - vb
+  name: HasSnapshot(Object)
+  nameWithType: WorkshopDirtyState.HasSnapshot(Object)
+  fullName: TDMaker.Editor.WorkshopDirtyState.HasSnapshot(UnityEngine.Object)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether a clean state of <code class="paramref">asset</code> is known.
+  example: []
+  syntax:
+    content: public bool HasSnapshot(Object asset)
+    parameters:
+    - id: asset
+      type: UnityEngine.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Function HasSnapshot(asset As [Object]) As Boolean
+  overload: TDMaker.Editor.WorkshopDirtyState.HasSnapshot*
+- uid: TDMaker.Editor.WorkshopDirtyState.Reconcile(System.Collections.Generic.IEnumerable{UnityEngine.Object})
+  commentId: M:TDMaker.Editor.WorkshopDirtyState.Reconcile(System.Collections.Generic.IEnumerable{UnityEngine.Object})
+  id: Reconcile(System.Collections.Generic.IEnumerable{UnityEngine.Object})
+  parent: TDMaker.Editor.WorkshopDirtyState
+  langs:
+  - csharp
+  - vb
+  name: Reconcile(IEnumerable<Object>)
+  nameWithType: WorkshopDirtyState.Reconcile(IEnumerable<Object>)
+  fullName: TDMaker.Editor.WorkshopDirtyState.Reconcile(System.Collections.Generic.IEnumerable<UnityEngine.Object>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'After Undo / Redo: every dirty asset whose data equals its saved snapshot is marked clean again. Returns how many
+
+    assets were cleared.'
+  example: []
+  syntax:
+    content: public int Reconcile(IEnumerable<Object> assets)
+    parameters:
+    - id: assets
+      type: System.Collections.Generic.IEnumerable{UnityEngine.Object}
+    return:
+      type: System.Int32
+    content.vb: Public Function Reconcile(assets As IEnumerable(Of [Object])) As Integer
+  overload: TDMaker.Editor.WorkshopDirtyState.Reconcile*
+  nameWithType.vb: WorkshopDirtyState.Reconcile(IEnumerable(Of Object))
+  fullName.vb: TDMaker.Editor.WorkshopDirtyState.Reconcile(System.Collections.Generic.IEnumerable(Of UnityEngine.Object))
+  name.vb: Reconcile(IEnumerable(Of Object))
+- uid: TDMaker.Editor.WorkshopDirtyState.ReconcileAll
+  commentId: M:TDMaker.Editor.WorkshopDirtyState.ReconcileAll
+  id: ReconcileAll
+  parent: TDMaker.Editor.WorkshopDirtyState
+  langs:
+  - csharp
+  - vb
+  name: ReconcileAll()
+  nameWithType: WorkshopDirtyState.ReconcileAll()
+  fullName: TDMaker.Editor.WorkshopDirtyState.ReconcileAll()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Reconciles every asset this tracker has seen.
+  example: []
+  syntax:
+    content: public int ReconcileAll()
+    return:
+      type: System.Int32
+    content.vb: Public Function ReconcileAll() As Integer
+  overload: TDMaker.Editor.WorkshopDirtyState.ReconcileAll*
+- uid: TDMaker.Editor.WorkshopDirtyState.Save(UnityEngine.Object)
+  commentId: M:TDMaker.Editor.WorkshopDirtyState.Save(UnityEngine.Object)
+  id: Save(UnityEngine.Object)
+  parent: TDMaker.Editor.WorkshopDirtyState
+  langs:
+  - csharp
+  - vb
+  name: Save(Object)
+  nameWithType: WorkshopDirtyState.Save(Object)
+  fullName: TDMaker.Editor.WorkshopDirtyState.Save(UnityEngine.Object)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Writes <code class="paramref">asset</code> to disk and takes its new clean snapshot.
+  example: []
+  syntax:
+    content: public void Save(Object asset)
+    parameters:
+    - id: asset
+      type: UnityEngine.Object
+    content.vb: Public Sub Save(asset As [Object])
+  overload: TDMaker.Editor.WorkshopDirtyState.Save*
+- uid: TDMaker.Editor.WorkshopDirtyState.Discard(UnityEngine.Object)
+  commentId: M:TDMaker.Editor.WorkshopDirtyState.Discard(UnityEngine.Object)
+  id: Discard(UnityEngine.Object)
+  parent: TDMaker.Editor.WorkshopDirtyState
+  langs:
+  - csharp
+  - vb
+  name: Discard(Object)
+  nameWithType: WorkshopDirtyState.Discard(Object)
+  fullName: TDMaker.Editor.WorkshopDirtyState.Discard(UnityEngine.Object)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Restores <code class="paramref">asset</code> to its last clean snapshot and clears its dirty flag. Returns false
+    when no clean
+
+    state is known (the asset was already modified when the window first saw it); the edits then stay in memory.'
+  example: []
+  syntax:
+    content: public bool Discard(Object asset)
+    parameters:
+    - id: asset
+      type: UnityEngine.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Function Discard(asset As [Object]) As Boolean
+  overload: TDMaker.Editor.WorkshopDirtyState.Discard*
+- uid: TDMaker.Editor.WorkshopDirtyState.Clear
+  commentId: M:TDMaker.Editor.WorkshopDirtyState.Clear
+  id: Clear
+  parent: TDMaker.Editor.WorkshopDirtyState
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: WorkshopDirtyState.Clear()
+  fullName: TDMaker.Editor.WorkshopDirtyState.Clear()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Forgets every snapshot.
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: TDMaker.Editor.WorkshopDirtyState.Clear*
+- uid: TDMaker.Editor.WorkshopDirtyState.#ctor
+  commentId: M:TDMaker.Editor.WorkshopDirtyState.#ctor
+  id: '#ctor'
+  parent: TDMaker.Editor.WorkshopDirtyState
+  langs:
+  - csharp
+  - vb
+  name: WorkshopDirtyState()
+  nameWithType: WorkshopDirtyState.WorkshopDirtyState()
+  fullName: TDMaker.Editor.WorkshopDirtyState.WorkshopDirtyState()
+  type: Constructor
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public WorkshopDirtyState()
+    content.vb: Public Sub New()
+  overload: TDMaker.Editor.WorkshopDirtyState.#ctor*
+  nameWithType.vb: WorkshopDirtyState.New()
+  fullName.vb: TDMaker.Editor.WorkshopDirtyState.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Editor.WorkshopDirtyState.Observe*
+  commentId: Overload:TDMaker.Editor.WorkshopDirtyState.Observe
+  isExternal: true
+  href: TDMaker.Editor.WorkshopDirtyState.html#TDMaker_Editor_WorkshopDirtyState_Observe_UnityEngine_Object_
+  name: Observe
+  nameWithType: WorkshopDirtyState.Observe
+  fullName: TDMaker.Editor.WorkshopDirtyState.Observe
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Editor.WorkshopDirtyState.IsModified*
+  commentId: Overload:TDMaker.Editor.WorkshopDirtyState.IsModified
+  isExternal: true
+  href: TDMaker.Editor.WorkshopDirtyState.html#TDMaker_Editor_WorkshopDirtyState_IsModified_UnityEngine_Object_
+  name: IsModified
+  nameWithType: WorkshopDirtyState.IsModified
+  fullName: TDMaker.Editor.WorkshopDirtyState.IsModified
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.WorkshopDirtyState.HasSnapshot*
+  commentId: Overload:TDMaker.Editor.WorkshopDirtyState.HasSnapshot
+  isExternal: true
+  href: TDMaker.Editor.WorkshopDirtyState.html#TDMaker_Editor_WorkshopDirtyState_HasSnapshot_UnityEngine_Object_
+  name: HasSnapshot
+  nameWithType: WorkshopDirtyState.HasSnapshot
+  fullName: TDMaker.Editor.WorkshopDirtyState.HasSnapshot
+- uid: TDMaker.Editor.WorkshopDirtyState.Reconcile*
+  commentId: Overload:TDMaker.Editor.WorkshopDirtyState.Reconcile
+  isExternal: true
+  href: TDMaker.Editor.WorkshopDirtyState.html#TDMaker_Editor_WorkshopDirtyState_Reconcile_System_Collections_Generic_IEnumerable_UnityEngine_Object__
+  name: Reconcile
+  nameWithType: WorkshopDirtyState.Reconcile
+  fullName: TDMaker.Editor.WorkshopDirtyState.Reconcile
+- uid: System.Collections.Generic.IEnumerable{UnityEngine.Object}
+  commentId: T:System.Collections.Generic.IEnumerable{UnityEngine.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Object>
+  nameWithType: IEnumerable<Object>
+  fullName: System.Collections.Generic.IEnumerable<UnityEngine.Object>
+  nameWithType.vb: IEnumerable(Of Object)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UnityEngine.Object)
+  name.vb: IEnumerable(Of Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Editor.WorkshopDirtyState.ReconcileAll*
+  commentId: Overload:TDMaker.Editor.WorkshopDirtyState.ReconcileAll
+  isExternal: true
+  href: TDMaker.Editor.WorkshopDirtyState.html#TDMaker_Editor_WorkshopDirtyState_ReconcileAll
+  name: ReconcileAll
+  nameWithType: WorkshopDirtyState.ReconcileAll
+  fullName: TDMaker.Editor.WorkshopDirtyState.ReconcileAll
+- uid: TDMaker.Editor.WorkshopDirtyState.Save*
+  commentId: Overload:TDMaker.Editor.WorkshopDirtyState.Save
+  isExternal: true
+  href: TDMaker.Editor.WorkshopDirtyState.html#TDMaker_Editor_WorkshopDirtyState_Save_UnityEngine_Object_
+  name: Save
+  nameWithType: WorkshopDirtyState.Save
+  fullName: TDMaker.Editor.WorkshopDirtyState.Save
+- uid: TDMaker.Editor.WorkshopDirtyState.Discard*
+  commentId: Overload:TDMaker.Editor.WorkshopDirtyState.Discard
+  isExternal: true
+  href: TDMaker.Editor.WorkshopDirtyState.html#TDMaker_Editor_WorkshopDirtyState_Discard_UnityEngine_Object_
+  name: Discard
+  nameWithType: WorkshopDirtyState.Discard
+  fullName: TDMaker.Editor.WorkshopDirtyState.Discard
+- uid: TDMaker.Editor.WorkshopDirtyState.Clear*
+  commentId: Overload:TDMaker.Editor.WorkshopDirtyState.Clear
+  isExternal: true
+  href: TDMaker.Editor.WorkshopDirtyState.html#TDMaker_Editor_WorkshopDirtyState_Clear
+  name: Clear
+  nameWithType: WorkshopDirtyState.Clear
+  fullName: TDMaker.Editor.WorkshopDirtyState.Clear
+- uid: TDMaker.Editor.WorkshopDirtyState.#ctor*
+  commentId: Overload:TDMaker.Editor.WorkshopDirtyState.#ctor
+  isExternal: true
+  href: TDMaker.Editor.WorkshopDirtyState.html#TDMaker_Editor_WorkshopDirtyState__ctor
+  name: WorkshopDirtyState
+  nameWithType: WorkshopDirtyState.WorkshopDirtyState
+  fullName: TDMaker.Editor.WorkshopDirtyState.WorkshopDirtyState
+  nameWithType.vb: WorkshopDirtyState.New
+  fullName.vb: TDMaker.Editor.WorkshopDirtyState.New
+  name.vb: New

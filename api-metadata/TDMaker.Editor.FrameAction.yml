@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.FrameAction
+  commentId: T:TDMaker.Editor.FrameAction
+  id: FrameAction
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.FrameAction.Attack
+  - TDMaker.Editor.FrameAction.Death
+  - TDMaker.Editor.FrameAction.Hurt
+  - TDMaker.Editor.FrameAction.Idle
+  - TDMaker.Editor.FrameAction.None
+  - TDMaker.Editor.FrameAction.Walk
+  langs:
+  - csharp
+  - vb
+  name: FrameAction
+  nameWithType: FrameAction
+  fullName: TDMaker.Editor.FrameAction
+  type: Enum
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Animation a sprite file belongs to, guessed from its name by <xref href="TDMaker.Editor.UnitFrames.Classify(System.String)"
+    data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public enum FrameAction
+    content.vb: Public Enum FrameAction
+- uid: TDMaker.Editor.FrameAction.None
+  commentId: F:TDMaker.Editor.FrameAction.None
+  id: None
+  parent: TDMaker.Editor.FrameAction
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: FrameAction.None
+  fullName: TDMaker.Editor.FrameAction.None
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: No action word found.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TDMaker.Editor.FrameAction
+- uid: TDMaker.Editor.FrameAction.Walk
+  commentId: F:TDMaker.Editor.FrameAction.Walk
+  id: Walk
+  parent: TDMaker.Editor.FrameAction
+  langs:
+  - csharp
+  - vb
+  name: Walk
+  nameWithType: FrameAction.Walk
+  fullName: TDMaker.Editor.FrameAction.Walk
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Walk or run loop.
+  example: []
+  syntax:
+    content: Walk = 1
+    return:
+      type: TDMaker.Editor.FrameAction
+- uid: TDMaker.Editor.FrameAction.Idle
+  commentId: F:TDMaker.Editor.FrameAction.Idle
+  id: Idle
+  parent: TDMaker.Editor.FrameAction
+  langs:
+  - csharp
+  - vb
+  name: Idle
+  nameWithType: FrameAction.Idle
+  fullName: TDMaker.Editor.FrameAction.Idle
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Standing loop.
+  example: []
+  syntax:
+    content: Idle = 2
+    return:
+      type: TDMaker.Editor.FrameAction
+- uid: TDMaker.Editor.FrameAction.Attack
+  commentId: F:TDMaker.Editor.FrameAction.Attack
+  id: Attack
+  parent: TDMaker.Editor.FrameAction
+  langs:
+  - csharp
+  - vb
+  name: Attack
+  nameWithType: FrameAction.Attack
+  fullName: TDMaker.Editor.FrameAction.Attack
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Attack, played once.
+  example: []
+  syntax:
+    content: Attack = 3
+    return:
+      type: TDMaker.Editor.FrameAction
+- uid: TDMaker.Editor.FrameAction.Hurt
+  commentId: F:TDMaker.Editor.FrameAction.Hurt
+  id: Hurt
+  parent: TDMaker.Editor.FrameAction
+  langs:
+  - csharp
+  - vb
+  name: Hurt
+  nameWithType: FrameAction.Hurt
+  fullName: TDMaker.Editor.FrameAction.Hurt
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Hurt or hit reaction, played once.
+  example: []
+  syntax:
+    content: Hurt = 4
+    return:
+      type: TDMaker.Editor.FrameAction
+- uid: TDMaker.Editor.FrameAction.Death
+  commentId: F:TDMaker.Editor.FrameAction.Death
+  id: Death
+  parent: TDMaker.Editor.FrameAction
+  langs:
+  - csharp
+  - vb
+  name: Death
+  nameWithType: FrameAction.Death
+  fullName: TDMaker.Editor.FrameAction.Death
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Death, played once.
+  example: []
+  syntax:
+    content: Death = 5
+    return:
+      type: TDMaker.Editor.FrameAction
+references:
+- uid: TDMaker.Editor.UnitFrames.Classify(System.String)
+  commentId: M:TDMaker.Editor.UnitFrames.Classify(System.String)
+  isExternal: true
+  href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_Classify_System_String_
+  name: Classify(string)
+  nameWithType: UnitFrames.Classify(string)
+  fullName: TDMaker.Editor.UnitFrames.Classify(string)
+  nameWithType.vb: UnitFrames.Classify(String)
+  fullName.vb: TDMaker.Editor.UnitFrames.Classify(String)
+  name.vb: Classify(String)
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitFrames.Classify(System.String)
+    name: Classify
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_Classify_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.UnitFrames.Classify(System.String)
+    name: Classify
+    isExternal: true
+    href: TDMaker.Editor.UnitFrames.html#TDMaker_Editor_UnitFrames_Classify_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: TDMaker.Editor.FrameAction
+  commentId: T:TDMaker.Editor.FrameAction
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.FrameAction.html
+  name: FrameAction
+  nameWithType: FrameAction
+  fullName: TDMaker.Editor.FrameAction

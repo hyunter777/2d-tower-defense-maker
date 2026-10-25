@@ -1,0 +1,270 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.View.SimEventHandler
+  commentId: T:TDMaker.Unity.View.SimEventHandler
+  id: SimEventHandler
+  parent: TDMaker.Unity.View
+  children:
+  - TDMaker.Unity.View.SimEventHandler.#ctor(System.Object,System.IntPtr)
+  - TDMaker.Unity.View.SimEventHandler.BeginInvoke(TDMaker.Core.SimEvent@,System.AsyncCallback,System.Object)
+  - TDMaker.Unity.View.SimEventHandler.EndInvoke(TDMaker.Core.SimEvent@,System.IAsyncResult)
+  - TDMaker.Unity.View.SimEventHandler.Invoke(TDMaker.Core.SimEvent@)
+  langs:
+  - csharp
+  - vb
+  name: SimEventHandler
+  nameWithType: SimEventHandler
+  fullName: TDMaker.Unity.View.SimEventHandler
+  type: Delegate
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Receives simulation events without copying them.
+  example: []
+  syntax:
+    content: public delegate void SimEventHandler(in SimEvent simEvent)
+    parameters:
+    - id: simEvent
+      type: TDMaker.Core.SimEvent
+    content.vb: Public Delegate Sub SimEventHandler(simEvent As SimEvent)
+- uid: TDMaker.Unity.View.SimEventHandler.#ctor(System.Object,System.IntPtr)
+  commentId: M:TDMaker.Unity.View.SimEventHandler.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: TDMaker.Unity.View.SimEventHandler
+  langs:
+  - csharp
+  - vb
+  name: SimEventHandler(object, IntPtr)
+  nameWithType: SimEventHandler.SimEventHandler(object, IntPtr)
+  fullName: TDMaker.Unity.View.SimEventHandler.SimEventHandler(object, System.IntPtr)
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public SimEventHandler(object @object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New([object] As Object, method As IntPtr)
+  overload: TDMaker.Unity.View.SimEventHandler.#ctor*
+  nameWithType.vb: SimEventHandler.New(Object, IntPtr)
+  fullName.vb: TDMaker.Unity.View.SimEventHandler.New(Object, System.IntPtr)
+  name.vb: New(Object, IntPtr)
+- uid: TDMaker.Unity.View.SimEventHandler.Invoke(TDMaker.Core.SimEvent@)
+  commentId: M:TDMaker.Unity.View.SimEventHandler.Invoke(TDMaker.Core.SimEvent@)
+  id: Invoke(TDMaker.Core.SimEvent@)
+  parent: TDMaker.Unity.View.SimEventHandler
+  langs:
+  - csharp
+  - vb
+  name: Invoke(in SimEvent)
+  nameWithType: SimEventHandler.Invoke(in SimEvent)
+  fullName: TDMaker.Unity.View.SimEventHandler.Invoke(in TDMaker.Core.SimEvent)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public virtual void Invoke(in SimEvent simEvent)
+    parameters:
+    - id: simEvent
+      type: TDMaker.Core.SimEvent
+    content.vb: Public Overridable Sub Invoke(simEvent As SimEvent)
+  overload: TDMaker.Unity.View.SimEventHandler.Invoke*
+  nameWithType.vb: SimEventHandler.Invoke(SimEvent)
+  fullName.vb: TDMaker.Unity.View.SimEventHandler.Invoke(TDMaker.Core.SimEvent)
+  name.vb: Invoke(SimEvent)
+- uid: TDMaker.Unity.View.SimEventHandler.BeginInvoke(TDMaker.Core.SimEvent@,System.AsyncCallback,System.Object)
+  commentId: M:TDMaker.Unity.View.SimEventHandler.BeginInvoke(TDMaker.Core.SimEvent@,System.AsyncCallback,System.Object)
+  id: BeginInvoke(TDMaker.Core.SimEvent@,System.AsyncCallback,System.Object)
+  parent: TDMaker.Unity.View.SimEventHandler
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(in SimEvent, AsyncCallback, object)
+  nameWithType: SimEventHandler.BeginInvoke(in SimEvent, AsyncCallback, object)
+  fullName: TDMaker.Unity.View.SimEventHandler.BeginInvoke(in TDMaker.Core.SimEvent, System.AsyncCallback, object)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(in SimEvent simEvent, AsyncCallback callback, object @object)
+    parameters:
+    - id: simEvent
+      type: TDMaker.Core.SimEvent
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(simEvent As SimEvent, callback As AsyncCallback, [object] As Object)
+      As IAsyncResult
+  overload: TDMaker.Unity.View.SimEventHandler.BeginInvoke*
+  nameWithType.vb: SimEventHandler.BeginInvoke(SimEvent, AsyncCallback, Object)
+  fullName.vb: TDMaker.Unity.View.SimEventHandler.BeginInvoke(TDMaker.Core.SimEvent, System.AsyncCallback, Object)
+  name.vb: BeginInvoke(SimEvent, AsyncCallback, Object)
+- uid: TDMaker.Unity.View.SimEventHandler.EndInvoke(TDMaker.Core.SimEvent@,System.IAsyncResult)
+  commentId: M:TDMaker.Unity.View.SimEventHandler.EndInvoke(TDMaker.Core.SimEvent@,System.IAsyncResult)
+  id: EndInvoke(TDMaker.Core.SimEvent@,System.IAsyncResult)
+  parent: TDMaker.Unity.View.SimEventHandler
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(in SimEvent, IAsyncResult)
+  nameWithType: SimEventHandler.EndInvoke(in SimEvent, IAsyncResult)
+  fullName: TDMaker.Unity.View.SimEventHandler.EndInvoke(in TDMaker.Core.SimEvent, System.IAsyncResult)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public virtual void EndInvoke(in SimEvent simEvent, IAsyncResult result)
+    parameters:
+    - id: simEvent
+      type: TDMaker.Core.SimEvent
+    - id: result
+      type: System.IAsyncResult
+    content.vb: Public Overridable Sub EndInvoke(simEvent As SimEvent, result As IAsyncResult)
+  overload: TDMaker.Unity.View.SimEventHandler.EndInvoke*
+  nameWithType.vb: SimEventHandler.EndInvoke(SimEvent, IAsyncResult)
+  fullName.vb: TDMaker.Unity.View.SimEventHandler.EndInvoke(TDMaker.Core.SimEvent, System.IAsyncResult)
+  name.vb: EndInvoke(SimEvent, IAsyncResult)
+references:
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: TDMaker.Core.SimEvent
+  commentId: T:TDMaker.Core.SimEvent
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html
+  name: SimEvent
+  nameWithType: SimEvent
+  fullName: TDMaker.Core.SimEvent
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Unity.View.SimEventHandler.#ctor*
+  commentId: Overload:TDMaker.Unity.View.SimEventHandler.#ctor
+  isExternal: true
+  href: TDMaker.Unity.View.SimEventHandler.html#TDMaker_Unity_View_SimEventHandler__ctor_System_Object_System_IntPtr_
+  name: SimEventHandler
+  nameWithType: SimEventHandler.SimEventHandler
+  fullName: TDMaker.Unity.View.SimEventHandler.SimEventHandler
+  nameWithType.vb: SimEventHandler.New
+  fullName.vb: TDMaker.Unity.View.SimEventHandler.New
+  name.vb: New
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.View.SimEventHandler.Invoke*
+  commentId: Overload:TDMaker.Unity.View.SimEventHandler.Invoke
+  isExternal: true
+  href: TDMaker.Unity.View.SimEventHandler.html#TDMaker_Unity_View_SimEventHandler_Invoke_TDMaker_Core_SimEvent__
+  name: Invoke
+  nameWithType: SimEventHandler.Invoke
+  fullName: TDMaker.Unity.View.SimEventHandler.Invoke
+- uid: TDMaker.Unity.View.SimEventHandler.BeginInvoke*
+  commentId: Overload:TDMaker.Unity.View.SimEventHandler.BeginInvoke
+  isExternal: true
+  href: TDMaker.Unity.View.SimEventHandler.html#TDMaker_Unity_View_SimEventHandler_BeginInvoke_TDMaker_Core_SimEvent__System_AsyncCallback_System_Object_
+  name: BeginInvoke
+  nameWithType: SimEventHandler.BeginInvoke
+  fullName: TDMaker.Unity.View.SimEventHandler.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.asynccallback
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncresult
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: TDMaker.Unity.View.SimEventHandler.EndInvoke*
+  commentId: Overload:TDMaker.Unity.View.SimEventHandler.EndInvoke
+  isExternal: true
+  href: TDMaker.Unity.View.SimEventHandler.html#TDMaker_Unity_View_SimEventHandler_EndInvoke_TDMaker_Core_SimEvent__System_IAsyncResult_
+  name: EndInvoke
+  nameWithType: SimEventHandler.EndInvoke
+  fullName: TDMaker.Unity.View.SimEventHandler.EndInvoke

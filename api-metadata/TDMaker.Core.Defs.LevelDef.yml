@@ -1,0 +1,1124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.LevelDef
+  commentId: T:TDMaker.Core.Defs.LevelDef
+  id: LevelDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.LevelDef.#ctor(TDMaker.Core.Defs.PathDef[],TDMaker.Core.Defs.BuildSlotDef[],TDMaker.Core.Defs.WaveDef[],System.Int32,System.Int32,System.String[],System.Nullable{System.Single},System.String[],System.String[])
+  - TDMaker.Core.Defs.LevelDef.AvailableHeroes
+  - TDMaker.Core.Defs.LevelDef.AvailableSpells
+  - TDMaker.Core.Defs.LevelDef.AvailableTowers
+  - TDMaker.Core.Defs.LevelDef.BuildSlots
+  - TDMaker.Core.Defs.LevelDef.Paths
+  - TDMaker.Core.Defs.LevelDef.RangeYScale
+  - TDMaker.Core.Defs.LevelDef.Rules
+  - TDMaker.Core.Defs.LevelDef.StartingGold
+  - TDMaker.Core.Defs.LevelDef.StartingLives
+  - TDMaker.Core.Defs.LevelDef.Upgrades
+  - TDMaker.Core.Defs.LevelDef.Waves
+  - TDMaker.Core.Defs.LevelDef.WithRules(TDMaker.Core.Defs.LevelRulesDef)
+  - TDMaker.Core.Defs.LevelDef.WithUpgrades(TDMaker.Core.Defs.UpgradeSnapshot)
+  langs:
+  - csharp
+  - vb
+  name: LevelDef
+  nameWithType: LevelDef
+  fullName: TDMaker.Core.Defs.LevelDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Immutable simulation inputs baked by an authoring layer.
+  example: []
+  syntax:
+    content: public sealed class LevelDef
+    content.vb: Public NotInheritable Class LevelDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.LevelDef.#ctor(TDMaker.Core.Defs.PathDef[],TDMaker.Core.Defs.BuildSlotDef[],TDMaker.Core.Defs.WaveDef[],System.Int32,System.Int32,System.String[],System.Nullable{System.Single},System.String[],System.String[])
+  commentId: M:TDMaker.Core.Defs.LevelDef.#ctor(TDMaker.Core.Defs.PathDef[],TDMaker.Core.Defs.BuildSlotDef[],TDMaker.Core.Defs.WaveDef[],System.Int32,System.Int32,System.String[],System.Nullable{System.Single},System.String[],System.String[])
+  id: '#ctor(TDMaker.Core.Defs.PathDef[],TDMaker.Core.Defs.BuildSlotDef[],TDMaker.Core.Defs.WaveDef[],System.Int32,System.Int32,System.String[],System.Nullable{System.Single},System.String[],System.String[])'
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: LevelDef(PathDef[], BuildSlotDef[], WaveDef[], int, int, string[], float?, string[], string[])
+  nameWithType: LevelDef.LevelDef(PathDef[], BuildSlotDef[], WaveDef[], int, int, string[], float?, string[], string[])
+  fullName: TDMaker.Core.Defs.LevelDef.LevelDef(TDMaker.Core.Defs.PathDef[], TDMaker.Core.Defs.BuildSlotDef[], TDMaker.Core.Defs.WaveDef[],
+    int, int, string[], float?, string[], string[])
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a level and copies all top-level collections.
+  example: []
+  syntax:
+    content: public LevelDef(PathDef[] paths, BuildSlotDef[] buildSlots, WaveDef[] waves, int startingGold, int startingLives,
+      string[] availableTowers = null, float? rangeYScale = null, string[] availableSpells = null, string[] availableHeroes
+      = null)
+    parameters:
+    - id: paths
+      type: TDMaker.Core.Defs.PathDef[]
+    - id: buildSlots
+      type: TDMaker.Core.Defs.BuildSlotDef[]
+    - id: waves
+      type: TDMaker.Core.Defs.WaveDef[]
+    - id: startingGold
+      type: System.Int32
+    - id: startingLives
+      type: System.Int32
+    - id: availableTowers
+      type: System.String[]
+    - id: rangeYScale
+      type: System.Nullable{System.Single}
+    - id: availableSpells
+      type: System.String[]
+    - id: availableHeroes
+      type: System.String[]
+    content.vb: Public Sub New(paths As PathDef(), buildSlots As BuildSlotDef(), waves As WaveDef(), startingGold As Integer,
+      startingLives As Integer, availableTowers As String() = Nothing, rangeYScale As Single? = Nothing, availableSpells As
+      String() = Nothing, availableHeroes As String() = Nothing)
+  overload: TDMaker.Core.Defs.LevelDef.#ctor*
+  nameWithType.vb: LevelDef.New(PathDef(), BuildSlotDef(), WaveDef(), Integer, Integer, String(), Single?, String(), String())
+  fullName.vb: TDMaker.Core.Defs.LevelDef.New(TDMaker.Core.Defs.PathDef(), TDMaker.Core.Defs.BuildSlotDef(), TDMaker.Core.Defs.WaveDef(),
+    Integer, Integer, String(), Single?, String(), String())
+  name.vb: New(PathDef(), BuildSlotDef(), WaveDef(), Integer, Integer, String(), Single?, String(), String())
+- uid: TDMaker.Core.Defs.LevelDef.WithRules(TDMaker.Core.Defs.LevelRulesDef)
+  commentId: M:TDMaker.Core.Defs.LevelDef.WithRules(TDMaker.Core.Defs.LevelRulesDef)
+  id: WithRules(TDMaker.Core.Defs.LevelRulesDef)
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: WithRules(LevelRulesDef)
+  nameWithType: LevelDef.WithRules(LevelRulesDef)
+  fullName: TDMaker.Core.Defs.LevelDef.WithRules(TDMaker.Core.Defs.LevelRulesDef)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies the level with immutable M2 and economy rules.
+  example: []
+  syntax:
+    content: public LevelDef WithRules(LevelRulesDef rules)
+    parameters:
+    - id: rules
+      type: TDMaker.Core.Defs.LevelRulesDef
+    return:
+      type: TDMaker.Core.Defs.LevelDef
+    content.vb: Public Function WithRules(rules As LevelRulesDef) As LevelDef
+  overload: TDMaker.Core.Defs.LevelDef.WithRules*
+- uid: TDMaker.Core.Defs.LevelDef.WithUpgrades(TDMaker.Core.Defs.UpgradeSnapshot)
+  commentId: M:TDMaker.Core.Defs.LevelDef.WithUpgrades(TDMaker.Core.Defs.UpgradeSnapshot)
+  id: WithUpgrades(TDMaker.Core.Defs.UpgradeSnapshot)
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: WithUpgrades(UpgradeSnapshot)
+  nameWithType: LevelDef.WithUpgrades(UpgradeSnapshot)
+  fullName: TDMaker.Core.Defs.LevelDef.WithUpgrades(TDMaker.Core.Defs.UpgradeSnapshot)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies the level with a battle snapshot; null preserves the unmodified-template setup.
+  example: []
+  syntax:
+    content: public LevelDef WithUpgrades(UpgradeSnapshot upgrades)
+    parameters:
+    - id: upgrades
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    return:
+      type: TDMaker.Core.Defs.LevelDef
+    content.vb: Public Function WithUpgrades(upgrades As UpgradeSnapshot) As LevelDef
+  overload: TDMaker.Core.Defs.LevelDef.WithUpgrades*
+- uid: TDMaker.Core.Defs.LevelDef.Paths
+  commentId: P:TDMaker.Core.Defs.LevelDef.Paths
+  id: Paths
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: Paths
+  nameWithType: LevelDef.Paths
+  fullName: TDMaker.Core.Defs.LevelDef.Paths
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Paths used by enemy waves.
+  example: []
+  syntax:
+    content: public IReadOnlyList<PathDef> Paths { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.PathDef}
+    content.vb: Public ReadOnly Property Paths As IReadOnlyList(Of PathDef)
+  overload: TDMaker.Core.Defs.LevelDef.Paths*
+- uid: TDMaker.Core.Defs.LevelDef.BuildSlots
+  commentId: P:TDMaker.Core.Defs.LevelDef.BuildSlots
+  id: BuildSlots
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: BuildSlots
+  nameWithType: LevelDef.BuildSlots
+  fullName: TDMaker.Core.Defs.LevelDef.BuildSlots
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Construction locations.
+  example: []
+  syntax:
+    content: public IReadOnlyList<BuildSlotDef> BuildSlots { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.BuildSlotDef}
+    content.vb: Public ReadOnly Property BuildSlots As IReadOnlyList(Of BuildSlotDef)
+  overload: TDMaker.Core.Defs.LevelDef.BuildSlots*
+- uid: TDMaker.Core.Defs.LevelDef.Waves
+  commentId: P:TDMaker.Core.Defs.LevelDef.Waves
+  id: Waves
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: Waves
+  nameWithType: LevelDef.Waves
+  fullName: TDMaker.Core.Defs.LevelDef.Waves
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ordered waves.
+  example: []
+  syntax:
+    content: public IReadOnlyList<WaveDef> Waves { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.WaveDef}
+    content.vb: Public ReadOnly Property Waves As IReadOnlyList(Of WaveDef)
+  overload: TDMaker.Core.Defs.LevelDef.Waves*
+- uid: TDMaker.Core.Defs.LevelDef.StartingGold
+  commentId: P:TDMaker.Core.Defs.LevelDef.StartingGold
+  id: StartingGold
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: StartingGold
+  nameWithType: LevelDef.StartingGold
+  fullName: TDMaker.Core.Defs.LevelDef.StartingGold
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Starting gold.
+  example: []
+  syntax:
+    content: public int StartingGold { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property StartingGold As Integer
+  overload: TDMaker.Core.Defs.LevelDef.StartingGold*
+- uid: TDMaker.Core.Defs.LevelDef.StartingLives
+  commentId: P:TDMaker.Core.Defs.LevelDef.StartingLives
+  id: StartingLives
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: StartingLives
+  nameWithType: LevelDef.StartingLives
+  fullName: TDMaker.Core.Defs.LevelDef.StartingLives
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Starting lives.
+  example: []
+  syntax:
+    content: public int StartingLives { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property StartingLives As Integer
+  overload: TDMaker.Core.Defs.LevelDef.StartingLives*
+- uid: TDMaker.Core.Defs.LevelDef.AvailableTowers
+  commentId: P:TDMaker.Core.Defs.LevelDef.AvailableTowers
+  id: AvailableTowers
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: AvailableTowers
+  nameWithType: LevelDef.AvailableTowers
+  fullName: TDMaker.Core.Defs.LevelDef.AvailableTowers
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Buildable base tower identifiers; upgrades are checked against their source tower.
+  example: []
+  syntax:
+    content: public IReadOnlyList<string> AvailableTowers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Public ReadOnly Property AvailableTowers As IReadOnlyList(Of String)
+  overload: TDMaker.Core.Defs.LevelDef.AvailableTowers*
+- uid: TDMaker.Core.Defs.LevelDef.AvailableSpells
+  commentId: P:TDMaker.Core.Defs.LevelDef.AvailableSpells
+  id: AvailableSpells
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: AvailableSpells
+  nameWithType: LevelDef.AvailableSpells
+  fullName: TDMaker.Core.Defs.LevelDef.AvailableSpells
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Available spell identifiers, ordered to match Simulation.Spells.
+  example: []
+  syntax:
+    content: public IReadOnlyList<string> AvailableSpells { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Public ReadOnly Property AvailableSpells As IReadOnlyList(Of String)
+  overload: TDMaker.Core.Defs.LevelDef.AvailableSpells*
+- uid: TDMaker.Core.Defs.LevelDef.AvailableHeroes
+  commentId: P:TDMaker.Core.Defs.LevelDef.AvailableHeroes
+  id: AvailableHeroes
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: AvailableHeroes
+  nameWithType: LevelDef.AvailableHeroes
+  fullName: TDMaker.Core.Defs.LevelDef.AvailableHeroes
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Available independent hero template identifiers.
+  example: []
+  syntax:
+    content: public IReadOnlyList<string> AvailableHeroes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Public ReadOnly Property AvailableHeroes As IReadOnlyList(Of String)
+  overload: TDMaker.Core.Defs.LevelDef.AvailableHeroes*
+- uid: TDMaker.Core.Defs.LevelDef.RangeYScale
+  commentId: P:TDMaker.Core.Defs.LevelDef.RangeYScale
+  id: RangeYScale
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: RangeYScale
+  nameWithType: LevelDef.RangeYScale
+  fullName: TDMaker.Core.Defs.LevelDef.RangeYScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional vertical ellipse radius ratio overriding the simulation configuration.
+  example: []
+  syntax:
+    content: public float? RangeYScale { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public ReadOnly Property RangeYScale As Single?
+  overload: TDMaker.Core.Defs.LevelDef.RangeYScale*
+- uid: TDMaker.Core.Defs.LevelDef.Rules
+  commentId: P:TDMaker.Core.Defs.LevelDef.Rules
+  id: Rules
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: Rules
+  nameWithType: LevelDef.Rules
+  fullName: TDMaker.Core.Defs.LevelDef.Rules
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Authoritative economy and M2 rules; overrides the legacy per-tower refund field.
+  example: []
+  syntax:
+    content: public LevelRulesDef Rules { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.LevelRulesDef
+    content.vb: Public ReadOnly Property Rules As LevelRulesDef
+  overload: TDMaker.Core.Defs.LevelDef.Rules*
+- uid: TDMaker.Core.Defs.LevelDef.Upgrades
+  commentId: P:TDMaker.Core.Defs.LevelDef.Upgrades
+  id: Upgrades
+  parent: TDMaker.Core.Defs.LevelDef
+  langs:
+  - csharp
+  - vb
+  name: Upgrades
+  nameWithType: LevelDef.Upgrades
+  fullName: TDMaker.Core.Defs.LevelDef.Upgrades
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional immutable permanent-upgrade input, applied before entity pools and initial spawns.
+  example: []
+  syntax:
+    content: public UpgradeSnapshot Upgrades { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.UpgradeSnapshot
+    content.vb: Public ReadOnly Property Upgrades As UpgradeSnapshot
+  overload: TDMaker.Core.Defs.LevelDef.Upgrades*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.LevelDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef__ctor_TDMaker_Core_Defs_PathDef___TDMaker_Core_Defs_BuildSlotDef___TDMaker_Core_Defs_WaveDef___System_Int32_System_Int32_System_String___System_Nullable_System_Single__System_String___System_String___
+  name: LevelDef
+  nameWithType: LevelDef.LevelDef
+  fullName: TDMaker.Core.Defs.LevelDef.LevelDef
+  nameWithType.vb: LevelDef.New
+  fullName.vb: TDMaker.Core.Defs.LevelDef.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.PathDef[]
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDef.html
+  name: PathDef[]
+  nameWithType: PathDef[]
+  fullName: TDMaker.Core.Defs.PathDef[]
+  nameWithType.vb: PathDef()
+  fullName.vb: TDMaker.Core.Defs.PathDef()
+  name.vb: PathDef()
+  spec.csharp:
+  - uid: TDMaker.Core.Defs.PathDef
+    name: PathDef
+    isExternal: true
+    href: TDMaker.Core.Defs.PathDef.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Defs.PathDef
+    name: PathDef
+    isExternal: true
+    href: TDMaker.Core.Defs.PathDef.html
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs.BuildSlotDef[]
+  isExternal: true
+  href: TDMaker.Core.Defs.BuildSlotDef.html
+  name: BuildSlotDef[]
+  nameWithType: BuildSlotDef[]
+  fullName: TDMaker.Core.Defs.BuildSlotDef[]
+  nameWithType.vb: BuildSlotDef()
+  fullName.vb: TDMaker.Core.Defs.BuildSlotDef()
+  name.vb: BuildSlotDef()
+  spec.csharp:
+  - uid: TDMaker.Core.Defs.BuildSlotDef
+    name: BuildSlotDef
+    isExternal: true
+    href: TDMaker.Core.Defs.BuildSlotDef.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Defs.BuildSlotDef
+    name: BuildSlotDef
+    isExternal: true
+    href: TDMaker.Core.Defs.BuildSlotDef.html
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs.WaveDef[]
+  isExternal: true
+  href: TDMaker.Core.Defs.WaveDef.html
+  name: WaveDef[]
+  nameWithType: WaveDef[]
+  fullName: TDMaker.Core.Defs.WaveDef[]
+  nameWithType.vb: WaveDef()
+  fullName.vb: TDMaker.Core.Defs.WaveDef()
+  name.vb: WaveDef()
+  spec.csharp:
+  - uid: TDMaker.Core.Defs.WaveDef
+    name: WaveDef
+    isExternal: true
+    href: TDMaker.Core.Defs.WaveDef.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Defs.WaveDef
+    name: WaveDef
+    isExternal: true
+    href: TDMaker.Core.Defs.WaveDef.html
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Core.Defs.LevelDef.WithRules*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.WithRules
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_WithRules_TDMaker_Core_Defs_LevelRulesDef_
+  name: WithRules
+  nameWithType: LevelDef.WithRules
+  fullName: TDMaker.Core.Defs.LevelDef.WithRules
+- uid: TDMaker.Core.Defs.LevelRulesDef
+  commentId: T:TDMaker.Core.Defs.LevelRulesDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelRulesDef.html
+  name: LevelRulesDef
+  nameWithType: LevelRulesDef
+  fullName: TDMaker.Core.Defs.LevelRulesDef
+- uid: TDMaker.Core.Defs.LevelDef
+  commentId: T:TDMaker.Core.Defs.LevelDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html
+  name: LevelDef
+  nameWithType: LevelDef
+  fullName: TDMaker.Core.Defs.LevelDef
+- uid: TDMaker.Core.Defs.LevelDef.WithUpgrades*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.WithUpgrades
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_WithUpgrades_TDMaker_Core_Defs_UpgradeSnapshot_
+  name: WithUpgrades
+  nameWithType: LevelDef.WithUpgrades
+  fullName: TDMaker.Core.Defs.LevelDef.WithUpgrades
+- uid: TDMaker.Core.Defs.UpgradeSnapshot
+  commentId: T:TDMaker.Core.Defs.UpgradeSnapshot
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeSnapshot.html
+  name: UpgradeSnapshot
+  nameWithType: UpgradeSnapshot
+  fullName: TDMaker.Core.Defs.UpgradeSnapshot
+- uid: TDMaker.Core.Defs.LevelDef.Paths*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.Paths
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_Paths
+  name: Paths
+  nameWithType: LevelDef.Paths
+  fullName: TDMaker.Core.Defs.LevelDef.Paths
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.PathDef}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.PathDef}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<PathDef>
+  nameWithType: IReadOnlyList<PathDef>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Defs.PathDef>
+  nameWithType.vb: IReadOnlyList(Of PathDef)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Defs.PathDef)
+  name.vb: IReadOnlyList(Of PathDef)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Defs.PathDef
+    name: PathDef
+    isExternal: true
+    href: TDMaker.Core.Defs.PathDef.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Defs.PathDef
+    name: PathDef
+    isExternal: true
+    href: TDMaker.Core.Defs.PathDef.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Core.Defs.LevelDef.BuildSlots*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.BuildSlots
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_BuildSlots
+  name: BuildSlots
+  nameWithType: LevelDef.BuildSlots
+  fullName: TDMaker.Core.Defs.LevelDef.BuildSlots
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.BuildSlotDef}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.BuildSlotDef}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<BuildSlotDef>
+  nameWithType: IReadOnlyList<BuildSlotDef>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Defs.BuildSlotDef>
+  nameWithType.vb: IReadOnlyList(Of BuildSlotDef)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Defs.BuildSlotDef)
+  name.vb: IReadOnlyList(Of BuildSlotDef)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Defs.BuildSlotDef
+    name: BuildSlotDef
+    isExternal: true
+    href: TDMaker.Core.Defs.BuildSlotDef.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Defs.BuildSlotDef
+    name: BuildSlotDef
+    isExternal: true
+    href: TDMaker.Core.Defs.BuildSlotDef.html
+  - name: )
+- uid: TDMaker.Core.Defs.LevelDef.Waves*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.Waves
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_Waves
+  name: Waves
+  nameWithType: LevelDef.Waves
+  fullName: TDMaker.Core.Defs.LevelDef.Waves
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.WaveDef}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.WaveDef}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<WaveDef>
+  nameWithType: IReadOnlyList<WaveDef>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Defs.WaveDef>
+  nameWithType.vb: IReadOnlyList(Of WaveDef)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Defs.WaveDef)
+  name.vb: IReadOnlyList(Of WaveDef)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Defs.WaveDef
+    name: WaveDef
+    isExternal: true
+    href: TDMaker.Core.Defs.WaveDef.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Defs.WaveDef
+    name: WaveDef
+    isExternal: true
+    href: TDMaker.Core.Defs.WaveDef.html
+  - name: )
+- uid: TDMaker.Core.Defs.LevelDef.StartingGold*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.StartingGold
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_StartingGold
+  name: StartingGold
+  nameWithType: LevelDef.StartingGold
+  fullName: TDMaker.Core.Defs.LevelDef.StartingGold
+- uid: TDMaker.Core.Defs.LevelDef.StartingLives*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.StartingLives
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_StartingLives
+  name: StartingLives
+  nameWithType: LevelDef.StartingLives
+  fullName: TDMaker.Core.Defs.LevelDef.StartingLives
+- uid: TDMaker.Core.Defs.LevelDef.AvailableTowers*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.AvailableTowers
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_AvailableTowers
+  name: AvailableTowers
+  nameWithType: LevelDef.AvailableTowers
+  fullName: TDMaker.Core.Defs.LevelDef.AvailableTowers
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: TDMaker.Core.Defs.LevelDef.AvailableSpells*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.AvailableSpells
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_AvailableSpells
+  name: AvailableSpells
+  nameWithType: LevelDef.AvailableSpells
+  fullName: TDMaker.Core.Defs.LevelDef.AvailableSpells
+- uid: TDMaker.Core.Defs.LevelDef.AvailableHeroes*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.AvailableHeroes
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_AvailableHeroes
+  name: AvailableHeroes
+  nameWithType: LevelDef.AvailableHeroes
+  fullName: TDMaker.Core.Defs.LevelDef.AvailableHeroes
+- uid: TDMaker.Core.Defs.LevelDef.RangeYScale*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.RangeYScale
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_RangeYScale
+  name: RangeYScale
+  nameWithType: LevelDef.RangeYScale
+  fullName: TDMaker.Core.Defs.LevelDef.RangeYScale
+- uid: TDMaker.Core.Defs.LevelDef.Rules*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.Rules
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_Rules
+  name: Rules
+  nameWithType: LevelDef.Rules
+  fullName: TDMaker.Core.Defs.LevelDef.Rules
+- uid: TDMaker.Core.Defs.LevelDef.Upgrades*
+  commentId: Overload:TDMaker.Core.Defs.LevelDef.Upgrades
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html#TDMaker_Core_Defs_LevelDef_Upgrades
+  name: Upgrades
+  nameWithType: LevelDef.Upgrades
+  fullName: TDMaker.Core.Defs.LevelDef.Upgrades

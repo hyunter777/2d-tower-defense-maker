@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.DeploymentSpacingScope
+  commentId: T:TDMaker.Core.Defs.DeploymentSpacingScope
+  id: DeploymentSpacingScope
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.DeploymentSpacingScope.Global
+  - TDMaker.Core.Defs.DeploymentSpacingScope.Owner
+  langs:
+  - csharp
+  - vb
+  name: DeploymentSpacingScope
+  nameWithType: DeploymentSpacingScope
+  fullName: TDMaker.Core.Defs.DeploymentSpacingScope
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Which deployments participate in minimum spacing checks.
+  example: []
+  syntax:
+    content: public enum DeploymentSpacingScope
+    content.vb: Public Enum DeploymentSpacingScope
+- uid: TDMaker.Core.Defs.DeploymentSpacingScope.Owner
+  commentId: F:TDMaker.Core.Defs.DeploymentSpacingScope.Owner
+  id: Owner
+  parent: TDMaker.Core.Defs.DeploymentSpacingScope
+  langs:
+  - csharp
+  - vb
+  name: Owner
+  nameWithType: DeploymentSpacingScope.Owner
+  fullName: TDMaker.Core.Defs.DeploymentSpacingScope.Owner
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Only deployments from the same producer.
+  example: []
+  syntax:
+    content: Owner = 0
+    return:
+      type: TDMaker.Core.Defs.DeploymentSpacingScope
+- uid: TDMaker.Core.Defs.DeploymentSpacingScope.Global
+  commentId: F:TDMaker.Core.Defs.DeploymentSpacingScope.Global
+  id: Global
+  parent: TDMaker.Core.Defs.DeploymentSpacingScope
+  langs:
+  - csharp
+  - vb
+  name: Global
+  nameWithType: DeploymentSpacingScope.Global
+  fullName: TDMaker.Core.Defs.DeploymentSpacingScope.Global
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: All producers, including ownerless spell traps.
+  example: []
+  syntax:
+    content: Global = 1
+    return:
+      type: TDMaker.Core.Defs.DeploymentSpacingScope
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.DeploymentSpacingScope
+  commentId: T:TDMaker.Core.Defs.DeploymentSpacingScope
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentSpacingScope.html
+  name: DeploymentSpacingScope
+  nameWithType: DeploymentSpacingScope
+  fullName: TDMaker.Core.Defs.DeploymentSpacingScope

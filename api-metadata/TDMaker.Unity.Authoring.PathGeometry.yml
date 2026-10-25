@@ -1,0 +1,1150 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.PathGeometry
+  commentId: T:TDMaker.Unity.Authoring.PathGeometry
+  id: PathGeometry
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.PathGeometry.Evaluate(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+  - TDMaker.Unity.Authoring.PathGeometry.InterpolateSpacing(System.Collections.Generic.IReadOnlyList{System.Single},System.Single,System.Collections.Generic.IReadOnlyList{System.Single},System.Collections.Generic.List{System.Single})
+  - TDMaker.Unity.Authoring.PathGeometry.Length(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2})
+  - TDMaker.Unity.Authoring.PathGeometry.MinNodeSpacing
+  - TDMaker.Unity.Authoring.PathGeometry.NearestOnPolyline(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},UnityEngine.Vector2,System.Single@,System.Int32@)
+  - TDMaker.Unity.Authoring.PathGeometry.NearestPathPoint(System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData},UnityEngine.Vector2,UnityEngine.Vector2@,System.Int32@)
+  - TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},System.Single,System.Collections.Generic.List{UnityEngine.Vector2},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Single})
+  - TDMaker.Unity.Authoring.PathGeometry.SpriteRect(UnityEngine.Sprite,UnityEngine.Vector2)
+  langs:
+  - csharp
+  - vb
+  name: PathGeometry
+  nameWithType: PathGeometry
+  fullName: TDMaker.Unity.Authoring.PathGeometry
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Authoring geometry helpers: smooth curves (centripetal Catmull-Rom) sampled into simulation nodes, and nearest-point
+
+    queries on path center lines. Used by <xref href="TDMaker.Unity.Authoring.PathAuthoring" data-throw-if-not-resolved="false"></xref>
+    curve mode and the editor''s Map Editor.'
+  example: []
+  syntax:
+    content: public static class PathGeometry
+    content.vb: Public Module PathGeometry
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.PathGeometry.MinNodeSpacing
+  commentId: F:TDMaker.Unity.Authoring.PathGeometry.MinNodeSpacing
+  id: MinNodeSpacing
+  parent: TDMaker.Unity.Authoring.PathGeometry
+  langs:
+  - csharp
+  - vb
+  name: MinNodeSpacing
+  nameWithType: PathGeometry.MinNodeSpacing
+  fullName: TDMaker.Unity.Authoring.PathGeometry.MinNodeSpacing
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Smallest node spacing accepted by <xref href="TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList%7bUnityEngine.Vector2%7d%2cSystem.Single%2cSystem.Collections.Generic.List%7bUnityEngine.Vector2%7d%2cSystem.Collections.Generic.List%7bSystem.Int32%7d%2cSystem.Collections.Generic.List%7bSystem.Single%7d)"
+    data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const float MinNodeSpacing = 0.05
+    return:
+      type: System.Single
+    content.vb: Public Const MinNodeSpacing As Single = 0.05
+- uid: TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},System.Single,System.Collections.Generic.List{UnityEngine.Vector2},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Single})
+  commentId: M:TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},System.Single,System.Collections.Generic.List{UnityEngine.Vector2},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Single})
+  id: SampleCurve(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},System.Single,System.Collections.Generic.List{UnityEngine.Vector2},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Single})
+  parent: TDMaker.Unity.Authoring.PathGeometry
+  langs:
+  - csharp
+  - vb
+  name: SampleCurve(IReadOnlyList<Vector2>, float, List<Vector2>, List<int>, List<float>)
+  nameWithType: PathGeometry.SampleCurve(IReadOnlyList<Vector2>, float, List<Vector2>, List<int>, List<float>)
+  fullName: TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList<UnityEngine.Vector2>,
+    float, System.Collections.Generic.List<UnityEngine.Vector2>, System.Collections.Generic.List<int>, System.Collections.Generic.List<float>)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Samples a smooth centripetal Catmull-Rom curve through <code class="paramref">controls</code> into nodes about
+
+    <code class="paramref">nodeSpacing</code> apart (measured along the curve). Every control point is emitted exactly as
+    a node,
+
+    so the curve passes through them; each span gets <code>max(1, round(length / spacing))</code> equal arc-length steps.'
+  example: []
+  syntax:
+    content: public static void SampleCurve(IReadOnlyList<Vector2> controls, float nodeSpacing, List<Vector2> output, List<int>
+      controlNodes = null, List<float> spanFractions = null)
+    parameters:
+    - id: controls
+      type: System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2}
+      description: Control points, from entry to exit.
+    - id: nodeSpacing
+      type: System.Single
+      description: Target distance between nodes.
+    - id: output
+      type: System.Collections.Generic.List{UnityEngine.Vector2}
+      description: Receives the nodes (cleared first).
+    - id: controlNodes
+      type: System.Collections.Generic.List{System.Int32}
+      description: 'Optional: receives the node index of each control point.'
+    - id: spanFractions
+      type: System.Collections.Generic.List{System.Single}
+      description: 'Optional: receives, per node, its span index plus the arc-length fraction within the span.'
+    content.vb: Public Shared Sub SampleCurve(controls As IReadOnlyList(Of Vector2), nodeSpacing As Single, output As List(Of
+      Vector2), controlNodes As List(Of Integer) = Nothing, spanFractions As List(Of Single) = Nothing)
+  overload: TDMaker.Unity.Authoring.PathGeometry.SampleCurve*
+  nameWithType.vb: PathGeometry.SampleCurve(IReadOnlyList(Of Vector2), Single, List(Of Vector2), List(Of Integer), List(Of
+    Single))
+  fullName.vb: TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList(Of UnityEngine.Vector2),
+    Single, System.Collections.Generic.List(Of UnityEngine.Vector2), System.Collections.Generic.List(Of Integer), System.Collections.Generic.List(Of
+    Single))
+  name.vb: SampleCurve(IReadOnlyList(Of Vector2), Single, List(Of Vector2), List(Of Integer), List(Of Single))
+- uid: TDMaker.Unity.Authoring.PathGeometry.Evaluate(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+  commentId: M:TDMaker.Unity.Authoring.PathGeometry.Evaluate(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+  id: Evaluate(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+  parent: TDMaker.Unity.Authoring.PathGeometry
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(Vector2, Vector2, Vector2, Vector2, float)
+  nameWithType: PathGeometry.Evaluate(Vector2, Vector2, Vector2, Vector2, float)
+  fullName: TDMaker.Unity.Authoring.PathGeometry.Evaluate(UnityEngine.Vector2, UnityEngine.Vector2, UnityEngine.Vector2, UnityEngine.Vector2,
+    float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Point on the centripetal Catmull-Rom span between <code class="paramref">p1</code> and <code class="paramref">p2</code>
+    at <code class="paramref">u</code> (0..1).
+  example: []
+  syntax:
+    content: public static Vector2 Evaluate(Vector2 p0, Vector2 p1, Vector2 p2, Vector2 p3, float u)
+    parameters:
+    - id: p0
+      type: UnityEngine.Vector2
+    - id: p1
+      type: UnityEngine.Vector2
+    - id: p2
+      type: UnityEngine.Vector2
+    - id: p3
+      type: UnityEngine.Vector2
+    - id: u
+      type: System.Single
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Function Evaluate(p0 As Vector2, p1 As Vector2, p2 As Vector2, p3 As Vector2, u As Single) As
+      Vector2
+  overload: TDMaker.Unity.Authoring.PathGeometry.Evaluate*
+  nameWithType.vb: PathGeometry.Evaluate(Vector2, Vector2, Vector2, Vector2, Single)
+  fullName.vb: TDMaker.Unity.Authoring.PathGeometry.Evaluate(UnityEngine.Vector2, UnityEngine.Vector2, UnityEngine.Vector2,
+    UnityEngine.Vector2, Single)
+  name.vb: Evaluate(Vector2, Vector2, Vector2, Vector2, Single)
+- uid: TDMaker.Unity.Authoring.PathGeometry.InterpolateSpacing(System.Collections.Generic.IReadOnlyList{System.Single},System.Single,System.Collections.Generic.IReadOnlyList{System.Single},System.Collections.Generic.List{System.Single})
+  commentId: M:TDMaker.Unity.Authoring.PathGeometry.InterpolateSpacing(System.Collections.Generic.IReadOnlyList{System.Single},System.Single,System.Collections.Generic.IReadOnlyList{System.Single},System.Collections.Generic.List{System.Single})
+  id: InterpolateSpacing(System.Collections.Generic.IReadOnlyList{System.Single},System.Single,System.Collections.Generic.IReadOnlyList{System.Single},System.Collections.Generic.List{System.Single})
+  parent: TDMaker.Unity.Authoring.PathGeometry
+  langs:
+  - csharp
+  - vb
+  name: InterpolateSpacing(IReadOnlyList<float>, float, IReadOnlyList<float>, List<float>)
+  nameWithType: PathGeometry.InterpolateSpacing(IReadOnlyList<float>, float, IReadOnlyList<float>, List<float>)
+  fullName: TDMaker.Unity.Authoring.PathGeometry.InterpolateSpacing(System.Collections.Generic.IReadOnlyList<float>, float,
+    System.Collections.Generic.IReadOnlyList<float>, System.Collections.Generic.List<float>)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Per-node lane spacing for a sampled curve: control values (non-positive = <code class="paramref">defaultSpacing</code>)
+
+    interpolated by arc length within each span. Leaves <code class="paramref">output</code> empty when no control overrides
+    the default.'
+  example: []
+  syntax:
+    content: public static void InterpolateSpacing(IReadOnlyList<float> controlSpacing, float defaultSpacing, IReadOnlyList<float>
+      spanFractions, List<float> output)
+    parameters:
+    - id: controlSpacing
+      type: System.Collections.Generic.IReadOnlyList{System.Single}
+    - id: defaultSpacing
+      type: System.Single
+    - id: spanFractions
+      type: System.Collections.Generic.IReadOnlyList{System.Single}
+    - id: output
+      type: System.Collections.Generic.List{System.Single}
+    content.vb: Public Shared Sub InterpolateSpacing(controlSpacing As IReadOnlyList(Of Single), defaultSpacing As Single,
+      spanFractions As IReadOnlyList(Of Single), output As List(Of Single))
+  overload: TDMaker.Unity.Authoring.PathGeometry.InterpolateSpacing*
+  nameWithType.vb: PathGeometry.InterpolateSpacing(IReadOnlyList(Of Single), Single, IReadOnlyList(Of Single), List(Of Single))
+  fullName.vb: TDMaker.Unity.Authoring.PathGeometry.InterpolateSpacing(System.Collections.Generic.IReadOnlyList(Of Single),
+    Single, System.Collections.Generic.IReadOnlyList(Of Single), System.Collections.Generic.List(Of Single))
+  name.vb: InterpolateSpacing(IReadOnlyList(Of Single), Single, IReadOnlyList(Of Single), List(Of Single))
+- uid: TDMaker.Unity.Authoring.PathGeometry.NearestOnPolyline(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},UnityEngine.Vector2,System.Single@,System.Int32@)
+  commentId: M:TDMaker.Unity.Authoring.PathGeometry.NearestOnPolyline(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},UnityEngine.Vector2,System.Single@,System.Int32@)
+  id: NearestOnPolyline(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},UnityEngine.Vector2,System.Single@,System.Int32@)
+  parent: TDMaker.Unity.Authoring.PathGeometry
+  langs:
+  - csharp
+  - vb
+  name: NearestOnPolyline(IReadOnlyList<Vector2>, Vector2, out float, out int)
+  nameWithType: PathGeometry.NearestOnPolyline(IReadOnlyList<Vector2>, Vector2, out float, out int)
+  fullName: TDMaker.Unity.Authoring.PathGeometry.NearestOnPolyline(System.Collections.Generic.IReadOnlyList<UnityEngine.Vector2>,
+    UnityEngine.Vector2, out float, out int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Closest point on a polyline and its distance; <code class="paramref">segment</code> is the index of the segment's
+    first node.
+  example: []
+  syntax:
+    content: public static Vector2 NearestOnPolyline(IReadOnlyList<Vector2> line, Vector2 point, out float distance, out int
+      segment)
+    parameters:
+    - id: line
+      type: System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2}
+    - id: point
+      type: UnityEngine.Vector2
+    - id: distance
+      type: System.Single
+    - id: segment
+      type: System.Int32
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Function NearestOnPolyline(line As IReadOnlyList(Of Vector2), point As Vector2, distance As
+      Single, segment As Integer) As Vector2
+  overload: TDMaker.Unity.Authoring.PathGeometry.NearestOnPolyline*
+  nameWithType.vb: PathGeometry.NearestOnPolyline(IReadOnlyList(Of Vector2), Vector2, Single, Integer)
+  fullName.vb: TDMaker.Unity.Authoring.PathGeometry.NearestOnPolyline(System.Collections.Generic.IReadOnlyList(Of UnityEngine.Vector2),
+    UnityEngine.Vector2, Single, Integer)
+  name.vb: NearestOnPolyline(IReadOnlyList(Of Vector2), Vector2, Single, Integer)
+- uid: TDMaker.Unity.Authoring.PathGeometry.NearestPathPoint(System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData},UnityEngine.Vector2,UnityEngine.Vector2@,System.Int32@)
+  commentId: M:TDMaker.Unity.Authoring.PathGeometry.NearestPathPoint(System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData},UnityEngine.Vector2,UnityEngine.Vector2@,System.Int32@)
+  id: NearestPathPoint(System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData},UnityEngine.Vector2,UnityEngine.Vector2@,System.Int32@)
+  parent: TDMaker.Unity.Authoring.PathGeometry
+  langs:
+  - csharp
+  - vb
+  name: NearestPathPoint(IReadOnlyList<PathData>, Vector2, out Vector2, out int)
+  nameWithType: PathGeometry.NearestPathPoint(IReadOnlyList<PathData>, Vector2, out Vector2, out int)
+  fullName: TDMaker.Unity.Authoring.PathGeometry.NearestPathPoint(System.Collections.Generic.IReadOnlyList<TDMaker.Unity.Authoring.PathData>,
+    UnityEngine.Vector2, out UnityEngine.Vector2, out int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Closest point on the nearest path''s center line (between its entry and exit nodes). Air routes are skipped while
+    any
+
+    ground path exists, since soldiers rally on roads. Returns false when there is no usable path.'
+  example: []
+  syntax:
+    content: public static bool NearestPathPoint(IReadOnlyList<PathData> paths, Vector2 point, out Vector2 nearest, out int
+      pathIndex)
+    parameters:
+    - id: paths
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData}
+    - id: point
+      type: UnityEngine.Vector2
+    - id: nearest
+      type: UnityEngine.Vector2
+    - id: pathIndex
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function NearestPathPoint(paths As IReadOnlyList(Of PathData), point As Vector2, nearest As
+      Vector2, pathIndex As Integer) As Boolean
+  overload: TDMaker.Unity.Authoring.PathGeometry.NearestPathPoint*
+  nameWithType.vb: PathGeometry.NearestPathPoint(IReadOnlyList(Of PathData), Vector2, Vector2, Integer)
+  fullName.vb: TDMaker.Unity.Authoring.PathGeometry.NearestPathPoint(System.Collections.Generic.IReadOnlyList(Of TDMaker.Unity.Authoring.PathData),
+    UnityEngine.Vector2, UnityEngine.Vector2, Integer)
+  name.vb: NearestPathPoint(IReadOnlyList(Of PathData), Vector2, Vector2, Integer)
+- uid: TDMaker.Unity.Authoring.PathGeometry.Length(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2})
+  commentId: M:TDMaker.Unity.Authoring.PathGeometry.Length(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2})
+  id: Length(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2})
+  parent: TDMaker.Unity.Authoring.PathGeometry
+  langs:
+  - csharp
+  - vb
+  name: Length(IReadOnlyList<Vector2>)
+  nameWithType: PathGeometry.Length(IReadOnlyList<Vector2>)
+  fullName: TDMaker.Unity.Authoring.PathGeometry.Length(System.Collections.Generic.IReadOnlyList<UnityEngine.Vector2>)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Total length of a polyline.
+  example: []
+  syntax:
+    content: public static float Length(IReadOnlyList<Vector2> line)
+    parameters:
+    - id: line
+      type: System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2}
+    return:
+      type: System.Single
+    content.vb: Public Shared Function Length(line As IReadOnlyList(Of Vector2)) As Single
+  overload: TDMaker.Unity.Authoring.PathGeometry.Length*
+  nameWithType.vb: PathGeometry.Length(IReadOnlyList(Of Vector2))
+  fullName.vb: TDMaker.Unity.Authoring.PathGeometry.Length(System.Collections.Generic.IReadOnlyList(Of UnityEngine.Vector2))
+  name.vb: Length(IReadOnlyList(Of Vector2))
+- uid: TDMaker.Unity.Authoring.PathGeometry.SpriteRect(UnityEngine.Sprite,UnityEngine.Vector2)
+  commentId: M:TDMaker.Unity.Authoring.PathGeometry.SpriteRect(UnityEngine.Sprite,UnityEngine.Vector2)
+  id: SpriteRect(UnityEngine.Sprite,UnityEngine.Vector2)
+  parent: TDMaker.Unity.Authoring.PathGeometry
+  langs:
+  - csharp
+  - vb
+  name: SpriteRect(Sprite, Vector2)
+  nameWithType: PathGeometry.SpriteRect(Sprite, Vector2)
+  fullName: TDMaker.Unity.Authoring.PathGeometry.SpriteRect(UnityEngine.Sprite, UnityEngine.Vector2)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: World rectangle covered by <code class="paramref">sprite</code> when its pivot sits at <code class="paramref">pivotPosition</code>
+    (pixels-per-unit aware).
+  example: []
+  syntax:
+    content: public static Rect SpriteRect(Sprite sprite, Vector2 pivotPosition)
+    parameters:
+    - id: sprite
+      type: UnityEngine.Sprite
+    - id: pivotPosition
+      type: UnityEngine.Vector2
+    return:
+      type: UnityEngine.Rect
+    content.vb: Public Shared Function SpriteRect(sprite As Sprite, pivotPosition As Vector2) As Rect
+  overload: TDMaker.Unity.Authoring.PathGeometry.SpriteRect*
+references:
+- uid: TDMaker.Unity.Authoring.PathAuthoring
+  commentId: T:TDMaker.Unity.Authoring.PathAuthoring
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathAuthoring.html
+  name: PathAuthoring
+  nameWithType: PathAuthoring
+  fullName: TDMaker.Unity.Authoring.PathAuthoring
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},System.Single,System.Collections.Generic.List{UnityEngine.Vector2},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Single})
+  commentId: M:TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},System.Single,System.Collections.Generic.List{UnityEngine.Vector2},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Single})
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_SampleCurve_System_Collections_Generic_IReadOnlyList_UnityEngine_Vector2__System_Single_System_Collections_Generic_List_UnityEngine_Vector2__System_Collections_Generic_List_System_Int32__System_Collections_Generic_List_System_Single__
+  name: SampleCurve(IReadOnlyList<Vector2>, float, List<Vector2>, List<int>, List<float>)
+  nameWithType: PathGeometry.SampleCurve(IReadOnlyList<Vector2>, float, List<Vector2>, List<int>, List<float>)
+  fullName: TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList<UnityEngine.Vector2>,
+    float, System.Collections.Generic.List<UnityEngine.Vector2>, System.Collections.Generic.List<int>, System.Collections.Generic.List<float>)
+  nameWithType.vb: PathGeometry.SampleCurve(IReadOnlyList(Of Vector2), Single, List(Of Vector2), List(Of Integer), List(Of
+    Single))
+  fullName.vb: TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList(Of UnityEngine.Vector2),
+    Single, System.Collections.Generic.List(Of UnityEngine.Vector2), System.Collections.Generic.List(Of Integer), System.Collections.Generic.List(Of
+    Single))
+  name.vb: SampleCurve(IReadOnlyList(Of Vector2), Single, List(Of Vector2), List(Of Integer), List(Of Single))
+  spec.csharp:
+  - uid: TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},System.Single,System.Collections.Generic.List{UnityEngine.Vector2},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Single})
+    name: SampleCurve
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_SampleCurve_System_Collections_Generic_IReadOnlyList_UnityEngine_Vector2__System_Single_System_Collections_Generic_List_UnityEngine_Vector2__System_Collections_Generic_List_System_Int32__System_Collections_Generic_List_System_Single__
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: ' '
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Unity.Authoring.PathGeometry.SampleCurve(System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2},System.Single,System.Collections.Generic.List{UnityEngine.Vector2},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Single})
+    name: SampleCurve
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_SampleCurve_System_Collections_Generic_IReadOnlyList_UnityEngine_Vector2__System_Single_System_Collections_Generic_List_UnityEngine_Vector2__System_Collections_Generic_List_System_Int32__System_Collections_Generic_List_System_Single__
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: ' '
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.PathGeometry.SampleCurve*
+  commentId: Overload:TDMaker.Unity.Authoring.PathGeometry.SampleCurve
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_SampleCurve_System_Collections_Generic_IReadOnlyList_UnityEngine_Vector2__System_Single_System_Collections_Generic_List_UnityEngine_Vector2__System_Collections_Generic_List_System_Int32__System_Collections_Generic_List_System_Single__
+  name: SampleCurve
+  nameWithType: PathGeometry.SampleCurve
+  fullName: TDMaker.Unity.Authoring.PathGeometry.SampleCurve
+- uid: System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2}
+  commentId: T:System.Collections.Generic.IReadOnlyList{UnityEngine.Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<Vector2>
+  nameWithType: IReadOnlyList<Vector2>
+  fullName: System.Collections.Generic.IReadOnlyList<UnityEngine.Vector2>
+  nameWithType.vb: IReadOnlyList(Of Vector2)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of UnityEngine.Vector2)
+  name.vb: IReadOnlyList(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List{UnityEngine.Vector2}
+  commentId: T:System.Collections.Generic.List{UnityEngine.Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Vector2>
+  nameWithType: List<Vector2>
+  fullName: System.Collections.Generic.List<UnityEngine.Vector2>
+  nameWithType.vb: List(Of Vector2)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.Vector2)
+  name.vb: List(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List{System.Single}
+  commentId: T:System.Collections.Generic.List{System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<float>
+  nameWithType: List<float>
+  fullName: System.Collections.Generic.List<float>
+  nameWithType.vb: List(Of Single)
+  fullName.vb: System.Collections.Generic.List(Of Single)
+  name.vb: List(Of Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Unity.Authoring.PathGeometry.Evaluate*
+  commentId: Overload:TDMaker.Unity.Authoring.PathGeometry.Evaluate
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_Evaluate_UnityEngine_Vector2_UnityEngine_Vector2_UnityEngine_Vector2_UnityEngine_Vector2_System_Single_
+  name: Evaluate
+  nameWithType: PathGeometry.Evaluate
+  fullName: TDMaker.Unity.Authoring.PathGeometry.Evaluate
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Authoring.PathGeometry.InterpolateSpacing*
+  commentId: Overload:TDMaker.Unity.Authoring.PathGeometry.InterpolateSpacing
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_InterpolateSpacing_System_Collections_Generic_IReadOnlyList_System_Single__System_Single_System_Collections_Generic_IReadOnlyList_System_Single__System_Collections_Generic_List_System_Single__
+  name: InterpolateSpacing
+  nameWithType: PathGeometry.InterpolateSpacing
+  fullName: TDMaker.Unity.Authoring.PathGeometry.InterpolateSpacing
+- uid: System.Collections.Generic.IReadOnlyList{System.Single}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<float>
+  nameWithType: IReadOnlyList<float>
+  fullName: System.Collections.Generic.IReadOnlyList<float>
+  nameWithType.vb: IReadOnlyList(Of Single)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Single)
+  name.vb: IReadOnlyList(Of Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: TDMaker.Unity.Authoring.PathGeometry.NearestOnPolyline*
+  commentId: Overload:TDMaker.Unity.Authoring.PathGeometry.NearestOnPolyline
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_NearestOnPolyline_System_Collections_Generic_IReadOnlyList_UnityEngine_Vector2__UnityEngine_Vector2_System_Single__System_Int32__
+  name: NearestOnPolyline
+  nameWithType: PathGeometry.NearestOnPolyline
+  fullName: TDMaker.Unity.Authoring.PathGeometry.NearestOnPolyline
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.Authoring.PathGeometry.NearestPathPoint*
+  commentId: Overload:TDMaker.Unity.Authoring.PathGeometry.NearestPathPoint
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_NearestPathPoint_System_Collections_Generic_IReadOnlyList_TDMaker_Unity_Authoring_PathData__UnityEngine_Vector2_UnityEngine_Vector2__System_Int32__
+  name: NearestPathPoint
+  nameWithType: PathGeometry.NearestPathPoint
+  fullName: TDMaker.Unity.Authoring.PathGeometry.NearestPathPoint
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<PathData>
+  nameWithType: IReadOnlyList<PathData>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Unity.Authoring.PathData>
+  nameWithType.vb: IReadOnlyList(Of PathData)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Unity.Authoring.PathData)
+  name.vb: IReadOnlyList(Of PathData)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.PathData
+    name: PathData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.PathData
+    name: PathData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathData.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.PathGeometry.Length*
+  commentId: Overload:TDMaker.Unity.Authoring.PathGeometry.Length
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_Length_System_Collections_Generic_IReadOnlyList_UnityEngine_Vector2__
+  name: Length
+  nameWithType: PathGeometry.Length
+  fullName: TDMaker.Unity.Authoring.PathGeometry.Length
+- uid: TDMaker.Unity.Authoring.PathGeometry.SpriteRect*
+  commentId: Overload:TDMaker.Unity.Authoring.PathGeometry.SpriteRect
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathGeometry.html#TDMaker_Unity_Authoring_PathGeometry_SpriteRect_UnityEngine_Sprite_UnityEngine_Vector2_
+  name: SpriteRect
+  nameWithType: PathGeometry.SpriteRect
+  fullName: TDMaker.Unity.Authoring.PathGeometry.SpriteRect
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect

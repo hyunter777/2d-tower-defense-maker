@@ -1,0 +1,794 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.BeamDef
+  commentId: T:TDMaker.Core.Defs.BeamDef
+  id: BeamDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.BeamDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Int32,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)
+  - TDMaker.Core.Defs.BeamDef.CancelWithSource
+  - TDMaker.Core.Defs.BeamDef.Damage
+  - TDMaker.Core.Defs.BeamDef.FirstDelay
+  - TDMaker.Core.Defs.BeamDef.Id
+  - TDMaker.Core.Defs.BeamDef.Interval
+  - TDMaker.Core.Defs.BeamDef.MaximumExactBudget
+  - TDMaker.Core.Defs.BeamDef.PulseCount
+  - TDMaker.Core.Defs.BeamDef.Range
+  - TDMaker.Core.Defs.BeamDef.Targets
+  - TDMaker.Core.Defs.BeamDef.TargetsFlying
+  - TDMaker.Core.Defs.BeamDef.TargetsGround
+  - TDMaker.Core.Defs.BeamDef.TotalDamage
+  langs:
+  - csharp
+  - vb
+  name: BeamDef
+  nameWithType: BeamDef
+  fullName: TDMaker.Core.Defs.BeamDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: A tracked single-target channel with an exact integer raw damage budget.
+  example: []
+  syntax:
+    content: 'public sealed class BeamDef : IAbilityAction'
+    content.vb: Public NotInheritable Class BeamDef Implements IAbilityAction
+  inheritance:
+  - System.Object
+  implements:
+  - TDMaker.Core.IAbilityAction
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.BeamDef.MaximumExactBudget
+  commentId: F:TDMaker.Core.Defs.BeamDef.MaximumExactBudget
+  id: MaximumExactBudget
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: MaximumExactBudget
+  nameWithType: BeamDef.MaximumExactBudget
+  fullName: TDMaker.Core.Defs.BeamDef.MaximumExactBudget
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Largest budget exactly representable by single-precision integer packets.
+  example: []
+  syntax:
+    content: public const int MaximumExactBudget = 16777216
+    return:
+      type: System.Int32
+    content.vb: Public Const MaximumExactBudget As Integer = 16777216
+- uid: TDMaker.Core.Defs.BeamDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Int32,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:TDMaker.Core.Defs.BeamDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Int32,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)
+  id: '#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Int32,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)'
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: BeamDef(string, DamageDef, int, int, float, float, float, MechanicTargetDef, bool, bool, bool)
+  nameWithType: BeamDef.BeamDef(string, DamageDef, int, int, float, float, float, MechanicTargetDef, bool, bool, bool)
+  fullName: TDMaker.Core.Defs.BeamDef.BeamDef(string, TDMaker.Core.Defs.DamageDef, int, int, float, float, float, TDMaker.Core.Defs.MechanicTargetDef,
+    bool, bool, bool)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a budget channel. Mitigation, shields and independent on-hit payloads are outside the primary raw budget.
+  example: []
+  syntax:
+    content: public BeamDef(string id, DamageDef damage, int totalDamage, int pulseCount, float interval, float range, float
+      firstDelay = 0, MechanicTargetDef targets = null, bool targetsFlying = true, bool targetsGround = true, bool cancelWithSource
+      = true)
+    parameters:
+    - id: id
+      type: System.String
+    - id: damage
+      type: TDMaker.Core.Defs.DamageDef
+    - id: totalDamage
+      type: System.Int32
+    - id: pulseCount
+      type: System.Int32
+    - id: interval
+      type: System.Single
+    - id: range
+      type: System.Single
+    - id: firstDelay
+      type: System.Single
+    - id: targets
+      type: TDMaker.Core.Defs.MechanicTargetDef
+    - id: targetsFlying
+      type: System.Boolean
+    - id: targetsGround
+      type: System.Boolean
+    - id: cancelWithSource
+      type: System.Boolean
+    content.vb: Public Sub New(id As String, damage As DamageDef, totalDamage As Integer, pulseCount As Integer, interval
+      As Single, range As Single, firstDelay As Single = 0, targets As MechanicTargetDef = Nothing, targetsFlying As Boolean
+      = True, targetsGround As Boolean = True, cancelWithSource As Boolean = True)
+  overload: TDMaker.Core.Defs.BeamDef.#ctor*
+  nameWithType.vb: BeamDef.New(String, DamageDef, Integer, Integer, Single, Single, Single, MechanicTargetDef, Boolean, Boolean,
+    Boolean)
+  fullName.vb: TDMaker.Core.Defs.BeamDef.New(String, TDMaker.Core.Defs.DamageDef, Integer, Integer, Single, Single, Single,
+    TDMaker.Core.Defs.MechanicTargetDef, Boolean, Boolean, Boolean)
+  name.vb: New(String, DamageDef, Integer, Integer, Single, Single, Single, MechanicTargetDef, Boolean, Boolean, Boolean)
+- uid: TDMaker.Core.Defs.BeamDef.Id
+  commentId: P:TDMaker.Core.Defs.BeamDef.Id
+  id: Id
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: BeamDef.Id
+  fullName: TDMaker.Core.Defs.BeamDef.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Neutral channel/event identity.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Core.Defs.BeamDef.Id*
+- uid: TDMaker.Core.Defs.BeamDef.Damage
+  commentId: P:TDMaker.Core.Defs.BeamDef.Damage
+  id: Damage
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: Damage
+  nameWithType: BeamDef.Damage
+  fullName: TDMaker.Core.Defs.BeamDef.Damage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Damage behavior; endpoints are ignored. Execute, despawn, defense-only and area packets are rejected.
+  example: []
+  syntax:
+    content: public DamageDef Damage { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public ReadOnly Property Damage As DamageDef
+  overload: TDMaker.Core.Defs.BeamDef.Damage*
+- uid: TDMaker.Core.Defs.BeamDef.TotalDamage
+  commentId: P:TDMaker.Core.Defs.BeamDef.TotalDamage
+  id: TotalDamage
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: TotalDamage
+  nameWithType: BeamDef.TotalDamage
+  fullName: TDMaker.Core.Defs.BeamDef.TotalDamage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Authored integer raw budget before captured source scaling; scaling is rounded up once and capped at MaximumExactBudget.
+  example: []
+  syntax:
+    content: public int TotalDamage { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalDamage As Integer
+  overload: TDMaker.Core.Defs.BeamDef.TotalDamage*
+- uid: TDMaker.Core.Defs.BeamDef.PulseCount
+  commentId: P:TDMaker.Core.Defs.BeamDef.PulseCount
+  id: PulseCount
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: PulseCount
+  nameWithType: BeamDef.PulseCount
+  fullName: TDMaker.Core.Defs.BeamDef.PulseCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Number of pulses. Integer remainder is distributed to earlier pulses; zero slices do not request effects.
+  example: []
+  syntax:
+    content: public int PulseCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PulseCount As Integer
+  overload: TDMaker.Core.Defs.BeamDef.PulseCount*
+- uid: TDMaker.Core.Defs.BeamDef.Interval
+  commentId: P:TDMaker.Core.Defs.BeamDef.Interval
+  id: Interval
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: Interval
+  nameWithType: BeamDef.Interval
+  fullName: TDMaker.Core.Defs.BeamDef.Interval
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Seconds between pulses, at most one per fixed tick.
+  example: []
+  syntax:
+    content: public float Interval { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Interval As Single
+  overload: TDMaker.Core.Defs.BeamDef.Interval*
+- uid: TDMaker.Core.Defs.BeamDef.Range
+  commentId: P:TDMaker.Core.Defs.BeamDef.Range
+  id: Range
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: BeamDef.Range
+  fullName: TDMaker.Core.Defs.BeamDef.Range
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Initial targeting range and ongoing tracking limit, affected by current source range modifiers.
+  example: []
+  syntax:
+    content: public float Range { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Range As Single
+  overload: TDMaker.Core.Defs.BeamDef.Range*
+- uid: TDMaker.Core.Defs.BeamDef.FirstDelay
+  commentId: P:TDMaker.Core.Defs.BeamDef.FirstDelay
+  id: FirstDelay
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: FirstDelay
+  nameWithType: BeamDef.FirstDelay
+  fullName: TDMaker.Core.Defs.BeamDef.FirstDelay
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Delay before the first pulse; creation still yields at least one fixed tick.
+  example: []
+  syntax:
+    content: public float FirstDelay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property FirstDelay As Single
+  overload: TDMaker.Core.Defs.BeamDef.FirstDelay*
+- uid: TDMaker.Core.Defs.BeamDef.Targets
+  commentId: P:TDMaker.Core.Defs.BeamDef.Targets
+  id: Targets
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: Targets
+  nameWithType: BeamDef.Targets
+  fullName: TDMaker.Core.Defs.BeamDef.Targets
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Recipient eligibility, rechecked on every pulse.
+  example: []
+  syntax:
+    content: public MechanicTargetDef Targets { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.MechanicTargetDef
+    content.vb: Public ReadOnly Property Targets As MechanicTargetDef
+  overload: TDMaker.Core.Defs.BeamDef.Targets*
+- uid: TDMaker.Core.Defs.BeamDef.TargetsFlying
+  commentId: P:TDMaker.Core.Defs.BeamDef.TargetsFlying
+  id: TargetsFlying
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: TargetsFlying
+  nameWithType: BeamDef.TargetsFlying
+  fullName: TDMaker.Core.Defs.BeamDef.TargetsFlying
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Allows airborne recipients.
+  example: []
+  syntax:
+    content: public bool TargetsFlying { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsFlying As Boolean
+  overload: TDMaker.Core.Defs.BeamDef.TargetsFlying*
+- uid: TDMaker.Core.Defs.BeamDef.TargetsGround
+  commentId: P:TDMaker.Core.Defs.BeamDef.TargetsGround
+  id: TargetsGround
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: TargetsGround
+  nameWithType: BeamDef.TargetsGround
+  fullName: TDMaker.Core.Defs.BeamDef.TargetsGround
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Allows ground recipients.
+  example: []
+  syntax:
+    content: public bool TargetsGround { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsGround As Boolean
+  overload: TDMaker.Core.Defs.BeamDef.TargetsGround*
+- uid: TDMaker.Core.Defs.BeamDef.CancelWithSource
+  commentId: P:TDMaker.Core.Defs.BeamDef.CancelWithSource
+  id: CancelWithSource
+  parent: TDMaker.Core.Defs.BeamDef
+  langs:
+  - csharp
+  - vb
+  name: CancelWithSource
+  nameWithType: BeamDef.CancelWithSource
+  fullName: TDMaker.Core.Defs.BeamDef.CancelWithSource
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Cancels on source loss, stun, disarm or movement order. False continues from the last available source position.
+  example: []
+  syntax:
+    content: public bool CancelWithSource { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CancelWithSource As Boolean
+  overload: TDMaker.Core.Defs.BeamDef.CancelWithSource*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TDMaker.Core.IAbilityAction
+  commentId: T:TDMaker.Core.IAbilityAction
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.IAbilityAction.html
+  name: IAbilityAction
+  nameWithType: IAbilityAction
+  fullName: TDMaker.Core.IAbilityAction
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.BeamDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef__ctor_System_String_TDMaker_Core_Defs_DamageDef_System_Int32_System_Int32_System_Single_System_Single_System_Single_TDMaker_Core_Defs_MechanicTargetDef_System_Boolean_System_Boolean_System_Boolean_
+  name: BeamDef
+  nameWithType: BeamDef.BeamDef
+  fullName: TDMaker.Core.Defs.BeamDef.BeamDef
+  nameWithType.vb: BeamDef.New
+  fullName.vb: TDMaker.Core.Defs.BeamDef.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.MechanicTargetDef
+  commentId: T:TDMaker.Core.Defs.MechanicTargetDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html
+  name: MechanicTargetDef
+  nameWithType: MechanicTargetDef
+  fullName: TDMaker.Core.Defs.MechanicTargetDef
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.BeamDef.Id*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.Id
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_Id
+  name: Id
+  nameWithType: BeamDef.Id
+  fullName: TDMaker.Core.Defs.BeamDef.Id
+- uid: TDMaker.Core.Defs.BeamDef.Damage*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.Damage
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_Damage
+  name: Damage
+  nameWithType: BeamDef.Damage
+  fullName: TDMaker.Core.Defs.BeamDef.Damage
+- uid: TDMaker.Core.Defs.BeamDef.TotalDamage*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.TotalDamage
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_TotalDamage
+  name: TotalDamage
+  nameWithType: BeamDef.TotalDamage
+  fullName: TDMaker.Core.Defs.BeamDef.TotalDamage
+- uid: TDMaker.Core.Defs.BeamDef.PulseCount*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.PulseCount
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_PulseCount
+  name: PulseCount
+  nameWithType: BeamDef.PulseCount
+  fullName: TDMaker.Core.Defs.BeamDef.PulseCount
+- uid: TDMaker.Core.Defs.BeamDef.Interval*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.Interval
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_Interval
+  name: Interval
+  nameWithType: BeamDef.Interval
+  fullName: TDMaker.Core.Defs.BeamDef.Interval
+- uid: TDMaker.Core.Defs.BeamDef.Range*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.Range
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_Range
+  name: Range
+  nameWithType: BeamDef.Range
+  fullName: TDMaker.Core.Defs.BeamDef.Range
+- uid: TDMaker.Core.Defs.BeamDef.FirstDelay*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.FirstDelay
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_FirstDelay
+  name: FirstDelay
+  nameWithType: BeamDef.FirstDelay
+  fullName: TDMaker.Core.Defs.BeamDef.FirstDelay
+- uid: TDMaker.Core.Defs.BeamDef.Targets*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.Targets
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_Targets
+  name: Targets
+  nameWithType: BeamDef.Targets
+  fullName: TDMaker.Core.Defs.BeamDef.Targets
+- uid: TDMaker.Core.Defs.BeamDef.TargetsFlying*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.TargetsFlying
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_TargetsFlying
+  name: TargetsFlying
+  nameWithType: BeamDef.TargetsFlying
+  fullName: TDMaker.Core.Defs.BeamDef.TargetsFlying
+- uid: TDMaker.Core.Defs.BeamDef.TargetsGround*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.TargetsGround
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_TargetsGround
+  name: TargetsGround
+  nameWithType: BeamDef.TargetsGround
+  fullName: TDMaker.Core.Defs.BeamDef.TargetsGround
+- uid: TDMaker.Core.Defs.BeamDef.CancelWithSource*
+  commentId: Overload:TDMaker.Core.Defs.BeamDef.CancelWithSource
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html#TDMaker_Core_Defs_BeamDef_CancelWithSource
+  name: CancelWithSource
+  nameWithType: BeamDef.CancelWithSource
+  fullName: TDMaker.Core.Defs.BeamDef.CancelWithSource

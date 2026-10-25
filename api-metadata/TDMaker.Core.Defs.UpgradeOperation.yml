@@ -1,0 +1,166 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.UpgradeOperation
+  commentId: T:TDMaker.Core.Defs.UpgradeOperation
+  id: UpgradeOperation
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.UpgradeOperation.Add
+  - TDMaker.Core.Defs.UpgradeOperation.Multiply
+  - TDMaker.Core.Defs.UpgradeOperation.MultiplyCeil
+  - TDMaker.Core.Defs.UpgradeOperation.Set
+  - TDMaker.Core.Defs.UpgradeOperation.Subtract
+  langs:
+  - csharp
+  - vb
+  name: UpgradeOperation
+  nameWithType: UpgradeOperation
+  fullName: TDMaker.Core.Defs.UpgradeOperation
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: One arithmetic step; rounding is performed immediately, never after combining effects.
+  example: []
+  syntax:
+    content: public enum UpgradeOperation
+    content.vb: Public Enum UpgradeOperation
+- uid: TDMaker.Core.Defs.UpgradeOperation.MultiplyCeil
+  commentId: F:TDMaker.Core.Defs.UpgradeOperation.MultiplyCeil
+  id: MultiplyCeil
+  parent: TDMaker.Core.Defs.UpgradeOperation
+  langs:
+  - csharp
+  - vb
+  name: MultiplyCeil
+  nameWithType: UpgradeOperation.MultiplyCeil
+  fullName: TDMaker.Core.Defs.UpgradeOperation.MultiplyCeil
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Multiply then round toward positive infinity.
+  example: []
+  syntax:
+    content: MultiplyCeil = 0
+    return:
+      type: TDMaker.Core.Defs.UpgradeOperation
+- uid: TDMaker.Core.Defs.UpgradeOperation.Multiply
+  commentId: F:TDMaker.Core.Defs.UpgradeOperation.Multiply
+  id: Multiply
+  parent: TDMaker.Core.Defs.UpgradeOperation
+  langs:
+  - csharp
+  - vb
+  name: Multiply
+  nameWithType: UpgradeOperation.Multiply
+  fullName: TDMaker.Core.Defs.UpgradeOperation.Multiply
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Multiply without rounding; integer destinations truncate toward zero.
+  example: []
+  syntax:
+    content: Multiply = 1
+    return:
+      type: TDMaker.Core.Defs.UpgradeOperation
+- uid: TDMaker.Core.Defs.UpgradeOperation.Add
+  commentId: F:TDMaker.Core.Defs.UpgradeOperation.Add
+  id: Add
+  parent: TDMaker.Core.Defs.UpgradeOperation
+  langs:
+  - csharp
+  - vb
+  name: Add
+  nameWithType: UpgradeOperation.Add
+  fullName: TDMaker.Core.Defs.UpgradeOperation.Add
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Add the authored value.
+  example: []
+  syntax:
+    content: Add = 2
+    return:
+      type: TDMaker.Core.Defs.UpgradeOperation
+- uid: TDMaker.Core.Defs.UpgradeOperation.Subtract
+  commentId: F:TDMaker.Core.Defs.UpgradeOperation.Subtract
+  id: Subtract
+  parent: TDMaker.Core.Defs.UpgradeOperation
+  langs:
+  - csharp
+  - vb
+  name: Subtract
+  nameWithType: UpgradeOperation.Subtract
+  fullName: TDMaker.Core.Defs.UpgradeOperation.Subtract
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Subtract the authored value.
+  example: []
+  syntax:
+    content: Subtract = 3
+    return:
+      type: TDMaker.Core.Defs.UpgradeOperation
+- uid: TDMaker.Core.Defs.UpgradeOperation.Set
+  commentId: F:TDMaker.Core.Defs.UpgradeOperation.Set
+  id: Set
+  parent: TDMaker.Core.Defs.UpgradeOperation
+  langs:
+  - csharp
+  - vb
+  name: Set
+  nameWithType: UpgradeOperation.Set
+  fullName: TDMaker.Core.Defs.UpgradeOperation.Set
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Replace the previous value.
+  example: []
+  syntax:
+    content: Set = 4
+    return:
+      type: TDMaker.Core.Defs.UpgradeOperation
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.UpgradeOperation
+  commentId: T:TDMaker.Core.Defs.UpgradeOperation
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeOperation.html
+  name: UpgradeOperation
+  nameWithType: UpgradeOperation
+  fullName: TDMaker.Core.Defs.UpgradeOperation

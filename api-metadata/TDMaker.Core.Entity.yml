@@ -1,0 +1,2203 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Entity
+  commentId: T:TDMaker.Core.Entity
+  id: Entity
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.Entity.Abilities
+  - TDMaker.Core.Entity.Armor
+  - TDMaker.Core.Entity.Aura
+  - TDMaker.Core.Entity.Barracks
+  - TDMaker.Core.Entity.Bounty
+  - TDMaker.Core.Entity.CompanionCount
+  - TDMaker.Core.Entity.CompanionOwnerId
+  - TDMaker.Core.Entity.CompanionSlotIndex
+  - TDMaker.Core.Entity.Companions
+  - TDMaker.Core.Entity.CreatorId
+  - TDMaker.Core.Entity.CustomData
+  - TDMaker.Core.Entity.ExperienceRecipientId
+  - TDMaker.Core.Entity.ExpiresAt
+  - TDMaker.Core.Entity.FacingPoint
+  - TDMaker.Core.Entity.FacingX
+  - TDMaker.Core.Entity.Flying
+  - TDMaker.Core.Entity.FollowVelocity
+  - TDMaker.Core.Entity.Health
+  - TDMaker.Core.Entity.Hero
+  - TDMaker.Core.Entity.Id
+  - TDMaker.Core.Entity.IgnoresDamageWhileRising
+  - TDMaker.Core.Entity.IsActive
+  - TDMaker.Core.Entity.IsBlockImmune
+  - TDMaker.Core.Entity.IsDisarmed
+  - TDMaker.Core.Entity.IsExcludedWhileRising
+  - TDMaker.Core.Entity.IsFollowingOwner
+  - TDMaker.Core.Entity.IsRemoving
+  - TDMaker.Core.Entity.IsStunned
+  - TDMaker.Core.Entity.IsUntargetable
+  - TDMaker.Core.Entity.IsWaitingForOwner
+  - TDMaker.Core.Entity.Kind
+  - TDMaker.Core.Entity.LineageId
+  - TDMaker.Core.Entity.Melee
+  - TDMaker.Core.Entity.Modifiers
+  - TDMaker.Core.Entity.Motion
+  - TDMaker.Core.Entity.PathFollow
+  - TDMaker.Core.Entity.PendingRemoval
+  - TDMaker.Core.Entity.Position
+  - TDMaker.Core.Entity.PreviousPosition
+  - TDMaker.Core.Entity.Projectile
+  - TDMaker.Core.Entity.Ranged
+  - TDMaker.Core.Entity.Render
+  - TDMaker.Core.Entity.Resolution
+  - TDMaker.Core.Entity.Revival
+  - TDMaker.Core.Entity.RevivalReadyAt
+  - TDMaker.Core.Entity.RevivalsUsed
+  - TDMaker.Core.Entity.Soldier
+  - TDMaker.Core.Entity.StatusImmunity
+  - TDMaker.Core.Entity.Template
+  - TDMaker.Core.Entity.Tower
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: Entity
+  fullName: TDMaker.Core.Entity
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A pooled runtime entity. Keep its Id, not its reference, across removals.
+  example: []
+  syntax:
+    content: public sealed class Entity
+    content.vb: Public NotInheritable Class Entity
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Entity.CustomData
+  commentId: P:TDMaker.Core.Entity.CustomData
+  id: CustomData
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: CustomData
+  nameWithType: Entity.CustomData
+  fullName: TDMaker.Core.Entity.CustomData
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Per-entity custom state; factories run during registration, never on spawn.
+  example: []
+  syntax:
+    content: public CustomDataSlots CustomData { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.CustomDataSlots
+    content.vb: Public ReadOnly Property CustomData As CustomDataSlots
+  overload: TDMaker.Core.Entity.CustomData*
+- uid: TDMaker.Core.Entity.Id
+  commentId: P:TDMaker.Core.Entity.Id
+  id: Id
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Entity.Id
+  fullName: TDMaker.Core.Entity.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Monotonically assigned identifier; zero is never assigned.
+  example: []
+  syntax:
+    content: public int Id { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Id As Integer
+  overload: TDMaker.Core.Entity.Id*
+- uid: TDMaker.Core.Entity.Template
+  commentId: P:TDMaker.Core.Entity.Template
+  id: Template
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Template
+  nameWithType: Entity.Template
+  fullName: TDMaker.Core.Entity.Template
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Resolved template; generated projectiles may have no template.
+  example: []
+  syntax:
+    content: public EntityTemplate Template { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.EntityTemplate
+    content.vb: Public ReadOnly Property Template As EntityTemplate
+  overload: TDMaker.Core.Entity.Template*
+- uid: TDMaker.Core.Entity.Kind
+  commentId: P:TDMaker.Core.Entity.Kind
+  id: Kind
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Kind
+  nameWithType: Entity.Kind
+  fullName: TDMaker.Core.Entity.Kind
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: System index category.
+  example: []
+  syntax:
+    content: public EntityKind Kind { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.EntityKind
+    content.vb: Public ReadOnly Property Kind As EntityKind
+  overload: TDMaker.Core.Entity.Kind*
+- uid: TDMaker.Core.Entity.Position
+  commentId: P:TDMaker.Core.Entity.Position
+  id: Position
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Entity.Position
+  fullName: TDMaker.Core.Entity.Position
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Current simulation position.
+  example: []
+  syntax:
+    content: public Vec2 Position { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property Position As Vec2
+  overload: TDMaker.Core.Entity.Position*
+- uid: TDMaker.Core.Entity.PreviousPosition
+  commentId: P:TDMaker.Core.Entity.PreviousPosition
+  id: PreviousPosition
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: PreviousPosition
+  nameWithType: Entity.PreviousPosition
+  fullName: TDMaker.Core.Entity.PreviousPosition
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Position at the beginning of the current tick.
+  example: []
+  syntax:
+    content: public Vec2 PreviousPosition { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property PreviousPosition As Vec2
+  overload: TDMaker.Core.Entity.PreviousPosition*
+- uid: TDMaker.Core.Entity.IsActive
+  commentId: P:TDMaker.Core.Entity.IsActive
+  id: IsActive
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: Entity.IsActive
+  fullName: TDMaker.Core.Entity.IsActive
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Whether the entity has been inserted by Flush.
+  example: []
+  syntax:
+    content: public bool IsActive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsActive As Boolean
+  overload: TDMaker.Core.Entity.IsActive*
+- uid: TDMaker.Core.Entity.PendingRemoval
+  commentId: P:TDMaker.Core.Entity.PendingRemoval
+  id: PendingRemoval
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: PendingRemoval
+  nameWithType: Entity.PendingRemoval
+  fullName: TDMaker.Core.Entity.PendingRemoval
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Whether removal has been requested.
+  example: []
+  syntax:
+    content: public bool PendingRemoval { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property PendingRemoval As Boolean
+  overload: TDMaker.Core.Entity.PendingRemoval*
+- uid: TDMaker.Core.Entity.Health
+  commentId: P:TDMaker.Core.Entity.Health
+  id: Health
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Health
+  nameWithType: Entity.Health
+  fullName: TDMaker.Core.Entity.Health
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Health state, or null.
+  example: []
+  syntax:
+    content: public HealthComponent Health { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.HealthComponent
+    content.vb: Public ReadOnly Property Health As HealthComponent
+  overload: TDMaker.Core.Entity.Health*
+- uid: TDMaker.Core.Entity.Armor
+  commentId: P:TDMaker.Core.Entity.Armor
+  id: Armor
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Armor
+  nameWithType: Entity.Armor
+  fullName: TDMaker.Core.Entity.Armor
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Defense state, or null.
+  example: []
+  syntax:
+    content: public ArmorComponent Armor { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.ArmorComponent
+    content.vb: Public ReadOnly Property Armor As ArmorComponent
+  overload: TDMaker.Core.Entity.Armor*
+- uid: TDMaker.Core.Entity.Motion
+  commentId: P:TDMaker.Core.Entity.Motion
+  id: Motion
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Motion
+  nameWithType: Entity.Motion
+  fullName: TDMaker.Core.Entity.Motion
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Motion state, or null.
+  example: []
+  syntax:
+    content: public MotionComponent Motion { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.MotionComponent
+    content.vb: Public ReadOnly Property Motion As MotionComponent
+  overload: TDMaker.Core.Entity.Motion*
+- uid: TDMaker.Core.Entity.PathFollow
+  commentId: P:TDMaker.Core.Entity.PathFollow
+  id: PathFollow
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: PathFollow
+  nameWithType: Entity.PathFollow
+  fullName: TDMaker.Core.Entity.PathFollow
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Path state, or null.
+  example: []
+  syntax:
+    content: public PathFollowComponent PathFollow { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.PathFollowComponent
+    content.vb: Public ReadOnly Property PathFollow As PathFollowComponent
+  overload: TDMaker.Core.Entity.PathFollow*
+- uid: TDMaker.Core.Entity.Bounty
+  commentId: P:TDMaker.Core.Entity.Bounty
+  id: Bounty
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Bounty
+  nameWithType: Entity.Bounty
+  fullName: TDMaker.Core.Entity.Bounty
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Bounty state, or null.
+  example: []
+  syntax:
+    content: public BountyComponent Bounty { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.BountyComponent
+    content.vb: Public ReadOnly Property Bounty As BountyComponent
+  overload: TDMaker.Core.Entity.Bounty*
+- uid: TDMaker.Core.Entity.Melee
+  commentId: P:TDMaker.Core.Entity.Melee
+  id: Melee
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Melee
+  nameWithType: Entity.Melee
+  fullName: TDMaker.Core.Entity.Melee
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Melee state, or null.
+  example: []
+  syntax:
+    content: public MeleeComponent Melee { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.MeleeComponent
+    content.vb: Public ReadOnly Property Melee As MeleeComponent
+  overload: TDMaker.Core.Entity.Melee*
+- uid: TDMaker.Core.Entity.Ranged
+  commentId: P:TDMaker.Core.Entity.Ranged
+  id: Ranged
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Ranged
+  nameWithType: Entity.Ranged
+  fullName: TDMaker.Core.Entity.Ranged
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Ranged state, or null.
+  example: []
+  syntax:
+    content: public RangedComponent Ranged { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.RangedComponent
+    content.vb: Public ReadOnly Property Ranged As RangedComponent
+  overload: TDMaker.Core.Entity.Ranged*
+- uid: TDMaker.Core.Entity.Tower
+  commentId: P:TDMaker.Core.Entity.Tower
+  id: Tower
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Tower
+  nameWithType: Entity.Tower
+  fullName: TDMaker.Core.Entity.Tower
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Tower state, or null.
+  example: []
+  syntax:
+    content: public TowerComponent Tower { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.TowerComponent
+    content.vb: Public ReadOnly Property Tower As TowerComponent
+  overload: TDMaker.Core.Entity.Tower*
+- uid: TDMaker.Core.Entity.Barracks
+  commentId: P:TDMaker.Core.Entity.Barracks
+  id: Barracks
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Barracks
+  nameWithType: Entity.Barracks
+  fullName: TDMaker.Core.Entity.Barracks
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Barracks state, or null.
+  example: []
+  syntax:
+    content: public BarracksComponent Barracks { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.BarracksComponent
+    content.vb: Public ReadOnly Property Barracks As BarracksComponent
+  overload: TDMaker.Core.Entity.Barracks*
+- uid: TDMaker.Core.Entity.Soldier
+  commentId: P:TDMaker.Core.Entity.Soldier
+  id: Soldier
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Soldier
+  nameWithType: Entity.Soldier
+  fullName: TDMaker.Core.Entity.Soldier
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Soldier state, or null.
+  example: []
+  syntax:
+    content: public SoldierComponent Soldier { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.SoldierComponent
+    content.vb: Public ReadOnly Property Soldier As SoldierComponent
+  overload: TDMaker.Core.Entity.Soldier*
+- uid: TDMaker.Core.Entity.Hero
+  commentId: P:TDMaker.Core.Entity.Hero
+  id: Hero
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Hero
+  nameWithType: Entity.Hero
+  fullName: TDMaker.Core.Entity.Hero
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Hero marker, or null.
+  example: []
+  syntax:
+    content: public HeroComponent Hero { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.HeroComponent
+    content.vb: Public ReadOnly Property Hero As HeroComponent
+  overload: TDMaker.Core.Entity.Hero*
+- uid: TDMaker.Core.Entity.Projectile
+  commentId: P:TDMaker.Core.Entity.Projectile
+  id: Projectile
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Projectile
+  nameWithType: Entity.Projectile
+  fullName: TDMaker.Core.Entity.Projectile
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Projectile state, or null.
+  example: []
+  syntax:
+    content: public ProjectileComponent Projectile { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.ProjectileComponent
+    content.vb: Public ReadOnly Property Projectile As ProjectileComponent
+  overload: TDMaker.Core.Entity.Projectile*
+- uid: TDMaker.Core.Entity.Aura
+  commentId: P:TDMaker.Core.Entity.Aura
+  id: Aura
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Aura
+  nameWithType: Entity.Aura
+  fullName: TDMaker.Core.Entity.Aura
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Aura marker, or null.
+  example: []
+  syntax:
+    content: public AuraComponent Aura { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.AuraComponent
+    content.vb: Public ReadOnly Property Aura As AuraComponent
+  overload: TDMaker.Core.Entity.Aura*
+- uid: TDMaker.Core.Entity.StatusImmunity
+  commentId: P:TDMaker.Core.Entity.StatusImmunity
+  id: StatusImmunity
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: StatusImmunity
+  nameWithType: Entity.StatusImmunity
+  fullName: TDMaker.Core.Entity.StatusImmunity
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Immunity state, or null.
+  example: []
+  syntax:
+    content: public StatusImmunityComponent StatusImmunity { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.StatusImmunityComponent
+    content.vb: Public ReadOnly Property StatusImmunity As StatusImmunityComponent
+  overload: TDMaker.Core.Entity.StatusImmunity*
+- uid: TDMaker.Core.Entity.Flying
+  commentId: P:TDMaker.Core.Entity.Flying
+  id: Flying
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Flying
+  nameWithType: Entity.Flying
+  fullName: TDMaker.Core.Entity.Flying
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Flying marker, or null.
+  example: []
+  syntax:
+    content: public FlyingComponent Flying { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.FlyingComponent
+    content.vb: Public ReadOnly Property Flying As FlyingComponent
+  overload: TDMaker.Core.Entity.Flying*
+- uid: TDMaker.Core.Entity.Render
+  commentId: P:TDMaker.Core.Entity.Render
+  id: Render
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Render
+  nameWithType: Entity.Render
+  fullName: TDMaker.Core.Entity.Render
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: View lookup state, or null.
+  example: []
+  syntax:
+    content: public RenderComponent Render { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.RenderComponent
+    content.vb: Public ReadOnly Property Render As RenderComponent
+  overload: TDMaker.Core.Entity.Render*
+- uid: TDMaker.Core.Entity.IsRemoving
+  commentId: P:TDMaker.Core.Entity.IsRemoving
+  id: IsRemoving
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsRemoving
+  nameWithType: Entity.IsRemoving
+  fullName: TDMaker.Core.Entity.IsRemoving
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Compatibility alias used by lifecycle consumers.
+  example: []
+  syntax:
+    content: public bool IsRemoving { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRemoving As Boolean
+  overload: TDMaker.Core.Entity.IsRemoving*
+- uid: TDMaker.Core.Entity.Resolution
+  commentId: P:TDMaker.Core.Entity.Resolution
+  id: Resolution
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Resolution
+  nameWithType: Entity.Resolution
+  fullName: TDMaker.Core.Entity.Resolution
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: One-time resolution cause; hero resurrection resets it.
+  example: []
+  syntax:
+    content: public ResolutionKind Resolution { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.ResolutionKind
+    content.vb: Public ReadOnly Property Resolution As ResolutionKind
+  overload: TDMaker.Core.Entity.Resolution*
+- uid: TDMaker.Core.Entity.CreatorId
+  commentId: P:TDMaker.Core.Entity.CreatorId
+  id: CreatorId
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: CreatorId
+  nameWithType: Entity.CreatorId
+  fullName: TDMaker.Core.Entity.CreatorId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Source owning a generic summon, or zero.
+  example: []
+  syntax:
+    content: public int CreatorId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property CreatorId As Integer
+  overload: TDMaker.Core.Entity.CreatorId*
+- uid: TDMaker.Core.Entity.ExperienceRecipientId
+  commentId: P:TDMaker.Core.Entity.ExperienceRecipientId
+  id: ExperienceRecipientId
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: ExperienceRecipientId
+  nameWithType: Entity.ExperienceRecipientId
+  fullName: TDMaker.Core.Entity.ExperienceRecipientId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Hero receiving this unit's damage experience, or zero.
+  example: []
+  syntax:
+    content: public int ExperienceRecipientId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ExperienceRecipientId As Integer
+  overload: TDMaker.Core.Entity.ExperienceRecipientId*
+- uid: TDMaker.Core.Entity.ExpiresAt
+  commentId: P:TDMaker.Core.Entity.ExpiresAt
+  id: ExpiresAt
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: ExpiresAt
+  nameWithType: Entity.ExpiresAt
+  fullName: TDMaker.Core.Entity.ExpiresAt
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Game time of temporary expiration; zero means permanent.
+  example: []
+  syntax:
+    content: public double ExpiresAt { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property ExpiresAt As Double
+  overload: TDMaker.Core.Entity.ExpiresAt*
+- uid: TDMaker.Core.Entity.Modifiers
+  commentId: P:TDMaker.Core.Entity.Modifiers
+  id: Modifiers
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Modifiers
+  nameWithType: Entity.Modifiers
+  fullName: TDMaker.Core.Entity.Modifiers
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Recomputed effective modifier totals.
+  example: []
+  syntax:
+    content: public ModifierComponent Modifiers { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.ModifierComponent
+    content.vb: Public ReadOnly Property Modifiers As ModifierComponent
+  overload: TDMaker.Core.Entity.Modifiers*
+- uid: TDMaker.Core.Entity.Abilities
+  commentId: P:TDMaker.Core.Entity.Abilities
+  id: Abilities
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Abilities
+  nameWithType: Entity.Abilities
+  fullName: TDMaker.Core.Entity.Abilities
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Independent generic action channels.
+  example: []
+  syntax:
+    content: public AbilityComponent Abilities { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.AbilityComponent
+    content.vb: Public ReadOnly Property Abilities As AbilityComponent
+  overload: TDMaker.Core.Entity.Abilities*
+- uid: TDMaker.Core.Entity.IsStunned
+  commentId: P:TDMaker.Core.Entity.IsStunned
+  id: IsStunned
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsStunned
+  nameWithType: Entity.IsStunned
+  fullName: TDMaker.Core.Entity.IsStunned
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Whether normal movement and attacks are currently stopped.
+  example: []
+  syntax:
+    content: public bool IsStunned { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsStunned As Boolean
+  overload: TDMaker.Core.Entity.IsStunned*
+- uid: TDMaker.Core.Entity.IsDisarmed
+  commentId: P:TDMaker.Core.Entity.IsDisarmed
+  id: IsDisarmed
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsDisarmed
+  nameWithType: Entity.IsDisarmed
+  fullName: TDMaker.Core.Entity.IsDisarmed
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Attack and ability activation are currently disabled.
+  example: []
+  syntax:
+    content: public bool IsDisarmed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisarmed As Boolean
+  overload: TDMaker.Core.Entity.IsDisarmed*
+- uid: TDMaker.Core.Entity.IsUntargetable
+  commentId: P:TDMaker.Core.Entity.IsUntargetable
+  id: IsUntargetable
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsUntargetable
+  nameWithType: Entity.IsUntargetable
+  fullName: TDMaker.Core.Entity.IsUntargetable
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Attack selection is currently forbidden by static or attached traits.
+  example: []
+  syntax:
+    content: public bool IsUntargetable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUntargetable As Boolean
+  overload: TDMaker.Core.Entity.IsUntargetable*
+- uid: TDMaker.Core.Entity.IsBlockImmune
+  commentId: P:TDMaker.Core.Entity.IsBlockImmune
+  id: IsBlockImmune
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsBlockImmune
+  nameWithType: Entity.IsBlockImmune
+  fullName: TDMaker.Core.Entity.IsBlockImmune
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Enemy interception is currently forbidden by static or attached traits.
+  example: []
+  syntax:
+    content: public bool IsBlockImmune { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBlockImmune As Boolean
+  overload: TDMaker.Core.Entity.IsBlockImmune*
+- uid: TDMaker.Core.Entity.Companions
+  commentId: P:TDMaker.Core.Entity.Companions
+  id: Companions
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Companions
+  nameWithType: Entity.Companions
+  fullName: TDMaker.Core.Entity.Companions
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Preallocated slots; only indices below CompanionCount belong to the current definition.
+  example: []
+  syntax:
+    content: public IReadOnlyList<CompanionSlot> Companions { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.CompanionSlot}
+    content.vb: Public ReadOnly Property Companions As IReadOnlyList(Of CompanionSlot)
+  overload: TDMaker.Core.Entity.Companions*
+- uid: TDMaker.Core.Entity.CompanionCount
+  commentId: P:TDMaker.Core.Entity.CompanionCount
+  id: CompanionCount
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: CompanionCount
+  nameWithType: Entity.CompanionCount
+  fullName: TDMaker.Core.Entity.CompanionCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Current authored slot count.
+  example: []
+  syntax:
+    content: public int CompanionCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property CompanionCount As Integer
+  overload: TDMaker.Core.Entity.CompanionCount*
+- uid: TDMaker.Core.Entity.CompanionOwnerId
+  commentId: P:TDMaker.Core.Entity.CompanionOwnerId
+  id: CompanionOwnerId
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: CompanionOwnerId
+  nameWithType: Entity.CompanionOwnerId
+  fullName: TDMaker.Core.Entity.CompanionOwnerId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Owner of this companion, or zero.
+  example: []
+  syntax:
+    content: public int CompanionOwnerId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property CompanionOwnerId As Integer
+  overload: TDMaker.Core.Entity.CompanionOwnerId*
+- uid: TDMaker.Core.Entity.CompanionSlotIndex
+  commentId: P:TDMaker.Core.Entity.CompanionSlotIndex
+  id: CompanionSlotIndex
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: CompanionSlotIndex
+  nameWithType: Entity.CompanionSlotIndex
+  fullName: TDMaker.Core.Entity.CompanionSlotIndex
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Slot index in the owner roster.
+  example: []
+  syntax:
+    content: public int CompanionSlotIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property CompanionSlotIndex As Integer
+  overload: TDMaker.Core.Entity.CompanionSlotIndex*
+- uid: TDMaker.Core.Entity.IsWaitingForOwner
+  commentId: P:TDMaker.Core.Entity.IsWaitingForOwner
+  id: IsWaitingForOwner
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsWaitingForOwner
+  nameWithType: Entity.IsWaitingForOwner
+  fullName: TDMaker.Core.Entity.IsWaitingForOwner
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Whether owner death has suspended this companion's combat.
+  example: []
+  syntax:
+    content: public bool IsWaitingForOwner { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWaitingForOwner As Boolean
+  overload: TDMaker.Core.Entity.IsWaitingForOwner*
+- uid: TDMaker.Core.Entity.FollowVelocity
+  commentId: P:TDMaker.Core.Entity.FollowVelocity
+  id: FollowVelocity
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: FollowVelocity
+  nameWithType: Entity.FollowVelocity
+  fullName: TDMaker.Core.Entity.FollowVelocity
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Current continuous-follow velocity.
+  example: []
+  syntax:
+    content: public Vec2 FollowVelocity { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property FollowVelocity As Vec2
+  overload: TDMaker.Core.Entity.FollowVelocity*
+- uid: TDMaker.Core.Entity.IsFollowingOwner
+  commentId: P:TDMaker.Core.Entity.IsFollowingOwner
+  id: IsFollowingOwner
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsFollowingOwner
+  nameWithType: Entity.IsFollowingOwner
+  fullName: TDMaker.Core.Entity.IsFollowingOwner
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Latched approach state for follow hysteresis.
+  example: []
+  syntax:
+    content: public bool IsFollowingOwner { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFollowingOwner As Boolean
+  overload: TDMaker.Core.Entity.IsFollowingOwner*
+- uid: TDMaker.Core.Entity.Revival
+  commentId: P:TDMaker.Core.Entity.Revival
+  id: Revival
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Revival
+  nameWithType: Entity.Revival
+  fullName: TDMaker.Core.Entity.Revival
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Down/rise preparation state.
+  example: []
+  syntax:
+    content: public RevivalPhase Revival { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.RevivalPhase
+    content.vb: Public ReadOnly Property Revival As RevivalPhase
+  overload: TDMaker.Core.Entity.Revival*
+- uid: TDMaker.Core.Entity.RevivalsUsed
+  commentId: P:TDMaker.Core.Entity.RevivalsUsed
+  id: RevivalsUsed
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: RevivalsUsed
+  nameWithType: Entity.RevivalsUsed
+  fullName: TDMaker.Core.Entity.RevivalsUsed
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Same-identity returns already used.
+  example: []
+  syntax:
+    content: public int RevivalsUsed { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property RevivalsUsed As Integer
+  overload: TDMaker.Core.Entity.RevivalsUsed*
+- uid: TDMaker.Core.Entity.RevivalReadyAt
+  commentId: P:TDMaker.Core.Entity.RevivalReadyAt
+  id: RevivalReadyAt
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: RevivalReadyAt
+  nameWithType: Entity.RevivalReadyAt
+  fullName: TDMaker.Core.Entity.RevivalReadyAt
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Deadline of the current down/rise phase.
+  example: []
+  syntax:
+    content: public double RevivalReadyAt { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property RevivalReadyAt As Double
+  overload: TDMaker.Core.Entity.RevivalReadyAt*
+- uid: TDMaker.Core.Entity.IgnoresDamageWhileRising
+  commentId: P:TDMaker.Core.Entity.IgnoresDamageWhileRising
+  id: IgnoresDamageWhileRising
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IgnoresDamageWhileRising
+  nameWithType: Entity.IgnoresDamageWhileRising
+  fullName: TDMaker.Core.Entity.IgnoresDamageWhileRising
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Whether preparation currently rejects incoming damage.
+  example: []
+  syntax:
+    content: public bool IgnoresDamageWhileRising { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IgnoresDamageWhileRising As Boolean
+  overload: TDMaker.Core.Entity.IgnoresDamageWhileRising*
+- uid: TDMaker.Core.Entity.IsExcludedWhileRising
+  commentId: P:TDMaker.Core.Entity.IsExcludedWhileRising
+  id: IsExcludedWhileRising
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsExcludedWhileRising
+  nameWithType: Entity.IsExcludedWhileRising
+  fullName: TDMaker.Core.Entity.IsExcludedWhileRising
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Whether preparation currently excludes attack acquisition.
+  example: []
+  syntax:
+    content: public bool IsExcludedWhileRising { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsExcludedWhileRising As Boolean
+  overload: TDMaker.Core.Entity.IsExcludedWhileRising*
+- uid: TDMaker.Core.Entity.LineageId
+  commentId: P:TDMaker.Core.Entity.LineageId
+  id: LineageId
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: LineageId
+  nameWithType: Entity.LineageId
+  fullName: TDMaker.Core.Entity.LineageId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Stable ancestry root for rewards, leakage and successor budgeting.
+  example: []
+  syntax:
+    content: public int LineageId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LineageId As Integer
+  overload: TDMaker.Core.Entity.LineageId*
+- uid: TDMaker.Core.Entity.FacingX
+  commentId: P:TDMaker.Core.Entity.FacingX
+  id: FacingX
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: FacingX
+  nameWithType: Entity.FacingX
+  fullName: TDMaker.Core.Entity.FacingX
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: 'Latched horizontal facing: -1 for a point to the left, +1 otherwise. Updated at movement, contact-wait and attack
+    decisions.'
+  example: []
+  syntax:
+    content: public int FacingX { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property FacingX As Integer
+  overload: TDMaker.Core.Entity.FacingX*
+- uid: TDMaker.Core.Entity.FacingPoint
+  commentId: P:TDMaker.Core.Entity.FacingPoint
+  id: FacingPoint
+  parent: TDMaker.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: FacingPoint
+  nameWithType: Entity.FacingPoint
+  fullName: TDMaker.Core.Entity.FacingPoint
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Last facing target, not continuously retargeted during a host wait or attack.
+  example: []
+  syntax:
+    content: public Vec2 FacingPoint { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property FacingPoint As Vec2
+  overload: TDMaker.Core.Entity.FacingPoint*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Entity.CustomData*
+  commentId: Overload:TDMaker.Core.Entity.CustomData
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_CustomData
+  name: CustomData
+  nameWithType: Entity.CustomData
+  fullName: TDMaker.Core.Entity.CustomData
+- uid: TDMaker.Core.CustomDataSlots
+  commentId: T:TDMaker.Core.CustomDataSlots
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.CustomDataSlots.html
+  name: CustomDataSlots
+  nameWithType: CustomDataSlots
+  fullName: TDMaker.Core.CustomDataSlots
+- uid: TDMaker.Core.Entity.Id*
+  commentId: Overload:TDMaker.Core.Entity.Id
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Id
+  name: Id
+  nameWithType: Entity.Id
+  fullName: TDMaker.Core.Entity.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Entity.Template*
+  commentId: Overload:TDMaker.Core.Entity.Template
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Template
+  name: Template
+  nameWithType: Entity.Template
+  fullName: TDMaker.Core.Entity.Template
+- uid: TDMaker.Core.Defs.EntityTemplate
+  commentId: T:TDMaker.Core.Defs.EntityTemplate
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html
+  name: EntityTemplate
+  nameWithType: EntityTemplate
+  fullName: TDMaker.Core.Defs.EntityTemplate
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Entity.Kind*
+  commentId: Overload:TDMaker.Core.Entity.Kind
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Kind
+  name: Kind
+  nameWithType: Entity.Kind
+  fullName: TDMaker.Core.Entity.Kind
+- uid: TDMaker.Core.EntityKind
+  commentId: T:TDMaker.Core.EntityKind
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.EntityKind.html
+  name: EntityKind
+  nameWithType: EntityKind
+  fullName: TDMaker.Core.EntityKind
+- uid: TDMaker.Core.Entity.Position*
+  commentId: Overload:TDMaker.Core.Entity.Position
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Position
+  name: Position
+  nameWithType: Entity.Position
+  fullName: TDMaker.Core.Entity.Position
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core.Entity.PreviousPosition*
+  commentId: Overload:TDMaker.Core.Entity.PreviousPosition
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_PreviousPosition
+  name: PreviousPosition
+  nameWithType: Entity.PreviousPosition
+  fullName: TDMaker.Core.Entity.PreviousPosition
+- uid: TDMaker.Core.Entity.IsActive*
+  commentId: Overload:TDMaker.Core.Entity.IsActive
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IsActive
+  name: IsActive
+  nameWithType: Entity.IsActive
+  fullName: TDMaker.Core.Entity.IsActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Entity.PendingRemoval*
+  commentId: Overload:TDMaker.Core.Entity.PendingRemoval
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_PendingRemoval
+  name: PendingRemoval
+  nameWithType: Entity.PendingRemoval
+  fullName: TDMaker.Core.Entity.PendingRemoval
+- uid: TDMaker.Core.Entity.Health*
+  commentId: Overload:TDMaker.Core.Entity.Health
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Health
+  name: Health
+  nameWithType: Entity.Health
+  fullName: TDMaker.Core.Entity.Health
+- uid: TDMaker.Core.Components.HealthComponent
+  commentId: T:TDMaker.Core.Components.HealthComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.HealthComponent.html
+  name: HealthComponent
+  nameWithType: HealthComponent
+  fullName: TDMaker.Core.Components.HealthComponent
+- uid: TDMaker.Core.Components
+  commentId: N:TDMaker.Core.Components
+  isExternal: true
+  name: TDMaker.Core.Components
+  nameWithType: TDMaker.Core.Components
+  fullName: TDMaker.Core.Components
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+- uid: TDMaker.Core.Entity.Armor*
+  commentId: Overload:TDMaker.Core.Entity.Armor
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Armor
+  name: Armor
+  nameWithType: Entity.Armor
+  fullName: TDMaker.Core.Entity.Armor
+- uid: TDMaker.Core.Components.ArmorComponent
+  commentId: T:TDMaker.Core.Components.ArmorComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.ArmorComponent.html
+  name: ArmorComponent
+  nameWithType: ArmorComponent
+  fullName: TDMaker.Core.Components.ArmorComponent
+- uid: TDMaker.Core.Entity.Motion*
+  commentId: Overload:TDMaker.Core.Entity.Motion
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Motion
+  name: Motion
+  nameWithType: Entity.Motion
+  fullName: TDMaker.Core.Entity.Motion
+- uid: TDMaker.Core.Components.MotionComponent
+  commentId: T:TDMaker.Core.Components.MotionComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.MotionComponent.html
+  name: MotionComponent
+  nameWithType: MotionComponent
+  fullName: TDMaker.Core.Components.MotionComponent
+- uid: TDMaker.Core.Entity.PathFollow*
+  commentId: Overload:TDMaker.Core.Entity.PathFollow
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_PathFollow
+  name: PathFollow
+  nameWithType: Entity.PathFollow
+  fullName: TDMaker.Core.Entity.PathFollow
+- uid: TDMaker.Core.Components.PathFollowComponent
+  commentId: T:TDMaker.Core.Components.PathFollowComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.PathFollowComponent.html
+  name: PathFollowComponent
+  nameWithType: PathFollowComponent
+  fullName: TDMaker.Core.Components.PathFollowComponent
+- uid: TDMaker.Core.Entity.Bounty*
+  commentId: Overload:TDMaker.Core.Entity.Bounty
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Bounty
+  name: Bounty
+  nameWithType: Entity.Bounty
+  fullName: TDMaker.Core.Entity.Bounty
+- uid: TDMaker.Core.Components.BountyComponent
+  commentId: T:TDMaker.Core.Components.BountyComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.BountyComponent.html
+  name: BountyComponent
+  nameWithType: BountyComponent
+  fullName: TDMaker.Core.Components.BountyComponent
+- uid: TDMaker.Core.Entity.Melee*
+  commentId: Overload:TDMaker.Core.Entity.Melee
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Melee
+  name: Melee
+  nameWithType: Entity.Melee
+  fullName: TDMaker.Core.Entity.Melee
+- uid: TDMaker.Core.Components.MeleeComponent
+  commentId: T:TDMaker.Core.Components.MeleeComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.MeleeComponent.html
+  name: MeleeComponent
+  nameWithType: MeleeComponent
+  fullName: TDMaker.Core.Components.MeleeComponent
+- uid: TDMaker.Core.Entity.Ranged*
+  commentId: Overload:TDMaker.Core.Entity.Ranged
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Ranged
+  name: Ranged
+  nameWithType: Entity.Ranged
+  fullName: TDMaker.Core.Entity.Ranged
+- uid: TDMaker.Core.Components.RangedComponent
+  commentId: T:TDMaker.Core.Components.RangedComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.RangedComponent.html
+  name: RangedComponent
+  nameWithType: RangedComponent
+  fullName: TDMaker.Core.Components.RangedComponent
+- uid: TDMaker.Core.Entity.Tower*
+  commentId: Overload:TDMaker.Core.Entity.Tower
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Tower
+  name: Tower
+  nameWithType: Entity.Tower
+  fullName: TDMaker.Core.Entity.Tower
+- uid: TDMaker.Core.Components.TowerComponent
+  commentId: T:TDMaker.Core.Components.TowerComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.TowerComponent.html
+  name: TowerComponent
+  nameWithType: TowerComponent
+  fullName: TDMaker.Core.Components.TowerComponent
+- uid: TDMaker.Core.Entity.Barracks*
+  commentId: Overload:TDMaker.Core.Entity.Barracks
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Barracks
+  name: Barracks
+  nameWithType: Entity.Barracks
+  fullName: TDMaker.Core.Entity.Barracks
+- uid: TDMaker.Core.Components.BarracksComponent
+  commentId: T:TDMaker.Core.Components.BarracksComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.BarracksComponent.html
+  name: BarracksComponent
+  nameWithType: BarracksComponent
+  fullName: TDMaker.Core.Components.BarracksComponent
+- uid: TDMaker.Core.Entity.Soldier*
+  commentId: Overload:TDMaker.Core.Entity.Soldier
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Soldier
+  name: Soldier
+  nameWithType: Entity.Soldier
+  fullName: TDMaker.Core.Entity.Soldier
+- uid: TDMaker.Core.Components.SoldierComponent
+  commentId: T:TDMaker.Core.Components.SoldierComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.SoldierComponent.html
+  name: SoldierComponent
+  nameWithType: SoldierComponent
+  fullName: TDMaker.Core.Components.SoldierComponent
+- uid: TDMaker.Core.Entity.Hero*
+  commentId: Overload:TDMaker.Core.Entity.Hero
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Hero
+  name: Hero
+  nameWithType: Entity.Hero
+  fullName: TDMaker.Core.Entity.Hero
+- uid: TDMaker.Core.Components.HeroComponent
+  commentId: T:TDMaker.Core.Components.HeroComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html
+  name: HeroComponent
+  nameWithType: HeroComponent
+  fullName: TDMaker.Core.Components.HeroComponent
+- uid: TDMaker.Core.Entity.Projectile*
+  commentId: Overload:TDMaker.Core.Entity.Projectile
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Projectile
+  name: Projectile
+  nameWithType: Entity.Projectile
+  fullName: TDMaker.Core.Entity.Projectile
+- uid: TDMaker.Core.Components.ProjectileComponent
+  commentId: T:TDMaker.Core.Components.ProjectileComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.ProjectileComponent.html
+  name: ProjectileComponent
+  nameWithType: ProjectileComponent
+  fullName: TDMaker.Core.Components.ProjectileComponent
+- uid: TDMaker.Core.Entity.Aura*
+  commentId: Overload:TDMaker.Core.Entity.Aura
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Aura
+  name: Aura
+  nameWithType: Entity.Aura
+  fullName: TDMaker.Core.Entity.Aura
+- uid: TDMaker.Core.Components.AuraComponent
+  commentId: T:TDMaker.Core.Components.AuraComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.AuraComponent.html
+  name: AuraComponent
+  nameWithType: AuraComponent
+  fullName: TDMaker.Core.Components.AuraComponent
+- uid: TDMaker.Core.Entity.StatusImmunity*
+  commentId: Overload:TDMaker.Core.Entity.StatusImmunity
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_StatusImmunity
+  name: StatusImmunity
+  nameWithType: Entity.StatusImmunity
+  fullName: TDMaker.Core.Entity.StatusImmunity
+- uid: TDMaker.Core.Components.StatusImmunityComponent
+  commentId: T:TDMaker.Core.Components.StatusImmunityComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.StatusImmunityComponent.html
+  name: StatusImmunityComponent
+  nameWithType: StatusImmunityComponent
+  fullName: TDMaker.Core.Components.StatusImmunityComponent
+- uid: TDMaker.Core.Entity.Flying*
+  commentId: Overload:TDMaker.Core.Entity.Flying
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Flying
+  name: Flying
+  nameWithType: Entity.Flying
+  fullName: TDMaker.Core.Entity.Flying
+- uid: TDMaker.Core.Components.FlyingComponent
+  commentId: T:TDMaker.Core.Components.FlyingComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.FlyingComponent.html
+  name: FlyingComponent
+  nameWithType: FlyingComponent
+  fullName: TDMaker.Core.Components.FlyingComponent
+- uid: TDMaker.Core.Entity.Render*
+  commentId: Overload:TDMaker.Core.Entity.Render
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Render
+  name: Render
+  nameWithType: Entity.Render
+  fullName: TDMaker.Core.Entity.Render
+- uid: TDMaker.Core.Components.RenderComponent
+  commentId: T:TDMaker.Core.Components.RenderComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.RenderComponent.html
+  name: RenderComponent
+  nameWithType: RenderComponent
+  fullName: TDMaker.Core.Components.RenderComponent
+- uid: TDMaker.Core.Entity.IsRemoving*
+  commentId: Overload:TDMaker.Core.Entity.IsRemoving
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IsRemoving
+  name: IsRemoving
+  nameWithType: Entity.IsRemoving
+  fullName: TDMaker.Core.Entity.IsRemoving
+- uid: TDMaker.Core.Entity.Resolution*
+  commentId: Overload:TDMaker.Core.Entity.Resolution
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Resolution
+  name: Resolution
+  nameWithType: Entity.Resolution
+  fullName: TDMaker.Core.Entity.Resolution
+- uid: TDMaker.Core.ResolutionKind
+  commentId: T:TDMaker.Core.ResolutionKind
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.ResolutionKind.html
+  name: ResolutionKind
+  nameWithType: ResolutionKind
+  fullName: TDMaker.Core.ResolutionKind
+- uid: TDMaker.Core.Entity.CreatorId*
+  commentId: Overload:TDMaker.Core.Entity.CreatorId
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_CreatorId
+  name: CreatorId
+  nameWithType: Entity.CreatorId
+  fullName: TDMaker.Core.Entity.CreatorId
+- uid: TDMaker.Core.Entity.ExperienceRecipientId*
+  commentId: Overload:TDMaker.Core.Entity.ExperienceRecipientId
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_ExperienceRecipientId
+  name: ExperienceRecipientId
+  nameWithType: Entity.ExperienceRecipientId
+  fullName: TDMaker.Core.Entity.ExperienceRecipientId
+- uid: TDMaker.Core.Entity.ExpiresAt*
+  commentId: Overload:TDMaker.Core.Entity.ExpiresAt
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_ExpiresAt
+  name: ExpiresAt
+  nameWithType: Entity.ExpiresAt
+  fullName: TDMaker.Core.Entity.ExpiresAt
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TDMaker.Core.Entity.Modifiers*
+  commentId: Overload:TDMaker.Core.Entity.Modifiers
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Modifiers
+  name: Modifiers
+  nameWithType: Entity.Modifiers
+  fullName: TDMaker.Core.Entity.Modifiers
+- uid: TDMaker.Core.Components.ModifierComponent
+  commentId: T:TDMaker.Core.Components.ModifierComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.ModifierComponent.html
+  name: ModifierComponent
+  nameWithType: ModifierComponent
+  fullName: TDMaker.Core.Components.ModifierComponent
+- uid: TDMaker.Core.Entity.Abilities*
+  commentId: Overload:TDMaker.Core.Entity.Abilities
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Abilities
+  name: Abilities
+  nameWithType: Entity.Abilities
+  fullName: TDMaker.Core.Entity.Abilities
+- uid: TDMaker.Core.Components.AbilityComponent
+  commentId: T:TDMaker.Core.Components.AbilityComponent
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.AbilityComponent.html
+  name: AbilityComponent
+  nameWithType: AbilityComponent
+  fullName: TDMaker.Core.Components.AbilityComponent
+- uid: TDMaker.Core.Entity.IsStunned*
+  commentId: Overload:TDMaker.Core.Entity.IsStunned
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IsStunned
+  name: IsStunned
+  nameWithType: Entity.IsStunned
+  fullName: TDMaker.Core.Entity.IsStunned
+- uid: TDMaker.Core.Entity.IsDisarmed*
+  commentId: Overload:TDMaker.Core.Entity.IsDisarmed
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IsDisarmed
+  name: IsDisarmed
+  nameWithType: Entity.IsDisarmed
+  fullName: TDMaker.Core.Entity.IsDisarmed
+- uid: TDMaker.Core.Entity.IsUntargetable*
+  commentId: Overload:TDMaker.Core.Entity.IsUntargetable
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IsUntargetable
+  name: IsUntargetable
+  nameWithType: Entity.IsUntargetable
+  fullName: TDMaker.Core.Entity.IsUntargetable
+- uid: TDMaker.Core.Entity.IsBlockImmune*
+  commentId: Overload:TDMaker.Core.Entity.IsBlockImmune
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IsBlockImmune
+  name: IsBlockImmune
+  nameWithType: Entity.IsBlockImmune
+  fullName: TDMaker.Core.Entity.IsBlockImmune
+- uid: TDMaker.Core.Entity.Companions*
+  commentId: Overload:TDMaker.Core.Entity.Companions
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Companions
+  name: Companions
+  nameWithType: Entity.Companions
+  fullName: TDMaker.Core.Entity.Companions
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.CompanionSlot}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.CompanionSlot}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<CompanionSlot>
+  nameWithType: IReadOnlyList<CompanionSlot>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.CompanionSlot>
+  nameWithType.vb: IReadOnlyList(Of CompanionSlot)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.CompanionSlot)
+  name.vb: IReadOnlyList(Of CompanionSlot)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.CompanionSlot
+    name: CompanionSlot
+    isExternal: true
+    href: TDMaker.Core.CompanionSlot.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.CompanionSlot
+    name: CompanionSlot
+    isExternal: true
+    href: TDMaker.Core.CompanionSlot.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Core.Entity.CompanionCount*
+  commentId: Overload:TDMaker.Core.Entity.CompanionCount
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_CompanionCount
+  name: CompanionCount
+  nameWithType: Entity.CompanionCount
+  fullName: TDMaker.Core.Entity.CompanionCount
+- uid: TDMaker.Core.Entity.CompanionOwnerId*
+  commentId: Overload:TDMaker.Core.Entity.CompanionOwnerId
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_CompanionOwnerId
+  name: CompanionOwnerId
+  nameWithType: Entity.CompanionOwnerId
+  fullName: TDMaker.Core.Entity.CompanionOwnerId
+- uid: TDMaker.Core.Entity.CompanionSlotIndex*
+  commentId: Overload:TDMaker.Core.Entity.CompanionSlotIndex
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_CompanionSlotIndex
+  name: CompanionSlotIndex
+  nameWithType: Entity.CompanionSlotIndex
+  fullName: TDMaker.Core.Entity.CompanionSlotIndex
+- uid: TDMaker.Core.Entity.IsWaitingForOwner*
+  commentId: Overload:TDMaker.Core.Entity.IsWaitingForOwner
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IsWaitingForOwner
+  name: IsWaitingForOwner
+  nameWithType: Entity.IsWaitingForOwner
+  fullName: TDMaker.Core.Entity.IsWaitingForOwner
+- uid: TDMaker.Core.Entity.FollowVelocity*
+  commentId: Overload:TDMaker.Core.Entity.FollowVelocity
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_FollowVelocity
+  name: FollowVelocity
+  nameWithType: Entity.FollowVelocity
+  fullName: TDMaker.Core.Entity.FollowVelocity
+- uid: TDMaker.Core.Entity.IsFollowingOwner*
+  commentId: Overload:TDMaker.Core.Entity.IsFollowingOwner
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IsFollowingOwner
+  name: IsFollowingOwner
+  nameWithType: Entity.IsFollowingOwner
+  fullName: TDMaker.Core.Entity.IsFollowingOwner
+- uid: TDMaker.Core.Entity.Revival*
+  commentId: Overload:TDMaker.Core.Entity.Revival
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_Revival
+  name: Revival
+  nameWithType: Entity.Revival
+  fullName: TDMaker.Core.Entity.Revival
+- uid: TDMaker.Core.RevivalPhase
+  commentId: T:TDMaker.Core.RevivalPhase
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.RevivalPhase.html
+  name: RevivalPhase
+  nameWithType: RevivalPhase
+  fullName: TDMaker.Core.RevivalPhase
+- uid: TDMaker.Core.Entity.RevivalsUsed*
+  commentId: Overload:TDMaker.Core.Entity.RevivalsUsed
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_RevivalsUsed
+  name: RevivalsUsed
+  nameWithType: Entity.RevivalsUsed
+  fullName: TDMaker.Core.Entity.RevivalsUsed
+- uid: TDMaker.Core.Entity.RevivalReadyAt*
+  commentId: Overload:TDMaker.Core.Entity.RevivalReadyAt
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_RevivalReadyAt
+  name: RevivalReadyAt
+  nameWithType: Entity.RevivalReadyAt
+  fullName: TDMaker.Core.Entity.RevivalReadyAt
+- uid: TDMaker.Core.Entity.IgnoresDamageWhileRising*
+  commentId: Overload:TDMaker.Core.Entity.IgnoresDamageWhileRising
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IgnoresDamageWhileRising
+  name: IgnoresDamageWhileRising
+  nameWithType: Entity.IgnoresDamageWhileRising
+  fullName: TDMaker.Core.Entity.IgnoresDamageWhileRising
+- uid: TDMaker.Core.Entity.IsExcludedWhileRising*
+  commentId: Overload:TDMaker.Core.Entity.IsExcludedWhileRising
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_IsExcludedWhileRising
+  name: IsExcludedWhileRising
+  nameWithType: Entity.IsExcludedWhileRising
+  fullName: TDMaker.Core.Entity.IsExcludedWhileRising
+- uid: TDMaker.Core.Entity.LineageId*
+  commentId: Overload:TDMaker.Core.Entity.LineageId
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_LineageId
+  name: LineageId
+  nameWithType: Entity.LineageId
+  fullName: TDMaker.Core.Entity.LineageId
+- uid: TDMaker.Core.Entity.FacingX*
+  commentId: Overload:TDMaker.Core.Entity.FacingX
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_FacingX
+  name: FacingX
+  nameWithType: Entity.FacingX
+  fullName: TDMaker.Core.Entity.FacingX
+- uid: TDMaker.Core.Entity.FacingPoint*
+  commentId: Overload:TDMaker.Core.Entity.FacingPoint
+  isExternal: true
+  href: TDMaker.Core.Entity.html#TDMaker_Core_Entity_FacingPoint
+  name: FacingPoint
+  nameWithType: Entity.FacingPoint
+  fullName: TDMaker.Core.Entity.FacingPoint

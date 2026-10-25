@@ -1,0 +1,622 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.DamageOptions
+  commentId: T:TDMaker.Core.Defs.DamageOptions
+  id: DamageOptions
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.DamageOptions.#ctor(TDMaker.Core.Defs.DamageFlags,System.Single,System.Single,TDMaker.Core.Defs.StatusEffectDef[],System.Single)
+  - TDMaker.Core.Defs.DamageOptions.DefenseReduction
+  - TDMaker.Core.Defs.DamageOptions.Effects
+  - TDMaker.Core.Defs.DamageOptions.ExperienceRate
+  - TDMaker.Core.Defs.DamageOptions.Flags
+  - TDMaker.Core.Defs.DamageOptions.SurvivalHealth
+  langs:
+  - csharp
+  - vb
+  name: DamageOptions
+  nameWithType: DamageOptions
+  fullName: TDMaker.Core.Defs.DamageOptions
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Immutable damage extensions, including on-hit effects and experience credit.
+  example: []
+  syntax:
+    content: public sealed class DamageOptions
+    content.vb: Public NotInheritable Class DamageOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.DamageOptions.#ctor(TDMaker.Core.Defs.DamageFlags,System.Single,System.Single,TDMaker.Core.Defs.StatusEffectDef[],System.Single)
+  commentId: M:TDMaker.Core.Defs.DamageOptions.#ctor(TDMaker.Core.Defs.DamageFlags,System.Single,System.Single,TDMaker.Core.Defs.StatusEffectDef[],System.Single)
+  id: '#ctor(TDMaker.Core.Defs.DamageFlags,System.Single,System.Single,TDMaker.Core.Defs.StatusEffectDef[],System.Single)'
+  parent: TDMaker.Core.Defs.DamageOptions
+  langs:
+  - csharp
+  - vb
+  name: DamageOptions(DamageFlags, float, float, StatusEffectDef[], float)
+  nameWithType: DamageOptions.DamageOptions(DamageFlags, float, float, StatusEffectDef[], float)
+  fullName: TDMaker.Core.Defs.DamageOptions.DamageOptions(TDMaker.Core.Defs.DamageFlags, float, float, TDMaker.Core.Defs.StatusEffectDef[],
+    float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates extended damage behavior.
+  example: []
+  syntax:
+    content: public DamageOptions(DamageFlags flags = DamageFlags.None, float survivalHealth = 1, float experienceRate = 0,
+      StatusEffectDef[] effects = null, float defenseReduction = 0)
+    parameters:
+    - id: flags
+      type: TDMaker.Core.Defs.DamageFlags
+    - id: survivalHealth
+      type: System.Single
+    - id: experienceRate
+      type: System.Single
+    - id: effects
+      type: TDMaker.Core.Defs.StatusEffectDef[]
+    - id: defenseReduction
+      type: System.Single
+    content.vb: Public Sub New(flags As DamageFlags = DamageFlags.None, survivalHealth As Single = 1, experienceRate As Single
+      = 0, effects As StatusEffectDef() = Nothing, defenseReduction As Single = 0)
+  overload: TDMaker.Core.Defs.DamageOptions.#ctor*
+  nameWithType.vb: DamageOptions.New(DamageFlags, Single, Single, StatusEffectDef(), Single)
+  fullName.vb: TDMaker.Core.Defs.DamageOptions.New(TDMaker.Core.Defs.DamageFlags, Single, Single, TDMaker.Core.Defs.StatusEffectDef(),
+    Single)
+  name.vb: New(DamageFlags, Single, Single, StatusEffectDef(), Single)
+- uid: TDMaker.Core.Defs.DamageOptions.Flags
+  commentId: P:TDMaker.Core.Defs.DamageOptions.Flags
+  id: Flags
+  parent: TDMaker.Core.Defs.DamageOptions
+  langs:
+  - csharp
+  - vb
+  name: Flags
+  nameWithType: DamageOptions.Flags
+  fullName: TDMaker.Core.Defs.DamageOptions.Flags
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Independent damage behaviors.
+  example: []
+  syntax:
+    content: public DamageFlags Flags { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+    content.vb: Public ReadOnly Property Flags As DamageFlags
+  overload: TDMaker.Core.Defs.DamageOptions.Flags*
+- uid: TDMaker.Core.Defs.DamageOptions.SurvivalHealth
+  commentId: P:TDMaker.Core.Defs.DamageOptions.SurvivalHealth
+  id: SurvivalHealth
+  parent: TDMaker.Core.Defs.DamageOptions
+  langs:
+  - csharp
+  - vb
+  name: SurvivalHealth
+  nameWithType: DamageOptions.SurvivalHealth
+  fullName: TDMaker.Core.Defs.DamageOptions.SurvivalHealth
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Health retained by nonlethal damage.
+  example: []
+  syntax:
+    content: public float SurvivalHealth { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property SurvivalHealth As Single
+  overload: TDMaker.Core.Defs.DamageOptions.SurvivalHealth*
+- uid: TDMaker.Core.Defs.DamageOptions.ExperienceRate
+  commentId: P:TDMaker.Core.Defs.DamageOptions.ExperienceRate
+  id: ExperienceRate
+  parent: TDMaker.Core.Defs.DamageOptions
+  langs:
+  - csharp
+  - vb
+  name: ExperienceRate
+  nameWithType: DamageOptions.ExperienceRate
+  fullName: TDMaker.Core.Defs.DamageOptions.ExperienceRate
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Experience per point of resolved damage. SimConfig.HeroXpCountsOverkill selects whether damage beyond remaining
+    health counts; nonlethal limits and shields apply first.
+  example: []
+  syntax:
+    content: public float ExperienceRate { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property ExperienceRate As Single
+  overload: TDMaker.Core.Defs.DamageOptions.ExperienceRate*
+- uid: TDMaker.Core.Defs.DamageOptions.DefenseReduction
+  commentId: P:TDMaker.Core.Defs.DamageOptions.DefenseReduction
+  id: DefenseReduction
+  parent: TDMaker.Core.Defs.DamageOptions
+  langs:
+  - csharp
+  - vb
+  name: DefenseReduction
+  nameWithType: DamageOptions.DefenseReduction
+  fullName: TDMaker.Core.Defs.DamageOptions.DefenseReduction
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Fractional defense change for defense-only packets; zero uses the packet amount.
+  example: []
+  syntax:
+    content: public float DefenseReduction { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property DefenseReduction As Single
+  overload: TDMaker.Core.Defs.DamageOptions.DefenseReduction*
+- uid: TDMaker.Core.Defs.DamageOptions.Effects
+  commentId: P:TDMaker.Core.Defs.DamageOptions.Effects
+  id: Effects
+  parent: TDMaker.Core.Defs.DamageOptions
+  langs:
+  - csharp
+  - vb
+  name: Effects
+  nameWithType: DamageOptions.Effects
+  fullName: TDMaker.Core.Defs.DamageOptions.Effects
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Effects requested after an eligible impact.
+  example: []
+  syntax:
+    content: public IReadOnlyList<StatusEffectDef> Effects { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.StatusEffectDef}
+    content.vb: Public ReadOnly Property Effects As IReadOnlyList(Of StatusEffectDef)
+  overload: TDMaker.Core.Defs.DamageOptions.Effects*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.DamageOptions.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.DamageOptions.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageOptions.html#TDMaker_Core_Defs_DamageOptions__ctor_TDMaker_Core_Defs_DamageFlags_System_Single_System_Single_TDMaker_Core_Defs_StatusEffectDef___System_Single_
+  name: DamageOptions
+  nameWithType: DamageOptions.DamageOptions
+  fullName: TDMaker.Core.Defs.DamageOptions.DamageOptions
+  nameWithType.vb: DamageOptions.New
+  fullName.vb: TDMaker.Core.Defs.DamageOptions.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.DamageFlags
+  commentId: T:TDMaker.Core.Defs.DamageFlags
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageFlags.html
+  name: DamageFlags
+  nameWithType: DamageFlags
+  fullName: TDMaker.Core.Defs.DamageFlags
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.StatusEffectDef[]
+  isExternal: true
+  href: TDMaker.Core.Defs.StatusEffectDef.html
+  name: StatusEffectDef[]
+  nameWithType: StatusEffectDef[]
+  fullName: TDMaker.Core.Defs.StatusEffectDef[]
+  nameWithType.vb: StatusEffectDef()
+  fullName.vb: TDMaker.Core.Defs.StatusEffectDef()
+  name.vb: StatusEffectDef()
+  spec.csharp:
+  - uid: TDMaker.Core.Defs.StatusEffectDef
+    name: StatusEffectDef
+    isExternal: true
+    href: TDMaker.Core.Defs.StatusEffectDef.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Defs.StatusEffectDef
+    name: StatusEffectDef
+    isExternal: true
+    href: TDMaker.Core.Defs.StatusEffectDef.html
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs.DamageOptions.Flags*
+  commentId: Overload:TDMaker.Core.Defs.DamageOptions.Flags
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageOptions.html#TDMaker_Core_Defs_DamageOptions_Flags
+  name: Flags
+  nameWithType: DamageOptions.Flags
+  fullName: TDMaker.Core.Defs.DamageOptions.Flags
+- uid: TDMaker.Core.Defs.DamageOptions.SurvivalHealth*
+  commentId: Overload:TDMaker.Core.Defs.DamageOptions.SurvivalHealth
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageOptions.html#TDMaker_Core_Defs_DamageOptions_SurvivalHealth
+  name: SurvivalHealth
+  nameWithType: DamageOptions.SurvivalHealth
+  fullName: TDMaker.Core.Defs.DamageOptions.SurvivalHealth
+- uid: TDMaker.Core.Defs.DamageOptions.ExperienceRate*
+  commentId: Overload:TDMaker.Core.Defs.DamageOptions.ExperienceRate
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageOptions.html#TDMaker_Core_Defs_DamageOptions_ExperienceRate
+  name: ExperienceRate
+  nameWithType: DamageOptions.ExperienceRate
+  fullName: TDMaker.Core.Defs.DamageOptions.ExperienceRate
+- uid: TDMaker.Core.Defs.DamageOptions.DefenseReduction*
+  commentId: Overload:TDMaker.Core.Defs.DamageOptions.DefenseReduction
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageOptions.html#TDMaker_Core_Defs_DamageOptions_DefenseReduction
+  name: DefenseReduction
+  nameWithType: DamageOptions.DefenseReduction
+  fullName: TDMaker.Core.Defs.DamageOptions.DefenseReduction
+- uid: TDMaker.Core.Defs.DamageOptions.Effects*
+  commentId: Overload:TDMaker.Core.Defs.DamageOptions.Effects
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageOptions.html#TDMaker_Core_Defs_DamageOptions_Effects
+  name: Effects
+  nameWithType: DamageOptions.Effects
+  fullName: TDMaker.Core.Defs.DamageOptions.Effects
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.StatusEffectDef}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.StatusEffectDef}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<StatusEffectDef>
+  nameWithType: IReadOnlyList<StatusEffectDef>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Defs.StatusEffectDef>
+  nameWithType.vb: IReadOnlyList(Of StatusEffectDef)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Defs.StatusEffectDef)
+  name.vb: IReadOnlyList(Of StatusEffectDef)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Defs.StatusEffectDef
+    name: StatusEffectDef
+    isExternal: true
+    href: TDMaker.Core.Defs.StatusEffectDef.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Defs.StatusEffectDef
+    name: StatusEffectDef
+    isExternal: true
+    href: TDMaker.Core.Defs.StatusEffectDef.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

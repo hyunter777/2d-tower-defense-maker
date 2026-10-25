@@ -1,0 +1,1206 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.UnitSandbox.Result
+  commentId: T:TDMaker.Editor.UnitSandbox.Result
+  id: UnitSandbox.Result
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.UnitSandbox.Result.#ctor
+  - TDMaker.Editor.UnitSandbox.Result.AverageKill
+  - TDMaker.Editor.UnitSandbox.Result.CompanionRefills
+  - TDMaker.Editor.UnitSandbox.Result.CompanionsSpawned
+  - TDMaker.Editor.UnitSandbox.Result.DamageToEnemies
+  - TDMaker.Editor.UnitSandbox.Result.DamageToFriendly
+  - TDMaker.Editor.UnitSandbox.Result.Error
+  - TDMaker.Editor.UnitSandbox.Result.FastestKill
+  - TDMaker.Editor.UnitSandbox.Result.FriendlyDeaths
+  - TDMaker.Editor.UnitSandbox.Result.GoldEarned
+  - TDMaker.Editor.UnitSandbox.Result.HasReleaseMechanics
+  - TDMaker.Editor.UnitSandbox.Result.Killed
+  - TDMaker.Editor.UnitSandbox.Result.Leaked
+  - TDMaker.Editor.UnitSandbox.Result.LivesLost
+  - TDMaker.Editor.UnitSandbox.Result.MinesThrown
+  - TDMaker.Editor.UnitSandbox.Result.Outcome
+  - TDMaker.Editor.UnitSandbox.Result.Phase
+  - TDMaker.Editor.UnitSandbox.Result.Remaining
+  - TDMaker.Editor.UnitSandbox.Result.RemainsRaised
+  - TDMaker.Editor.UnitSandbox.Result.RemainsReserved
+  - TDMaker.Editor.UnitSandbox.Result.Seconds
+  - TDMaker.Editor.UnitSandbox.Result.SlowestKill
+  - TDMaker.Editor.UnitSandbox.Result.Sources
+  - TDMaker.Editor.UnitSandbox.Result.Spawned
+  - TDMaker.Editor.UnitSandbox.Result.StateHash
+  - TDMaker.Editor.UnitSandbox.Result.Summary
+  - TDMaker.Editor.UnitSandbox.Result.ToString
+  - TDMaker.Editor.UnitSandbox.Result.TrapsTriggered
+  - TDMaker.Editor.UnitSandbox.Result.UnitsDowned
+  - TDMaker.Editor.UnitSandbox.Result.UnitsRisen
+  langs:
+  - csharp
+  - vb
+  name: UnitSandbox.Result
+  nameWithType: UnitSandbox.Result
+  fullName: TDMaker.Editor.UnitSandbox.Result
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Outcome of a headless run.
+  example: []
+  syntax:
+    content: public sealed class UnitSandbox.Result
+    content.vb: Public NotInheritable Class UnitSandbox.Result
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.UnitSandbox.Result.Phase
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.Phase
+  id: Phase
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Phase
+  nameWithType: UnitSandbox.Result.Phase
+  fullName: TDMaker.Editor.UnitSandbox.Result.Phase
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Final phase (Running when the time limit was hit).
+  example: []
+  syntax:
+    content: public GamePhase Phase
+    return:
+      type: TDMaker.Core.GamePhase
+    content.vb: Public Phase As GamePhase
+- uid: TDMaker.Editor.UnitSandbox.Result.Seconds
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.Seconds
+  id: Seconds
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Seconds
+  nameWithType: UnitSandbox.Result.Seconds
+  fullName: TDMaker.Editor.UnitSandbox.Result.Seconds
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Game seconds simulated.
+  example: []
+  syntax:
+    content: public double Seconds
+    return:
+      type: System.Double
+    content.vb: Public Seconds As Double
+- uid: TDMaker.Editor.UnitSandbox.Result.Spawned
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.Spawned
+  id: Spawned
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Spawned
+  nameWithType: UnitSandbox.Result.Spawned
+  fullName: TDMaker.Editor.UnitSandbox.Result.Spawned
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Enemies spawned (including split-offs), killed, leaked.
+  example: []
+  syntax:
+    content: public int Spawned
+    return:
+      type: System.Int32
+    content.vb: Public Spawned As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.Killed
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.Killed
+  id: Killed
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Killed
+  nameWithType: UnitSandbox.Result.Killed
+  fullName: TDMaker.Editor.UnitSandbox.Result.Killed
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Enemies spawned (including split-offs), killed, leaked.
+  example: []
+  syntax:
+    content: public int Killed
+    return:
+      type: System.Int32
+    content.vb: Public Killed As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.Leaked
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.Leaked
+  id: Leaked
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Leaked
+  nameWithType: UnitSandbox.Result.Leaked
+  fullName: TDMaker.Editor.UnitSandbox.Result.Leaked
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Enemies spawned (including split-offs), killed, leaked.
+  example: []
+  syntax:
+    content: public int Leaked
+    return:
+      type: System.Int32
+    content.vb: Public Leaked As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.LivesLost
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.LivesLost
+  id: LivesLost
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: LivesLost
+  nameWithType: UnitSandbox.Result.LivesLost
+  fullName: TDMaker.Editor.UnitSandbox.Result.LivesLost
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Lives lost.
+  example: []
+  syntax:
+    content: public int LivesLost
+    return:
+      type: System.Int32
+    content.vb: Public LivesLost As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.AverageKill
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.AverageKill
+  id: AverageKill
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: AverageKill
+  nameWithType: UnitSandbox.Result.AverageKill
+  fullName: TDMaker.Editor.UnitSandbox.Result.AverageKill
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Kill times from spawn (seconds): average, fastest, slowest (NaN when nothing died).'
+  example: []
+  syntax:
+    content: public double AverageKill
+    return:
+      type: System.Double
+    content.vb: Public AverageKill As Double
+- uid: TDMaker.Editor.UnitSandbox.Result.FastestKill
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.FastestKill
+  id: FastestKill
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: FastestKill
+  nameWithType: UnitSandbox.Result.FastestKill
+  fullName: TDMaker.Editor.UnitSandbox.Result.FastestKill
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Kill times from spawn (seconds): average, fastest, slowest (NaN when nothing died).'
+  example: []
+  syntax:
+    content: public double FastestKill
+    return:
+      type: System.Double
+    content.vb: Public FastestKill As Double
+- uid: TDMaker.Editor.UnitSandbox.Result.SlowestKill
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.SlowestKill
+  id: SlowestKill
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: SlowestKill
+  nameWithType: UnitSandbox.Result.SlowestKill
+  fullName: TDMaker.Editor.UnitSandbox.Result.SlowestKill
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Kill times from spawn (seconds): average, fastest, slowest (NaN when nothing died).'
+  example: []
+  syntax:
+    content: public double SlowestKill
+    return:
+      type: System.Double
+    content.vb: Public SlowestKill As Double
+- uid: TDMaker.Editor.UnitSandbox.Result.DamageToEnemies
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.DamageToEnemies
+  id: DamageToEnemies
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: DamageToEnemies
+  nameWithType: UnitSandbox.Result.DamageToEnemies
+  fullName: TDMaker.Editor.UnitSandbox.Result.DamageToEnemies
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Health removed from enemies.
+  example: []
+  syntax:
+    content: public double DamageToEnemies
+    return:
+      type: System.Double
+    content.vb: Public DamageToEnemies As Double
+- uid: TDMaker.Editor.UnitSandbox.Result.DamageToFriendly
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.DamageToFriendly
+  id: DamageToFriendly
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: DamageToFriendly
+  nameWithType: UnitSandbox.Result.DamageToFriendly
+  fullName: TDMaker.Editor.UnitSandbox.Result.DamageToFriendly
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Health removed from friendly units (soldiers and heroes).
+  example: []
+  syntax:
+    content: public double DamageToFriendly
+    return:
+      type: System.Double
+    content.vb: Public DamageToFriendly As Double
+- uid: TDMaker.Editor.UnitSandbox.Result.FriendlyDeaths
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.FriendlyDeaths
+  id: FriendlyDeaths
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: FriendlyDeaths
+  nameWithType: UnitSandbox.Result.FriendlyDeaths
+  fullName: TDMaker.Editor.UnitSandbox.Result.FriendlyDeaths
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Deaths of friendly soldiers and heroes.
+  example: []
+  syntax:
+    content: public int FriendlyDeaths
+    return:
+      type: System.Int32
+    content.vb: Public FriendlyDeaths As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.GoldEarned
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.GoldEarned
+  id: GoldEarned
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: GoldEarned
+  nameWithType: UnitSandbox.Result.GoldEarned
+  fullName: TDMaker.Editor.UnitSandbox.Result.GoldEarned
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Gold earned from kills.
+  example: []
+  syntax:
+    content: public int GoldEarned
+    return:
+      type: System.Int32
+    content.vb: Public GoldEarned As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.Sources
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.Sources
+  id: Sources
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Sources
+  nameWithType: UnitSandbox.Result.Sources
+  fullName: TDMaker.Editor.UnitSandbox.Result.Sources
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Damage by source, largest first.
+  example: []
+  syntax:
+    content: public List<UnitSandbox.SourceRow> Sources
+    return:
+      type: System.Collections.Generic.List{TDMaker.Editor.UnitSandbox.SourceRow}
+    content.vb: Public Sources As List(Of UnitSandbox.SourceRow)
+- uid: TDMaker.Editor.UnitSandbox.Result.StateHash
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.StateHash
+  id: StateHash
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: StateHash
+  nameWithType: UnitSandbox.Result.StateHash
+  fullName: TDMaker.Editor.UnitSandbox.Result.StateHash
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Final core state hash (equal for equal inputs).
+  example: []
+  syntax:
+    content: public ulong StateHash
+    return:
+      type: System.UInt64
+    content.vb: Public StateHash As ULong
+- uid: TDMaker.Editor.UnitSandbox.Result.Error
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.Error
+  id: Error
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: UnitSandbox.Result.Error
+  fullName: TDMaker.Editor.UnitSandbox.Result.Error
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Bake or run error, or null.
+  example: []
+  syntax:
+    content: public string Error
+    return:
+      type: System.String
+    content.vb: Public [Error] As String
+- uid: TDMaker.Editor.UnitSandbox.Result.MinesThrown
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.MinesThrown
+  id: MinesThrown
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: MinesThrown
+  nameWithType: UnitSandbox.Result.MinesThrown
+  fullName: TDMaker.Editor.UnitSandbox.Result.MinesThrown
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Mines thrown by mine fields, and traps or mines that went off.
+  example: []
+  syntax:
+    content: public int MinesThrown
+    return:
+      type: System.Int32
+    content.vb: Public MinesThrown As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.TrapsTriggered
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.TrapsTriggered
+  id: TrapsTriggered
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: TrapsTriggered
+  nameWithType: UnitSandbox.Result.TrapsTriggered
+  fullName: TDMaker.Editor.UnitSandbox.Result.TrapsTriggered
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Mines thrown by mine fields, and traps or mines that went off.
+  example: []
+  syntax:
+    content: public int TrapsTriggered
+    return:
+      type: System.Int32
+    content.vb: Public TrapsTriggered As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.CompanionsSpawned
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.CompanionsSpawned
+  id: CompanionsSpawned
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: CompanionsSpawned
+  nameWithType: UnitSandbox.Result.CompanionsSpawned
+  fullName: TDMaker.Editor.UnitSandbox.Result.CompanionsSpawned
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Companions that arrived, and how many of them refilled a slot that had held one before.
+  example: []
+  syntax:
+    content: public int CompanionsSpawned
+    return:
+      type: System.Int32
+    content.vb: Public CompanionsSpawned As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.CompanionRefills
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.CompanionRefills
+  id: CompanionRefills
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: CompanionRefills
+  nameWithType: UnitSandbox.Result.CompanionRefills
+  fullName: TDMaker.Editor.UnitSandbox.Result.CompanionRefills
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Companions that arrived, and how many of them refilled a slot that had held one before.
+  example: []
+  syntax:
+    content: public int CompanionRefills
+    return:
+      type: System.Int32
+    content.vb: Public CompanionRefills As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.UnitsDowned
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.UnitsDowned
+  id: UnitsDowned
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: UnitsDowned
+  nameWithType: UnitSandbox.Result.UnitsDowned
+  fullName: TDMaker.Editor.UnitSandbox.Result.UnitsDowned
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Same-unit falls (each is not a kill) and finished rises (returns, successors and raised units).
+  example: []
+  syntax:
+    content: public int UnitsDowned
+    return:
+      type: System.Int32
+    content.vb: Public UnitsDowned As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.UnitsRisen
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.UnitsRisen
+  id: UnitsRisen
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: UnitsRisen
+  nameWithType: UnitSandbox.Result.UnitsRisen
+  fullName: TDMaker.Editor.UnitSandbox.Result.UnitsRisen
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Same-unit falls (each is not a kill) and finished rises (returns, successors and raised units).
+  example: []
+  syntax:
+    content: public int UnitsRisen
+    return:
+      type: System.Int32
+    content.vb: Public UnitsRisen As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.RemainsReserved
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.RemainsReserved
+  id: RemainsReserved
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: RemainsReserved
+  nameWithType: UnitSandbox.Result.RemainsReserved
+  fullName: TDMaker.Editor.UnitSandbox.Result.RemainsReserved
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Bodies reserved by raise casts, and units raised from them.
+  example: []
+  syntax:
+    content: public int RemainsReserved
+    return:
+      type: System.Int32
+    content.vb: Public RemainsReserved As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.RemainsRaised
+  commentId: F:TDMaker.Editor.UnitSandbox.Result.RemainsRaised
+  id: RemainsRaised
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: RemainsRaised
+  nameWithType: UnitSandbox.Result.RemainsRaised
+  fullName: TDMaker.Editor.UnitSandbox.Result.RemainsRaised
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Bodies reserved by raise casts, and units raised from them.
+  example: []
+  syntax:
+    content: public int RemainsRaised
+    return:
+      type: System.Int32
+    content.vb: Public RemainsRaised As Integer
+- uid: TDMaker.Editor.UnitSandbox.Result.ToString
+  commentId: M:TDMaker.Editor.UnitSandbox.Result.ToString
+  id: ToString
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: UnitSandbox.Result.ToString()
+  fullName: TDMaker.Editor.UnitSandbox.Result.ToString()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Multi-line report.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: TDMaker.Editor.UnitSandbox.Result.ToString*
+- uid: TDMaker.Editor.UnitSandbox.Result.#ctor
+  commentId: M:TDMaker.Editor.UnitSandbox.Result.#ctor
+  id: '#ctor'
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Result()
+  nameWithType: UnitSandbox.Result.Result()
+  fullName: TDMaker.Editor.UnitSandbox.Result.Result()
+  type: Constructor
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public Result()
+    content.vb: Public Sub New()
+  overload: TDMaker.Editor.UnitSandbox.Result.#ctor*
+  nameWithType.vb: UnitSandbox.Result.New()
+  fullName.vb: TDMaker.Editor.UnitSandbox.Result.New()
+  name.vb: New()
+- uid: TDMaker.Editor.UnitSandbox.Result.HasReleaseMechanics
+  commentId: P:TDMaker.Editor.UnitSandbox.Result.HasReleaseMechanics
+  id: HasReleaseMechanics
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: HasReleaseMechanics
+  nameWithType: UnitSandbox.Result.HasReleaseMechanics
+  fullName: TDMaker.Editor.UnitSandbox.Result.HasReleaseMechanics
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether any mine, companion, return or raise event happened.
+  example: []
+  syntax:
+    content: public bool HasReleaseMechanics { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasReleaseMechanics As Boolean
+  overload: TDMaker.Editor.UnitSandbox.Result.HasReleaseMechanics*
+- uid: TDMaker.Editor.UnitSandbox.Result.Outcome
+  commentId: P:TDMaker.Editor.UnitSandbox.Result.Outcome
+  id: Outcome
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Outcome
+  nameWithType: UnitSandbox.Result.Outcome
+  fullName: TDMaker.Editor.UnitSandbox.Result.Outcome
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'The verdict of the run: Held only when nothing leaked and no life was lost; Leaked as soon as one enemy got through
+
+    (even though the test level, with its spare lives, ends in victory); TimeLimit when enemies were still alive at the limit.'
+  example: []
+  syntax:
+    content: public UnitSandbox.Verdict Outcome { get; }
+    parameters: []
+    return:
+      type: TDMaker.Editor.UnitSandbox.Verdict
+    content.vb: Public ReadOnly Property Outcome As UnitSandbox.Verdict
+  overload: TDMaker.Editor.UnitSandbox.Result.Outcome*
+- uid: TDMaker.Editor.UnitSandbox.Result.Remaining
+  commentId: P:TDMaker.Editor.UnitSandbox.Result.Remaining
+  id: Remaining
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Remaining
+  nameWithType: UnitSandbox.Result.Remaining
+  fullName: TDMaker.Editor.UnitSandbox.Result.Remaining
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Enemies still alive when the run stopped (time limit).
+  example: []
+  syntax:
+    content: public int Remaining { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Remaining As Integer
+  overload: TDMaker.Editor.UnitSandbox.Result.Remaining*
+- uid: TDMaker.Editor.UnitSandbox.Result.Summary
+  commentId: P:TDMaker.Editor.UnitSandbox.Result.Summary
+  id: Summary
+  parent: TDMaker.Editor.UnitSandbox.Result
+  langs:
+  - csharp
+  - vb
+  name: Summary
+  nameWithType: UnitSandbox.Result.Summary
+  fullName: TDMaker.Editor.UnitSandbox.Result.Summary
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'One line for the verdict, for example "Leaked 10 of 10 (lives lost 20)" or "Held: all 10 stopped".'
+  example: []
+  syntax:
+    content: public string Summary { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Summary As String
+  overload: TDMaker.Editor.UnitSandbox.Result.Summary*
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.GamePhase
+  commentId: T:TDMaker.Core.GamePhase
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.GamePhase.html
+  name: GamePhase
+  nameWithType: GamePhase
+  fullName: TDMaker.Core.GamePhase
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.List{TDMaker.Editor.UnitSandbox.SourceRow}
+  commentId: T:System.Collections.Generic.List{TDMaker.Editor.UnitSandbox.SourceRow}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<UnitSandbox.SourceRow>
+  nameWithType: List<UnitSandbox.SourceRow>
+  fullName: System.Collections.Generic.List<TDMaker.Editor.UnitSandbox.SourceRow>
+  nameWithType.vb: List(Of UnitSandbox.SourceRow)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Editor.UnitSandbox.SourceRow)
+  name.vb: List(Of UnitSandbox.SourceRow)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.SourceRow
+    name: SourceRow
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.SourceRow.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.SourceRow
+    name: SourceRow
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.SourceRow.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: TDMaker.Editor.UnitSandbox.Result.ToString*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.Result.ToString
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.Result.html#TDMaker_Editor_UnitSandbox_Result_ToString
+  name: ToString
+  nameWithType: UnitSandbox.Result.ToString
+  fullName: TDMaker.Editor.UnitSandbox.Result.ToString
+- uid: TDMaker.Editor.UnitSandbox.Result.#ctor*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.Result.#ctor
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.Result.html#TDMaker_Editor_UnitSandbox_Result__ctor
+  name: Result
+  nameWithType: UnitSandbox.Result.Result
+  fullName: TDMaker.Editor.UnitSandbox.Result.Result
+  nameWithType.vb: UnitSandbox.Result.New
+  fullName.vb: TDMaker.Editor.UnitSandbox.Result.New
+  name.vb: New
+- uid: TDMaker.Editor.UnitSandbox.Result.HasReleaseMechanics*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.Result.HasReleaseMechanics
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.Result.html#TDMaker_Editor_UnitSandbox_Result_HasReleaseMechanics
+  name: HasReleaseMechanics
+  nameWithType: UnitSandbox.Result.HasReleaseMechanics
+  fullName: TDMaker.Editor.UnitSandbox.Result.HasReleaseMechanics
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.UnitSandbox.Result.Outcome*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.Result.Outcome
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.Result.html#TDMaker_Editor_UnitSandbox_Result_Outcome
+  name: Outcome
+  nameWithType: UnitSandbox.Result.Outcome
+  fullName: TDMaker.Editor.UnitSandbox.Result.Outcome
+- uid: TDMaker.Editor.UnitSandbox.Verdict
+  commentId: T:TDMaker.Editor.UnitSandbox.Verdict
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html
+  name: UnitSandbox.Verdict
+  nameWithType: UnitSandbox.Verdict
+  fullName: TDMaker.Editor.UnitSandbox.Verdict
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.Verdict
+    name: Verdict
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Verdict.html
+  spec.vb:
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.Verdict
+    name: Verdict
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Verdict.html
+- uid: TDMaker.Editor.UnitSandbox.Result.Remaining*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.Result.Remaining
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.Result.html#TDMaker_Editor_UnitSandbox_Result_Remaining
+  name: Remaining
+  nameWithType: UnitSandbox.Result.Remaining
+  fullName: TDMaker.Editor.UnitSandbox.Result.Remaining
+- uid: TDMaker.Editor.UnitSandbox.Result.Summary*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.Result.Summary
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.Result.html#TDMaker_Editor_UnitSandbox_Result_Summary
+  name: Summary
+  nameWithType: UnitSandbox.Result.Summary
+  fullName: TDMaker.Editor.UnitSandbox.Result.Summary

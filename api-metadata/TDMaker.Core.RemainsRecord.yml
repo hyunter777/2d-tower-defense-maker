@@ -1,0 +1,1124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.RemainsRecord
+  commentId: T:TDMaker.Core.RemainsRecord
+  id: RemainsRecord
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.RemainsRecord.CastDueAt
+  - TDMaker.Core.RemainsRecord.Cause
+  - TDMaker.Core.RemainsRecord.DamageKind
+  - TDMaker.Core.RemainsRecord.DiedAt
+  - TDMaker.Core.RemainsRecord.EntityId
+  - TDMaker.Core.RemainsRecord.ExpiresAt
+  - TDMaker.Core.RemainsRecord.Faction
+  - TDMaker.Core.RemainsRecord.FatalFlags
+  - TDMaker.Core.RemainsRecord.HasPath
+  - TDMaker.Core.RemainsRecord.Id
+  - TDMaker.Core.RemainsRecord.IsConnecting
+  - TDMaker.Core.RemainsRecord.Kind
+  - TDMaker.Core.RemainsRecord.LaneIndex
+  - TDMaker.Core.RemainsRecord.LineageId
+  - TDMaker.Core.RemainsRecord.NodeIndex
+  - TDMaker.Core.RemainsRecord.PathIndex
+  - TDMaker.Core.RemainsRecord.Position
+  - TDMaker.Core.RemainsRecord.ReservationUntil
+  - TDMaker.Core.RemainsRecord.ReservedBy
+  - TDMaker.Core.RemainsRecord.SegmentProgress
+  - TDMaker.Core.RemainsRecord.Tags
+  - TDMaker.Core.RemainsRecord.TemplateId
+  - TDMaker.Core.RemainsRecord.TravelAngle
+  langs:
+  - csharp
+  - vb
+  name: RemainsRecord
+  nameWithType: RemainsRecord
+  fullName: TDMaker.Core.RemainsRecord
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A pooled neutral body record. Retain Id, rather than the object, after it leaves Simulation.Remains.
+  example: []
+  syntax:
+    content: public sealed class RemainsRecord
+    content.vb: Public NotInheritable Class RemainsRecord
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.RemainsRecord.Id
+  commentId: P:TDMaker.Core.RemainsRecord.Id
+  id: Id
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: RemainsRecord.Id
+  fullName: TDMaker.Core.RemainsRecord.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Monotonic body identifier.
+  example: []
+  syntax:
+    content: public int Id { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Id As Integer
+  overload: TDMaker.Core.RemainsRecord.Id*
+- uid: TDMaker.Core.RemainsRecord.EntityId
+  commentId: P:TDMaker.Core.RemainsRecord.EntityId
+  id: EntityId
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: EntityId
+  nameWithType: RemainsRecord.EntityId
+  fullName: TDMaker.Core.RemainsRecord.EntityId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Original entity identifier.
+  example: []
+  syntax:
+    content: public int EntityId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property EntityId As Integer
+  overload: TDMaker.Core.RemainsRecord.EntityId*
+- uid: TDMaker.Core.RemainsRecord.TemplateId
+  commentId: P:TDMaker.Core.RemainsRecord.TemplateId
+  id: TemplateId
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: TemplateId
+  nameWithType: RemainsRecord.TemplateId
+  fullName: TDMaker.Core.RemainsRecord.TemplateId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Original template identifier.
+  example: []
+  syntax:
+    content: public string TemplateId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property TemplateId As String
+  overload: TDMaker.Core.RemainsRecord.TemplateId*
+- uid: TDMaker.Core.RemainsRecord.Position
+  commentId: P:TDMaker.Core.RemainsRecord.Position
+  id: Position
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: RemainsRecord.Position
+  fullName: TDMaker.Core.RemainsRecord.Position
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Death position.
+  example: []
+  syntax:
+    content: public Vec2 Position { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property Position As Vec2
+  overload: TDMaker.Core.RemainsRecord.Position*
+- uid: TDMaker.Core.RemainsRecord.Faction
+  commentId: P:TDMaker.Core.RemainsRecord.Faction
+  id: Faction
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: Faction
+  nameWithType: RemainsRecord.Faction
+  fullName: TDMaker.Core.RemainsRecord.Faction
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Original faction.
+  example: []
+  syntax:
+    content: public RemainsFaction Faction { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.RemainsFaction
+    content.vb: Public ReadOnly Property Faction As RemainsFaction
+  overload: TDMaker.Core.RemainsRecord.Faction*
+- uid: TDMaker.Core.RemainsRecord.Kind
+  commentId: P:TDMaker.Core.RemainsRecord.Kind
+  id: Kind
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: Kind
+  nameWithType: RemainsRecord.Kind
+  fullName: TDMaker.Core.RemainsRecord.Kind
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Original entity role.
+  example: []
+  syntax:
+    content: public EntityKind Kind { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.EntityKind
+    content.vb: Public ReadOnly Property Kind As EntityKind
+  overload: TDMaker.Core.RemainsRecord.Kind*
+- uid: TDMaker.Core.RemainsRecord.Tags
+  commentId: P:TDMaker.Core.RemainsRecord.Tags
+  id: Tags
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  nameWithType: RemainsRecord.Tags
+  fullName: TDMaker.Core.RemainsRecord.Tags
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Original eligibility tags.
+  example: []
+  syntax:
+    content: public ulong Tags { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property Tags As ULong
+  overload: TDMaker.Core.RemainsRecord.Tags*
+- uid: TDMaker.Core.RemainsRecord.Cause
+  commentId: P:TDMaker.Core.RemainsRecord.Cause
+  id: Cause
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: Cause
+  nameWithType: RemainsRecord.Cause
+  fullName: TDMaker.Core.RemainsRecord.Cause
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Terminal resolution cause.
+  example: []
+  syntax:
+    content: public ResolutionKind Cause { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.ResolutionKind
+    content.vb: Public ReadOnly Property Cause As ResolutionKind
+  overload: TDMaker.Core.RemainsRecord.Cause*
+- uid: TDMaker.Core.RemainsRecord.DamageKind
+  commentId: P:TDMaker.Core.RemainsRecord.DamageKind
+  id: DamageKind
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: DamageKind
+  nameWithType: RemainsRecord.DamageKind
+  fullName: TDMaker.Core.RemainsRecord.DamageKind
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Fatal packet's damage channel.
+  example: []
+  syntax:
+    content: public DamageKind DamageKind { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+    content.vb: Public ReadOnly Property DamageKind As DamageKind
+  overload: TDMaker.Core.RemainsRecord.DamageKind*
+- uid: TDMaker.Core.RemainsRecord.FatalFlags
+  commentId: P:TDMaker.Core.RemainsRecord.FatalFlags
+  id: FatalFlags
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: FatalFlags
+  nameWithType: RemainsRecord.FatalFlags
+  fullName: TDMaker.Core.RemainsRecord.FatalFlags
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Fatal packet's control flags.
+  example: []
+  syntax:
+    content: public DamageFlags FatalFlags { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+    content.vb: Public ReadOnly Property FatalFlags As DamageFlags
+  overload: TDMaker.Core.RemainsRecord.FatalFlags*
+- uid: TDMaker.Core.RemainsRecord.DiedAt
+  commentId: P:TDMaker.Core.RemainsRecord.DiedAt
+  id: DiedAt
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: DiedAt
+  nameWithType: RemainsRecord.DiedAt
+  fullName: TDMaker.Core.RemainsRecord.DiedAt
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Game time of death.
+  example: []
+  syntax:
+    content: public double DiedAt { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property DiedAt As Double
+  overload: TDMaker.Core.RemainsRecord.DiedAt*
+- uid: TDMaker.Core.RemainsRecord.ExpiresAt
+  commentId: P:TDMaker.Core.RemainsRecord.ExpiresAt
+  id: ExpiresAt
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: ExpiresAt
+  nameWithType: RemainsRecord.ExpiresAt
+  fullName: TDMaker.Core.RemainsRecord.ExpiresAt
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Exclusive availability deadline. Reservation does not extend it.
+  example: []
+  syntax:
+    content: public double ExpiresAt { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property ExpiresAt As Double
+  overload: TDMaker.Core.RemainsRecord.ExpiresAt*
+- uid: TDMaker.Core.RemainsRecord.ReservedBy
+  commentId: P:TDMaker.Core.RemainsRecord.ReservedBy
+  id: ReservedBy
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: ReservedBy
+  nameWithType: RemainsRecord.ReservedBy
+  fullName: TDMaker.Core.RemainsRecord.ReservedBy
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Exclusive reserving actor, or zero.
+  example: []
+  syntax:
+    content: public int ReservedBy { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ReservedBy As Integer
+  overload: TDMaker.Core.RemainsRecord.ReservedBy*
+- uid: TDMaker.Core.RemainsRecord.ReservationUntil
+  commentId: P:TDMaker.Core.RemainsRecord.ReservationUntil
+  id: ReservationUntil
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: ReservationUntil
+  nameWithType: RemainsRecord.ReservationUntil
+  fullName: TDMaker.Core.RemainsRecord.ReservationUntil
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Reservation timeout.
+  example: []
+  syntax:
+    content: public double ReservationUntil { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property ReservationUntil As Double
+  overload: TDMaker.Core.RemainsRecord.ReservationUntil*
+- uid: TDMaker.Core.RemainsRecord.CastDueAt
+  commentId: P:TDMaker.Core.RemainsRecord.CastDueAt
+  id: CastDueAt
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: CastDueAt
+  nameWithType: RemainsRecord.CastDueAt
+  fullName: TDMaker.Core.RemainsRecord.CastDueAt
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Scheduled consumption time.
+  example: []
+  syntax:
+    content: public double CastDueAt { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property CastDueAt As Double
+  overload: TDMaker.Core.RemainsRecord.CastDueAt*
+- uid: TDMaker.Core.RemainsRecord.HasPath
+  commentId: P:TDMaker.Core.RemainsRecord.HasPath
+  id: HasPath
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: HasPath
+  nameWithType: RemainsRecord.HasPath
+  fullName: TDMaker.Core.RemainsRecord.HasPath
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Whether a hostile result can inherit a path.
+  example: []
+  syntax:
+    content: public bool HasPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasPath As Boolean
+  overload: TDMaker.Core.RemainsRecord.HasPath*
+- uid: TDMaker.Core.RemainsRecord.PathIndex
+  commentId: P:TDMaker.Core.RemainsRecord.PathIndex
+  id: PathIndex
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: PathIndex
+  nameWithType: RemainsRecord.PathIndex
+  fullName: TDMaker.Core.RemainsRecord.PathIndex
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Captured path index.
+  example: []
+  syntax:
+    content: public int PathIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PathIndex As Integer
+  overload: TDMaker.Core.RemainsRecord.PathIndex*
+- uid: TDMaker.Core.RemainsRecord.LaneIndex
+  commentId: P:TDMaker.Core.RemainsRecord.LaneIndex
+  id: LaneIndex
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: LaneIndex
+  nameWithType: RemainsRecord.LaneIndex
+  fullName: TDMaker.Core.RemainsRecord.LaneIndex
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Captured lane.
+  example: []
+  syntax:
+    content: public int LaneIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LaneIndex As Integer
+  overload: TDMaker.Core.RemainsRecord.LaneIndex*
+- uid: TDMaker.Core.RemainsRecord.NodeIndex
+  commentId: P:TDMaker.Core.RemainsRecord.NodeIndex
+  id: NodeIndex
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: NodeIndex
+  nameWithType: RemainsRecord.NodeIndex
+  fullName: TDMaker.Core.RemainsRecord.NodeIndex
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Captured segment start.
+  example: []
+  syntax:
+    content: public int NodeIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property NodeIndex As Integer
+  overload: TDMaker.Core.RemainsRecord.NodeIndex*
+- uid: TDMaker.Core.RemainsRecord.SegmentProgress
+  commentId: P:TDMaker.Core.RemainsRecord.SegmentProgress
+  id: SegmentProgress
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: SegmentProgress
+  nameWithType: RemainsRecord.SegmentProgress
+  fullName: TDMaker.Core.RemainsRecord.SegmentProgress
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Captured segment fraction.
+  example: []
+  syntax:
+    content: public float SegmentProgress { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property SegmentProgress As Single
+  overload: TDMaker.Core.RemainsRecord.SegmentProgress*
+- uid: TDMaker.Core.RemainsRecord.IsConnecting
+  commentId: P:TDMaker.Core.RemainsRecord.IsConnecting
+  id: IsConnecting
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: IsConnecting
+  nameWithType: RemainsRecord.IsConnecting
+  fullName: TDMaker.Core.RemainsRecord.IsConnecting
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Captured connection traversal state.
+  example: []
+  syntax:
+    content: public bool IsConnecting { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsConnecting As Boolean
+  overload: TDMaker.Core.RemainsRecord.IsConnecting*
+- uid: TDMaker.Core.RemainsRecord.TravelAngle
+  commentId: P:TDMaker.Core.RemainsRecord.TravelAngle
+  id: TravelAngle
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: TravelAngle
+  nameWithType: RemainsRecord.TravelAngle
+  fullName: TDMaker.Core.RemainsRecord.TravelAngle
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Captured travel direction.
+  example: []
+  syntax:
+    content: public float TravelAngle { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property TravelAngle As Single
+  overload: TDMaker.Core.RemainsRecord.TravelAngle*
+- uid: TDMaker.Core.RemainsRecord.LineageId
+  commentId: P:TDMaker.Core.RemainsRecord.LineageId
+  id: LineageId
+  parent: TDMaker.Core.RemainsRecord
+  langs:
+  - csharp
+  - vb
+  name: LineageId
+  nameWithType: RemainsRecord.LineageId
+  fullName: TDMaker.Core.RemainsRecord.LineageId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Stable shared ancestry root.
+  example: []
+  syntax:
+    content: public int LineageId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LineageId As Integer
+  overload: TDMaker.Core.RemainsRecord.LineageId*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.RemainsRecord.Id*
+  commentId: Overload:TDMaker.Core.RemainsRecord.Id
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_Id
+  name: Id
+  nameWithType: RemainsRecord.Id
+  fullName: TDMaker.Core.RemainsRecord.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.RemainsRecord.EntityId*
+  commentId: Overload:TDMaker.Core.RemainsRecord.EntityId
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_EntityId
+  name: EntityId
+  nameWithType: RemainsRecord.EntityId
+  fullName: TDMaker.Core.RemainsRecord.EntityId
+- uid: TDMaker.Core.RemainsRecord.TemplateId*
+  commentId: Overload:TDMaker.Core.RemainsRecord.TemplateId
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_TemplateId
+  name: TemplateId
+  nameWithType: RemainsRecord.TemplateId
+  fullName: TDMaker.Core.RemainsRecord.TemplateId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.RemainsRecord.Position*
+  commentId: Overload:TDMaker.Core.RemainsRecord.Position
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_Position
+  name: Position
+  nameWithType: RemainsRecord.Position
+  fullName: TDMaker.Core.RemainsRecord.Position
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core.RemainsRecord.Faction*
+  commentId: Overload:TDMaker.Core.RemainsRecord.Faction
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_Faction
+  name: Faction
+  nameWithType: RemainsRecord.Faction
+  fullName: TDMaker.Core.RemainsRecord.Faction
+- uid: TDMaker.Core.Defs.RemainsFaction
+  commentId: T:TDMaker.Core.Defs.RemainsFaction
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.RemainsFaction.html
+  name: RemainsFaction
+  nameWithType: RemainsFaction
+  fullName: TDMaker.Core.Defs.RemainsFaction
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.RemainsRecord.Kind*
+  commentId: Overload:TDMaker.Core.RemainsRecord.Kind
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_Kind
+  name: Kind
+  nameWithType: RemainsRecord.Kind
+  fullName: TDMaker.Core.RemainsRecord.Kind
+- uid: TDMaker.Core.EntityKind
+  commentId: T:TDMaker.Core.EntityKind
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.EntityKind.html
+  name: EntityKind
+  nameWithType: EntityKind
+  fullName: TDMaker.Core.EntityKind
+- uid: TDMaker.Core.RemainsRecord.Tags*
+  commentId: Overload:TDMaker.Core.RemainsRecord.Tags
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_Tags
+  name: Tags
+  nameWithType: RemainsRecord.Tags
+  fullName: TDMaker.Core.RemainsRecord.Tags
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: TDMaker.Core.RemainsRecord.Cause*
+  commentId: Overload:TDMaker.Core.RemainsRecord.Cause
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_Cause
+  name: Cause
+  nameWithType: RemainsRecord.Cause
+  fullName: TDMaker.Core.RemainsRecord.Cause
+- uid: TDMaker.Core.ResolutionKind
+  commentId: T:TDMaker.Core.ResolutionKind
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.ResolutionKind.html
+  name: ResolutionKind
+  nameWithType: ResolutionKind
+  fullName: TDMaker.Core.ResolutionKind
+- uid: TDMaker.Core.RemainsRecord.DamageKind*
+  commentId: Overload:TDMaker.Core.RemainsRecord.DamageKind
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_DamageKind
+  name: DamageKind
+  nameWithType: RemainsRecord.DamageKind
+  fullName: TDMaker.Core.RemainsRecord.DamageKind
+- uid: TDMaker.Core.Defs.DamageKind
+  commentId: T:TDMaker.Core.Defs.DamageKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageKind.html
+  name: DamageKind
+  nameWithType: DamageKind
+  fullName: TDMaker.Core.Defs.DamageKind
+- uid: TDMaker.Core.RemainsRecord.FatalFlags*
+  commentId: Overload:TDMaker.Core.RemainsRecord.FatalFlags
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_FatalFlags
+  name: FatalFlags
+  nameWithType: RemainsRecord.FatalFlags
+  fullName: TDMaker.Core.RemainsRecord.FatalFlags
+- uid: TDMaker.Core.Defs.DamageFlags
+  commentId: T:TDMaker.Core.Defs.DamageFlags
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageFlags.html
+  name: DamageFlags
+  nameWithType: DamageFlags
+  fullName: TDMaker.Core.Defs.DamageFlags
+- uid: TDMaker.Core.RemainsRecord.DiedAt*
+  commentId: Overload:TDMaker.Core.RemainsRecord.DiedAt
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_DiedAt
+  name: DiedAt
+  nameWithType: RemainsRecord.DiedAt
+  fullName: TDMaker.Core.RemainsRecord.DiedAt
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TDMaker.Core.RemainsRecord.ExpiresAt*
+  commentId: Overload:TDMaker.Core.RemainsRecord.ExpiresAt
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_ExpiresAt
+  name: ExpiresAt
+  nameWithType: RemainsRecord.ExpiresAt
+  fullName: TDMaker.Core.RemainsRecord.ExpiresAt
+- uid: TDMaker.Core.RemainsRecord.ReservedBy*
+  commentId: Overload:TDMaker.Core.RemainsRecord.ReservedBy
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_ReservedBy
+  name: ReservedBy
+  nameWithType: RemainsRecord.ReservedBy
+  fullName: TDMaker.Core.RemainsRecord.ReservedBy
+- uid: TDMaker.Core.RemainsRecord.ReservationUntil*
+  commentId: Overload:TDMaker.Core.RemainsRecord.ReservationUntil
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_ReservationUntil
+  name: ReservationUntil
+  nameWithType: RemainsRecord.ReservationUntil
+  fullName: TDMaker.Core.RemainsRecord.ReservationUntil
+- uid: TDMaker.Core.RemainsRecord.CastDueAt*
+  commentId: Overload:TDMaker.Core.RemainsRecord.CastDueAt
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_CastDueAt
+  name: CastDueAt
+  nameWithType: RemainsRecord.CastDueAt
+  fullName: TDMaker.Core.RemainsRecord.CastDueAt
+- uid: TDMaker.Core.RemainsRecord.HasPath*
+  commentId: Overload:TDMaker.Core.RemainsRecord.HasPath
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_HasPath
+  name: HasPath
+  nameWithType: RemainsRecord.HasPath
+  fullName: TDMaker.Core.RemainsRecord.HasPath
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.RemainsRecord.PathIndex*
+  commentId: Overload:TDMaker.Core.RemainsRecord.PathIndex
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_PathIndex
+  name: PathIndex
+  nameWithType: RemainsRecord.PathIndex
+  fullName: TDMaker.Core.RemainsRecord.PathIndex
+- uid: TDMaker.Core.RemainsRecord.LaneIndex*
+  commentId: Overload:TDMaker.Core.RemainsRecord.LaneIndex
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_LaneIndex
+  name: LaneIndex
+  nameWithType: RemainsRecord.LaneIndex
+  fullName: TDMaker.Core.RemainsRecord.LaneIndex
+- uid: TDMaker.Core.RemainsRecord.NodeIndex*
+  commentId: Overload:TDMaker.Core.RemainsRecord.NodeIndex
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_NodeIndex
+  name: NodeIndex
+  nameWithType: RemainsRecord.NodeIndex
+  fullName: TDMaker.Core.RemainsRecord.NodeIndex
+- uid: TDMaker.Core.RemainsRecord.SegmentProgress*
+  commentId: Overload:TDMaker.Core.RemainsRecord.SegmentProgress
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_SegmentProgress
+  name: SegmentProgress
+  nameWithType: RemainsRecord.SegmentProgress
+  fullName: TDMaker.Core.RemainsRecord.SegmentProgress
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.RemainsRecord.IsConnecting*
+  commentId: Overload:TDMaker.Core.RemainsRecord.IsConnecting
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_IsConnecting
+  name: IsConnecting
+  nameWithType: RemainsRecord.IsConnecting
+  fullName: TDMaker.Core.RemainsRecord.IsConnecting
+- uid: TDMaker.Core.RemainsRecord.TravelAngle*
+  commentId: Overload:TDMaker.Core.RemainsRecord.TravelAngle
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_TravelAngle
+  name: TravelAngle
+  nameWithType: RemainsRecord.TravelAngle
+  fullName: TDMaker.Core.RemainsRecord.TravelAngle
+- uid: TDMaker.Core.RemainsRecord.LineageId*
+  commentId: Overload:TDMaker.Core.RemainsRecord.LineageId
+  isExternal: true
+  href: TDMaker.Core.RemainsRecord.html#TDMaker_Core_RemainsRecord_LineageId
+  name: LineageId
+  nameWithType: RemainsRecord.LineageId
+  fullName: TDMaker.Core.RemainsRecord.LineageId

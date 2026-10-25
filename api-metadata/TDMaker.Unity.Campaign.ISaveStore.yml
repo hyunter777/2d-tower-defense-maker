@@ -1,0 +1,300 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.ISaveStore
+  commentId: T:TDMaker.Unity.Campaign.ISaveStore
+  id: ISaveStore
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.ISaveStore.Delete(System.Int32)
+  - TDMaker.Unity.Campaign.ISaveStore.Exists(System.Int32)
+  - TDMaker.Unity.Campaign.ISaveStore.Load(System.Int32,TDMaker.Unity.Campaign.ProfileData@)
+  - TDMaker.Unity.Campaign.ISaveStore.Save(System.Int32,TDMaker.Unity.Campaign.ProfileData)
+  - TDMaker.Unity.Campaign.ISaveStore.SlotCount
+  langs:
+  - csharp
+  - vb
+  name: ISaveStore
+  nameWithType: ISaveStore
+  fullName: TDMaker.Unity.Campaign.ISaveStore
+  type: Interface
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'Where save slots live. Implementations never throw from these calls: failures are reported through the return
+    values
+
+    (and a console warning). Slot numbers start at 0. Unreadable content is never deleted silently: it is kept as a backup.'
+  example: []
+  syntax:
+    content: public interface ISaveStore
+    content.vb: Public Interface ISaveStore
+  derivedClasses:
+  - TDMaker.Unity.Campaign.JsonFileSaveStore
+  - TDMaker.Unity.Campaign.MemorySaveStore
+  - TDMaker.Unity.Campaign.PlayerPrefsSaveStore
+  - TDMaker.Unity.Campaign.TextSaveStore
+- uid: TDMaker.Unity.Campaign.ISaveStore.Exists(System.Int32)
+  commentId: M:TDMaker.Unity.Campaign.ISaveStore.Exists(System.Int32)
+  id: Exists(System.Int32)
+  parent: TDMaker.Unity.Campaign.ISaveStore
+  langs:
+  - csharp
+  - vb
+  name: Exists(int)
+  nameWithType: ISaveStore.Exists(int)
+  fullName: TDMaker.Unity.Campaign.ISaveStore.Exists(int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Whether <code class="paramref">slot</code> holds data.
+  example: []
+  syntax:
+    content: bool Exists(int slot)
+    parameters:
+    - id: slot
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Function Exists(slot As Integer) As Boolean
+  overload: TDMaker.Unity.Campaign.ISaveStore.Exists*
+  nameWithType.vb: ISaveStore.Exists(Integer)
+  fullName.vb: TDMaker.Unity.Campaign.ISaveStore.Exists(Integer)
+  name.vb: Exists(Integer)
+- uid: TDMaker.Unity.Campaign.ISaveStore.Load(System.Int32,TDMaker.Unity.Campaign.ProfileData@)
+  commentId: M:TDMaker.Unity.Campaign.ISaveStore.Load(System.Int32,TDMaker.Unity.Campaign.ProfileData@)
+  id: Load(System.Int32,TDMaker.Unity.Campaign.ProfileData@)
+  parent: TDMaker.Unity.Campaign.ISaveStore
+  langs:
+  - csharp
+  - vb
+  name: Load(int, out ProfileData)
+  nameWithType: ISaveStore.Load(int, out ProfileData)
+  fullName: TDMaker.Unity.Campaign.ISaveStore.Load(int, out TDMaker.Unity.Campaign.ProfileData)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Reads a slot. <code class="paramref">data</code> is set for <xref href="TDMaker.Unity.Campaign.SaveLoadStatus.Loaded"
+    data-throw-if-not-resolved="false"></xref> and <xref href="TDMaker.Unity.Campaign.SaveLoadStatus.Migrated" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: SaveLoadStatus Load(int slot, out ProfileData data)
+    parameters:
+    - id: slot
+      type: System.Int32
+    - id: data
+      type: TDMaker.Unity.Campaign.ProfileData
+    return:
+      type: TDMaker.Unity.Campaign.SaveLoadStatus
+    content.vb: Function Load(slot As Integer, data As ProfileData) As SaveLoadStatus
+  overload: TDMaker.Unity.Campaign.ISaveStore.Load*
+  nameWithType.vb: ISaveStore.Load(Integer, ProfileData)
+  fullName.vb: TDMaker.Unity.Campaign.ISaveStore.Load(Integer, TDMaker.Unity.Campaign.ProfileData)
+  name.vb: Load(Integer, ProfileData)
+- uid: TDMaker.Unity.Campaign.ISaveStore.Save(System.Int32,TDMaker.Unity.Campaign.ProfileData)
+  commentId: M:TDMaker.Unity.Campaign.ISaveStore.Save(System.Int32,TDMaker.Unity.Campaign.ProfileData)
+  id: Save(System.Int32,TDMaker.Unity.Campaign.ProfileData)
+  parent: TDMaker.Unity.Campaign.ISaveStore
+  langs:
+  - csharp
+  - vb
+  name: Save(int, ProfileData)
+  nameWithType: ISaveStore.Save(int, ProfileData)
+  fullName: TDMaker.Unity.Campaign.ISaveStore.Save(int, TDMaker.Unity.Campaign.ProfileData)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Writes a slot (all or nothing where the storage allows it). Returns false on failure.
+  example: []
+  syntax:
+    content: bool Save(int slot, ProfileData data)
+    parameters:
+    - id: slot
+      type: System.Int32
+    - id: data
+      type: TDMaker.Unity.Campaign.ProfileData
+    return:
+      type: System.Boolean
+    content.vb: Function Save(slot As Integer, data As ProfileData) As Boolean
+  overload: TDMaker.Unity.Campaign.ISaveStore.Save*
+  nameWithType.vb: ISaveStore.Save(Integer, ProfileData)
+  fullName.vb: TDMaker.Unity.Campaign.ISaveStore.Save(Integer, TDMaker.Unity.Campaign.ProfileData)
+  name.vb: Save(Integer, ProfileData)
+- uid: TDMaker.Unity.Campaign.ISaveStore.Delete(System.Int32)
+  commentId: M:TDMaker.Unity.Campaign.ISaveStore.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: TDMaker.Unity.Campaign.ISaveStore
+  langs:
+  - csharp
+  - vb
+  name: Delete(int)
+  nameWithType: ISaveStore.Delete(int)
+  fullName: TDMaker.Unity.Campaign.ISaveStore.Delete(int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Deletes a slot (the player asked for it). Returns false on failure.
+  example: []
+  syntax:
+    content: bool Delete(int slot)
+    parameters:
+    - id: slot
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Function Delete(slot As Integer) As Boolean
+  overload: TDMaker.Unity.Campaign.ISaveStore.Delete*
+  nameWithType.vb: ISaveStore.Delete(Integer)
+  fullName.vb: TDMaker.Unity.Campaign.ISaveStore.Delete(Integer)
+  name.vb: Delete(Integer)
+- uid: TDMaker.Unity.Campaign.ISaveStore.SlotCount
+  commentId: P:TDMaker.Unity.Campaign.ISaveStore.SlotCount
+  id: SlotCount
+  parent: TDMaker.Unity.Campaign.ISaveStore
+  langs:
+  - csharp
+  - vb
+  name: SlotCount
+  nameWithType: ISaveStore.SlotCount
+  fullName: TDMaker.Unity.Campaign.ISaveStore.SlotCount
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Number of slots offered (slot pickers show this many).
+  example: []
+  syntax:
+    content: int SlotCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property SlotCount As Integer
+  overload: TDMaker.Unity.Campaign.ISaveStore.SlotCount*
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.ISaveStore.Exists*
+  commentId: Overload:TDMaker.Unity.Campaign.ISaveStore.Exists
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ISaveStore.html#TDMaker_Unity_Campaign_ISaveStore_Exists_System_Int32_
+  name: Exists
+  nameWithType: ISaveStore.Exists
+  fullName: TDMaker.Unity.Campaign.ISaveStore.Exists
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus.Loaded
+  commentId: F:TDMaker.Unity.Campaign.SaveLoadStatus.Loaded
+  isExternal: true
+  href: TDMaker.Unity.Campaign.SaveLoadStatus.html#TDMaker_Unity_Campaign_SaveLoadStatus_Loaded
+  name: Loaded
+  nameWithType: SaveLoadStatus.Loaded
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus.Loaded
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus.Migrated
+  commentId: F:TDMaker.Unity.Campaign.SaveLoadStatus.Migrated
+  isExternal: true
+  href: TDMaker.Unity.Campaign.SaveLoadStatus.html#TDMaker_Unity_Campaign_SaveLoadStatus_Migrated
+  name: Migrated
+  nameWithType: SaveLoadStatus.Migrated
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus.Migrated
+- uid: TDMaker.Unity.Campaign.ISaveStore.Load*
+  commentId: Overload:TDMaker.Unity.Campaign.ISaveStore.Load
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ISaveStore.html#TDMaker_Unity_Campaign_ISaveStore_Load_System_Int32_TDMaker_Unity_Campaign_ProfileData__
+  name: Load
+  nameWithType: ISaveStore.Load
+  fullName: TDMaker.Unity.Campaign.ISaveStore.Load
+- uid: TDMaker.Unity.Campaign.ProfileData
+  commentId: T:TDMaker.Unity.Campaign.ProfileData
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html
+  name: ProfileData
+  nameWithType: ProfileData
+  fullName: TDMaker.Unity.Campaign.ProfileData
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus
+  commentId: T:TDMaker.Unity.Campaign.SaveLoadStatus
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.SaveLoadStatus.html
+  name: SaveLoadStatus
+  nameWithType: SaveLoadStatus
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus
+- uid: TDMaker.Unity.Campaign.ISaveStore.Save*
+  commentId: Overload:TDMaker.Unity.Campaign.ISaveStore.Save
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ISaveStore.html#TDMaker_Unity_Campaign_ISaveStore_Save_System_Int32_TDMaker_Unity_Campaign_ProfileData_
+  name: Save
+  nameWithType: ISaveStore.Save
+  fullName: TDMaker.Unity.Campaign.ISaveStore.Save
+- uid: TDMaker.Unity.Campaign.ISaveStore.Delete*
+  commentId: Overload:TDMaker.Unity.Campaign.ISaveStore.Delete
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ISaveStore.html#TDMaker_Unity_Campaign_ISaveStore_Delete_System_Int32_
+  name: Delete
+  nameWithType: ISaveStore.Delete
+  fullName: TDMaker.Unity.Campaign.ISaveStore.Delete
+- uid: TDMaker.Unity.Campaign.ISaveStore.SlotCount*
+  commentId: Overload:TDMaker.Unity.Campaign.ISaveStore.SlotCount
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ISaveStore.html#TDMaker_Unity_Campaign_ISaveStore_SlotCount
+  name: SlotCount
+  nameWithType: ISaveStore.SlotCount
+  fullName: TDMaker.Unity.Campaign.ISaveStore.SlotCount

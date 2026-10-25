@@ -1,0 +1,364 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Commands.SellTower
+  commentId: T:TDMaker.Core.Commands.SellTower
+  id: SellTower
+  parent: TDMaker.Core.Commands
+  children:
+  - TDMaker.Core.Commands.SellTower.#ctor(System.Int32)
+  - TDMaker.Core.Commands.SellTower.EntityId
+  langs:
+  - csharp
+  - vb
+  name: SellTower
+  nameWithType: SellTower
+  fullName: TDMaker.Core.Commands.SellTower
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Commands
+  summary: Sells a tower and removes its soldiers.
+  example: []
+  syntax:
+    content: 'public sealed class SellTower : ICommand'
+    content.vb: Public NotInheritable Class SellTower Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - TDMaker.Core.Commands.ICommand
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Commands.SellTower.#ctor(System.Int32)
+  commentId: M:TDMaker.Core.Commands.SellTower.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: TDMaker.Core.Commands.SellTower
+  langs:
+  - csharp
+  - vb
+  name: SellTower(int)
+  nameWithType: SellTower.SellTower(int)
+  fullName: TDMaker.Core.Commands.SellTower.SellTower(int)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Commands
+  summary: Creates a sell command.
+  example: []
+  syntax:
+    content: public SellTower(int entityId)
+    parameters:
+    - id: entityId
+      type: System.Int32
+    content.vb: Public Sub New(entityId As Integer)
+  overload: TDMaker.Core.Commands.SellTower.#ctor*
+  nameWithType.vb: SellTower.New(Integer)
+  fullName.vb: TDMaker.Core.Commands.SellTower.New(Integer)
+  name.vb: New(Integer)
+- uid: TDMaker.Core.Commands.SellTower.EntityId
+  commentId: P:TDMaker.Core.Commands.SellTower.EntityId
+  id: EntityId
+  parent: TDMaker.Core.Commands.SellTower
+  langs:
+  - csharp
+  - vb
+  name: EntityId
+  nameWithType: SellTower.EntityId
+  fullName: TDMaker.Core.Commands.SellTower.EntityId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Commands
+  summary: Tower identifier.
+  example: []
+  syntax:
+    content: public int EntityId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property EntityId As Integer
+  overload: TDMaker.Core.Commands.SellTower.EntityId*
+references:
+- uid: TDMaker.Core.Commands
+  commentId: N:TDMaker.Core.Commands
+  isExternal: true
+  name: TDMaker.Core.Commands
+  nameWithType: TDMaker.Core.Commands
+  fullName: TDMaker.Core.Commands
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TDMaker.Core.Commands.ICommand
+  commentId: T:TDMaker.Core.Commands.ICommand
+  parent: TDMaker.Core.Commands
+  isExternal: true
+  href: TDMaker.Core.Commands.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: TDMaker.Core.Commands.ICommand
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Commands.SellTower.#ctor*
+  commentId: Overload:TDMaker.Core.Commands.SellTower.#ctor
+  isExternal: true
+  href: TDMaker.Core.Commands.SellTower.html#TDMaker_Core_Commands_SellTower__ctor_System_Int32_
+  name: SellTower
+  nameWithType: SellTower.SellTower
+  fullName: TDMaker.Core.Commands.SellTower.SellTower
+  nameWithType.vb: SellTower.New
+  fullName.vb: TDMaker.Core.Commands.SellTower.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Commands.SellTower.EntityId*
+  commentId: Overload:TDMaker.Core.Commands.SellTower.EntityId
+  isExternal: true
+  href: TDMaker.Core.Commands.SellTower.html#TDMaker_Core_Commands_SellTower_EntityId
+  name: EntityId
+  nameWithType: SellTower.EntityId
+  fullName: TDMaker.Core.Commands.SellTower.EntityId

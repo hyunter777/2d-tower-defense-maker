@@ -1,0 +1,2467 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.MapEditing
+  commentId: T:TDMaker.Editor.MapEditing
+  id: MapEditing
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.MapEditing.Align(System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},System.Int32)
+  - TDMaker.Editor.MapEditing.ApplyBackground(TDMaker.Unity.View.LevelView,TDMaker.Unity.View.TDCameraController,UnityEngine.Sprite,UnityEngine.Vector2)
+  - TDMaker.Editor.MapEditing.AutoRally(TDMaker.Unity.Authoring.BuildSlotAuthoring,System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData},System.Boolean)
+  - TDMaker.Editor.MapEditing.BackgroundHints(UnityEngine.Sprite)
+  - TDMaker.Editor.MapEditing.BakeToAsset(TDMaker.Unity.Authoring.LevelAuthoring,System.Boolean)
+  - TDMaker.Editor.MapEditing.CameraBounds(TDMaker.Unity.View.TDCameraController)
+  - TDMaker.Editor.MapEditing.Changed(TDMaker.Unity.Authoring.PathAuthoring)
+  - TDMaker.Editor.MapEditing.CreateLevel(TDMaker.Unity.Authoring.LevelAsset)
+  - TDMaker.Editor.MapEditing.CreatePath(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Vector2,System.Boolean,System.Int32,System.Single,System.Single,System.String)
+  - TDMaker.Editor.MapEditing.CreateSlot(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Vector2,TDMaker.Unity.Authoring.TowerAsset)
+  - TDMaker.Editor.MapEditing.DeletePath(TDMaker.Unity.Authoring.LevelAuthoring,TDMaker.Unity.Authoring.PathAuthoring)
+  - TDMaker.Editor.MapEditing.DeletePoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  - TDMaker.Editor.MapEditing.DeleteSlots(TDMaker.Unity.Authoring.LevelAuthoring,System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring})
+  - TDMaker.Editor.MapEditing.Distribute(System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},System.Int32)
+  - TDMaker.Editor.MapEditing.DuplicateSlots(TDMaker.Unity.Authoring.LevelAuthoring,System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},UnityEngine.Vector2)
+  - TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  - TDMaker.Editor.MapEditing.EditWidths(TDMaker.Unity.Authoring.PathAuthoring)
+  - TDMaker.Editor.MapEditing.EntryOf(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2@,UnityEngine.Vector2@)
+  - TDMaker.Editor.MapEditing.FitCamera(TDMaker.Unity.View.TDCameraController,UnityEngine.Rect)
+  - TDMaker.Editor.MapEditing.InsertPoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,UnityEngine.Vector2,System.String)
+  - TDMaker.Editor.MapEditing.MinPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  - TDMaker.Editor.MapEditing.MovePath(TDMaker.Unity.Authoring.LevelAuthoring,TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  - TDMaker.Editor.MapEditing.MovePoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,UnityEngine.Vector2)
+  - TDMaker.Editor.MapEditing.PathColor(System.Int32)
+  - TDMaker.Editor.MapEditing.Paths(TDMaker.Unity.Authoring.LevelAuthoring)
+  - TDMaker.Editor.MapEditing.PointWidth(TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  - TDMaker.Editor.MapEditing.RemapGeometry(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Rect,UnityEngine.Rect)
+  - TDMaker.Editor.MapEditing.Rename(UnityEngine.Object,System.String)
+  - TDMaker.Editor.MapEditing.ResetWaveCall(TDMaker.Unity.Authoring.PathAuthoring)
+  - TDMaker.Editor.MapEditing.Reverse(TDMaker.Unity.Authoring.PathAuthoring)
+  - TDMaker.Editor.MapEditing.ScenePaths(TDMaker.Unity.Authoring.LevelAuthoring)
+  - TDMaker.Editor.MapEditing.SetCurve(TDMaker.Unity.Authoring.PathAuthoring,System.Boolean)
+  - TDMaker.Editor.MapEditing.SetNodeSpacing(TDMaker.Unity.Authoring.PathAuthoring,System.Single)
+  - TDMaker.Editor.MapEditing.SetPixelsPerUnit(UnityEngine.Sprite,System.Single)
+  - TDMaker.Editor.MapEditing.SetPointWidth(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Single)
+  - TDMaker.Editor.MapEditing.SetWaveCall(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2)
+  - TDMaker.Editor.MapEditing.Slots(TDMaker.Unity.Authoring.LevelAuthoring)
+  - TDMaker.Editor.MapEditing.SlotsRoot(TDMaker.Unity.Authoring.LevelAuthoring)
+  - TDMaker.Editor.MapEditing.SlotsRootName
+  - TDMaker.Editor.MapEditing.Snap(UnityEngine.Vector2,System.Single)
+  - TDMaker.Editor.MapEditing.SpriteFrom(UnityEngine.Object)
+  - TDMaker.Editor.MapEditing.WaveCallPosition(TDMaker.Unity.Authoring.PathAuthoring)
+  langs:
+  - csharp
+  - vb
+  name: MapEditing
+  nameWithType: MapEditing
+  fullName: TDMaker.Editor.MapEditing
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Undoable level-authoring operations behind the Map Editor (and usable from your own editor scripts): edit points
+    of
+
+    curve and polyline paths, create/delete/duplicate/align build slots with automatic rally points, path order, painted
+
+    background setup and baking scene geometry into a <xref href="TDMaker.Unity.Authoring.LevelAsset" data-throw-if-not-resolved="false"></xref>.'
+  example: []
+  syntax:
+    content: public static class MapEditing
+    content.vb: Public Module MapEditing
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.MapEditing.SlotsRootName
+  commentId: F:TDMaker.Editor.MapEditing.SlotsRootName
+  id: SlotsRootName
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: SlotsRootName
+  nameWithType: MapEditing.SlotsRootName
+  fullName: TDMaker.Editor.MapEditing.SlotsRootName
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Name of the child object that holds build slots created by the Map Editor.
+  example: []
+  syntax:
+    content: public const string SlotsRootName = "Build Slots"
+    return:
+      type: System.String
+    content.vb: Public Const SlotsRootName As String = "Build Slots"
+- uid: TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  id: EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: EditPoints(PathAuthoring)
+  nameWithType: MapEditing.EditPoints(PathAuthoring)
+  fullName: TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'The points the user edits: curve control points in curve mode, else the polyline points (local space).'
+  example: []
+  syntax:
+    content: public static List<Vector2> EditPoints(PathAuthoring path)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    return:
+      type: System.Collections.Generic.List{UnityEngine.Vector2}
+    content.vb: Public Shared Function EditPoints(path As PathAuthoring) As List(Of Vector2)
+  overload: TDMaker.Editor.MapEditing.EditPoints*
+- uid: TDMaker.Editor.MapEditing.EditWidths(TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.EditWidths(TDMaker.Unity.Authoring.PathAuthoring)
+  id: EditWidths(TDMaker.Unity.Authoring.PathAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: EditWidths(PathAuthoring)
+  nameWithType: MapEditing.EditWidths(PathAuthoring)
+  fullName: TDMaker.Editor.MapEditing.EditWidths(TDMaker.Unity.Authoring.PathAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Per-edit-point lane spacing overrides (index-aligned with <xref href="TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)"
+    data-throw-if-not-resolved="false"></xref>; may be shorter).
+  example: []
+  syntax:
+    content: public static List<float> EditWidths(PathAuthoring path)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    return:
+      type: System.Collections.Generic.List{System.Single}
+    content.vb: Public Shared Function EditWidths(path As PathAuthoring) As List(Of Single)
+  overload: TDMaker.Editor.MapEditing.EditWidths*
+- uid: TDMaker.Editor.MapEditing.MinPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.MinPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  id: MinPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: MinPoints(PathAuthoring)
+  nameWithType: MapEditing.MinPoints(PathAuthoring)
+  fullName: TDMaker.Editor.MapEditing.MinPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Smallest number of edit points a path keeps when deleting.
+  example: []
+  syntax:
+    content: public static int MinPoints(PathAuthoring path)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function MinPoints(path As PathAuthoring) As Integer
+  overload: TDMaker.Editor.MapEditing.MinPoints*
+- uid: TDMaker.Editor.MapEditing.InsertPoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,UnityEngine.Vector2,System.String)
+  commentId: M:TDMaker.Editor.MapEditing.InsertPoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,UnityEngine.Vector2,System.String)
+  id: InsertPoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,UnityEngine.Vector2,System.String)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: InsertPoint(PathAuthoring, int, Vector2, string)
+  nameWithType: MapEditing.InsertPoint(PathAuthoring, int, Vector2, string)
+  fullName: TDMaker.Editor.MapEditing.InsertPoint(TDMaker.Unity.Authoring.PathAuthoring, int, UnityEngine.Vector2, string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Inserts an edit point (local space) and regenerates the curve.
+  example: []
+  syntax:
+    content: public static void InsertPoint(PathAuthoring path, int index, Vector2 local, string undoName = "Add Path Point")
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: index
+      type: System.Int32
+    - id: local
+      type: UnityEngine.Vector2
+    - id: undoName
+      type: System.String
+    content.vb: Public Shared Sub InsertPoint(path As PathAuthoring, index As Integer, local As Vector2, undoName As String
+      = "Add Path Point")
+  overload: TDMaker.Editor.MapEditing.InsertPoint*
+  nameWithType.vb: MapEditing.InsertPoint(PathAuthoring, Integer, Vector2, String)
+  fullName.vb: TDMaker.Editor.MapEditing.InsertPoint(TDMaker.Unity.Authoring.PathAuthoring, Integer, UnityEngine.Vector2,
+    String)
+  name.vb: InsertPoint(PathAuthoring, Integer, Vector2, String)
+- uid: TDMaker.Editor.MapEditing.DeletePoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  commentId: M:TDMaker.Editor.MapEditing.DeletePoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  id: DeletePoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: DeletePoint(PathAuthoring, int)
+  nameWithType: MapEditing.DeletePoint(PathAuthoring, int)
+  fullName: TDMaker.Editor.MapEditing.DeletePoint(TDMaker.Unity.Authoring.PathAuthoring, int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Deletes an edit point; paths keep at least two.
+  example: []
+  syntax:
+    content: public static bool DeletePoint(PathAuthoring path, int index)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: index
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function DeletePoint(path As PathAuthoring, index As Integer) As Boolean
+  overload: TDMaker.Editor.MapEditing.DeletePoint*
+  nameWithType.vb: MapEditing.DeletePoint(PathAuthoring, Integer)
+  fullName.vb: TDMaker.Editor.MapEditing.DeletePoint(TDMaker.Unity.Authoring.PathAuthoring, Integer)
+  name.vb: DeletePoint(PathAuthoring, Integer)
+- uid: TDMaker.Editor.MapEditing.MovePoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,UnityEngine.Vector2)
+  commentId: M:TDMaker.Editor.MapEditing.MovePoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,UnityEngine.Vector2)
+  id: MovePoint(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,UnityEngine.Vector2)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: MovePoint(PathAuthoring, int, Vector2)
+  nameWithType: MapEditing.MovePoint(PathAuthoring, int, Vector2)
+  fullName: TDMaker.Editor.MapEditing.MovePoint(TDMaker.Unity.Authoring.PathAuthoring, int, UnityEngine.Vector2)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Moves an edit point to a local position.
+  example: []
+  syntax:
+    content: public static void MovePoint(PathAuthoring path, int index, Vector2 local)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: index
+      type: System.Int32
+    - id: local
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Sub MovePoint(path As PathAuthoring, index As Integer, local As Vector2)
+  overload: TDMaker.Editor.MapEditing.MovePoint*
+  nameWithType.vb: MapEditing.MovePoint(PathAuthoring, Integer, Vector2)
+  fullName.vb: TDMaker.Editor.MapEditing.MovePoint(TDMaker.Unity.Authoring.PathAuthoring, Integer, UnityEngine.Vector2)
+  name.vb: MovePoint(PathAuthoring, Integer, Vector2)
+- uid: TDMaker.Editor.MapEditing.SetPointWidth(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Single)
+  commentId: M:TDMaker.Editor.MapEditing.SetPointWidth(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Single)
+  id: SetPointWidth(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Single)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: SetPointWidth(PathAuthoring, int, float)
+  nameWithType: MapEditing.SetPointWidth(PathAuthoring, int, float)
+  fullName: TDMaker.Editor.MapEditing.SetPointWidth(TDMaker.Unity.Authoring.PathAuthoring, int, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Sets the lane spacing override of an edit point (zero or less clears it).
+  example: []
+  syntax:
+    content: public static void SetPointWidth(PathAuthoring path, int index, float spacing)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: index
+      type: System.Int32
+    - id: spacing
+      type: System.Single
+    content.vb: Public Shared Sub SetPointWidth(path As PathAuthoring, index As Integer, spacing As Single)
+  overload: TDMaker.Editor.MapEditing.SetPointWidth*
+  nameWithType.vb: MapEditing.SetPointWidth(PathAuthoring, Integer, Single)
+  fullName.vb: TDMaker.Editor.MapEditing.SetPointWidth(TDMaker.Unity.Authoring.PathAuthoring, Integer, Single)
+  name.vb: SetPointWidth(PathAuthoring, Integer, Single)
+- uid: TDMaker.Editor.MapEditing.PointWidth(TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  commentId: M:TDMaker.Editor.MapEditing.PointWidth(TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  id: PointWidth(TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: PointWidth(PathAuthoring, int)
+  nameWithType: MapEditing.PointWidth(PathAuthoring, int)
+  fullName: TDMaker.Editor.MapEditing.PointWidth(TDMaker.Unity.Authoring.PathAuthoring, int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Effective lane spacing at an edit point.
+  example: []
+  syntax:
+    content: public static float PointWidth(PathAuthoring path, int index)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: index
+      type: System.Int32
+    return:
+      type: System.Single
+    content.vb: Public Shared Function PointWidth(path As PathAuthoring, index As Integer) As Single
+  overload: TDMaker.Editor.MapEditing.PointWidth*
+  nameWithType.vb: MapEditing.PointWidth(PathAuthoring, Integer)
+  fullName.vb: TDMaker.Editor.MapEditing.PointWidth(TDMaker.Unity.Authoring.PathAuthoring, Integer)
+  name.vb: PointWidth(PathAuthoring, Integer)
+- uid: TDMaker.Editor.MapEditing.SetCurve(TDMaker.Unity.Authoring.PathAuthoring,System.Boolean)
+  commentId: M:TDMaker.Editor.MapEditing.SetCurve(TDMaker.Unity.Authoring.PathAuthoring,System.Boolean)
+  id: SetCurve(TDMaker.Unity.Authoring.PathAuthoring,System.Boolean)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: SetCurve(PathAuthoring, bool)
+  nameWithType: MapEditing.SetCurve(PathAuthoring, bool)
+  fullName: TDMaker.Editor.MapEditing.SetCurve(TDMaker.Unity.Authoring.PathAuthoring, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Switches curve mode. Turning it on with fewer than two control points seeds them from the current polyline (entry
+    to
+
+    exit), so the road keeps its shape; turning it off keeps the generated nodes as a plain polyline.'
+  example: []
+  syntax:
+    content: public static void SetCurve(PathAuthoring path, bool on)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: true
+      type: System.Boolean
+    content.vb: Public Shared Sub SetCurve(path As PathAuthoring, [on] As Boolean)
+  overload: TDMaker.Editor.MapEditing.SetCurve*
+  nameWithType.vb: MapEditing.SetCurve(PathAuthoring, Boolean)
+  fullName.vb: TDMaker.Editor.MapEditing.SetCurve(TDMaker.Unity.Authoring.PathAuthoring, Boolean)
+  name.vb: SetCurve(PathAuthoring, Boolean)
+- uid: TDMaker.Editor.MapEditing.SetNodeSpacing(TDMaker.Unity.Authoring.PathAuthoring,System.Single)
+  commentId: M:TDMaker.Editor.MapEditing.SetNodeSpacing(TDMaker.Unity.Authoring.PathAuthoring,System.Single)
+  id: SetNodeSpacing(TDMaker.Unity.Authoring.PathAuthoring,System.Single)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: SetNodeSpacing(PathAuthoring, float)
+  nameWithType: MapEditing.SetNodeSpacing(PathAuthoring, float)
+  fullName: TDMaker.Editor.MapEditing.SetNodeSpacing(TDMaker.Unity.Authoring.PathAuthoring, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Sets the curve node spacing and regenerates.
+  example: []
+  syntax:
+    content: public static void SetNodeSpacing(PathAuthoring path, float spacing)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: spacing
+      type: System.Single
+    content.vb: Public Shared Sub SetNodeSpacing(path As PathAuthoring, spacing As Single)
+  overload: TDMaker.Editor.MapEditing.SetNodeSpacing*
+  nameWithType.vb: MapEditing.SetNodeSpacing(PathAuthoring, Single)
+  fullName.vb: TDMaker.Editor.MapEditing.SetNodeSpacing(TDMaker.Unity.Authoring.PathAuthoring, Single)
+  name.vb: SetNodeSpacing(PathAuthoring, Single)
+- uid: TDMaker.Editor.MapEditing.Reverse(TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.Reverse(TDMaker.Unity.Authoring.PathAuthoring)
+  id: Reverse(TDMaker.Unity.Authoring.PathAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: Reverse(PathAuthoring)
+  nameWithType: MapEditing.Reverse(PathAuthoring)
+  fullName: TDMaker.Editor.MapEditing.Reverse(TDMaker.Unity.Authoring.PathAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Reverses travel direction (edit points, widths and wave-call override).
+  example: []
+  syntax:
+    content: public static void Reverse(PathAuthoring path)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    content.vb: Public Shared Sub Reverse(path As PathAuthoring)
+  overload: TDMaker.Editor.MapEditing.Reverse*
+- uid: TDMaker.Editor.MapEditing.Changed(TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.Changed(TDMaker.Unity.Authoring.PathAuthoring)
+  id: Changed(TDMaker.Unity.Authoring.PathAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: Changed(PathAuthoring)
+  nameWithType: MapEditing.Changed(PathAuthoring)
+  fullName: TDMaker.Editor.MapEditing.Changed(TDMaker.Unity.Authoring.PathAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Regenerates the curve (curve mode) and marks the path dirty. Call after editing edit points directly.
+  example: []
+  syntax:
+    content: public static void Changed(PathAuthoring path)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    content.vb: Public Shared Sub Changed(path As PathAuthoring)
+  overload: TDMaker.Editor.MapEditing.Changed*
+- uid: TDMaker.Editor.MapEditing.Paths(TDMaker.Unity.Authoring.LevelAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.Paths(TDMaker.Unity.Authoring.LevelAuthoring)
+  id: Paths(TDMaker.Unity.Authoring.LevelAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: Paths(LevelAuthoring)
+  nameWithType: MapEditing.Paths(LevelAuthoring)
+  fullName: TDMaker.Editor.MapEditing.Paths(TDMaker.Unity.Authoring.LevelAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Paths of a level in index order (the explicit list, else children in hierarchy order).
+  example: []
+  syntax:
+    content: public static List<PathAuthoring> Paths(LevelAuthoring level)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.PathAuthoring}
+    content.vb: Public Shared Function Paths(level As LevelAuthoring) As List(Of PathAuthoring)
+  overload: TDMaker.Editor.MapEditing.Paths*
+- uid: TDMaker.Editor.MapEditing.Slots(TDMaker.Unity.Authoring.LevelAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.Slots(TDMaker.Unity.Authoring.LevelAuthoring)
+  id: Slots(TDMaker.Unity.Authoring.LevelAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: Slots(LevelAuthoring)
+  nameWithType: MapEditing.Slots(LevelAuthoring)
+  fullName: TDMaker.Editor.MapEditing.Slots(TDMaker.Unity.Authoring.LevelAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Build slots of a level in index order (the explicit list, else children in hierarchy order).
+  example: []
+  syntax:
+    content: public static List<BuildSlotAuthoring> Slots(LevelAuthoring level)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+    content.vb: Public Shared Function Slots(level As LevelAuthoring) As List(Of BuildSlotAuthoring)
+  overload: TDMaker.Editor.MapEditing.Slots*
+- uid: TDMaker.Editor.MapEditing.ScenePaths(TDMaker.Unity.Authoring.LevelAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.ScenePaths(TDMaker.Unity.Authoring.LevelAuthoring)
+  id: ScenePaths(TDMaker.Unity.Authoring.LevelAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: ScenePaths(LevelAuthoring)
+  nameWithType: MapEditing.ScenePaths(LevelAuthoring)
+  fullName: TDMaker.Editor.MapEditing.ScenePaths(TDMaker.Unity.Authoring.LevelAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: World-space path data of the level's scene paths.
+  example: []
+  syntax:
+    content: public static List<PathData> ScenePaths(LevelAuthoring level)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.PathData}
+    content.vb: Public Shared Function ScenePaths(level As LevelAuthoring) As List(Of PathData)
+  overload: TDMaker.Editor.MapEditing.ScenePaths*
+- uid: TDMaker.Editor.MapEditing.CreateLevel(TDMaker.Unity.Authoring.LevelAsset)
+  commentId: M:TDMaker.Editor.MapEditing.CreateLevel(TDMaker.Unity.Authoring.LevelAsset)
+  id: CreateLevel(TDMaker.Unity.Authoring.LevelAsset)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: CreateLevel(LevelAsset)
+  nameWithType: MapEditing.CreateLevel(LevelAsset)
+  fullName: TDMaker.Editor.MapEditing.CreateLevel(TDMaker.Unity.Authoring.LevelAsset)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Creates a level root (Level Authoring) in the active scene.
+  example: []
+  syntax:
+    content: public static LevelAuthoring CreateLevel(LevelAsset asset = null)
+    parameters:
+    - id: asset
+      type: TDMaker.Unity.Authoring.LevelAsset
+    return:
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    content.vb: Public Shared Function CreateLevel(asset As LevelAsset = Nothing) As LevelAuthoring
+  overload: TDMaker.Editor.MapEditing.CreateLevel*
+- uid: TDMaker.Editor.MapEditing.CreatePath(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Vector2,System.Boolean,System.Int32,System.Single,System.Single,System.String)
+  commentId: M:TDMaker.Editor.MapEditing.CreatePath(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Vector2,System.Boolean,System.Int32,System.Single,System.Single,System.String)
+  id: CreatePath(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Vector2,System.Boolean,System.Int32,System.Single,System.Single,System.String)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: CreatePath(LevelAuthoring, Vector2, bool, int, float, float, string)
+  nameWithType: MapEditing.CreatePath(LevelAuthoring, Vector2, bool, int, float, float, string)
+  fullName: TDMaker.Editor.MapEditing.CreatePath(TDMaker.Unity.Authoring.LevelAuthoring, UnityEngine.Vector2, bool, int, float,
+    float, string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Creates a path under the level with its first edit point at <code class="paramref">worldPoint</code>.
+  example: []
+  syntax:
+    content: public static PathAuthoring CreatePath(LevelAuthoring level, Vector2 worldPoint, bool curve = true, int laneCount
+      = 2, float laneSpacing = 0.4, float nodeSpacing = 0.6, string name = null)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    - id: worldPoint
+      type: UnityEngine.Vector2
+    - id: curve
+      type: System.Boolean
+    - id: laneCount
+      type: System.Int32
+    - id: laneSpacing
+      type: System.Single
+    - id: nodeSpacing
+      type: System.Single
+    - id: name
+      type: System.String
+    return:
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    content.vb: Public Shared Function CreatePath(level As LevelAuthoring, worldPoint As Vector2, curve As Boolean = True,
+      laneCount As Integer = 2, laneSpacing As Single = 0.4, nodeSpacing As Single = 0.6, name As String = Nothing) As PathAuthoring
+  overload: TDMaker.Editor.MapEditing.CreatePath*
+  nameWithType.vb: MapEditing.CreatePath(LevelAuthoring, Vector2, Boolean, Integer, Single, Single, String)
+  fullName.vb: TDMaker.Editor.MapEditing.CreatePath(TDMaker.Unity.Authoring.LevelAuthoring, UnityEngine.Vector2, Boolean,
+    Integer, Single, Single, String)
+  name.vb: CreatePath(LevelAuthoring, Vector2, Boolean, Integer, Single, Single, String)
+- uid: TDMaker.Editor.MapEditing.PathColor(System.Int32)
+  commentId: M:TDMaker.Editor.MapEditing.PathColor(System.Int32)
+  id: PathColor(System.Int32)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: PathColor(int)
+  nameWithType: MapEditing.PathColor(int)
+  fullName: TDMaker.Editor.MapEditing.PathColor(int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: A distinct gizmo color per path index.
+  example: []
+  syntax:
+    content: public static Color PathColor(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared Function PathColor(index As Integer) As Color
+  overload: TDMaker.Editor.MapEditing.PathColor*
+  nameWithType.vb: MapEditing.PathColor(Integer)
+  fullName.vb: TDMaker.Editor.MapEditing.PathColor(Integer)
+  name.vb: PathColor(Integer)
+- uid: TDMaker.Editor.MapEditing.DeletePath(TDMaker.Unity.Authoring.LevelAuthoring,TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.DeletePath(TDMaker.Unity.Authoring.LevelAuthoring,TDMaker.Unity.Authoring.PathAuthoring)
+  id: DeletePath(TDMaker.Unity.Authoring.LevelAuthoring,TDMaker.Unity.Authoring.PathAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: DeletePath(LevelAuthoring, PathAuthoring)
+  nameWithType: MapEditing.DeletePath(LevelAuthoring, PathAuthoring)
+  fullName: TDMaker.Editor.MapEditing.DeletePath(TDMaker.Unity.Authoring.LevelAuthoring, TDMaker.Unity.Authoring.PathAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Deletes a path object and removes it from the level's list.
+  example: []
+  syntax:
+    content: public static void DeletePath(LevelAuthoring level, PathAuthoring path)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    content.vb: Public Shared Sub DeletePath(level As LevelAuthoring, path As PathAuthoring)
+  overload: TDMaker.Editor.MapEditing.DeletePath*
+- uid: TDMaker.Editor.MapEditing.MovePath(TDMaker.Unity.Authoring.LevelAuthoring,TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  commentId: M:TDMaker.Editor.MapEditing.MovePath(TDMaker.Unity.Authoring.LevelAuthoring,TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  id: MovePath(TDMaker.Unity.Authoring.LevelAuthoring,TDMaker.Unity.Authoring.PathAuthoring,System.Int32)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: MovePath(LevelAuthoring, PathAuthoring, int)
+  nameWithType: MapEditing.MovePath(LevelAuthoring, PathAuthoring, int)
+  fullName: TDMaker.Editor.MapEditing.MovePath(TDMaker.Unity.Authoring.LevelAuthoring, TDMaker.Unity.Authoring.PathAuthoring,
+    int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Moves a path by <code class="paramref">delta</code> places in the level order (waves refer to paths by index).
+  example: []
+  syntax:
+    content: public static void MovePath(LevelAuthoring level, PathAuthoring path, int delta)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: delta
+      type: System.Int32
+    content.vb: Public Shared Sub MovePath(level As LevelAuthoring, path As PathAuthoring, delta As Integer)
+  overload: TDMaker.Editor.MapEditing.MovePath*
+  nameWithType.vb: MapEditing.MovePath(LevelAuthoring, PathAuthoring, Integer)
+  fullName.vb: TDMaker.Editor.MapEditing.MovePath(TDMaker.Unity.Authoring.LevelAuthoring, TDMaker.Unity.Authoring.PathAuthoring,
+    Integer)
+  name.vb: MovePath(LevelAuthoring, PathAuthoring, Integer)
+- uid: TDMaker.Editor.MapEditing.Rename(UnityEngine.Object,System.String)
+  commentId: M:TDMaker.Editor.MapEditing.Rename(UnityEngine.Object,System.String)
+  id: Rename(UnityEngine.Object,System.String)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: Rename(Object, string)
+  nameWithType: MapEditing.Rename(Object, string)
+  fullName: TDMaker.Editor.MapEditing.Rename(UnityEngine.Object, string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Renames a scene object with undo.
+  example: []
+  syntax:
+    content: public static void Rename(Object target, string newName)
+    parameters:
+    - id: target
+      type: UnityEngine.Object
+    - id: newName
+      type: System.String
+    content.vb: Public Shared Sub Rename(target As [Object], newName As String)
+  overload: TDMaker.Editor.MapEditing.Rename*
+  nameWithType.vb: MapEditing.Rename(Object, String)
+  fullName.vb: TDMaker.Editor.MapEditing.Rename(UnityEngine.Object, String)
+  name.vb: Rename(Object, String)
+- uid: TDMaker.Editor.MapEditing.SlotsRoot(TDMaker.Unity.Authoring.LevelAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.SlotsRoot(TDMaker.Unity.Authoring.LevelAuthoring)
+  id: SlotsRoot(TDMaker.Unity.Authoring.LevelAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: SlotsRoot(LevelAuthoring)
+  nameWithType: MapEditing.SlotsRoot(LevelAuthoring)
+  fullName: TDMaker.Editor.MapEditing.SlotsRoot(TDMaker.Unity.Authoring.LevelAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The child that holds build slots (created when missing).
+  example: []
+  syntax:
+    content: public static Transform SlotsRoot(LevelAuthoring level)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public Shared Function SlotsRoot(level As LevelAuthoring) As Transform
+  overload: TDMaker.Editor.MapEditing.SlotsRoot*
+- uid: TDMaker.Editor.MapEditing.CreateSlot(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Vector2,TDMaker.Unity.Authoring.TowerAsset)
+  commentId: M:TDMaker.Editor.MapEditing.CreateSlot(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Vector2,TDMaker.Unity.Authoring.TowerAsset)
+  id: CreateSlot(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Vector2,TDMaker.Unity.Authoring.TowerAsset)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: CreateSlot(LevelAuthoring, Vector2, TowerAsset)
+  nameWithType: MapEditing.CreateSlot(LevelAuthoring, Vector2, TowerAsset)
+  fullName: TDMaker.Editor.MapEditing.CreateSlot(TDMaker.Unity.Authoring.LevelAuthoring, UnityEngine.Vector2, TDMaker.Unity.Authoring.TowerAsset)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Places a build slot at <code class="paramref">world</code>; its rally point goes to the nearest point on the nearest
+    ground path
+
+    (when the level has one). Optional <code class="paramref">previewTower</code> is drawn around the slot in the Scene view.'
+  example: []
+  syntax:
+    content: public static BuildSlotAuthoring CreateSlot(LevelAuthoring level, Vector2 world, TowerAsset previewTower = null)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    - id: world
+      type: UnityEngine.Vector2
+    - id: previewTower
+      type: TDMaker.Unity.Authoring.TowerAsset
+    return:
+      type: TDMaker.Unity.Authoring.BuildSlotAuthoring
+    content.vb: Public Shared Function CreateSlot(level As LevelAuthoring, world As Vector2, previewTower As TowerAsset =
+      Nothing) As BuildSlotAuthoring
+  overload: TDMaker.Editor.MapEditing.CreateSlot*
+- uid: TDMaker.Editor.MapEditing.AutoRally(TDMaker.Unity.Authoring.BuildSlotAuthoring,System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData},System.Boolean)
+  commentId: M:TDMaker.Editor.MapEditing.AutoRally(TDMaker.Unity.Authoring.BuildSlotAuthoring,System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData},System.Boolean)
+  id: AutoRally(TDMaker.Unity.Authoring.BuildSlotAuthoring,System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData},System.Boolean)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: AutoRally(BuildSlotAuthoring, IReadOnlyList<PathData>, bool)
+  nameWithType: MapEditing.AutoRally(BuildSlotAuthoring, IReadOnlyList<PathData>, bool)
+  fullName: TDMaker.Editor.MapEditing.AutoRally(TDMaker.Unity.Authoring.BuildSlotAuthoring, System.Collections.Generic.IReadOnlyList<TDMaker.Unity.Authoring.PathData>,
+    bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Moves a slot's rally point to the nearest point on the nearest ground path. Returns false when there is no path.
+  example: []
+  syntax:
+    content: public static bool AutoRally(BuildSlotAuthoring slot, IReadOnlyList<PathData> paths, bool recordUndo = true)
+    parameters:
+    - id: slot
+      type: TDMaker.Unity.Authoring.BuildSlotAuthoring
+    - id: paths
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData}
+    - id: recordUndo
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AutoRally(slot As BuildSlotAuthoring, paths As IReadOnlyList(Of PathData), recordUndo
+      As Boolean = True) As Boolean
+  overload: TDMaker.Editor.MapEditing.AutoRally*
+  nameWithType.vb: MapEditing.AutoRally(BuildSlotAuthoring, IReadOnlyList(Of PathData), Boolean)
+  fullName.vb: TDMaker.Editor.MapEditing.AutoRally(TDMaker.Unity.Authoring.BuildSlotAuthoring, System.Collections.Generic.IReadOnlyList(Of
+    TDMaker.Unity.Authoring.PathData), Boolean)
+  name.vb: AutoRally(BuildSlotAuthoring, IReadOnlyList(Of PathData), Boolean)
+- uid: TDMaker.Editor.MapEditing.DeleteSlots(TDMaker.Unity.Authoring.LevelAuthoring,System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring})
+  commentId: M:TDMaker.Editor.MapEditing.DeleteSlots(TDMaker.Unity.Authoring.LevelAuthoring,System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring})
+  id: DeleteSlots(TDMaker.Unity.Authoring.LevelAuthoring,System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring})
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: DeleteSlots(LevelAuthoring, IList<BuildSlotAuthoring>)
+  nameWithType: MapEditing.DeleteSlots(LevelAuthoring, IList<BuildSlotAuthoring>)
+  fullName: TDMaker.Editor.MapEditing.DeleteSlots(TDMaker.Unity.Authoring.LevelAuthoring, System.Collections.Generic.IList<TDMaker.Unity.Authoring.BuildSlotAuthoring>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Deletes build slots and removes them from the level's list.
+  example: []
+  syntax:
+    content: public static void DeleteSlots(LevelAuthoring level, IList<BuildSlotAuthoring> slots)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    - id: slots
+      type: System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+    content.vb: Public Shared Sub DeleteSlots(level As LevelAuthoring, slots As IList(Of BuildSlotAuthoring))
+  overload: TDMaker.Editor.MapEditing.DeleteSlots*
+  nameWithType.vb: MapEditing.DeleteSlots(LevelAuthoring, IList(Of BuildSlotAuthoring))
+  fullName.vb: TDMaker.Editor.MapEditing.DeleteSlots(TDMaker.Unity.Authoring.LevelAuthoring, System.Collections.Generic.IList(Of
+    TDMaker.Unity.Authoring.BuildSlotAuthoring))
+  name.vb: DeleteSlots(LevelAuthoring, IList(Of BuildSlotAuthoring))
+- uid: TDMaker.Editor.MapEditing.DuplicateSlots(TDMaker.Unity.Authoring.LevelAuthoring,System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},UnityEngine.Vector2)
+  commentId: M:TDMaker.Editor.MapEditing.DuplicateSlots(TDMaker.Unity.Authoring.LevelAuthoring,System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},UnityEngine.Vector2)
+  id: DuplicateSlots(TDMaker.Unity.Authoring.LevelAuthoring,System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},UnityEngine.Vector2)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: DuplicateSlots(LevelAuthoring, IList<BuildSlotAuthoring>, Vector2)
+  nameWithType: MapEditing.DuplicateSlots(LevelAuthoring, IList<BuildSlotAuthoring>, Vector2)
+  fullName: TDMaker.Editor.MapEditing.DuplicateSlots(TDMaker.Unity.Authoring.LevelAuthoring, System.Collections.Generic.IList<TDMaker.Unity.Authoring.BuildSlotAuthoring>,
+    UnityEngine.Vector2)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Duplicates build slots shifted by <code class="paramref">offset</code>; the copies get fresh automatic rally points.
+  example: []
+  syntax:
+    content: public static List<BuildSlotAuthoring> DuplicateSlots(LevelAuthoring level, IList<BuildSlotAuthoring> slots,
+      Vector2 offset)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    - id: slots
+      type: System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+    - id: offset
+      type: UnityEngine.Vector2
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+    content.vb: Public Shared Function DuplicateSlots(level As LevelAuthoring, slots As IList(Of BuildSlotAuthoring), offset
+      As Vector2) As List(Of BuildSlotAuthoring)
+  overload: TDMaker.Editor.MapEditing.DuplicateSlots*
+  nameWithType.vb: MapEditing.DuplicateSlots(LevelAuthoring, IList(Of BuildSlotAuthoring), Vector2)
+  fullName.vb: TDMaker.Editor.MapEditing.DuplicateSlots(TDMaker.Unity.Authoring.LevelAuthoring, System.Collections.Generic.IList(Of
+    TDMaker.Unity.Authoring.BuildSlotAuthoring), UnityEngine.Vector2)
+  name.vb: DuplicateSlots(LevelAuthoring, IList(Of BuildSlotAuthoring), Vector2)
+- uid: TDMaker.Editor.MapEditing.Align(System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},System.Int32)
+  commentId: M:TDMaker.Editor.MapEditing.Align(System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},System.Int32)
+  id: Align(System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},System.Int32)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: Align(IList<BuildSlotAuthoring>, int)
+  nameWithType: MapEditing.Align(IList<BuildSlotAuthoring>, int)
+  fullName: TDMaker.Editor.MapEditing.Align(System.Collections.Generic.IList<TDMaker.Unity.Authoring.BuildSlotAuthoring>,
+    int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Moves slots to the same X (<code class="paramref">axis</code> 0) or Y (1) as the first one.
+  example: []
+  syntax:
+    content: public static void Align(IList<BuildSlotAuthoring> slots, int axis)
+    parameters:
+    - id: slots
+      type: System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+    - id: axis
+      type: System.Int32
+    content.vb: Public Shared Sub Align(slots As IList(Of BuildSlotAuthoring), axis As Integer)
+  overload: TDMaker.Editor.MapEditing.Align*
+  nameWithType.vb: MapEditing.Align(IList(Of BuildSlotAuthoring), Integer)
+  fullName.vb: TDMaker.Editor.MapEditing.Align(System.Collections.Generic.IList(Of TDMaker.Unity.Authoring.BuildSlotAuthoring),
+    Integer)
+  name.vb: Align(IList(Of BuildSlotAuthoring), Integer)
+- uid: TDMaker.Editor.MapEditing.Distribute(System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},System.Int32)
+  commentId: M:TDMaker.Editor.MapEditing.Distribute(System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},System.Int32)
+  id: Distribute(System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring},System.Int32)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: Distribute(IList<BuildSlotAuthoring>, int)
+  nameWithType: MapEditing.Distribute(IList<BuildSlotAuthoring>, int)
+  fullName: TDMaker.Editor.MapEditing.Distribute(System.Collections.Generic.IList<TDMaker.Unity.Authoring.BuildSlotAuthoring>,
+    int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Spaces slots evenly between the outermost two along X (<code class="paramref">axis</code> 0) or Y (1).
+  example: []
+  syntax:
+    content: public static void Distribute(IList<BuildSlotAuthoring> slots, int axis)
+    parameters:
+    - id: slots
+      type: System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+    - id: axis
+      type: System.Int32
+    content.vb: Public Shared Sub Distribute(slots As IList(Of BuildSlotAuthoring), axis As Integer)
+  overload: TDMaker.Editor.MapEditing.Distribute*
+  nameWithType.vb: MapEditing.Distribute(IList(Of BuildSlotAuthoring), Integer)
+  fullName.vb: TDMaker.Editor.MapEditing.Distribute(System.Collections.Generic.IList(Of TDMaker.Unity.Authoring.BuildSlotAuthoring),
+    Integer)
+  name.vb: Distribute(IList(Of BuildSlotAuthoring), Integer)
+- uid: TDMaker.Editor.MapEditing.Snap(UnityEngine.Vector2,System.Single)
+  commentId: M:TDMaker.Editor.MapEditing.Snap(UnityEngine.Vector2,System.Single)
+  id: Snap(UnityEngine.Vector2,System.Single)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: Snap(Vector2, float)
+  nameWithType: MapEditing.Snap(Vector2, float)
+  fullName: TDMaker.Editor.MapEditing.Snap(UnityEngine.Vector2, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Rounds a world point to a grid of <code class="paramref">step</code>.
+  example: []
+  syntax:
+    content: public static Vector2 Snap(Vector2 p, float step)
+    parameters:
+    - id: p
+      type: UnityEngine.Vector2
+    - id: step
+      type: System.Single
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Function Snap(p As Vector2, [step] As Single) As Vector2
+  overload: TDMaker.Editor.MapEditing.Snap*
+  nameWithType.vb: MapEditing.Snap(Vector2, Single)
+  fullName.vb: TDMaker.Editor.MapEditing.Snap(UnityEngine.Vector2, Single)
+  name.vb: Snap(Vector2, Single)
+- uid: TDMaker.Editor.MapEditing.EntryOf(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2@,UnityEngine.Vector2@)
+  commentId: M:TDMaker.Editor.MapEditing.EntryOf(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2@,UnityEngine.Vector2@)
+  id: EntryOf(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2@,UnityEngine.Vector2@)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: EntryOf(PathAuthoring, out Vector2, out Vector2)
+  nameWithType: MapEditing.EntryOf(PathAuthoring, out Vector2, out Vector2)
+  fullName: TDMaker.Editor.MapEditing.EntryOf(TDMaker.Unity.Authoring.PathAuthoring, out UnityEngine.Vector2, out UnityEngine.Vector2)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: World position of the entry node and the road direction there, for a scene path.
+  example: []
+  syntax:
+    content: public static bool EntryOf(PathAuthoring path, out Vector2 entry, out Vector2 direction)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: entry
+      type: UnityEngine.Vector2
+    - id: direction
+      type: UnityEngine.Vector2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function EntryOf(path As PathAuthoring, entry As Vector2, direction As Vector2) As Boolean
+  overload: TDMaker.Editor.MapEditing.EntryOf*
+  nameWithType.vb: MapEditing.EntryOf(PathAuthoring, Vector2, Vector2)
+  fullName.vb: TDMaker.Editor.MapEditing.EntryOf(TDMaker.Unity.Authoring.PathAuthoring, UnityEngine.Vector2, UnityEngine.Vector2)
+  name.vb: EntryOf(PathAuthoring, Vector2, Vector2)
+- uid: TDMaker.Editor.MapEditing.WaveCallPosition(TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.WaveCallPosition(TDMaker.Unity.Authoring.PathAuthoring)
+  id: WaveCallPosition(TDMaker.Unity.Authoring.PathAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: WaveCallPosition(PathAuthoring)
+  nameWithType: MapEditing.WaveCallPosition(PathAuthoring)
+  fullName: TDMaker.Editor.MapEditing.WaveCallPosition(TDMaker.Unity.Authoring.PathAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: World position of the path's wave-call button (same rule as the HUD).
+  example: []
+  syntax:
+    content: public static Vector2 WaveCallPosition(PathAuthoring path)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Function WaveCallPosition(path As PathAuthoring) As Vector2
+  overload: TDMaker.Editor.MapEditing.WaveCallPosition*
+- uid: TDMaker.Editor.MapEditing.SetWaveCall(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2)
+  commentId: M:TDMaker.Editor.MapEditing.SetWaveCall(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2)
+  id: SetWaveCall(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: SetWaveCall(PathAuthoring, Vector2)
+  nameWithType: MapEditing.SetWaveCall(PathAuthoring, Vector2)
+  fullName: TDMaker.Editor.MapEditing.SetWaveCall(TDMaker.Unity.Authoring.PathAuthoring, UnityEngine.Vector2)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Places the wave-call button at a world position (turns the override on).
+  example: []
+  syntax:
+    content: public static void SetWaveCall(PathAuthoring path, Vector2 world)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: world
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Sub SetWaveCall(path As PathAuthoring, world As Vector2)
+  overload: TDMaker.Editor.MapEditing.SetWaveCall*
+- uid: TDMaker.Editor.MapEditing.ResetWaveCall(TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.ResetWaveCall(TDMaker.Unity.Authoring.PathAuthoring)
+  id: ResetWaveCall(TDMaker.Unity.Authoring.PathAuthoring)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: ResetWaveCall(PathAuthoring)
+  nameWithType: MapEditing.ResetWaveCall(PathAuthoring)
+  fullName: TDMaker.Editor.MapEditing.ResetWaveCall(TDMaker.Unity.Authoring.PathAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Returns the wave-call button to its default spot just ahead of the entry.
+  example: []
+  syntax:
+    content: public static void ResetWaveCall(PathAuthoring path)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    content.vb: Public Shared Sub ResetWaveCall(path As PathAuthoring)
+  overload: TDMaker.Editor.MapEditing.ResetWaveCall*
+- uid: TDMaker.Editor.MapEditing.SpriteFrom(UnityEngine.Object)
+  commentId: M:TDMaker.Editor.MapEditing.SpriteFrom(UnityEngine.Object)
+  id: SpriteFrom(UnityEngine.Object)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: SpriteFrom(Object)
+  nameWithType: MapEditing.SpriteFrom(Object)
+  fullName: TDMaker.Editor.MapEditing.SpriteFrom(UnityEngine.Object)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The sprite of a texture asset, converting its import settings to Sprite (single) when needed.
+  example: []
+  syntax:
+    content: public static Sprite SpriteFrom(Object source)
+    parameters:
+    - id: source
+      type: UnityEngine.Object
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared Function SpriteFrom(source As [Object]) As Sprite
+  overload: TDMaker.Editor.MapEditing.SpriteFrom*
+- uid: TDMaker.Editor.MapEditing.SetPixelsPerUnit(UnityEngine.Sprite,System.Single)
+  commentId: M:TDMaker.Editor.MapEditing.SetPixelsPerUnit(UnityEngine.Sprite,System.Single)
+  id: SetPixelsPerUnit(UnityEngine.Sprite,System.Single)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: SetPixelsPerUnit(Sprite, float)
+  nameWithType: MapEditing.SetPixelsPerUnit(Sprite, float)
+  fullName: TDMaker.Editor.MapEditing.SetPixelsPerUnit(UnityEngine.Sprite, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Changes the pixels-per-unit of a sprite's texture importer (re-imports the texture).
+  example: []
+  syntax:
+    content: public static Sprite SetPixelsPerUnit(Sprite sprite, float ppu)
+    parameters:
+    - id: sprite
+      type: UnityEngine.Sprite
+    - id: ppu
+      type: System.Single
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared Function SetPixelsPerUnit(sprite As Sprite, ppu As Single) As Sprite
+  overload: TDMaker.Editor.MapEditing.SetPixelsPerUnit*
+  nameWithType.vb: MapEditing.SetPixelsPerUnit(Sprite, Single)
+  fullName.vb: TDMaker.Editor.MapEditing.SetPixelsPerUnit(UnityEngine.Sprite, Single)
+  name.vb: SetPixelsPerUnit(Sprite, Single)
+- uid: TDMaker.Editor.MapEditing.ApplyBackground(TDMaker.Unity.View.LevelView,TDMaker.Unity.View.TDCameraController,UnityEngine.Sprite,UnityEngine.Vector2)
+  commentId: M:TDMaker.Editor.MapEditing.ApplyBackground(TDMaker.Unity.View.LevelView,TDMaker.Unity.View.TDCameraController,UnityEngine.Sprite,UnityEngine.Vector2)
+  id: ApplyBackground(TDMaker.Unity.View.LevelView,TDMaker.Unity.View.TDCameraController,UnityEngine.Sprite,UnityEngine.Vector2)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: ApplyBackground(LevelView, TDCameraController, Sprite, Vector2)
+  nameWithType: MapEditing.ApplyBackground(LevelView, TDCameraController, Sprite, Vector2)
+  fullName: TDMaker.Editor.MapEditing.ApplyBackground(TDMaker.Unity.View.LevelView, TDMaker.Unity.View.TDCameraController,
+    UnityEngine.Sprite, UnityEngine.Vector2)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Uses <code class="paramref">sprite</code> as the level''s painted map on <code class="paramref">view</code> (pivot
+    at <code class="paramref">pivot</code>) and,
+
+    when <code class="paramref">camera</code> is given, clamps the game camera to the map rectangle and centres it there.'
+  example: []
+  syntax:
+    content: public static void ApplyBackground(LevelView view, TDCameraController camera, Sprite sprite, Vector2 pivot)
+    parameters:
+    - id: view
+      type: TDMaker.Unity.View.LevelView
+    - id: camera
+      type: TDMaker.Unity.View.TDCameraController
+    - id: sprite
+      type: UnityEngine.Sprite
+    - id: pivot
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Sub ApplyBackground(view As LevelView, camera As TDCameraController, sprite As Sprite, pivot
+      As Vector2)
+  overload: TDMaker.Editor.MapEditing.ApplyBackground*
+- uid: TDMaker.Editor.MapEditing.FitCamera(TDMaker.Unity.View.TDCameraController,UnityEngine.Rect)
+  commentId: M:TDMaker.Editor.MapEditing.FitCamera(TDMaker.Unity.View.TDCameraController,UnityEngine.Rect)
+  id: FitCamera(TDMaker.Unity.View.TDCameraController,UnityEngine.Rect)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: FitCamera(TDCameraController, Rect)
+  nameWithType: MapEditing.FitCamera(TDCameraController, Rect)
+  fullName: TDMaker.Editor.MapEditing.FitCamera(TDMaker.Unity.View.TDCameraController, UnityEngine.Rect)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Clamps the game camera to <code class="paramref">area</code> (fixed bounds) and centres its edit-mode view there.
+  example: []
+  syntax:
+    content: public static void FitCamera(TDCameraController camera, Rect area)
+    parameters:
+    - id: camera
+      type: TDMaker.Unity.View.TDCameraController
+    - id: area
+      type: UnityEngine.Rect
+    content.vb: Public Shared Sub FitCamera(camera As TDCameraController, area As Rect)
+  overload: TDMaker.Editor.MapEditing.FitCamera*
+- uid: TDMaker.Editor.MapEditing.CameraBounds(TDMaker.Unity.View.TDCameraController)
+  commentId: M:TDMaker.Editor.MapEditing.CameraBounds(TDMaker.Unity.View.TDCameraController)
+  id: CameraBounds(TDMaker.Unity.View.TDCameraController)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: CameraBounds(TDCameraController)
+  nameWithType: MapEditing.CameraBounds(TDCameraController)
+  fullName: TDMaker.Editor.MapEditing.CameraBounds(TDMaker.Unity.View.TDCameraController)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The game camera's fixed bounds, or null when it fits the level geometry.
+  example: []
+  syntax:
+    content: public static Rect? CameraBounds(TDCameraController camera)
+    parameters:
+    - id: camera
+      type: TDMaker.Unity.View.TDCameraController
+    return:
+      type: System.Nullable{UnityEngine.Rect}
+    content.vb: Public Shared Function CameraBounds(camera As TDCameraController) As Rect?
+  overload: TDMaker.Editor.MapEditing.CameraBounds*
+- uid: TDMaker.Editor.MapEditing.RemapGeometry(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Rect,UnityEngine.Rect)
+  commentId: M:TDMaker.Editor.MapEditing.RemapGeometry(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Rect,UnityEngine.Rect)
+  id: RemapGeometry(TDMaker.Unity.Authoring.LevelAuthoring,UnityEngine.Rect,UnityEngine.Rect)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: RemapGeometry(LevelAuthoring, Rect, Rect)
+  nameWithType: MapEditing.RemapGeometry(LevelAuthoring, Rect, Rect)
+  fullName: TDMaker.Editor.MapEditing.RemapGeometry(TDMaker.Unity.Authoring.LevelAuthoring, UnityEngine.Rect, UnityEngine.Rect)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Keeps the level aligned with a replaced or rescaled map: maps every path point (curve controls and nodes), build
+    slot and
+
+    rally point from <code class="paramref">from</code> to <code class="paramref">to</code> (per axis), and scales lane widths,
+    curve node spacing and
+
+    wave-call offsets by the mean scale. Undoable. Returns the number of objects changed.'
+  example: []
+  syntax:
+    content: public static int RemapGeometry(LevelAuthoring level, Rect from, Rect to)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    - id: from
+      type: UnityEngine.Rect
+    - id: to
+      type: UnityEngine.Rect
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function RemapGeometry(level As LevelAuthoring, from As Rect, [to] As Rect) As Integer
+  overload: TDMaker.Editor.MapEditing.RemapGeometry*
+- uid: TDMaker.Editor.MapEditing.BackgroundHints(UnityEngine.Sprite)
+  commentId: M:TDMaker.Editor.MapEditing.BackgroundHints(UnityEngine.Sprite)
+  id: BackgroundHints(UnityEngine.Sprite)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: BackgroundHints(Sprite)
+  nameWithType: MapEditing.BackgroundHints(Sprite)
+  fullName: TDMaker.Editor.MapEditing.BackgroundHints(UnityEngine.Sprite)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Non-blocking advice for a map sprite: aspect other than 16:9, very large textures and uncompressed import (with
+    a memory
+
+    estimate). Empty when nothing stands out.'
+  example: []
+  syntax:
+    content: public static string BackgroundHints(Sprite sprite)
+    parameters:
+    - id: sprite
+      type: UnityEngine.Sprite
+    return:
+      type: System.String
+    content.vb: Public Shared Function BackgroundHints(sprite As Sprite) As String
+  overload: TDMaker.Editor.MapEditing.BackgroundHints*
+- uid: TDMaker.Editor.MapEditing.BakeToAsset(TDMaker.Unity.Authoring.LevelAuthoring,System.Boolean)
+  commentId: M:TDMaker.Editor.MapEditing.BakeToAsset(TDMaker.Unity.Authoring.LevelAuthoring,System.Boolean)
+  id: BakeToAsset(TDMaker.Unity.Authoring.LevelAuthoring,System.Boolean)
+  parent: TDMaker.Editor.MapEditing
+  langs:
+  - csharp
+  - vb
+  name: BakeToAsset(LevelAuthoring, bool)
+  nameWithType: MapEditing.BakeToAsset(LevelAuthoring, bool)
+  fullName: TDMaker.Editor.MapEditing.BakeToAsset(TDMaker.Unity.Authoring.LevelAuthoring, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Writes the scene paths and build slots into the level's <xref href="TDMaker.Unity.Authoring.LevelAsset" data-throw-if-not-resolved="false"></xref>
+    (undoable) and saves it.
+  example: []
+  syntax:
+    content: public static bool BakeToAsset(LevelAuthoring level, bool save = true)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAuthoring
+    - id: save
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function BakeToAsset(level As LevelAuthoring, save As Boolean = True) As Boolean
+  overload: TDMaker.Editor.MapEditing.BakeToAsset*
+  nameWithType.vb: MapEditing.BakeToAsset(LevelAuthoring, Boolean)
+  fullName.vb: TDMaker.Editor.MapEditing.BakeToAsset(TDMaker.Unity.Authoring.LevelAuthoring, Boolean)
+  name.vb: BakeToAsset(LevelAuthoring, Boolean)
+references:
+- uid: TDMaker.Unity.Authoring.LevelAsset
+  commentId: T:TDMaker.Unity.Authoring.LevelAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelAsset.html
+  name: LevelAsset
+  nameWithType: LevelAsset
+  fullName: TDMaker.Unity.Authoring.LevelAsset
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Editor.MapEditing.EditPoints*
+  commentId: Overload:TDMaker.Editor.MapEditing.EditPoints
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_EditPoints_TDMaker_Unity_Authoring_PathAuthoring_
+  name: EditPoints
+  nameWithType: MapEditing.EditPoints
+  fullName: TDMaker.Editor.MapEditing.EditPoints
+- uid: TDMaker.Unity.Authoring.PathAuthoring
+  commentId: T:TDMaker.Unity.Authoring.PathAuthoring
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathAuthoring.html
+  name: PathAuthoring
+  nameWithType: PathAuthoring
+  fullName: TDMaker.Unity.Authoring.PathAuthoring
+- uid: System.Collections.Generic.List{UnityEngine.Vector2}
+  commentId: T:System.Collections.Generic.List{UnityEngine.Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Vector2>
+  nameWithType: List<Vector2>
+  fullName: System.Collections.Generic.List<UnityEngine.Vector2>
+  nameWithType.vb: List(Of Vector2)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.Vector2)
+  name.vb: List(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_EditPoints_TDMaker_Unity_Authoring_PathAuthoring_
+  name: EditPoints(PathAuthoring)
+  nameWithType: MapEditing.EditPoints(PathAuthoring)
+  fullName: TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+  spec.csharp:
+  - uid: TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+    name: EditPoints
+    isExternal: true
+    href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_EditPoints_TDMaker_Unity_Authoring_PathAuthoring_
+  - name: (
+  - uid: TDMaker.Unity.Authoring.PathAuthoring
+    name: PathAuthoring
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.MapEditing.EditPoints(TDMaker.Unity.Authoring.PathAuthoring)
+    name: EditPoints
+    isExternal: true
+    href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_EditPoints_TDMaker_Unity_Authoring_PathAuthoring_
+  - name: (
+  - uid: TDMaker.Unity.Authoring.PathAuthoring
+    name: PathAuthoring
+    isExternal: true
+  - name: )
+- uid: TDMaker.Editor.MapEditing.EditWidths*
+  commentId: Overload:TDMaker.Editor.MapEditing.EditWidths
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_EditWidths_TDMaker_Unity_Authoring_PathAuthoring_
+  name: EditWidths
+  nameWithType: MapEditing.EditWidths
+  fullName: TDMaker.Editor.MapEditing.EditWidths
+- uid: System.Collections.Generic.List{System.Single}
+  commentId: T:System.Collections.Generic.List{System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<float>
+  nameWithType: List<float>
+  fullName: System.Collections.Generic.List<float>
+  nameWithType.vb: List(Of Single)
+  fullName.vb: System.Collections.Generic.List(Of Single)
+  name.vb: List(Of Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: TDMaker.Editor.MapEditing.MinPoints*
+  commentId: Overload:TDMaker.Editor.MapEditing.MinPoints
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_MinPoints_TDMaker_Unity_Authoring_PathAuthoring_
+  name: MinPoints
+  nameWithType: MapEditing.MinPoints
+  fullName: TDMaker.Editor.MapEditing.MinPoints
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Editor.MapEditing.InsertPoint*
+  commentId: Overload:TDMaker.Editor.MapEditing.InsertPoint
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_InsertPoint_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_UnityEngine_Vector2_System_String_
+  name: InsertPoint
+  nameWithType: MapEditing.InsertPoint
+  fullName: TDMaker.Editor.MapEditing.InsertPoint
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Editor.MapEditing.DeletePoint*
+  commentId: Overload:TDMaker.Editor.MapEditing.DeletePoint
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_DeletePoint_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_
+  name: DeletePoint
+  nameWithType: MapEditing.DeletePoint
+  fullName: TDMaker.Editor.MapEditing.DeletePoint
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.MapEditing.MovePoint*
+  commentId: Overload:TDMaker.Editor.MapEditing.MovePoint
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_MovePoint_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_UnityEngine_Vector2_
+  name: MovePoint
+  nameWithType: MapEditing.MovePoint
+  fullName: TDMaker.Editor.MapEditing.MovePoint
+- uid: TDMaker.Editor.MapEditing.SetPointWidth*
+  commentId: Overload:TDMaker.Editor.MapEditing.SetPointWidth
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_SetPointWidth_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_System_Single_
+  name: SetPointWidth
+  nameWithType: MapEditing.SetPointWidth
+  fullName: TDMaker.Editor.MapEditing.SetPointWidth
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Editor.MapEditing.PointWidth*
+  commentId: Overload:TDMaker.Editor.MapEditing.PointWidth
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_PointWidth_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_
+  name: PointWidth
+  nameWithType: MapEditing.PointWidth
+  fullName: TDMaker.Editor.MapEditing.PointWidth
+- uid: TDMaker.Editor.MapEditing.SetCurve*
+  commentId: Overload:TDMaker.Editor.MapEditing.SetCurve
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_SetCurve_TDMaker_Unity_Authoring_PathAuthoring_System_Boolean_
+  name: SetCurve
+  nameWithType: MapEditing.SetCurve
+  fullName: TDMaker.Editor.MapEditing.SetCurve
+- uid: TDMaker.Editor.MapEditing.SetNodeSpacing*
+  commentId: Overload:TDMaker.Editor.MapEditing.SetNodeSpacing
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_SetNodeSpacing_TDMaker_Unity_Authoring_PathAuthoring_System_Single_
+  name: SetNodeSpacing
+  nameWithType: MapEditing.SetNodeSpacing
+  fullName: TDMaker.Editor.MapEditing.SetNodeSpacing
+- uid: TDMaker.Editor.MapEditing.Reverse*
+  commentId: Overload:TDMaker.Editor.MapEditing.Reverse
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_Reverse_TDMaker_Unity_Authoring_PathAuthoring_
+  name: Reverse
+  nameWithType: MapEditing.Reverse
+  fullName: TDMaker.Editor.MapEditing.Reverse
+- uid: TDMaker.Editor.MapEditing.Changed*
+  commentId: Overload:TDMaker.Editor.MapEditing.Changed
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_Changed_TDMaker_Unity_Authoring_PathAuthoring_
+  name: Changed
+  nameWithType: MapEditing.Changed
+  fullName: TDMaker.Editor.MapEditing.Changed
+- uid: TDMaker.Editor.MapEditing.Paths*
+  commentId: Overload:TDMaker.Editor.MapEditing.Paths
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_Paths_TDMaker_Unity_Authoring_LevelAuthoring_
+  name: Paths
+  nameWithType: MapEditing.Paths
+  fullName: TDMaker.Editor.MapEditing.Paths
+- uid: TDMaker.Unity.Authoring.LevelAuthoring
+  commentId: T:TDMaker.Unity.Authoring.LevelAuthoring
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelAuthoring.html
+  name: LevelAuthoring
+  nameWithType: LevelAuthoring
+  fullName: TDMaker.Unity.Authoring.LevelAuthoring
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.PathAuthoring}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.PathAuthoring}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PathAuthoring>
+  nameWithType: List<PathAuthoring>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.PathAuthoring>
+  nameWithType.vb: List(Of PathAuthoring)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.PathAuthoring)
+  name.vb: List(Of PathAuthoring)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.PathAuthoring
+    name: PathAuthoring
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathAuthoring.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.PathAuthoring
+    name: PathAuthoring
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathAuthoring.html
+  - name: )
+- uid: TDMaker.Editor.MapEditing.Slots*
+  commentId: Overload:TDMaker.Editor.MapEditing.Slots
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_Slots_TDMaker_Unity_Authoring_LevelAuthoring_
+  name: Slots
+  nameWithType: MapEditing.Slots
+  fullName: TDMaker.Editor.MapEditing.Slots
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<BuildSlotAuthoring>
+  nameWithType: List<BuildSlotAuthoring>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.BuildSlotAuthoring>
+  nameWithType.vb: List(Of BuildSlotAuthoring)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.BuildSlotAuthoring)
+  name.vb: List(Of BuildSlotAuthoring)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.BuildSlotAuthoring
+    name: BuildSlotAuthoring
+    isExternal: true
+    href: TDMaker.Unity.Authoring.BuildSlotAuthoring.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.BuildSlotAuthoring
+    name: BuildSlotAuthoring
+    isExternal: true
+    href: TDMaker.Unity.Authoring.BuildSlotAuthoring.html
+  - name: )
+- uid: TDMaker.Editor.MapEditing.ScenePaths*
+  commentId: Overload:TDMaker.Editor.MapEditing.ScenePaths
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_ScenePaths_TDMaker_Unity_Authoring_LevelAuthoring_
+  name: ScenePaths
+  nameWithType: MapEditing.ScenePaths
+  fullName: TDMaker.Editor.MapEditing.ScenePaths
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.PathData}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.PathData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PathData>
+  nameWithType: List<PathData>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.PathData>
+  nameWithType.vb: List(Of PathData)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.PathData)
+  name.vb: List(Of PathData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.PathData
+    name: PathData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.PathData
+    name: PathData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathData.html
+  - name: )
+- uid: TDMaker.Editor.MapEditing.CreateLevel*
+  commentId: Overload:TDMaker.Editor.MapEditing.CreateLevel
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_CreateLevel_TDMaker_Unity_Authoring_LevelAsset_
+  name: CreateLevel
+  nameWithType: MapEditing.CreateLevel
+  fullName: TDMaker.Editor.MapEditing.CreateLevel
+- uid: TDMaker.Editor.MapEditing.CreatePath*
+  commentId: Overload:TDMaker.Editor.MapEditing.CreatePath
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_CreatePath_TDMaker_Unity_Authoring_LevelAuthoring_UnityEngine_Vector2_System_Boolean_System_Int32_System_Single_System_Single_System_String_
+  name: CreatePath
+  nameWithType: MapEditing.CreatePath
+  fullName: TDMaker.Editor.MapEditing.CreatePath
+- uid: TDMaker.Editor.MapEditing.PathColor*
+  commentId: Overload:TDMaker.Editor.MapEditing.PathColor
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_PathColor_System_Int32_
+  name: PathColor
+  nameWithType: MapEditing.PathColor
+  fullName: TDMaker.Editor.MapEditing.PathColor
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: TDMaker.Editor.MapEditing.DeletePath*
+  commentId: Overload:TDMaker.Editor.MapEditing.DeletePath
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_DeletePath_TDMaker_Unity_Authoring_LevelAuthoring_TDMaker_Unity_Authoring_PathAuthoring_
+  name: DeletePath
+  nameWithType: MapEditing.DeletePath
+  fullName: TDMaker.Editor.MapEditing.DeletePath
+- uid: TDMaker.Editor.MapEditing.MovePath*
+  commentId: Overload:TDMaker.Editor.MapEditing.MovePath
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_MovePath_TDMaker_Unity_Authoring_LevelAuthoring_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_
+  name: MovePath
+  nameWithType: MapEditing.MovePath
+  fullName: TDMaker.Editor.MapEditing.MovePath
+- uid: TDMaker.Editor.MapEditing.Rename*
+  commentId: Overload:TDMaker.Editor.MapEditing.Rename
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_Rename_UnityEngine_Object_System_String_
+  name: Rename
+  nameWithType: MapEditing.Rename
+  fullName: TDMaker.Editor.MapEditing.Rename
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: TDMaker.Editor.MapEditing.SlotsRoot*
+  commentId: Overload:TDMaker.Editor.MapEditing.SlotsRoot
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_SlotsRoot_TDMaker_Unity_Authoring_LevelAuthoring_
+  name: SlotsRoot
+  nameWithType: MapEditing.SlotsRoot
+  fullName: TDMaker.Editor.MapEditing.SlotsRoot
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: TDMaker.Editor.MapEditing.CreateSlot*
+  commentId: Overload:TDMaker.Editor.MapEditing.CreateSlot
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_CreateSlot_TDMaker_Unity_Authoring_LevelAuthoring_UnityEngine_Vector2_TDMaker_Unity_Authoring_TowerAsset_
+  name: CreateSlot
+  nameWithType: MapEditing.CreateSlot
+  fullName: TDMaker.Editor.MapEditing.CreateSlot
+- uid: TDMaker.Unity.Authoring.TowerAsset
+  commentId: T:TDMaker.Unity.Authoring.TowerAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TowerAsset.html
+  name: TowerAsset
+  nameWithType: TowerAsset
+  fullName: TDMaker.Unity.Authoring.TowerAsset
+- uid: TDMaker.Unity.Authoring.BuildSlotAuthoring
+  commentId: T:TDMaker.Unity.Authoring.BuildSlotAuthoring
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BuildSlotAuthoring.html
+  name: BuildSlotAuthoring
+  nameWithType: BuildSlotAuthoring
+  fullName: TDMaker.Unity.Authoring.BuildSlotAuthoring
+- uid: TDMaker.Editor.MapEditing.AutoRally*
+  commentId: Overload:TDMaker.Editor.MapEditing.AutoRally
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_AutoRally_TDMaker_Unity_Authoring_BuildSlotAuthoring_System_Collections_Generic_IReadOnlyList_TDMaker_Unity_Authoring_PathData__System_Boolean_
+  name: AutoRally
+  nameWithType: MapEditing.AutoRally
+  fullName: TDMaker.Editor.MapEditing.AutoRally
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Unity.Authoring.PathData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<PathData>
+  nameWithType: IReadOnlyList<PathData>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Unity.Authoring.PathData>
+  nameWithType.vb: IReadOnlyList(Of PathData)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Unity.Authoring.PathData)
+  name.vb: IReadOnlyList(Of PathData)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.PathData
+    name: PathData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.PathData
+    name: PathData
+    isExternal: true
+    href: TDMaker.Unity.Authoring.PathData.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Editor.MapEditing.DeleteSlots*
+  commentId: Overload:TDMaker.Editor.MapEditing.DeleteSlots
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_DeleteSlots_TDMaker_Unity_Authoring_LevelAuthoring_System_Collections_Generic_IList_TDMaker_Unity_Authoring_BuildSlotAuthoring__
+  name: DeleteSlots
+  nameWithType: MapEditing.DeleteSlots
+  fullName: TDMaker.Editor.MapEditing.DeleteSlots
+- uid: System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+  commentId: T:System.Collections.Generic.IList{TDMaker.Unity.Authoring.BuildSlotAuthoring}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<BuildSlotAuthoring>
+  nameWithType: IList<BuildSlotAuthoring>
+  fullName: System.Collections.Generic.IList<TDMaker.Unity.Authoring.BuildSlotAuthoring>
+  nameWithType.vb: IList(Of BuildSlotAuthoring)
+  fullName.vb: System.Collections.Generic.IList(Of TDMaker.Unity.Authoring.BuildSlotAuthoring)
+  name.vb: IList(Of BuildSlotAuthoring)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.BuildSlotAuthoring
+    name: BuildSlotAuthoring
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.BuildSlotAuthoring
+    name: BuildSlotAuthoring
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Editor.MapEditing.DuplicateSlots*
+  commentId: Overload:TDMaker.Editor.MapEditing.DuplicateSlots
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_DuplicateSlots_TDMaker_Unity_Authoring_LevelAuthoring_System_Collections_Generic_IList_TDMaker_Unity_Authoring_BuildSlotAuthoring__UnityEngine_Vector2_
+  name: DuplicateSlots
+  nameWithType: MapEditing.DuplicateSlots
+  fullName: TDMaker.Editor.MapEditing.DuplicateSlots
+- uid: TDMaker.Editor.MapEditing.Align*
+  commentId: Overload:TDMaker.Editor.MapEditing.Align
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_Align_System_Collections_Generic_IList_TDMaker_Unity_Authoring_BuildSlotAuthoring__System_Int32_
+  name: Align
+  nameWithType: MapEditing.Align
+  fullName: TDMaker.Editor.MapEditing.Align
+- uid: TDMaker.Editor.MapEditing.Distribute*
+  commentId: Overload:TDMaker.Editor.MapEditing.Distribute
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_Distribute_System_Collections_Generic_IList_TDMaker_Unity_Authoring_BuildSlotAuthoring__System_Int32_
+  name: Distribute
+  nameWithType: MapEditing.Distribute
+  fullName: TDMaker.Editor.MapEditing.Distribute
+- uid: TDMaker.Editor.MapEditing.Snap*
+  commentId: Overload:TDMaker.Editor.MapEditing.Snap
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_Snap_UnityEngine_Vector2_System_Single_
+  name: Snap
+  nameWithType: MapEditing.Snap
+  fullName: TDMaker.Editor.MapEditing.Snap
+- uid: TDMaker.Editor.MapEditing.EntryOf*
+  commentId: Overload:TDMaker.Editor.MapEditing.EntryOf
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_EntryOf_TDMaker_Unity_Authoring_PathAuthoring_UnityEngine_Vector2__UnityEngine_Vector2__
+  name: EntryOf
+  nameWithType: MapEditing.EntryOf
+  fullName: TDMaker.Editor.MapEditing.EntryOf
+- uid: TDMaker.Editor.MapEditing.WaveCallPosition*
+  commentId: Overload:TDMaker.Editor.MapEditing.WaveCallPosition
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_WaveCallPosition_TDMaker_Unity_Authoring_PathAuthoring_
+  name: WaveCallPosition
+  nameWithType: MapEditing.WaveCallPosition
+  fullName: TDMaker.Editor.MapEditing.WaveCallPosition
+- uid: TDMaker.Editor.MapEditing.SetWaveCall*
+  commentId: Overload:TDMaker.Editor.MapEditing.SetWaveCall
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_SetWaveCall_TDMaker_Unity_Authoring_PathAuthoring_UnityEngine_Vector2_
+  name: SetWaveCall
+  nameWithType: MapEditing.SetWaveCall
+  fullName: TDMaker.Editor.MapEditing.SetWaveCall
+- uid: TDMaker.Editor.MapEditing.ResetWaveCall*
+  commentId: Overload:TDMaker.Editor.MapEditing.ResetWaveCall
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_ResetWaveCall_TDMaker_Unity_Authoring_PathAuthoring_
+  name: ResetWaveCall
+  nameWithType: MapEditing.ResetWaveCall
+  fullName: TDMaker.Editor.MapEditing.ResetWaveCall
+- uid: TDMaker.Editor.MapEditing.SpriteFrom*
+  commentId: Overload:TDMaker.Editor.MapEditing.SpriteFrom
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_SpriteFrom_UnityEngine_Object_
+  name: SpriteFrom
+  nameWithType: MapEditing.SpriteFrom
+  fullName: TDMaker.Editor.MapEditing.SpriteFrom
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: TDMaker.Editor.MapEditing.SetPixelsPerUnit*
+  commentId: Overload:TDMaker.Editor.MapEditing.SetPixelsPerUnit
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_SetPixelsPerUnit_UnityEngine_Sprite_System_Single_
+  name: SetPixelsPerUnit
+  nameWithType: MapEditing.SetPixelsPerUnit
+  fullName: TDMaker.Editor.MapEditing.SetPixelsPerUnit
+- uid: TDMaker.Editor.MapEditing.ApplyBackground*
+  commentId: Overload:TDMaker.Editor.MapEditing.ApplyBackground
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_ApplyBackground_TDMaker_Unity_View_LevelView_TDMaker_Unity_View_TDCameraController_UnityEngine_Sprite_UnityEngine_Vector2_
+  name: ApplyBackground
+  nameWithType: MapEditing.ApplyBackground
+  fullName: TDMaker.Editor.MapEditing.ApplyBackground
+- uid: TDMaker.Unity.View.LevelView
+  commentId: T:TDMaker.Unity.View.LevelView
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.LevelView.html
+  name: LevelView
+  nameWithType: LevelView
+  fullName: TDMaker.Unity.View.LevelView
+- uid: TDMaker.Unity.View.TDCameraController
+  commentId: T:TDMaker.Unity.View.TDCameraController
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.TDCameraController.html
+  name: TDCameraController
+  nameWithType: TDCameraController
+  fullName: TDMaker.Unity.View.TDCameraController
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: TDMaker.Editor.MapEditing.FitCamera*
+  commentId: Overload:TDMaker.Editor.MapEditing.FitCamera
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_FitCamera_TDMaker_Unity_View_TDCameraController_UnityEngine_Rect_
+  name: FitCamera
+  nameWithType: MapEditing.FitCamera
+  fullName: TDMaker.Editor.MapEditing.FitCamera
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: TDMaker.Editor.MapEditing.CameraBounds*
+  commentId: Overload:TDMaker.Editor.MapEditing.CameraBounds
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_CameraBounds_TDMaker_Unity_View_TDCameraController_
+  name: CameraBounds
+  nameWithType: MapEditing.CameraBounds
+  fullName: TDMaker.Editor.MapEditing.CameraBounds
+- uid: System.Nullable{UnityEngine.Rect}
+  commentId: T:System.Nullable{UnityEngine.Rect}
+  parent: System
+  definition: System.Nullable`1
+  name: Rect?
+  nameWithType: Rect?
+  fullName: UnityEngine.Rect?
+  spec.csharp:
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Editor.MapEditing.RemapGeometry*
+  commentId: Overload:TDMaker.Editor.MapEditing.RemapGeometry
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_RemapGeometry_TDMaker_Unity_Authoring_LevelAuthoring_UnityEngine_Rect_UnityEngine_Rect_
+  name: RemapGeometry
+  nameWithType: MapEditing.RemapGeometry
+  fullName: TDMaker.Editor.MapEditing.RemapGeometry
+- uid: TDMaker.Editor.MapEditing.BackgroundHints*
+  commentId: Overload:TDMaker.Editor.MapEditing.BackgroundHints
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_BackgroundHints_UnityEngine_Sprite_
+  name: BackgroundHints
+  nameWithType: MapEditing.BackgroundHints
+  fullName: TDMaker.Editor.MapEditing.BackgroundHints
+- uid: TDMaker.Editor.MapEditing.BakeToAsset*
+  commentId: Overload:TDMaker.Editor.MapEditing.BakeToAsset
+  isExternal: true
+  href: TDMaker.Editor.MapEditing.html#TDMaker_Editor_MapEditing_BakeToAsset_TDMaker_Unity_Authoring_LevelAuthoring_System_Boolean_
+  name: BakeToAsset
+  nameWithType: MapEditing.BakeToAsset
+  fullName: TDMaker.Editor.MapEditing.BakeToAsset

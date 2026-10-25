@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus
+  commentId: T:TDMaker.Unity.Campaign.SaveLoadStatus
+  id: SaveLoadStatus
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.SaveLoadStatus.Corrupt
+  - TDMaker.Unity.Campaign.SaveLoadStatus.Empty
+  - TDMaker.Unity.Campaign.SaveLoadStatus.Failed
+  - TDMaker.Unity.Campaign.SaveLoadStatus.Loaded
+  - TDMaker.Unity.Campaign.SaveLoadStatus.Migrated
+  - TDMaker.Unity.Campaign.SaveLoadStatus.NewerVersion
+  langs:
+  - csharp
+  - vb
+  name: SaveLoadStatus
+  nameWithType: SaveLoadStatus
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Outcome of reading a save slot.
+  example: []
+  syntax:
+    content: public enum SaveLoadStatus
+    content.vb: Public Enum SaveLoadStatus
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus.Empty
+  commentId: F:TDMaker.Unity.Campaign.SaveLoadStatus.Empty
+  id: Empty
+  parent: TDMaker.Unity.Campaign.SaveLoadStatus
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: SaveLoadStatus.Empty
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus.Empty
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The slot holds nothing.
+  example: []
+  syntax:
+    content: Empty = 0
+    return:
+      type: TDMaker.Unity.Campaign.SaveLoadStatus
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus.Loaded
+  commentId: F:TDMaker.Unity.Campaign.SaveLoadStatus.Loaded
+  id: Loaded
+  parent: TDMaker.Unity.Campaign.SaveLoadStatus
+  langs:
+  - csharp
+  - vb
+  name: Loaded
+  nameWithType: SaveLoadStatus.Loaded
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus.Loaded
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Read as is.
+  example: []
+  syntax:
+    content: Loaded = 1
+    return:
+      type: TDMaker.Unity.Campaign.SaveLoadStatus
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus.Migrated
+  commentId: F:TDMaker.Unity.Campaign.SaveLoadStatus.Migrated
+  id: Migrated
+  parent: TDMaker.Unity.Campaign.SaveLoadStatus
+  langs:
+  - csharp
+  - vb
+  name: Migrated
+  nameWithType: SaveLoadStatus.Migrated
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus.Migrated
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Read from an older schema version and migrated (it is written in the new version on the next save).
+  example: []
+  syntax:
+    content: Migrated = 2
+    return:
+      type: TDMaker.Unity.Campaign.SaveLoadStatus
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus.Corrupt
+  commentId: F:TDMaker.Unity.Campaign.SaveLoadStatus.Corrupt
+  id: Corrupt
+  parent: TDMaker.Unity.Campaign.SaveLoadStatus
+  langs:
+  - csharp
+  - vb
+  name: Corrupt
+  nameWithType: SaveLoadStatus.Corrupt
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus.Corrupt
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The content could not be read. It was kept as a backup and the slot starts empty.
+  example: []
+  syntax:
+    content: Corrupt = 3
+    return:
+      type: TDMaker.Unity.Campaign.SaveLoadStatus
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus.NewerVersion
+  commentId: F:TDMaker.Unity.Campaign.SaveLoadStatus.NewerVersion
+  id: NewerVersion
+  parent: TDMaker.Unity.Campaign.SaveLoadStatus
+  langs:
+  - csharp
+  - vb
+  name: NewerVersion
+  nameWithType: SaveLoadStatus.NewerVersion
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus.NewerVersion
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The content was written by a newer schema version. It was kept as a backup and the slot starts empty.
+  example: []
+  syntax:
+    content: NewerVersion = 4
+    return:
+      type: TDMaker.Unity.Campaign.SaveLoadStatus
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus.Failed
+  commentId: F:TDMaker.Unity.Campaign.SaveLoadStatus.Failed
+  id: Failed
+  parent: TDMaker.Unity.Campaign.SaveLoadStatus
+  langs:
+  - csharp
+  - vb
+  name: Failed
+  nameWithType: SaveLoadStatus.Failed
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus.Failed
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The storage could not be read (I/O error, storage unavailable). Nothing was changed.
+  example: []
+  syntax:
+    content: Failed = 5
+    return:
+      type: TDMaker.Unity.Campaign.SaveLoadStatus
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.SaveLoadStatus
+  commentId: T:TDMaker.Unity.Campaign.SaveLoadStatus
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.SaveLoadStatus.html
+  name: SaveLoadStatus
+  nameWithType: SaveLoadStatus
+  fullName: TDMaker.Unity.Campaign.SaveLoadStatus

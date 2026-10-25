@@ -1,0 +1,510 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.MechanicTargetDef
+  commentId: T:TDMaker.Core.Defs.MechanicTargetDef
+  id: MechanicTargetDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.MechanicTargetDef.#ctor(System.UInt64,System.UInt64,System.Boolean,System.Single,System.Single)
+  - TDMaker.Core.Defs.MechanicTargetDef.AllowHeroes
+  - TDMaker.Core.Defs.MechanicTargetDef.MaximumHealth
+  - TDMaker.Core.Defs.MechanicTargetDef.MaximumHealthRatio
+  - TDMaker.Core.Defs.MechanicTargetDef.RejectedTags
+  - TDMaker.Core.Defs.MechanicTargetDef.RequiredTags
+  langs:
+  - csharp
+  - vb
+  name: MechanicTargetDef
+  nameWithType: MechanicTargetDef
+  fullName: TDMaker.Core.Defs.MechanicTargetDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Additional eligibility for mechanic actions; never replaces lifecycle or faction checks.
+  example: []
+  syntax:
+    content: public sealed class MechanicTargetDef
+    content.vb: Public NotInheritable Class MechanicTargetDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.MechanicTargetDef.#ctor(System.UInt64,System.UInt64,System.Boolean,System.Single,System.Single)
+  commentId: M:TDMaker.Core.Defs.MechanicTargetDef.#ctor(System.UInt64,System.UInt64,System.Boolean,System.Single,System.Single)
+  id: '#ctor(System.UInt64,System.UInt64,System.Boolean,System.Single,System.Single)'
+  parent: TDMaker.Core.Defs.MechanicTargetDef
+  langs:
+  - csharp
+  - vb
+  name: MechanicTargetDef(ulong, ulong, bool, float, float)
+  nameWithType: MechanicTargetDef.MechanicTargetDef(ulong, ulong, bool, float, float)
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.MechanicTargetDef(ulong, ulong, bool, float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a reusable filter, including execute eligibility.
+  example: []
+  syntax:
+    content: public MechanicTargetDef(ulong requiredTags = 0, ulong rejectedTags = 0, bool allowHeroes = true, float maximumHealthRatio
+      = 1, float maximumHealth = 0)
+    parameters:
+    - id: requiredTags
+      type: System.UInt64
+    - id: rejectedTags
+      type: System.UInt64
+    - id: allowHeroes
+      type: System.Boolean
+    - id: maximumHealthRatio
+      type: System.Single
+    - id: maximumHealth
+      type: System.Single
+    content.vb: Public Sub New(requiredTags As ULong = 0, rejectedTags As ULong = 0, allowHeroes As Boolean = True, maximumHealthRatio
+      As Single = 1, maximumHealth As Single = 0)
+  overload: TDMaker.Core.Defs.MechanicTargetDef.#ctor*
+  nameWithType.vb: MechanicTargetDef.New(ULong, ULong, Boolean, Single, Single)
+  fullName.vb: TDMaker.Core.Defs.MechanicTargetDef.New(ULong, ULong, Boolean, Single, Single)
+  name.vb: New(ULong, ULong, Boolean, Single, Single)
+- uid: TDMaker.Core.Defs.MechanicTargetDef.RequiredTags
+  commentId: P:TDMaker.Core.Defs.MechanicTargetDef.RequiredTags
+  id: RequiredTags
+  parent: TDMaker.Core.Defs.MechanicTargetDef
+  langs:
+  - csharp
+  - vb
+  name: RequiredTags
+  nameWithType: MechanicTargetDef.RequiredTags
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.RequiredTags
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: All these author-defined target tags must be present.
+  example: []
+  syntax:
+    content: public ulong RequiredTags { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property RequiredTags As ULong
+  overload: TDMaker.Core.Defs.MechanicTargetDef.RequiredTags*
+- uid: TDMaker.Core.Defs.MechanicTargetDef.RejectedTags
+  commentId: P:TDMaker.Core.Defs.MechanicTargetDef.RejectedTags
+  id: RejectedTags
+  parent: TDMaker.Core.Defs.MechanicTargetDef
+  langs:
+  - csharp
+  - vb
+  name: RejectedTags
+  nameWithType: MechanicTargetDef.RejectedTags
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.RejectedTags
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: None of these author-defined target tags may be present.
+  example: []
+  syntax:
+    content: public ulong RejectedTags { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property RejectedTags As ULong
+  overload: TDMaker.Core.Defs.MechanicTargetDef.RejectedTags*
+- uid: TDMaker.Core.Defs.MechanicTargetDef.AllowHeroes
+  commentId: P:TDMaker.Core.Defs.MechanicTargetDef.AllowHeroes
+  id: AllowHeroes
+  parent: TDMaker.Core.Defs.MechanicTargetDef
+  langs:
+  - csharp
+  - vb
+  name: AllowHeroes
+  nameWithType: MechanicTargetDef.AllowHeroes
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.AllowHeroes
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Allows independent heroes as recipients.
+  example: []
+  syntax:
+    content: public bool AllowHeroes { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property AllowHeroes As Boolean
+  overload: TDMaker.Core.Defs.MechanicTargetDef.AllowHeroes*
+- uid: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealthRatio
+  commentId: P:TDMaker.Core.Defs.MechanicTargetDef.MaximumHealthRatio
+  id: MaximumHealthRatio
+  parent: TDMaker.Core.Defs.MechanicTargetDef
+  langs:
+  - csharp
+  - vb
+  name: MaximumHealthRatio
+  nameWithType: MechanicTargetDef.MaximumHealthRatio
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealthRatio
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum current/maximum health ratio, inclusive.
+  example: []
+  syntax:
+    content: public float MaximumHealthRatio { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MaximumHealthRatio As Single
+  overload: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealthRatio*
+- uid: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealth
+  commentId: P:TDMaker.Core.Defs.MechanicTargetDef.MaximumHealth
+  id: MaximumHealth
+  parent: TDMaker.Core.Defs.MechanicTargetDef
+  langs:
+  - csharp
+  - vb
+  name: MaximumHealth
+  nameWithType: MechanicTargetDef.MaximumHealth
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealth
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional absolute current-health ceiling; zero disables it.
+  example: []
+  syntax:
+    content: public float MaximumHealth { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MaximumHealth As Single
+  overload: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealth*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.MechanicTargetDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.MechanicTargetDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html#TDMaker_Core_Defs_MechanicTargetDef__ctor_System_UInt64_System_UInt64_System_Boolean_System_Single_System_Single_
+  name: MechanicTargetDef
+  nameWithType: MechanicTargetDef.MechanicTargetDef
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.MechanicTargetDef
+  nameWithType.vb: MechanicTargetDef.New
+  fullName.vb: TDMaker.Core.Defs.MechanicTargetDef.New
+  name.vb: New
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.MechanicTargetDef.RequiredTags*
+  commentId: Overload:TDMaker.Core.Defs.MechanicTargetDef.RequiredTags
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html#TDMaker_Core_Defs_MechanicTargetDef_RequiredTags
+  name: RequiredTags
+  nameWithType: MechanicTargetDef.RequiredTags
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.RequiredTags
+- uid: TDMaker.Core.Defs.MechanicTargetDef.RejectedTags*
+  commentId: Overload:TDMaker.Core.Defs.MechanicTargetDef.RejectedTags
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html#TDMaker_Core_Defs_MechanicTargetDef_RejectedTags
+  name: RejectedTags
+  nameWithType: MechanicTargetDef.RejectedTags
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.RejectedTags
+- uid: TDMaker.Core.Defs.MechanicTargetDef.AllowHeroes*
+  commentId: Overload:TDMaker.Core.Defs.MechanicTargetDef.AllowHeroes
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html#TDMaker_Core_Defs_MechanicTargetDef_AllowHeroes
+  name: AllowHeroes
+  nameWithType: MechanicTargetDef.AllowHeroes
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.AllowHeroes
+- uid: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealthRatio*
+  commentId: Overload:TDMaker.Core.Defs.MechanicTargetDef.MaximumHealthRatio
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html#TDMaker_Core_Defs_MechanicTargetDef_MaximumHealthRatio
+  name: MaximumHealthRatio
+  nameWithType: MechanicTargetDef.MaximumHealthRatio
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealthRatio
+- uid: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealth*
+  commentId: Overload:TDMaker.Core.Defs.MechanicTargetDef.MaximumHealth
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html#TDMaker_Core_Defs_MechanicTargetDef_MaximumHealth
+  name: MaximumHealth
+  nameWithType: MechanicTargetDef.MaximumHealth
+  fullName: TDMaker.Core.Defs.MechanicTargetDef.MaximumHealth

@@ -1,0 +1,1420 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.MineFieldData
+  commentId: T:TDMaker.Unity.Authoring.MineFieldData
+  id: MineFieldData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.MineFieldData.#ctor
+  - TDMaker.Unity.Authoring.MineFieldData.Id
+  - TDMaker.Unity.Authoring.MineFieldData.PreparationTime
+  - TDMaker.Unity.Authoring.MineFieldData.ToDef
+  - TDMaker.Unity.Authoring.MineFieldData.area
+  - TDMaker.Unity.Authoring.MineFieldData.armDelay
+  - TDMaker.Unity.Authoring.MineFieldData.color
+  - TDMaker.Unity.Authoring.MineFieldData.damage
+  - TDMaker.Unity.Authoring.MineFieldData.id
+  - TDMaker.Unity.Authoring.MineFieldData.keepWhenSourceLost
+  - TDMaker.Unity.Authoring.MineFieldData.lifetime
+  - TDMaker.Unity.Authoring.MineFieldData.maxMines
+  - TDMaker.Unity.Authoring.MineFieldData.maxTriggers
+  - TDMaker.Unity.Authoring.MineFieldData.maximumDistance
+  - TDMaker.Unity.Authoring.MineFieldData.minimumDistance
+  - TDMaker.Unity.Authoring.MineFieldData.minimumSpacing
+  - TDMaker.Unity.Authoring.MineFieldData.pointRule
+  - TDMaker.Unity.Authoring.MineFieldData.settleDuration
+  - TDMaker.Unity.Authoring.MineFieldData.sideClearance
+  - TDMaker.Unity.Authoring.MineFieldData.spacingScope
+  - TDMaker.Unity.Authoring.MineFieldData.targets
+  - TDMaker.Unity.Authoring.MineFieldData.targetsEnemies
+  - TDMaker.Unity.Authoring.MineFieldData.targetsFlying
+  - TDMaker.Unity.Authoring.MineFieldData.targetsGround
+  - TDMaker.Unity.Authoring.MineFieldData.transitDuration
+  - TDMaker.Unity.Authoring.MineFieldData.triggerRadius
+  - TDMaker.Unity.Authoring.MineFieldData.useCustomPointRule
+  - TDMaker.Unity.Authoring.MineFieldData.vfx
+  langs:
+  - csharp
+  - vb
+  name: MineFieldData
+  nameWithType: MineFieldData
+  fullName: TDMaker.Unity.Authoring.MineFieldData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Automatic mine laying, baked into a <xref href="TDMaker.Core.Defs.DeploymentPlanDef" data-throw-if-not-resolved="false"></xref>
+    with a <xref href="TDMaker.Core.Defs.TrapDef" data-throw-if-not-resolved="false"></xref> payload. Each activation picks
+
+    one lane node of a level path inside the distance band around the producer (seeded, deterministic), reserves it, throws
+    the mine
+
+    (flight, landing, then the arm delay) and leaves a trap that bursts under the first eligible unit. The lifetime counts
+    from the
+
+    throw. Use it as an ability action (<xref href="TDMaker.Unity.Authoring.AbilityActionData.useMines" data-throw-if-not-resolved="false"></xref>);
+    it fails, without a fallback spot, when no node fits.'
+  example: []
+  syntax:
+    content: public sealed class MineFieldData
+    content.vb: Public NotInheritable Class MineFieldData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.MineFieldData.id
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.id
+  id: id
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: MineFieldData.id
+  fullName: TDMaker.Unity.Authoring.MineFieldData.id
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Event key: selects the marker colour and the keyed audio cue, and counts toward the mine limit.'
+  example: []
+  syntax:
+    content: '[Tooltip("Event key: selects the marker colour and the keyed audio cue, and counts toward the mine limit.")]
+
+      public string id'
+    return:
+      type: System.String
+    content.vb: '<Tooltip("Event key: selects the marker colour and the keyed audio cue, and counts toward the mine limit.")>
+
+      Public id As String'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Event key: selects the marker colour and the keyed audio cue, and counts toward the mine limit.'
+- uid: TDMaker.Unity.Authoring.MineFieldData.damage
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.damage
+  id: damage
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: damage
+  nameWithType: MineFieldData.damage
+  fullName: TDMaker.Unity.Authoring.MineFieldData.damage
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Hit on trigger: an area packet is centred on the mine, a single-target packet hits the triggering unit.'
+  example: []
+  syntax:
+    content: '[Tooltip("Hit on trigger: an area packet (radius > 0) is centred on the mine and re-searches its victims; radius
+      0 hits only the triggering unit.")]
+
+      public DamageData damage'
+    return:
+      type: TDMaker.Unity.Authoring.DamageData
+    content.vb: '<Tooltip("Hit on trigger: an area packet (radius > 0) is centred on the mine and re-searches its victims;
+      radius 0 hits only the triggering unit.")>
+
+      Public damage As DamageData'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Hit on trigger: an area packet (radius > 0) is centred on the mine and re-searches its victims; radius 0 hits
+        only the triggering unit.'
+- uid: TDMaker.Unity.Authoring.MineFieldData.triggerRadius
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.triggerRadius
+  id: triggerRadius
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: triggerRadius
+  nameWithType: MineFieldData.triggerRadius
+  fullName: TDMaker.Unity.Authoring.MineFieldData.triggerRadius
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Detection radius (range ellipse), usually a fraction of the blast radius.
+  example: []
+  syntax:
+    content: '[Tooltip("Detection radius (range ellipse). Usually about a quarter to a third of the blast radius.")]
+
+      [Min(0)]
+
+      public float triggerRadius'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Detection radius (range ellipse). Usually about a quarter to a third of the blast radius.")>
+
+      <Min(0)>
+
+      Public triggerRadius As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Detection radius (range ellipse). Usually about a quarter to a third of the blast radius.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.MineFieldData.lifetime
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.lifetime
+  id: lifetime
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: lifetime
+  nameWithType: MineFieldData.lifetime
+  fullName: TDMaker.Unity.Authoring.MineFieldData.lifetime
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Total lifetime from the throw, including flight, landing and arming.
+  example: []
+  syntax:
+    content: '[Tooltip("Lifetime in game seconds from the throw (flight, landing and arming count). An unused mine fades out
+      without exploding.")]
+
+      [Min(0.05)]
+
+      public float lifetime'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Lifetime in game seconds from the throw (flight, landing and arming count). An unused mine fades
+      out without exploding.")>
+
+      <Min(0.05)>
+
+      Public lifetime As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Lifetime in game seconds from the throw (flight, landing and arming count). An unused mine fades out without
+        exploding.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0.05
+- uid: TDMaker.Unity.Authoring.MineFieldData.armDelay
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.armDelay
+  id: armDelay
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: armDelay
+  nameWithType: MineFieldData.armDelay
+  fullName: TDMaker.Unity.Authoring.MineFieldData.armDelay
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Delay after landing before the mine can trigger.
+  example: []
+  syntax:
+    content: '[Tooltip("Arming delay after the landing preparation.")]
+
+      [Min(0)]
+
+      public float armDelay'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Arming delay after the landing preparation.")>
+
+      <Min(0)>
+
+      Public armDelay As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Arming delay after the landing preparation.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.MineFieldData.maxTriggers
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.maxTriggers
+  id: maxTriggers
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: maxTriggers
+  nameWithType: MineFieldData.maxTriggers
+  fullName: TDMaker.Unity.Authoring.MineFieldData.maxTriggers
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Activations before the mine is used up.
+  example: []
+  syntax:
+    content: '[Tooltip("Activations before the mine is used up (1 = a single blast).")]
+
+      [Min(1)]
+
+      public int maxTriggers'
+    return:
+      type: System.Int32
+    content.vb: '<Tooltip("Activations before the mine is used up (1 = a single blast).")>
+
+      <Min(1)>
+
+      Public maxTriggers As Integer'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Activations before the mine is used up (1 = a single blast).
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.MineFieldData.area
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.area
+  id: area
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: area
+  nameWithType: MineFieldData.area
+  fullName: TDMaker.Unity.Authoring.MineFieldData.area
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional region left where the mine bursts.
+  example: []
+  syntax:
+    content: '[Tooltip("Optional region (effect and/or pulse) left at the mine on every trigger.")]
+
+      public AreaEffectData area'
+    return:
+      type: TDMaker.Unity.Authoring.AreaEffectData
+    content.vb: '<Tooltip("Optional region (effect and/or pulse) left at the mine on every trigger.")>
+
+      Public area As AreaEffectData'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Optional region (effect and/or pulse) left at the mine on every trigger.
+- uid: TDMaker.Unity.Authoring.MineFieldData.targetsEnemies
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.targetsEnemies
+  id: targetsEnemies
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: targetsEnemies
+  nameWithType: MineFieldData.targetsEnemies
+  fullName: TDMaker.Unity.Authoring.MineFieldData.targetsEnemies
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Triggered by enemies (otherwise by friendly soldiers and heroes).
+  example: []
+  syntax:
+    content: '[Tooltip("Triggered by enemies (off = by friendly soldiers and heroes, for mines laid by enemies).")]
+
+      public bool targetsEnemies'
+    return:
+      type: System.Boolean
+    content.vb: '<Tooltip("Triggered by enemies (off = by friendly soldiers and heroes, for mines laid by enemies).")>
+
+      Public targetsEnemies As Boolean'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Triggered by enemies (off = by friendly soldiers and heroes, for mines laid by enemies).
+- uid: TDMaker.Unity.Authoring.MineFieldData.targetsFlying
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.targetsFlying
+  id: targetsFlying
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: targetsFlying
+  nameWithType: MineFieldData.targetsFlying
+  fullName: TDMaker.Unity.Authoring.MineFieldData.targetsFlying
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Flying units can trigger it.
+  example: []
+  syntax:
+    content: public bool targetsFlying
+    return:
+      type: System.Boolean
+    content.vb: Public targetsFlying As Boolean
+- uid: TDMaker.Unity.Authoring.MineFieldData.targetsGround
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.targetsGround
+  id: targetsGround
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: targetsGround
+  nameWithType: MineFieldData.targetsGround
+  fullName: TDMaker.Unity.Authoring.MineFieldData.targetsGround
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Ground units can trigger it.
+  example: []
+  syntax:
+    content: public bool targetsGround
+    return:
+      type: System.Boolean
+    content.vb: Public targetsGround As Boolean
+- uid: TDMaker.Unity.Authoring.MineFieldData.targets
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.targets
+  id: targets
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: targets
+  nameWithType: MineFieldData.targets
+  fullName: TDMaker.Unity.Authoring.MineFieldData.targets
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Extra trigger eligibility (blast victims use normal damage eligibility).
+  example: []
+  syntax:
+    content: public MechanicTargetData targets
+    return:
+      type: TDMaker.Unity.Authoring.MechanicTargetData
+    content.vb: Public targets As MechanicTargetData
+- uid: TDMaker.Unity.Authoring.MineFieldData.keepWhenSourceLost
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.keepWhenSourceLost
+  id: keepWhenSourceLost
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: keepWhenSourceLost
+  nameWithType: MineFieldData.keepWhenSourceLost
+  fullName: TDMaker.Unity.Authoring.MineFieldData.keepWhenSourceLost
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Mines stay when their producer is sold or dies (off = they are removed with it).
+  example: []
+  syntax:
+    content: '[Tooltip("Mines already laid stay when the producer is sold, dies or disappears (their kill credit is kept).")]
+
+      public bool keepWhenSourceLost'
+    return:
+      type: System.Boolean
+    content.vb: '<Tooltip("Mines already laid stay when the producer is sold, dies or disappears (their kill credit is kept).")>
+
+      Public keepWhenSourceLost As Boolean'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Mines already laid stay when the producer is sold, dies or disappears (their kill credit is kept).
+- uid: TDMaker.Unity.Authoring.MineFieldData.minimumDistance
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.minimumDistance
+  id: minimumDistance
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: minimumDistance
+  nameWithType: MineFieldData.minimumDistance
+  fullName: TDMaker.Unity.Authoring.MineFieldData.minimumDistance
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Inner radius of the placement band around the producer (range ellipse).
+  example: []
+  syntax:
+    content: '[Header("Placement")]
+
+      [Tooltip("Inner radius of the placement band around the producer (range ellipse). Lane nodes closer than this are skipped.")]
+
+      [Min(0)]
+
+      public float minimumDistance'
+    return:
+      type: System.Single
+    content.vb: '<Header("Placement")>
+
+      <Tooltip("Inner radius of the placement band around the producer (range ellipse). Lane nodes closer than this are skipped.")>
+
+      <Min(0)>
+
+      Public minimumDistance As Single'
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Placement
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Inner radius of the placement band around the producer (range ellipse). Lane nodes closer than this are skipped.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.MineFieldData.maximumDistance
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.maximumDistance
+  id: maximumDistance
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: maximumDistance
+  nameWithType: MineFieldData.maximumDistance
+  fullName: TDMaker.Unity.Authoring.MineFieldData.maximumDistance
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Outer radius of the placement band (range ellipse).
+  example: []
+  syntax:
+    content: '[Tooltip("Outer radius of the placement band (range ellipse); usually a little less than the producer''s attack
+      range.")]
+
+      [Min(0)]
+
+      public float maximumDistance'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Outer radius of the placement band (range ellipse); usually a little less than the producer''s
+      attack range.")>
+
+      <Min(0)>
+
+      Public maximumDistance As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Outer radius of the placement band (range ellipse); usually a little less than the producer's attack range.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.MineFieldData.sideClearance
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.sideClearance
+  id: sideClearance
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: sideClearance
+  nameWithType: MineFieldData.sideClearance
+  fullName: TDMaker.Unity.Authoring.MineFieldData.sideClearance
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Minimum horizontal offset from the producer (keeps mines off the spot right under it).
+  example: []
+  syntax:
+    content: '[Tooltip("Minimum horizontal (X) offset of a site from the producer; 0 accepts sites straight above or below
+      it.")]
+
+      [Min(0)]
+
+      public float sideClearance'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Minimum horizontal (X) offset of a site from the producer; 0 accepts sites straight above or below
+      it.")>
+
+      <Min(0)>
+
+      Public sideClearance As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Minimum horizontal (X) offset of a site from the producer; 0 accepts sites straight above or below it.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.MineFieldData.minimumSpacing
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.minimumSpacing
+  id: minimumSpacing
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: minimumSpacing
+  nameWithType: MineFieldData.minimumSpacing
+  fullName: TDMaker.Unity.Authoring.MineFieldData.minimumSpacing
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Minimum distance between mines, including mines still in flight.
+  example: []
+  syntax:
+    content: '[Tooltip("Minimum distance between mines, including those still in flight. About half to one detection diameter
+      spreads them out.")]
+
+      [Min(0)]
+
+      public float minimumSpacing'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Minimum distance between mines, including those still in flight. About half to one detection diameter
+      spreads them out.")>
+
+      <Min(0)>
+
+      Public minimumSpacing As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Minimum distance between mines, including those still in flight. About half to one detection diameter spreads
+        them out.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.MineFieldData.spacingScope
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.spacingScope
+  id: spacingScope
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: spacingScope
+  nameWithType: MineFieldData.spacingScope
+  fullName: TDMaker.Unity.Authoring.MineFieldData.spacingScope
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Spacing counts only this producer's mines, or every deployment.
+  example: []
+  syntax:
+    content: '[Tooltip("Owner: spacing only against this producer''s mines. Global: against every deployment (other producers
+      and spell traps).")]
+
+      public DeploymentSpacingScope spacingScope'
+    return:
+      type: TDMaker.Core.Defs.DeploymentSpacingScope
+    content.vb: '<Tooltip("Owner: spacing only against this producer''s mines. Global: against every deployment (other producers
+      and spell traps).")>
+
+      Public spacingScope As DeploymentSpacingScope'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Owner: spacing only against this producer''s mines. Global: against every deployment (other producers and spell
+        traps).'
+- uid: TDMaker.Unity.Authoring.MineFieldData.maxMines
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.maxMines
+  id: maxMines
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: maxMines
+  nameWithType: MineFieldData.maxMines
+  fullName: TDMaker.Unity.Authoring.MineFieldData.maxMines
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Maximum live and in-flight mines of this producer; a full field rejects the throw.
+  example: []
+  syntax:
+    content: '[Tooltip("Maximum mines of this id alive or in flight per producer. A full field rejects the throw (old mines
+      are never replaced). 0 = no limit.")]
+
+      [Min(0)]
+
+      public int maxMines'
+    return:
+      type: System.Int32
+    content.vb: '<Tooltip("Maximum mines of this id alive or in flight per producer. A full field rejects the throw (old mines
+      are never replaced). 0 = no limit.")>
+
+      <Min(0)>
+
+      Public maxMines As Integer'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Maximum mines of this id alive or in flight per producer. A full field rejects the throw (old mines are never
+        replaced). 0 = no limit.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.MineFieldData.transitDuration
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.transitDuration
+  id: transitDuration
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: transitDuration
+  nameWithType: MineFieldData.transitDuration
+  fullName: TDMaker.Unity.Authoring.MineFieldData.transitDuration
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Flight time before the landing.
+  example: []
+  syntax:
+    content: '[Tooltip("Flight time of the throw (drawn as an arc).")]
+
+      [Min(0)]
+
+      public float transitDuration'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Flight time of the throw (drawn as an arc).")>
+
+      <Min(0)>
+
+      Public transitDuration As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Flight time of the throw (drawn as an arc).
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.MineFieldData.settleDuration
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.settleDuration
+  id: settleDuration
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: settleDuration
+  nameWithType: MineFieldData.settleDuration
+  fullName: TDMaker.Unity.Authoring.MineFieldData.settleDuration
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Landing preparation before the arming delay.
+  example: []
+  syntax:
+    content: '[Tooltip("Landing preparation after the flight, before the arming delay.")]
+
+      [Min(0)]
+
+      public float settleDuration'
+    return:
+      type: System.Single
+    content.vb: '<Tooltip("Landing preparation after the flight, before the arming delay.")>
+
+      <Min(0)>
+
+      Public settleDuration As Single'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Landing preparation after the flight, before the arming delay.
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.MineFieldData.useCustomPointRule
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.useCustomPointRule
+  id: useCustomPointRule
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: useCustomPointRule
+  nameWithType: MineFieldData.useCustomPointRule
+  fullName: TDMaker.Unity.Authoring.MineFieldData.useCustomPointRule
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Uses <xref href="TDMaker.Unity.Authoring.MineFieldData.pointRule" data-throw-if-not-resolved="false"></xref> to
+    check every candidate node (default: any node on a lane).'
+  example: []
+  syntax:
+    content: public bool useCustomPointRule
+    return:
+      type: System.Boolean
+    content.vb: Public useCustomPointRule As Boolean
+- uid: TDMaker.Unity.Authoring.MineFieldData.pointRule
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.pointRule
+  id: pointRule
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: pointRule
+  nameWithType: MineFieldData.pointRule
+  fullName: TDMaker.Unity.Authoring.MineFieldData.pointRule
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Terrain check for candidate nodes; a node the rule moves is rejected.
+  example: []
+  syntax:
+    content: '[Tooltip("Terrain check for every candidate lane node (for example bounds). A node the rule would move is skipped.")]
+
+      public PointRuleData pointRule'
+    return:
+      type: TDMaker.Unity.Authoring.PointRuleData
+    content.vb: '<Tooltip("Terrain check for every candidate lane node (for example bounds). A node the rule would move is
+      skipped.")>
+
+      Public pointRule As PointRuleData'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Terrain check for every candidate lane node (for example bounds). A node the rule would move is skipped.
+- uid: TDMaker.Unity.Authoring.MineFieldData.color
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.color
+  id: color
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: color
+  nameWithType: MineFieldData.color
+  fullName: TDMaker.Unity.Authoring.MineFieldData.color
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Marker, detection ring and blast colour.
+  example: []
+  syntax:
+    content: '[Header("Look")]
+
+      public Color color'
+    return:
+      type: UnityEngine.Color
+    content.vb: '<Header("Look")>
+
+      Public color As Color'
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Look
+- uid: TDMaker.Unity.Authoring.MineFieldData.vfx
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.vfx
+  id: vfx
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: vfx
+  nameWithType: MineFieldData.vfx
+  fullName: TDMaker.Unity.Authoring.MineFieldData.vfx
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional pooled VFX spawned on each blast.
+  example: []
+  syntax:
+    content: public GameObject vfx
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public vfx As GameObject
+- uid: TDMaker.Unity.Authoring.MineFieldData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.MineFieldData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: MineFieldData.ToDef()
+  fullName: TDMaker.Unity.Authoring.MineFieldData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the deployment plan.
+  example: []
+  syntax:
+    content: public DeploymentPlanDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.DeploymentPlanDef
+    content.vb: Public Function ToDef() As DeploymentPlanDef
+  overload: TDMaker.Unity.Authoring.MineFieldData.ToDef*
+- uid: TDMaker.Unity.Authoring.MineFieldData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.MineFieldData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: MineFieldData()
+  nameWithType: MineFieldData.MineFieldData()
+  fullName: TDMaker.Unity.Authoring.MineFieldData.MineFieldData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public MineFieldData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.MineFieldData.#ctor*
+  nameWithType.vb: MineFieldData.New()
+  fullName.vb: TDMaker.Unity.Authoring.MineFieldData.New()
+  name.vb: New()
+- uid: TDMaker.Unity.Authoring.MineFieldData.Id
+  commentId: P:TDMaker.Unity.Authoring.MineFieldData.Id
+  id: Id
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: MineFieldData.Id
+  fullName: TDMaker.Unity.Authoring.MineFieldData.Id
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: The resolved event key.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Unity.Authoring.MineFieldData.Id*
+- uid: TDMaker.Unity.Authoring.MineFieldData.PreparationTime
+  commentId: P:TDMaker.Unity.Authoring.MineFieldData.PreparationTime
+  id: PreparationTime
+  parent: TDMaker.Unity.Authoring.MineFieldData
+  langs:
+  - csharp
+  - vb
+  name: PreparationTime
+  nameWithType: MineFieldData.PreparationTime
+  fullName: TDMaker.Unity.Authoring.MineFieldData.PreparationTime
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Seconds from the throw until the mine is armed.
+  example: []
+  syntax:
+    content: public float PreparationTime { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property PreparationTime As Single
+  overload: TDMaker.Unity.Authoring.MineFieldData.PreparationTime*
+references:
+- uid: TDMaker.Core.Defs.DeploymentPlanDef
+  commentId: T:TDMaker.Core.Defs.DeploymentPlanDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html
+  name: DeploymentPlanDef
+  nameWithType: DeploymentPlanDef
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef
+- uid: TDMaker.Core.Defs.TrapDef
+  commentId: T:TDMaker.Core.Defs.TrapDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html
+  name: TrapDef
+  nameWithType: TrapDef
+  fullName: TDMaker.Core.Defs.TrapDef
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useMines
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useMines
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_useMines
+  name: useMines
+  nameWithType: AbilityActionData.useMines
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useMines
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Authoring.DamageData
+  commentId: T:TDMaker.Unity.Authoring.DamageData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.DamageData.html
+  name: DamageData
+  nameWithType: DamageData
+  fullName: TDMaker.Unity.Authoring.DamageData
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.Authoring.AreaEffectData
+  commentId: T:TDMaker.Unity.Authoring.AreaEffectData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AreaEffectData.html
+  name: AreaEffectData
+  nameWithType: AreaEffectData
+  fullName: TDMaker.Unity.Authoring.AreaEffectData
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.MechanicTargetData
+  commentId: T:TDMaker.Unity.Authoring.MechanicTargetData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicTargetData.html
+  name: MechanicTargetData
+  nameWithType: MechanicTargetData
+  fullName: TDMaker.Unity.Authoring.MechanicTargetData
+- uid: TDMaker.Core.Defs.DeploymentSpacingScope
+  commentId: T:TDMaker.Core.Defs.DeploymentSpacingScope
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentSpacingScope.html
+  name: DeploymentSpacingScope
+  nameWithType: DeploymentSpacingScope
+  fullName: TDMaker.Core.Defs.DeploymentSpacingScope
+- uid: TDMaker.Unity.Authoring.MineFieldData.pointRule
+  commentId: F:TDMaker.Unity.Authoring.MineFieldData.pointRule
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MineFieldData.html#TDMaker_Unity_Authoring_MineFieldData_pointRule
+  name: pointRule
+  nameWithType: MineFieldData.pointRule
+  fullName: TDMaker.Unity.Authoring.MineFieldData.pointRule
+- uid: TDMaker.Unity.Authoring.PointRuleData
+  commentId: T:TDMaker.Unity.Authoring.PointRuleData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PointRuleData.html
+  name: PointRuleData
+  nameWithType: PointRuleData
+  fullName: TDMaker.Unity.Authoring.PointRuleData
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: TDMaker.Unity.Authoring.MineFieldData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.MineFieldData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MineFieldData.html#TDMaker_Unity_Authoring_MineFieldData_ToDef
+  name: ToDef
+  nameWithType: MineFieldData.ToDef
+  fullName: TDMaker.Unity.Authoring.MineFieldData.ToDef
+- uid: TDMaker.Unity.Authoring.MineFieldData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.MineFieldData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MineFieldData.html#TDMaker_Unity_Authoring_MineFieldData__ctor
+  name: MineFieldData
+  nameWithType: MineFieldData.MineFieldData
+  fullName: TDMaker.Unity.Authoring.MineFieldData.MineFieldData
+  nameWithType.vb: MineFieldData.New
+  fullName.vb: TDMaker.Unity.Authoring.MineFieldData.New
+  name.vb: New
+- uid: TDMaker.Unity.Authoring.MineFieldData.Id*
+  commentId: Overload:TDMaker.Unity.Authoring.MineFieldData.Id
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MineFieldData.html#TDMaker_Unity_Authoring_MineFieldData_Id
+  name: Id
+  nameWithType: MineFieldData.Id
+  fullName: TDMaker.Unity.Authoring.MineFieldData.Id
+- uid: TDMaker.Unity.Authoring.MineFieldData.PreparationTime*
+  commentId: Overload:TDMaker.Unity.Authoring.MineFieldData.PreparationTime
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MineFieldData.html#TDMaker_Unity_Authoring_MineFieldData_PreparationTime
+  name: PreparationTime
+  nameWithType: MineFieldData.PreparationTime
+  fullName: TDMaker.Unity.Authoring.MineFieldData.PreparationTime

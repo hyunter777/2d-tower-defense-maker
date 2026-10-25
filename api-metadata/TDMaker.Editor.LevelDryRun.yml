@@ -1,0 +1,659 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.LevelDryRun
+  commentId: T:TDMaker.Editor.LevelDryRun
+  id: LevelDryRun
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.LevelDryRun.Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,System.Int32,System.Single)
+  - TDMaker.Editor.LevelDryRun.Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,TDMaker.Editor.LevelDryRun.PassResult[]@,System.Int32,System.Single)
+  - TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset)
+  - TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset,TDMaker.Editor.LevelDryRun.PassResult[]@)
+  - TDMaker.Editor.LevelDryRun.RunSample
+  langs:
+  - csharp
+  - vb
+  name: LevelDryRun
+  nameWithType: LevelDryRun
+  fullName: TDMaker.Editor.LevelDryRun
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Headless content check: bakes a level and runs the simulation without rendering.
+
+    The undefended run calls every wave as early as possible with no towers (shows total threat);
+
+    the fortified run builds and upgrades towers on every slot with unlimited gold, buys every tower ability,
+
+    spawns the level''s heroes (moving them to the front enemy and spending skill points), and casts ready spells
+
+    at the leading enemy (checks that every build, branch, rally, ability, move and cast is accepted and that the
+
+    level can be completed). The budget pass plays with the level''s real starting gold: it starts the first wave, lets later
+
+    waves arrive on their timers and spends gold greedily (builds slots in list order, cycling the buildable towers, then
+    the
+
+    cheapest upgrade, branch or ability rank), with the same hero and spell assistance (checks that a sensible defense wins).'
+  example: []
+  syntax:
+    content: public static class LevelDryRun
+    content.vb: Public Module LevelDryRun
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.LevelDryRun.RunSample
+  commentId: M:TDMaker.Editor.LevelDryRun.RunSample
+  id: RunSample
+  parent: TDMaker.Editor.LevelDryRun
+  langs:
+  - csharp
+  - vb
+  name: RunSample()
+  nameWithType: LevelDryRun.RunSample()
+  fullName: TDMaker.Editor.LevelDryRun.RunSample()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Dry-runs every generated sample level (Basic, Crossroads, Winding Pass); usable with <code>-executeMethod</code>.
+
+    Add <code>-dryRunLevel &lt;asset path&gt;</code> to run one level asset instead.'
+  example: []
+  syntax:
+    content: public static void RunSample()
+    content.vb: Public Shared Sub RunSample()
+  overload: TDMaker.Editor.LevelDryRun.RunSample*
+- uid: TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset)
+  commentId: M:TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset)
+  id: Report(TDMaker.Unity.Authoring.LevelAsset)
+  parent: TDMaker.Editor.LevelDryRun
+  langs:
+  - csharp
+  - vb
+  name: Report(LevelAsset)
+  nameWithType: LevelDryRun.Report(LevelAsset)
+  fullName: TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Runs all passes on a level asset (its own geometry) and formats a report.
+  example: []
+  syntax:
+    content: public static string Report(LevelAsset level)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAsset
+    return:
+      type: System.String
+    content.vb: Public Shared Function Report(level As LevelAsset) As String
+  overload: TDMaker.Editor.LevelDryRun.Report*
+- uid: TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset,TDMaker.Editor.LevelDryRun.PassResult[]@)
+  commentId: M:TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset,TDMaker.Editor.LevelDryRun.PassResult[]@)
+  id: Report(TDMaker.Unity.Authoring.LevelAsset,TDMaker.Editor.LevelDryRun.PassResult[]@)
+  parent: TDMaker.Editor.LevelDryRun
+  langs:
+  - csharp
+  - vb
+  name: Report(LevelAsset, out PassResult[])
+  nameWithType: LevelDryRun.Report(LevelAsset, out LevelDryRun.PassResult[])
+  fullName: TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset, out TDMaker.Editor.LevelDryRun.PassResult[])
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Runs all passes on a level asset (its own geometry), formats a report and returns each pass' outcome.
+  example: []
+  syntax:
+    content: public static string Report(LevelAsset level, out LevelDryRun.PassResult[] results)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAsset
+    - id: results
+      type: TDMaker.Editor.LevelDryRun.PassResult[]
+    return:
+      type: System.String
+    content.vb: Public Shared Function Report(level As LevelAsset, results As LevelDryRun.PassResult()) As String
+  overload: TDMaker.Editor.LevelDryRun.Report*
+  nameWithType.vb: LevelDryRun.Report(LevelAsset, LevelDryRun.PassResult())
+  fullName.vb: TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset, TDMaker.Editor.LevelDryRun.PassResult())
+  name.vb: Report(LevelAsset, PassResult())
+- uid: TDMaker.Editor.LevelDryRun.Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,System.Int32,System.Single)
+  commentId: M:TDMaker.Editor.LevelDryRun.Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,System.Int32,System.Single)
+  id: Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,System.Int32,System.Single)
+  parent: TDMaker.Editor.LevelDryRun
+  langs:
+  - csharp
+  - vb
+  name: Report(string, Func<int?, BakedLevel>, float, int, float)
+  nameWithType: LevelDryRun.Report(string, Func<int?, BakedLevel>, float, int, float)
+  fullName: TDMaker.Editor.LevelDryRun.Report(string, System.Func<int?, TDMaker.Unity.Authoring.BakedLevel>, float, int, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Runs all passes and formats a report.
+  example: []
+  syntax:
+    content: public static string Report(string label, Func<int?, BakedLevel> bake, float defaultRangeYScale, int tickRate
+      = 30, float maxSeconds = 1800)
+    parameters:
+    - id: label
+      type: System.String
+    - id: bake
+      type: System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel}
+    - id: defaultRangeYScale
+      type: System.Single
+    - id: tickRate
+      type: System.Int32
+    - id: maxSeconds
+      type: System.Single
+    return:
+      type: System.String
+    content.vb: Public Shared Function Report(label As String, bake As Func(Of Integer?, BakedLevel), defaultRangeYScale As
+      Single, tickRate As Integer = 30, maxSeconds As Single = 1800) As String
+  overload: TDMaker.Editor.LevelDryRun.Report*
+  nameWithType.vb: LevelDryRun.Report(String, Func(Of Integer?, BakedLevel), Single, Integer, Single)
+  fullName.vb: TDMaker.Editor.LevelDryRun.Report(String, System.Func(Of Integer?, TDMaker.Unity.Authoring.BakedLevel), Single,
+    Integer, Single)
+  name.vb: Report(String, Func(Of Integer?, BakedLevel), Single, Integer, Single)
+- uid: TDMaker.Editor.LevelDryRun.Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,TDMaker.Editor.LevelDryRun.PassResult[]@,System.Int32,System.Single)
+  commentId: M:TDMaker.Editor.LevelDryRun.Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,TDMaker.Editor.LevelDryRun.PassResult[]@,System.Int32,System.Single)
+  id: Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,TDMaker.Editor.LevelDryRun.PassResult[]@,System.Int32,System.Single)
+  parent: TDMaker.Editor.LevelDryRun
+  langs:
+  - csharp
+  - vb
+  name: Report(string, Func<int?, BakedLevel>, float, out PassResult[], int, float)
+  nameWithType: LevelDryRun.Report(string, Func<int?, BakedLevel>, float, out LevelDryRun.PassResult[], int, float)
+  fullName: TDMaker.Editor.LevelDryRun.Report(string, System.Func<int?, TDMaker.Unity.Authoring.BakedLevel>, float, out TDMaker.Editor.LevelDryRun.PassResult[],
+    int, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Runs all passes, formats a report and returns each pass' outcome (passes that threw are missing).
+  example: []
+  syntax:
+    content: public static string Report(string label, Func<int?, BakedLevel> bake, float defaultRangeYScale, out LevelDryRun.PassResult[]
+      results, int tickRate = 30, float maxSeconds = 1800)
+    parameters:
+    - id: label
+      type: System.String
+    - id: bake
+      type: System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel}
+    - id: defaultRangeYScale
+      type: System.Single
+    - id: results
+      type: TDMaker.Editor.LevelDryRun.PassResult[]
+    - id: tickRate
+      type: System.Int32
+    - id: maxSeconds
+      type: System.Single
+    return:
+      type: System.String
+    content.vb: Public Shared Function Report(label As String, bake As Func(Of Integer?, BakedLevel), defaultRangeYScale As
+      Single, results As LevelDryRun.PassResult(), tickRate As Integer = 30, maxSeconds As Single = 1800) As String
+  overload: TDMaker.Editor.LevelDryRun.Report*
+  nameWithType.vb: LevelDryRun.Report(String, Func(Of Integer?, BakedLevel), Single, LevelDryRun.PassResult(), Integer, Single)
+  fullName.vb: TDMaker.Editor.LevelDryRun.Report(String, System.Func(Of Integer?, TDMaker.Unity.Authoring.BakedLevel), Single,
+    TDMaker.Editor.LevelDryRun.PassResult(), Integer, Single)
+  name.vb: Report(String, Func(Of Integer?, BakedLevel), Single, PassResult(), Integer, Single)
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Editor.LevelDryRun.RunSample*
+  commentId: Overload:TDMaker.Editor.LevelDryRun.RunSample
+  isExternal: true
+  href: TDMaker.Editor.LevelDryRun.html#TDMaker_Editor_LevelDryRun_RunSample
+  name: RunSample
+  nameWithType: LevelDryRun.RunSample
+  fullName: TDMaker.Editor.LevelDryRun.RunSample
+- uid: TDMaker.Editor.LevelDryRun.Report*
+  commentId: Overload:TDMaker.Editor.LevelDryRun.Report
+  isExternal: true
+  href: TDMaker.Editor.LevelDryRun.html#TDMaker_Editor_LevelDryRun_Report_TDMaker_Unity_Authoring_LevelAsset_
+  name: Report
+  nameWithType: LevelDryRun.Report
+  fullName: TDMaker.Editor.LevelDryRun.Report
+- uid: TDMaker.Unity.Authoring.LevelAsset
+  commentId: T:TDMaker.Unity.Authoring.LevelAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelAsset.html
+  name: LevelAsset
+  nameWithType: LevelAsset
+  fullName: TDMaker.Unity.Authoring.LevelAsset
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Editor.LevelDryRun.PassResult[]
+  isExternal: true
+  href: TDMaker.Editor.LevelDryRun.PassResult.html
+  name: PassResult[]
+  nameWithType: LevelDryRun.PassResult[]
+  fullName: TDMaker.Editor.LevelDryRun.PassResult[]
+  nameWithType.vb: LevelDryRun.PassResult()
+  fullName.vb: TDMaker.Editor.LevelDryRun.PassResult()
+  name.vb: PassResult()
+  spec.csharp:
+  - uid: TDMaker.Editor.LevelDryRun.PassResult
+    name: PassResult
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.PassResult.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Editor.LevelDryRun.PassResult
+    name: PassResult
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.PassResult.html
+  - name: (
+  - name: )
+- uid: System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel}
+  commentId: T:System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<int?, BakedLevel>
+  nameWithType: Func<int?, BakedLevel>
+  fullName: System.Func<int?, TDMaker.Unity.Authoring.BakedLevel>
+  nameWithType.vb: Func(Of Integer?, BakedLevel)
+  fullName.vb: System.Func(Of Integer?, TDMaker.Unity.Authoring.BakedLevel)
+  name.vb: Func(Of Integer?, BakedLevel)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.BakedLevel
+    name: BakedLevel
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.BakedLevel
+    name: BakedLevel
+    isExternal: true
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: ' '
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: ','
+  - name: ' '
+  - name: TResult
+  - name: )

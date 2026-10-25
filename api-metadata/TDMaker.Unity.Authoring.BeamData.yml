@@ -1,0 +1,866 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.BeamData
+  commentId: T:TDMaker.Unity.Authoring.BeamData
+  id: BeamData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.BeamData.#ctor
+  - TDMaker.Unity.Authoring.BeamData.Id
+  - TDMaker.Unity.Authoring.BeamData.ToDef
+  - TDMaker.Unity.Authoring.BeamData.cancelWithSource
+  - TDMaker.Unity.Authoring.BeamData.color
+  - TDMaker.Unity.Authoring.BeamData.damage
+  - TDMaker.Unity.Authoring.BeamData.firstDelay
+  - TDMaker.Unity.Authoring.BeamData.id
+  - TDMaker.Unity.Authoring.BeamData.interval
+  - TDMaker.Unity.Authoring.BeamData.pulseCount
+  - TDMaker.Unity.Authoring.BeamData.range
+  - TDMaker.Unity.Authoring.BeamData.targets
+  - TDMaker.Unity.Authoring.BeamData.targetsFlying
+  - TDMaker.Unity.Authoring.BeamData.targetsGround
+  - TDMaker.Unity.Authoring.BeamData.totalDamage
+  - TDMaker.Unity.Authoring.BeamData.vfx
+  - TDMaker.Unity.Authoring.BeamData.width
+  langs:
+  - csharp
+  - vb
+  name: BeamData
+  nameWithType: BeamData
+  fullName: TDMaker.Unity.Authoring.BeamData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'A continuous single-target channel with an exact total damage budget split over pulses, baked into <xref href="TDMaker.Core.Defs.BeamDef"
+    data-throw-if-not-resolved="false"></xref>.
+
+    Use it as an ability action (<xref href="TDMaker.Unity.Authoring.AbilityActionData.useBeam" data-throw-if-not-resolved="false"></xref>).
+    The view draws a pooled line for its whole duration.'
+  example: []
+  syntax:
+    content: public sealed class BeamData
+    content.vb: Public NotInheritable Class BeamData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.BeamData.id
+  commentId: F:TDMaker.Unity.Authoring.BeamData.id
+  id: id
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: BeamData.id
+  fullName: TDMaker.Unity.Authoring.BeamData.id
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Event key (also selects the beam colour and width in the view).
+  example: []
+  syntax:
+    content: public string id
+    return:
+      type: System.String
+    content.vb: Public id As String
+- uid: TDMaker.Unity.Authoring.BeamData.damage
+  commentId: F:TDMaker.Unity.Authoring.BeamData.damage
+  id: damage
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: damage
+  nameWithType: BeamData.damage
+  fullName: TDMaker.Unity.Authoring.BeamData.damage
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Damage channel, pierce, on-hit effects, impact payload and life steal. Minimum/maximum and radius are ignored (the
+    budget is used).
+  example: []
+  syntax:
+    content: public DamageData damage
+    return:
+      type: TDMaker.Unity.Authoring.DamageData
+    content.vb: Public damage As DamageData
+- uid: TDMaker.Unity.Authoring.BeamData.totalDamage
+  commentId: F:TDMaker.Unity.Authoring.BeamData.totalDamage
+  id: totalDamage
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: totalDamage
+  nameWithType: BeamData.totalDamage
+  fullName: TDMaker.Unity.Authoring.BeamData.totalDamage
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Total raw damage of one channel before defenses, scaled once by the source's damage multiplier.
+  example: []
+  syntax:
+    content: '[Min(1)]
+
+      public int totalDamage'
+    return:
+      type: System.Int32
+    content.vb: '<Min(1)>
+
+      Public totalDamage As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.BeamData.pulseCount
+  commentId: F:TDMaker.Unity.Authoring.BeamData.pulseCount
+  id: pulseCount
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: pulseCount
+  nameWithType: BeamData.pulseCount
+  fullName: TDMaker.Unity.Authoring.BeamData.pulseCount
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Number of pulses the budget is split into (earlier pulses take the remainder).
+  example: []
+  syntax:
+    content: '[Min(1)]
+
+      public int pulseCount'
+    return:
+      type: System.Int32
+    content.vb: '<Min(1)>
+
+      Public pulseCount As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.BeamData.interval
+  commentId: F:TDMaker.Unity.Authoring.BeamData.interval
+  id: interval
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: interval
+  nameWithType: BeamData.interval
+  fullName: TDMaker.Unity.Authoring.BeamData.interval
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Seconds between pulses.
+  example: []
+  syntax:
+    content: '[Min(0.01)]
+
+      public float interval'
+    return:
+      type: System.Single
+    content.vb: '<Min(0.01)>
+
+      Public interval As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0.01
+- uid: TDMaker.Unity.Authoring.BeamData.range
+  commentId: F:TDMaker.Unity.Authoring.BeamData.range
+  id: range
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: range
+  nameWithType: BeamData.range
+  fullName: TDMaker.Unity.Authoring.BeamData.range
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Targeting range and tracking limit (the beam ends when the target leaves it).
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float range'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public range As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.BeamData.firstDelay
+  commentId: F:TDMaker.Unity.Authoring.BeamData.firstDelay
+  id: firstDelay
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: firstDelay
+  nameWithType: BeamData.firstDelay
+  fullName: TDMaker.Unity.Authoring.BeamData.firstDelay
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Delay before the first pulse.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float firstDelay'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public firstDelay As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.BeamData.targets
+  commentId: F:TDMaker.Unity.Authoring.BeamData.targets
+  id: targets
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: targets
+  nameWithType: BeamData.targets
+  fullName: TDMaker.Unity.Authoring.BeamData.targets
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Extra target eligibility, rechecked every pulse.
+  example: []
+  syntax:
+    content: public MechanicTargetData targets
+    return:
+      type: TDMaker.Unity.Authoring.MechanicTargetData
+    content.vb: Public targets As MechanicTargetData
+- uid: TDMaker.Unity.Authoring.BeamData.targetsFlying
+  commentId: F:TDMaker.Unity.Authoring.BeamData.targetsFlying
+  id: targetsFlying
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: targetsFlying
+  nameWithType: BeamData.targetsFlying
+  fullName: TDMaker.Unity.Authoring.BeamData.targetsFlying
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Allows flying targets.
+  example: []
+  syntax:
+    content: public bool targetsFlying
+    return:
+      type: System.Boolean
+    content.vb: Public targetsFlying As Boolean
+- uid: TDMaker.Unity.Authoring.BeamData.targetsGround
+  commentId: F:TDMaker.Unity.Authoring.BeamData.targetsGround
+  id: targetsGround
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: targetsGround
+  nameWithType: BeamData.targetsGround
+  fullName: TDMaker.Unity.Authoring.BeamData.targetsGround
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Allows ground targets.
+  example: []
+  syntax:
+    content: public bool targetsGround
+    return:
+      type: System.Boolean
+    content.vb: Public targetsGround As Boolean
+- uid: TDMaker.Unity.Authoring.BeamData.cancelWithSource
+  commentId: F:TDMaker.Unity.Authoring.BeamData.cancelWithSource
+  id: cancelWithSource
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: cancelWithSource
+  nameWithType: BeamData.cancelWithSource
+  fullName: TDMaker.Unity.Authoring.BeamData.cancelWithSource
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Ends the beam when the source dies, is stunned or disarmed, or is ordered to move.
+  example: []
+  syntax:
+    content: public bool cancelWithSource
+    return:
+      type: System.Boolean
+    content.vb: Public cancelWithSource As Boolean
+- uid: TDMaker.Unity.Authoring.BeamData.color
+  commentId: F:TDMaker.Unity.Authoring.BeamData.color
+  id: color
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: color
+  nameWithType: BeamData.color
+  fullName: TDMaker.Unity.Authoring.BeamData.color
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Beam colour.
+  example: []
+  syntax:
+    content: public Color color
+    return:
+      type: UnityEngine.Color
+    content.vb: Public color As Color
+- uid: TDMaker.Unity.Authoring.BeamData.width
+  commentId: F:TDMaker.Unity.Authoring.BeamData.width
+  id: width
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: width
+  nameWithType: BeamData.width
+  fullName: TDMaker.Unity.Authoring.BeamData.width
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Beam width in world units.
+  example: []
+  syntax:
+    content: '[Min(0.01)]
+
+      public float width'
+    return:
+      type: System.Single
+    content.vb: '<Min(0.01)>
+
+      Public width As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0.01
+- uid: TDMaker.Unity.Authoring.BeamData.vfx
+  commentId: F:TDMaker.Unity.Authoring.BeamData.vfx
+  id: vfx
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: vfx
+  nameWithType: BeamData.vfx
+  fullName: TDMaker.Unity.Authoring.BeamData.vfx
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional pooled VFX spawned on the target at each pulse.
+  example: []
+  syntax:
+    content: public GameObject vfx
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public vfx As GameObject
+- uid: TDMaker.Unity.Authoring.BeamData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.BeamData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: BeamData.ToDef()
+  fullName: TDMaker.Unity.Authoring.BeamData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the channel definition.
+  example: []
+  syntax:
+    content: public BeamDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.BeamDef
+    content.vb: Public Function ToDef() As BeamDef
+  overload: TDMaker.Unity.Authoring.BeamData.ToDef*
+- uid: TDMaker.Unity.Authoring.BeamData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.BeamData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: BeamData()
+  nameWithType: BeamData.BeamData()
+  fullName: TDMaker.Unity.Authoring.BeamData.BeamData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public BeamData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.BeamData.#ctor*
+  nameWithType.vb: BeamData.New()
+  fullName.vb: TDMaker.Unity.Authoring.BeamData.New()
+  name.vb: New()
+- uid: TDMaker.Unity.Authoring.BeamData.Id
+  commentId: P:TDMaker.Unity.Authoring.BeamData.Id
+  id: Id
+  parent: TDMaker.Unity.Authoring.BeamData
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: BeamData.Id
+  fullName: TDMaker.Unity.Authoring.BeamData.Id
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: The resolved event key.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Unity.Authoring.BeamData.Id*
+references:
+- uid: TDMaker.Core.Defs.BeamDef
+  commentId: T:TDMaker.Core.Defs.BeamDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.BeamDef.html
+  name: BeamDef
+  nameWithType: BeamDef
+  fullName: TDMaker.Core.Defs.BeamDef
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useBeam
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useBeam
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_useBeam
+  name: useBeam
+  nameWithType: AbilityActionData.useBeam
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useBeam
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Authoring.DamageData
+  commentId: T:TDMaker.Unity.Authoring.DamageData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.DamageData.html
+  name: DamageData
+  nameWithType: DamageData
+  fullName: TDMaker.Unity.Authoring.DamageData
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.MechanicTargetData
+  commentId: T:TDMaker.Unity.Authoring.MechanicTargetData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicTargetData.html
+  name: MechanicTargetData
+  nameWithType: MechanicTargetData
+  fullName: TDMaker.Unity.Authoring.MechanicTargetData
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: TDMaker.Unity.Authoring.BeamData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.BeamData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BeamData.html#TDMaker_Unity_Authoring_BeamData_ToDef
+  name: ToDef
+  nameWithType: BeamData.ToDef
+  fullName: TDMaker.Unity.Authoring.BeamData.ToDef
+- uid: TDMaker.Unity.Authoring.BeamData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.BeamData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BeamData.html#TDMaker_Unity_Authoring_BeamData__ctor
+  name: BeamData
+  nameWithType: BeamData.BeamData
+  fullName: TDMaker.Unity.Authoring.BeamData.BeamData
+  nameWithType.vb: BeamData.New
+  fullName.vb: TDMaker.Unity.Authoring.BeamData.New
+  name.vb: New
+- uid: TDMaker.Unity.Authoring.BeamData.Id*
+  commentId: Overload:TDMaker.Unity.Authoring.BeamData.Id
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BeamData.html#TDMaker_Unity_Authoring_BeamData_Id
+  name: Id
+  nameWithType: BeamData.Id
+  fullName: TDMaker.Unity.Authoring.BeamData.Id

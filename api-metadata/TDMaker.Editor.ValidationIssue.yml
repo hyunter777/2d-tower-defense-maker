@@ -1,0 +1,426 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.ValidationIssue
+  commentId: T:TDMaker.Editor.ValidationIssue
+  id: ValidationIssue
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.ValidationIssue.#ctor
+  - TDMaker.Editor.ValidationIssue.Category
+  - TDMaker.Editor.ValidationIssue.Context
+  - TDMaker.Editor.ValidationIssue.Message
+  - TDMaker.Editor.ValidationIssue.Severity
+  langs:
+  - csharp
+  - vb
+  name: ValidationIssue
+  nameWithType: ValidationIssue
+  fullName: TDMaker.Editor.ValidationIssue
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: One problem found by <xref href="TDMaker.Editor.ProjectValidator" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public sealed class ValidationIssue
+    content.vb: Public NotInheritable Class ValidationIssue
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.ValidationIssue.Severity
+  commentId: F:TDMaker.Editor.ValidationIssue.Severity
+  id: Severity
+  parent: TDMaker.Editor.ValidationIssue
+  langs:
+  - csharp
+  - vb
+  name: Severity
+  nameWithType: ValidationIssue.Severity
+  fullName: TDMaker.Editor.ValidationIssue.Severity
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Severity.
+  example: []
+  syntax:
+    content: public IssueSeverity Severity
+    return:
+      type: TDMaker.Editor.IssueSeverity
+    content.vb: Public Severity As IssueSeverity
+- uid: TDMaker.Editor.ValidationIssue.Category
+  commentId: F:TDMaker.Editor.ValidationIssue.Category
+  id: Category
+  parent: TDMaker.Editor.ValidationIssue
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: ValidationIssue.Category
+  fullName: TDMaker.Editor.ValidationIssue.Category
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Short category ("Waves", "Paths", ...).
+  example: []
+  syntax:
+    content: public string Category
+    return:
+      type: System.String
+    content.vb: Public Category As String
+- uid: TDMaker.Editor.ValidationIssue.Message
+  commentId: F:TDMaker.Editor.ValidationIssue.Message
+  id: Message
+  parent: TDMaker.Editor.ValidationIssue
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: ValidationIssue.Message
+  fullName: TDMaker.Editor.ValidationIssue.Message
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Human-readable description.
+  example: []
+  syntax:
+    content: public string Message
+    return:
+      type: System.String
+    content.vb: Public Message As String
+- uid: TDMaker.Editor.ValidationIssue.Context
+  commentId: F:TDMaker.Editor.ValidationIssue.Context
+  id: Context
+  parent: TDMaker.Editor.ValidationIssue
+  langs:
+  - csharp
+  - vb
+  name: Context
+  nameWithType: ValidationIssue.Context
+  fullName: TDMaker.Editor.ValidationIssue.Context
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Object to select when the issue is clicked.
+  example: []
+  syntax:
+    content: public Object Context
+    return:
+      type: UnityEngine.Object
+    content.vb: Public Context As [Object]
+- uid: TDMaker.Editor.ValidationIssue.#ctor
+  commentId: M:TDMaker.Editor.ValidationIssue.#ctor
+  id: '#ctor'
+  parent: TDMaker.Editor.ValidationIssue
+  langs:
+  - csharp
+  - vb
+  name: ValidationIssue()
+  nameWithType: ValidationIssue.ValidationIssue()
+  fullName: TDMaker.Editor.ValidationIssue.ValidationIssue()
+  type: Constructor
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public ValidationIssue()
+    content.vb: Public Sub New()
+  overload: TDMaker.Editor.ValidationIssue.#ctor*
+  nameWithType.vb: ValidationIssue.New()
+  fullName.vb: TDMaker.Editor.ValidationIssue.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Editor.ProjectValidator
+  commentId: T:TDMaker.Editor.ProjectValidator
+  isExternal: true
+  href: TDMaker.Editor.ProjectValidator.html
+  name: ProjectValidator
+  nameWithType: ProjectValidator
+  fullName: TDMaker.Editor.ProjectValidator
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Editor.IssueSeverity
+  commentId: T:TDMaker.Editor.IssueSeverity
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.IssueSeverity.html
+  name: IssueSeverity
+  nameWithType: IssueSeverity
+  fullName: TDMaker.Editor.IssueSeverity
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Editor.ValidationIssue.#ctor*
+  commentId: Overload:TDMaker.Editor.ValidationIssue.#ctor
+  isExternal: true
+  href: TDMaker.Editor.ValidationIssue.html#TDMaker_Editor_ValidationIssue__ctor
+  name: ValidationIssue
+  nameWithType: ValidationIssue.ValidationIssue
+  fullName: TDMaker.Editor.ValidationIssue.ValidationIssue
+  nameWithType.vb: ValidationIssue.New
+  fullName.vb: TDMaker.Editor.ValidationIssue.New
+  name.vb: New

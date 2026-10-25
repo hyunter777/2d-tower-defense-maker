@@ -1,0 +1,1424 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.WorkshopGUI
+  commentId: T:TDMaker.Editor.WorkshopGUI
+  id: WorkshopGUI
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.WorkshopGUI.BeginCard(System.String,UnityEngine.Color,System.String)
+  - TDMaker.Editor.WorkshopGUI.Card
+  - TDMaker.Editor.WorkshopGUI.CardTitle
+  - TDMaker.Editor.WorkshopGUI.Children(UnityEditor.SerializedProperty,System.Int32,System.String[])
+  - TDMaker.Editor.WorkshopGUI.DefaultLabelWidth
+  - TDMaker.Editor.WorkshopGUI.DrawSprite(UnityEngine.Rect,UnityEngine.Sprite,System.Boolean,UnityEngine.Color)
+  - TDMaker.Editor.WorkshopGUI.EndCard
+  - TDMaker.Editor.WorkshopGUI.Fields(UnityEditor.SerializedObject,System.String[])
+  - TDMaker.Editor.WorkshopGUI.FitLabelWidth(System.Single,System.Single,System.Single,System.Single)
+  - TDMaker.Editor.WorkshopGUI.Flat(UnityEditor.SerializedProperty,System.String,System.Int32)
+  - TDMaker.Editor.WorkshopGUI.HeaderButtons(UnityEngine.Rect,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  - TDMaker.Editor.WorkshopGUI.IndentWidth
+  - TDMaker.Editor.WorkshopGUI.IsBlock(UnityEditor.SerializedProperty)
+  - TDMaker.Editor.WorkshopGUI.MeasureLabel(System.String)
+  - TDMaker.Editor.WorkshopGUI.Num(System.Double,System.String)
+  - TDMaker.Editor.WorkshopGUI.Relative(UnityEditor.SerializedProperty,System.String[])
+  - TDMaker.Editor.WorkshopGUI.Row(System.String[],System.Single[],UnityEngine.GUIStyle,System.Nullable{UnityEngine.Color})
+  - TDMaker.Editor.WorkshopGUI.RowLabel
+  - TDMaker.Editor.WorkshopGUI.SectionLabel
+  - TDMaker.Editor.WorkshopGUI.SpriteRect(UnityEngine.Sprite,UnityEngine.Vector2,System.Single,System.Single,System.Boolean)
+  - TDMaker.Editor.WorkshopGUI.Stat(System.String,System.String,System.Boolean)
+  - TDMaker.Editor.WorkshopGUI.TabButton
+  - TDMaker.Editor.WorkshopGUI.WidestLabel(UnityEditor.SerializedObject,System.Func{System.String,System.Single})
+  langs:
+  - csharp
+  - vb
+  name: WorkshopGUI
+  nameWithType: WorkshopGUI
+  fullName: TDMaker.Editor.WorkshopGUI
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'IMGUI helpers of the Unit Workshop: flat forms (nested data drawn as labelled blocks instead of nested foldouts,
+    with
+
+    <code>enabled</code> / <code>useX</code> switches hiding what is off), cards and small drawing utilities.'
+  example: []
+  syntax:
+    content: public static class WorkshopGUI
+    content.vb: Public Module WorkshopGUI
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.WorkshopGUI.DefaultLabelWidth
+  commentId: F:TDMaker.Editor.WorkshopGUI.DefaultLabelWidth
+  id: DefaultLabelWidth
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: DefaultLabelWidth
+  nameWithType: WorkshopGUI.DefaultLabelWidth
+  fullName: TDMaker.Editor.WorkshopGUI.DefaultLabelWidth
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Label column width of an editor window when nothing sets it (Unity's default outside inspectors).
+  example: []
+  syntax:
+    content: public const float DefaultLabelWidth = 150
+    return:
+      type: System.Single
+    content.vb: Public Const DefaultLabelWidth As Single = 150
+- uid: TDMaker.Editor.WorkshopGUI.IndentWidth
+  commentId: F:TDMaker.Editor.WorkshopGUI.IndentWidth
+  id: IndentWidth
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: IndentWidth
+  nameWithType: WorkshopGUI.IndentWidth
+  fullName: TDMaker.Editor.WorkshopGUI.IndentWidth
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Indent of one <xref href="UnityEditor.EditorGUI.indentLevel" data-throw-if-not-resolved="false"></xref> step.
+  example: []
+  syntax:
+    content: public const float IndentWidth = 15
+    return:
+      type: System.Single
+    content.vb: Public Const IndentWidth As Single = 15
+- uid: TDMaker.Editor.WorkshopGUI.Fields(UnityEditor.SerializedObject,System.String[])
+  commentId: M:TDMaker.Editor.WorkshopGUI.Fields(UnityEditor.SerializedObject,System.String[])
+  id: Fields(UnityEditor.SerializedObject,System.String[])
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Fields(SerializedObject, params string[])
+  nameWithType: WorkshopGUI.Fields(SerializedObject, params string[])
+  fullName: TDMaker.Editor.WorkshopGUI.Fields(UnityEditor.SerializedObject, params string[])
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws the named properties of <code class="paramref">so</code> as a flat form.
+  example: []
+  syntax:
+    content: public static void Fields(SerializedObject so, params string[] names)
+    parameters:
+    - id: so
+      type: UnityEditor.SerializedObject
+    - id: names
+      type: System.String[]
+    content.vb: Public Shared Sub Fields(so As SerializedObject, ParamArray names As String())
+  overload: TDMaker.Editor.WorkshopGUI.Fields*
+  nameWithType.vb: WorkshopGUI.Fields(SerializedObject, ParamArray String())
+  fullName.vb: TDMaker.Editor.WorkshopGUI.Fields(UnityEditor.SerializedObject, ParamArray String())
+  name.vb: Fields(SerializedObject, ParamArray String())
+- uid: TDMaker.Editor.WorkshopGUI.Relative(UnityEditor.SerializedProperty,System.String[])
+  commentId: M:TDMaker.Editor.WorkshopGUI.Relative(UnityEditor.SerializedProperty,System.String[])
+  id: Relative(UnityEditor.SerializedProperty,System.String[])
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Relative(SerializedProperty, params string[])
+  nameWithType: WorkshopGUI.Relative(SerializedProperty, params string[])
+  fullName: TDMaker.Editor.WorkshopGUI.Relative(UnityEditor.SerializedProperty, params string[])
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws the named relative children of <code class="paramref">parent</code> as a flat form.
+  example: []
+  syntax:
+    content: public static void Relative(SerializedProperty parent, params string[] names)
+    parameters:
+    - id: parent
+      type: UnityEditor.SerializedProperty
+    - id: names
+      type: System.String[]
+    content.vb: Public Shared Sub Relative(parent As SerializedProperty, ParamArray names As String())
+  overload: TDMaker.Editor.WorkshopGUI.Relative*
+  nameWithType.vb: WorkshopGUI.Relative(SerializedProperty, ParamArray String())
+  fullName.vb: TDMaker.Editor.WorkshopGUI.Relative(UnityEditor.SerializedProperty, ParamArray String())
+  name.vb: Relative(SerializedProperty, ParamArray String())
+- uid: TDMaker.Editor.WorkshopGUI.IsBlock(UnityEditor.SerializedProperty)
+  commentId: M:TDMaker.Editor.WorkshopGUI.IsBlock(UnityEditor.SerializedProperty)
+  id: IsBlock(UnityEditor.SerializedProperty)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: IsBlock(SerializedProperty)
+  nameWithType: WorkshopGUI.IsBlock(SerializedProperty)
+  fullName: TDMaker.Editor.WorkshopGUI.IsBlock(UnityEditor.SerializedProperty)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether a property is a nested serializable class drawn as a block.
+  example: []
+  syntax:
+    content: public static bool IsBlock(SerializedProperty p)
+    parameters:
+    - id: p
+      type: UnityEditor.SerializedProperty
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsBlock(p As SerializedProperty) As Boolean
+  overload: TDMaker.Editor.WorkshopGUI.IsBlock*
+- uid: TDMaker.Editor.WorkshopGUI.Flat(UnityEditor.SerializedProperty,System.String,System.Int32)
+  commentId: M:TDMaker.Editor.WorkshopGUI.Flat(UnityEditor.SerializedProperty,System.String,System.Int32)
+  id: Flat(UnityEditor.SerializedProperty,System.String,System.Int32)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Flat(SerializedProperty, string, int)
+  nameWithType: WorkshopGUI.Flat(SerializedProperty, string, int)
+  fullName: TDMaker.Editor.WorkshopGUI.Flat(UnityEditor.SerializedProperty, string, int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Draws one property flat: nested classes become a small header plus their fields (one indent level, no foldout),
+    lists keep
+
+    the standard list drawer. A class with an <code>enabled</code> switch shows only the switch while it is off.'
+  example: []
+  syntax:
+    content: public static void Flat(SerializedProperty p, string label = null, int depth = 0)
+    parameters:
+    - id: p
+      type: UnityEditor.SerializedProperty
+    - id: label
+      type: System.String
+    - id: depth
+      type: System.Int32
+    content.vb: Public Shared Sub Flat(p As SerializedProperty, label As String = Nothing, depth As Integer = 0)
+  overload: TDMaker.Editor.WorkshopGUI.Flat*
+  nameWithType.vb: WorkshopGUI.Flat(SerializedProperty, String, Integer)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.Flat(UnityEditor.SerializedProperty, String, Integer)
+  name.vb: Flat(SerializedProperty, String, Integer)
+- uid: TDMaker.Editor.WorkshopGUI.Children(UnityEditor.SerializedProperty,System.Int32,System.String[])
+  commentId: M:TDMaker.Editor.WorkshopGUI.Children(UnityEditor.SerializedProperty,System.Int32,System.String[])
+  id: Children(UnityEditor.SerializedProperty,System.Int32,System.String[])
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Children(SerializedProperty, int, params string[])
+  nameWithType: WorkshopGUI.Children(SerializedProperty, int, params string[])
+  fullName: TDMaker.Editor.WorkshopGUI.Children(UnityEditor.SerializedProperty, int, params string[])
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws every visible child of a block flat, skipping <code class="paramref">skip</code> and payloads whose <code>useX</code>
+    switch is off.
+  example: []
+  syntax:
+    content: public static void Children(SerializedProperty block, int depth = 0, params string[] skip)
+    parameters:
+    - id: block
+      type: UnityEditor.SerializedProperty
+    - id: depth
+      type: System.Int32
+    - id: skip
+      type: System.String[]
+    content.vb: Public Shared Sub Children(block As SerializedProperty, depth As Integer = 0, ParamArray skip As String())
+  overload: TDMaker.Editor.WorkshopGUI.Children*
+  nameWithType.vb: WorkshopGUI.Children(SerializedProperty, Integer, ParamArray String())
+  fullName.vb: TDMaker.Editor.WorkshopGUI.Children(UnityEditor.SerializedProperty, Integer, ParamArray String())
+  name.vb: Children(SerializedProperty, Integer, ParamArray String())
+- uid: TDMaker.Editor.WorkshopGUI.BeginCard(System.String,UnityEngine.Color,System.String)
+  commentId: M:TDMaker.Editor.WorkshopGUI.BeginCard(System.String,UnityEngine.Color,System.String)
+  id: BeginCard(System.String,UnityEngine.Color,System.String)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: BeginCard(string, Color, string)
+  nameWithType: WorkshopGUI.BeginCard(string, Color, string)
+  fullName: TDMaker.Editor.WorkshopGUI.BeginCard(string, UnityEngine.Color, string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Begins a card with a coloured edge and a title; returns the header rect (for buttons drawn on the right).
+  example: []
+  syntax:
+    content: public static Rect BeginCard(string title, Color color, string subtitle = null)
+    parameters:
+    - id: title
+      type: System.String
+    - id: color
+      type: UnityEngine.Color
+    - id: subtitle
+      type: System.String
+    return:
+      type: UnityEngine.Rect
+    content.vb: Public Shared Function BeginCard(title As String, color As Color, subtitle As String = Nothing) As Rect
+  overload: TDMaker.Editor.WorkshopGUI.BeginCard*
+  nameWithType.vb: WorkshopGUI.BeginCard(String, Color, String)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.BeginCard(String, UnityEngine.Color, String)
+  name.vb: BeginCard(String, Color, String)
+- uid: TDMaker.Editor.WorkshopGUI.EndCard
+  commentId: M:TDMaker.Editor.WorkshopGUI.EndCard
+  id: EndCard
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: EndCard()
+  nameWithType: WorkshopGUI.EndCard()
+  fullName: TDMaker.Editor.WorkshopGUI.EndCard()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Ends a card.
+  example: []
+  syntax:
+    content: public static void EndCard()
+    content.vb: Public Shared Sub EndCard()
+  overload: TDMaker.Editor.WorkshopGUI.EndCard*
+- uid: TDMaker.Editor.WorkshopGUI.HeaderButtons(UnityEngine.Rect,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:TDMaker.Editor.WorkshopGUI.HeaderButtons(UnityEngine.Rect,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  id: HeaderButtons(UnityEngine.Rect,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: HeaderButtons(Rect, bool, bool, bool, bool)
+  nameWithType: WorkshopGUI.HeaderButtons(Rect, bool, bool, bool, bool)
+  fullName: TDMaker.Editor.WorkshopGUI.HeaderButtons(UnityEngine.Rect, bool, bool, bool, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Small icon buttons at the right of a card header; returns -1 (none), 0 (up), 1 (down), 2 (remove). Cards whose
+    place is
+
+    fixed by the data (traits stored as separate fields) pass <code class="paramref">showMove</code> false and get no arrows
+    at all.'
+  example: []
+  syntax:
+    content: public static int HeaderButtons(Rect header, bool canUp, bool canDown, bool canRemove = true, bool showMove =
+      true)
+    parameters:
+    - id: header
+      type: UnityEngine.Rect
+    - id: canUp
+      type: System.Boolean
+    - id: canDown
+      type: System.Boolean
+    - id: canRemove
+      type: System.Boolean
+    - id: showMove
+      type: System.Boolean
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function HeaderButtons(header As Rect, canUp As Boolean, canDown As Boolean, canRemove As Boolean
+      = True, showMove As Boolean = True) As Integer
+  overload: TDMaker.Editor.WorkshopGUI.HeaderButtons*
+  nameWithType.vb: WorkshopGUI.HeaderButtons(Rect, Boolean, Boolean, Boolean, Boolean)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.HeaderButtons(UnityEngine.Rect, Boolean, Boolean, Boolean, Boolean)
+  name.vb: HeaderButtons(Rect, Boolean, Boolean, Boolean, Boolean)
+- uid: TDMaker.Editor.WorkshopGUI.DrawSprite(UnityEngine.Rect,UnityEngine.Sprite,System.Boolean,UnityEngine.Color)
+  commentId: M:TDMaker.Editor.WorkshopGUI.DrawSprite(UnityEngine.Rect,UnityEngine.Sprite,System.Boolean,UnityEngine.Color)
+  id: DrawSprite(UnityEngine.Rect,UnityEngine.Sprite,System.Boolean,UnityEngine.Color)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: DrawSprite(Rect, Sprite, bool, Color)
+  nameWithType: WorkshopGUI.DrawSprite(Rect, Sprite, bool, Color)
+  fullName: TDMaker.Editor.WorkshopGUI.DrawSprite(UnityEngine.Rect, UnityEngine.Sprite, bool, UnityEngine.Color)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws a sprite into a rect (texture-space UVs, optional horizontal mirror and tint).
+  example: []
+  syntax:
+    content: public static void DrawSprite(Rect rect, Sprite sprite, bool mirror, Color tint)
+    parameters:
+    - id: rect
+      type: UnityEngine.Rect
+    - id: sprite
+      type: UnityEngine.Sprite
+    - id: mirror
+      type: System.Boolean
+    - id: tint
+      type: UnityEngine.Color
+    content.vb: Public Shared Sub DrawSprite(rect As Rect, sprite As Sprite, mirror As Boolean, tint As Color)
+  overload: TDMaker.Editor.WorkshopGUI.DrawSprite*
+  nameWithType.vb: WorkshopGUI.DrawSprite(Rect, Sprite, Boolean, Color)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.DrawSprite(UnityEngine.Rect, UnityEngine.Sprite, Boolean, UnityEngine.Color)
+  name.vb: DrawSprite(Rect, Sprite, Boolean, Color)
+- uid: TDMaker.Editor.WorkshopGUI.SpriteRect(UnityEngine.Sprite,UnityEngine.Vector2,System.Single,System.Single,System.Boolean)
+  commentId: M:TDMaker.Editor.WorkshopGUI.SpriteRect(UnityEngine.Sprite,UnityEngine.Vector2,System.Single,System.Single,System.Boolean)
+  id: SpriteRect(UnityEngine.Sprite,UnityEngine.Vector2,System.Single,System.Single,System.Boolean)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: SpriteRect(Sprite, Vector2, float, float, bool)
+  nameWithType: WorkshopGUI.SpriteRect(Sprite, Vector2, float, float, bool)
+  fullName: TDMaker.Editor.WorkshopGUI.SpriteRect(UnityEngine.Sprite, UnityEngine.Vector2, float, float, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Screen rect of a sprite drawn with its pivot at <code class="paramref">pivotScreen</code> and <code class="paramref">pixelsPerWorld</code>
+    zoom
+
+    (sprite size from its pixels per unit, times <code class="paramref">scale</code>). Mirroring flips around the pivot.'
+  example: []
+  syntax:
+    content: public static Rect SpriteRect(Sprite sprite, Vector2 pivotScreen, float pixelsPerWorld, float scale, bool mirror)
+    parameters:
+    - id: sprite
+      type: UnityEngine.Sprite
+    - id: pivotScreen
+      type: UnityEngine.Vector2
+    - id: pixelsPerWorld
+      type: System.Single
+    - id: scale
+      type: System.Single
+    - id: mirror
+      type: System.Boolean
+    return:
+      type: UnityEngine.Rect
+    content.vb: Public Shared Function SpriteRect(sprite As Sprite, pivotScreen As Vector2, pixelsPerWorld As Single, scale
+      As Single, mirror As Boolean) As Rect
+  overload: TDMaker.Editor.WorkshopGUI.SpriteRect*
+  nameWithType.vb: WorkshopGUI.SpriteRect(Sprite, Vector2, Single, Single, Boolean)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.SpriteRect(UnityEngine.Sprite, UnityEngine.Vector2, Single, Single, Boolean)
+  name.vb: SpriteRect(Sprite, Vector2, Single, Single, Boolean)
+- uid: TDMaker.Editor.WorkshopGUI.Stat(System.String,System.String,System.Boolean)
+  commentId: M:TDMaker.Editor.WorkshopGUI.Stat(System.String,System.String,System.Boolean)
+  id: Stat(System.String,System.String,System.Boolean)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Stat(string, string, bool)
+  nameWithType: WorkshopGUI.Stat(string, string, bool)
+  fullName: TDMaker.Editor.WorkshopGUI.Stat(string, string, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: A label/value row with an optional warning tint.
+  example: []
+  syntax:
+    content: public static void Stat(string label, string value, bool warn = false)
+    parameters:
+    - id: label
+      type: System.String
+    - id: value
+      type: System.String
+    - id: warn
+      type: System.Boolean
+    content.vb: Public Shared Sub Stat(label As String, value As String, warn As Boolean = False)
+  overload: TDMaker.Editor.WorkshopGUI.Stat*
+  nameWithType.vb: WorkshopGUI.Stat(String, String, Boolean)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.Stat(String, String, Boolean)
+  name.vb: Stat(String, String, Boolean)
+- uid: TDMaker.Editor.WorkshopGUI.Row(System.String[],System.Single[],UnityEngine.GUIStyle,System.Nullable{UnityEngine.Color})
+  commentId: M:TDMaker.Editor.WorkshopGUI.Row(System.String[],System.Single[],UnityEngine.GUIStyle,System.Nullable{UnityEngine.Color})
+  id: Row(System.String[],System.Single[],UnityEngine.GUIStyle,System.Nullable{UnityEngine.Color})
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Row(string[], float[], GUIStyle, Color?)
+  nameWithType: WorkshopGUI.Row(string[], float[], GUIStyle, Color?)
+  fullName: TDMaker.Editor.WorkshopGUI.Row(string[], float[], UnityEngine.GUIStyle, UnityEngine.Color?)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws a row of table cells with relative widths.
+  example: []
+  syntax:
+    content: public static void Row(string[] cells, float[] widths, GUIStyle style = null, Color? tint = null)
+    parameters:
+    - id: cells
+      type: System.String[]
+    - id: widths
+      type: System.Single[]
+    - id: style
+      type: UnityEngine.GUIStyle
+    - id: tint
+      type: System.Nullable{UnityEngine.Color}
+    content.vb: Public Shared Sub Row(cells As String(), widths As Single(), style As GUIStyle = Nothing, tint As Color? =
+      Nothing)
+  overload: TDMaker.Editor.WorkshopGUI.Row*
+  nameWithType.vb: WorkshopGUI.Row(String(), Single(), GUIStyle, Color?)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.Row(String(), Single(), UnityEngine.GUIStyle, UnityEngine.Color?)
+  name.vb: Row(String(), Single(), GUIStyle, Color?)
+- uid: TDMaker.Editor.WorkshopGUI.FitLabelWidth(System.Single,System.Single,System.Single,System.Single)
+  commentId: M:TDMaker.Editor.WorkshopGUI.FitLabelWidth(System.Single,System.Single,System.Single,System.Single)
+  id: FitLabelWidth(System.Single,System.Single,System.Single,System.Single)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: FitLabelWidth(float, float, float, float)
+  nameWithType: WorkshopGUI.FitLabelWidth(float, float, float, float)
+  fullName: TDMaker.Editor.WorkshopGUI.FitLabelWidth(float, float, float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Label column width that fits a label of <code class="paramref">widest</code> pixels: never below <code class="paramref">min</code>
+    and never more
+
+    than <code class="paramref">maxFraction</code> of the <code class="paramref">available</code> width (the fields keep the
+    rest).'
+  example: []
+  syntax:
+    content: public static float FitLabelWidth(float widest, float available, float min = 150, float maxFraction = 0.5)
+    parameters:
+    - id: widest
+      type: System.Single
+    - id: available
+      type: System.Single
+    - id: min
+      type: System.Single
+    - id: maxFraction
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function FitLabelWidth(widest As Single, available As Single, min As Single = 150, maxFraction
+      As Single = 0.5) As Single
+  overload: TDMaker.Editor.WorkshopGUI.FitLabelWidth*
+  nameWithType.vb: WorkshopGUI.FitLabelWidth(Single, Single, Single, Single)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.FitLabelWidth(Single, Single, Single, Single)
+  name.vb: FitLabelWidth(Single, Single, Single, Single)
+- uid: TDMaker.Editor.WorkshopGUI.WidestLabel(UnityEditor.SerializedObject,System.Func{System.String,System.Single})
+  commentId: M:TDMaker.Editor.WorkshopGUI.WidestLabel(UnityEditor.SerializedObject,System.Func{System.String,System.Single})
+  id: WidestLabel(UnityEditor.SerializedObject,System.Func{System.String,System.Single})
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: WidestLabel(SerializedObject, Func<string, float>)
+  nameWithType: WorkshopGUI.WidestLabel(SerializedObject, Func<string, float>)
+  fullName: TDMaker.Editor.WorkshopGUI.WidestLabel(UnityEditor.SerializedObject, System.Func<string, float>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Width the label column needs for every visible property of <code class="paramref">so</code>: the label text measured
+    with
+
+    <code class="paramref">measure</code> plus its indent. Nested blocks count one indent each; list elements do not (forms
+    draw them as
+
+    cards at the list''s indent), and one spare indent covers cards that indent their content.'
+  example: []
+  syntax:
+    content: public static float WidestLabel(SerializedObject so, Func<string, float> measure)
+    parameters:
+    - id: so
+      type: UnityEditor.SerializedObject
+    - id: measure
+      type: System.Func{System.String,System.Single}
+    return:
+      type: System.Single
+    content.vb: Public Shared Function WidestLabel(so As SerializedObject, measure As Func(Of String, Single)) As Single
+  overload: TDMaker.Editor.WorkshopGUI.WidestLabel*
+  nameWithType.vb: WorkshopGUI.WidestLabel(SerializedObject, Func(Of String, Single))
+  fullName.vb: TDMaker.Editor.WorkshopGUI.WidestLabel(UnityEditor.SerializedObject, System.Func(Of String, Single))
+  name.vb: WidestLabel(SerializedObject, Func(Of String, Single))
+- uid: TDMaker.Editor.WorkshopGUI.MeasureLabel(System.String)
+  commentId: M:TDMaker.Editor.WorkshopGUI.MeasureLabel(System.String)
+  id: MeasureLabel(System.String)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: MeasureLabel(string)
+  nameWithType: WorkshopGUI.MeasureLabel(string)
+  fullName: TDMaker.Editor.WorkshopGUI.MeasureLabel(string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Pixel width of a label text in the standard label style (an estimate when no GUI skin is loaded, e.g. in batch
+    mode).
+  example: []
+  syntax:
+    content: public static float MeasureLabel(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.Single
+    content.vb: Public Shared Function MeasureLabel(text As String) As Single
+  overload: TDMaker.Editor.WorkshopGUI.MeasureLabel*
+  nameWithType.vb: WorkshopGUI.MeasureLabel(String)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.MeasureLabel(String)
+  name.vb: MeasureLabel(String)
+- uid: TDMaker.Editor.WorkshopGUI.Num(System.Double,System.String)
+  commentId: M:TDMaker.Editor.WorkshopGUI.Num(System.Double,System.String)
+  id: Num(System.Double,System.String)
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Num(double, string)
+  nameWithType: WorkshopGUI.Num(double, string)
+  fullName: TDMaker.Editor.WorkshopGUI.Num(double, string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Formats a time or count that may be infinite.
+  example: []
+  syntax:
+    content: public static string Num(double value, string format = "0.#")
+    parameters:
+    - id: value
+      type: System.Double
+    - id: format
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function Num(value As Double, format As String = "0.#") As String
+  overload: TDMaker.Editor.WorkshopGUI.Num*
+  nameWithType.vb: WorkshopGUI.Num(Double, String)
+  fullName.vb: TDMaker.Editor.WorkshopGUI.Num(Double, String)
+  name.vb: Num(Double, String)
+- uid: TDMaker.Editor.WorkshopGUI.Card
+  commentId: P:TDMaker.Editor.WorkshopGUI.Card
+  id: Card
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Card
+  nameWithType: WorkshopGUI.Card
+  fullName: TDMaker.Editor.WorkshopGUI.Card
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Card body style.
+  example: []
+  syntax:
+    content: public static GUIStyle Card { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property Card As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.Card*
+- uid: TDMaker.Editor.WorkshopGUI.CardTitle
+  commentId: P:TDMaker.Editor.WorkshopGUI.CardTitle
+  id: CardTitle
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: CardTitle
+  nameWithType: WorkshopGUI.CardTitle
+  fullName: TDMaker.Editor.WorkshopGUI.CardTitle
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Card title style.
+  example: []
+  syntax:
+    content: public static GUIStyle CardTitle { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property CardTitle As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.CardTitle*
+- uid: TDMaker.Editor.WorkshopGUI.SectionLabel
+  commentId: P:TDMaker.Editor.WorkshopGUI.SectionLabel
+  id: SectionLabel
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: SectionLabel
+  nameWithType: WorkshopGUI.SectionLabel
+  fullName: TDMaker.Editor.WorkshopGUI.SectionLabel
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Header of a nested block inside a flat form.
+  example: []
+  syntax:
+    content: public static GUIStyle SectionLabel { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property SectionLabel As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.SectionLabel*
+- uid: TDMaker.Editor.WorkshopGUI.RowLabel
+  commentId: P:TDMaker.Editor.WorkshopGUI.RowLabel
+  id: RowLabel
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: RowLabel
+  nameWithType: WorkshopGUI.RowLabel
+  fullName: TDMaker.Editor.WorkshopGUI.RowLabel
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: List row label.
+  example: []
+  syntax:
+    content: public static GUIStyle RowLabel { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property RowLabel As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.RowLabel*
+- uid: TDMaker.Editor.WorkshopGUI.TabButton
+  commentId: P:TDMaker.Editor.WorkshopGUI.TabButton
+  id: TabButton
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: TabButton
+  nameWithType: WorkshopGUI.TabButton
+  fullName: TDMaker.Editor.WorkshopGUI.TabButton
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Tab button.
+  example: []
+  syntax:
+    content: public static GUIStyle TabButton { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property TabButton As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.TabButton*
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEditor.EditorGUI.indentLevel
+  commentId: P:UnityEditor.EditorGUI.indentLevel
+  isExternal: true
+  name: indentLevel
+  nameWithType: EditorGUI.indentLevel
+  fullName: UnityEditor.EditorGUI.indentLevel
+- uid: TDMaker.Editor.WorkshopGUI.Fields*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Fields
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Fields_UnityEditor_SerializedObject_System_String___
+  name: Fields
+  nameWithType: WorkshopGUI.Fields
+  fullName: TDMaker.Editor.WorkshopGUI.Fields
+- uid: UnityEditor.SerializedObject
+  commentId: T:UnityEditor.SerializedObject
+  parent: UnityEditor
+  isExternal: true
+  name: SerializedObject
+  nameWithType: SerializedObject
+  fullName: UnityEditor.SerializedObject
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: TDMaker.Editor.WorkshopGUI.Relative*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Relative
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Relative_UnityEditor_SerializedProperty_System_String___
+  name: Relative
+  nameWithType: WorkshopGUI.Relative
+  fullName: TDMaker.Editor.WorkshopGUI.Relative
+- uid: UnityEditor.SerializedProperty
+  commentId: T:UnityEditor.SerializedProperty
+  parent: UnityEditor
+  isExternal: true
+  name: SerializedProperty
+  nameWithType: SerializedProperty
+  fullName: UnityEditor.SerializedProperty
+- uid: TDMaker.Editor.WorkshopGUI.IsBlock*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.IsBlock
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_IsBlock_UnityEditor_SerializedProperty_
+  name: IsBlock
+  nameWithType: WorkshopGUI.IsBlock
+  fullName: TDMaker.Editor.WorkshopGUI.IsBlock
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.WorkshopGUI.Flat*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Flat
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Flat_UnityEditor_SerializedProperty_System_String_System_Int32_
+  name: Flat
+  nameWithType: WorkshopGUI.Flat
+  fullName: TDMaker.Editor.WorkshopGUI.Flat
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Editor.WorkshopGUI.Children*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Children
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Children_UnityEditor_SerializedProperty_System_Int32_System_String___
+  name: Children
+  nameWithType: WorkshopGUI.Children
+  fullName: TDMaker.Editor.WorkshopGUI.Children
+- uid: TDMaker.Editor.WorkshopGUI.BeginCard*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.BeginCard
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_BeginCard_System_String_UnityEngine_Color_System_String_
+  name: BeginCard
+  nameWithType: WorkshopGUI.BeginCard
+  fullName: TDMaker.Editor.WorkshopGUI.BeginCard
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Editor.WorkshopGUI.EndCard*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.EndCard
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_EndCard
+  name: EndCard
+  nameWithType: WorkshopGUI.EndCard
+  fullName: TDMaker.Editor.WorkshopGUI.EndCard
+- uid: TDMaker.Editor.WorkshopGUI.HeaderButtons*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.HeaderButtons
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_HeaderButtons_UnityEngine_Rect_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
+  name: HeaderButtons
+  nameWithType: WorkshopGUI.HeaderButtons
+  fullName: TDMaker.Editor.WorkshopGUI.HeaderButtons
+- uid: TDMaker.Editor.WorkshopGUI.DrawSprite*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.DrawSprite
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_DrawSprite_UnityEngine_Rect_UnityEngine_Sprite_System_Boolean_UnityEngine_Color_
+  name: DrawSprite
+  nameWithType: WorkshopGUI.DrawSprite
+  fullName: TDMaker.Editor.WorkshopGUI.DrawSprite
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: TDMaker.Editor.WorkshopGUI.SpriteRect*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.SpriteRect
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_SpriteRect_UnityEngine_Sprite_UnityEngine_Vector2_System_Single_System_Single_System_Boolean_
+  name: SpriteRect
+  nameWithType: WorkshopGUI.SpriteRect
+  fullName: TDMaker.Editor.WorkshopGUI.SpriteRect
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: TDMaker.Editor.WorkshopGUI.Stat*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Stat
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Stat_System_String_System_String_System_Boolean_
+  name: Stat
+  nameWithType: WorkshopGUI.Stat
+  fullName: TDMaker.Editor.WorkshopGUI.Stat
+- uid: TDMaker.Editor.WorkshopGUI.Row*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Row
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Row_System_String___System_Single___UnityEngine_GUIStyle_System_Nullable_UnityEngine_Color__
+  name: Row
+  nameWithType: WorkshopGUI.Row
+  fullName: TDMaker.Editor.WorkshopGUI.Row
+- uid: System.Single[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float[]
+  nameWithType: float[]
+  fullName: float[]
+  nameWithType.vb: Single()
+  fullName.vb: Single()
+  name.vb: Single()
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: (
+  - name: )
+- uid: UnityEngine.GUIStyle
+  commentId: T:UnityEngine.GUIStyle
+  parent: UnityEngine
+  isExternal: true
+  name: GUIStyle
+  nameWithType: GUIStyle
+  fullName: UnityEngine.GUIStyle
+- uid: System.Nullable{UnityEngine.Color}
+  commentId: T:System.Nullable{UnityEngine.Color}
+  parent: System
+  definition: System.Nullable`1
+  name: Color?
+  nameWithType: Color?
+  fullName: UnityEngine.Color?
+  spec.csharp:
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Editor.WorkshopGUI.FitLabelWidth*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.FitLabelWidth
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_FitLabelWidth_System_Single_System_Single_System_Single_System_Single_
+  name: FitLabelWidth
+  nameWithType: WorkshopGUI.FitLabelWidth
+  fullName: TDMaker.Editor.WorkshopGUI.FitLabelWidth
+- uid: TDMaker.Editor.WorkshopGUI.WidestLabel*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.WidestLabel
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_WidestLabel_UnityEditor_SerializedObject_System_Func_System_String_System_Single__
+  name: WidestLabel
+  nameWithType: WorkshopGUI.WidestLabel
+  fullName: TDMaker.Editor.WorkshopGUI.WidestLabel
+- uid: System.Func{System.String,System.Single}
+  commentId: T:System.Func{System.String,System.Single}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<string, float>
+  nameWithType: Func<string, float>
+  fullName: System.Func<string, float>
+  nameWithType.vb: Func(Of String, Single)
+  fullName.vb: System.Func(Of String, Single)
+  name.vb: Func(Of String, Single)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: ' '
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: ','
+  - name: ' '
+  - name: TResult
+  - name: )
+- uid: TDMaker.Editor.WorkshopGUI.MeasureLabel*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.MeasureLabel
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_MeasureLabel_System_String_
+  name: MeasureLabel
+  nameWithType: WorkshopGUI.MeasureLabel
+  fullName: TDMaker.Editor.WorkshopGUI.MeasureLabel
+- uid: TDMaker.Editor.WorkshopGUI.Num*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Num
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Num_System_Double_System_String_
+  name: Num
+  nameWithType: WorkshopGUI.Num
+  fullName: TDMaker.Editor.WorkshopGUI.Num
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TDMaker.Editor.WorkshopGUI.Card*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Card
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Card
+  name: Card
+  nameWithType: WorkshopGUI.Card
+  fullName: TDMaker.Editor.WorkshopGUI.Card
+- uid: TDMaker.Editor.WorkshopGUI.CardTitle*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.CardTitle
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_CardTitle
+  name: CardTitle
+  nameWithType: WorkshopGUI.CardTitle
+  fullName: TDMaker.Editor.WorkshopGUI.CardTitle
+- uid: TDMaker.Editor.WorkshopGUI.SectionLabel*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.SectionLabel
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_SectionLabel
+  name: SectionLabel
+  nameWithType: WorkshopGUI.SectionLabel
+  fullName: TDMaker.Editor.WorkshopGUI.SectionLabel
+- uid: TDMaker.Editor.WorkshopGUI.RowLabel*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.RowLabel
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_RowLabel
+  name: RowLabel
+  nameWithType: WorkshopGUI.RowLabel
+  fullName: TDMaker.Editor.WorkshopGUI.RowLabel
+- uid: TDMaker.Editor.WorkshopGUI.TabButton*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.TabButton
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_TabButton
+  name: TabButton
+  nameWithType: WorkshopGUI.TabButton
+  fullName: TDMaker.Editor.WorkshopGUI.TabButton

@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.View.MusicPlayer.State
+  commentId: T:TDMaker.Unity.View.MusicPlayer.State
+  id: MusicPlayer.State
+  parent: TDMaker.Unity.View
+  children:
+  - TDMaker.Unity.View.MusicPlayer.State.Battle
+  - TDMaker.Unity.View.MusicPlayer.State.Intense
+  - TDMaker.Unity.View.MusicPlayer.State.Menu
+  - TDMaker.Unity.View.MusicPlayer.State.Outcome
+  - TDMaker.Unity.View.MusicPlayer.State.Silent
+  langs:
+  - csharp
+  - vb
+  name: MusicPlayer.State
+  nameWithType: MusicPlayer.State
+  fullName: TDMaker.Unity.View.MusicPlayer.State
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: What the player is currently playing.
+  example: []
+  syntax:
+    content: public enum MusicPlayer.State
+    content.vb: Public Enum MusicPlayer.State
+- uid: TDMaker.Unity.View.MusicPlayer.State.Silent
+  commentId: F:TDMaker.Unity.View.MusicPlayer.State.Silent
+  id: Silent
+  parent: TDMaker.Unity.View.MusicPlayer.State
+  langs:
+  - csharp
+  - vb
+  name: Silent
+  nameWithType: MusicPlayer.State.Silent
+  fullName: TDMaker.Unity.View.MusicPlayer.State.Silent
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Nothing (or the loop was stopped).
+  example: []
+  syntax:
+    content: Silent = 0
+    return:
+      type: TDMaker.Unity.View.MusicPlayer.State
+- uid: TDMaker.Unity.View.MusicPlayer.State.Menu
+  commentId: F:TDMaker.Unity.View.MusicPlayer.State.Menu
+  id: Menu
+  parent: TDMaker.Unity.View.MusicPlayer.State
+  langs:
+  - csharp
+  - vb
+  name: Menu
+  nameWithType: MusicPlayer.State.Menu
+  fullName: TDMaker.Unity.View.MusicPlayer.State.Menu
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: The menu loop.
+  example: []
+  syntax:
+    content: Menu = 1
+    return:
+      type: TDMaker.Unity.View.MusicPlayer.State
+- uid: TDMaker.Unity.View.MusicPlayer.State.Battle
+  commentId: F:TDMaker.Unity.View.MusicPlayer.State.Battle
+  id: Battle
+  parent: TDMaker.Unity.View.MusicPlayer.State
+  langs:
+  - csharp
+  - vb
+  name: Battle
+  nameWithType: MusicPlayer.State.Battle
+  fullName: TDMaker.Unity.View.MusicPlayer.State.Battle
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: The level's battle loop.
+  example: []
+  syntax:
+    content: Battle = 2
+    return:
+      type: TDMaker.Unity.View.MusicPlayer.State
+- uid: TDMaker.Unity.View.MusicPlayer.State.Intense
+  commentId: F:TDMaker.Unity.View.MusicPlayer.State.Intense
+  id: Intense
+  parent: TDMaker.Unity.View.MusicPlayer.State
+  langs:
+  - csharp
+  - vb
+  name: Intense
+  nameWithType: MusicPlayer.State.Intense
+  fullName: TDMaker.Unity.View.MusicPlayer.State.Intense
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: The level's intense loop.
+  example: []
+  syntax:
+    content: Intense = 3
+    return:
+      type: TDMaker.Unity.View.MusicPlayer.State
+- uid: TDMaker.Unity.View.MusicPlayer.State.Outcome
+  commentId: F:TDMaker.Unity.View.MusicPlayer.State.Outcome
+  id: Outcome
+  parent: TDMaker.Unity.View.MusicPlayer.State
+  langs:
+  - csharp
+  - vb
+  name: Outcome
+  nameWithType: MusicPlayer.State.Outcome
+  fullName: TDMaker.Unity.View.MusicPlayer.State.Outcome
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A victory or defeat stinger (the loop is stopped or ducked).
+  example: []
+  syntax:
+    content: Outcome = 4
+    return:
+      type: TDMaker.Unity.View.MusicPlayer.State
+references:
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: TDMaker.Unity.View.MusicPlayer.State
+  commentId: T:TDMaker.Unity.View.MusicPlayer.State
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.MusicPlayer.html
+  name: MusicPlayer.State
+  nameWithType: MusicPlayer.State
+  fullName: TDMaker.Unity.View.MusicPlayer.State
+  spec.csharp:
+  - uid: TDMaker.Unity.View.MusicPlayer
+    name: MusicPlayer
+    isExternal: true
+    href: TDMaker.Unity.View.MusicPlayer.html
+  - name: .
+  - uid: TDMaker.Unity.View.MusicPlayer.State
+    name: State
+    isExternal: true
+    href: TDMaker.Unity.View.MusicPlayer.State.html
+  spec.vb:
+  - uid: TDMaker.Unity.View.MusicPlayer
+    name: MusicPlayer
+    isExternal: true
+    href: TDMaker.Unity.View.MusicPlayer.html
+  - name: .
+  - uid: TDMaker.Unity.View.MusicPlayer.State
+    name: State
+    isExternal: true
+    href: TDMaker.Unity.View.MusicPlayer.State.html

@@ -1,0 +1,19 @@
+{
+  "build": {
+    "content": [
+      { "files": ["index.md", "toc.yml"] },
+      { "src": "../api-metadata", "files": ["**/*.yml"], "dest": "reference" }
+    ],
+    "template": ["default", "modern"],
+    "disableGitFeatures": true,
+    "globalMetadata": {
+      "_appName": "2D Tower Defense Maker API",
+      "_appTitle": "2D Tower Defense Maker API",
+      "_appFooter": "2D Tower Defense Maker",
+      "_appLogoUrl": "../index.html",
+      "_enableSearch": true,
+      "_disableContribution": true
+    },
+    "xref": ["https://learn.microsoft.com/dotnet/.xrefmap.json"]
+  }
+}

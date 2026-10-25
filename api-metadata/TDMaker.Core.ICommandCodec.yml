@@ -1,0 +1,249 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.ICommandCodec
+  commentId: T:TDMaker.Core.ICommandCodec
+  id: ICommandCodec
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.ICommandCodec.GetTypeId(TDMaker.Core.Commands.ICommand)
+  - TDMaker.Core.ICommandCodec.ReadPayload(System.Int32,System.IO.BinaryReader)
+  - TDMaker.Core.ICommandCodec.WritePayload(System.IO.BinaryWriter,TDMaker.Core.Commands.ICommand)
+  langs:
+  - csharp
+  - vb
+  name: ICommandCodec
+  nameWithType: ICommandCodec
+  fullName: TDMaker.Core.ICommandCodec
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Optional persistence for custom commands. Type IDs 1024 and above belong to applications.
+  example:
+  - <pre><code class="lang-csharp">log.WriteTo(stream, new StanceCommandCodec());</code></pre>
+  syntax:
+    content: public interface ICommandCodec
+    content.vb: Public Interface ICommandCodec
+- uid: TDMaker.Core.ICommandCodec.GetTypeId(TDMaker.Core.Commands.ICommand)
+  commentId: M:TDMaker.Core.ICommandCodec.GetTypeId(TDMaker.Core.Commands.ICommand)
+  id: GetTypeId(TDMaker.Core.Commands.ICommand)
+  parent: TDMaker.Core.ICommandCodec
+  langs:
+  - csharp
+  - vb
+  name: GetTypeId(ICommand)
+  nameWithType: ICommandCodec.GetTypeId(ICommand)
+  fullName: TDMaker.Core.ICommandCodec.GetTypeId(TDMaker.Core.Commands.ICommand)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Returns a stable application-defined ID, or zero for an unsupported command.
+  example: []
+  syntax:
+    content: int GetTypeId(ICommand command)
+    parameters:
+    - id: command
+      type: TDMaker.Core.Commands.ICommand
+    return:
+      type: System.Int32
+    content.vb: Function GetTypeId(command As ICommand) As Integer
+  overload: TDMaker.Core.ICommandCodec.GetTypeId*
+- uid: TDMaker.Core.ICommandCodec.WritePayload(System.IO.BinaryWriter,TDMaker.Core.Commands.ICommand)
+  commentId: M:TDMaker.Core.ICommandCodec.WritePayload(System.IO.BinaryWriter,TDMaker.Core.Commands.ICommand)
+  id: WritePayload(System.IO.BinaryWriter,TDMaker.Core.Commands.ICommand)
+  parent: TDMaker.Core.ICommandCodec
+  langs:
+  - csharp
+  - vb
+  name: WritePayload(BinaryWriter, ICommand)
+  nameWithType: ICommandCodec.WritePayload(BinaryWriter, ICommand)
+  fullName: TDMaker.Core.ICommandCodec.WritePayload(System.IO.BinaryWriter, TDMaker.Core.Commands.ICommand)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Writes a custom immutable command payload. Called only outside fixed ticks.
+  example: []
+  syntax:
+    content: void WritePayload(BinaryWriter writer, ICommand command)
+    parameters:
+    - id: writer
+      type: System.IO.BinaryWriter
+    - id: command
+      type: TDMaker.Core.Commands.ICommand
+    content.vb: Sub WritePayload(writer As BinaryWriter, command As ICommand)
+  overload: TDMaker.Core.ICommandCodec.WritePayload*
+- uid: TDMaker.Core.ICommandCodec.ReadPayload(System.Int32,System.IO.BinaryReader)
+  commentId: M:TDMaker.Core.ICommandCodec.ReadPayload(System.Int32,System.IO.BinaryReader)
+  id: ReadPayload(System.Int32,System.IO.BinaryReader)
+  parent: TDMaker.Core.ICommandCodec
+  langs:
+  - csharp
+  - vb
+  name: ReadPayload(int, BinaryReader)
+  nameWithType: ICommandCodec.ReadPayload(int, BinaryReader)
+  fullName: TDMaker.Core.ICommandCodec.ReadPayload(int, System.IO.BinaryReader)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Reads one payload or throws for an unknown or invalid command.
+  example: []
+  syntax:
+    content: ICommand ReadPayload(int typeId, BinaryReader reader)
+    parameters:
+    - id: typeId
+      type: System.Int32
+    - id: reader
+      type: System.IO.BinaryReader
+    return:
+      type: TDMaker.Core.Commands.ICommand
+    content.vb: Function ReadPayload(typeId As Integer, reader As BinaryReader) As ICommand
+  overload: TDMaker.Core.ICommandCodec.ReadPayload*
+  nameWithType.vb: ICommandCodec.ReadPayload(Integer, BinaryReader)
+  fullName.vb: TDMaker.Core.ICommandCodec.ReadPayload(Integer, System.IO.BinaryReader)
+  name.vb: ReadPayload(Integer, BinaryReader)
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.ICommandCodec.GetTypeId*
+  commentId: Overload:TDMaker.Core.ICommandCodec.GetTypeId
+  isExternal: true
+  href: TDMaker.Core.ICommandCodec.html#TDMaker_Core_ICommandCodec_GetTypeId_TDMaker_Core_Commands_ICommand_
+  name: GetTypeId
+  nameWithType: ICommandCodec.GetTypeId
+  fullName: TDMaker.Core.ICommandCodec.GetTypeId
+- uid: TDMaker.Core.Commands.ICommand
+  commentId: T:TDMaker.Core.Commands.ICommand
+  parent: TDMaker.Core.Commands
+  isExternal: true
+  href: TDMaker.Core.Commands.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: TDMaker.Core.Commands.ICommand
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Commands
+  commentId: N:TDMaker.Core.Commands
+  isExternal: true
+  name: TDMaker.Core.Commands
+  nameWithType: TDMaker.Core.Commands
+  fullName: TDMaker.Core.Commands
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.ICommandCodec.WritePayload*
+  commentId: Overload:TDMaker.Core.ICommandCodec.WritePayload
+  isExternal: true
+  href: TDMaker.Core.ICommandCodec.html#TDMaker_Core_ICommandCodec_WritePayload_System_IO_BinaryWriter_TDMaker_Core_Commands_ICommand_
+  name: WritePayload
+  nameWithType: ICommandCodec.WritePayload
+  fullName: TDMaker.Core.ICommandCodec.WritePayload
+- uid: System.IO.BinaryWriter
+  commentId: T:System.IO.BinaryWriter
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.binarywriter
+  name: BinaryWriter
+  nameWithType: BinaryWriter
+  fullName: System.IO.BinaryWriter
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: TDMaker.Core.ICommandCodec.ReadPayload*
+  commentId: Overload:TDMaker.Core.ICommandCodec.ReadPayload
+  isExternal: true
+  href: TDMaker.Core.ICommandCodec.html#TDMaker_Core_ICommandCodec_ReadPayload_System_Int32_System_IO_BinaryReader_
+  name: ReadPayload
+  nameWithType: ICommandCodec.ReadPayload
+  fullName: TDMaker.Core.ICommandCodec.ReadPayload
+- uid: System.IO.BinaryReader
+  commentId: T:System.IO.BinaryReader
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.binaryreader
+  name: BinaryReader
+  nameWithType: BinaryReader
+  fullName: System.IO.BinaryReader

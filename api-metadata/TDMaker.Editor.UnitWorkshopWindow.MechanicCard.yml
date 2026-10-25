@@ -1,0 +1,514 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  commentId: T:TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  id: UnitWorkshopWindow.MechanicCard
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionArea
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionAttack
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionBeam
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionChain
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionCustom
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionMines
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionMultiTarget
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionRaise
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionSelfEffect
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionSummon
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionTransfer
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionTrap
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Aura
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.DeathSplit
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ImpactPayload
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.LifeSteal
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.MeleeEvasion
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.OnHitEffect
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Reflection
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Regeneration
+  - TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Revive
+  langs:
+  - csharp
+  - vb
+  name: UnitWorkshopWindow.MechanicCard
+  nameWithType: UnitWorkshopWindow.MechanicCard
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  type: Enum
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The mechanic cards the Mechanics tab can add (unit traits, on-hit payloads and timed action payloads).
+  example: []
+  syntax:
+    content: public enum UnitWorkshopWindow.MechanicCard
+    content.vb: Public Enum UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Regeneration
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Regeneration
+  id: Regeneration
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: Regeneration
+  nameWithType: UnitWorkshopWindow.MechanicCard.Regeneration
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Regeneration
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Health regeneration.
+  example: []
+  syntax:
+    content: Regeneration = 0
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.MeleeEvasion
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.MeleeEvasion
+  id: MeleeEvasion
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: MeleeEvasion
+  nameWithType: UnitWorkshopWindow.MechanicCard.MeleeEvasion
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.MeleeEvasion
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Chance to avoid melee strikes.
+  example: []
+  syntax:
+    content: MeleeEvasion = 1
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Reflection
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Reflection
+  id: Reflection
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: Reflection
+  nameWithType: UnitWorkshopWindow.MechanicCard.Reflection
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Reflection
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Returns a share of lost health to the attacker.
+  example: []
+  syntax:
+    content: Reflection = 2
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Aura
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Aura
+  id: Aura
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: Aura
+  nameWithType: UnitWorkshopWindow.MechanicCard.Aura
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Aura
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Permanent or timed region around the unit.
+  example: []
+  syntax:
+    content: Aura = 3
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.DeathSplit
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.DeathSplit
+  id: DeathSplit
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: DeathSplit
+  nameWithType: UnitWorkshopWindow.MechanicCard.DeathSplit
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.DeathSplit
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Releases smaller enemies on death.
+  example: []
+  syntax:
+    content: DeathSplit = 4
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Revive
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Revive
+  id: Revive
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: Revive
+  nameWithType: UnitWorkshopWindow.MechanicCard.Revive
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.Revive
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Lies down when killed and rises again with a share of its health (same unit).
+  example: []
+  syntax:
+    content: Revive = 5
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.OnHitEffect
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.OnHitEffect
+  id: OnHitEffect
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: OnHitEffect
+  nameWithType: UnitWorkshopWindow.MechanicCard.OnHitEffect
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.OnHitEffect
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Status effects attached by melee hits.
+  example: []
+  syntax:
+    content: OnHitEffect = 6
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ImpactPayload
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ImpactPayload
+  id: ImpactPayload
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ImpactPayload
+  nameWithType: UnitWorkshopWindow.MechanicCard.ImpactPayload
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ImpactPayload
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Secondary blast, residual region, knockback or path transfer after a melee hit.
+  example: []
+  syntax:
+    content: ImpactPayload = 7
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.LifeSteal
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.LifeSteal
+  id: LifeSteal
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: LifeSteal
+  nameWithType: UnitWorkshopWindow.MechanicCard.LifeSteal
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.LifeSteal
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Heals the attacker from melee damage dealt.
+  example: []
+  syntax:
+    content: LifeSteal = 8
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionMines
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionMines
+  id: ActionMines
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionMines
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionMines
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionMines
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed automatic mine throw onto lane nodes nearby.
+  example: []
+  syntax:
+    content: ActionMines = 9
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionRaise
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionRaise
+  id: ActionRaise
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionRaise
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionRaise
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionRaise
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed raise of new units from nearby bodies.
+  example: []
+  syntax:
+    content: ActionRaise = 10
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionAttack
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionAttack
+  id: ActionAttack
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionAttack
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionAttack
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionAttack
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed extra ranged attack.
+  example: []
+  syntax:
+    content: ActionAttack = 11
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionSelfEffect
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionSelfEffect
+  id: ActionSelfEffect
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionSelfEffect
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionSelfEffect
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionSelfEffect
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed self buff.
+  example: []
+  syntax:
+    content: ActionSelfEffect = 12
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionSummon
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionSummon
+  id: ActionSummon
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionSummon
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionSummon
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionSummon
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed summon of units.
+  example: []
+  syntax:
+    content: ActionSummon = 13
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionArea
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionArea
+  id: ActionArea
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionArea
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionArea
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionArea
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed region (effect and/or damage / healing pulse).
+  example: []
+  syntax:
+    content: ActionArea = 14
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionChain
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionChain
+  id: ActionChain
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionChain
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionChain
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionChain
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed chain attack.
+  example: []
+  syntax:
+    content: ActionChain = 15
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionMultiTarget
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionMultiTarget
+  id: ActionMultiTarget
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionMultiTarget
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionMultiTarget
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionMultiTarget
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed multi-target attack.
+  example: []
+  syntax:
+    content: ActionMultiTarget = 16
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionTrap
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionTrap
+  id: ActionTrap
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionTrap
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionTrap
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionTrap
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed trap placement.
+  example: []
+  syntax:
+    content: ActionTrap = 17
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionBeam
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionBeam
+  id: ActionBeam
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionBeam
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionBeam
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionBeam
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed channelled beam.
+  example: []
+  syntax:
+    content: ActionBeam = 18
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionTransfer
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionTransfer
+  id: ActionTransfer
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionTransfer
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionTransfer
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionTransfer
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Timed path transfer of nearby enemies.
+  example: []
+  syntax:
+    content: ActionTransfer = 19
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionCustom
+  commentId: F:TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionCustom
+  id: ActionCustom
+  parent: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  langs:
+  - csharp
+  - vb
+  name: ActionCustom
+  nameWithType: UnitWorkshopWindow.MechanicCard.ActionCustom
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.ActionCustom
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Custom action asset.
+  example: []
+  syntax:
+    content: ActionCustom = 20
+    return:
+      type: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  commentId: T:TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UnitWorkshopWindow.html
+  name: UnitWorkshopWindow.MechanicCard
+  nameWithType: UnitWorkshopWindow.MechanicCard
+  fullName: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitWorkshopWindow
+    name: UnitWorkshopWindow
+    isExternal: true
+    href: TDMaker.Editor.UnitWorkshopWindow.html
+  - name: .
+  - uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+    name: MechanicCard
+    isExternal: true
+    href: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.html
+  spec.vb:
+  - uid: TDMaker.Editor.UnitWorkshopWindow
+    name: UnitWorkshopWindow
+    isExternal: true
+    href: TDMaker.Editor.UnitWorkshopWindow.html
+  - name: .
+  - uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+    name: MechanicCard
+    isExternal: true
+    href: TDMaker.Editor.UnitWorkshopWindow.MechanicCard.html

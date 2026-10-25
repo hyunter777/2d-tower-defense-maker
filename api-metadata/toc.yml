@@ -1,0 +1,1302 @@
+### YamlMime:TableOfContent
+items:
+- uid: TDMaker.Core
+  name: TDMaker.Core
+  type: Namespace
+  items:
+  - uid: TDMaker.Core.BeamBinding
+    name: BeamBinding
+    type: Class
+  - uid: TDMaker.Core.CommandFailure
+    name: CommandFailure
+    type: Enum
+  - uid: TDMaker.Core.CommandLog
+    name: CommandLog
+    type: Class
+  - uid: TDMaker.Core.CommandRecord
+    name: CommandRecord
+    type: Struct
+  - uid: TDMaker.Core.CompanionSlot
+    name: CompanionSlot
+    type: Class
+  - uid: TDMaker.Core.CustomDataSlots
+    name: CustomDataSlots
+    type: Class
+  - uid: TDMaker.Core.DamageContext
+    name: DamageContext
+    type: Struct
+  - uid: TDMaker.Core.DamageOrigin
+    name: DamageOrigin
+    type: Enum
+  - uid: TDMaker.Core.DamageResult
+    name: DamageResult
+    type: Struct
+  - uid: TDMaker.Core.DeploymentPhase
+    name: DeploymentPhase
+    type: Enum
+  - uid: TDMaker.Core.EarlyCallRewardPreview
+    name: EarlyCallRewardPreview
+    type: Struct
+  - uid: TDMaker.Core.Entity
+    name: Entity
+    type: Class
+  - uid: TDMaker.Core.EntityKind
+    name: EntityKind
+    type: Enum
+  - uid: TDMaker.Core.EntityStore
+    name: EntityStore
+    type: Class
+  - uid: TDMaker.Core.GamePhase
+    name: GamePhase
+    type: Enum
+  - uid: TDMaker.Core.GameState
+    name: GameState
+    type: Class
+  - uid: TDMaker.Core.IAbilityAction
+    name: IAbilityAction
+    type: Interface
+  - uid: TDMaker.Core.ICommandCodec
+    name: ICommandCodec
+    type: Interface
+  - uid: TDMaker.Core.ICommandHandler`1
+    name: ICommandHandler<T>
+    type: Interface
+  - uid: TDMaker.Core.ICustomComponent
+    name: ICustomComponent
+    type: Interface
+  - uid: TDMaker.Core.IDamageHook
+    name: IDamageHook
+    type: Interface
+  - uid: TDMaker.Core.ISimProfiler
+    name: ISimProfiler
+    type: Interface
+  - uid: TDMaker.Core.IStateHashContributor
+    name: IStateHashContributor
+    type: Interface
+  - uid: TDMaker.Core.ITargetSelector
+    name: ITargetSelector
+    type: Interface
+  - uid: TDMaker.Core.MechanicEndReason
+    name: MechanicEndReason
+    type: Enum
+  - uid: TDMaker.Core.RemainsRecord
+    name: RemainsRecord
+    type: Class
+  - uid: TDMaker.Core.ResolutionKind
+    name: ResolutionKind
+    type: Enum
+  - uid: TDMaker.Core.RevivalPhase
+    name: RevivalPhase
+    type: Enum
+  - uid: TDMaker.Core.SimConfig
+    name: SimConfig
+    type: Class
+  - uid: TDMaker.Core.SimEvent
+    name: SimEvent
+    type: Struct
+  - uid: TDMaker.Core.SimEventKind
+    name: SimEventKind
+    type: Enum
+  - uid: TDMaker.Core.SimLimits
+    name: SimLimits
+    type: Class
+  - uid: TDMaker.Core.SimRandom
+    name: SimRandom
+    type: Class
+  - uid: TDMaker.Core.SimStage
+    name: SimStage
+    type: Enum
+  - uid: TDMaker.Core.SimSystemInfo
+    name: SimSystemInfo
+    type: Struct
+  - uid: TDMaker.Core.Simulation
+    name: Simulation
+    type: Class
+  - uid: TDMaker.Core.SimulationClock
+    name: SimulationClock
+    type: Class
+  - uid: TDMaker.Core.SpatialQueryBuffer
+    name: SpatialQueryBuffer
+    type: Class
+  - uid: TDMaker.Core.StateHasher
+    name: StateHasher
+    type: Struct
+  - uid: TDMaker.Core.TargetQuery
+    name: TargetQuery
+    type: Struct
+  - uid: TDMaker.Core.TrapBinding
+    name: TrapBinding
+    type: Class
+  - uid: TDMaker.Core.UpgradeShopRules
+    name: UpgradeShopRules
+    type: Class
+  - uid: TDMaker.Core.Vec2
+    name: Vec2
+    type: Struct
+- uid: TDMaker.Core.Commands
+  name: TDMaker.Core.Commands
+  type: Namespace
+  items:
+  - uid: TDMaker.Core.Commands.BuildTower
+    name: BuildTower
+    type: Class
+  - uid: TDMaker.Core.Commands.BuyAbility
+    name: BuyAbility
+    type: Class
+  - uid: TDMaker.Core.Commands.CallNextWave
+    name: CallNextWave
+    type: Class
+  - uid: TDMaker.Core.Commands.CastSpell
+    name: CastSpell
+    type: Class
+  - uid: TDMaker.Core.Commands.ICommand
+    name: ICommand
+    type: Interface
+  - uid: TDMaker.Core.Commands.MoveHero
+    name: MoveHero
+    type: Class
+  - uid: TDMaker.Core.Commands.SellTower
+    name: SellTower
+    type: Class
+  - uid: TDMaker.Core.Commands.SetRallyPoint
+    name: SetRallyPoint
+    type: Class
+  - uid: TDMaker.Core.Commands.SetTargetPriority
+    name: SetTargetPriority
+    type: Class
+  - uid: TDMaker.Core.Commands.SpendHeroPoint
+    name: SpendHeroPoint
+    type: Class
+  - uid: TDMaker.Core.Commands.UpgradeTower
+    name: UpgradeTower
+    type: Class
+- uid: TDMaker.Core.Components
+  name: TDMaker.Core.Components
+  type: Namespace
+  items:
+  - uid: TDMaker.Core.Components.AbilityComponent
+    name: AbilityComponent
+    type: Class
+  - uid: TDMaker.Core.Components.ArmorComponent
+    name: ArmorComponent
+    type: Class
+  - uid: TDMaker.Core.Components.AuraComponent
+    name: AuraComponent
+    type: Class
+  - uid: TDMaker.Core.Components.BarracksComponent
+    name: BarracksComponent
+    type: Class
+  - uid: TDMaker.Core.Components.BountyComponent
+    name: BountyComponent
+    type: Class
+  - uid: TDMaker.Core.Components.FlyingComponent
+    name: FlyingComponent
+    type: Class
+  - uid: TDMaker.Core.Components.HealthComponent
+    name: HealthComponent
+    type: Class
+  - uid: TDMaker.Core.Components.HeroComponent
+    name: HeroComponent
+    type: Class
+  - uid: TDMaker.Core.Components.HeroLife
+    name: HeroLife
+    type: Enum
+  - uid: TDMaker.Core.Components.MeleeComponent
+    name: MeleeComponent
+    type: Class
+  - uid: TDMaker.Core.Components.ModifierComponent
+    name: ModifierComponent
+    type: Class
+  - uid: TDMaker.Core.Components.MotionComponent
+    name: MotionComponent
+    type: Class
+  - uid: TDMaker.Core.Components.PathFollowComponent
+    name: PathFollowComponent
+    type: Class
+  - uid: TDMaker.Core.Components.ProjectileComponent
+    name: ProjectileComponent
+    type: Class
+  - uid: TDMaker.Core.Components.RangedComponent
+    name: RangedComponent
+    type: Class
+  - uid: TDMaker.Core.Components.RenderComponent
+    name: RenderComponent
+    type: Class
+  - uid: TDMaker.Core.Components.SoldierComponent
+    name: SoldierComponent
+    type: Class
+  - uid: TDMaker.Core.Components.SpellState
+    name: SpellState
+    type: Class
+  - uid: TDMaker.Core.Components.StatusImmunityComponent
+    name: StatusImmunityComponent
+    type: Class
+  - uid: TDMaker.Core.Components.TowerComponent
+    name: TowerComponent
+    type: Class
+- uid: TDMaker.Core.Defs
+  name: TDMaker.Core.Defs
+  type: Namespace
+  items:
+  - uid: TDMaker.Core.Defs.AbilityActionDef
+    name: AbilityActionDef
+    type: Class
+  - uid: TDMaker.Core.Defs.AbilityDef
+    name: AbilityDef
+    type: Class
+  - uid: TDMaker.Core.Defs.AbilityExecutionDef
+    name: AbilityExecutionDef
+    type: Class
+  - uid: TDMaker.Core.Defs.AbilityRankDef
+    name: AbilityRankDef
+    type: Class
+  - uid: TDMaker.Core.Defs.AreaEffectDef
+    name: AreaEffectDef
+    type: Class
+  - uid: TDMaker.Core.Defs.AreaPulseDef
+    name: AreaPulseDef
+    type: Class
+  - uid: TDMaker.Core.Defs.ArmorDef
+    name: ArmorDef
+    type: Class
+  - uid: TDMaker.Core.Defs.AttackCycleDef
+    name: AttackCycleDef
+    type: Class
+  - uid: TDMaker.Core.Defs.AuraDef
+    name: AuraDef
+    type: Class
+  - uid: TDMaker.Core.Defs.BarracksDef
+    name: BarracksDef
+    type: Class
+  - uid: TDMaker.Core.Defs.BeamDef
+    name: BeamDef
+    type: Class
+  - uid: TDMaker.Core.Defs.BountyDef
+    name: BountyDef
+    type: Class
+  - uid: TDMaker.Core.Defs.BuildSlotDef
+    name: BuildSlotDef
+    type: Class
+  - uid: TDMaker.Core.Defs.ChainAttackDef
+    name: ChainAttackDef
+    type: Class
+  - uid: TDMaker.Core.Defs.CombatModifierDef
+    name: CombatModifierDef
+    type: Class
+  - uid: TDMaker.Core.Defs.CompanionDef
+    name: CompanionDef
+    type: Class
+  - uid: TDMaker.Core.Defs.CompanionMode
+    name: CompanionMode
+    type: Enum
+  - uid: TDMaker.Core.Defs.DamageDef
+    name: DamageDef
+    type: Class
+  - uid: TDMaker.Core.Defs.DamageFalloff
+    name: DamageFalloff
+    type: Enum
+  - uid: TDMaker.Core.Defs.DamageFlags
+    name: DamageFlags
+    type: Enum
+  - uid: TDMaker.Core.Defs.DamageKind
+    name: DamageKind
+    type: Enum
+  - uid: TDMaker.Core.Defs.DamageMask
+    name: DamageMask
+    type: Enum
+  - uid: TDMaker.Core.Defs.DamageOptions
+    name: DamageOptions
+    type: Class
+  - uid: TDMaker.Core.Defs.DeploymentPlanDef
+    name: DeploymentPlanDef
+    type: Class
+  - uid: TDMaker.Core.Defs.DeploymentSpacingScope
+    name: DeploymentSpacingScope
+    type: Enum
+  - uid: TDMaker.Core.Defs.EntityRulesDef
+    name: EntityRulesDef
+    type: Class
+  - uid: TDMaker.Core.Defs.EntityTemplate
+    name: EntityTemplate
+    type: Class
+  - uid: TDMaker.Core.Defs.FlyingDef
+    name: FlyingDef
+    type: Class
+  - uid: TDMaker.Core.Defs.HealingDef
+    name: HealingDef
+    type: Class
+  - uid: TDMaker.Core.Defs.HealthDef
+    name: HealthDef
+    type: Class
+  - uid: TDMaker.Core.Defs.HeroDef
+    name: HeroDef
+    type: Class
+  - uid: TDMaker.Core.Defs.HeroLevelDef
+    name: HeroLevelDef
+    type: Class
+  - uid: TDMaker.Core.Defs.HeroProfileDef
+    name: HeroProfileDef
+    type: Class
+  - uid: TDMaker.Core.Defs.HeroSkillDef
+    name: HeroSkillDef
+    type: Class
+  - uid: TDMaker.Core.Defs.HeroSkillMode
+    name: HeroSkillMode
+    type: Enum
+  - uid: TDMaker.Core.Defs.ILevelCompletionRule
+    name: ILevelCompletionRule
+    type: Interface
+  - uid: TDMaker.Core.Defs.IMovementPolicy
+    name: IMovementPolicy
+    type: Interface
+  - uid: TDMaker.Core.Defs.IPointRule
+    name: IPointRule
+    type: Interface
+  - uid: TDMaker.Core.Defs.ImpactPayloadDef
+    name: ImpactPayloadDef
+    type: Class
+  - uid: TDMaker.Core.Defs.LaneSelection
+    name: LaneSelection
+    type: Enum
+  - uid: TDMaker.Core.Defs.LevelDef
+    name: LevelDef
+    type: Class
+  - uid: TDMaker.Core.Defs.LevelRulesDef
+    name: LevelRulesDef
+    type: Class
+  - uid: TDMaker.Core.Defs.LifeStealDef
+    name: LifeStealDef
+    type: Class
+  - uid: TDMaker.Core.Defs.MechanicTargetDef
+    name: MechanicTargetDef
+    type: Class
+  - uid: TDMaker.Core.Defs.MeleeDef
+    name: MeleeDef
+    type: Class
+  - uid: TDMaker.Core.Defs.MeleeEngagementDef
+    name: MeleeEngagementDef
+    type: Class
+  - uid: TDMaker.Core.Defs.MotionDef
+    name: MotionDef
+    type: Class
+  - uid: TDMaker.Core.Defs.MultiTargetAttackDef
+    name: MultiTargetAttackDef
+    type: Class
+  - uid: TDMaker.Core.Defs.PathDef
+    name: PathDef
+    type: Class
+  - uid: TDMaker.Core.Defs.PathDestinationDef
+    name: PathDestinationDef
+    type: Class
+  - uid: TDMaker.Core.Defs.PathDisplacementDef
+    name: PathDisplacementDef
+    type: Class
+  - uid: TDMaker.Core.Defs.PathFollowDef
+    name: PathFollowDef
+    type: Class
+  - uid: TDMaker.Core.Defs.PathTransferDef
+    name: PathTransferDef
+    type: Class
+  - uid: TDMaker.Core.Defs.PeriodicDamageDef
+    name: PeriodicDamageDef
+    type: Class
+  - uid: TDMaker.Core.Defs.PeriodicHealingDef
+    name: PeriodicHealingDef
+    type: Class
+  - uid: TDMaker.Core.Defs.PointRuleDef
+    name: PointRuleDef
+    type: Class
+  - uid: TDMaker.Core.Defs.ProjectileDef
+    name: ProjectileDef
+    type: Class
+  - uid: TDMaker.Core.Defs.ProjectileKind
+    name: ProjectileKind
+    type: Enum
+  - uid: TDMaker.Core.Defs.ProjectileOptions
+    name: ProjectileOptions
+    type: Class
+  - uid: TDMaker.Core.Defs.RaiseRemainsDef
+    name: RaiseRemainsDef
+    type: Class
+  - uid: TDMaker.Core.Defs.RangedAttackDef
+    name: RangedAttackDef
+    type: Class
+  - uid: TDMaker.Core.Defs.RangedDef
+    name: RangedDef
+    type: Class
+  - uid: TDMaker.Core.Defs.RecoveryDef
+    name: RecoveryDef
+    type: Class
+  - uid: TDMaker.Core.Defs.ReflectionDef
+    name: ReflectionDef
+    type: Class
+  - uid: TDMaker.Core.Defs.RemainsFaction
+    name: RemainsFaction
+    type: Enum
+  - uid: TDMaker.Core.Defs.RenderDef
+    name: RenderDef
+    type: Class
+  - uid: TDMaker.Core.Defs.ReviveDef
+    name: ReviveDef
+    type: Class
+  - uid: TDMaker.Core.Defs.ShieldDef
+    name: ShieldDef
+    type: Class
+  - uid: TDMaker.Core.Defs.SoldierDef
+    name: SoldierDef
+    type: Class
+  - uid: TDMaker.Core.Defs.SpawnEntryDef
+    name: SpawnEntryDef
+    type: Class
+  - uid: TDMaker.Core.Defs.SpellDef
+    name: SpellDef
+    type: Class
+  - uid: TDMaker.Core.Defs.StatModifierDef
+    name: StatModifierDef
+    type: Class
+  - uid: TDMaker.Core.Defs.StatusEffectDef
+    name: StatusEffectDef
+    type: Class
+  - uid: TDMaker.Core.Defs.StatusImmunityDef
+    name: StatusImmunityDef
+    type: Class
+  - uid: TDMaker.Core.Defs.StrikeSequenceDef
+    name: StrikeSequenceDef
+    type: Class
+  - uid: TDMaker.Core.Defs.SuccessorBountyPolicy
+    name: SuccessorBountyPolicy
+    type: Enum
+  - uid: TDMaker.Core.Defs.SummonDef
+    name: SummonDef
+    type: Class
+  - uid: TDMaker.Core.Defs.TargetPriority
+    name: TargetPriority
+    type: Enum
+  - uid: TDMaker.Core.Defs.TargetTraitsDef
+    name: TargetTraitsDef
+    type: Class
+  - uid: TDMaker.Core.Defs.TemplateData
+    name: TemplateData
+    type: Class
+  - uid: TDMaker.Core.Defs.TemplateRegistry
+    name: TemplateRegistry
+    type: Class
+  - uid: TDMaker.Core.Defs.TowerDef
+    name: TowerDef
+    type: Class
+  - uid: TDMaker.Core.Defs.TrapDef
+    name: TrapDef
+    type: Class
+  - uid: TDMaker.Core.Defs.TrapPlacement
+    name: TrapPlacement
+    type: Enum
+  - uid: TDMaker.Core.Defs.UpgradeEffectDef
+    name: UpgradeEffectDef
+    type: Class
+  - uid: TDMaker.Core.Defs.UpgradeField
+    name: UpgradeField
+    type: Enum
+  - uid: TDMaker.Core.Defs.UpgradeOperation
+    name: UpgradeOperation
+    type: Enum
+  - uid: TDMaker.Core.Defs.UpgradeRank
+    name: UpgradeRank
+    type: Struct
+  - uid: TDMaker.Core.Defs.UpgradeSnapshot
+    name: UpgradeSnapshot
+    type: Class
+  - uid: TDMaker.Core.Defs.UpgradeStageDef
+    name: UpgradeStageDef
+    type: Class
+  - uid: TDMaker.Core.Defs.UpgradeTargetDef
+    name: UpgradeTargetDef
+    type: Class
+  - uid: TDMaker.Core.Defs.UpgradeTargetKind
+    name: UpgradeTargetKind
+    type: Enum
+  - uid: TDMaker.Core.Defs.UpgradeTrackDef
+    name: UpgradeTrackDef
+    type: Class
+  - uid: TDMaker.Core.Defs.VictoryRatingDef
+    name: VictoryRatingDef
+    type: Class
+  - uid: TDMaker.Core.Defs.WaveDef
+    name: WaveDef
+    type: Class
+  - uid: TDMaker.Core.Defs.WaveGroupDef
+    name: WaveGroupDef
+    type: Class
+- uid: TDMaker.Core.Effects
+  name: TDMaker.Core.Effects
+  type: Namespace
+  items:
+  - uid: TDMaker.Core.Effects.AreaBinding
+    name: AreaBinding
+    type: Class
+  - uid: TDMaker.Core.Effects.EffectBinding
+    name: EffectBinding
+    type: Class
+  - uid: TDMaker.Core.Effects.EffectRemoval
+    name: EffectRemoval
+    type: Enum
+  - uid: TDMaker.Core.Effects.EffectService
+    name: EffectService
+    type: Class
+- uid: TDMaker.Core.Systems
+  name: TDMaker.Core.Systems
+  type: Namespace
+  items:
+  - uid: TDMaker.Core.Systems.ISimSystem
+    name: ISimSystem
+    type: Interface
+- uid: TDMaker.Editor
+  name: TDMaker.Editor
+  type: Namespace
+  items:
+  - uid: TDMaker.Editor.AudioCuePreview
+    name: AudioCuePreview
+    type: Class
+  - uid: TDMaker.Editor.BuildSlotAuthoringEditor
+    name: BuildSlotAuthoringEditor
+    type: Class
+  - uid: TDMaker.Editor.CampaignAssetEditor
+    name: CampaignAssetEditor
+    type: Class
+  - uid: TDMaker.Editor.CampaignEditing
+    name: CampaignEditing
+    type: Class
+  - uid: TDMaker.Editor.CombatMath
+    name: CombatMath
+    type: Class
+  - uid: TDMaker.Editor.EditorWindowLayout
+    name: EditorWindowLayout
+    type: Class
+  - uid: TDMaker.Editor.EnemyAssetEditor
+    name: EnemyAssetEditor
+    type: Class
+  - uid: TDMaker.Editor.EntrySpan
+    name: EntrySpan
+    type: Struct
+  - uid: TDMaker.Editor.FrameAction
+    name: FrameAction
+    type: Enum
+  - uid: TDMaker.Editor.IssueSeverity
+    name: IssueSeverity
+    type: Enum
+  - uid: TDMaker.Editor.LevelAssetEditor
+    name: LevelAssetEditor
+    type: Class
+  - uid: TDMaker.Editor.LevelAuthoringEditor
+    name: LevelAuthoringEditor
+    type: Class
+  - uid: TDMaker.Editor.LevelContext
+    name: LevelContext
+    type: Class
+  - uid: TDMaker.Editor.LevelDryRun
+    name: LevelDryRun
+    type: Class
+  - uid: TDMaker.Editor.LevelDryRun.Pass
+    name: LevelDryRun.Pass
+    type: Enum
+  - uid: TDMaker.Editor.LevelDryRun.PassResult
+    name: LevelDryRun.PassResult
+    type: Struct
+  - uid: TDMaker.Editor.MapBackgroundPreview
+    name: MapBackgroundPreview
+    type: Class
+  - uid: TDMaker.Editor.MapEditing
+    name: MapEditing
+    type: Class
+  - uid: TDMaker.Editor.MapEditorWindow
+    name: MapEditorWindow
+    type: Class
+  - uid: TDMaker.Editor.MapEditorWindow.Tool
+    name: MapEditorWindow.Tool
+    type: Enum
+  - uid: TDMaker.Editor.MapSceneGUI
+    name: MapSceneGUI
+    type: Class
+  - uid: TDMaker.Editor.NewAssetDialog
+    name: NewAssetDialog
+    type: Class
+  - uid: TDMaker.Editor.NewLevelBuilder
+    name: NewLevelBuilder
+    type: Class
+  - uid: TDMaker.Editor.NewLevelResult
+    name: NewLevelResult
+    type: Class
+  - uid: TDMaker.Editor.NewLevelSettings
+    name: NewLevelSettings
+    type: Class
+  - uid: TDMaker.Editor.NewLevelWizardWindow
+    name: NewLevelWizardWindow
+    type: Class
+  - uid: TDMaker.Editor.OnlineDocumentation
+    name: OnlineDocumentation
+    type: Class
+  - uid: TDMaker.Editor.PathAuthoringEditor
+    name: PathAuthoringEditor
+    type: Class
+  - uid: TDMaker.Editor.PathEditing
+    name: PathEditing
+    type: Class
+  - uid: TDMaker.Editor.ProjectValidator
+    name: ProjectValidator
+    type: Class
+  - uid: TDMaker.Editor.RangePreview
+    name: RangePreview
+    type: Class
+  - uid: TDMaker.Editor.SampleAudio
+    name: SampleAudio
+    type: Class
+  - uid: TDMaker.Editor.SampleContentGenerator
+    name: SampleContentGenerator
+    type: Class
+  - uid: TDMaker.Editor.SampleScreenshot
+    name: SampleScreenshot
+    type: Class
+  - uid: TDMaker.Editor.ScenePreview
+    name: ScenePreview
+    type: Class
+  - uid: TDMaker.Editor.StarterContent
+    name: StarterContent
+    type: Enum
+  - uid: TDMaker.Editor.TDEditorGUI
+    name: TDEditorGUI
+    type: Class
+  - uid: TDMaker.Editor.TemplateInspectorBase
+    name: TemplateInspectorBase
+    type: Class
+  - uid: TDMaker.Editor.TextMeshProSetup
+    name: TextMeshProSetup
+    type: Class
+  - uid: TDMaker.Editor.TowerAssetEditor
+    name: TowerAssetEditor
+    type: Class
+  - uid: TDMaker.Editor.TowerTree
+    name: TowerTree
+    type: Class
+  - uid: TDMaker.Editor.UnitFrames
+    name: UnitFrames
+    type: Class
+  - uid: TDMaker.Editor.UnitFrames.Classified
+    name: UnitFrames.Classified
+    type: Struct
+  - uid: TDMaker.Editor.UnitFrames.Report
+    name: UnitFrames.Report
+    type: Struct
+  - uid: TDMaker.Editor.UnitMath
+    name: UnitMath
+    type: Class
+  - uid: TDMaker.Editor.UnitMath.HeroRow
+    name: UnitMath.HeroRow
+    type: Struct
+  - uid: TDMaker.Editor.UnitMath.KillEstimate
+    name: UnitMath.KillEstimate
+    type: Struct
+  - uid: TDMaker.Editor.UnitMath.Outlier
+    name: UnitMath.Outlier
+    type: Struct
+  - uid: TDMaker.Editor.UnitPreset
+    name: UnitPreset
+    type: Enum
+  - uid: TDMaker.Editor.UnitPresets
+    name: UnitPresets
+    type: Class
+  - uid: TDMaker.Editor.UnitPresets.Baseline
+    name: UnitPresets.Baseline
+    type: Struct
+  - uid: TDMaker.Editor.UnitReferences
+    name: UnitReferences
+    type: Class
+  - uid: TDMaker.Editor.UnitReferences.Use
+    name: UnitReferences.Use
+    type: Struct
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    type: Class
+  - uid: TDMaker.Editor.UnitSandbox.Result
+    name: UnitSandbox.Result
+    type: Class
+  - uid: TDMaker.Editor.UnitSandbox.Setup
+    name: UnitSandbox.Setup
+    type: Class
+  - uid: TDMaker.Editor.UnitSandbox.SourceRow
+    name: UnitSandbox.SourceRow
+    type: Struct
+  - uid: TDMaker.Editor.UnitSandbox.Verdict
+    name: UnitSandbox.Verdict
+    type: Enum
+  - uid: TDMaker.Editor.UnitSandboxPlay
+    name: UnitSandboxPlay
+    type: Class
+  - uid: TDMaker.Editor.UnitWorkshopWindow
+    name: UnitWorkshopWindow
+    type: Class
+  - uid: TDMaker.Editor.UnitWorkshopWindow.Kind
+    name: UnitWorkshopWindow.Kind
+    type: Enum
+  - uid: TDMaker.Editor.UnitWorkshopWindow.MechanicCard
+    name: UnitWorkshopWindow.MechanicCard
+    type: Enum
+  - uid: TDMaker.Editor.UnitWorkshopWindow.Tab
+    name: UnitWorkshopWindow.Tab
+    type: Enum
+  - uid: TDMaker.Editor.UpgradeShopAssetEditor
+    name: UpgradeShopAssetEditor
+    type: Class
+  - uid: TDMaker.Editor.UpgradeShopWindow
+    name: UpgradeShopWindow
+    type: Class
+  - uid: TDMaker.Editor.UpgradeTreeLayout
+    name: UpgradeTreeLayout
+    type: Class
+  - uid: TDMaker.Editor.UpgradeTreeWindow
+    name: UpgradeTreeWindow
+    type: Class
+  - uid: TDMaker.Editor.ValidationIssue
+    name: ValidationIssue
+    type: Class
+  - uid: TDMaker.Editor.ValidatorWindow
+    name: ValidatorWindow
+    type: Class
+  - uid: TDMaker.Editor.WaveSchedule
+    name: WaveSchedule
+    type: Class
+  - uid: TDMaker.Editor.WaveTimelineWindow
+    name: WaveTimelineWindow
+    type: Class
+  - uid: TDMaker.Editor.WaveTotals
+    name: WaveTotals
+    type: Struct
+  - uid: TDMaker.Editor.WelcomeWindow
+    name: WelcomeWindow
+    type: Class
+  - uid: TDMaker.Editor.WorkshopDirtyState
+    name: WorkshopDirtyState
+    type: Class
+  - uid: TDMaker.Editor.WorkshopGUI
+    name: WorkshopGUI
+    type: Class
+- uid: TDMaker.Unity.Authoring
+  name: TDMaker.Unity.Authoring
+  type: Namespace
+  items:
+  - uid: TDMaker.Unity.Authoring.AbilityActionAsset
+    name: AbilityActionAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.AbilityActionData
+    name: AbilityActionData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.AbilityData
+    name: AbilityData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.AbilityRankData
+    name: AbilityRankData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.AreaEffectData
+    name: AreaEffectData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.AreaPulseData
+    name: AreaPulseData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.AudioChannel
+    name: AudioChannel
+    type: Enum
+  - uid: TDMaker.Unity.Authoring.AudioCue
+    name: AudioCue
+    type: Class
+  - uid: TDMaker.Unity.Authoring.BakedLevel
+    name: BakedLevel
+    type: Class
+  - uid: TDMaker.Unity.Authoring.BasicDamageData
+    name: BasicDamageData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.BeamData
+    name: BeamData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.BuildSlotAuthoring
+    name: BuildSlotAuthoring
+    type: Class
+  - uid: TDMaker.Unity.Authoring.BuildSlotData
+    name: BuildSlotData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.CameraFramingData
+    name: CameraFramingData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.CameraFramingMode
+    name: CameraFramingMode
+    type: Enum
+  - uid: TDMaker.Unity.Authoring.CameraStartFocus
+    name: CameraStartFocus
+    type: Enum
+  - uid: TDMaker.Unity.Authoring.ChainAttackData
+    name: ChainAttackData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.ClickAreaSettings
+    name: ClickAreaSettings
+    type: Class
+  - uid: TDMaker.Unity.Authoring.CombatModifierData
+    name: CombatModifierData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.CompanionData
+    name: CompanionData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.CompositeAbilityAction
+    name: CompositeAbilityAction
+    type: Class
+  - uid: TDMaker.Unity.Authoring.DamageData
+    name: DamageData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.DeathSuccessionData
+    name: DeathSuccessionData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.EnemyAsset
+    name: EnemyAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.EngagementGuestData
+    name: EngagementGuestData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.EngagementHostData
+    name: EngagementHostData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.EntityAssetBase
+    name: EntityAssetBase
+    type: Class
+  - uid: TDMaker.Unity.Authoring.FacingMode
+    name: FacingMode
+    type: Enum
+  - uid: TDMaker.Unity.Authoring.HealingData
+    name: HealingData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.HeroAsset
+    name: HeroAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.HeroLevelData
+    name: HeroLevelData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.ImpactPayloadData
+    name: ImpactPayloadData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.LaneBuilder
+    name: LaneBuilder
+    type: Class
+  - uid: TDMaker.Unity.Authoring.LevelAsset
+    name: LevelAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.LevelAuthoring
+    name: LevelAuthoring
+    type: Class
+  - uid: TDMaker.Unity.Authoring.LevelMusicData
+    name: LevelMusicData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.LevelRulesData
+    name: LevelRulesData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.LifeStealData
+    name: LifeStealData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.MechanicTargetData
+    name: MechanicTargetData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.MechanicVisual
+    name: MechanicVisual
+    type: Class
+  - uid: TDMaker.Unity.Authoring.MechanicVisualKind
+    name: MechanicVisualKind
+    type: Enum
+  - uid: TDMaker.Unity.Authoring.MeleeData
+    name: MeleeData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.MineFieldData
+    name: MineFieldData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.MultiTargetAttackData
+    name: MultiTargetAttackData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PathAuthoring
+    name: PathAuthoring
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PathData
+    name: PathData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PathDestinationData
+    name: PathDestinationData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PathGeometry
+    name: PathGeometry
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PathTransferData
+    name: PathTransferData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PeriodicDamageData
+    name: PeriodicDamageData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PeriodicHealingData
+    name: PeriodicHealingData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PointRuleData
+    name: PointRuleData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PresentationHooks
+    name: PresentationHooks
+    type: Class
+  - uid: TDMaker.Unity.Authoring.PrimitiveShape
+    name: PrimitiveShape
+    type: Enum
+  - uid: TDMaker.Unity.Authoring.ProjectileAsset
+    name: ProjectileAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.RaiseRemainsData
+    name: RaiseRemainsData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.RangeShape
+    name: RangeShape
+    type: Class
+  - uid: TDMaker.Unity.Authoring.RangedAttackData
+    name: RangedAttackData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.RecoveryData
+    name: RecoveryData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.ReflectionData
+    name: ReflectionData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.ReviveData
+    name: ReviveData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.ShieldData
+    name: ShieldData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.SoldierAsset
+    name: SoldierAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.SpawnEntryData
+    name: SpawnEntryData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.SpellAsset
+    name: SpellAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.SpellKind
+    name: SpellKind
+    type: Enum
+  - uid: TDMaker.Unity.Authoring.StarRatingData
+    name: StarRatingData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.StatModifierData
+    name: StatModifierData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.StatusEffectAsset
+    name: StatusEffectAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.StrikeData
+    name: StrikeData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.SummonData
+    name: SummonData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.TagMask
+    name: TagMask
+    type: Class
+  - uid: TDMaker.Unity.Authoring.TemplateExtensionAsset
+    name: TemplateExtensionAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.TowerAsset
+    name: TowerAsset
+    type: Class
+  - uid: TDMaker.Unity.Authoring.TrapData
+    name: TrapData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.VictoryRatingData
+    name: VictoryRatingData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.ViewSettings
+    name: ViewSettings
+    type: Class
+  - uid: TDMaker.Unity.Authoring.WaveData
+    name: WaveData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.WaveGroupData
+    name: WaveGroupData
+    type: Class
+  - uid: TDMaker.Unity.Authoring.WaveSetAsset
+    name: WaveSetAsset
+    type: Class
+- uid: TDMaker.Unity.Campaign
+  name: TDMaker.Unity.Campaign
+  type: Namespace
+  items:
+  - uid: TDMaker.Unity.Campaign.CampaignAsset
+    name: CampaignAsset
+    type: Class
+  - uid: TDMaker.Unity.Campaign.CampaignIssue
+    name: CampaignIssue
+    type: Struct
+  - uid: TDMaker.Unity.Campaign.CampaignIssueSeverity
+    name: CampaignIssueSeverity
+    type: Enum
+  - uid: TDMaker.Unity.Campaign.CampaignLevel
+    name: CampaignLevel
+    type: Class
+  - uid: TDMaker.Unity.Campaign.CampaignLevelChange
+    name: CampaignLevelChange
+    type: Struct
+  - uid: TDMaker.Unity.Campaign.CampaignLevelState
+    name: CampaignLevelState
+    type: Enum
+  - uid: TDMaker.Unity.Campaign.CampaignMapScreen
+    name: CampaignMapScreen
+    type: Class
+  - uid: TDMaker.Unity.Campaign.CampaignMapUpdate
+    name: CampaignMapUpdate
+    type: Class
+  - uid: TDMaker.Unity.Campaign.CampaignProgress
+    name: CampaignProgress
+    type: Class
+  - uid: TDMaker.Unity.Campaign.CampaignSaveSlots
+    name: CampaignSaveSlots
+    type: Class
+  - uid: TDMaker.Unity.Campaign.CampaignSession
+    name: CampaignSession
+    type: Class
+  - uid: TDMaker.Unity.Campaign.CampaignUi
+    name: CampaignUi
+    type: Class
+  - uid: TDMaker.Unity.Campaign.CampaignUnlock
+    name: CampaignUnlock
+    type: Enum
+  - uid: TDMaker.Unity.Campaign.ISaveStore
+    name: ISaveStore
+    type: Interface
+  - uid: TDMaker.Unity.Campaign.JsonFileSaveStore
+    name: JsonFileSaveStore
+    type: Class
+  - uid: TDMaker.Unity.Campaign.LevelRecord
+    name: LevelRecord
+    type: Class
+  - uid: TDMaker.Unity.Campaign.MemorySaveStore
+    name: MemorySaveStore
+    type: Class
+  - uid: TDMaker.Unity.Campaign.PendingClear
+    name: PendingClear
+    type: Class
+  - uid: TDMaker.Unity.Campaign.PlayerPrefsSaveStore
+    name: PlayerPrefsSaveStore
+    type: Class
+  - uid: TDMaker.Unity.Campaign.ProfileData
+    name: ProfileData
+    type: Class
+  - uid: TDMaker.Unity.Campaign.ProfileEntry
+    name: ProfileEntry
+    type: Class
+  - uid: TDMaker.Unity.Campaign.ProfileMigration
+    name: ProfileMigration
+    type: Delegate
+  - uid: TDMaker.Unity.Campaign.ProfileSerializer
+    name: ProfileSerializer
+    type: Class
+  - uid: TDMaker.Unity.Campaign.SaveLoadStatus
+    name: SaveLoadStatus
+    type: Enum
+  - uid: TDMaker.Unity.Campaign.SaveSlotScreen
+    name: SaveSlotScreen
+    type: Class
+  - uid: TDMaker.Unity.Campaign.SaveSlotSummary
+    name: SaveSlotSummary
+    type: Struct
+  - uid: TDMaker.Unity.Campaign.SaveStoreFactory
+    name: SaveStoreFactory
+    type: Class
+  - uid: TDMaker.Unity.Campaign.TextSaveStore
+    name: TextSaveStore
+    type: Class
+  - uid: TDMaker.Unity.Campaign.UpgradeEffectData
+    name: UpgradeEffectData
+    type: Class
+  - uid: TDMaker.Unity.Campaign.UpgradeEffectKind
+    name: UpgradeEffectKind
+    type: Enum
+  - uid: TDMaker.Unity.Campaign.UpgradeRankData
+    name: UpgradeRankData
+    type: Class
+  - uid: TDMaker.Unity.Campaign.UpgradeRankRecord
+    name: UpgradeRankRecord
+    type: Class
+  - uid: TDMaker.Unity.Campaign.UpgradeRankState
+    name: UpgradeRankState
+    type: Enum
+  - uid: TDMaker.Unity.Campaign.UpgradeShopAsset
+    name: UpgradeShopAsset
+    type: Class
+  - uid: TDMaker.Unity.Campaign.UpgradeShopScreen
+    name: UpgradeShopScreen
+    type: Class
+  - uid: TDMaker.Unity.Campaign.UpgradeShopSession
+    name: UpgradeShopSession
+    type: Class
+  - uid: TDMaker.Unity.Campaign.UpgradeShopText
+    name: UpgradeShopText
+    type: Class
+  - uid: TDMaker.Unity.Campaign.UpgradeTargetData
+    name: UpgradeTargetData
+    type: Class
+  - uid: TDMaker.Unity.Campaign.UpgradeTrackData
+    name: UpgradeTrackData
+    type: Class
+- uid: TDMaker.Unity.Hud
+  name: TDMaker.Unity.Hud
+  type: Namespace
+  items:
+  - uid: TDMaker.Unity.Hud.CachedNumber
+    name: CachedNumber
+    type: Class
+  - uid: TDMaker.Unity.Hud.CachedText
+    name: CachedText
+    type: Class
+  - uid: TDMaker.Unity.Hud.ClickPicking
+    name: ClickPicking
+    type: Class
+  - uid: TDMaker.Unity.Hud.DamageNumbers
+    name: DamageNumbers
+    type: Class
+  - uid: TDMaker.Unity.Hud.GameHud
+    name: GameHud
+    type: Class
+  - uid: TDMaker.Unity.Hud.GameHud.Mode
+    name: GameHud.Mode
+    type: Enum
+  - uid: TDMaker.Unity.Hud.HudButton
+    name: HudButton
+    type: Class
+  - uid: TDMaker.Unity.Hud.HudSprites
+    name: HudSprites
+    type: Class
+  - uid: TDMaker.Unity.Hud.HudTheme
+    name: HudTheme
+    type: Class
+  - uid: TDMaker.Unity.Hud.HudTheme.IconOverride
+    name: HudTheme.IconOverride
+    type: Class
+  - uid: TDMaker.Unity.Hud.HudUi
+    name: HudUi
+    type: Class
+  - uid: TDMaker.Unity.Hud.LanguageSelector
+    name: LanguageSelector
+    type: Class
+  - uid: TDMaker.Unity.Hud.NumberText
+    name: NumberText
+    type: Class
+- uid: TDMaker.Unity.Localization
+  name: TDMaker.Unity.Localization
+  type: Namespace
+  items:
+  - uid: TDMaker.Unity.Localization.ContentTexts
+    name: ContentTexts
+    type: Class
+  - uid: TDMaker.Unity.Localization.HudTexts
+    name: HudTexts
+    type: Class
+  - uid: TDMaker.Unity.Localization.ITextProvider
+    name: ITextProvider
+    type: Interface
+  - uid: TDMaker.Unity.Localization.TextResolver
+    name: TextResolver
+    type: Class
+  - uid: TDMaker.Unity.Localization.TextTable
+    name: TextTable
+    type: Class
+  - uid: TDMaker.Unity.Localization.TextTable.Entry
+    name: TextTable.Entry
+    type: Class
+- uid: TDMaker.Unity.View
+  name: TDMaker.Unity.View
+  type: Namespace
+  items:
+  - uid: TDMaker.Unity.View.ArtSet
+    name: ArtSet
+    type: Class
+  - uid: TDMaker.Unity.View.ArtSet.Entry
+    name: ArtSet.Entry
+    type: Class
+  - uid: TDMaker.Unity.View.AudioCuePlayer
+    name: AudioCuePlayer
+    type: Class
+  - uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+    name: AudioCuePlayer.GlobalCues
+    type: Class
+  - uid: TDMaker.Unity.View.AudioCuePlayer.KeyedCue
+    name: AudioCuePlayer.KeyedCue
+    type: Class
+  - uid: TDMaker.Unity.View.AudioCuePlayer.MechanicCues
+    name: AudioCuePlayer.MechanicCues
+    type: Class
+  - uid: TDMaker.Unity.View.EllipseRenderer
+    name: EllipseRenderer
+    type: Class
+  - uid: TDMaker.Unity.View.EntityView
+    name: EntityView
+    type: Class
+  - uid: TDMaker.Unity.View.EntityView.AnimatorParameters
+    name: EntityView.AnimatorParameters
+    type: Class
+  - uid: TDMaker.Unity.View.EntityViewRegistry
+    name: EntityViewRegistry
+    type: Class
+  - uid: TDMaker.Unity.View.EntityViewRegistry.ViewOverride
+    name: EntityViewRegistry.ViewOverride
+    type: Class
+  - uid: TDMaker.Unity.View.GroundStyle
+    name: GroundStyle
+    type: Enum
+  - uid: TDMaker.Unity.View.IPooledVfx
+    name: IPooledVfx
+    type: Interface
+  - uid: TDMaker.Unity.View.LevelView
+    name: LevelView
+    type: Class
+  - uid: TDMaker.Unity.View.MusicPlayer
+    name: MusicPlayer
+    type: Class
+  - uid: TDMaker.Unity.View.MusicPlayer.State
+    name: MusicPlayer.State
+    type: Enum
+  - uid: TDMaker.Unity.View.MusicPlayer.StingerMode
+    name: MusicPlayer.StingerMode
+    type: Enum
+  - uid: TDMaker.Unity.View.PointerInput
+    name: PointerInput
+    type: Class
+  - uid: TDMaker.Unity.View.PrimitiveSprites
+    name: PrimitiveSprites
+    type: Class
+  - uid: TDMaker.Unity.View.SimEventHandler
+    name: SimEventHandler
+    type: Delegate
+  - uid: TDMaker.Unity.View.SimProfilerMarkers
+    name: SimProfilerMarkers
+    type: Class
+  - uid: TDMaker.Unity.View.SimulationRunner
+    name: SimulationRunner
+    type: Class
+  - uid: TDMaker.Unity.View.TDCameraController
+    name: TDCameraController
+    type: Class
+  - uid: TDMaker.Unity.View.TDGameSettings
+    name: TDGameSettings
+    type: Class
+  - uid: TDMaker.Unity.View.TDHud
+    name: TDHud
+    type: Class
+  - uid: TDMaker.Unity.View.TDKey
+    name: TDKey
+    type: Enum
+  - uid: TDMaker.Unity.View.TemplateDecorator
+    name: TemplateDecorator
+    type: Delegate
+  - uid: TDMaker.Unity.View.UpgradeRunRecord
+    name: UpgradeRunRecord
+    type: Class
+  - uid: TDMaker.Unity.View.VfxPool
+    name: VfxPool
+    type: Class
+memberLayout: SamePage

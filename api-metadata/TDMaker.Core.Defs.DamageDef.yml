@@ -1,0 +1,830 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  id: DamageDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.DamageDef.#ctor(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,TDMaker.Core.Defs.DamageFalloff,System.Single,System.Single)
+  - TDMaker.Core.Defs.DamageDef.EdgeMultiplier
+  - TDMaker.Core.Defs.DamageDef.Falloff
+  - TDMaker.Core.Defs.DamageDef.Impact
+  - TDMaker.Core.Defs.DamageDef.Kind
+  - TDMaker.Core.Defs.DamageDef.LifeSteal
+  - TDMaker.Core.Defs.DamageDef.MagicalPierce
+  - TDMaker.Core.Defs.DamageDef.Maximum
+  - TDMaker.Core.Defs.DamageDef.Minimum
+  - TDMaker.Core.Defs.DamageDef.Options
+  - TDMaker.Core.Defs.DamageDef.PhysicalPierce
+  - TDMaker.Core.Defs.DamageDef.Radius
+  - TDMaker.Core.Defs.DamageDef.WithImpact(TDMaker.Core.Defs.ImpactPayloadDef)
+  - TDMaker.Core.Defs.DamageDef.WithLifeSteal(TDMaker.Core.Defs.LifeStealDef)
+  - TDMaker.Core.Defs.DamageDef.WithOptions(TDMaker.Core.Defs.DamageOptions)
+  langs:
+  - csharp
+  - vb
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Immutable damage roll and optional impact area.
+  example: []
+  syntax:
+    content: public sealed class DamageDef
+    content.vb: Public NotInheritable Class DamageDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.DamageDef.WithLifeSteal(TDMaker.Core.Defs.LifeStealDef)
+  commentId: M:TDMaker.Core.Defs.DamageDef.WithLifeSteal(TDMaker.Core.Defs.LifeStealDef)
+  id: WithLifeSteal(TDMaker.Core.Defs.LifeStealDef)
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: WithLifeSteal(LifeStealDef)
+  nameWithType: DamageDef.WithLifeSteal(LifeStealDef)
+  fullName: TDMaker.Core.Defs.DamageDef.WithLifeSteal(TDMaker.Core.Defs.LifeStealDef)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies damage/options/impact data and adds life steal.
+  example: []
+  syntax:
+    content: public DamageDef WithLifeSteal(LifeStealDef lifeSteal)
+    parameters:
+    - id: lifeSteal
+      type: TDMaker.Core.Defs.LifeStealDef
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public Function WithLifeSteal(lifeSteal As LifeStealDef) As DamageDef
+  overload: TDMaker.Core.Defs.DamageDef.WithLifeSteal*
+- uid: TDMaker.Core.Defs.DamageDef.#ctor(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,TDMaker.Core.Defs.DamageFalloff,System.Single,System.Single)
+  commentId: M:TDMaker.Core.Defs.DamageDef.#ctor(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,TDMaker.Core.Defs.DamageFalloff,System.Single,System.Single)
+  id: '#ctor(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,TDMaker.Core.Defs.DamageFalloff,System.Single,System.Single)'
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: DamageDef(DamageKind, float, float, float, float, DamageFalloff, float, float)
+  nameWithType: DamageDef.DamageDef(DamageKind, float, float, float, float, DamageFalloff, float, float)
+  fullName: TDMaker.Core.Defs.DamageDef.DamageDef(TDMaker.Core.Defs.DamageKind, float, float, float, float, TDMaker.Core.Defs.DamageFalloff,
+    float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates damage data.
+  example: []
+  syntax:
+    content: public DamageDef(DamageKind kind, float minimum, float maximum, float radius = 0, float edgeMultiplier = 1, DamageFalloff
+      falloff = DamageFalloff.DistanceEndpoints, float physicalPierce = 0, float magicalPierce = 0)
+    parameters:
+    - id: kind
+      type: TDMaker.Core.Defs.DamageKind
+    - id: minimum
+      type: System.Single
+    - id: maximum
+      type: System.Single
+    - id: radius
+      type: System.Single
+    - id: edgeMultiplier
+      type: System.Single
+    - id: falloff
+      type: TDMaker.Core.Defs.DamageFalloff
+    - id: physicalPierce
+      type: System.Single
+    - id: magicalPierce
+      type: System.Single
+    content.vb: Public Sub New(kind As DamageKind, minimum As Single, maximum As Single, radius As Single = 0, edgeMultiplier
+      As Single = 1, falloff As DamageFalloff = DamageFalloff.DistanceEndpoints, physicalPierce As Single = 0, magicalPierce
+      As Single = 0)
+  overload: TDMaker.Core.Defs.DamageDef.#ctor*
+  nameWithType.vb: DamageDef.New(DamageKind, Single, Single, Single, Single, DamageFalloff, Single, Single)
+  fullName.vb: TDMaker.Core.Defs.DamageDef.New(TDMaker.Core.Defs.DamageKind, Single, Single, Single, Single, TDMaker.Core.Defs.DamageFalloff,
+    Single, Single)
+  name.vb: New(DamageKind, Single, Single, Single, Single, DamageFalloff, Single, Single)
+- uid: TDMaker.Core.Defs.DamageDef.WithImpact(TDMaker.Core.Defs.ImpactPayloadDef)
+  commentId: M:TDMaker.Core.Defs.DamageDef.WithImpact(TDMaker.Core.Defs.ImpactPayloadDef)
+  id: WithImpact(TDMaker.Core.Defs.ImpactPayloadDef)
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: WithImpact(ImpactPayloadDef)
+  nameWithType: DamageDef.WithImpact(ImpactPayloadDef)
+  fullName: TDMaker.Core.Defs.DamageDef.WithImpact(TDMaker.Core.Defs.ImpactPayloadDef)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies damage while preserving mitigation options and adding impact behavior.
+  example: []
+  syntax:
+    content: public DamageDef WithImpact(ImpactPayloadDef impact)
+    parameters:
+    - id: impact
+      type: TDMaker.Core.Defs.ImpactPayloadDef
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public Function WithImpact(impact As ImpactPayloadDef) As DamageDef
+  overload: TDMaker.Core.Defs.DamageDef.WithImpact*
+- uid: TDMaker.Core.Defs.DamageDef.WithOptions(TDMaker.Core.Defs.DamageOptions)
+  commentId: M:TDMaker.Core.Defs.DamageDef.WithOptions(TDMaker.Core.Defs.DamageOptions)
+  id: WithOptions(TDMaker.Core.Defs.DamageOptions)
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: WithOptions(DamageOptions)
+  nameWithType: DamageDef.WithOptions(DamageOptions)
+  fullName: TDMaker.Core.Defs.DamageDef.WithOptions(TDMaker.Core.Defs.DamageOptions)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies damage data with extended behavior.
+  example: []
+  syntax:
+    content: public DamageDef WithOptions(DamageOptions options)
+    parameters:
+    - id: options
+      type: TDMaker.Core.Defs.DamageOptions
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public Function WithOptions(options As DamageOptions) As DamageDef
+  overload: TDMaker.Core.Defs.DamageDef.WithOptions*
+- uid: TDMaker.Core.Defs.DamageDef.LifeSteal
+  commentId: P:TDMaker.Core.Defs.DamageDef.LifeSteal
+  id: LifeSteal
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: LifeSteal
+  nameWithType: DamageDef.LifeSteal
+  fullName: TDMaker.Core.Defs.DamageDef.LifeSteal
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional restoration from actual health loss by this payload.
+  example: []
+  syntax:
+    content: public LifeStealDef LifeSteal { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.LifeStealDef
+    content.vb: Public ReadOnly Property LifeSteal As LifeStealDef
+  overload: TDMaker.Core.Defs.DamageDef.LifeSteal*
+- uid: TDMaker.Core.Defs.DamageDef.Kind
+  commentId: P:TDMaker.Core.Defs.DamageDef.Kind
+  id: Kind
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: Kind
+  nameWithType: DamageDef.Kind
+  fullName: TDMaker.Core.Defs.DamageDef.Kind
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: The defense channel.
+  example: []
+  syntax:
+    content: public DamageKind Kind { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageKind
+    content.vb: Public ReadOnly Property Kind As DamageKind
+  overload: TDMaker.Core.Defs.DamageDef.Kind*
+- uid: TDMaker.Core.Defs.DamageDef.Minimum
+  commentId: P:TDMaker.Core.Defs.DamageDef.Minimum
+  id: Minimum
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: Minimum
+  nameWithType: DamageDef.Minimum
+  fullName: TDMaker.Core.Defs.DamageDef.Minimum
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Minimum rolled damage.
+  example: []
+  syntax:
+    content: public float Minimum { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Minimum As Single
+  overload: TDMaker.Core.Defs.DamageDef.Minimum*
+- uid: TDMaker.Core.Defs.DamageDef.Maximum
+  commentId: P:TDMaker.Core.Defs.DamageDef.Maximum
+  id: Maximum
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: Maximum
+  nameWithType: DamageDef.Maximum
+  fullName: TDMaker.Core.Defs.DamageDef.Maximum
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum rolled damage.
+  example: []
+  syntax:
+    content: public float Maximum { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Maximum As Single
+  overload: TDMaker.Core.Defs.DamageDef.Maximum*
+- uid: TDMaker.Core.Defs.DamageDef.Radius
+  commentId: P:TDMaker.Core.Defs.DamageDef.Radius
+  id: Radius
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: Radius
+  nameWithType: DamageDef.Radius
+  fullName: TDMaker.Core.Defs.DamageDef.Radius
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Impact radius; zero means a single target.
+  example: []
+  syntax:
+    content: public float Radius { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Radius As Single
+  overload: TDMaker.Core.Defs.DamageDef.Radius*
+- uid: TDMaker.Core.Defs.DamageDef.EdgeMultiplier
+  commentId: P:TDMaker.Core.Defs.DamageDef.EdgeMultiplier
+  id: EdgeMultiplier
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: EdgeMultiplier
+  nameWithType: DamageDef.EdgeMultiplier
+  fullName: TDMaker.Core.Defs.DamageDef.EdgeMultiplier
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Damage multiplier at the edge, interpolated linearly from one.
+  example: []
+  syntax:
+    content: public float EdgeMultiplier { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property EdgeMultiplier As Single
+  overload: TDMaker.Core.Defs.DamageDef.EdgeMultiplier*
+- uid: TDMaker.Core.Defs.DamageDef.Falloff
+  commentId: P:TDMaker.Core.Defs.DamageDef.Falloff
+  id: Falloff
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: Falloff
+  nameWithType: DamageDef.Falloff
+  fullName: TDMaker.Core.Defs.DamageDef.Falloff
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Area damage evaluation mode.
+  example: []
+  syntax:
+    content: public DamageFalloff Falloff { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageFalloff
+    content.vb: Public ReadOnly Property Falloff As DamageFalloff
+  overload: TDMaker.Core.Defs.DamageDef.Falloff*
+- uid: TDMaker.Core.Defs.DamageDef.PhysicalPierce
+  commentId: P:TDMaker.Core.Defs.DamageDef.PhysicalPierce
+  id: PhysicalPierce
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: PhysicalPierce
+  nameWithType: DamageDef.PhysicalPierce
+  fullName: TDMaker.Core.Defs.DamageDef.PhysicalPierce
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Physical reduction subtracted for this hit.
+  example: []
+  syntax:
+    content: public float PhysicalPierce { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property PhysicalPierce As Single
+  overload: TDMaker.Core.Defs.DamageDef.PhysicalPierce*
+- uid: TDMaker.Core.Defs.DamageDef.MagicalPierce
+  commentId: P:TDMaker.Core.Defs.DamageDef.MagicalPierce
+  id: MagicalPierce
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: MagicalPierce
+  nameWithType: DamageDef.MagicalPierce
+  fullName: TDMaker.Core.Defs.DamageDef.MagicalPierce
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Magical reduction subtracted for this hit.
+  example: []
+  syntax:
+    content: public float MagicalPierce { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MagicalPierce As Single
+  overload: TDMaker.Core.Defs.DamageDef.MagicalPierce*
+- uid: TDMaker.Core.Defs.DamageDef.Impact
+  commentId: P:TDMaker.Core.Defs.DamageDef.Impact
+  id: Impact
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: Impact
+  nameWithType: DamageDef.Impact
+  fullName: TDMaker.Core.Defs.DamageDef.Impact
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional payload executed after an eligible resolved impact.
+  example: []
+  syntax:
+    content: public ImpactPayloadDef Impact { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.ImpactPayloadDef
+    content.vb: Public ReadOnly Property Impact As ImpactPayloadDef
+  overload: TDMaker.Core.Defs.DamageDef.Impact*
+- uid: TDMaker.Core.Defs.DamageDef.Options
+  commentId: P:TDMaker.Core.Defs.DamageDef.Options
+  id: Options
+  parent: TDMaker.Core.Defs.DamageDef
+  langs:
+  - csharp
+  - vb
+  name: Options
+  nameWithType: DamageDef.Options
+  fullName: TDMaker.Core.Defs.DamageDef.Options
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Extended damage behaviors.
+  example: []
+  syntax:
+    content: public DamageOptions Options { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageOptions
+    content.vb: Public ReadOnly Property Options As DamageOptions
+  overload: TDMaker.Core.Defs.DamageDef.Options*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.DamageDef.WithLifeSteal*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.WithLifeSteal
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_WithLifeSteal_TDMaker_Core_Defs_LifeStealDef_
+  name: WithLifeSteal
+  nameWithType: DamageDef.WithLifeSteal
+  fullName: TDMaker.Core.Defs.DamageDef.WithLifeSteal
+- uid: TDMaker.Core.Defs.LifeStealDef
+  commentId: T:TDMaker.Core.Defs.LifeStealDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.LifeStealDef.html
+  name: LifeStealDef
+  nameWithType: LifeStealDef
+  fullName: TDMaker.Core.Defs.LifeStealDef
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+- uid: TDMaker.Core.Defs.DamageDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef__ctor_TDMaker_Core_Defs_DamageKind_System_Single_System_Single_System_Single_System_Single_TDMaker_Core_Defs_DamageFalloff_System_Single_System_Single_
+  name: DamageDef
+  nameWithType: DamageDef.DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef.DamageDef
+  nameWithType.vb: DamageDef.New
+  fullName.vb: TDMaker.Core.Defs.DamageDef.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.DamageKind
+  commentId: T:TDMaker.Core.Defs.DamageKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageKind.html
+  name: DamageKind
+  nameWithType: DamageKind
+  fullName: TDMaker.Core.Defs.DamageKind
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.DamageFalloff
+  commentId: T:TDMaker.Core.Defs.DamageFalloff
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageFalloff.html
+  name: DamageFalloff
+  nameWithType: DamageFalloff
+  fullName: TDMaker.Core.Defs.DamageFalloff
+- uid: TDMaker.Core.Defs.DamageDef.WithImpact*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.WithImpact
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_WithImpact_TDMaker_Core_Defs_ImpactPayloadDef_
+  name: WithImpact
+  nameWithType: DamageDef.WithImpact
+  fullName: TDMaker.Core.Defs.DamageDef.WithImpact
+- uid: TDMaker.Core.Defs.ImpactPayloadDef
+  commentId: T:TDMaker.Core.Defs.ImpactPayloadDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ImpactPayloadDef.html
+  name: ImpactPayloadDef
+  nameWithType: ImpactPayloadDef
+  fullName: TDMaker.Core.Defs.ImpactPayloadDef
+- uid: TDMaker.Core.Defs.DamageDef.WithOptions*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.WithOptions
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_WithOptions_TDMaker_Core_Defs_DamageOptions_
+  name: WithOptions
+  nameWithType: DamageDef.WithOptions
+  fullName: TDMaker.Core.Defs.DamageDef.WithOptions
+- uid: TDMaker.Core.Defs.DamageOptions
+  commentId: T:TDMaker.Core.Defs.DamageOptions
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageOptions.html
+  name: DamageOptions
+  nameWithType: DamageOptions
+  fullName: TDMaker.Core.Defs.DamageOptions
+- uid: TDMaker.Core.Defs.DamageDef.LifeSteal*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.LifeSteal
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_LifeSteal
+  name: LifeSteal
+  nameWithType: DamageDef.LifeSteal
+  fullName: TDMaker.Core.Defs.DamageDef.LifeSteal
+- uid: TDMaker.Core.Defs.DamageDef.Kind*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.Kind
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_Kind
+  name: Kind
+  nameWithType: DamageDef.Kind
+  fullName: TDMaker.Core.Defs.DamageDef.Kind
+- uid: TDMaker.Core.Defs.DamageDef.Minimum*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.Minimum
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_Minimum
+  name: Minimum
+  nameWithType: DamageDef.Minimum
+  fullName: TDMaker.Core.Defs.DamageDef.Minimum
+- uid: TDMaker.Core.Defs.DamageDef.Maximum*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.Maximum
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_Maximum
+  name: Maximum
+  nameWithType: DamageDef.Maximum
+  fullName: TDMaker.Core.Defs.DamageDef.Maximum
+- uid: TDMaker.Core.Defs.DamageDef.Radius*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.Radius
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_Radius
+  name: Radius
+  nameWithType: DamageDef.Radius
+  fullName: TDMaker.Core.Defs.DamageDef.Radius
+- uid: TDMaker.Core.Defs.DamageDef.EdgeMultiplier*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.EdgeMultiplier
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_EdgeMultiplier
+  name: EdgeMultiplier
+  nameWithType: DamageDef.EdgeMultiplier
+  fullName: TDMaker.Core.Defs.DamageDef.EdgeMultiplier
+- uid: TDMaker.Core.Defs.DamageDef.Falloff*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.Falloff
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_Falloff
+  name: Falloff
+  nameWithType: DamageDef.Falloff
+  fullName: TDMaker.Core.Defs.DamageDef.Falloff
+- uid: TDMaker.Core.Defs.DamageDef.PhysicalPierce*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.PhysicalPierce
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_PhysicalPierce
+  name: PhysicalPierce
+  nameWithType: DamageDef.PhysicalPierce
+  fullName: TDMaker.Core.Defs.DamageDef.PhysicalPierce
+- uid: TDMaker.Core.Defs.DamageDef.MagicalPierce*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.MagicalPierce
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_MagicalPierce
+  name: MagicalPierce
+  nameWithType: DamageDef.MagicalPierce
+  fullName: TDMaker.Core.Defs.DamageDef.MagicalPierce
+- uid: TDMaker.Core.Defs.DamageDef.Impact*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.Impact
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_Impact
+  name: Impact
+  nameWithType: DamageDef.Impact
+  fullName: TDMaker.Core.Defs.DamageDef.Impact
+- uid: TDMaker.Core.Defs.DamageDef.Options*
+  commentId: Overload:TDMaker.Core.Defs.DamageDef.Options
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html#TDMaker_Core_Defs_DamageDef_Options
+  name: Options
+  nameWithType: DamageDef.Options
+  fullName: TDMaker.Core.Defs.DamageDef.Options

@@ -1,0 +1,1086 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  id: Vec2
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.Vec2.#ctor(System.Single,System.Single)
+  - TDMaker.Core.Vec2.DistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  - TDMaker.Core.Vec2.Equals(System.Object)
+  - TDMaker.Core.Vec2.Equals(TDMaker.Core.Vec2)
+  - TDMaker.Core.Vec2.GetHashCode
+  - TDMaker.Core.Vec2.Length
+  - TDMaker.Core.Vec2.LengthSquared
+  - TDMaker.Core.Vec2.Lerp(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  - TDMaker.Core.Vec2.MoveTowards(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  - TDMaker.Core.Vec2.Normalized
+  - TDMaker.Core.Vec2.ToString
+  - TDMaker.Core.Vec2.X
+  - TDMaker.Core.Vec2.Y
+  - TDMaker.Core.Vec2.Zero
+  - TDMaker.Core.Vec2.op_Addition(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  - TDMaker.Core.Vec2.op_Division(TDMaker.Core.Vec2,System.Single)
+  - TDMaker.Core.Vec2.op_Multiply(TDMaker.Core.Vec2,System.Single)
+  - TDMaker.Core.Vec2.op_Subtraction(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  langs:
+  - csharp
+  - vb
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+  type: Struct
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A simulation-space vector independent of any engine.
+  example: []
+  syntax:
+    content: 'public readonly struct Vec2 : IEquatable<Vec2>'
+    content.vb: Public Structure Vec2 Implements IEquatable(Of Vec2)
+  implements:
+  - System.IEquatable{TDMaker.Core.Vec2}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Core.Vec2.X
+  commentId: F:TDMaker.Core.Vec2.X
+  id: X
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: Vec2.X
+  fullName: TDMaker.Core.Vec2.X
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The horizontal coordinate.
+  example: []
+  syntax:
+    content: public readonly float X
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly X As Single
+- uid: TDMaker.Core.Vec2.Y
+  commentId: F:TDMaker.Core.Vec2.Y
+  id: Y
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: Vec2.Y
+  fullName: TDMaker.Core.Vec2.Y
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The vertical coordinate.
+  example: []
+  syntax:
+    content: public readonly float Y
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Y As Single
+- uid: TDMaker.Core.Vec2.#ctor(System.Single,System.Single)
+  commentId: M:TDMaker.Core.Vec2.#ctor(System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single)'
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: Vec2(float, float)
+  nameWithType: Vec2.Vec2(float, float)
+  fullName: TDMaker.Core.Vec2.Vec2(float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Creates a vector.
+  example: []
+  syntax:
+    content: public Vec2(float x, float y)
+    parameters:
+    - id: x
+      type: System.Single
+    - id: y
+      type: System.Single
+    content.vb: Public Sub New(x As Single, y As Single)
+  overload: TDMaker.Core.Vec2.#ctor*
+  nameWithType.vb: Vec2.New(Single, Single)
+  fullName.vb: TDMaker.Core.Vec2.New(Single, Single)
+  name.vb: New(Single, Single)
+- uid: TDMaker.Core.Vec2.op_Addition(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  commentId: M:TDMaker.Core.Vec2.op_Addition(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  id: op_Addition(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: operator +(Vec2, Vec2)
+  nameWithType: Vec2.operator +(Vec2, Vec2)
+  fullName: TDMaker.Core.Vec2.operator +(TDMaker.Core.Vec2, TDMaker.Core.Vec2)
+  type: Operator
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds two vectors.
+  example: []
+  syntax:
+    content: public static Vec2 operator +(Vec2 a, Vec2 b)
+    parameters:
+    - id: a
+      type: TDMaker.Core.Vec2
+    - id: b
+      type: TDMaker.Core.Vec2
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public Shared Operator +(a As Vec2, b As Vec2) As Vec2
+  overload: TDMaker.Core.Vec2.op_Addition*
+  nameWithType.vb: Vec2.+(Vec2, Vec2)
+  fullName.vb: TDMaker.Core.Vec2.+(TDMaker.Core.Vec2, TDMaker.Core.Vec2)
+  name.vb: +(Vec2, Vec2)
+- uid: TDMaker.Core.Vec2.op_Subtraction(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  commentId: M:TDMaker.Core.Vec2.op_Subtraction(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  id: op_Subtraction(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: operator -(Vec2, Vec2)
+  nameWithType: Vec2.operator -(Vec2, Vec2)
+  fullName: TDMaker.Core.Vec2.operator -(TDMaker.Core.Vec2, TDMaker.Core.Vec2)
+  type: Operator
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Subtracts two vectors.
+  example: []
+  syntax:
+    content: public static Vec2 operator -(Vec2 a, Vec2 b)
+    parameters:
+    - id: a
+      type: TDMaker.Core.Vec2
+    - id: b
+      type: TDMaker.Core.Vec2
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public Shared Operator -(a As Vec2, b As Vec2) As Vec2
+  overload: TDMaker.Core.Vec2.op_Subtraction*
+  nameWithType.vb: Vec2.-(Vec2, Vec2)
+  fullName.vb: TDMaker.Core.Vec2.-(TDMaker.Core.Vec2, TDMaker.Core.Vec2)
+  name.vb: -(Vec2, Vec2)
+- uid: TDMaker.Core.Vec2.op_Multiply(TDMaker.Core.Vec2,System.Single)
+  commentId: M:TDMaker.Core.Vec2.op_Multiply(TDMaker.Core.Vec2,System.Single)
+  id: op_Multiply(TDMaker.Core.Vec2,System.Single)
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: operator *(Vec2, float)
+  nameWithType: Vec2.operator *(Vec2, float)
+  fullName: TDMaker.Core.Vec2.operator *(TDMaker.Core.Vec2, float)
+  type: Operator
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Scales a vector.
+  example: []
+  syntax:
+    content: public static Vec2 operator *(Vec2 a, float s)
+    parameters:
+    - id: a
+      type: TDMaker.Core.Vec2
+    - id: s
+      type: System.Single
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public Shared Operator *(a As Vec2, s As Single) As Vec2
+  overload: TDMaker.Core.Vec2.op_Multiply*
+  nameWithType.vb: Vec2.*(Vec2, Single)
+  fullName.vb: TDMaker.Core.Vec2.*(TDMaker.Core.Vec2, Single)
+  name.vb: '*(Vec2, Single)'
+- uid: TDMaker.Core.Vec2.op_Division(TDMaker.Core.Vec2,System.Single)
+  commentId: M:TDMaker.Core.Vec2.op_Division(TDMaker.Core.Vec2,System.Single)
+  id: op_Division(TDMaker.Core.Vec2,System.Single)
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: operator /(Vec2, float)
+  nameWithType: Vec2.operator /(Vec2, float)
+  fullName: TDMaker.Core.Vec2.operator /(TDMaker.Core.Vec2, float)
+  type: Operator
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Divides a vector by a scalar.
+  example: []
+  syntax:
+    content: public static Vec2 operator /(Vec2 a, float s)
+    parameters:
+    - id: a
+      type: TDMaker.Core.Vec2
+    - id: s
+      type: System.Single
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public Shared Operator /(a As Vec2, s As Single) As Vec2
+  overload: TDMaker.Core.Vec2.op_Division*
+  nameWithType.vb: Vec2./(Vec2, Single)
+  fullName.vb: TDMaker.Core.Vec2./(TDMaker.Core.Vec2, Single)
+  name.vb: /(Vec2, Single)
+- uid: TDMaker.Core.Vec2.DistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  commentId: M:TDMaker.Core.Vec2.DistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  id: DistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: DistanceSquared(Vec2, Vec2, float)
+  nameWithType: Vec2.DistanceSquared(Vec2, Vec2, float)
+  fullName: TDMaker.Core.Vec2.DistanceSquared(TDMaker.Core.Vec2, TDMaker.Core.Vec2, float)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Measures squared distance using a vertical range multiplier.
+  example: []
+  syntax:
+    content: public static float DistanceSquared(Vec2 a, Vec2 b, float yScale = 1)
+    parameters:
+    - id: a
+      type: TDMaker.Core.Vec2
+    - id: b
+      type: TDMaker.Core.Vec2
+    - id: yScale
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function DistanceSquared(a As Vec2, b As Vec2, yScale As Single = 1) As Single
+  overload: TDMaker.Core.Vec2.DistanceSquared*
+  nameWithType.vb: Vec2.DistanceSquared(Vec2, Vec2, Single)
+  fullName.vb: TDMaker.Core.Vec2.DistanceSquared(TDMaker.Core.Vec2, TDMaker.Core.Vec2, Single)
+  name.vb: DistanceSquared(Vec2, Vec2, Single)
+- uid: TDMaker.Core.Vec2.Lerp(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  commentId: M:TDMaker.Core.Vec2.Lerp(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  id: Lerp(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: Lerp(Vec2, Vec2, float)
+  nameWithType: Vec2.Lerp(Vec2, Vec2, float)
+  fullName: TDMaker.Core.Vec2.Lerp(TDMaker.Core.Vec2, TDMaker.Core.Vec2, float)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Interpolates between two positions.
+  example: []
+  syntax:
+    content: public static Vec2 Lerp(Vec2 a, Vec2 b, float t)
+    parameters:
+    - id: a
+      type: TDMaker.Core.Vec2
+    - id: b
+      type: TDMaker.Core.Vec2
+    - id: t
+      type: System.Single
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public Shared Function Lerp(a As Vec2, b As Vec2, t As Single) As Vec2
+  overload: TDMaker.Core.Vec2.Lerp*
+  nameWithType.vb: Vec2.Lerp(Vec2, Vec2, Single)
+  fullName.vb: TDMaker.Core.Vec2.Lerp(TDMaker.Core.Vec2, TDMaker.Core.Vec2, Single)
+  name.vb: Lerp(Vec2, Vec2, Single)
+- uid: TDMaker.Core.Vec2.MoveTowards(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  commentId: M:TDMaker.Core.Vec2.MoveTowards(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  id: MoveTowards(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: MoveTowards(Vec2, Vec2, float)
+  nameWithType: Vec2.MoveTowards(Vec2, Vec2, float)
+  fullName: TDMaker.Core.Vec2.MoveTowards(TDMaker.Core.Vec2, TDMaker.Core.Vec2, float)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Moves towards a destination without overshooting it.
+  example: []
+  syntax:
+    content: public static Vec2 MoveTowards(Vec2 from, Vec2 to, float distance)
+    parameters:
+    - id: from
+      type: TDMaker.Core.Vec2
+    - id: to
+      type: TDMaker.Core.Vec2
+    - id: distance
+      type: System.Single
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public Shared Function MoveTowards(from As Vec2, [to] As Vec2, distance As Single) As Vec2
+  overload: TDMaker.Core.Vec2.MoveTowards*
+  nameWithType.vb: Vec2.MoveTowards(Vec2, Vec2, Single)
+  fullName.vb: TDMaker.Core.Vec2.MoveTowards(TDMaker.Core.Vec2, TDMaker.Core.Vec2, Single)
+  name.vb: MoveTowards(Vec2, Vec2, Single)
+- uid: TDMaker.Core.Vec2.Equals(TDMaker.Core.Vec2)
+  commentId: M:TDMaker.Core.Vec2.Equals(TDMaker.Core.Vec2)
+  id: Equals(TDMaker.Core.Vec2)
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: Equals(Vec2)
+  nameWithType: Vec2.Equals(Vec2)
+  fullName: TDMaker.Core.Vec2.Equals(TDMaker.Core.Vec2)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Compares coordinates exactly.
+  example: []
+  syntax:
+    content: public bool Equals(Vec2 other)
+    parameters:
+    - id: other
+      type: TDMaker.Core.Vec2
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Vec2) As Boolean
+  overload: TDMaker.Core.Vec2.Equals*
+  implements:
+  - System.IEquatable{TDMaker.Core.Vec2}.Equals(TDMaker.Core.Vec2)
+- uid: TDMaker.Core.Vec2.Equals(System.Object)
+  commentId: M:TDMaker.Core.Vec2.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: Vec2.Equals(object)
+  fullName: TDMaker.Core.Vec2.Equals(object)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Compares coordinates exactly.
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: TDMaker.Core.Vec2.Equals*
+  nameWithType.vb: Vec2.Equals(Object)
+  fullName.vb: TDMaker.Core.Vec2.Equals(Object)
+  name.vb: Equals(Object)
+- uid: TDMaker.Core.Vec2.GetHashCode
+  commentId: M:TDMaker.Core.Vec2.GetHashCode
+  id: GetHashCode
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Vec2.GetHashCode()
+  fullName: TDMaker.Core.Vec2.GetHashCode()
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Returns a coordinate hash.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: TDMaker.Core.Vec2.GetHashCode*
+- uid: TDMaker.Core.Vec2.ToString
+  commentId: M:TDMaker.Core.Vec2.ToString
+  id: ToString
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Vec2.ToString()
+  fullName: TDMaker.Core.Vec2.ToString()
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Formats the vector for diagnostics.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: TDMaker.Core.Vec2.ToString*
+- uid: TDMaker.Core.Vec2.Zero
+  commentId: P:TDMaker.Core.Vec2.Zero
+  id: Zero
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: Vec2.Zero
+  fullName: TDMaker.Core.Vec2.Zero
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The origin.
+  example: []
+  syntax:
+    content: public static Vec2 Zero { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public Shared ReadOnly Property Zero As Vec2
+  overload: TDMaker.Core.Vec2.Zero*
+- uid: TDMaker.Core.Vec2.LengthSquared
+  commentId: P:TDMaker.Core.Vec2.LengthSquared
+  id: LengthSquared
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: LengthSquared
+  nameWithType: Vec2.LengthSquared
+  fullName: TDMaker.Core.Vec2.LengthSquared
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The squared Euclidean length.
+  example: []
+  syntax:
+    content: public float LengthSquared { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property LengthSquared As Single
+  overload: TDMaker.Core.Vec2.LengthSquared*
+- uid: TDMaker.Core.Vec2.Length
+  commentId: P:TDMaker.Core.Vec2.Length
+  id: Length
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: Vec2.Length
+  fullName: TDMaker.Core.Vec2.Length
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The Euclidean length.
+  example: []
+  syntax:
+    content: public float Length { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Length As Single
+  overload: TDMaker.Core.Vec2.Length*
+- uid: TDMaker.Core.Vec2.Normalized
+  commentId: P:TDMaker.Core.Vec2.Normalized
+  id: Normalized
+  parent: TDMaker.Core.Vec2
+  langs:
+  - csharp
+  - vb
+  name: Normalized
+  nameWithType: Vec2.Normalized
+  fullName: TDMaker.Core.Vec2.Normalized
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Returns a unit vector, or zero for a zero vector.
+  example: []
+  syntax:
+    content: public Vec2 Normalized { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public ReadOnly Property Normalized As Vec2
+  overload: TDMaker.Core.Vec2.Normalized*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.IEquatable{TDMaker.Core.Vec2}
+  commentId: T:System.IEquatable{TDMaker.Core.Vec2}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Vec2>
+  nameWithType: IEquatable<Vec2>
+  fullName: System.IEquatable<TDMaker.Core.Vec2>
+  nameWithType.vb: IEquatable(Of Vec2)
+  fullName.vb: System.IEquatable(Of TDMaker.Core.Vec2)
+  name.vb: IEquatable(Of Vec2)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: TDMaker.Core.Vec2
+    name: Vec2
+    isExternal: true
+    href: TDMaker.Core.Vec2.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Vec2
+    name: Vec2
+    isExternal: true
+    href: TDMaker.Core.Vec2.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Vec2.#ctor*
+  commentId: Overload:TDMaker.Core.Vec2.#ctor
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2__ctor_System_Single_System_Single_
+  name: Vec2
+  nameWithType: Vec2.Vec2
+  fullName: TDMaker.Core.Vec2.Vec2
+  nameWithType.vb: Vec2.New
+  fullName.vb: TDMaker.Core.Vec2.New
+  name.vb: New
+- uid: TDMaker.Core.Vec2.op_Addition*
+  commentId: Overload:TDMaker.Core.Vec2.op_Addition
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_op_Addition_TDMaker_Core_Vec2_TDMaker_Core_Vec2_
+  name: operator +
+  nameWithType: Vec2.operator +
+  fullName: TDMaker.Core.Vec2.operator +
+  nameWithType.vb: Vec2.+
+  fullName.vb: TDMaker.Core.Vec2.+
+  name.vb: +
+  spec.csharp:
+  - name: operator
+  - name: ' '
+  - uid: TDMaker.Core.Vec2.op_Addition*
+    name: +
+    isExternal: true
+    href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_op_Addition_TDMaker_Core_Vec2_TDMaker_Core_Vec2_
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core.Vec2.op_Subtraction*
+  commentId: Overload:TDMaker.Core.Vec2.op_Subtraction
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_op_Subtraction_TDMaker_Core_Vec2_TDMaker_Core_Vec2_
+  name: operator -
+  nameWithType: Vec2.operator -
+  fullName: TDMaker.Core.Vec2.operator -
+  nameWithType.vb: Vec2.-
+  fullName.vb: TDMaker.Core.Vec2.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: ' '
+  - uid: TDMaker.Core.Vec2.op_Subtraction*
+    name: '-'
+    isExternal: true
+    href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_op_Subtraction_TDMaker_Core_Vec2_TDMaker_Core_Vec2_
+- uid: TDMaker.Core.Vec2.op_Multiply*
+  commentId: Overload:TDMaker.Core.Vec2.op_Multiply
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_op_Multiply_TDMaker_Core_Vec2_System_Single_
+  name: operator *
+  nameWithType: Vec2.operator *
+  fullName: TDMaker.Core.Vec2.operator *
+  nameWithType.vb: Vec2.*
+  fullName.vb: TDMaker.Core.Vec2.*
+  name.vb: '*'
+  spec.csharp:
+  - name: operator
+  - name: ' '
+  - uid: TDMaker.Core.Vec2.op_Multiply*
+    name: '*'
+    isExternal: true
+    href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_op_Multiply_TDMaker_Core_Vec2_System_Single_
+- uid: TDMaker.Core.Vec2.op_Division*
+  commentId: Overload:TDMaker.Core.Vec2.op_Division
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_op_Division_TDMaker_Core_Vec2_System_Single_
+  name: operator /
+  nameWithType: Vec2.operator /
+  fullName: TDMaker.Core.Vec2.operator /
+  nameWithType.vb: Vec2./
+  fullName.vb: TDMaker.Core.Vec2./
+  name.vb: /
+  spec.csharp:
+  - name: operator
+  - name: ' '
+  - uid: TDMaker.Core.Vec2.op_Division*
+    name: /
+    isExternal: true
+    href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_op_Division_TDMaker_Core_Vec2_System_Single_
+- uid: TDMaker.Core.Vec2.DistanceSquared*
+  commentId: Overload:TDMaker.Core.Vec2.DistanceSquared
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_DistanceSquared_TDMaker_Core_Vec2_TDMaker_Core_Vec2_System_Single_
+  name: DistanceSquared
+  nameWithType: Vec2.DistanceSquared
+  fullName: TDMaker.Core.Vec2.DistanceSquared
+- uid: TDMaker.Core.Vec2.Lerp*
+  commentId: Overload:TDMaker.Core.Vec2.Lerp
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_Lerp_TDMaker_Core_Vec2_TDMaker_Core_Vec2_System_Single_
+  name: Lerp
+  nameWithType: Vec2.Lerp
+  fullName: TDMaker.Core.Vec2.Lerp
+- uid: TDMaker.Core.Vec2.MoveTowards*
+  commentId: Overload:TDMaker.Core.Vec2.MoveTowards
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_MoveTowards_TDMaker_Core_Vec2_TDMaker_Core_Vec2_System_Single_
+  name: MoveTowards
+  nameWithType: Vec2.MoveTowards
+  fullName: TDMaker.Core.Vec2.MoveTowards
+- uid: TDMaker.Core.Vec2.Equals*
+  commentId: Overload:TDMaker.Core.Vec2.Equals
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_Equals_TDMaker_Core_Vec2_
+  name: Equals
+  nameWithType: Vec2.Equals
+  fullName: TDMaker.Core.Vec2.Equals
+- uid: System.IEquatable{TDMaker.Core.Vec2}.Equals(TDMaker.Core.Vec2)
+  commentId: M:System.IEquatable{TDMaker.Core.Vec2}.Equals(TDMaker.Core.Vec2)
+  parent: System.IEquatable{TDMaker.Core.Vec2}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(Vec2)
+  nameWithType: IEquatable<Vec2>.Equals(Vec2)
+  fullName: System.IEquatable<TDMaker.Core.Vec2>.Equals(TDMaker.Core.Vec2)
+  nameWithType.vb: IEquatable(Of Vec2).Equals(Vec2)
+  fullName.vb: System.IEquatable(Of TDMaker.Core.Vec2).Equals(TDMaker.Core.Vec2)
+  spec.csharp:
+  - uid: System.IEquatable{TDMaker.Core.Vec2}.Equals(TDMaker.Core.Vec2)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: TDMaker.Core.Vec2
+    name: Vec2
+    isExternal: true
+    href: TDMaker.Core.Vec2.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{TDMaker.Core.Vec2}.Equals(TDMaker.Core.Vec2)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: TDMaker.Core.Vec2
+    name: Vec2
+    isExternal: true
+    href: TDMaker.Core.Vec2.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Vec2.GetHashCode*
+  commentId: Overload:TDMaker.Core.Vec2.GetHashCode
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_GetHashCode
+  name: GetHashCode
+  nameWithType: Vec2.GetHashCode
+  fullName: TDMaker.Core.Vec2.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Vec2.ToString*
+  commentId: Overload:TDMaker.Core.Vec2.ToString
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_ToString
+  name: ToString
+  nameWithType: Vec2.ToString
+  fullName: TDMaker.Core.Vec2.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Vec2.Zero*
+  commentId: Overload:TDMaker.Core.Vec2.Zero
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_Zero
+  name: Zero
+  nameWithType: Vec2.Zero
+  fullName: TDMaker.Core.Vec2.Zero
+- uid: TDMaker.Core.Vec2.LengthSquared*
+  commentId: Overload:TDMaker.Core.Vec2.LengthSquared
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_LengthSquared
+  name: LengthSquared
+  nameWithType: Vec2.LengthSquared
+  fullName: TDMaker.Core.Vec2.LengthSquared
+- uid: TDMaker.Core.Vec2.Length*
+  commentId: Overload:TDMaker.Core.Vec2.Length
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_Length
+  name: Length
+  nameWithType: Vec2.Length
+  fullName: TDMaker.Core.Vec2.Length
+- uid: TDMaker.Core.Vec2.Normalized*
+  commentId: Overload:TDMaker.Core.Vec2.Normalized
+  isExternal: true
+  href: TDMaker.Core.Vec2.html#TDMaker_Core_Vec2_Normalized
+  name: Normalized
+  nameWithType: Vec2.Normalized
+  fullName: TDMaker.Core.Vec2.Normalized

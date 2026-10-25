@@ -1,0 +1,723 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.WaveSchedule
+  commentId: T:TDMaker.Editor.WaveSchedule
+  id: WaveSchedule
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.WaveSchedule.Entry(TDMaker.Unity.Authoring.SpawnEntryData)
+  - TDMaker.Editor.WaveSchedule.GroupEnd(TDMaker.Unity.Authoring.WaveGroupData)
+  - TDMaker.Editor.WaveSchedule.Interval(TDMaker.Unity.Authoring.SpawnEntryData)
+  - TDMaker.Editor.WaveSchedule.IsAlternate(TDMaker.Unity.Authoring.SpawnEntryData,System.Int32)
+  - TDMaker.Editor.WaveSchedule.Layout(TDMaker.Unity.Authoring.WaveGroupData,System.Int32,System.Collections.Generic.List{TDMaker.Editor.EntrySpan})
+  - TDMaker.Editor.WaveSchedule.TickSeconds
+  - TDMaker.Editor.WaveSchedule.Wave(TDMaker.Unity.Authoring.WaveData)
+  langs:
+  - csharp
+  - vb
+  name: WaveSchedule
+  nameWithType: WaveSchedule
+  fullName: TDMaker.Editor.WaveSchedule
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Mirrors the simulation''s spawn schedule: a group''s entries run back to back; an entry entered at <code>s</code>
+
+    with start delay <code>d</code>, interval <code>h</code> and count <code>n</code> spawns at <code>s+d+h … s+d+nh</code>,
+    waits one more
+
+    interval, then the next entry is entered after the following gap.'
+  example: []
+  syntax:
+    content: public static class WaveSchedule
+    content.vb: Public Module WaveSchedule
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.WaveSchedule.TickSeconds
+  commentId: F:TDMaker.Editor.WaveSchedule.TickSeconds
+  id: TickSeconds
+  parent: TDMaker.Editor.WaveSchedule
+  langs:
+  - csharp
+  - vb
+  name: TickSeconds
+  nameWithType: WaveSchedule.TickSeconds
+  fullName: TDMaker.Editor.WaveSchedule.TickSeconds
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Default simulation tick length, used for zero intervals.
+  example: []
+  syntax:
+    content: public const float TickSeconds = 0.033333335
+    return:
+      type: System.Single
+    content.vb: Public Const TickSeconds As Single = 0.033333335
+- uid: TDMaker.Editor.WaveSchedule.Interval(TDMaker.Unity.Authoring.SpawnEntryData)
+  commentId: M:TDMaker.Editor.WaveSchedule.Interval(TDMaker.Unity.Authoring.SpawnEntryData)
+  id: Interval(TDMaker.Unity.Authoring.SpawnEntryData)
+  parent: TDMaker.Editor.WaveSchedule
+  langs:
+  - csharp
+  - vb
+  name: Interval(SpawnEntryData)
+  nameWithType: WaveSchedule.Interval(SpawnEntryData)
+  fullName: TDMaker.Editor.WaveSchedule.Interval(TDMaker.Unity.Authoring.SpawnEntryData)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Effective interval of an entry.
+  example: []
+  syntax:
+    content: public static float Interval(SpawnEntryData entry)
+    parameters:
+    - id: entry
+      type: TDMaker.Unity.Authoring.SpawnEntryData
+    return:
+      type: System.Single
+    content.vb: Public Shared Function Interval(entry As SpawnEntryData) As Single
+  overload: TDMaker.Editor.WaveSchedule.Interval*
+- uid: TDMaker.Editor.WaveSchedule.Layout(TDMaker.Unity.Authoring.WaveGroupData,System.Int32,System.Collections.Generic.List{TDMaker.Editor.EntrySpan})
+  commentId: M:TDMaker.Editor.WaveSchedule.Layout(TDMaker.Unity.Authoring.WaveGroupData,System.Int32,System.Collections.Generic.List{TDMaker.Editor.EntrySpan})
+  id: Layout(TDMaker.Unity.Authoring.WaveGroupData,System.Int32,System.Collections.Generic.List{TDMaker.Editor.EntrySpan})
+  parent: TDMaker.Editor.WaveSchedule
+  langs:
+  - csharp
+  - vb
+  name: Layout(WaveGroupData, int, List<EntrySpan>)
+  nameWithType: WaveSchedule.Layout(WaveGroupData, int, List<EntrySpan>)
+  fullName: TDMaker.Editor.WaveSchedule.Layout(TDMaker.Unity.Authoring.WaveGroupData, int, System.Collections.Generic.List<TDMaker.Editor.EntrySpan>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Lays out every entry of a group.
+  example: []
+  syntax:
+    content: public static void Layout(WaveGroupData group, int groupIndex, List<EntrySpan> output)
+    parameters:
+    - id: group
+      type: TDMaker.Unity.Authoring.WaveGroupData
+    - id: groupIndex
+      type: System.Int32
+    - id: output
+      type: System.Collections.Generic.List{TDMaker.Editor.EntrySpan}
+    content.vb: Public Shared Sub Layout(group As WaveGroupData, groupIndex As Integer, output As List(Of EntrySpan))
+  overload: TDMaker.Editor.WaveSchedule.Layout*
+  nameWithType.vb: WaveSchedule.Layout(WaveGroupData, Integer, List(Of EntrySpan))
+  fullName.vb: TDMaker.Editor.WaveSchedule.Layout(TDMaker.Unity.Authoring.WaveGroupData, Integer, System.Collections.Generic.List(Of
+    TDMaker.Editor.EntrySpan))
+  name.vb: Layout(WaveGroupData, Integer, List(Of EntrySpan))
+- uid: TDMaker.Editor.WaveSchedule.GroupEnd(TDMaker.Unity.Authoring.WaveGroupData)
+  commentId: M:TDMaker.Editor.WaveSchedule.GroupEnd(TDMaker.Unity.Authoring.WaveGroupData)
+  id: GroupEnd(TDMaker.Unity.Authoring.WaveGroupData)
+  parent: TDMaker.Editor.WaveSchedule
+  langs:
+  - csharp
+  - vb
+  name: GroupEnd(WaveGroupData)
+  nameWithType: WaveSchedule.GroupEnd(WaveGroupData)
+  fullName: TDMaker.Editor.WaveSchedule.GroupEnd(TDMaker.Unity.Authoring.WaveGroupData)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: End time of a group (last entry end, without its trailing gap).
+  example: []
+  syntax:
+    content: public static float GroupEnd(WaveGroupData group)
+    parameters:
+    - id: group
+      type: TDMaker.Unity.Authoring.WaveGroupData
+    return:
+      type: System.Single
+    content.vb: Public Shared Function GroupEnd(group As WaveGroupData) As Single
+  overload: TDMaker.Editor.WaveSchedule.GroupEnd*
+- uid: TDMaker.Editor.WaveSchedule.IsAlternate(TDMaker.Unity.Authoring.SpawnEntryData,System.Int32)
+  commentId: M:TDMaker.Editor.WaveSchedule.IsAlternate(TDMaker.Unity.Authoring.SpawnEntryData,System.Int32)
+  id: IsAlternate(TDMaker.Unity.Authoring.SpawnEntryData,System.Int32)
+  parent: TDMaker.Editor.WaveSchedule
+  langs:
+  - csharp
+  - vb
+  name: IsAlternate(SpawnEntryData, int)
+  nameWithType: WaveSchedule.IsAlternate(SpawnEntryData, int)
+  fullName: TDMaker.Editor.WaveSchedule.IsAlternate(TDMaker.Unity.Authoring.SpawnEntryData, int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether spawn <code class="paramref">k</code> (zero-based) of an entry uses the alternate enemy.
+  example: []
+  syntax:
+    content: public static bool IsAlternate(SpawnEntryData entry, int k)
+    parameters:
+    - id: entry
+      type: TDMaker.Unity.Authoring.SpawnEntryData
+    - id: k
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsAlternate(entry As SpawnEntryData, k As Integer) As Boolean
+  overload: TDMaker.Editor.WaveSchedule.IsAlternate*
+  nameWithType.vb: WaveSchedule.IsAlternate(SpawnEntryData, Integer)
+  fullName.vb: TDMaker.Editor.WaveSchedule.IsAlternate(TDMaker.Unity.Authoring.SpawnEntryData, Integer)
+  name.vb: IsAlternate(SpawnEntryData, Integer)
+- uid: TDMaker.Editor.WaveSchedule.Entry(TDMaker.Unity.Authoring.SpawnEntryData)
+  commentId: M:TDMaker.Editor.WaveSchedule.Entry(TDMaker.Unity.Authoring.SpawnEntryData)
+  id: Entry(TDMaker.Unity.Authoring.SpawnEntryData)
+  parent: TDMaker.Editor.WaveSchedule
+  langs:
+  - csharp
+  - vb
+  name: Entry(SpawnEntryData)
+  nameWithType: WaveSchedule.Entry(SpawnEntryData)
+  fullName: TDMaker.Editor.WaveSchedule.Entry(TDMaker.Unity.Authoring.SpawnEntryData)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Totals for one entry.
+  example: []
+  syntax:
+    content: public static WaveTotals Entry(SpawnEntryData entry)
+    parameters:
+    - id: entry
+      type: TDMaker.Unity.Authoring.SpawnEntryData
+    return:
+      type: TDMaker.Editor.WaveTotals
+    content.vb: Public Shared Function Entry(entry As SpawnEntryData) As WaveTotals
+  overload: TDMaker.Editor.WaveSchedule.Entry*
+- uid: TDMaker.Editor.WaveSchedule.Wave(TDMaker.Unity.Authoring.WaveData)
+  commentId: M:TDMaker.Editor.WaveSchedule.Wave(TDMaker.Unity.Authoring.WaveData)
+  id: Wave(TDMaker.Unity.Authoring.WaveData)
+  parent: TDMaker.Editor.WaveSchedule
+  langs:
+  - csharp
+  - vb
+  name: Wave(WaveData)
+  nameWithType: WaveSchedule.Wave(WaveData)
+  fullName: TDMaker.Editor.WaveSchedule.Wave(TDMaker.Unity.Authoring.WaveData)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Totals for a wave.
+  example: []
+  syntax:
+    content: public static WaveTotals Wave(WaveData wave)
+    parameters:
+    - id: wave
+      type: TDMaker.Unity.Authoring.WaveData
+    return:
+      type: TDMaker.Editor.WaveTotals
+    content.vb: Public Shared Function Wave(wave As WaveData) As WaveTotals
+  overload: TDMaker.Editor.WaveSchedule.Wave*
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Editor.WaveSchedule.Interval*
+  commentId: Overload:TDMaker.Editor.WaveSchedule.Interval
+  isExternal: true
+  href: TDMaker.Editor.WaveSchedule.html#TDMaker_Editor_WaveSchedule_Interval_TDMaker_Unity_Authoring_SpawnEntryData_
+  name: Interval
+  nameWithType: WaveSchedule.Interval
+  fullName: TDMaker.Editor.WaveSchedule.Interval
+- uid: TDMaker.Unity.Authoring.SpawnEntryData
+  commentId: T:TDMaker.Unity.Authoring.SpawnEntryData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.SpawnEntryData.html
+  name: SpawnEntryData
+  nameWithType: SpawnEntryData
+  fullName: TDMaker.Unity.Authoring.SpawnEntryData
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Editor.WaveSchedule.Layout*
+  commentId: Overload:TDMaker.Editor.WaveSchedule.Layout
+  isExternal: true
+  href: TDMaker.Editor.WaveSchedule.html#TDMaker_Editor_WaveSchedule_Layout_TDMaker_Unity_Authoring_WaveGroupData_System_Int32_System_Collections_Generic_List_TDMaker_Editor_EntrySpan__
+  name: Layout
+  nameWithType: WaveSchedule.Layout
+  fullName: TDMaker.Editor.WaveSchedule.Layout
+- uid: TDMaker.Unity.Authoring.WaveGroupData
+  commentId: T:TDMaker.Unity.Authoring.WaveGroupData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.WaveGroupData.html
+  name: WaveGroupData
+  nameWithType: WaveGroupData
+  fullName: TDMaker.Unity.Authoring.WaveGroupData
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.List{TDMaker.Editor.EntrySpan}
+  commentId: T:System.Collections.Generic.List{TDMaker.Editor.EntrySpan}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EntrySpan>
+  nameWithType: List<EntrySpan>
+  fullName: System.Collections.Generic.List<TDMaker.Editor.EntrySpan>
+  nameWithType.vb: List(Of EntrySpan)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Editor.EntrySpan)
+  name.vb: List(Of EntrySpan)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Editor.EntrySpan
+    name: EntrySpan
+    isExternal: true
+    href: TDMaker.Editor.EntrySpan.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Editor.EntrySpan
+    name: EntrySpan
+    isExternal: true
+    href: TDMaker.Editor.EntrySpan.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Editor.WaveSchedule.GroupEnd*
+  commentId: Overload:TDMaker.Editor.WaveSchedule.GroupEnd
+  isExternal: true
+  href: TDMaker.Editor.WaveSchedule.html#TDMaker_Editor_WaveSchedule_GroupEnd_TDMaker_Unity_Authoring_WaveGroupData_
+  name: GroupEnd
+  nameWithType: WaveSchedule.GroupEnd
+  fullName: TDMaker.Editor.WaveSchedule.GroupEnd
+- uid: TDMaker.Editor.WaveSchedule.IsAlternate*
+  commentId: Overload:TDMaker.Editor.WaveSchedule.IsAlternate
+  isExternal: true
+  href: TDMaker.Editor.WaveSchedule.html#TDMaker_Editor_WaveSchedule_IsAlternate_TDMaker_Unity_Authoring_SpawnEntryData_System_Int32_
+  name: IsAlternate
+  nameWithType: WaveSchedule.IsAlternate
+  fullName: TDMaker.Editor.WaveSchedule.IsAlternate
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.WaveSchedule.Entry*
+  commentId: Overload:TDMaker.Editor.WaveSchedule.Entry
+  isExternal: true
+  href: TDMaker.Editor.WaveSchedule.html#TDMaker_Editor_WaveSchedule_Entry_TDMaker_Unity_Authoring_SpawnEntryData_
+  name: Entry
+  nameWithType: WaveSchedule.Entry
+  fullName: TDMaker.Editor.WaveSchedule.Entry
+- uid: TDMaker.Editor.WaveTotals
+  commentId: T:TDMaker.Editor.WaveTotals
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.WaveTotals.html
+  name: WaveTotals
+  nameWithType: WaveTotals
+  fullName: TDMaker.Editor.WaveTotals
+- uid: TDMaker.Editor.WaveSchedule.Wave*
+  commentId: Overload:TDMaker.Editor.WaveSchedule.Wave
+  isExternal: true
+  href: TDMaker.Editor.WaveSchedule.html#TDMaker_Editor_WaveSchedule_Wave_TDMaker_Unity_Authoring_WaveData_
+  name: Wave
+  nameWithType: WaveSchedule.Wave
+  fullName: TDMaker.Editor.WaveSchedule.Wave
+- uid: TDMaker.Unity.Authoring.WaveData
+  commentId: T:TDMaker.Unity.Authoring.WaveData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.WaveData.html
+  name: WaveData
+  nameWithType: WaveData
+  fullName: TDMaker.Unity.Authoring.WaveData

@@ -1,0 +1,731 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Effects.EffectService
+  commentId: T:TDMaker.Core.Effects.EffectService
+  id: EffectService
+  parent: TDMaker.Core.Effects
+  children:
+  - TDMaker.Core.Effects.EffectService.Areas
+  - TDMaker.Core.Effects.EffectService.Bindings
+  - TDMaker.Core.Effects.EffectService.DispelTarget(System.Int32)
+  - TDMaker.Core.Effects.EffectService.EmitArea(TDMaker.Core.Defs.AreaEffectDef,TDMaker.Core.Vec2,System.Int32)
+  - TDMaker.Core.Effects.EffectService.Remove(System.Int64)
+  - TDMaker.Core.Effects.EffectService.TryAttach(TDMaker.Core.Defs.StatusEffectDef,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: EffectService
+  nameWithType: EffectService
+  fullName: TDMaker.Core.Effects.EffectService
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: Fixed-capacity attachment and region lifecycle, including same-tick pending duplicate checks.
+  example: []
+  syntax:
+    content: public sealed class EffectService
+    content.vb: Public NotInheritable Class EffectService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Effects.EffectService.TryAttach(TDMaker.Core.Defs.StatusEffectDef,System.Int32,System.Int32)
+  commentId: M:TDMaker.Core.Effects.EffectService.TryAttach(TDMaker.Core.Defs.StatusEffectDef,System.Int32,System.Int32)
+  id: TryAttach(TDMaker.Core.Defs.StatusEffectDef,System.Int32,System.Int32)
+  parent: TDMaker.Core.Effects.EffectService
+  langs:
+  - csharp
+  - vb
+  name: TryAttach(StatusEffectDef, int, int)
+  nameWithType: EffectService.TryAttach(StatusEffectDef, int, int)
+  fullName: TDMaker.Core.Effects.EffectService.TryAttach(TDMaker.Core.Defs.StatusEffectDef, int, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: Validates and queues an attachment. A refresh succeeds without creating another binding.
+  example: []
+  syntax:
+    content: public bool TryAttach(StatusEffectDef definition, int sourceId, int targetId)
+    parameters:
+    - id: definition
+      type: TDMaker.Core.Defs.StatusEffectDef
+    - id: sourceId
+      type: System.Int32
+    - id: targetId
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryAttach(definition As StatusEffectDef, sourceId As Integer, targetId As Integer) As Boolean
+  overload: TDMaker.Core.Effects.EffectService.TryAttach*
+  nameWithType.vb: EffectService.TryAttach(StatusEffectDef, Integer, Integer)
+  fullName.vb: TDMaker.Core.Effects.EffectService.TryAttach(TDMaker.Core.Defs.StatusEffectDef, Integer, Integer)
+  name.vb: TryAttach(StatusEffectDef, Integer, Integer)
+- uid: TDMaker.Core.Effects.EffectService.Remove(System.Int64)
+  commentId: M:TDMaker.Core.Effects.EffectService.Remove(System.Int64)
+  id: Remove(System.Int64)
+  parent: TDMaker.Core.Effects.EffectService
+  langs:
+  - csharp
+  - vb
+  name: Remove(long)
+  nameWithType: EffectService.Remove(long)
+  fullName: TDMaker.Core.Effects.EffectService.Remove(long)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: Queues removal by identifier; numeric modifiers are restored once.
+  example: []
+  syntax:
+    content: public bool Remove(long bindingId)
+    parameters:
+    - id: bindingId
+      type: System.Int64
+    return:
+      type: System.Boolean
+    content.vb: Public Function Remove(bindingId As Long) As Boolean
+  overload: TDMaker.Core.Effects.EffectService.Remove*
+  nameWithType.vb: EffectService.Remove(Long)
+  fullName.vb: TDMaker.Core.Effects.EffectService.Remove(Long)
+  name.vb: Remove(Long)
+- uid: TDMaker.Core.Effects.EffectService.DispelTarget(System.Int32)
+  commentId: M:TDMaker.Core.Effects.EffectService.DispelTarget(System.Int32)
+  id: DispelTarget(System.Int32)
+  parent: TDMaker.Core.Effects.EffectService
+  langs:
+  - csharp
+  - vb
+  name: DispelTarget(int)
+  nameWithType: EffectService.DispelTarget(int)
+  fullName: TDMaker.Core.Effects.EffectService.DispelTarget(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: Queues all bindings on a target for stable-order removal.
+  example: []
+  syntax:
+    content: public void DispelTarget(int targetId)
+    parameters:
+    - id: targetId
+      type: System.Int32
+    content.vb: Public Sub DispelTarget(targetId As Integer)
+  overload: TDMaker.Core.Effects.EffectService.DispelTarget*
+  nameWithType.vb: EffectService.DispelTarget(Integer)
+  fullName.vb: TDMaker.Core.Effects.EffectService.DispelTarget(Integer)
+  name.vb: DispelTarget(Integer)
+- uid: TDMaker.Core.Effects.EffectService.EmitArea(TDMaker.Core.Defs.AreaEffectDef,TDMaker.Core.Vec2,System.Int32)
+  commentId: M:TDMaker.Core.Effects.EffectService.EmitArea(TDMaker.Core.Defs.AreaEffectDef,TDMaker.Core.Vec2,System.Int32)
+  id: EmitArea(TDMaker.Core.Defs.AreaEffectDef,TDMaker.Core.Vec2,System.Int32)
+  parent: TDMaker.Core.Effects.EffectService
+  langs:
+  - csharp
+  - vb
+  name: EmitArea(AreaEffectDef, Vec2, int)
+  nameWithType: EffectService.EmitArea(AreaEffectDef, Vec2, int)
+  fullName: TDMaker.Core.Effects.EffectService.EmitArea(TDMaker.Core.Defs.AreaEffectDef, TDMaker.Core.Vec2, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: Emits a region, returning zero when its fixed pool is exhausted or a required living source is unavailable.
+  example: []
+  syntax:
+    content: public long EmitArea(AreaEffectDef definition, Vec2 position, int sourceId = 0)
+    parameters:
+    - id: definition
+      type: TDMaker.Core.Defs.AreaEffectDef
+    - id: position
+      type: TDMaker.Core.Vec2
+    - id: sourceId
+      type: System.Int32
+    return:
+      type: System.Int64
+    content.vb: Public Function EmitArea(definition As AreaEffectDef, position As Vec2, sourceId As Integer = 0) As Long
+  overload: TDMaker.Core.Effects.EffectService.EmitArea*
+  nameWithType.vb: EffectService.EmitArea(AreaEffectDef, Vec2, Integer)
+  fullName.vb: TDMaker.Core.Effects.EffectService.EmitArea(TDMaker.Core.Defs.AreaEffectDef, TDMaker.Core.Vec2, Integer)
+  name.vb: EmitArea(AreaEffectDef, Vec2, Integer)
+- uid: TDMaker.Core.Effects.EffectService.Bindings
+  commentId: P:TDMaker.Core.Effects.EffectService.Bindings
+  id: Bindings
+  parent: TDMaker.Core.Effects.EffectService
+  langs:
+  - csharp
+  - vb
+  name: Bindings
+  nameWithType: EffectService.Bindings
+  fullName: TDMaker.Core.Effects.EffectService.Bindings
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: Accepted effects in attachment order, including pending and removal-marked entries.
+  example: []
+  syntax:
+    content: public IReadOnlyList<EffectBinding> Bindings { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Effects.EffectBinding}
+    content.vb: Public ReadOnly Property Bindings As IReadOnlyList(Of EffectBinding)
+  overload: TDMaker.Core.Effects.EffectService.Bindings*
+- uid: TDMaker.Core.Effects.EffectService.Areas
+  commentId: P:TDMaker.Core.Effects.EffectService.Areas
+  id: Areas
+  parent: TDMaker.Core.Effects.EffectService
+  langs:
+  - csharp
+  - vb
+  name: Areas
+  nameWithType: EffectService.Areas
+  fullName: TDMaker.Core.Effects.EffectService.Areas
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Effects
+  summary: Live region records in emission order.
+  example: []
+  syntax:
+    content: public IReadOnlyList<AreaBinding> Areas { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Effects.AreaBinding}
+    content.vb: Public ReadOnly Property Areas As IReadOnlyList(Of AreaBinding)
+  overload: TDMaker.Core.Effects.EffectService.Areas*
+references:
+- uid: TDMaker.Core.Effects
+  commentId: N:TDMaker.Core.Effects
+  isExternal: true
+  name: TDMaker.Core.Effects
+  nameWithType: TDMaker.Core.Effects
+  fullName: TDMaker.Core.Effects
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Effects
+    name: Effects
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Effects
+    name: Effects
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Effects.EffectService.TryAttach*
+  commentId: Overload:TDMaker.Core.Effects.EffectService.TryAttach
+  isExternal: true
+  href: TDMaker.Core.Effects.EffectService.html#TDMaker_Core_Effects_EffectService_TryAttach_TDMaker_Core_Defs_StatusEffectDef_System_Int32_System_Int32_
+  name: TryAttach
+  nameWithType: EffectService.TryAttach
+  fullName: TDMaker.Core.Effects.EffectService.TryAttach
+- uid: TDMaker.Core.Defs.StatusEffectDef
+  commentId: T:TDMaker.Core.Defs.StatusEffectDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.StatusEffectDef.html
+  name: StatusEffectDef
+  nameWithType: StatusEffectDef
+  fullName: TDMaker.Core.Defs.StatusEffectDef
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Effects.EffectService.Remove*
+  commentId: Overload:TDMaker.Core.Effects.EffectService.Remove
+  isExternal: true
+  href: TDMaker.Core.Effects.EffectService.html#TDMaker_Core_Effects_EffectService_Remove_System_Int64_
+  name: Remove
+  nameWithType: EffectService.Remove
+  fullName: TDMaker.Core.Effects.EffectService.Remove
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: TDMaker.Core.Effects.EffectService.DispelTarget*
+  commentId: Overload:TDMaker.Core.Effects.EffectService.DispelTarget
+  isExternal: true
+  href: TDMaker.Core.Effects.EffectService.html#TDMaker_Core_Effects_EffectService_DispelTarget_System_Int32_
+  name: DispelTarget
+  nameWithType: EffectService.DispelTarget
+  fullName: TDMaker.Core.Effects.EffectService.DispelTarget
+- uid: TDMaker.Core.Effects.EffectService.EmitArea*
+  commentId: Overload:TDMaker.Core.Effects.EffectService.EmitArea
+  isExternal: true
+  href: TDMaker.Core.Effects.EffectService.html#TDMaker_Core_Effects_EffectService_EmitArea_TDMaker_Core_Defs_AreaEffectDef_TDMaker_Core_Vec2_System_Int32_
+  name: EmitArea
+  nameWithType: EffectService.EmitArea
+  fullName: TDMaker.Core.Effects.EffectService.EmitArea
+- uid: TDMaker.Core.Defs.AreaEffectDef
+  commentId: T:TDMaker.Core.Defs.AreaEffectDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AreaEffectDef.html
+  name: AreaEffectDef
+  nameWithType: AreaEffectDef
+  fullName: TDMaker.Core.Defs.AreaEffectDef
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.Effects.EffectService.Bindings*
+  commentId: Overload:TDMaker.Core.Effects.EffectService.Bindings
+  isExternal: true
+  href: TDMaker.Core.Effects.EffectService.html#TDMaker_Core_Effects_EffectService_Bindings
+  name: Bindings
+  nameWithType: EffectService.Bindings
+  fullName: TDMaker.Core.Effects.EffectService.Bindings
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Effects.EffectBinding}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Effects.EffectBinding}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<EffectBinding>
+  nameWithType: IReadOnlyList<EffectBinding>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Effects.EffectBinding>
+  nameWithType.vb: IReadOnlyList(Of EffectBinding)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Effects.EffectBinding)
+  name.vb: IReadOnlyList(Of EffectBinding)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Effects.EffectBinding
+    name: EffectBinding
+    isExternal: true
+    href: TDMaker.Core.Effects.EffectBinding.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Effects.EffectBinding
+    name: EffectBinding
+    isExternal: true
+    href: TDMaker.Core.Effects.EffectBinding.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Core.Effects.EffectService.Areas*
+  commentId: Overload:TDMaker.Core.Effects.EffectService.Areas
+  isExternal: true
+  href: TDMaker.Core.Effects.EffectService.html#TDMaker_Core_Effects_EffectService_Areas
+  name: Areas
+  nameWithType: EffectService.Areas
+  fullName: TDMaker.Core.Effects.EffectService.Areas
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Effects.AreaBinding}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Effects.AreaBinding}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<AreaBinding>
+  nameWithType: IReadOnlyList<AreaBinding>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Effects.AreaBinding>
+  nameWithType.vb: IReadOnlyList(Of AreaBinding)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Effects.AreaBinding)
+  name.vb: IReadOnlyList(Of AreaBinding)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Effects.AreaBinding
+    name: AreaBinding
+    isExternal: true
+    href: TDMaker.Core.Effects.AreaBinding.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Effects.AreaBinding
+    name: AreaBinding
+    isExternal: true
+    href: TDMaker.Core.Effects.AreaBinding.html
+  - name: )

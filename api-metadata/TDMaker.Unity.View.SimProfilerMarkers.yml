@@ -1,0 +1,805 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.View.SimProfilerMarkers
+  commentId: T:TDMaker.Unity.View.SimProfilerMarkers
+  id: SimProfilerMarkers
+  parent: TDMaker.Unity.View
+  children:
+  - TDMaker.Unity.View.SimProfilerMarkers.#ctor
+  - TDMaker.Unity.View.SimProfilerMarkers.Next
+  - TDMaker.Unity.View.SimProfilerMarkers.StageName(TDMaker.Core.SimStage,System.Int32)
+  - TDMaker.Unity.View.SimProfilerMarkers.StepMarkerName
+  - TDMaker.Unity.View.SimProfilerMarkers.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  - TDMaker.Unity.View.SimProfilerMarkers.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  - TDMaker.Unity.View.SimProfilerMarkers.TickFinished(TDMaker.Core.Simulation)
+  - TDMaker.Unity.View.SimProfilerMarkers.TickStarted(TDMaker.Core.Simulation)
+  langs:
+  - csharp
+  - vb
+  name: SimProfilerMarkers
+  nameWithType: SimProfilerMarkers
+  fullName: TDMaker.Unity.View.SimProfilerMarkers
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: 'Core profiling hook that wraps every fixed step and every pipeline stage (system) in a Unity
+
+    <xref href="Unity.Profiling.ProfilerMarker" data-throw-if-not-resolved="false"></xref>, so the Unity Profiler shows <code>TDMaker.Sim.Step</code>
+    with one child marker per stage
+
+    (<code>TDMaker.Sim.Motion</code>, <code>TDMaker.Sim.Ranged</code>, ...). Another <xref href="TDMaker.Core.ISimProfiler"
+    data-throw-if-not-resolved="false"></xref> can be chained through
+
+    <xref href="TDMaker.Unity.View.SimProfilerMarkers.Next" data-throw-if-not-resolved="false"></xref>; it receives every
+    callback after the marker begins and before it ends.'
+  remarks: 'Installed by <xref href="TDMaker.Unity.View.SimulationRunner" data-throw-if-not-resolved="false"></xref> in builds
+    with the profiler enabled (editor and development players).
+
+    Marker Begin/End compile away in non-development players. Allocates only the first time a new system index is seen.
+
+    Built-in stages are named after <xref href="TDMaker.Core.SimStage" data-throw-if-not-resolved="false"></xref>; registered
+    custom systems are named
+
+    <code>TDMaker.Sim.&lt;anchor stage&gt;#&lt;pipeline index&gt;</code>.'
+  example: []
+  syntax:
+    content: 'public sealed class SimProfilerMarkers : ISimProfiler'
+    content.vb: Public NotInheritable Class SimProfilerMarkers Implements ISimProfiler
+  inheritance:
+  - System.Object
+  implements:
+  - TDMaker.Core.ISimProfiler
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.View.SimProfilerMarkers.StepMarkerName
+  commentId: F:TDMaker.Unity.View.SimProfilerMarkers.StepMarkerName
+  id: StepMarkerName
+  parent: TDMaker.Unity.View.SimProfilerMarkers
+  langs:
+  - csharp
+  - vb
+  name: StepMarkerName
+  nameWithType: SimProfilerMarkers.StepMarkerName
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.StepMarkerName
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Marker name of a whole fixed step.
+  example: []
+  syntax:
+    content: public const string StepMarkerName = "TDMaker.Sim.Step"
+    return:
+      type: System.String
+    content.vb: Public Const StepMarkerName As String = "TDMaker.Sim.Step"
+- uid: TDMaker.Unity.View.SimProfilerMarkers.StageName(TDMaker.Core.SimStage,System.Int32)
+  commentId: M:TDMaker.Unity.View.SimProfilerMarkers.StageName(TDMaker.Core.SimStage,System.Int32)
+  id: StageName(TDMaker.Core.SimStage,System.Int32)
+  parent: TDMaker.Unity.View.SimProfilerMarkers
+  langs:
+  - csharp
+  - vb
+  name: StageName(SimStage, int)
+  nameWithType: SimProfilerMarkers.StageName(SimStage, int)
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.StageName(TDMaker.Core.SimStage, int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: 'The display name used for a pipeline entry: the stage name for built-in systems, <code>Stage#index</code> otherwise.'
+  example: []
+  syntax:
+    content: public static string StageName(SimStage stage, int systemIndex)
+    parameters:
+    - id: stage
+      type: TDMaker.Core.SimStage
+    - id: systemIndex
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Public Shared Function StageName(stage As SimStage, systemIndex As Integer) As String
+  overload: TDMaker.Unity.View.SimProfilerMarkers.StageName*
+  nameWithType.vb: SimProfilerMarkers.StageName(SimStage, Integer)
+  fullName.vb: TDMaker.Unity.View.SimProfilerMarkers.StageName(TDMaker.Core.SimStage, Integer)
+  name.vb: StageName(SimStage, Integer)
+- uid: TDMaker.Unity.View.SimProfilerMarkers.TickStarted(TDMaker.Core.Simulation)
+  commentId: M:TDMaker.Unity.View.SimProfilerMarkers.TickStarted(TDMaker.Core.Simulation)
+  id: TickStarted(TDMaker.Core.Simulation)
+  parent: TDMaker.Unity.View.SimProfilerMarkers
+  langs:
+  - csharp
+  - vb
+  name: TickStarted(Simulation)
+  nameWithType: SimProfilerMarkers.TickStarted(Simulation)
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.TickStarted(TDMaker.Core.Simulation)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Begins a fixed step, before input injection and previous-position snapshots.
+  example: []
+  syntax:
+    content: public void TickStarted(Simulation simulation)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    content.vb: Public Sub TickStarted(simulation As Simulation)
+  overload: TDMaker.Unity.View.SimProfilerMarkers.TickStarted*
+  implements:
+  - TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+- uid: TDMaker.Unity.View.SimProfilerMarkers.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  commentId: M:TDMaker.Unity.View.SimProfilerMarkers.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  id: SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  parent: TDMaker.Unity.View.SimProfilerMarkers
+  langs:
+  - csharp
+  - vb
+  name: SystemStarted(Simulation, SimStage, int)
+  nameWithType: SimProfilerMarkers.SystemStarted(Simulation, SimStage, int)
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.SystemStarted(TDMaker.Core.Simulation, TDMaker.Core.SimStage, int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Begins a pipeline entry. Custom systems retain their registered anchor stage; systemIndex distinguishes entries.
+  example: []
+  syntax:
+    content: public void SystemStarted(Simulation simulation, SimStage stage, int systemIndex)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    - id: stage
+      type: TDMaker.Core.SimStage
+    - id: systemIndex
+      type: System.Int32
+    content.vb: Public Sub SystemStarted(simulation As Simulation, stage As SimStage, systemIndex As Integer)
+  overload: TDMaker.Unity.View.SimProfilerMarkers.SystemStarted*
+  implements:
+  - TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  nameWithType.vb: SimProfilerMarkers.SystemStarted(Simulation, SimStage, Integer)
+  fullName.vb: TDMaker.Unity.View.SimProfilerMarkers.SystemStarted(TDMaker.Core.Simulation, TDMaker.Core.SimStage, Integer)
+  name.vb: SystemStarted(Simulation, SimStage, Integer)
+- uid: TDMaker.Unity.View.SimProfilerMarkers.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  commentId: M:TDMaker.Unity.View.SimProfilerMarkers.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  id: SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  parent: TDMaker.Unity.View.SimProfilerMarkers
+  langs:
+  - csharp
+  - vb
+  name: SystemFinished(Simulation, SimStage, int)
+  nameWithType: SimProfilerMarkers.SystemFinished(Simulation, SimStage, int)
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.SystemFinished(TDMaker.Core.Simulation, TDMaker.Core.SimStage, int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Ends one pipeline entry.
+  example: []
+  syntax:
+    content: public void SystemFinished(Simulation simulation, SimStage stage, int systemIndex)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    - id: stage
+      type: TDMaker.Core.SimStage
+    - id: systemIndex
+      type: System.Int32
+    content.vb: Public Sub SystemFinished(simulation As Simulation, stage As SimStage, systemIndex As Integer)
+  overload: TDMaker.Unity.View.SimProfilerMarkers.SystemFinished*
+  implements:
+  - TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  nameWithType.vb: SimProfilerMarkers.SystemFinished(Simulation, SimStage, Integer)
+  fullName.vb: TDMaker.Unity.View.SimProfilerMarkers.SystemFinished(TDMaker.Core.Simulation, TDMaker.Core.SimStage, Integer)
+  name.vb: SystemFinished(Simulation, SimStage, Integer)
+- uid: TDMaker.Unity.View.SimProfilerMarkers.TickFinished(TDMaker.Core.Simulation)
+  commentId: M:TDMaker.Unity.View.SimProfilerMarkers.TickFinished(TDMaker.Core.Simulation)
+  id: TickFinished(TDMaker.Core.Simulation)
+  parent: TDMaker.Unity.View.SimProfilerMarkers
+  langs:
+  - csharp
+  - vb
+  name: TickFinished(Simulation)
+  nameWithType: SimProfilerMarkers.TickFinished(Simulation)
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.TickFinished(TDMaker.Core.Simulation)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Ends a step, including an exceptional or terminal command-only step.
+  example: []
+  syntax:
+    content: public void TickFinished(Simulation simulation)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    content.vb: Public Sub TickFinished(simulation As Simulation)
+  overload: TDMaker.Unity.View.SimProfilerMarkers.TickFinished*
+  implements:
+  - TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+- uid: TDMaker.Unity.View.SimProfilerMarkers.#ctor
+  commentId: M:TDMaker.Unity.View.SimProfilerMarkers.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.View.SimProfilerMarkers
+  langs:
+  - csharp
+  - vb
+  name: SimProfilerMarkers()
+  nameWithType: SimProfilerMarkers.SimProfilerMarkers()
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.SimProfilerMarkers()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public SimProfilerMarkers()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.View.SimProfilerMarkers.#ctor*
+  nameWithType.vb: SimProfilerMarkers.New()
+  fullName.vb: TDMaker.Unity.View.SimProfilerMarkers.New()
+  name.vb: New()
+- uid: TDMaker.Unity.View.SimProfilerMarkers.Next
+  commentId: P:TDMaker.Unity.View.SimProfilerMarkers.Next
+  id: Next
+  parent: TDMaker.Unity.View.SimProfilerMarkers
+  langs:
+  - csharp
+  - vb
+  name: Next
+  nameWithType: SimProfilerMarkers.Next
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.Next
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Optional profiler that also receives every callback (for example a timer of your own).
+  example: []
+  syntax:
+    content: public ISimProfiler Next { get; set; }
+    parameters: []
+    return:
+      type: TDMaker.Core.ISimProfiler
+    content.vb: Public Property [Next] As ISimProfiler
+  overload: TDMaker.Unity.View.SimProfilerMarkers.Next*
+references:
+- uid: Unity.Profiling.ProfilerMarker
+  commentId: T:Unity.Profiling.ProfilerMarker
+  isExternal: true
+  name: ProfilerMarker
+  nameWithType: ProfilerMarker
+  fullName: Unity.Profiling.ProfilerMarker
+- uid: TDMaker.Core.ISimProfiler
+  commentId: T:TDMaker.Core.ISimProfiler
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.ISimProfiler.html
+  name: ISimProfiler
+  nameWithType: ISimProfiler
+  fullName: TDMaker.Core.ISimProfiler
+- uid: TDMaker.Unity.View.SimProfilerMarkers.Next
+  commentId: P:TDMaker.Unity.View.SimProfilerMarkers.Next
+  isExternal: true
+  href: TDMaker.Unity.View.SimProfilerMarkers.html#TDMaker_Unity_View_SimProfilerMarkers_Next
+  name: Next
+  nameWithType: SimProfilerMarkers.Next
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.Next
+- uid: TDMaker.Unity.View.SimulationRunner
+  commentId: T:TDMaker.Unity.View.SimulationRunner
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.SimulationRunner.html
+  name: SimulationRunner
+  nameWithType: SimulationRunner
+  fullName: TDMaker.Unity.View.SimulationRunner
+- uid: TDMaker.Core.SimStage
+  commentId: T:TDMaker.Core.SimStage
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimStage.html
+  name: SimStage
+  nameWithType: SimStage
+  fullName: TDMaker.Core.SimStage
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.View.SimProfilerMarkers.StageName*
+  commentId: Overload:TDMaker.Unity.View.SimProfilerMarkers.StageName
+  isExternal: true
+  href: TDMaker.Unity.View.SimProfilerMarkers.html#TDMaker_Unity_View_SimProfilerMarkers_StageName_TDMaker_Core_SimStage_System_Int32_
+  name: StageName
+  nameWithType: SimProfilerMarkers.StageName
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.StageName
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.View.SimProfilerMarkers.TickStarted*
+  commentId: Overload:TDMaker.Unity.View.SimProfilerMarkers.TickStarted
+  isExternal: true
+  href: TDMaker.Unity.View.SimProfilerMarkers.html#TDMaker_Unity_View_SimProfilerMarkers_TickStarted_TDMaker_Core_Simulation_
+  name: TickStarted
+  nameWithType: SimProfilerMarkers.TickStarted
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.TickStarted
+- uid: TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+  commentId: M:TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+  parent: TDMaker.Core.ISimProfiler
+  isExternal: true
+  name: TickStarted(Simulation)
+  nameWithType: ISimProfiler.TickStarted(Simulation)
+  fullName: TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+  spec.csharp:
+  - uid: TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+    name: TickStarted
+    isExternal: true
+  - name: (
+  - uid: TDMaker.Core.Simulation
+    name: Simulation
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+    name: TickStarted
+    isExternal: true
+  - name: (
+  - uid: TDMaker.Core.Simulation
+    name: Simulation
+    isExternal: true
+  - name: )
+- uid: TDMaker.Core.Simulation
+  commentId: T:TDMaker.Core.Simulation
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Simulation.html
+  name: Simulation
+  nameWithType: Simulation
+  fullName: TDMaker.Core.Simulation
+- uid: TDMaker.Unity.View.SimProfilerMarkers.SystemStarted*
+  commentId: Overload:TDMaker.Unity.View.SimProfilerMarkers.SystemStarted
+  isExternal: true
+  href: TDMaker.Unity.View.SimProfilerMarkers.html#TDMaker_Unity_View_SimProfilerMarkers_SystemStarted_TDMaker_Core_Simulation_TDMaker_Core_SimStage_System_Int32_
+  name: SystemStarted
+  nameWithType: SimProfilerMarkers.SystemStarted
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.SystemStarted
+- uid: TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  commentId: M:TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  parent: TDMaker.Core.ISimProfiler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: SystemStarted(Simulation, SimStage, int)
+  nameWithType: ISimProfiler.SystemStarted(Simulation, SimStage, int)
+  fullName: TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation, TDMaker.Core.SimStage, int)
+  nameWithType.vb: ISimProfiler.SystemStarted(Simulation, SimStage, Integer)
+  fullName.vb: TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation, TDMaker.Core.SimStage, Integer)
+  name.vb: SystemStarted(Simulation, SimStage, Integer)
+  spec.csharp:
+  - uid: TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+    name: SystemStarted
+    isExternal: true
+  - name: (
+  - uid: TDMaker.Core.Simulation
+    name: Simulation
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Core.SimStage
+    name: SimStage
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+    name: SystemStarted
+    isExternal: true
+  - name: (
+  - uid: TDMaker.Core.Simulation
+    name: Simulation
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Core.SimStage
+    name: SimStage
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: TDMaker.Unity.View.SimProfilerMarkers.SystemFinished*
+  commentId: Overload:TDMaker.Unity.View.SimProfilerMarkers.SystemFinished
+  isExternal: true
+  href: TDMaker.Unity.View.SimProfilerMarkers.html#TDMaker_Unity_View_SimProfilerMarkers_SystemFinished_TDMaker_Core_Simulation_TDMaker_Core_SimStage_System_Int32_
+  name: SystemFinished
+  nameWithType: SimProfilerMarkers.SystemFinished
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.SystemFinished
+- uid: TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  commentId: M:TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  parent: TDMaker.Core.ISimProfiler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: SystemFinished(Simulation, SimStage, int)
+  nameWithType: ISimProfiler.SystemFinished(Simulation, SimStage, int)
+  fullName: TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation, TDMaker.Core.SimStage, int)
+  nameWithType.vb: ISimProfiler.SystemFinished(Simulation, SimStage, Integer)
+  fullName.vb: TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation, TDMaker.Core.SimStage, Integer)
+  name.vb: SystemFinished(Simulation, SimStage, Integer)
+  spec.csharp:
+  - uid: TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+    name: SystemFinished
+    isExternal: true
+  - name: (
+  - uid: TDMaker.Core.Simulation
+    name: Simulation
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Core.SimStage
+    name: SimStage
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+    name: SystemFinished
+    isExternal: true
+  - name: (
+  - uid: TDMaker.Core.Simulation
+    name: Simulation
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Core.SimStage
+    name: SimStage
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: TDMaker.Unity.View.SimProfilerMarkers.TickFinished*
+  commentId: Overload:TDMaker.Unity.View.SimProfilerMarkers.TickFinished
+  isExternal: true
+  href: TDMaker.Unity.View.SimProfilerMarkers.html#TDMaker_Unity_View_SimProfilerMarkers_TickFinished_TDMaker_Core_Simulation_
+  name: TickFinished
+  nameWithType: SimProfilerMarkers.TickFinished
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.TickFinished
+- uid: TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+  commentId: M:TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+  parent: TDMaker.Core.ISimProfiler
+  isExternal: true
+  name: TickFinished(Simulation)
+  nameWithType: ISimProfiler.TickFinished(Simulation)
+  fullName: TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+  spec.csharp:
+  - uid: TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+    name: TickFinished
+    isExternal: true
+  - name: (
+  - uid: TDMaker.Core.Simulation
+    name: Simulation
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+    name: TickFinished
+    isExternal: true
+  - name: (
+  - uid: TDMaker.Core.Simulation
+    name: Simulation
+    isExternal: true
+  - name: )
+- uid: TDMaker.Unity.View.SimProfilerMarkers.#ctor*
+  commentId: Overload:TDMaker.Unity.View.SimProfilerMarkers.#ctor
+  isExternal: true
+  href: TDMaker.Unity.View.SimProfilerMarkers.html#TDMaker_Unity_View_SimProfilerMarkers__ctor
+  name: SimProfilerMarkers
+  nameWithType: SimProfilerMarkers.SimProfilerMarkers
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.SimProfilerMarkers
+  nameWithType.vb: SimProfilerMarkers.New
+  fullName.vb: TDMaker.Unity.View.SimProfilerMarkers.New
+  name.vb: New
+- uid: TDMaker.Unity.View.SimProfilerMarkers.Next*
+  commentId: Overload:TDMaker.Unity.View.SimProfilerMarkers.Next
+  isExternal: true
+  href: TDMaker.Unity.View.SimProfilerMarkers.html#TDMaker_Unity_View_SimProfilerMarkers_Next
+  name: Next
+  nameWithType: SimProfilerMarkers.Next
+  fullName: TDMaker.Unity.View.SimProfilerMarkers.Next

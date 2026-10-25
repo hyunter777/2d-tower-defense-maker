@@ -1,0 +1,685 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.DeploymentPlanDef
+  commentId: T:TDMaker.Core.Defs.DeploymentPlanDef
+  id: DeploymentPlanDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.DeploymentPlanDef.#ctor(TDMaker.Core.Defs.TrapDef,System.Single,System.Single,System.Single,TDMaker.Core.Defs.DeploymentSpacingScope,System.Int32,System.Single,System.Single,System.Single)
+  - TDMaker.Core.Defs.DeploymentPlanDef.MaximumDistance
+  - TDMaker.Core.Defs.DeploymentPlanDef.MinimumDistance
+  - TDMaker.Core.Defs.DeploymentPlanDef.MinimumSpacing
+  - TDMaker.Core.Defs.DeploymentPlanDef.PopulationLimit
+  - TDMaker.Core.Defs.DeploymentPlanDef.SettleDuration
+  - TDMaker.Core.Defs.DeploymentPlanDef.SideClearance
+  - TDMaker.Core.Defs.DeploymentPlanDef.SpacingScope
+  - TDMaker.Core.Defs.DeploymentPlanDef.TransitDuration
+  - TDMaker.Core.Defs.DeploymentPlanDef.Trap
+  langs:
+  - csharp
+  - vb
+  name: DeploymentPlanDef
+  nameWithType: DeploymentPlanDef
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Automatic path-node production plan. Reservation and placement are atomic; failure never installs a fallback.
+  example: []
+  syntax:
+    content: 'public sealed class DeploymentPlanDef : IAbilityAction'
+    content.vb: Public NotInheritable Class DeploymentPlanDef Implements IAbilityAction
+  inheritance:
+  - System.Object
+  implements:
+  - TDMaker.Core.IAbilityAction
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.#ctor(TDMaker.Core.Defs.TrapDef,System.Single,System.Single,System.Single,TDMaker.Core.Defs.DeploymentSpacingScope,System.Int32,System.Single,System.Single,System.Single)
+  commentId: M:TDMaker.Core.Defs.DeploymentPlanDef.#ctor(TDMaker.Core.Defs.TrapDef,System.Single,System.Single,System.Single,TDMaker.Core.Defs.DeploymentSpacingScope,System.Int32,System.Single,System.Single,System.Single)
+  id: '#ctor(TDMaker.Core.Defs.TrapDef,System.Single,System.Single,System.Single,TDMaker.Core.Defs.DeploymentSpacingScope,System.Int32,System.Single,System.Single,System.Single)'
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: DeploymentPlanDef(TrapDef, float, float, float, DeploymentSpacingScope, int, float, float, float)
+  nameWithType: DeploymentPlanDef.DeploymentPlanDef(TrapDef, float, float, float, DeploymentSpacingScope, int, float, float,
+    float)
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.DeploymentPlanDef(TDMaker.Core.Defs.TrapDef, float, float, float, TDMaker.Core.Defs.DeploymentSpacingScope,
+    int, float, float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a plan. Trap.PointRule supplies terrain checks for each path-node candidate.
+  example: []
+  syntax:
+    content: public DeploymentPlanDef(TrapDef trap, float minimumDistance, float maximumDistance, float minimumSpacing = 0.25,
+      DeploymentSpacingScope spacingScope = DeploymentSpacingScope.Owner, int populationLimit = 0, float transitDuration =
+      0, float settleDuration = 0, float sideClearance = 0)
+    parameters:
+    - id: trap
+      type: TDMaker.Core.Defs.TrapDef
+    - id: minimumDistance
+      type: System.Single
+    - id: maximumDistance
+      type: System.Single
+    - id: minimumSpacing
+      type: System.Single
+    - id: spacingScope
+      type: TDMaker.Core.Defs.DeploymentSpacingScope
+    - id: populationLimit
+      type: System.Int32
+    - id: transitDuration
+      type: System.Single
+    - id: settleDuration
+      type: System.Single
+    - id: sideClearance
+      type: System.Single
+    content.vb: Public Sub New(trap As TrapDef, minimumDistance As Single, maximumDistance As Single, minimumSpacing As Single
+      = 0.25, spacingScope As DeploymentSpacingScope = DeploymentSpacingScope.Owner, populationLimit As Integer = 0, transitDuration
+      As Single = 0, settleDuration As Single = 0, sideClearance As Single = 0)
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.#ctor*
+  nameWithType.vb: DeploymentPlanDef.New(TrapDef, Single, Single, Single, DeploymentSpacingScope, Integer, Single, Single,
+    Single)
+  fullName.vb: TDMaker.Core.Defs.DeploymentPlanDef.New(TDMaker.Core.Defs.TrapDef, Single, Single, Single, TDMaker.Core.Defs.DeploymentSpacingScope,
+    Integer, Single, Single, Single)
+  name.vb: New(TrapDef, Single, Single, Single, DeploymentSpacingScope, Integer, Single, Single, Single)
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.Trap
+  commentId: P:TDMaker.Core.Defs.DeploymentPlanDef.Trap
+  id: Trap
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: Trap
+  nameWithType: DeploymentPlanDef.Trap
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.Trap
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Existing trigger/explosion payload.
+  example: []
+  syntax:
+    content: public TrapDef Trap { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TrapDef
+    content.vb: Public ReadOnly Property Trap As TrapDef
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.Trap*
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.MinimumDistance
+  commentId: P:TDMaker.Core.Defs.DeploymentPlanDef.MinimumDistance
+  id: MinimumDistance
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: MinimumDistance
+  nameWithType: DeploymentPlanDef.MinimumDistance
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.MinimumDistance
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Inclusive inner elliptical placement radius.
+  example: []
+  syntax:
+    content: public float MinimumDistance { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MinimumDistance As Single
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.MinimumDistance*
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.MaximumDistance
+  commentId: P:TDMaker.Core.Defs.DeploymentPlanDef.MaximumDistance
+  id: MaximumDistance
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: MaximumDistance
+  nameWithType: DeploymentPlanDef.MaximumDistance
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.MaximumDistance
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Inclusive outer elliptical placement radius.
+  example: []
+  syntax:
+    content: public float MaximumDistance { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MaximumDistance As Single
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.MaximumDistance*
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.SideClearance
+  commentId: P:TDMaker.Core.Defs.DeploymentPlanDef.SideClearance
+  id: SideClearance
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: SideClearance
+  nameWithType: DeploymentPlanDef.SideClearance
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.SideClearance
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Minimum absolute horizontal displacement from the producer.
+  example: []
+  syntax:
+    content: public float SideClearance { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property SideClearance As Single
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.SideClearance*
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.MinimumSpacing
+  commentId: P:TDMaker.Core.Defs.DeploymentPlanDef.MinimumSpacing
+  id: MinimumSpacing
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: MinimumSpacing
+  nameWithType: DeploymentPlanDef.MinimumSpacing
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.MinimumSpacing
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Minimum elliptical distance from other deployments, including in-transit reservations.
+  example: []
+  syntax:
+    content: public float MinimumSpacing { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MinimumSpacing As Single
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.MinimumSpacing*
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.SpacingScope
+  commentId: P:TDMaker.Core.Defs.DeploymentPlanDef.SpacingScope
+  id: SpacingScope
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: SpacingScope
+  nameWithType: DeploymentPlanDef.SpacingScope
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.SpacingScope
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Owner-local or global spacing.
+  example: []
+  syntax:
+    content: public DeploymentSpacingScope SpacingScope { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DeploymentSpacingScope
+    content.vb: Public ReadOnly Property SpacingScope As DeploymentSpacingScope
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.SpacingScope*
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.PopulationLimit
+  commentId: P:TDMaker.Core.Defs.DeploymentPlanDef.PopulationLimit
+  id: PopulationLimit
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: PopulationLimit
+  nameWithType: DeploymentPlanDef.PopulationLimit
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.PopulationLimit
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum live/reserved traps with this source and trap Id; zero uses only the trap's own limit.
+  example: []
+  syntax:
+    content: public int PopulationLimit { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PopulationLimit As Integer
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.PopulationLimit*
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.TransitDuration
+  commentId: P:TDMaker.Core.Defs.DeploymentPlanDef.TransitDuration
+  id: TransitDuration
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: TransitDuration
+  nameWithType: DeploymentPlanDef.TransitDuration
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.TransitDuration
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Flight time before landing.
+  example: []
+  syntax:
+    content: public float TransitDuration { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property TransitDuration As Single
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.TransitDuration*
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.SettleDuration
+  commentId: P:TDMaker.Core.Defs.DeploymentPlanDef.SettleDuration
+  id: SettleDuration
+  parent: TDMaker.Core.Defs.DeploymentPlanDef
+  langs:
+  - csharp
+  - vb
+  name: SettleDuration
+  nameWithType: DeploymentPlanDef.SettleDuration
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.SettleDuration
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Landing preparation before the trap's own arming delay.
+  example: []
+  syntax:
+    content: public float SettleDuration { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property SettleDuration As Single
+  overload: TDMaker.Core.Defs.DeploymentPlanDef.SettleDuration*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TDMaker.Core.IAbilityAction
+  commentId: T:TDMaker.Core.IAbilityAction
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.IAbilityAction.html
+  name: IAbilityAction
+  nameWithType: IAbilityAction
+  fullName: TDMaker.Core.IAbilityAction
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef__ctor_TDMaker_Core_Defs_TrapDef_System_Single_System_Single_System_Single_TDMaker_Core_Defs_DeploymentSpacingScope_System_Int32_System_Single_System_Single_System_Single_
+  name: DeploymentPlanDef
+  nameWithType: DeploymentPlanDef.DeploymentPlanDef
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.DeploymentPlanDef
+  nameWithType.vb: DeploymentPlanDef.New
+  fullName.vb: TDMaker.Core.Defs.DeploymentPlanDef.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.TrapDef
+  commentId: T:TDMaker.Core.Defs.TrapDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html
+  name: TrapDef
+  nameWithType: TrapDef
+  fullName: TDMaker.Core.Defs.TrapDef
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.DeploymentSpacingScope
+  commentId: T:TDMaker.Core.Defs.DeploymentSpacingScope
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentSpacingScope.html
+  name: DeploymentSpacingScope
+  nameWithType: DeploymentSpacingScope
+  fullName: TDMaker.Core.Defs.DeploymentSpacingScope
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.Trap*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.Trap
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef_Trap
+  name: Trap
+  nameWithType: DeploymentPlanDef.Trap
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.Trap
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.MinimumDistance*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.MinimumDistance
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef_MinimumDistance
+  name: MinimumDistance
+  nameWithType: DeploymentPlanDef.MinimumDistance
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.MinimumDistance
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.MaximumDistance*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.MaximumDistance
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef_MaximumDistance
+  name: MaximumDistance
+  nameWithType: DeploymentPlanDef.MaximumDistance
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.MaximumDistance
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.SideClearance*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.SideClearance
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef_SideClearance
+  name: SideClearance
+  nameWithType: DeploymentPlanDef.SideClearance
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.SideClearance
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.MinimumSpacing*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.MinimumSpacing
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef_MinimumSpacing
+  name: MinimumSpacing
+  nameWithType: DeploymentPlanDef.MinimumSpacing
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.MinimumSpacing
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.SpacingScope*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.SpacingScope
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef_SpacingScope
+  name: SpacingScope
+  nameWithType: DeploymentPlanDef.SpacingScope
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.SpacingScope
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.PopulationLimit*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.PopulationLimit
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef_PopulationLimit
+  name: PopulationLimit
+  nameWithType: DeploymentPlanDef.PopulationLimit
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.PopulationLimit
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.TransitDuration*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.TransitDuration
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef_TransitDuration
+  name: TransitDuration
+  nameWithType: DeploymentPlanDef.TransitDuration
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.TransitDuration
+- uid: TDMaker.Core.Defs.DeploymentPlanDef.SettleDuration*
+  commentId: Overload:TDMaker.Core.Defs.DeploymentPlanDef.SettleDuration
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html#TDMaker_Core_Defs_DeploymentPlanDef_SettleDuration
+  name: SettleDuration
+  nameWithType: DeploymentPlanDef.SettleDuration
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef.SettleDuration

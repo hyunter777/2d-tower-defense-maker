@@ -1,0 +1,704 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Components.HeroComponent
+  commentId: T:TDMaker.Core.Components.HeroComponent
+  id: HeroComponent
+  parent: TDMaker.Core.Components
+  children:
+  - TDMaker.Core.Components.HeroComponent.#ctor
+  - TDMaker.Core.Components.HeroComponent.Experience
+  - TDMaker.Core.Components.HeroComponent.FreePoints
+  - TDMaker.Core.Components.HeroComponent.GetSkillRank(System.Int32)
+  - TDMaker.Core.Components.HeroComponent.Level
+  - TDMaker.Core.Components.HeroComponent.Life
+  - TDMaker.Core.Components.HeroComponent.PendingExperience
+  - TDMaker.Core.Components.HeroComponent.Profile
+  - TDMaker.Core.Components.HeroComponent.RespawnRemaining
+  - TDMaker.Core.Components.HeroComponent.SpentPoints
+  - TDMaker.Core.Components.HeroComponent.State
+  langs:
+  - csharp
+  - vb
+  name: HeroComponent
+  nameWithType: HeroComponent
+  fullName: TDMaker.Core.Components.HeroComponent
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Independent hero progression and resurrection state.
+  example: []
+  syntax:
+    content: public sealed class HeroComponent
+    content.vb: Public NotInheritable Class HeroComponent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Components.HeroComponent.GetSkillRank(System.Int32)
+  commentId: M:TDMaker.Core.Components.HeroComponent.GetSkillRank(System.Int32)
+  id: GetSkillRank(System.Int32)
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: GetSkillRank(int)
+  nameWithType: HeroComponent.GetSkillRank(int)
+  fullName: TDMaker.Core.Components.HeroComponent.GetSkillRank(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Reads a purchased or unlocked skill rank.
+  example: []
+  syntax:
+    content: public int GetSkillRank(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetSkillRank(index As Integer) As Integer
+  overload: TDMaker.Core.Components.HeroComponent.GetSkillRank*
+  nameWithType.vb: HeroComponent.GetSkillRank(Integer)
+  fullName.vb: TDMaker.Core.Components.HeroComponent.GetSkillRank(Integer)
+  name.vb: GetSkillRank(Integer)
+- uid: TDMaker.Core.Components.HeroComponent.#ctor
+  commentId: M:TDMaker.Core.Components.HeroComponent.#ctor
+  id: '#ctor'
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: HeroComponent()
+  nameWithType: HeroComponent.HeroComponent()
+  fullName: TDMaker.Core.Components.HeroComponent.HeroComponent()
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  syntax:
+    content: public HeroComponent()
+    content.vb: Public Sub New()
+  overload: TDMaker.Core.Components.HeroComponent.#ctor*
+  nameWithType.vb: HeroComponent.New()
+  fullName.vb: TDMaker.Core.Components.HeroComponent.New()
+  name.vb: New()
+- uid: TDMaker.Core.Components.HeroComponent.Profile
+  commentId: P:TDMaker.Core.Components.HeroComponent.Profile
+  id: Profile
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: Profile
+  nameWithType: HeroComponent.Profile
+  fullName: TDMaker.Core.Components.HeroComponent.Profile
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Immutable profile for this instance.
+  example: []
+  syntax:
+    content: public HeroProfileDef Profile { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.HeroProfileDef
+    content.vb: Public ReadOnly Property Profile As HeroProfileDef
+  overload: TDMaker.Core.Components.HeroComponent.Profile*
+- uid: TDMaker.Core.Components.HeroComponent.Level
+  commentId: P:TDMaker.Core.Components.HeroComponent.Level
+  id: Level
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: HeroComponent.Level
+  fullName: TDMaker.Core.Components.HeroComponent.Level
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: One-based hero level.
+  example: []
+  syntax:
+    content: public int Level { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Level As Integer
+  overload: TDMaker.Core.Components.HeroComponent.Level*
+- uid: TDMaker.Core.Components.HeroComponent.Experience
+  commentId: P:TDMaker.Core.Components.HeroComponent.Experience
+  id: Experience
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: Experience
+  nameWithType: HeroComponent.Experience
+  fullName: TDMaker.Core.Components.HeroComponent.Experience
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Cumulative resolved experience.
+  example: []
+  syntax:
+    content: public double Experience { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Experience As Double
+  overload: TDMaker.Core.Components.HeroComponent.Experience*
+- uid: TDMaker.Core.Components.HeroComponent.PendingExperience
+  commentId: P:TDMaker.Core.Components.HeroComponent.PendingExperience
+  id: PendingExperience
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: PendingExperience
+  nameWithType: HeroComponent.PendingExperience
+  fullName: TDMaker.Core.Components.HeroComponent.PendingExperience
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Experience queued for the hero progression stage.
+  example: []
+  syntax:
+    content: public double PendingExperience { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property PendingExperience As Double
+  overload: TDMaker.Core.Components.HeroComponent.PendingExperience*
+- uid: TDMaker.Core.Components.HeroComponent.SpentPoints
+  commentId: P:TDMaker.Core.Components.HeroComponent.SpentPoints
+  id: SpentPoints
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: SpentPoints
+  nameWithType: HeroComponent.SpentPoints
+  fullName: TDMaker.Core.Components.HeroComponent.SpentPoints
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Points already spent on skill ranks.
+  example: []
+  syntax:
+    content: public int SpentPoints { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SpentPoints As Integer
+  overload: TDMaker.Core.Components.HeroComponent.SpentPoints*
+- uid: TDMaker.Core.Components.HeroComponent.FreePoints
+  commentId: P:TDMaker.Core.Components.HeroComponent.FreePoints
+  id: FreePoints
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: FreePoints
+  nameWithType: HeroComponent.FreePoints
+  fullName: TDMaker.Core.Components.HeroComponent.FreePoints
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Remaining skill points at the current level.
+  example: []
+  syntax:
+    content: public int FreePoints { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property FreePoints As Integer
+  overload: TDMaker.Core.Components.HeroComponent.FreePoints*
+- uid: TDMaker.Core.Components.HeroComponent.Life
+  commentId: P:TDMaker.Core.Components.HeroComponent.Life
+  id: Life
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: Life
+  nameWithType: HeroComponent.Life
+  fullName: TDMaker.Core.Components.HeroComponent.Life
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Current resurrection stage.
+  example: []
+  syntax:
+    content: public HeroLife Life { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.HeroLife
+    content.vb: Public ReadOnly Property Life As HeroLife
+  overload: TDMaker.Core.Components.HeroComponent.Life*
+- uid: TDMaker.Core.Components.HeroComponent.State
+  commentId: P:TDMaker.Core.Components.HeroComponent.State
+  id: State
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: HeroComponent.State
+  fullName: TDMaker.Core.Components.HeroComponent.State
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Read-only view alias for the existing resurrection stage.
+  example: []
+  syntax:
+    content: public HeroLife State { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Components.HeroLife
+    content.vb: Public ReadOnly Property State As HeroLife
+  overload: TDMaker.Core.Components.HeroComponent.State*
+- uid: TDMaker.Core.Components.HeroComponent.RespawnRemaining
+  commentId: P:TDMaker.Core.Components.HeroComponent.RespawnRemaining
+  id: RespawnRemaining
+  parent: TDMaker.Core.Components.HeroComponent
+  langs:
+  - csharp
+  - vb
+  name: RespawnRemaining
+  nameWithType: HeroComponent.RespawnRemaining
+  fullName: TDMaker.Core.Components.HeroComponent.RespawnRemaining
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Game seconds until the hero is active again; waiting includes the configured return duration. Active heroes return
+    zero.
+  remarks: Derived from fixed simulation time. A zero countdown can await the next eligible resurrection tick.
+  example:
+  - <pre><code class="lang-csharp">float seconds = entity.Hero.RespawnRemaining;</code></pre>
+  syntax:
+    content: public float RespawnRemaining { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RespawnRemaining As Single
+  overload: TDMaker.Core.Components.HeroComponent.RespawnRemaining*
+references:
+- uid: TDMaker.Core.Components
+  commentId: N:TDMaker.Core.Components
+  isExternal: true
+  name: TDMaker.Core.Components
+  nameWithType: TDMaker.Core.Components
+  fullName: TDMaker.Core.Components
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Components.HeroComponent.GetSkillRank*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.GetSkillRank
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_GetSkillRank_System_Int32_
+  name: GetSkillRank
+  nameWithType: HeroComponent.GetSkillRank
+  fullName: TDMaker.Core.Components.HeroComponent.GetSkillRank
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Components.HeroComponent.#ctor*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.#ctor
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent__ctor
+  name: HeroComponent
+  nameWithType: HeroComponent.HeroComponent
+  fullName: TDMaker.Core.Components.HeroComponent.HeroComponent
+  nameWithType.vb: HeroComponent.New
+  fullName.vb: TDMaker.Core.Components.HeroComponent.New
+  name.vb: New
+- uid: TDMaker.Core.Components.HeroComponent.Profile*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.Profile
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_Profile
+  name: Profile
+  nameWithType: HeroComponent.Profile
+  fullName: TDMaker.Core.Components.HeroComponent.Profile
+- uid: TDMaker.Core.Defs.HeroProfileDef
+  commentId: T:TDMaker.Core.Defs.HeroProfileDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.HeroProfileDef.html
+  name: HeroProfileDef
+  nameWithType: HeroProfileDef
+  fullName: TDMaker.Core.Defs.HeroProfileDef
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Components.HeroComponent.Level*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.Level
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_Level
+  name: Level
+  nameWithType: HeroComponent.Level
+  fullName: TDMaker.Core.Components.HeroComponent.Level
+- uid: TDMaker.Core.Components.HeroComponent.Experience*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.Experience
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_Experience
+  name: Experience
+  nameWithType: HeroComponent.Experience
+  fullName: TDMaker.Core.Components.HeroComponent.Experience
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TDMaker.Core.Components.HeroComponent.PendingExperience*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.PendingExperience
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_PendingExperience
+  name: PendingExperience
+  nameWithType: HeroComponent.PendingExperience
+  fullName: TDMaker.Core.Components.HeroComponent.PendingExperience
+- uid: TDMaker.Core.Components.HeroComponent.SpentPoints*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.SpentPoints
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_SpentPoints
+  name: SpentPoints
+  nameWithType: HeroComponent.SpentPoints
+  fullName: TDMaker.Core.Components.HeroComponent.SpentPoints
+- uid: TDMaker.Core.Components.HeroComponent.FreePoints*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.FreePoints
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_FreePoints
+  name: FreePoints
+  nameWithType: HeroComponent.FreePoints
+  fullName: TDMaker.Core.Components.HeroComponent.FreePoints
+- uid: TDMaker.Core.Components.HeroComponent.Life*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.Life
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_Life
+  name: Life
+  nameWithType: HeroComponent.Life
+  fullName: TDMaker.Core.Components.HeroComponent.Life
+- uid: TDMaker.Core.Components.HeroLife
+  commentId: T:TDMaker.Core.Components.HeroLife
+  parent: TDMaker.Core.Components
+  isExternal: true
+  href: TDMaker.Core.Components.HeroLife.html
+  name: HeroLife
+  nameWithType: HeroLife
+  fullName: TDMaker.Core.Components.HeroLife
+- uid: TDMaker.Core.Components.HeroComponent.State*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.State
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_State
+  name: State
+  nameWithType: HeroComponent.State
+  fullName: TDMaker.Core.Components.HeroComponent.State
+- uid: TDMaker.Core.Components.HeroComponent.RespawnRemaining*
+  commentId: Overload:TDMaker.Core.Components.HeroComponent.RespawnRemaining
+  isExternal: true
+  href: TDMaker.Core.Components.HeroComponent.html#TDMaker_Core_Components_HeroComponent_RespawnRemaining
+  name: RespawnRemaining
+  nameWithType: HeroComponent.RespawnRemaining
+  fullName: TDMaker.Core.Components.HeroComponent.RespawnRemaining
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

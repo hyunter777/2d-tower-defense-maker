@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.CompanionMode
+  commentId: T:TDMaker.Core.Defs.CompanionMode
+  id: CompanionMode
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.CompanionMode.FlyingFollower
+  - TDMaker.Core.Defs.CompanionMode.GroundEscort
+  langs:
+  - csharp
+  - vb
+  name: CompanionMode
+  nameWithType: CompanionMode
+  fullName: TDMaker.Core.Defs.CompanionMode
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Companion locomotion and interception model.
+  example: []
+  syntax:
+    content: public enum CompanionMode
+    content.vb: Public Enum CompanionMode
+- uid: TDMaker.Core.Defs.CompanionMode.GroundEscort
+  commentId: F:TDMaker.Core.Defs.CompanionMode.GroundEscort
+  id: GroundEscort
+  parent: TDMaker.Core.Defs.CompanionMode
+  langs:
+  - csharp
+  - vb
+  name: GroundEscort
+  nameWithType: CompanionMode.GroundEscort
+  fullName: TDMaker.Core.Defs.CompanionMode.GroundEscort
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ordinary soldier movement, contact combat and blocking.
+  example: []
+  syntax:
+    content: GroundEscort = 0
+    return:
+      type: TDMaker.Core.Defs.CompanionMode
+- uid: TDMaker.Core.Defs.CompanionMode.FlyingFollower
+  commentId: F:TDMaker.Core.Defs.CompanionMode.FlyingFollower
+  id: FlyingFollower
+  parent: TDMaker.Core.Defs.CompanionMode
+  langs:
+  - csharp
+  - vb
+  name: FlyingFollower
+  nameWithType: CompanionMode.FlyingFollower
+  fullName: TDMaker.Core.Defs.CompanionMode.FlyingFollower
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Accelerated continuous following, without interception.
+  example: []
+  syntax:
+    content: FlyingFollower = 1
+    return:
+      type: TDMaker.Core.Defs.CompanionMode
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.CompanionMode
+  commentId: T:TDMaker.Core.Defs.CompanionMode
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionMode.html
+  name: CompanionMode
+  nameWithType: CompanionMode
+  fullName: TDMaker.Core.Defs.CompanionMode

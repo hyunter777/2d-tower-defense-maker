@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.View.IPooledVfx
+  commentId: T:TDMaker.Unity.View.IPooledVfx
+  id: IPooledVfx
+  parent: TDMaker.Unity.View
+  children:
+  - TDMaker.Unity.View.IPooledVfx.OnSpawned
+  langs:
+  - csharp
+  - vb
+  name: IPooledVfx
+  nameWithType: IPooledVfx
+  fullName: TDMaker.Unity.View.IPooledVfx
+  type: Interface
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Implement on a VFX prefab's components to be told when a pooled instance is (re)used.
+  example: []
+  syntax:
+    content: public interface IPooledVfx
+    content.vb: Public Interface IPooledVfx
+- uid: TDMaker.Unity.View.IPooledVfx.OnSpawned
+  commentId: M:TDMaker.Unity.View.IPooledVfx.OnSpawned
+  id: OnSpawned
+  parent: TDMaker.Unity.View.IPooledVfx
+  langs:
+  - csharp
+  - vb
+  name: OnSpawned()
+  nameWithType: IPooledVfx.OnSpawned()
+  fullName: TDMaker.Unity.View.IPooledVfx.OnSpawned()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Called every time the instance is taken from the pool and placed.
+  example: []
+  syntax:
+    content: void OnSpawned()
+    content.vb: Sub OnSpawned()
+  overload: TDMaker.Unity.View.IPooledVfx.OnSpawned*
+references:
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: TDMaker.Unity.View.IPooledVfx.OnSpawned*
+  commentId: Overload:TDMaker.Unity.View.IPooledVfx.OnSpawned
+  isExternal: true
+  href: TDMaker.Unity.View.IPooledVfx.html#TDMaker_Unity_View_IPooledVfx_OnSpawned
+  name: OnSpawned
+  nameWithType: IPooledVfx.OnSpawned
+  fullName: TDMaker.Unity.View.IPooledVfx.OnSpawned

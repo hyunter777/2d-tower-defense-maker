@@ -1,0 +1,1021 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.RaiseRemainsDef
+  commentId: T:TDMaker.Core.Defs.RaiseRemainsDef
+  id: RaiseRemainsDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.RaiseRemainsDef.#ctor(System.String,System.String,System.Single,System.Boolean,System.Int32,System.Single,System.Single,TDMaker.Core.Defs.RemainsFaction,System.UInt64,System.UInt64,TDMaker.Core.Defs.DamageFlags,System.Single,System.Single,System.Int32,System.Int32,System.Single,System.Boolean,System.Boolean)
+  - TDMaker.Core.Defs.RaiseRemainsDef.CastDelay
+  - TDMaker.Core.Defs.RaiseRemainsDef.ChainBudget
+  - TDMaker.Core.Defs.RaiseRemainsDef.ExcludeWhileRising
+  - TDMaker.Core.Defs.RaiseRemainsDef.Faction
+  - TDMaker.Core.Defs.RaiseRemainsDef.ForbiddenFatalFlags
+  - TDMaker.Core.Defs.RaiseRemainsDef.Hostile
+  - TDMaker.Core.Defs.RaiseRemainsDef.Id
+  - TDMaker.Core.Defs.RaiseRemainsDef.IgnoreDamageWhileRising
+  - TDMaker.Core.Defs.RaiseRemainsDef.KindMask
+  - TDMaker.Core.Defs.RaiseRemainsDef.MaxCount
+  - TDMaker.Core.Defs.RaiseRemainsDef.MaximumAge
+  - TDMaker.Core.Defs.RaiseRemainsDef.MinimumAge
+  - TDMaker.Core.Defs.RaiseRemainsDef.PopulationLimit
+  - TDMaker.Core.Defs.RaiseRemainsDef.Range
+  - TDMaker.Core.Defs.RaiseRemainsDef.RequiredTags
+  - TDMaker.Core.Defs.RaiseRemainsDef.ReservationTimeout
+  - TDMaker.Core.Defs.RaiseRemainsDef.RiseDuration
+  - TDMaker.Core.Defs.RaiseRemainsDef.TemplateId
+  langs:
+  - csharp
+  - vb
+  name: RaiseRemainsDef
+  nameWithType: RaiseRemainsDef
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Deterministic closest-then-body-Id reservation followed by delayed, atomic consumption.
+  example: []
+  syntax:
+    content: 'public sealed class RaiseRemainsDef : IAbilityAction'
+    content.vb: Public NotInheritable Class RaiseRemainsDef Implements IAbilityAction
+  inheritance:
+  - System.Object
+  implements:
+  - TDMaker.Core.IAbilityAction
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.#ctor(System.String,System.String,System.Single,System.Boolean,System.Int32,System.Single,System.Single,TDMaker.Core.Defs.RemainsFaction,System.UInt64,System.UInt64,TDMaker.Core.Defs.DamageFlags,System.Single,System.Single,System.Int32,System.Int32,System.Single,System.Boolean,System.Boolean)
+  commentId: M:TDMaker.Core.Defs.RaiseRemainsDef.#ctor(System.String,System.String,System.Single,System.Boolean,System.Int32,System.Single,System.Single,TDMaker.Core.Defs.RemainsFaction,System.UInt64,System.UInt64,TDMaker.Core.Defs.DamageFlags,System.Single,System.Single,System.Int32,System.Int32,System.Single,System.Boolean,System.Boolean)
+  id: '#ctor(System.String,System.String,System.Single,System.Boolean,System.Int32,System.Single,System.Single,TDMaker.Core.Defs.RemainsFaction,System.UInt64,System.UInt64,TDMaker.Core.Defs.DamageFlags,System.Single,System.Single,System.Int32,System.Int32,System.Single,System.Boolean,System.Boolean)'
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: RaiseRemainsDef(string, string, float, bool, int, float, float, RemainsFaction, ulong, ulong, DamageFlags, float,
+    float, int, int, float, bool, bool)
+  nameWithType: RaiseRemainsDef.RaiseRemainsDef(string, string, float, bool, int, float, float, RemainsFaction, ulong, ulong,
+    DamageFlags, float, float, int, int, float, bool, bool)
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.RaiseRemainsDef(string, string, float, bool, int, float, float, TDMaker.Core.Defs.RemainsFaction,
+    ulong, ulong, TDMaker.Core.Defs.DamageFlags, float, float, int, int, float, bool, bool)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a body-consumption action; a timeout of zero chooses CastDelay + one second.
+  example: []
+  syntax:
+    content: public RaiseRemainsDef(string id, string templateId, float range, bool hostile = true, int maxCount = 1, float
+      castDelay = 0, float riseDuration = 0, RemainsFaction faction = RemainsFaction.Enemy, ulong kindMask = 18446744073709551615,
+      ulong requiredTags = 0, DamageFlags forbiddenFatalFlags = DamageFlags.SuppressDeathSummons, float minimumAge = 0, float
+      maximumAge = 3.4028235E+38, int populationLimit = 0, int chainBudget = 1, float reservationTimeout = 0, bool ignoreDamageWhileRising
+      = false, bool excludeWhileRising = false)
+    parameters:
+    - id: id
+      type: System.String
+    - id: templateId
+      type: System.String
+    - id: range
+      type: System.Single
+    - id: hostile
+      type: System.Boolean
+    - id: maxCount
+      type: System.Int32
+    - id: castDelay
+      type: System.Single
+    - id: riseDuration
+      type: System.Single
+    - id: faction
+      type: TDMaker.Core.Defs.RemainsFaction
+    - id: kindMask
+      type: System.UInt64
+    - id: requiredTags
+      type: System.UInt64
+    - id: forbiddenFatalFlags
+      type: TDMaker.Core.Defs.DamageFlags
+    - id: minimumAge
+      type: System.Single
+    - id: maximumAge
+      type: System.Single
+    - id: populationLimit
+      type: System.Int32
+    - id: chainBudget
+      type: System.Int32
+    - id: reservationTimeout
+      type: System.Single
+    - id: ignoreDamageWhileRising
+      type: System.Boolean
+    - id: excludeWhileRising
+      type: System.Boolean
+    content.vb: Public Sub New(id As String, templateId As String, range As Single, hostile As Boolean = True, maxCount As
+      Integer = 1, castDelay As Single = 0, riseDuration As Single = 0, faction As RemainsFaction = RemainsFaction.Enemy,
+      kindMask As ULong = 18446744073709551615, requiredTags As ULong = 0, forbiddenFatalFlags As DamageFlags = DamageFlags.SuppressDeathSummons,
+      minimumAge As Single = 0, maximumAge As Single = 3.4028235E+38, populationLimit As Integer = 0, chainBudget As Integer
+      = 1, reservationTimeout As Single = 0, ignoreDamageWhileRising As Boolean = False, excludeWhileRising As Boolean = False)
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.#ctor*
+  nameWithType.vb: RaiseRemainsDef.New(String, String, Single, Boolean, Integer, Single, Single, RemainsFaction, ULong, ULong,
+    DamageFlags, Single, Single, Integer, Integer, Single, Boolean, Boolean)
+  fullName.vb: TDMaker.Core.Defs.RaiseRemainsDef.New(String, String, Single, Boolean, Integer, Single, Single, TDMaker.Core.Defs.RemainsFaction,
+    ULong, ULong, TDMaker.Core.Defs.DamageFlags, Single, Single, Integer, Integer, Single, Boolean, Boolean)
+  name.vb: New(String, String, Single, Boolean, Integer, Single, Single, RemainsFaction, ULong, ULong, DamageFlags, Single,
+    Single, Integer, Integer, Single, Boolean, Boolean)
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.Id
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.Id
+  id: Id
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: RaiseRemainsDef.Id
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Mechanism/event key.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.Id*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.TemplateId
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.TemplateId
+  id: TemplateId
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: TemplateId
+  nameWithType: RaiseRemainsDef.TemplateId
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.TemplateId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: New template; original body stats are not copied.
+  example: []
+  syntax:
+    content: public string TemplateId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property TemplateId As String
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.TemplateId*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.Hostile
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.Hostile
+  id: Hostile
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: Hostile
+  nameWithType: RaiseRemainsDef.Hostile
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.Hostile
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Result faction; hostile results require a body with path state.
+  example: []
+  syntax:
+    content: public bool Hostile { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Hostile As Boolean
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.Hostile*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.Range
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.Range
+  id: Range
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: RaiseRemainsDef.Range
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.Range
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Elliptical body acquisition radius around the caster.
+  example: []
+  syntax:
+    content: public float Range { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Range As Single
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.Range*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.MaxCount
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.MaxCount
+  id: MaxCount
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: MaxCount
+  nameWithType: RaiseRemainsDef.MaxCount
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.MaxCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum bodies per activation.
+  example: []
+  syntax:
+    content: public int MaxCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxCount As Integer
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.MaxCount*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.CastDelay
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.CastDelay
+  id: CastDelay
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: CastDelay
+  nameWithType: RaiseRemainsDef.CastDelay
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.CastDelay
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Time between reservation and consumption.
+  example: []
+  syntax:
+    content: public float CastDelay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property CastDelay As Single
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.CastDelay*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.RiseDuration
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.RiseDuration
+  id: RiseDuration
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: RiseDuration
+  nameWithType: RaiseRemainsDef.RiseDuration
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.RiseDuration
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Preparation of the spawned result.
+  example: []
+  syntax:
+    content: public float RiseDuration { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RiseDuration As Single
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.RiseDuration*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.ReservationTimeout
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.ReservationTimeout
+  id: ReservationTimeout
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: ReservationTimeout
+  nameWithType: RaiseRemainsDef.ReservationTimeout
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.ReservationTimeout
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Exclusive reservation timeout; must exceed CastDelay.
+  example: []
+  syntax:
+    content: public float ReservationTimeout { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property ReservationTimeout As Single
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.ReservationTimeout*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.Faction
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.Faction
+  id: Faction
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: Faction
+  nameWithType: RaiseRemainsDef.Faction
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.Faction
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Allowed body faction.
+  example: []
+  syntax:
+    content: public RemainsFaction Faction { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.RemainsFaction
+    content.vb: Public ReadOnly Property Faction As RemainsFaction
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.Faction*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.KindMask
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.KindMask
+  id: KindMask
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: KindMask
+  nameWithType: RaiseRemainsDef.KindMask
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.KindMask
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Bit per EntityKind in an eligible body.
+  example: []
+  syntax:
+    content: public ulong KindMask { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property KindMask As ULong
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.KindMask*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.RequiredTags
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.RequiredTags
+  id: RequiredTags
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: RequiredTags
+  nameWithType: RaiseRemainsDef.RequiredTags
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.RequiredTags
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Required body trait bits.
+  example: []
+  syntax:
+    content: public ulong RequiredTags { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property RequiredTags As ULong
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.RequiredTags*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.ForbiddenFatalFlags
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.ForbiddenFatalFlags
+  id: ForbiddenFatalFlags
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenFatalFlags
+  nameWithType: RaiseRemainsDef.ForbiddenFatalFlags
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.ForbiddenFatalFlags
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Excluded fatal-damage control flags.
+  example: []
+  syntax:
+    content: public DamageFlags ForbiddenFatalFlags { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageFlags
+    content.vb: Public ReadOnly Property ForbiddenFatalFlags As DamageFlags
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.ForbiddenFatalFlags*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.MinimumAge
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.MinimumAge
+  id: MinimumAge
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: MinimumAge
+  nameWithType: RaiseRemainsDef.MinimumAge
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.MinimumAge
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Minimum body age, inclusive.
+  example: []
+  syntax:
+    content: public float MinimumAge { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MinimumAge As Single
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.MinimumAge*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.MaximumAge
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.MaximumAge
+  id: MaximumAge
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: MaximumAge
+  nameWithType: RaiseRemainsDef.MaximumAge
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.MaximumAge
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum body age, inclusive and also bounded by body expiry.
+  example: []
+  syntax:
+    content: public float MaximumAge { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MaximumAge As Single
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.MaximumAge*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.PopulationLimit
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.PopulationLimit
+  id: PopulationLimit
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: PopulationLimit
+  nameWithType: RaiseRemainsDef.PopulationLimit
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.PopulationLimit
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Owner/template population cap including reservations; zero disables this cap.
+  example: []
+  syntax:
+    content: public int PopulationLimit { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PopulationLimit As Integer
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.PopulationLimit*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.ChainBudget
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.ChainBudget
+  id: ChainBudget
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: ChainBudget
+  nameWithType: RaiseRemainsDef.ChainBudget
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.ChainBudget
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Shared successor budget used when the body has no prior budget.
+  example: []
+  syntax:
+    content: public int ChainBudget { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ChainBudget As Integer
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.ChainBudget*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.IgnoreDamageWhileRising
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.IgnoreDamageWhileRising
+  id: IgnoreDamageWhileRising
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: IgnoreDamageWhileRising
+  nameWithType: RaiseRemainsDef.IgnoreDamageWhileRising
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.IgnoreDamageWhileRising
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Damage immunity during result preparation.
+  example: []
+  syntax:
+    content: public bool IgnoreDamageWhileRising { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IgnoreDamageWhileRising As Boolean
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.IgnoreDamageWhileRising*
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.ExcludeWhileRising
+  commentId: P:TDMaker.Core.Defs.RaiseRemainsDef.ExcludeWhileRising
+  id: ExcludeWhileRising
+  parent: TDMaker.Core.Defs.RaiseRemainsDef
+  langs:
+  - csharp
+  - vb
+  name: ExcludeWhileRising
+  nameWithType: RaiseRemainsDef.ExcludeWhileRising
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.ExcludeWhileRising
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Attack-acquisition exclusion during result preparation.
+  example: []
+  syntax:
+    content: public bool ExcludeWhileRising { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ExcludeWhileRising As Boolean
+  overload: TDMaker.Core.Defs.RaiseRemainsDef.ExcludeWhileRising*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TDMaker.Core.IAbilityAction
+  commentId: T:TDMaker.Core.IAbilityAction
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.IAbilityAction.html
+  name: IAbilityAction
+  nameWithType: IAbilityAction
+  fullName: TDMaker.Core.IAbilityAction
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef__ctor_System_String_System_String_System_Single_System_Boolean_System_Int32_System_Single_System_Single_TDMaker_Core_Defs_RemainsFaction_System_UInt64_System_UInt64_TDMaker_Core_Defs_DamageFlags_System_Single_System_Single_System_Int32_System_Int32_System_Single_System_Boolean_System_Boolean_
+  name: RaiseRemainsDef
+  nameWithType: RaiseRemainsDef.RaiseRemainsDef
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.RaiseRemainsDef
+  nameWithType.vb: RaiseRemainsDef.New
+  fullName.vb: TDMaker.Core.Defs.RaiseRemainsDef.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.RemainsFaction
+  commentId: T:TDMaker.Core.Defs.RemainsFaction
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.RemainsFaction.html
+  name: RemainsFaction
+  nameWithType: RemainsFaction
+  fullName: TDMaker.Core.Defs.RemainsFaction
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: TDMaker.Core.Defs.DamageFlags
+  commentId: T:TDMaker.Core.Defs.DamageFlags
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageFlags.html
+  name: DamageFlags
+  nameWithType: DamageFlags
+  fullName: TDMaker.Core.Defs.DamageFlags
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.Id*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.Id
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_Id
+  name: Id
+  nameWithType: RaiseRemainsDef.Id
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.Id
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.TemplateId*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.TemplateId
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_TemplateId
+  name: TemplateId
+  nameWithType: RaiseRemainsDef.TemplateId
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.TemplateId
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.Hostile*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.Hostile
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_Hostile
+  name: Hostile
+  nameWithType: RaiseRemainsDef.Hostile
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.Hostile
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.Range*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.Range
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_Range
+  name: Range
+  nameWithType: RaiseRemainsDef.Range
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.Range
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.MaxCount*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.MaxCount
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_MaxCount
+  name: MaxCount
+  nameWithType: RaiseRemainsDef.MaxCount
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.MaxCount
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.CastDelay*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.CastDelay
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_CastDelay
+  name: CastDelay
+  nameWithType: RaiseRemainsDef.CastDelay
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.CastDelay
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.RiseDuration*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.RiseDuration
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_RiseDuration
+  name: RiseDuration
+  nameWithType: RaiseRemainsDef.RiseDuration
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.RiseDuration
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.ReservationTimeout*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.ReservationTimeout
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_ReservationTimeout
+  name: ReservationTimeout
+  nameWithType: RaiseRemainsDef.ReservationTimeout
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.ReservationTimeout
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.Faction*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.Faction
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_Faction
+  name: Faction
+  nameWithType: RaiseRemainsDef.Faction
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.Faction
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.KindMask*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.KindMask
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_KindMask
+  name: KindMask
+  nameWithType: RaiseRemainsDef.KindMask
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.KindMask
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.RequiredTags*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.RequiredTags
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_RequiredTags
+  name: RequiredTags
+  nameWithType: RaiseRemainsDef.RequiredTags
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.RequiredTags
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.ForbiddenFatalFlags*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.ForbiddenFatalFlags
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_ForbiddenFatalFlags
+  name: ForbiddenFatalFlags
+  nameWithType: RaiseRemainsDef.ForbiddenFatalFlags
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.ForbiddenFatalFlags
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.MinimumAge*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.MinimumAge
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_MinimumAge
+  name: MinimumAge
+  nameWithType: RaiseRemainsDef.MinimumAge
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.MinimumAge
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.MaximumAge*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.MaximumAge
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_MaximumAge
+  name: MaximumAge
+  nameWithType: RaiseRemainsDef.MaximumAge
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.MaximumAge
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.PopulationLimit*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.PopulationLimit
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_PopulationLimit
+  name: PopulationLimit
+  nameWithType: RaiseRemainsDef.PopulationLimit
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.PopulationLimit
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.ChainBudget*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.ChainBudget
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_ChainBudget
+  name: ChainBudget
+  nameWithType: RaiseRemainsDef.ChainBudget
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.ChainBudget
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.IgnoreDamageWhileRising*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.IgnoreDamageWhileRising
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_IgnoreDamageWhileRising
+  name: IgnoreDamageWhileRising
+  nameWithType: RaiseRemainsDef.IgnoreDamageWhileRising
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.IgnoreDamageWhileRising
+- uid: TDMaker.Core.Defs.RaiseRemainsDef.ExcludeWhileRising*
+  commentId: Overload:TDMaker.Core.Defs.RaiseRemainsDef.ExcludeWhileRising
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html#TDMaker_Core_Defs_RaiseRemainsDef_ExcludeWhileRising
+  name: ExcludeWhileRising
+  nameWithType: RaiseRemainsDef.ExcludeWhileRising
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef.ExcludeWhileRising

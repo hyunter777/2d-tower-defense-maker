@@ -1,0 +1,502 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.SimRandom
+  commentId: T:TDMaker.Core.SimRandom
+  id: SimRandom
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.SimRandom.#ctor(System.UInt32)
+  - TDMaker.Core.SimRandom.NextFloat
+  - TDMaker.Core.SimRandom.NextInt(System.Int32)
+  - TDMaker.Core.SimRandom.NextUInt
+  - TDMaker.Core.SimRandom.Range(System.Single,System.Single)
+  - TDMaker.Core.SimRandom.State
+  langs:
+  - csharp
+  - vb
+  name: SimRandom
+  nameWithType: SimRandom
+  fullName: TDMaker.Core.SimRandom
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A reproducible xorshift32 random stream; zero seeds are remapped.
+  example: []
+  syntax:
+    content: public sealed class SimRandom
+    content.vb: Public NotInheritable Class SimRandom
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.SimRandom.#ctor(System.UInt32)
+  commentId: M:TDMaker.Core.SimRandom.#ctor(System.UInt32)
+  id: '#ctor(System.UInt32)'
+  parent: TDMaker.Core.SimRandom
+  langs:
+  - csharp
+  - vb
+  name: SimRandom(uint)
+  nameWithType: SimRandom.SimRandom(uint)
+  fullName: TDMaker.Core.SimRandom.SimRandom(uint)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Creates a stream with the supplied seed.
+  example: []
+  syntax:
+    content: public SimRandom(uint seed)
+    parameters:
+    - id: seed
+      type: System.UInt32
+    content.vb: Public Sub New(seed As UInteger)
+  overload: TDMaker.Core.SimRandom.#ctor*
+  nameWithType.vb: SimRandom.New(UInteger)
+  fullName.vb: TDMaker.Core.SimRandom.New(UInteger)
+  name.vb: New(UInteger)
+- uid: TDMaker.Core.SimRandom.NextUInt
+  commentId: M:TDMaker.Core.SimRandom.NextUInt
+  id: NextUInt
+  parent: TDMaker.Core.SimRandom
+  langs:
+  - csharp
+  - vb
+  name: NextUInt()
+  nameWithType: SimRandom.NextUInt()
+  fullName: TDMaker.Core.SimRandom.NextUInt()
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Returns the next unsigned value.
+  example: []
+  syntax:
+    content: public uint NextUInt()
+    return:
+      type: System.UInt32
+    content.vb: Public Function NextUInt() As UInteger
+  overload: TDMaker.Core.SimRandom.NextUInt*
+- uid: TDMaker.Core.SimRandom.NextFloat
+  commentId: M:TDMaker.Core.SimRandom.NextFloat
+  id: NextFloat
+  parent: TDMaker.Core.SimRandom
+  langs:
+  - csharp
+  - vb
+  name: NextFloat()
+  nameWithType: SimRandom.NextFloat()
+  fullName: TDMaker.Core.SimRandom.NextFloat()
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Returns a value in [0, 1).
+  example: []
+  syntax:
+    content: public float NextFloat()
+    return:
+      type: System.Single
+    content.vb: Public Function NextFloat() As Single
+  overload: TDMaker.Core.SimRandom.NextFloat*
+- uid: TDMaker.Core.SimRandom.NextInt(System.Int32)
+  commentId: M:TDMaker.Core.SimRandom.NextInt(System.Int32)
+  id: NextInt(System.Int32)
+  parent: TDMaker.Core.SimRandom
+  langs:
+  - csharp
+  - vb
+  name: NextInt(int)
+  nameWithType: SimRandom.NextInt(int)
+  fullName: TDMaker.Core.SimRandom.NextInt(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Returns an unbiased integer in [0, exclusiveMax).
+  example: []
+  syntax:
+    content: public int NextInt(int exclusiveMax)
+    parameters:
+    - id: exclusiveMax
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function NextInt(exclusiveMax As Integer) As Integer
+  overload: TDMaker.Core.SimRandom.NextInt*
+  nameWithType.vb: SimRandom.NextInt(Integer)
+  fullName.vb: TDMaker.Core.SimRandom.NextInt(Integer)
+  name.vb: NextInt(Integer)
+- uid: TDMaker.Core.SimRandom.Range(System.Single,System.Single)
+  commentId: M:TDMaker.Core.SimRandom.Range(System.Single,System.Single)
+  id: Range(System.Single,System.Single)
+  parent: TDMaker.Core.SimRandom
+  langs:
+  - csharp
+  - vb
+  name: Range(float, float)
+  nameWithType: SimRandom.Range(float, float)
+  fullName: TDMaker.Core.SimRandom.Range(float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Samples a continuous range.
+  example: []
+  syntax:
+    content: public float Range(float min, float max)
+    parameters:
+    - id: min
+      type: System.Single
+    - id: max
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Function Range(min As Single, max As Single) As Single
+  overload: TDMaker.Core.SimRandom.Range*
+  nameWithType.vb: SimRandom.Range(Single, Single)
+  fullName.vb: TDMaker.Core.SimRandom.Range(Single, Single)
+  name.vb: Range(Single, Single)
+- uid: TDMaker.Core.SimRandom.State
+  commentId: P:TDMaker.Core.SimRandom.State
+  id: State
+  parent: TDMaker.Core.SimRandom
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: SimRandom.State
+  fullName: TDMaker.Core.SimRandom.State
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The current serializable stream state.
+  example: []
+  syntax:
+    content: public uint State { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property State As UInteger
+  overload: TDMaker.Core.SimRandom.State*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.SimRandom.#ctor*
+  commentId: Overload:TDMaker.Core.SimRandom.#ctor
+  isExternal: true
+  href: TDMaker.Core.SimRandom.html#TDMaker_Core_SimRandom__ctor_System_UInt32_
+  name: SimRandom
+  nameWithType: SimRandom.SimRandom
+  fullName: TDMaker.Core.SimRandom.SimRandom
+  nameWithType.vb: SimRandom.New
+  fullName.vb: TDMaker.Core.SimRandom.New
+  name.vb: New
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TDMaker.Core.SimRandom.NextUInt*
+  commentId: Overload:TDMaker.Core.SimRandom.NextUInt
+  isExternal: true
+  href: TDMaker.Core.SimRandom.html#TDMaker_Core_SimRandom_NextUInt
+  name: NextUInt
+  nameWithType: SimRandom.NextUInt
+  fullName: TDMaker.Core.SimRandom.NextUInt
+- uid: TDMaker.Core.SimRandom.NextFloat*
+  commentId: Overload:TDMaker.Core.SimRandom.NextFloat
+  isExternal: true
+  href: TDMaker.Core.SimRandom.html#TDMaker_Core_SimRandom_NextFloat
+  name: NextFloat
+  nameWithType: SimRandom.NextFloat
+  fullName: TDMaker.Core.SimRandom.NextFloat
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.SimRandom.NextInt*
+  commentId: Overload:TDMaker.Core.SimRandom.NextInt
+  isExternal: true
+  href: TDMaker.Core.SimRandom.html#TDMaker_Core_SimRandom_NextInt_System_Int32_
+  name: NextInt
+  nameWithType: SimRandom.NextInt
+  fullName: TDMaker.Core.SimRandom.NextInt
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.SimRandom.Range*
+  commentId: Overload:TDMaker.Core.SimRandom.Range
+  isExternal: true
+  href: TDMaker.Core.SimRandom.html#TDMaker_Core_SimRandom_Range_System_Single_System_Single_
+  name: Range
+  nameWithType: SimRandom.Range
+  fullName: TDMaker.Core.SimRandom.Range
+- uid: TDMaker.Core.SimRandom.State*
+  commentId: Overload:TDMaker.Core.SimRandom.State
+  isExternal: true
+  href: TDMaker.Core.SimRandom.html#TDMaker_Core_SimRandom_State
+  name: State
+  nameWithType: SimRandom.State
+  fullName: TDMaker.Core.SimRandom.State

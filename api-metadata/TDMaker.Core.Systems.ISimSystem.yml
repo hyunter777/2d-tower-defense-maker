@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Systems.ISimSystem
+  commentId: T:TDMaker.Core.Systems.ISimSystem
+  id: ISimSystem
+  parent: TDMaker.Core.Systems
+  children:
+  - TDMaker.Core.Systems.ISimSystem.Tick(TDMaker.Core.Simulation,System.Single)
+  langs:
+  - csharp
+  - vb
+  name: ISimSystem
+  nameWithType: ISimSystem
+  fullName: TDMaker.Core.Systems.ISimSystem
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Systems
+  summary: A fixed-step simulation stage.
+  example: []
+  syntax:
+    content: public interface ISimSystem
+    content.vb: Public Interface ISimSystem
+- uid: TDMaker.Core.Systems.ISimSystem.Tick(TDMaker.Core.Simulation,System.Single)
+  commentId: M:TDMaker.Core.Systems.ISimSystem.Tick(TDMaker.Core.Simulation,System.Single)
+  id: Tick(TDMaker.Core.Simulation,System.Single)
+  parent: TDMaker.Core.Systems.ISimSystem
+  langs:
+  - csharp
+  - vb
+  name: Tick(Simulation, float)
+  nameWithType: ISimSystem.Tick(Simulation, float)
+  fullName: TDMaker.Core.Systems.ISimSystem.Tick(TDMaker.Core.Simulation, float)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Systems
+  summary: Processes one fixed duration without using a wall clock.
+  example: []
+  syntax:
+    content: void Tick(Simulation sim, float dt)
+    parameters:
+    - id: sim
+      type: TDMaker.Core.Simulation
+    - id: dt
+      type: System.Single
+    content.vb: Sub Tick(sim As Simulation, dt As Single)
+  overload: TDMaker.Core.Systems.ISimSystem.Tick*
+  nameWithType.vb: ISimSystem.Tick(Simulation, Single)
+  fullName.vb: TDMaker.Core.Systems.ISimSystem.Tick(TDMaker.Core.Simulation, Single)
+  name.vb: Tick(Simulation, Single)
+references:
+- uid: TDMaker.Core.Systems
+  commentId: N:TDMaker.Core.Systems
+  isExternal: true
+  name: TDMaker.Core.Systems
+  nameWithType: TDMaker.Core.Systems
+  fullName: TDMaker.Core.Systems
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Systems
+    name: Systems
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Systems
+    name: Systems
+    isExternal: true
+- uid: TDMaker.Core.Systems.ISimSystem.Tick*
+  commentId: Overload:TDMaker.Core.Systems.ISimSystem.Tick
+  isExternal: true
+  href: TDMaker.Core.Systems.ISimSystem.html#TDMaker_Core_Systems_ISimSystem_Tick_TDMaker_Core_Simulation_System_Single_
+  name: Tick
+  nameWithType: ISimSystem.Tick
+  fullName: TDMaker.Core.Systems.ISimSystem.Tick
+- uid: TDMaker.Core.Simulation
+  commentId: T:TDMaker.Core.Simulation
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Simulation.html
+  name: Simulation
+  nameWithType: Simulation
+  fullName: TDMaker.Core.Simulation
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

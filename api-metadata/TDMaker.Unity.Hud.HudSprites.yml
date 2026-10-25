@@ -1,0 +1,851 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Hud.HudSprites
+  commentId: T:TDMaker.Unity.Hud.HudSprites
+  id: HudSprites
+  parent: TDMaker.Unity.Hud
+  children:
+  - TDMaker.Unity.Hud.HudSprites.Arrow
+  - TDMaker.Unity.Hud.HudSprites.Bar
+  - TDMaker.Unity.Hud.HudSprites.Button
+  - TDMaker.Unity.Hud.HudSprites.Circle
+  - TDMaker.Unity.Hud.HudSprites.Coin
+  - TDMaker.Unity.Hud.HudSprites.Flag
+  - TDMaker.Unity.Hud.HudSprites.Glow
+  - TDMaker.Unity.Hud.HudSprites.Heart
+  - TDMaker.Unity.Hud.HudSprites.Lock
+  - TDMaker.Unity.Hud.HudSprites.Panel
+  - TDMaker.Unity.Hud.HudSprites.Pause
+  - TDMaker.Unity.Hud.HudSprites.Play
+  - TDMaker.Unity.Hud.HudSprites.Ring
+  - TDMaker.Unity.Hud.HudSprites.Skull
+  - TDMaker.Unity.Hud.HudSprites.Star
+  - TDMaker.Unity.Hud.HudSprites.Sword
+  - TDMaker.Unity.Hud.HudSprites.ThickRing
+  langs:
+  - csharp
+  - vb
+  name: HudSprites
+  nameWithType: HudSprites
+  fullName: TDMaker.Unity.Hud.HudSprites
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'Procedurally generated UI sprites used when a <xref href="TDMaker.Unity.Hud.HudTheme" data-throw-if-not-resolved="false"></xref>
+    slot is empty. All are white/grayscale so
+
+    theme colours tint them. Panels and buttons are 9-sliced.'
+  example: []
+  syntax:
+    content: public static class HudSprites
+    content.vb: Public Module HudSprites
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Hud.HudSprites.Panel
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Panel
+  id: Panel
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Panel
+  nameWithType: HudSprites.Panel
+  fullName: TDMaker.Unity.Hud.HudSprites.Panel
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A rounded panel with a light rim (9-sliced).
+  example: []
+  syntax:
+    content: public static Sprite Panel { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Panel As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Panel*
+- uid: TDMaker.Unity.Hud.HudSprites.Button
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Button
+  id: Button
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Button
+  nameWithType: HudSprites.Button
+  fullName: TDMaker.Unity.Hud.HudSprites.Button
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A rounded, top-lit button (9-sliced).
+  example: []
+  syntax:
+    content: public static Sprite Button { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Button As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Button*
+- uid: TDMaker.Unity.Hud.HudSprites.Bar
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Bar
+  id: Bar
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Bar
+  nameWithType: HudSprites.Bar
+  fullName: TDMaker.Unity.Hud.HudSprites.Bar
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A flat bar (9-sliced, slightly rounded).
+  example: []
+  syntax:
+    content: public static Sprite Bar { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Bar As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Bar*
+- uid: TDMaker.Unity.Hud.HudSprites.Circle
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Circle
+  id: Circle
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Circle
+  nameWithType: HudSprites.Circle
+  fullName: TDMaker.Unity.Hud.HudSprites.Circle
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A filled circle.
+  example: []
+  syntax:
+    content: public static Sprite Circle { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Circle As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Circle*
+- uid: TDMaker.Unity.Hud.HudSprites.Ring
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Ring
+  id: Ring
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Ring
+  nameWithType: HudSprites.Ring
+  fullName: TDMaker.Unity.Hud.HudSprites.Ring
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A thin ring.
+  example: []
+  syntax:
+    content: public static Sprite Ring { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Ring As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Ring*
+- uid: TDMaker.Unity.Hud.HudSprites.ThickRing
+  commentId: P:TDMaker.Unity.Hud.HudSprites.ThickRing
+  id: ThickRing
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: ThickRing
+  nameWithType: HudSprites.ThickRing
+  fullName: TDMaker.Unity.Hud.HudSprites.ThickRing
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A thick ring for radial progress.
+  example: []
+  syntax:
+    content: public static Sprite ThickRing { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property ThickRing As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.ThickRing*
+- uid: TDMaker.Unity.Hud.HudSprites.Glow
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Glow
+  id: Glow
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Glow
+  nameWithType: HudSprites.Glow
+  fullName: TDMaker.Unity.Hud.HudSprites.Glow
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A soft glow disc.
+  example: []
+  syntax:
+    content: public static Sprite Glow { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Glow As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Glow*
+- uid: TDMaker.Unity.Hud.HudSprites.Star
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Star
+  id: Star
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Star
+  nameWithType: HudSprites.Star
+  fullName: TDMaker.Unity.Hud.HudSprites.Star
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A five-point star.
+  example: []
+  syntax:
+    content: public static Sprite Star { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Star As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Star*
+- uid: TDMaker.Unity.Hud.HudSprites.Heart
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Heart
+  id: Heart
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Heart
+  nameWithType: HudSprites.Heart
+  fullName: TDMaker.Unity.Hud.HudSprites.Heart
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A heart (lives).
+  example: []
+  syntax:
+    content: public static Sprite Heart { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Heart As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Heart*
+- uid: TDMaker.Unity.Hud.HudSprites.Coin
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Coin
+  id: Coin
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Coin
+  nameWithType: HudSprites.Coin
+  fullName: TDMaker.Unity.Hud.HudSprites.Coin
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A coin (gold).
+  example: []
+  syntax:
+    content: public static Sprite Coin { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Coin As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Coin*
+- uid: TDMaker.Unity.Hud.HudSprites.Flag
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Flag
+  id: Flag
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Flag
+  nameWithType: HudSprites.Flag
+  fullName: TDMaker.Unity.Hud.HudSprites.Flag
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A pennant (waves).
+  example: []
+  syntax:
+    content: public static Sprite Flag { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Flag As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Flag*
+- uid: TDMaker.Unity.Hud.HudSprites.Skull
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Skull
+  id: Skull
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Skull
+  nameWithType: HudSprites.Skull
+  fullName: TDMaker.Unity.Hud.HudSprites.Skull
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A skull-like enemy marker (wave entrances).
+  example: []
+  syntax:
+    content: public static Sprite Skull { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Skull As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Skull*
+- uid: TDMaker.Unity.Hud.HudSprites.Pause
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Pause
+  id: Pause
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Pause
+  nameWithType: HudSprites.Pause
+  fullName: TDMaker.Unity.Hud.HudSprites.Pause
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Two vertical bars.
+  example: []
+  syntax:
+    content: public static Sprite Pause { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Pause As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Pause*
+- uid: TDMaker.Unity.Hud.HudSprites.Play
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Play
+  id: Play
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Play
+  nameWithType: HudSprites.Play
+  fullName: TDMaker.Unity.Hud.HudSprites.Play
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A right-pointing triangle.
+  example: []
+  syntax:
+    content: public static Sprite Play { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Play As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Play*
+- uid: TDMaker.Unity.Hud.HudSprites.Lock
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Lock
+  id: Lock
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Lock
+  nameWithType: HudSprites.Lock
+  fullName: TDMaker.Unity.Hud.HudSprites.Lock
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A padlock.
+  example: []
+  syntax:
+    content: public static Sprite Lock { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Lock As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Lock*
+- uid: TDMaker.Unity.Hud.HudSprites.Arrow
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Arrow
+  id: Arrow
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Arrow
+  nameWithType: HudSprites.Arrow
+  fullName: TDMaker.Unity.Hud.HudSprites.Arrow
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A small right-pointing arrow (direction hints).
+  example: []
+  syntax:
+    content: public static Sprite Arrow { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Arrow As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Arrow*
+- uid: TDMaker.Unity.Hud.HudSprites.Sword
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Sword
+  id: Sword
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Sword
+  nameWithType: HudSprites.Sword
+  fullName: TDMaker.Unity.Hud.HudSprites.Sword
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A sword (attack / damage).
+  example: []
+  syntax:
+    content: public static Sprite Sword { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Sword As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Sword*
+references:
+- uid: TDMaker.Unity.Hud.HudTheme
+  commentId: T:TDMaker.Unity.Hud.HudTheme
+  parent: TDMaker.Unity.Hud
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html
+  name: HudTheme
+  nameWithType: HudTheme
+  fullName: TDMaker.Unity.Hud.HudTheme
+- uid: TDMaker.Unity.Hud
+  commentId: N:TDMaker.Unity.Hud
+  isExternal: true
+  name: TDMaker.Unity.Hud
+  nameWithType: TDMaker.Unity.Hud
+  fullName: TDMaker.Unity.Hud
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Hud.HudSprites.Panel*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Panel
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Panel
+  name: Panel
+  nameWithType: HudSprites.Panel
+  fullName: TDMaker.Unity.Hud.HudSprites.Panel
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Hud.HudSprites.Button*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Button
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Button
+  name: Button
+  nameWithType: HudSprites.Button
+  fullName: TDMaker.Unity.Hud.HudSprites.Button
+- uid: TDMaker.Unity.Hud.HudSprites.Bar*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Bar
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Bar
+  name: Bar
+  nameWithType: HudSprites.Bar
+  fullName: TDMaker.Unity.Hud.HudSprites.Bar
+- uid: TDMaker.Unity.Hud.HudSprites.Circle*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Circle
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Circle
+  name: Circle
+  nameWithType: HudSprites.Circle
+  fullName: TDMaker.Unity.Hud.HudSprites.Circle
+- uid: TDMaker.Unity.Hud.HudSprites.Ring*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Ring
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Ring
+  name: Ring
+  nameWithType: HudSprites.Ring
+  fullName: TDMaker.Unity.Hud.HudSprites.Ring
+- uid: TDMaker.Unity.Hud.HudSprites.ThickRing*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.ThickRing
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_ThickRing
+  name: ThickRing
+  nameWithType: HudSprites.ThickRing
+  fullName: TDMaker.Unity.Hud.HudSprites.ThickRing
+- uid: TDMaker.Unity.Hud.HudSprites.Glow*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Glow
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Glow
+  name: Glow
+  nameWithType: HudSprites.Glow
+  fullName: TDMaker.Unity.Hud.HudSprites.Glow
+- uid: TDMaker.Unity.Hud.HudSprites.Star*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Star
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Star
+  name: Star
+  nameWithType: HudSprites.Star
+  fullName: TDMaker.Unity.Hud.HudSprites.Star
+- uid: TDMaker.Unity.Hud.HudSprites.Heart*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Heart
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Heart
+  name: Heart
+  nameWithType: HudSprites.Heart
+  fullName: TDMaker.Unity.Hud.HudSprites.Heart
+- uid: TDMaker.Unity.Hud.HudSprites.Coin*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Coin
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Coin
+  name: Coin
+  nameWithType: HudSprites.Coin
+  fullName: TDMaker.Unity.Hud.HudSprites.Coin
+- uid: TDMaker.Unity.Hud.HudSprites.Flag*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Flag
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Flag
+  name: Flag
+  nameWithType: HudSprites.Flag
+  fullName: TDMaker.Unity.Hud.HudSprites.Flag
+- uid: TDMaker.Unity.Hud.HudSprites.Skull*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Skull
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Skull
+  name: Skull
+  nameWithType: HudSprites.Skull
+  fullName: TDMaker.Unity.Hud.HudSprites.Skull
+- uid: TDMaker.Unity.Hud.HudSprites.Pause*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Pause
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Pause
+  name: Pause
+  nameWithType: HudSprites.Pause
+  fullName: TDMaker.Unity.Hud.HudSprites.Pause
+- uid: TDMaker.Unity.Hud.HudSprites.Play*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Play
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Play
+  name: Play
+  nameWithType: HudSprites.Play
+  fullName: TDMaker.Unity.Hud.HudSprites.Play
+- uid: TDMaker.Unity.Hud.HudSprites.Lock*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Lock
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Lock
+  name: Lock
+  nameWithType: HudSprites.Lock
+  fullName: TDMaker.Unity.Hud.HudSprites.Lock
+- uid: TDMaker.Unity.Hud.HudSprites.Arrow*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Arrow
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Arrow
+  name: Arrow
+  nameWithType: HudSprites.Arrow
+  fullName: TDMaker.Unity.Hud.HudSprites.Arrow
+- uid: TDMaker.Unity.Hud.HudSprites.Sword*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Sword
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Sword
+  name: Sword
+  nameWithType: HudSprites.Sword
+  fullName: TDMaker.Unity.Hud.HudSprites.Sword

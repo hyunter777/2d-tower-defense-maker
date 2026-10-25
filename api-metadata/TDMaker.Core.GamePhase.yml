@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.GamePhase
+  commentId: T:TDMaker.Core.GamePhase
+  id: GamePhase
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.GamePhase.Defeat
+  - TDMaker.Core.GamePhase.Running
+  - TDMaker.Core.GamePhase.Victory
+  langs:
+  - csharp
+  - vb
+  name: GamePhase
+  nameWithType: GamePhase
+  fullName: TDMaker.Core.GamePhase
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Terminal and running game states.
+  example: []
+  syntax:
+    content: public enum GamePhase
+    content.vb: Public Enum GamePhase
+- uid: TDMaker.Core.GamePhase.Running
+  commentId: F:TDMaker.Core.GamePhase.Running
+  id: Running
+  parent: TDMaker.Core.GamePhase
+  langs:
+  - csharp
+  - vb
+  name: Running
+  nameWithType: GamePhase.Running
+  fullName: TDMaker.Core.GamePhase.Running
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The world accepts commands and advances its fixed clock.
+  example: []
+  syntax:
+    content: Running = 0
+    return:
+      type: TDMaker.Core.GamePhase
+- uid: TDMaker.Core.GamePhase.Victory
+  commentId: F:TDMaker.Core.GamePhase.Victory
+  id: Victory
+  parent: TDMaker.Core.GamePhase
+  langs:
+  - csharp
+  - vb
+  name: Victory
+  nameWithType: GamePhase.Victory
+  fullName: TDMaker.Core.GamePhase.Victory
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: All emissions and enemies are resolved with lives remaining.
+  example: []
+  syntax:
+    content: Victory = 1
+    return:
+      type: TDMaker.Core.GamePhase
+- uid: TDMaker.Core.GamePhase.Defeat
+  commentId: F:TDMaker.Core.GamePhase.Defeat
+  id: Defeat
+  parent: TDMaker.Core.GamePhase
+  langs:
+  - csharp
+  - vb
+  name: Defeat
+  nameWithType: GamePhase.Defeat
+  fullName: TDMaker.Core.GamePhase.Defeat
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: No lives remain.
+  example: []
+  syntax:
+    content: Defeat = 2
+    return:
+      type: TDMaker.Core.GamePhase
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.GamePhase
+  commentId: T:TDMaker.Core.GamePhase
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.GamePhase.html
+  name: GamePhase
+  nameWithType: GamePhase
+  fullName: TDMaker.Core.GamePhase

@@ -1,0 +1,510 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.UpgradeTrackDef
+  commentId: T:TDMaker.Core.Defs.UpgradeTrackDef
+  id: UpgradeTrackDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.UpgradeTrackDef.#ctor(System.String,TDMaker.Core.Defs.UpgradeStageDef[])
+  - TDMaker.Core.Defs.UpgradeTrackDef.Id
+  - TDMaker.Core.Defs.UpgradeTrackDef.Stages
+  langs:
+  - csharp
+  - vb
+  name: UpgradeTrackDef
+  nameWithType: UpgradeTrackDef
+  fullName: TDMaker.Core.Defs.UpgradeTrackDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: One independent contiguous purchase track.
+  example: []
+  syntax:
+    content: public sealed class UpgradeTrackDef
+    content.vb: Public NotInheritable Class UpgradeTrackDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.UpgradeTrackDef.#ctor(System.String,TDMaker.Core.Defs.UpgradeStageDef[])
+  commentId: M:TDMaker.Core.Defs.UpgradeTrackDef.#ctor(System.String,TDMaker.Core.Defs.UpgradeStageDef[])
+  id: '#ctor(System.String,TDMaker.Core.Defs.UpgradeStageDef[])'
+  parent: TDMaker.Core.Defs.UpgradeTrackDef
+  langs:
+  - csharp
+  - vb
+  name: UpgradeTrackDef(string, params UpgradeStageDef[])
+  nameWithType: UpgradeTrackDef.UpgradeTrackDef(string, params UpgradeStageDef[])
+  fullName: TDMaker.Core.Defs.UpgradeTrackDef.UpgradeTrackDef(string, params TDMaker.Core.Defs.UpgradeStageDef[])
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a track.
+  example: []
+  syntax:
+    content: public UpgradeTrackDef(string id, params UpgradeStageDef[] stages)
+    parameters:
+    - id: id
+      type: System.String
+    - id: stages
+      type: TDMaker.Core.Defs.UpgradeStageDef[]
+    content.vb: Public Sub New(id As String, ParamArray stages As UpgradeStageDef())
+  overload: TDMaker.Core.Defs.UpgradeTrackDef.#ctor*
+  nameWithType.vb: UpgradeTrackDef.New(String, ParamArray UpgradeStageDef())
+  fullName.vb: TDMaker.Core.Defs.UpgradeTrackDef.New(String, ParamArray TDMaker.Core.Defs.UpgradeStageDef())
+  name.vb: New(String, ParamArray UpgradeStageDef())
+- uid: TDMaker.Core.Defs.UpgradeTrackDef.Id
+  commentId: P:TDMaker.Core.Defs.UpgradeTrackDef.Id
+  id: Id
+  parent: TDMaker.Core.Defs.UpgradeTrackDef
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: UpgradeTrackDef.Id
+  fullName: TDMaker.Core.Defs.UpgradeTrackDef.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Stable track key.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Core.Defs.UpgradeTrackDef.Id*
+- uid: TDMaker.Core.Defs.UpgradeTrackDef.Stages
+  commentId: P:TDMaker.Core.Defs.UpgradeTrackDef.Stages
+  id: Stages
+  parent: TDMaker.Core.Defs.UpgradeTrackDef
+  langs:
+  - csharp
+  - vb
+  name: Stages
+  nameWithType: UpgradeTrackDef.Stages
+  fullName: TDMaker.Core.Defs.UpgradeTrackDef.Stages
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Stages indexed by rank minus one.
+  example: []
+  syntax:
+    content: public IReadOnlyList<UpgradeStageDef> Stages { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.UpgradeStageDef}
+    content.vb: Public ReadOnly Property Stages As IReadOnlyList(Of UpgradeStageDef)
+  overload: TDMaker.Core.Defs.UpgradeTrackDef.Stages*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.UpgradeTrackDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.UpgradeTrackDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeTrackDef.html#TDMaker_Core_Defs_UpgradeTrackDef__ctor_System_String_TDMaker_Core_Defs_UpgradeStageDef___
+  name: UpgradeTrackDef
+  nameWithType: UpgradeTrackDef.UpgradeTrackDef
+  fullName: TDMaker.Core.Defs.UpgradeTrackDef.UpgradeTrackDef
+  nameWithType.vb: UpgradeTrackDef.New
+  fullName.vb: TDMaker.Core.Defs.UpgradeTrackDef.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Defs.UpgradeStageDef[]
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeStageDef.html
+  name: UpgradeStageDef[]
+  nameWithType: UpgradeStageDef[]
+  fullName: TDMaker.Core.Defs.UpgradeStageDef[]
+  nameWithType.vb: UpgradeStageDef()
+  fullName.vb: TDMaker.Core.Defs.UpgradeStageDef()
+  name.vb: UpgradeStageDef()
+  spec.csharp:
+  - uid: TDMaker.Core.Defs.UpgradeStageDef
+    name: UpgradeStageDef
+    isExternal: true
+    href: TDMaker.Core.Defs.UpgradeStageDef.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Defs.UpgradeStageDef
+    name: UpgradeStageDef
+    isExternal: true
+    href: TDMaker.Core.Defs.UpgradeStageDef.html
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs.UpgradeTrackDef.Id*
+  commentId: Overload:TDMaker.Core.Defs.UpgradeTrackDef.Id
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeTrackDef.html#TDMaker_Core_Defs_UpgradeTrackDef_Id
+  name: Id
+  nameWithType: UpgradeTrackDef.Id
+  fullName: TDMaker.Core.Defs.UpgradeTrackDef.Id
+- uid: TDMaker.Core.Defs.UpgradeTrackDef.Stages*
+  commentId: Overload:TDMaker.Core.Defs.UpgradeTrackDef.Stages
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeTrackDef.html#TDMaker_Core_Defs_UpgradeTrackDef_Stages
+  name: Stages
+  nameWithType: UpgradeTrackDef.Stages
+  fullName: TDMaker.Core.Defs.UpgradeTrackDef.Stages
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.UpgradeStageDef}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.UpgradeStageDef}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<UpgradeStageDef>
+  nameWithType: IReadOnlyList<UpgradeStageDef>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Defs.UpgradeStageDef>
+  nameWithType.vb: IReadOnlyList(Of UpgradeStageDef)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Defs.UpgradeStageDef)
+  name.vb: IReadOnlyList(Of UpgradeStageDef)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Defs.UpgradeStageDef
+    name: UpgradeStageDef
+    isExternal: true
+    href: TDMaker.Core.Defs.UpgradeStageDef.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Defs.UpgradeStageDef
+    name: UpgradeStageDef
+    isExternal: true
+    href: TDMaker.Core.Defs.UpgradeStageDef.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

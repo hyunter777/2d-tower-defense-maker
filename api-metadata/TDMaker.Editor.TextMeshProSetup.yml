@@ -1,0 +1,461 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.TextMeshProSetup
+  commentId: T:TDMaker.Editor.TextMeshProSetup
+  id: TextMeshProSetup
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.TextMeshProSetup.EssentialsImported
+  - TDMaker.Editor.TextMeshProSetup.ImportEssentials
+  - TDMaker.Editor.TextMeshProSetup.MissingMessage
+  - TDMaker.Editor.TextMeshProSetup.SettingsPath
+  langs:
+  - csharp
+  - vb
+  name: TextMeshProSetup
+  nameWithType: TextMeshProSetup
+  fullName: TDMaker.Editor.TextMeshProSetup
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'TextMesh Pro setup check. The HUD, damage numbers and sample menus use TextMesh Pro (part of the uGUI package
+    in
+
+    Unity 6), which needs its "Essential Resources" (default font asset, shaders, settings) imported into the project once.
+
+    2D Tower Defense Maker does not ship those resources. When they are missing this class logs one clear message per editor
+    session,
+
+    offers a one-click import in a dialog, and is available as <code>Tools &gt; 2D Tower Defense Maker &gt; Import TMP Essential
+    Resources</code>
+
+    (also used by the Validator).'
+  example: []
+  syntax:
+    content: '[InitializeOnLoad]
+
+      public static class TextMeshProSetup'
+    content.vb: '<InitializeOnLoad>
+
+      Public Module TextMeshProSetup'
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  attributes:
+  - type: UnityEditor.InitializeOnLoadAttribute
+    ctor: UnityEditor.InitializeOnLoadAttribute.#ctor
+    arguments: []
+- uid: TDMaker.Editor.TextMeshProSetup.SettingsPath
+  commentId: F:TDMaker.Editor.TextMeshProSetup.SettingsPath
+  id: SettingsPath
+  parent: TDMaker.Editor.TextMeshProSetup
+  langs:
+  - csharp
+  - vb
+  name: SettingsPath
+  nameWithType: TextMeshProSetup.SettingsPath
+  fullName: TDMaker.Editor.TextMeshProSetup.SettingsPath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Where TextMesh Pro keeps its settings once the essentials are imported.
+  example: []
+  syntax:
+    content: public const string SettingsPath = "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+    return:
+      type: System.String
+    content.vb: Public Const SettingsPath As String = "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+- uid: TDMaker.Editor.TextMeshProSetup.MissingMessage
+  commentId: F:TDMaker.Editor.TextMeshProSetup.MissingMessage
+  id: MissingMessage
+  parent: TDMaker.Editor.TextMeshProSetup
+  langs:
+  - csharp
+  - vb
+  name: MissingMessage
+  nameWithType: TextMeshProSetup.MissingMessage
+  fullName: TDMaker.Editor.TextMeshProSetup.MissingMessage
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Message logged (and shown) when the essentials are missing.
+  example: []
+  syntax:
+    content: public const string MissingMessage = "[2D Tower Defense Maker] TextMesh Pro Essential Resources are not imported,
+      so HUD and menu text cannot render. Import them with Tools > 2D Tower Defense Maker > Import TMP Essential Resources
+      (or Window > TextMeshPro > Import TMP Essential Resources)."
+    return:
+      type: System.String
+    content.vb: Public Const MissingMessage As String = "[2D Tower Defense Maker] TextMesh Pro Essential Resources are not
+      imported, so HUD and menu text cannot render. Import them with Tools > 2D Tower Defense Maker > Import TMP Essential
+      Resources (or Window > TextMeshPro > Import TMP Essential Resources)."
+- uid: TDMaker.Editor.TextMeshProSetup.ImportEssentials
+  commentId: M:TDMaker.Editor.TextMeshProSetup.ImportEssentials
+  id: ImportEssentials
+  parent: TDMaker.Editor.TextMeshProSetup
+  langs:
+  - csharp
+  - vb
+  name: ImportEssentials()
+  nameWithType: TextMeshProSetup.ImportEssentials()
+  fullName: TDMaker.Editor.TextMeshProSetup.ImportEssentials()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Imports the TextMesh Pro Essential Resources silently. The import finishes asynchronously; in batch mode
+
+    (<code>-batchmode -executeMethod TDMaker.Editor.TextMeshProSetup.ImportEssentials</code>, <b>without</b> <code>-quit</code>)
+
+    the editor exits by itself when it is done (exit code 1 on failure).'
+  example: []
+  syntax:
+    content: '[MenuItem("Tools/2D Tower Defense Maker/Import TMP Essential Resources", priority = 902)]
+
+      public static void ImportEssentials()'
+    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Import TMP Essential Resources", priority:=902)>
+
+      Public Shared Sub ImportEssentials()'
+  overload: TDMaker.Editor.TextMeshProSetup.ImportEssentials*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Tools/2D Tower Defense Maker/Import TMP Essential Resources
+    namedArguments:
+    - name: priority
+      type: System.Int32
+      value: 902
+- uid: TDMaker.Editor.TextMeshProSetup.EssentialsImported
+  commentId: P:TDMaker.Editor.TextMeshProSetup.EssentialsImported
+  id: EssentialsImported
+  parent: TDMaker.Editor.TextMeshProSetup
+  langs:
+  - csharp
+  - vb
+  name: EssentialsImported
+  nameWithType: TextMeshProSetup.EssentialsImported
+  fullName: TDMaker.Editor.TextMeshProSetup.EssentialsImported
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Whether the TextMesh Pro Essential Resources are present (a TMP Settings asset exists, at the default location
+    or in
+
+    any Resources folder).'
+  example: []
+  syntax:
+    content: public static bool EssentialsImported { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property EssentialsImported As Boolean
+  overload: TDMaker.Editor.TextMeshProSetup.EssentialsImported*
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Editor.TextMeshProSetup.ImportEssentials*
+  commentId: Overload:TDMaker.Editor.TextMeshProSetup.ImportEssentials
+  isExternal: true
+  href: TDMaker.Editor.TextMeshProSetup.html#TDMaker_Editor_TextMeshProSetup_ImportEssentials
+  name: ImportEssentials
+  nameWithType: TextMeshProSetup.ImportEssentials
+  fullName: TDMaker.Editor.TextMeshProSetup.ImportEssentials
+- uid: TDMaker.Editor.TextMeshProSetup.EssentialsImported*
+  commentId: Overload:TDMaker.Editor.TextMeshProSetup.EssentialsImported
+  isExternal: true
+  href: TDMaker.Editor.TextMeshProSetup.html#TDMaker_Editor_TextMeshProSetup_EssentialsImported
+  name: EssentialsImported
+  nameWithType: TextMeshProSetup.EssentialsImported
+  fullName: TDMaker.Editor.TextMeshProSetup.EssentialsImported
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

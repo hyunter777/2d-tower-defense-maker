@@ -1,0 +1,844 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.CompanionDef
+  commentId: T:TDMaker.Core.Defs.CompanionDef
+  id: CompanionDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.CompanionDef.#ctor(System.String,System.Int32,TDMaker.Core.Defs.CompanionMode,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Single,TDMaker.Core.Defs.PointRuleDef,System.Single)
+  - TDMaker.Core.Defs.CompanionDef.Acceleration
+  - TDMaker.Core.Defs.CompanionDef.FollowStartDistance
+  - TDMaker.Core.Defs.CompanionDef.FollowStopDistance
+  - TDMaker.Core.Defs.CompanionDef.FormationRadius
+  - TDMaker.Core.Defs.CompanionDef.InitialDelay
+  - TDMaker.Core.Defs.CompanionDef.Mode
+  - TDMaker.Core.Defs.CompanionDef.PointRule
+  - TDMaker.Core.Defs.CompanionDef.RallyRadius
+  - TDMaker.Core.Defs.CompanionDef.ReconnectOnReturn
+  - TDMaker.Core.Defs.CompanionDef.RefillDelay
+  - TDMaker.Core.Defs.CompanionDef.RemoveWithOwner
+  - TDMaker.Core.Defs.CompanionDef.Slots
+  - TDMaker.Core.Defs.CompanionDef.TemplateId
+  - TDMaker.Core.Defs.CompanionDef.WaitOnOwnerDeath
+  langs:
+  - csharp
+  - vb
+  name: CompanionDef
+  nameWithType: CompanionDef
+  fullName: TDMaker.Core.Defs.CompanionDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Persistent owner-bound slots, attached through EntityTemplate.WithCustomData.
+  example: []
+  syntax:
+    content: public sealed class CompanionDef
+    content.vb: Public NotInheritable Class CompanionDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.CompanionDef.#ctor(System.String,System.Int32,TDMaker.Core.Defs.CompanionMode,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Single,TDMaker.Core.Defs.PointRuleDef,System.Single)
+  commentId: M:TDMaker.Core.Defs.CompanionDef.#ctor(System.String,System.Int32,TDMaker.Core.Defs.CompanionMode,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Single,TDMaker.Core.Defs.PointRuleDef,System.Single)
+  id: '#ctor(System.String,System.Int32,TDMaker.Core.Defs.CompanionMode,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Single,TDMaker.Core.Defs.PointRuleDef,System.Single)'
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: CompanionDef(string, int, CompanionMode, float, float, float, float, float, bool, bool, bool, float, PointRuleDef,
+    float)
+  nameWithType: CompanionDef.CompanionDef(string, int, CompanionMode, float, float, float, float, float, bool, bool, bool,
+    float, PointRuleDef, float)
+  fullName: TDMaker.Core.Defs.CompanionDef.CompanionDef(string, int, TDMaker.Core.Defs.CompanionMode, float, float, float,
+    float, float, bool, bool, bool, float, TDMaker.Core.Defs.PointRuleDef, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates companion slots for a hero or tower.
+  example: []
+  syntax:
+    content: public CompanionDef(string templateId, int slots, CompanionMode mode = CompanionMode.GroundEscort, float refillDelay
+      = 1, float formationRadius = 0.5, float followStartDistance = 2, float followStopDistance = 0.75, float acceleration
+      = 8, bool waitOnOwnerDeath = true, bool removeWithOwner = true, bool reconnectOnReturn = true, float initialDelay =
+      0, PointRuleDef pointRule = null, float rallyRadius = 5)
+    parameters:
+    - id: templateId
+      type: System.String
+    - id: slots
+      type: System.Int32
+    - id: mode
+      type: TDMaker.Core.Defs.CompanionMode
+    - id: refillDelay
+      type: System.Single
+    - id: formationRadius
+      type: System.Single
+    - id: followStartDistance
+      type: System.Single
+    - id: followStopDistance
+      type: System.Single
+    - id: acceleration
+      type: System.Single
+    - id: waitOnOwnerDeath
+      type: System.Boolean
+    - id: removeWithOwner
+      type: System.Boolean
+    - id: reconnectOnReturn
+      type: System.Boolean
+    - id: initialDelay
+      type: System.Single
+    - id: pointRule
+      type: TDMaker.Core.Defs.PointRuleDef
+    - id: rallyRadius
+      type: System.Single
+    content.vb: Public Sub New(templateId As String, slots As Integer, mode As CompanionMode = CompanionMode.GroundEscort,
+      refillDelay As Single = 1, formationRadius As Single = 0.5, followStartDistance As Single = 2, followStopDistance As
+      Single = 0.75, acceleration As Single = 8, waitOnOwnerDeath As Boolean = True, removeWithOwner As Boolean = True, reconnectOnReturn
+      As Boolean = True, initialDelay As Single = 0, pointRule As PointRuleDef = Nothing, rallyRadius As Single = 5)
+  overload: TDMaker.Core.Defs.CompanionDef.#ctor*
+  nameWithType.vb: CompanionDef.New(String, Integer, CompanionMode, Single, Single, Single, Single, Single, Boolean, Boolean,
+    Boolean, Single, PointRuleDef, Single)
+  fullName.vb: TDMaker.Core.Defs.CompanionDef.New(String, Integer, TDMaker.Core.Defs.CompanionMode, Single, Single, Single,
+    Single, Single, Boolean, Boolean, Boolean, Single, TDMaker.Core.Defs.PointRuleDef, Single)
+  name.vb: New(String, Integer, CompanionMode, Single, Single, Single, Single, Single, Boolean, Boolean, Boolean, Single,
+    PointRuleDef, Single)
+- uid: TDMaker.Core.Defs.CompanionDef.TemplateId
+  commentId: P:TDMaker.Core.Defs.CompanionDef.TemplateId
+  id: TemplateId
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: TemplateId
+  nameWithType: CompanionDef.TemplateId
+  fullName: TDMaker.Core.Defs.CompanionDef.TemplateId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Child template identifier.
+  example: []
+  syntax:
+    content: public string TemplateId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property TemplateId As String
+  overload: TDMaker.Core.Defs.CompanionDef.TemplateId*
+- uid: TDMaker.Core.Defs.CompanionDef.Slots
+  commentId: P:TDMaker.Core.Defs.CompanionDef.Slots
+  id: Slots
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: Slots
+  nameWithType: CompanionDef.Slots
+  fullName: TDMaker.Core.Defs.CompanionDef.Slots
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum living or pending children.
+  example: []
+  syntax:
+    content: public int Slots { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Slots As Integer
+  overload: TDMaker.Core.Defs.CompanionDef.Slots*
+- uid: TDMaker.Core.Defs.CompanionDef.Mode
+  commentId: P:TDMaker.Core.Defs.CompanionDef.Mode
+  id: Mode
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: Mode
+  nameWithType: CompanionDef.Mode
+  fullName: TDMaker.Core.Defs.CompanionDef.Mode
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ground escort or flying follower.
+  example: []
+  syntax:
+    content: public CompanionMode Mode { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.CompanionMode
+    content.vb: Public ReadOnly Property Mode As CompanionMode
+  overload: TDMaker.Core.Defs.CompanionDef.Mode*
+- uid: TDMaker.Core.Defs.CompanionDef.RefillDelay
+  commentId: P:TDMaker.Core.Defs.CompanionDef.RefillDelay
+  id: RefillDelay
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: RefillDelay
+  nameWithType: CompanionDef.RefillDelay
+  fullName: TDMaker.Core.Defs.CompanionDef.RefillDelay
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Delay measured from child death/removal, not owner animation completion.
+  example: []
+  syntax:
+    content: public float RefillDelay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RefillDelay As Single
+  overload: TDMaker.Core.Defs.CompanionDef.RefillDelay*
+- uid: TDMaker.Core.Defs.CompanionDef.InitialDelay
+  commentId: P:TDMaker.Core.Defs.CompanionDef.InitialDelay
+  id: InitialDelay
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: InitialDelay
+  nameWithType: CompanionDef.InitialDelay
+  fullName: TDMaker.Core.Defs.CompanionDef.InitialDelay
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Delay before initial population.
+  example: []
+  syntax:
+    content: public float InitialDelay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property InitialDelay As Single
+  overload: TDMaker.Core.Defs.CompanionDef.InitialDelay*
+- uid: TDMaker.Core.Defs.CompanionDef.FormationRadius
+  commentId: P:TDMaker.Core.Defs.CompanionDef.FormationRadius
+  id: FormationRadius
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: FormationRadius
+  nameWithType: CompanionDef.FormationRadius
+  fullName: TDMaker.Core.Defs.CompanionDef.FormationRadius
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ground escort formation radius around the most recent owner movement/rally order.
+  example: []
+  syntax:
+    content: public float FormationRadius { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property FormationRadius As Single
+  overload: TDMaker.Core.Defs.CompanionDef.FormationRadius*
+- uid: TDMaker.Core.Defs.CompanionDef.FollowStartDistance
+  commentId: P:TDMaker.Core.Defs.CompanionDef.FollowStartDistance
+  id: FollowStartDistance
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: FollowStartDistance
+  nameWithType: CompanionDef.FollowStartDistance
+  fullName: TDMaker.Core.Defs.CompanionDef.FollowStartDistance
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Distance at which a resting follower begins approaching.
+  example: []
+  syntax:
+    content: public float FollowStartDistance { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property FollowStartDistance As Single
+  overload: TDMaker.Core.Defs.CompanionDef.FollowStartDistance*
+- uid: TDMaker.Core.Defs.CompanionDef.FollowStopDistance
+  commentId: P:TDMaker.Core.Defs.CompanionDef.FollowStopDistance
+  id: FollowStopDistance
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: FollowStopDistance
+  nameWithType: CompanionDef.FollowStopDistance
+  fullName: TDMaker.Core.Defs.CompanionDef.FollowStopDistance
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Distance at which an approaching follower stops.
+  example: []
+  syntax:
+    content: public float FollowStopDistance { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property FollowStopDistance As Single
+  overload: TDMaker.Core.Defs.CompanionDef.FollowStopDistance*
+- uid: TDMaker.Core.Defs.CompanionDef.Acceleration
+  commentId: P:TDMaker.Core.Defs.CompanionDef.Acceleration
+  id: Acceleration
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: Acceleration
+  nameWithType: CompanionDef.Acceleration
+  fullName: TDMaker.Core.Defs.CompanionDef.Acceleration
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Follower acceleration and braking rate in world units per squared second.
+  example: []
+  syntax:
+    content: public float Acceleration { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Acceleration As Single
+  overload: TDMaker.Core.Defs.CompanionDef.Acceleration*
+- uid: TDMaker.Core.Defs.CompanionDef.WaitOnOwnerDeath
+  commentId: P:TDMaker.Core.Defs.CompanionDef.WaitOnOwnerDeath
+  id: WaitOnOwnerDeath
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: WaitOnOwnerDeath
+  nameWithType: CompanionDef.WaitOnOwnerDeath
+  fullName: TDMaker.Core.Defs.CompanionDef.WaitOnOwnerDeath
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Return to the owner and suspend attacks/interception while the owner is dead.
+  example: []
+  syntax:
+    content: public bool WaitOnOwnerDeath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property WaitOnOwnerDeath As Boolean
+  overload: TDMaker.Core.Defs.CompanionDef.WaitOnOwnerDeath*
+- uid: TDMaker.Core.Defs.CompanionDef.RemoveWithOwner
+  commentId: P:TDMaker.Core.Defs.CompanionDef.RemoveWithOwner
+  id: RemoveWithOwner
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: RemoveWithOwner
+  nameWithType: CompanionDef.RemoveWithOwner
+  fullName: TDMaker.Core.Defs.CompanionDef.RemoveWithOwner
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Retire children on owner removal; false detaches them as independent units.
+  example: []
+  syntax:
+    content: public bool RemoveWithOwner { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RemoveWithOwner As Boolean
+  overload: TDMaker.Core.Defs.CompanionDef.RemoveWithOwner*
+- uid: TDMaker.Core.Defs.CompanionDef.ReconnectOnReturn
+  commentId: P:TDMaker.Core.Defs.CompanionDef.ReconnectOnReturn
+  id: ReconnectOnReturn
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: ReconnectOnReturn
+  nameWithType: CompanionDef.ReconnectOnReturn
+  fullName: TDMaker.Core.Defs.CompanionDef.ReconnectOnReturn
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reconnect waiting children on owner return; false retires them.
+  example: []
+  syntax:
+    content: public bool ReconnectOnReturn { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ReconnectOnReturn As Boolean
+  overload: TDMaker.Core.Defs.CompanionDef.ReconnectOnReturn*
+- uid: TDMaker.Core.Defs.CompanionDef.PointRule
+  commentId: P:TDMaker.Core.Defs.CompanionDef.PointRule
+  id: PointRule
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: PointRule
+  nameWithType: CompanionDef.PointRule
+  fullName: TDMaker.Core.Defs.CompanionDef.PointRule
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ground spawn/reposition terrain validation.
+  example: []
+  syntax:
+    content: public PointRuleDef PointRule { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.PointRuleDef
+    content.vb: Public ReadOnly Property PointRule As PointRuleDef
+  overload: TDMaker.Core.Defs.CompanionDef.PointRule*
+- uid: TDMaker.Core.Defs.CompanionDef.RallyRadius
+  commentId: P:TDMaker.Core.Defs.CompanionDef.RallyRadius
+  id: RallyRadius
+  parent: TDMaker.Core.Defs.CompanionDef
+  langs:
+  - csharp
+  - vb
+  name: RallyRadius
+  nameWithType: CompanionDef.RallyRadius
+  fullName: TDMaker.Core.Defs.CompanionDef.RallyRadius
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ground-escort rally radius for a tower without barracks. Barracks owners retain their existing rally radius.
+  example: []
+  syntax:
+    content: public float RallyRadius { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RallyRadius As Single
+  overload: TDMaker.Core.Defs.CompanionDef.RallyRadius*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.CompanionDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef__ctor_System_String_System_Int32_TDMaker_Core_Defs_CompanionMode_System_Single_System_Single_System_Single_System_Single_System_Single_System_Boolean_System_Boolean_System_Boolean_System_Single_TDMaker_Core_Defs_PointRuleDef_System_Single_
+  name: CompanionDef
+  nameWithType: CompanionDef.CompanionDef
+  fullName: TDMaker.Core.Defs.CompanionDef.CompanionDef
+  nameWithType.vb: CompanionDef.New
+  fullName.vb: TDMaker.Core.Defs.CompanionDef.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.CompanionMode
+  commentId: T:TDMaker.Core.Defs.CompanionMode
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionMode.html
+  name: CompanionMode
+  nameWithType: CompanionMode
+  fullName: TDMaker.Core.Defs.CompanionMode
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.PointRuleDef
+  commentId: T:TDMaker.Core.Defs.PointRuleDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PointRuleDef.html
+  name: PointRuleDef
+  nameWithType: PointRuleDef
+  fullName: TDMaker.Core.Defs.PointRuleDef
+- uid: TDMaker.Core.Defs.CompanionDef.TemplateId*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.TemplateId
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_TemplateId
+  name: TemplateId
+  nameWithType: CompanionDef.TemplateId
+  fullName: TDMaker.Core.Defs.CompanionDef.TemplateId
+- uid: TDMaker.Core.Defs.CompanionDef.Slots*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.Slots
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_Slots
+  name: Slots
+  nameWithType: CompanionDef.Slots
+  fullName: TDMaker.Core.Defs.CompanionDef.Slots
+- uid: TDMaker.Core.Defs.CompanionDef.Mode*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.Mode
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_Mode
+  name: Mode
+  nameWithType: CompanionDef.Mode
+  fullName: TDMaker.Core.Defs.CompanionDef.Mode
+- uid: TDMaker.Core.Defs.CompanionDef.RefillDelay*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.RefillDelay
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_RefillDelay
+  name: RefillDelay
+  nameWithType: CompanionDef.RefillDelay
+  fullName: TDMaker.Core.Defs.CompanionDef.RefillDelay
+- uid: TDMaker.Core.Defs.CompanionDef.InitialDelay*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.InitialDelay
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_InitialDelay
+  name: InitialDelay
+  nameWithType: CompanionDef.InitialDelay
+  fullName: TDMaker.Core.Defs.CompanionDef.InitialDelay
+- uid: TDMaker.Core.Defs.CompanionDef.FormationRadius*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.FormationRadius
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_FormationRadius
+  name: FormationRadius
+  nameWithType: CompanionDef.FormationRadius
+  fullName: TDMaker.Core.Defs.CompanionDef.FormationRadius
+- uid: TDMaker.Core.Defs.CompanionDef.FollowStartDistance*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.FollowStartDistance
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_FollowStartDistance
+  name: FollowStartDistance
+  nameWithType: CompanionDef.FollowStartDistance
+  fullName: TDMaker.Core.Defs.CompanionDef.FollowStartDistance
+- uid: TDMaker.Core.Defs.CompanionDef.FollowStopDistance*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.FollowStopDistance
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_FollowStopDistance
+  name: FollowStopDistance
+  nameWithType: CompanionDef.FollowStopDistance
+  fullName: TDMaker.Core.Defs.CompanionDef.FollowStopDistance
+- uid: TDMaker.Core.Defs.CompanionDef.Acceleration*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.Acceleration
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_Acceleration
+  name: Acceleration
+  nameWithType: CompanionDef.Acceleration
+  fullName: TDMaker.Core.Defs.CompanionDef.Acceleration
+- uid: TDMaker.Core.Defs.CompanionDef.WaitOnOwnerDeath*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.WaitOnOwnerDeath
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_WaitOnOwnerDeath
+  name: WaitOnOwnerDeath
+  nameWithType: CompanionDef.WaitOnOwnerDeath
+  fullName: TDMaker.Core.Defs.CompanionDef.WaitOnOwnerDeath
+- uid: TDMaker.Core.Defs.CompanionDef.RemoveWithOwner*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.RemoveWithOwner
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_RemoveWithOwner
+  name: RemoveWithOwner
+  nameWithType: CompanionDef.RemoveWithOwner
+  fullName: TDMaker.Core.Defs.CompanionDef.RemoveWithOwner
+- uid: TDMaker.Core.Defs.CompanionDef.ReconnectOnReturn*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.ReconnectOnReturn
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_ReconnectOnReturn
+  name: ReconnectOnReturn
+  nameWithType: CompanionDef.ReconnectOnReturn
+  fullName: TDMaker.Core.Defs.CompanionDef.ReconnectOnReturn
+- uid: TDMaker.Core.Defs.CompanionDef.PointRule*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.PointRule
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_PointRule
+  name: PointRule
+  nameWithType: CompanionDef.PointRule
+  fullName: TDMaker.Core.Defs.CompanionDef.PointRule
+- uid: TDMaker.Core.Defs.CompanionDef.RallyRadius*
+  commentId: Overload:TDMaker.Core.Defs.CompanionDef.RallyRadius
+  isExternal: true
+  href: TDMaker.Core.Defs.CompanionDef.html#TDMaker_Core_Defs_CompanionDef_RallyRadius
+  name: RallyRadius
+  nameWithType: CompanionDef.RallyRadius
+  fullName: TDMaker.Core.Defs.CompanionDef.RallyRadius

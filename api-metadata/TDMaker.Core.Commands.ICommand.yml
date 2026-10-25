@@ -1,0 +1,64 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Commands.ICommand
+  commentId: T:TDMaker.Core.Commands.ICommand
+  id: ICommand
+  parent: TDMaker.Core.Commands
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ICommand
+  nameWithType: ICommand
+  fullName: TDMaker.Core.Commands.ICommand
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Commands
+  summary: An immutable input message consumed at the beginning of a tick.
+  example: []
+  syntax:
+    content: public interface ICommand
+    content.vb: Public Interface ICommand
+  derivedClasses:
+  - TDMaker.Core.Commands.BuildTower
+  - TDMaker.Core.Commands.BuyAbility
+  - TDMaker.Core.Commands.CallNextWave
+  - TDMaker.Core.Commands.CastSpell
+  - TDMaker.Core.Commands.MoveHero
+  - TDMaker.Core.Commands.SellTower
+  - TDMaker.Core.Commands.SetRallyPoint
+  - TDMaker.Core.Commands.SetTargetPriority
+  - TDMaker.Core.Commands.SpendHeroPoint
+  - TDMaker.Core.Commands.UpgradeTower
+references:
+- uid: TDMaker.Core.Commands
+  commentId: N:TDMaker.Core.Commands
+  isExternal: true
+  name: TDMaker.Core.Commands
+  nameWithType: TDMaker.Core.Commands
+  fullName: TDMaker.Core.Commands
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true

@@ -1,0 +1,572 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.RangeShape
+  commentId: T:TDMaker.Unity.Authoring.RangeShape
+  id: RangeShape
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.RangeShape.Contains(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Single)
+  - TDMaker.Unity.Authoring.RangeShape.DefaultYScale
+  - TDMaker.Unity.Authoring.RangeShape.DistanceSquared(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+  - TDMaker.Unity.Authoring.RangeShape.Point(UnityEngine.Vector2,System.Single,System.Single,System.Single)
+  - TDMaker.Unity.Authoring.RangeShape.SemiAxes(System.Single,System.Single)
+  - TDMaker.Unity.Authoring.RangeShape.SpriteScale(System.Single,System.Single)
+  langs:
+  - csharp
+  - vb
+  name: RangeShape
+  nameWithType: RangeShape
+  fullName: TDMaker.Unity.Authoring.RangeShape
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'The single source of the range ellipse used by every view, gizmo and editor preview. It matches the simulation
+
+    (<code>Simulation.RangeDistanceSquared</code>): a point is inside when <code>dx²/r² + dy²/(k·r)² ≤ 1</code> (boundary
+    included),
+
+    with <code>k</code> = range Y scale. The horizontal semi-axis is <code>r</code> and the vertical semi-axis is <code>k·r</code>,
+
+    so <code>k &lt; 1</code> flattens the ellipse vertically (an oblique top-down look).'
+  example: []
+  syntax:
+    content: public static class RangeShape
+    content.vb: Public Module RangeShape
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.RangeShape.DefaultYScale
+  commentId: F:TDMaker.Unity.Authoring.RangeShape.DefaultYScale
+  id: DefaultYScale
+  parent: TDMaker.Unity.Authoring.RangeShape
+  langs:
+  - csharp
+  - vb
+  name: DefaultYScale
+  nameWithType: RangeShape.DefaultYScale
+  fullName: TDMaker.Unity.Authoring.RangeShape.DefaultYScale
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Default range Y scale used by samples and fallbacks.
+  example: []
+  syntax:
+    content: public const float DefaultYScale = 0.8
+    return:
+      type: System.Single
+    content.vb: Public Const DefaultYScale As Single = 0.8
+- uid: TDMaker.Unity.Authoring.RangeShape.SemiAxes(System.Single,System.Single)
+  commentId: M:TDMaker.Unity.Authoring.RangeShape.SemiAxes(System.Single,System.Single)
+  id: SemiAxes(System.Single,System.Single)
+  parent: TDMaker.Unity.Authoring.RangeShape
+  langs:
+  - csharp
+  - vb
+  name: SemiAxes(float, float)
+  nameWithType: RangeShape.SemiAxes(float, float)
+  fullName: TDMaker.Unity.Authoring.RangeShape.SemiAxes(float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Horizontal (x) and vertical (y) semi-axes of a range ellipse: <code>(r, k·r)</code>.'
+  example: []
+  syntax:
+    content: public static Vector2 SemiAxes(float range, float yScale)
+    parameters:
+    - id: range
+      type: System.Single
+    - id: yScale
+      type: System.Single
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Function SemiAxes(range As Single, yScale As Single) As Vector2
+  overload: TDMaker.Unity.Authoring.RangeShape.SemiAxes*
+  nameWithType.vb: RangeShape.SemiAxes(Single, Single)
+  fullName.vb: TDMaker.Unity.Authoring.RangeShape.SemiAxes(Single, Single)
+  name.vb: SemiAxes(Single, Single)
+- uid: TDMaker.Unity.Authoring.RangeShape.SpriteScale(System.Single,System.Single)
+  commentId: M:TDMaker.Unity.Authoring.RangeShape.SpriteScale(System.Single,System.Single)
+  id: SpriteScale(System.Single,System.Single)
+  parent: TDMaker.Unity.Authoring.RangeShape
+  langs:
+  - csharp
+  - vb
+  name: SpriteScale(float, float)
+  nameWithType: RangeShape.SpriteScale(float, float)
+  fullName: TDMaker.Unity.Authoring.RangeShape.SpriteScale(float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Local scale for a 1-unit sprite (circle or ring) so it covers the ellipse of radius <code class="paramref">range</code>.
+  example: []
+  syntax:
+    content: public static Vector3 SpriteScale(float range, float yScale)
+    parameters:
+    - id: range
+      type: System.Single
+    - id: yScale
+      type: System.Single
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Shared Function SpriteScale(range As Single, yScale As Single) As Vector3
+  overload: TDMaker.Unity.Authoring.RangeShape.SpriteScale*
+  nameWithType.vb: RangeShape.SpriteScale(Single, Single)
+  fullName.vb: TDMaker.Unity.Authoring.RangeShape.SpriteScale(Single, Single)
+  name.vb: SpriteScale(Single, Single)
+- uid: TDMaker.Unity.Authoring.RangeShape.DistanceSquared(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+  commentId: M:TDMaker.Unity.Authoring.RangeShape.DistanceSquared(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+  id: DistanceSquared(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+  parent: TDMaker.Unity.Authoring.RangeShape
+  langs:
+  - csharp
+  - vb
+  name: DistanceSquared(Vector2, Vector2, float)
+  nameWithType: RangeShape.DistanceSquared(Vector2, Vector2, float)
+  fullName: TDMaker.Unity.Authoring.RangeShape.DistanceSquared(UnityEngine.Vector2, UnityEngine.Vector2, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Elliptical distance squared in horizontal units, equal to the simulation's range metric.
+  example: []
+  syntax:
+    content: public static float DistanceSquared(Vector2 center, Vector2 point, float yScale)
+    parameters:
+    - id: center
+      type: UnityEngine.Vector2
+    - id: point
+      type: UnityEngine.Vector2
+    - id: yScale
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function DistanceSquared(center As Vector2, point As Vector2, yScale As Single) As Single
+  overload: TDMaker.Unity.Authoring.RangeShape.DistanceSquared*
+  nameWithType.vb: RangeShape.DistanceSquared(Vector2, Vector2, Single)
+  fullName.vb: TDMaker.Unity.Authoring.RangeShape.DistanceSquared(UnityEngine.Vector2, UnityEngine.Vector2, Single)
+  name.vb: DistanceSquared(Vector2, Vector2, Single)
+- uid: TDMaker.Unity.Authoring.RangeShape.Contains(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Single)
+  commentId: M:TDMaker.Unity.Authoring.RangeShape.Contains(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Single)
+  id: Contains(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Single)
+  parent: TDMaker.Unity.Authoring.RangeShape
+  langs:
+  - csharp
+  - vb
+  name: Contains(Vector2, Vector2, float, float)
+  nameWithType: RangeShape.Contains(Vector2, Vector2, float, float)
+  fullName: TDMaker.Unity.Authoring.RangeShape.Contains(UnityEngine.Vector2, UnityEngine.Vector2, float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Whether <code class="paramref">point</code> lies inside (or on) the range ellipse around <code class="paramref">center</code>.
+  example: []
+  syntax:
+    content: public static bool Contains(Vector2 center, Vector2 point, float range, float yScale)
+    parameters:
+    - id: center
+      type: UnityEngine.Vector2
+    - id: point
+      type: UnityEngine.Vector2
+    - id: range
+      type: System.Single
+    - id: yScale
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Contains(center As Vector2, point As Vector2, range As Single, yScale As Single) As
+      Boolean
+  overload: TDMaker.Unity.Authoring.RangeShape.Contains*
+  nameWithType.vb: RangeShape.Contains(Vector2, Vector2, Single, Single)
+  fullName.vb: TDMaker.Unity.Authoring.RangeShape.Contains(UnityEngine.Vector2, UnityEngine.Vector2, Single, Single)
+  name.vb: Contains(Vector2, Vector2, Single, Single)
+- uid: TDMaker.Unity.Authoring.RangeShape.Point(UnityEngine.Vector2,System.Single,System.Single,System.Single)
+  commentId: M:TDMaker.Unity.Authoring.RangeShape.Point(UnityEngine.Vector2,System.Single,System.Single,System.Single)
+  id: Point(UnityEngine.Vector2,System.Single,System.Single,System.Single)
+  parent: TDMaker.Unity.Authoring.RangeShape
+  langs:
+  - csharp
+  - vb
+  name: Point(Vector2, float, float, float)
+  nameWithType: RangeShape.Point(Vector2, float, float, float)
+  fullName: TDMaker.Unity.Authoring.RangeShape.Point(UnityEngine.Vector2, float, float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: A point on the ellipse outline at <code class="paramref">angle</code> radians.
+  example: []
+  syntax:
+    content: public static Vector2 Point(Vector2 center, float range, float yScale, float angle)
+    parameters:
+    - id: center
+      type: UnityEngine.Vector2
+    - id: range
+      type: System.Single
+    - id: yScale
+      type: System.Single
+    - id: angle
+      type: System.Single
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Function Point(center As Vector2, range As Single, yScale As Single, angle As Single) As Vector2
+  overload: TDMaker.Unity.Authoring.RangeShape.Point*
+  nameWithType.vb: RangeShape.Point(Vector2, Single, Single, Single)
+  fullName.vb: TDMaker.Unity.Authoring.RangeShape.Point(UnityEngine.Vector2, Single, Single, Single)
+  name.vb: Point(Vector2, Single, Single, Single)
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Authoring.RangeShape.SemiAxes*
+  commentId: Overload:TDMaker.Unity.Authoring.RangeShape.SemiAxes
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RangeShape.html#TDMaker_Unity_Authoring_RangeShape_SemiAxes_System_Single_System_Single_
+  name: SemiAxes
+  nameWithType: RangeShape.SemiAxes
+  fullName: TDMaker.Unity.Authoring.RangeShape.SemiAxes
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Authoring.RangeShape.SpriteScale*
+  commentId: Overload:TDMaker.Unity.Authoring.RangeShape.SpriteScale
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RangeShape.html#TDMaker_Unity_Authoring_RangeShape_SpriteScale_System_Single_System_Single_
+  name: SpriteScale
+  nameWithType: RangeShape.SpriteScale
+  fullName: TDMaker.Unity.Authoring.RangeShape.SpriteScale
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: TDMaker.Unity.Authoring.RangeShape.DistanceSquared*
+  commentId: Overload:TDMaker.Unity.Authoring.RangeShape.DistanceSquared
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RangeShape.html#TDMaker_Unity_Authoring_RangeShape_DistanceSquared_UnityEngine_Vector2_UnityEngine_Vector2_System_Single_
+  name: DistanceSquared
+  nameWithType: RangeShape.DistanceSquared
+  fullName: TDMaker.Unity.Authoring.RangeShape.DistanceSquared
+- uid: TDMaker.Unity.Authoring.RangeShape.Contains*
+  commentId: Overload:TDMaker.Unity.Authoring.RangeShape.Contains
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RangeShape.html#TDMaker_Unity_Authoring_RangeShape_Contains_UnityEngine_Vector2_UnityEngine_Vector2_System_Single_System_Single_
+  name: Contains
+  nameWithType: RangeShape.Contains
+  fullName: TDMaker.Unity.Authoring.RangeShape.Contains
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.RangeShape.Point*
+  commentId: Overload:TDMaker.Unity.Authoring.RangeShape.Point
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RangeShape.html#TDMaker_Unity_Authoring_RangeShape_Point_UnityEngine_Vector2_System_Single_System_Single_System_Single_
+  name: Point
+  nameWithType: RangeShape.Point
+  fullName: TDMaker.Unity.Authoring.RangeShape.Point

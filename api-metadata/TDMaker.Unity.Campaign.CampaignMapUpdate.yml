@@ -1,0 +1,627 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate
+  commentId: T:TDMaker.Unity.Campaign.CampaignMapUpdate
+  id: CampaignMapUpdate
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.CampaignMapUpdate.#ctor
+  - TDMaker.Unity.Campaign.CampaignMapUpdate.Changes
+  - TDMaker.Unity.Campaign.CampaignMapUpdate.HasChanges
+  - TDMaker.Unity.Campaign.CampaignMapUpdate.NewlyOpened
+  - TDMaker.Unity.Campaign.CampaignMapUpdate.StarsGained
+  - TDMaker.Unity.Campaign.CampaignMapUpdate.TryGetChange(System.String,TDMaker.Unity.Campaign.CampaignLevelChange@)
+  langs:
+  - csharp
+  - vb
+  name: CampaignMapUpdate
+  nameWithType: CampaignMapUpdate
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'Everything a map should show after merging victories: new stars, first clears and newly opened levels.'
+  example: []
+  syntax:
+    content: public sealed class CampaignMapUpdate
+    content.vb: Public NotInheritable Class CampaignMapUpdate
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.Changes
+  commentId: F:TDMaker.Unity.Campaign.CampaignMapUpdate.Changes
+  id: Changes
+  parent: TDMaker.Unity.Campaign.CampaignMapUpdate
+  langs:
+  - csharp
+  - vb
+  name: Changes
+  nameWithType: CampaignMapUpdate.Changes
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.Changes
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Levels whose record the merge changed (or that were won again without a better rating).
+  example: []
+  syntax:
+    content: public readonly List<CampaignLevelChange> Changes
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Campaign.CampaignLevelChange}
+    content.vb: Public ReadOnly Changes As List(Of CampaignLevelChange)
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.NewlyOpened
+  commentId: F:TDMaker.Unity.Campaign.CampaignMapUpdate.NewlyOpened
+  id: NewlyOpened
+  parent: TDMaker.Unity.Campaign.CampaignMapUpdate
+  langs:
+  - csharp
+  - vb
+  name: NewlyOpened
+  nameWithType: CampaignMapUpdate.NewlyOpened
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.NewlyOpened
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Keys of the levels that opened (by the merge or by a rule check on map entry).
+  example: []
+  syntax:
+    content: public readonly List<string> NewlyOpened
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public ReadOnly NewlyOpened As List(Of String)
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.TryGetChange(System.String,TDMaker.Unity.Campaign.CampaignLevelChange@)
+  commentId: M:TDMaker.Unity.Campaign.CampaignMapUpdate.TryGetChange(System.String,TDMaker.Unity.Campaign.CampaignLevelChange@)
+  id: TryGetChange(System.String,TDMaker.Unity.Campaign.CampaignLevelChange@)
+  parent: TDMaker.Unity.Campaign.CampaignMapUpdate
+  langs:
+  - csharp
+  - vb
+  name: TryGetChange(string, out CampaignLevelChange)
+  nameWithType: CampaignMapUpdate.TryGetChange(string, out CampaignLevelChange)
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.TryGetChange(string, out TDMaker.Unity.Campaign.CampaignLevelChange)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The change of <code class="paramref">key</code>, if the merge touched it.
+  example: []
+  syntax:
+    content: public bool TryGetChange(string key, out CampaignLevelChange change)
+    parameters:
+    - id: key
+      type: System.String
+    - id: change
+      type: TDMaker.Unity.Campaign.CampaignLevelChange
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetChange(key As String, change As CampaignLevelChange) As Boolean
+  overload: TDMaker.Unity.Campaign.CampaignMapUpdate.TryGetChange*
+  nameWithType.vb: CampaignMapUpdate.TryGetChange(String, CampaignLevelChange)
+  fullName.vb: TDMaker.Unity.Campaign.CampaignMapUpdate.TryGetChange(String, TDMaker.Unity.Campaign.CampaignLevelChange)
+  name.vb: TryGetChange(String, CampaignLevelChange)
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.#ctor
+  commentId: M:TDMaker.Unity.Campaign.CampaignMapUpdate.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Campaign.CampaignMapUpdate
+  langs:
+  - csharp
+  - vb
+  name: CampaignMapUpdate()
+  nameWithType: CampaignMapUpdate.CampaignMapUpdate()
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.CampaignMapUpdate()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  syntax:
+    content: public CampaignMapUpdate()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Campaign.CampaignMapUpdate.#ctor*
+  nameWithType.vb: CampaignMapUpdate.New()
+  fullName.vb: TDMaker.Unity.Campaign.CampaignMapUpdate.New()
+  name.vb: New()
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.StarsGained
+  commentId: P:TDMaker.Unity.Campaign.CampaignMapUpdate.StarsGained
+  id: StarsGained
+  parent: TDMaker.Unity.Campaign.CampaignMapUpdate
+  langs:
+  - csharp
+  - vb
+  name: StarsGained
+  nameWithType: CampaignMapUpdate.StarsGained
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.StarsGained
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Total stars the merge added.
+  example: []
+  syntax:
+    content: public int StarsGained { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property StarsGained As Integer
+  overload: TDMaker.Unity.Campaign.CampaignMapUpdate.StarsGained*
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.HasChanges
+  commentId: P:TDMaker.Unity.Campaign.CampaignMapUpdate.HasChanges
+  id: HasChanges
+  parent: TDMaker.Unity.Campaign.CampaignMapUpdate
+  langs:
+  - csharp
+  - vb
+  name: HasChanges
+  nameWithType: CampaignMapUpdate.HasChanges
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.HasChanges
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Whether there is anything to show.
+  example: []
+  syntax:
+    content: public bool HasChanges { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasChanges As Boolean
+  overload: TDMaker.Unity.Campaign.CampaignMapUpdate.HasChanges*
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{TDMaker.Unity.Campaign.CampaignLevelChange}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Campaign.CampaignLevelChange}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<CampaignLevelChange>
+  nameWithType: List<CampaignLevelChange>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Campaign.CampaignLevelChange>
+  nameWithType.vb: List(Of CampaignLevelChange)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Campaign.CampaignLevelChange)
+  name.vb: List(Of CampaignLevelChange)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Campaign.CampaignLevelChange
+    name: CampaignLevelChange
+    isExternal: true
+    href: TDMaker.Unity.Campaign.CampaignLevelChange.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Campaign.CampaignLevelChange
+    name: CampaignLevelChange
+    isExternal: true
+    href: TDMaker.Unity.Campaign.CampaignLevelChange.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.TryGetChange*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignMapUpdate.TryGetChange
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignMapUpdate.html#TDMaker_Unity_Campaign_CampaignMapUpdate_TryGetChange_System_String_TDMaker_Unity_Campaign_CampaignLevelChange__
+  name: TryGetChange
+  nameWithType: CampaignMapUpdate.TryGetChange
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.TryGetChange
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Campaign.CampaignLevelChange
+  commentId: T:TDMaker.Unity.Campaign.CampaignLevelChange
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignLevelChange.html
+  name: CampaignLevelChange
+  nameWithType: CampaignLevelChange
+  fullName: TDMaker.Unity.Campaign.CampaignLevelChange
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.#ctor*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignMapUpdate.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignMapUpdate.html#TDMaker_Unity_Campaign_CampaignMapUpdate__ctor
+  name: CampaignMapUpdate
+  nameWithType: CampaignMapUpdate.CampaignMapUpdate
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.CampaignMapUpdate
+  nameWithType.vb: CampaignMapUpdate.New
+  fullName.vb: TDMaker.Unity.Campaign.CampaignMapUpdate.New
+  name.vb: New
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.StarsGained*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignMapUpdate.StarsGained
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignMapUpdate.html#TDMaker_Unity_Campaign_CampaignMapUpdate_StarsGained
+  name: StarsGained
+  nameWithType: CampaignMapUpdate.StarsGained
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.StarsGained
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.Campaign.CampaignMapUpdate.HasChanges*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignMapUpdate.HasChanges
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignMapUpdate.html#TDMaker_Unity_Campaign_CampaignMapUpdate_HasChanges
+  name: HasChanges
+  nameWithType: CampaignMapUpdate.HasChanges
+  fullName: TDMaker.Unity.Campaign.CampaignMapUpdate.HasChanges

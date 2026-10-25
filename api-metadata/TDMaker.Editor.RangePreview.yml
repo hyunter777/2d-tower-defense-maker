@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.RangePreview
+  commentId: T:TDMaker.Editor.RangePreview
+  id: RangePreview
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.RangePreview.DefaultYScale
+  - TDMaker.Editor.RangePreview.Draw(UnityEngine.Vector3,System.Single,System.Single,UnityEngine.Color,System.Single,System.Single)
+  - TDMaker.Editor.RangePreview.For(TDMaker.Unity.Authoring.LevelAsset)
+  - TDMaker.Editor.RangePreview.Invalidate
+  - TDMaker.Editor.RangePreview.SceneYScale
+  langs:
+  - csharp
+  - vb
+  name: RangePreview
+  nameWithType: RangePreview
+  fullName: TDMaker.Editor.RangePreview
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Scene-view drawing of range ellipses using exactly the simulation''s shape (<xref href="TDMaker.Unity.Authoring.RangeShape"
+    data-throw-if-not-resolved="false"></xref>),
+
+    with the range Y scale resolved from the open scene''s level and runner.'
+  example: []
+  syntax:
+    content: public static class RangePreview
+    content.vb: Public Module RangePreview
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.RangePreview.DefaultYScale
+  commentId: F:TDMaker.Editor.RangePreview.DefaultYScale
+  id: DefaultYScale
+  parent: TDMaker.Editor.RangePreview
+  langs:
+  - csharp
+  - vb
+  name: DefaultYScale
+  nameWithType: RangePreview.DefaultYScale
+  fullName: TDMaker.Editor.RangePreview.DefaultYScale
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Fallback range Y scale when no scene runner or level override is found.
+  example: []
+  syntax:
+    content: public const float DefaultYScale = 0.8
+    return:
+      type: System.Single
+    content.vb: Public Const DefaultYScale As Single = 0.8
+- uid: TDMaker.Editor.RangePreview.For(TDMaker.Unity.Authoring.LevelAsset)
+  commentId: M:TDMaker.Editor.RangePreview.For(TDMaker.Unity.Authoring.LevelAsset)
+  id: For(TDMaker.Unity.Authoring.LevelAsset)
+  parent: TDMaker.Editor.RangePreview
+  langs:
+  - csharp
+  - vb
+  name: For(LevelAsset)
+  nameWithType: RangePreview.For(LevelAsset)
+  fullName: TDMaker.Editor.RangePreview.For(TDMaker.Unity.Authoring.LevelAsset)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Range Y scale for a specific level asset (its override, else the scene value).
+  example: []
+  syntax:
+    content: public static float For(LevelAsset level)
+    parameters:
+    - id: level
+      type: TDMaker.Unity.Authoring.LevelAsset
+    return:
+      type: System.Single
+    content.vb: Public Shared Function [For](level As LevelAsset) As Single
+  overload: TDMaker.Editor.RangePreview.For*
+- uid: TDMaker.Editor.RangePreview.Invalidate
+  commentId: M:TDMaker.Editor.RangePreview.Invalidate
+  id: Invalidate
+  parent: TDMaker.Editor.RangePreview
+  langs:
+  - csharp
+  - vb
+  name: Invalidate()
+  nameWithType: RangePreview.Invalidate()
+  fullName: TDMaker.Editor.RangePreview.Invalidate()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Forces the cached scene value to refresh on next access.
+  example: []
+  syntax:
+    content: public static void Invalidate()
+    content.vb: Public Shared Sub Invalidate()
+  overload: TDMaker.Editor.RangePreview.Invalidate*
+- uid: TDMaker.Editor.RangePreview.Draw(UnityEngine.Vector3,System.Single,System.Single,UnityEngine.Color,System.Single,System.Single)
+  commentId: M:TDMaker.Editor.RangePreview.Draw(UnityEngine.Vector3,System.Single,System.Single,UnityEngine.Color,System.Single,System.Single)
+  id: Draw(UnityEngine.Vector3,System.Single,System.Single,UnityEngine.Color,System.Single,System.Single)
+  parent: TDMaker.Editor.RangePreview
+  langs:
+  - csharp
+  - vb
+  name: Draw(Vector3, float, float, Color, float, float)
+  nameWithType: RangePreview.Draw(Vector3, float, float, Color, float, float)
+  fullName: TDMaker.Editor.RangePreview.Draw(UnityEngine.Vector3, float, float, UnityEngine.Color, float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws a filled range ellipse with an outline at <code class="paramref">center</code>.
+  example: []
+  syntax:
+    content: public static void Draw(Vector3 center, float range, float yScale, Color color, float fillAlpha = 0.08, float
+      lineWidth = 2)
+    parameters:
+    - id: center
+      type: UnityEngine.Vector3
+    - id: range
+      type: System.Single
+    - id: yScale
+      type: System.Single
+    - id: color
+      type: UnityEngine.Color
+    - id: fillAlpha
+      type: System.Single
+    - id: lineWidth
+      type: System.Single
+    content.vb: Public Shared Sub Draw(center As Vector3, range As Single, yScale As Single, color As Color, fillAlpha As
+      Single = 0.08, lineWidth As Single = 2)
+  overload: TDMaker.Editor.RangePreview.Draw*
+  nameWithType.vb: RangePreview.Draw(Vector3, Single, Single, Color, Single, Single)
+  fullName.vb: TDMaker.Editor.RangePreview.Draw(UnityEngine.Vector3, Single, Single, UnityEngine.Color, Single, Single)
+  name.vb: Draw(Vector3, Single, Single, Color, Single, Single)
+- uid: TDMaker.Editor.RangePreview.SceneYScale
+  commentId: P:TDMaker.Editor.RangePreview.SceneYScale
+  id: SceneYScale
+  parent: TDMaker.Editor.RangePreview
+  langs:
+  - csharp
+  - vb
+  name: SceneYScale
+  nameWithType: RangePreview.SceneYScale
+  fullName: TDMaker.Editor.RangePreview.SceneYScale
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Range Y scale the open scene would simulate with (level override, else runner setting, else default).
+  example: []
+  syntax:
+    content: public static float SceneYScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property SceneYScale As Single
+  overload: TDMaker.Editor.RangePreview.SceneYScale*
+references:
+- uid: TDMaker.Unity.Authoring.RangeShape
+  commentId: T:TDMaker.Unity.Authoring.RangeShape
+  isExternal: true
+  href: TDMaker.Unity.Authoring.RangeShape.html
+  name: RangeShape
+  nameWithType: RangeShape
+  fullName: TDMaker.Unity.Authoring.RangeShape
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Editor.RangePreview.For*
+  commentId: Overload:TDMaker.Editor.RangePreview.For
+  isExternal: true
+  href: TDMaker.Editor.RangePreview.html#TDMaker_Editor_RangePreview_For_TDMaker_Unity_Authoring_LevelAsset_
+  name: For
+  nameWithType: RangePreview.For
+  fullName: TDMaker.Editor.RangePreview.For
+- uid: TDMaker.Unity.Authoring.LevelAsset
+  commentId: T:TDMaker.Unity.Authoring.LevelAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelAsset.html
+  name: LevelAsset
+  nameWithType: LevelAsset
+  fullName: TDMaker.Unity.Authoring.LevelAsset
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Editor.RangePreview.Invalidate*
+  commentId: Overload:TDMaker.Editor.RangePreview.Invalidate
+  isExternal: true
+  href: TDMaker.Editor.RangePreview.html#TDMaker_Editor_RangePreview_Invalidate
+  name: Invalidate
+  nameWithType: RangePreview.Invalidate
+  fullName: TDMaker.Editor.RangePreview.Invalidate
+- uid: TDMaker.Editor.RangePreview.Draw*
+  commentId: Overload:TDMaker.Editor.RangePreview.Draw
+  isExternal: true
+  href: TDMaker.Editor.RangePreview.html#TDMaker_Editor_RangePreview_Draw_UnityEngine_Vector3_System_Single_System_Single_UnityEngine_Color_System_Single_System_Single_
+  name: Draw
+  nameWithType: RangePreview.Draw
+  fullName: TDMaker.Editor.RangePreview.Draw
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Editor.RangePreview.SceneYScale*
+  commentId: Overload:TDMaker.Editor.RangePreview.SceneYScale
+  isExternal: true
+  href: TDMaker.Editor.RangePreview.html#TDMaker_Editor_RangePreview_SceneYScale
+  name: SceneYScale
+  nameWithType: RangePreview.SceneYScale
+  fullName: TDMaker.Editor.RangePreview.SceneYScale

@@ -1,0 +1,1085 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.TrapData
+  commentId: T:TDMaker.Unity.Authoring.TrapData
+  id: TrapData
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.TrapData.#ctor
+  - TDMaker.Unity.Authoring.TrapData.Id
+  - TDMaker.Unity.Authoring.TrapData.ToDef
+  - TDMaker.Unity.Authoring.TrapData.area
+  - TDMaker.Unity.Authoring.TrapData.armDelay
+  - TDMaker.Unity.Authoring.TrapData.cancelWithSource
+  - TDMaker.Unity.Authoring.TrapData.color
+  - TDMaker.Unity.Authoring.TrapData.damage
+  - TDMaker.Unity.Authoring.TrapData.id
+  - TDMaker.Unity.Authoring.TrapData.lifetime
+  - TDMaker.Unity.Authoring.TrapData.maxTriggers
+  - TDMaker.Unity.Authoring.TrapData.offset
+  - TDMaker.Unity.Authoring.TrapData.placement
+  - TDMaker.Unity.Authoring.TrapData.placementRange
+  - TDMaker.Unity.Authoring.TrapData.pointRule
+  - TDMaker.Unity.Authoring.TrapData.populationLimit
+  - TDMaker.Unity.Authoring.TrapData.targets
+  - TDMaker.Unity.Authoring.TrapData.targetsEnemies
+  - TDMaker.Unity.Authoring.TrapData.targetsFlying
+  - TDMaker.Unity.Authoring.TrapData.targetsGround
+  - TDMaker.Unity.Authoring.TrapData.triggerCooldown
+  - TDMaker.Unity.Authoring.TrapData.triggerRadius
+  - TDMaker.Unity.Authoring.TrapData.useCustomPointRule
+  - TDMaker.Unity.Authoring.TrapData.vfx
+  langs:
+  - csharp
+  - vb
+  name: TrapData
+  nameWithType: TrapData
+  fullName: TDMaker.Unity.Authoring.TrapData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'A fixed-position deployment (mine, snare, glyph) placed by an ability action, baked into <xref href="TDMaker.Core.Defs.TrapDef"
+    data-throw-if-not-resolved="false"></xref>.
+
+    It arms after a delay, then hits the nearest eligible unit inside its detection radius until its triggers or lifetime
+    run out.
+
+    Use it as an ability action (<xref href="TDMaker.Unity.Authoring.AbilityActionData.useTrap" data-throw-if-not-resolved="false"></xref>).'
+  example: []
+  syntax:
+    content: public sealed class TrapData
+    content.vb: Public NotInheritable Class TrapData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Authoring.TrapData.id
+  commentId: F:TDMaker.Unity.Authoring.TrapData.id
+  id: id
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: TrapData.id
+  fullName: TDMaker.Unity.Authoring.TrapData.id
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Event key (also selects the marker colour in the view and counts toward the population limit).
+  example: []
+  syntax:
+    content: public string id
+    return:
+      type: System.String
+    content.vb: Public id As String
+- uid: TDMaker.Unity.Authoring.TrapData.damage
+  commentId: F:TDMaker.Unity.Authoring.TrapData.damage
+  id: damage
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: damage
+  nameWithType: TrapData.damage
+  fullName: TDMaker.Unity.Authoring.TrapData.damage
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Hit on trigger: an area packet is centred on the trap, a single-target packet hits the triggering unit.'
+  example: []
+  syntax:
+    content: public DamageData damage
+    return:
+      type: TDMaker.Unity.Authoring.DamageData
+    content.vb: Public damage As DamageData
+- uid: TDMaker.Unity.Authoring.TrapData.triggerRadius
+  commentId: F:TDMaker.Unity.Authoring.TrapData.triggerRadius
+  id: triggerRadius
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: triggerRadius
+  nameWithType: TrapData.triggerRadius
+  fullName: TDMaker.Unity.Authoring.TrapData.triggerRadius
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Detection radius (range ellipse), independent of the damage radius.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float triggerRadius'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public triggerRadius As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.TrapData.lifetime
+  commentId: F:TDMaker.Unity.Authoring.TrapData.lifetime
+  id: lifetime
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: lifetime
+  nameWithType: TrapData.lifetime
+  fullName: TDMaker.Unity.Authoring.TrapData.lifetime
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Total lifetime in game seconds, including arming.
+  example: []
+  syntax:
+    content: '[Min(0.05)]
+
+      public float lifetime'
+    return:
+      type: System.Single
+    content.vb: '<Min(0.05)>
+
+      Public lifetime As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0.05
+- uid: TDMaker.Unity.Authoring.TrapData.armDelay
+  commentId: F:TDMaker.Unity.Authoring.TrapData.armDelay
+  id: armDelay
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: armDelay
+  nameWithType: TrapData.armDelay
+  fullName: TDMaker.Unity.Authoring.TrapData.armDelay
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Delay before the trap can trigger (must be shorter than the lifetime).
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float armDelay'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public armDelay As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.TrapData.maxTriggers
+  commentId: F:TDMaker.Unity.Authoring.TrapData.maxTriggers
+  id: maxTriggers
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: maxTriggers
+  nameWithType: TrapData.maxTriggers
+  fullName: TDMaker.Unity.Authoring.TrapData.maxTriggers
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Activations before the trap is used up.
+  example: []
+  syntax:
+    content: '[Min(1)]
+
+      public int maxTriggers'
+    return:
+      type: System.Int32
+    content.vb: '<Min(1)>
+
+      Public maxTriggers As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 1
+- uid: TDMaker.Unity.Authoring.TrapData.triggerCooldown
+  commentId: F:TDMaker.Unity.Authoring.TrapData.triggerCooldown
+  id: triggerCooldown
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: triggerCooldown
+  nameWithType: TrapData.triggerCooldown
+  fullName: TDMaker.Unity.Authoring.TrapData.triggerCooldown
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Delay between activations (at most one per tick).
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float triggerCooldown'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public triggerCooldown As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.TrapData.populationLimit
+  commentId: F:TDMaker.Unity.Authoring.TrapData.populationLimit
+  id: populationLimit
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: populationLimit
+  nameWithType: TrapData.populationLimit
+  fullName: TDMaker.Unity.Authoring.TrapData.populationLimit
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Maximum live traps with this id per source; zero is unlimited.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public int populationLimit'
+    return:
+      type: System.Int32
+    content.vb: '<Min(0)>
+
+      Public populationLimit As Integer'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.TrapData.area
+  commentId: F:TDMaker.Unity.Authoring.TrapData.area
+  id: area
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: area
+  nameWithType: TrapData.area
+  fullName: TDMaker.Unity.Authoring.TrapData.area
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional region left at the trap on every trigger.
+  example: []
+  syntax:
+    content: public AreaEffectData area
+    return:
+      type: TDMaker.Unity.Authoring.AreaEffectData
+    content.vb: Public area As AreaEffectData
+- uid: TDMaker.Unity.Authoring.TrapData.targetsEnemies
+  commentId: F:TDMaker.Unity.Authoring.TrapData.targetsEnemies
+  id: targetsEnemies
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: targetsEnemies
+  nameWithType: TrapData.targetsEnemies
+  fullName: TDMaker.Unity.Authoring.TrapData.targetsEnemies
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Triggered by enemies (otherwise by friendly soldiers and heroes).
+  example: []
+  syntax:
+    content: public bool targetsEnemies
+    return:
+      type: System.Boolean
+    content.vb: Public targetsEnemies As Boolean
+- uid: TDMaker.Unity.Authoring.TrapData.targetsFlying
+  commentId: F:TDMaker.Unity.Authoring.TrapData.targetsFlying
+  id: targetsFlying
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: targetsFlying
+  nameWithType: TrapData.targetsFlying
+  fullName: TDMaker.Unity.Authoring.TrapData.targetsFlying
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Flying units can trigger it.
+  example: []
+  syntax:
+    content: public bool targetsFlying
+    return:
+      type: System.Boolean
+    content.vb: Public targetsFlying As Boolean
+- uid: TDMaker.Unity.Authoring.TrapData.targetsGround
+  commentId: F:TDMaker.Unity.Authoring.TrapData.targetsGround
+  id: targetsGround
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: targetsGround
+  nameWithType: TrapData.targetsGround
+  fullName: TDMaker.Unity.Authoring.TrapData.targetsGround
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Ground units can trigger it.
+  example: []
+  syntax:
+    content: public bool targetsGround
+    return:
+      type: System.Boolean
+    content.vb: Public targetsGround As Boolean
+- uid: TDMaker.Unity.Authoring.TrapData.targets
+  commentId: F:TDMaker.Unity.Authoring.TrapData.targets
+  id: targets
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: targets
+  nameWithType: TrapData.targets
+  fullName: TDMaker.Unity.Authoring.TrapData.targets
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Extra trigger eligibility (area victims use normal damage eligibility).
+  example: []
+  syntax:
+    content: public MechanicTargetData targets
+    return:
+      type: TDMaker.Unity.Authoring.MechanicTargetData
+    content.vb: Public targets As MechanicTargetData
+- uid: TDMaker.Unity.Authoring.TrapData.cancelWithSource
+  commentId: F:TDMaker.Unity.Authoring.TrapData.cancelWithSource
+  id: cancelWithSource
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: cancelWithSource
+  nameWithType: TrapData.cancelWithSource
+  fullName: TDMaker.Unity.Authoring.TrapData.cancelWithSource
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Removes the trap when its source dies or disappears (off = the trap outlives its source).
+  example: []
+  syntax:
+    content: public bool cancelWithSource
+    return:
+      type: System.Boolean
+    content.vb: Public cancelWithSource As Boolean
+- uid: TDMaker.Unity.Authoring.TrapData.placement
+  commentId: F:TDMaker.Unity.Authoring.TrapData.placement
+  id: placement
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: placement
+  nameWithType: TrapData.placement
+  fullName: TDMaker.Unity.Authoring.TrapData.placement
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: 'Where the ability puts the trap: source position, rally point, or the nearest eligible unit within <xref href="TDMaker.Unity.Authoring.TrapData.placementRange"
+    data-throw-if-not-resolved="false"></xref>.'
+  example: []
+  syntax:
+    content: public TrapPlacement placement
+    return:
+      type: TDMaker.Core.Defs.TrapPlacement
+    content.vb: Public placement As TrapPlacement
+- uid: TDMaker.Unity.Authoring.TrapData.placementRange
+  commentId: F:TDMaker.Unity.Authoring.TrapData.placementRange
+  id: placementRange
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: placementRange
+  nameWithType: TrapData.placementRange
+  fullName: TDMaker.Unity.Authoring.TrapData.placementRange
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Search range for <xref href="TDMaker.Core.Defs.TrapPlacement.Opponent" data-throw-if-not-resolved="false"></xref>
+    placement.
+  example: []
+  syntax:
+    content: '[Min(0)]
+
+      public float placementRange'
+    return:
+      type: System.Single
+    content.vb: '<Min(0)>
+
+      Public placementRange As Single'
+  attributes:
+  - type: UnityEngine.MinAttribute
+    ctor: UnityEngine.MinAttribute.#ctor(System.Single)
+    arguments:
+    - type: System.Single
+      value: 0
+- uid: TDMaker.Unity.Authoring.TrapData.offset
+  commentId: F:TDMaker.Unity.Authoring.TrapData.offset
+  id: offset
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: offset
+  nameWithType: TrapData.offset
+  fullName: TDMaker.Unity.Authoring.TrapData.offset
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: World offset applied before point validation.
+  example: []
+  syntax:
+    content: public Vector2 offset
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public offset As Vector2
+- uid: TDMaker.Unity.Authoring.TrapData.useCustomPointRule
+  commentId: F:TDMaker.Unity.Authoring.TrapData.useCustomPointRule
+  id: useCustomPointRule
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: useCustomPointRule
+  nameWithType: TrapData.useCustomPointRule
+  fullName: TDMaker.Unity.Authoring.TrapData.useCustomPointRule
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Uses <xref href="TDMaker.Unity.Authoring.TrapData.pointRule" data-throw-if-not-resolved="false"></xref> instead
+    of the default rule (snap onto the nearest lane).
+  example: []
+  syntax:
+    content: public bool useCustomPointRule
+    return:
+      type: System.Boolean
+    content.vb: Public useCustomPointRule As Boolean
+- uid: TDMaker.Unity.Authoring.TrapData.pointRule
+  commentId: F:TDMaker.Unity.Authoring.TrapData.pointRule
+  id: pointRule
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: pointRule
+  nameWithType: TrapData.pointRule
+  fullName: TDMaker.Unity.Authoring.TrapData.pointRule
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Custom placement rule; rejected points cancel the activation.
+  example: []
+  syntax:
+    content: public PointRuleData pointRule
+    return:
+      type: TDMaker.Unity.Authoring.PointRuleData
+    content.vb: Public pointRule As PointRuleData
+- uid: TDMaker.Unity.Authoring.TrapData.color
+  commentId: F:TDMaker.Unity.Authoring.TrapData.color
+  id: color
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: color
+  nameWithType: TrapData.color
+  fullName: TDMaker.Unity.Authoring.TrapData.color
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Marker, detection ring and trigger flash colour.
+  example: []
+  syntax:
+    content: public Color color
+    return:
+      type: UnityEngine.Color
+    content.vb: Public color As Color
+- uid: TDMaker.Unity.Authoring.TrapData.vfx
+  commentId: F:TDMaker.Unity.Authoring.TrapData.vfx
+  id: vfx
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: vfx
+  nameWithType: TrapData.vfx
+  fullName: TDMaker.Unity.Authoring.TrapData.vfx
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Optional pooled VFX spawned on each trigger.
+  example: []
+  syntax:
+    content: public GameObject vfx
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public vfx As GameObject
+- uid: TDMaker.Unity.Authoring.TrapData.ToDef
+  commentId: M:TDMaker.Unity.Authoring.TrapData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: TrapData.ToDef()
+  fullName: TDMaker.Unity.Authoring.TrapData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Bakes the trap definition.
+  example: []
+  syntax:
+    content: public TrapDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.TrapDef
+    content.vb: Public Function ToDef() As TrapDef
+  overload: TDMaker.Unity.Authoring.TrapData.ToDef*
+- uid: TDMaker.Unity.Authoring.TrapData.#ctor
+  commentId: M:TDMaker.Unity.Authoring.TrapData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: TrapData()
+  nameWithType: TrapData.TrapData()
+  fullName: TDMaker.Unity.Authoring.TrapData.TrapData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  syntax:
+    content: public TrapData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Authoring.TrapData.#ctor*
+  nameWithType.vb: TrapData.New()
+  fullName.vb: TDMaker.Unity.Authoring.TrapData.New()
+  name.vb: New()
+- uid: TDMaker.Unity.Authoring.TrapData.Id
+  commentId: P:TDMaker.Unity.Authoring.TrapData.Id
+  id: Id
+  parent: TDMaker.Unity.Authoring.TrapData
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: TrapData.Id
+  fullName: TDMaker.Unity.Authoring.TrapData.Id
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: The resolved event key.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Unity.Authoring.TrapData.Id*
+references:
+- uid: TDMaker.Core.Defs.TrapDef
+  commentId: T:TDMaker.Core.Defs.TrapDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html
+  name: TrapDef
+  nameWithType: TrapDef
+  fullName: TDMaker.Core.Defs.TrapDef
+- uid: TDMaker.Unity.Authoring.AbilityActionData.useTrap
+  commentId: F:TDMaker.Unity.Authoring.AbilityActionData.useTrap
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_useTrap
+  name: useTrap
+  nameWithType: AbilityActionData.useTrap
+  fullName: TDMaker.Unity.Authoring.AbilityActionData.useTrap
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Authoring.DamageData
+  commentId: T:TDMaker.Unity.Authoring.DamageData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.DamageData.html
+  name: DamageData
+  nameWithType: DamageData
+  fullName: TDMaker.Unity.Authoring.DamageData
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.Authoring.AreaEffectData
+  commentId: T:TDMaker.Unity.Authoring.AreaEffectData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AreaEffectData.html
+  name: AreaEffectData
+  nameWithType: AreaEffectData
+  fullName: TDMaker.Unity.Authoring.AreaEffectData
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Authoring.MechanicTargetData
+  commentId: T:TDMaker.Unity.Authoring.MechanicTargetData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.MechanicTargetData.html
+  name: MechanicTargetData
+  nameWithType: MechanicTargetData
+  fullName: TDMaker.Unity.Authoring.MechanicTargetData
+- uid: TDMaker.Unity.Authoring.TrapData.placementRange
+  commentId: F:TDMaker.Unity.Authoring.TrapData.placementRange
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TrapData.html#TDMaker_Unity_Authoring_TrapData_placementRange
+  name: placementRange
+  nameWithType: TrapData.placementRange
+  fullName: TDMaker.Unity.Authoring.TrapData.placementRange
+- uid: TDMaker.Core.Defs.TrapPlacement
+  commentId: T:TDMaker.Core.Defs.TrapPlacement
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapPlacement.html
+  name: TrapPlacement
+  nameWithType: TrapPlacement
+  fullName: TDMaker.Core.Defs.TrapPlacement
+- uid: TDMaker.Core.Defs.TrapPlacement.Opponent
+  commentId: F:TDMaker.Core.Defs.TrapPlacement.Opponent
+  isExternal: true
+  name: Opponent
+  nameWithType: TrapPlacement.Opponent
+  fullName: TDMaker.Core.Defs.TrapPlacement.Opponent
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Authoring.TrapData.pointRule
+  commentId: F:TDMaker.Unity.Authoring.TrapData.pointRule
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TrapData.html#TDMaker_Unity_Authoring_TrapData_pointRule
+  name: pointRule
+  nameWithType: TrapData.pointRule
+  fullName: TDMaker.Unity.Authoring.TrapData.pointRule
+- uid: TDMaker.Unity.Authoring.PointRuleData
+  commentId: T:TDMaker.Unity.Authoring.PointRuleData
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PointRuleData.html
+  name: PointRuleData
+  nameWithType: PointRuleData
+  fullName: TDMaker.Unity.Authoring.PointRuleData
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: TDMaker.Unity.Authoring.TrapData.ToDef*
+  commentId: Overload:TDMaker.Unity.Authoring.TrapData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TrapData.html#TDMaker_Unity_Authoring_TrapData_ToDef
+  name: ToDef
+  nameWithType: TrapData.ToDef
+  fullName: TDMaker.Unity.Authoring.TrapData.ToDef
+- uid: TDMaker.Unity.Authoring.TrapData.#ctor*
+  commentId: Overload:TDMaker.Unity.Authoring.TrapData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TrapData.html#TDMaker_Unity_Authoring_TrapData__ctor
+  name: TrapData
+  nameWithType: TrapData.TrapData
+  fullName: TDMaker.Unity.Authoring.TrapData.TrapData
+  nameWithType.vb: TrapData.New
+  fullName.vb: TDMaker.Unity.Authoring.TrapData.New
+  name.vb: New
+- uid: TDMaker.Unity.Authoring.TrapData.Id*
+  commentId: Overload:TDMaker.Unity.Authoring.TrapData.Id
+  isExternal: true
+  href: TDMaker.Unity.Authoring.TrapData.html#TDMaker_Unity_Authoring_TrapData_Id
+  name: Id
+  nameWithType: TrapData.Id
+  fullName: TDMaker.Unity.Authoring.TrapData.Id

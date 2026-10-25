@@ -1,0 +1,602 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.EntityRulesDef
+  commentId: T:TDMaker.Core.Defs.EntityRulesDef
+  id: EntityRulesDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.EntityRulesDef.#ctor(TDMaker.Core.Defs.RecoveryDef,System.Single,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.AbilityRankDef,TDMaker.Core.Defs.TargetTraitsDef)
+  - TDMaker.Core.Defs.EntityRulesDef.Behavior
+  - TDMaker.Core.Defs.EntityRulesDef.DeathSummon
+  - TDMaker.Core.Defs.EntityRulesDef.MeleeEvasion
+  - TDMaker.Core.Defs.EntityRulesDef.Recovery
+  - TDMaker.Core.Defs.EntityRulesDef.Reflection
+  - TDMaker.Core.Defs.EntityRulesDef.Traits
+  - TDMaker.Core.Defs.EntityRulesDef.WithReflection(TDMaker.Core.Defs.ReflectionDef)
+  langs:
+  - csharp
+  - vb
+  name: EntityRulesDef
+  nameWithType: EntityRulesDef
+  fullName: TDMaker.Core.Defs.EntityRulesDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional behavior slots; generic actions also extend enemy behavior without named unit subclasses.
+  example: []
+  syntax:
+    content: public sealed class EntityRulesDef
+    content.vb: Public NotInheritable Class EntityRulesDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.EntityRulesDef.WithReflection(TDMaker.Core.Defs.ReflectionDef)
+  commentId: M:TDMaker.Core.Defs.EntityRulesDef.WithReflection(TDMaker.Core.Defs.ReflectionDef)
+  id: WithReflection(TDMaker.Core.Defs.ReflectionDef)
+  parent: TDMaker.Core.Defs.EntityRulesDef
+  langs:
+  - csharp
+  - vb
+  name: WithReflection(ReflectionDef)
+  nameWithType: EntityRulesDef.WithReflection(ReflectionDef)
+  fullName: TDMaker.Core.Defs.EntityRulesDef.WithReflection(TDMaker.Core.Defs.ReflectionDef)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies all behavior and trait settings and adds reflection.
+  example: []
+  syntax:
+    content: public EntityRulesDef WithReflection(ReflectionDef reflection)
+    parameters:
+    - id: reflection
+      type: TDMaker.Core.Defs.ReflectionDef
+    return:
+      type: TDMaker.Core.Defs.EntityRulesDef
+    content.vb: Public Function WithReflection(reflection As ReflectionDef) As EntityRulesDef
+  overload: TDMaker.Core.Defs.EntityRulesDef.WithReflection*
+- uid: TDMaker.Core.Defs.EntityRulesDef.#ctor(TDMaker.Core.Defs.RecoveryDef,System.Single,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.AbilityRankDef,TDMaker.Core.Defs.TargetTraitsDef)
+  commentId: M:TDMaker.Core.Defs.EntityRulesDef.#ctor(TDMaker.Core.Defs.RecoveryDef,System.Single,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.AbilityRankDef,TDMaker.Core.Defs.TargetTraitsDef)
+  id: '#ctor(TDMaker.Core.Defs.RecoveryDef,System.Single,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.AbilityRankDef,TDMaker.Core.Defs.TargetTraitsDef)'
+  parent: TDMaker.Core.Defs.EntityRulesDef
+  langs:
+  - csharp
+  - vb
+  name: EntityRulesDef(RecoveryDef, float, SummonDef, AbilityRankDef, TargetTraitsDef)
+  nameWithType: EntityRulesDef.EntityRulesDef(RecoveryDef, float, SummonDef, AbilityRankDef, TargetTraitsDef)
+  fullName: TDMaker.Core.Defs.EntityRulesDef.EntityRulesDef(TDMaker.Core.Defs.RecoveryDef, float, TDMaker.Core.Defs.SummonDef,
+    TDMaker.Core.Defs.AbilityRankDef, TDMaker.Core.Defs.TargetTraitsDef)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates behavior extensions.
+  example: []
+  syntax:
+    content: public EntityRulesDef(RecoveryDef recovery = null, float meleeEvasion = 0, SummonDef deathSummon = null, AbilityRankDef
+      behavior = null, TargetTraitsDef traits = null)
+    parameters:
+    - id: recovery
+      type: TDMaker.Core.Defs.RecoveryDef
+    - id: meleeEvasion
+      type: System.Single
+    - id: deathSummon
+      type: TDMaker.Core.Defs.SummonDef
+    - id: behavior
+      type: TDMaker.Core.Defs.AbilityRankDef
+    - id: traits
+      type: TDMaker.Core.Defs.TargetTraitsDef
+    content.vb: Public Sub New(recovery As RecoveryDef = Nothing, meleeEvasion As Single = 0, deathSummon As SummonDef = Nothing,
+      behavior As AbilityRankDef = Nothing, traits As TargetTraitsDef = Nothing)
+  overload: TDMaker.Core.Defs.EntityRulesDef.#ctor*
+  nameWithType.vb: EntityRulesDef.New(RecoveryDef, Single, SummonDef, AbilityRankDef, TargetTraitsDef)
+  fullName.vb: TDMaker.Core.Defs.EntityRulesDef.New(TDMaker.Core.Defs.RecoveryDef, Single, TDMaker.Core.Defs.SummonDef, TDMaker.Core.Defs.AbilityRankDef,
+    TDMaker.Core.Defs.TargetTraitsDef)
+  name.vb: New(RecoveryDef, Single, SummonDef, AbilityRankDef, TargetTraitsDef)
+- uid: TDMaker.Core.Defs.EntityRulesDef.Reflection
+  commentId: P:TDMaker.Core.Defs.EntityRulesDef.Reflection
+  id: Reflection
+  parent: TDMaker.Core.Defs.EntityRulesDef
+  langs:
+  - csharp
+  - vb
+  name: Reflection
+  nameWithType: EntityRulesDef.Reflection
+  fullName: TDMaker.Core.Defs.EntityRulesDef.Reflection
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional native one-bounce reflection on the recipient.
+  example: []
+  syntax:
+    content: public ReflectionDef Reflection { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.ReflectionDef
+    content.vb: Public ReadOnly Property Reflection As ReflectionDef
+  overload: TDMaker.Core.Defs.EntityRulesDef.Reflection*
+- uid: TDMaker.Core.Defs.EntityRulesDef.Recovery
+  commentId: P:TDMaker.Core.Defs.EntityRulesDef.Recovery
+  id: Recovery
+  parent: TDMaker.Core.Defs.EntityRulesDef
+  langs:
+  - csharp
+  - vb
+  name: Recovery
+  nameWithType: EntityRulesDef.Recovery
+  fullName: TDMaker.Core.Defs.EntityRulesDef.Recovery
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional health recovery.
+  example: []
+  syntax:
+    content: public RecoveryDef Recovery { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.RecoveryDef
+    content.vb: Public ReadOnly Property Recovery As RecoveryDef
+  overload: TDMaker.Core.Defs.EntityRulesDef.Recovery*
+- uid: TDMaker.Core.Defs.EntityRulesDef.MeleeEvasion
+  commentId: P:TDMaker.Core.Defs.EntityRulesDef.MeleeEvasion
+  id: MeleeEvasion
+  parent: TDMaker.Core.Defs.EntityRulesDef
+  langs:
+  - csharp
+  - vb
+  name: MeleeEvasion
+  nameWithType: EntityRulesDef.MeleeEvasion
+  fullName: TDMaker.Core.Defs.EntityRulesDef.MeleeEvasion
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Probability of avoiding a melee strike only.
+  example: []
+  syntax:
+    content: public float MeleeEvasion { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MeleeEvasion As Single
+  overload: TDMaker.Core.Defs.EntityRulesDef.MeleeEvasion*
+- uid: TDMaker.Core.Defs.EntityRulesDef.DeathSummon
+  commentId: P:TDMaker.Core.Defs.EntityRulesDef.DeathSummon
+  id: DeathSummon
+  parent: TDMaker.Core.Defs.EntityRulesDef
+  langs:
+  - csharp
+  - vb
+  name: DeathSummon
+  nameWithType: EntityRulesDef.DeathSummon
+  fullName: TDMaker.Core.Defs.EntityRulesDef.DeathSummon
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional death emission, including delayed enemy spawns.
+  example: []
+  syntax:
+    content: public SummonDef DeathSummon { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.SummonDef
+    content.vb: Public ReadOnly Property DeathSummon As SummonDef
+  overload: TDMaker.Core.Defs.EntityRulesDef.DeathSummon*
+- uid: TDMaker.Core.Defs.EntityRulesDef.Behavior
+  commentId: P:TDMaker.Core.Defs.EntityRulesDef.Behavior
+  id: Behavior
+  parent: TDMaker.Core.Defs.EntityRulesDef
+  langs:
+  - csharp
+  - vb
+  name: Behavior
+  nameWithType: EntityRulesDef.Behavior
+  fullName: TDMaker.Core.Defs.EntityRulesDef.Behavior
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Always-active generic behavior actions.
+  example: []
+  syntax:
+    content: public AbilityRankDef Behavior { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.AbilityRankDef
+    content.vb: Public ReadOnly Property Behavior As AbilityRankDef
+  overload: TDMaker.Core.Defs.EntityRulesDef.Behavior*
+- uid: TDMaker.Core.Defs.EntityRulesDef.Traits
+  commentId: P:TDMaker.Core.Defs.EntityRulesDef.Traits
+  id: Traits
+  parent: TDMaker.Core.Defs.EntityRulesDef
+  langs:
+  - csharp
+  - vb
+  name: Traits
+  nameWithType: EntityRulesDef.Traits
+  fullName: TDMaker.Core.Defs.EntityRulesDef.Traits
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Eligibility and immunity data.
+  example: []
+  syntax:
+    content: public TargetTraitsDef Traits { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TargetTraitsDef
+    content.vb: Public ReadOnly Property Traits As TargetTraitsDef
+  overload: TDMaker.Core.Defs.EntityRulesDef.Traits*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.EntityRulesDef.WithReflection*
+  commentId: Overload:TDMaker.Core.Defs.EntityRulesDef.WithReflection
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html#TDMaker_Core_Defs_EntityRulesDef_WithReflection_TDMaker_Core_Defs_ReflectionDef_
+  name: WithReflection
+  nameWithType: EntityRulesDef.WithReflection
+  fullName: TDMaker.Core.Defs.EntityRulesDef.WithReflection
+- uid: TDMaker.Core.Defs.ReflectionDef
+  commentId: T:TDMaker.Core.Defs.ReflectionDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ReflectionDef.html
+  name: ReflectionDef
+  nameWithType: ReflectionDef
+  fullName: TDMaker.Core.Defs.ReflectionDef
+- uid: TDMaker.Core.Defs.EntityRulesDef
+  commentId: T:TDMaker.Core.Defs.EntityRulesDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html
+  name: EntityRulesDef
+  nameWithType: EntityRulesDef
+  fullName: TDMaker.Core.Defs.EntityRulesDef
+- uid: TDMaker.Core.Defs.EntityRulesDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.EntityRulesDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html#TDMaker_Core_Defs_EntityRulesDef__ctor_TDMaker_Core_Defs_RecoveryDef_System_Single_TDMaker_Core_Defs_SummonDef_TDMaker_Core_Defs_AbilityRankDef_TDMaker_Core_Defs_TargetTraitsDef_
+  name: EntityRulesDef
+  nameWithType: EntityRulesDef.EntityRulesDef
+  fullName: TDMaker.Core.Defs.EntityRulesDef.EntityRulesDef
+  nameWithType.vb: EntityRulesDef.New
+  fullName.vb: TDMaker.Core.Defs.EntityRulesDef.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.RecoveryDef
+  commentId: T:TDMaker.Core.Defs.RecoveryDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.RecoveryDef.html
+  name: RecoveryDef
+  nameWithType: RecoveryDef
+  fullName: TDMaker.Core.Defs.RecoveryDef
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.SummonDef
+  commentId: T:TDMaker.Core.Defs.SummonDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.SummonDef.html
+  name: SummonDef
+  nameWithType: SummonDef
+  fullName: TDMaker.Core.Defs.SummonDef
+- uid: TDMaker.Core.Defs.AbilityRankDef
+  commentId: T:TDMaker.Core.Defs.AbilityRankDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityRankDef.html
+  name: AbilityRankDef
+  nameWithType: AbilityRankDef
+  fullName: TDMaker.Core.Defs.AbilityRankDef
+- uid: TDMaker.Core.Defs.TargetTraitsDef
+  commentId: T:TDMaker.Core.Defs.TargetTraitsDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetTraitsDef.html
+  name: TargetTraitsDef
+  nameWithType: TargetTraitsDef
+  fullName: TDMaker.Core.Defs.TargetTraitsDef
+- uid: TDMaker.Core.Defs.EntityRulesDef.Reflection*
+  commentId: Overload:TDMaker.Core.Defs.EntityRulesDef.Reflection
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html#TDMaker_Core_Defs_EntityRulesDef_Reflection
+  name: Reflection
+  nameWithType: EntityRulesDef.Reflection
+  fullName: TDMaker.Core.Defs.EntityRulesDef.Reflection
+- uid: TDMaker.Core.Defs.EntityRulesDef.Recovery*
+  commentId: Overload:TDMaker.Core.Defs.EntityRulesDef.Recovery
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html#TDMaker_Core_Defs_EntityRulesDef_Recovery
+  name: Recovery
+  nameWithType: EntityRulesDef.Recovery
+  fullName: TDMaker.Core.Defs.EntityRulesDef.Recovery
+- uid: TDMaker.Core.Defs.EntityRulesDef.MeleeEvasion*
+  commentId: Overload:TDMaker.Core.Defs.EntityRulesDef.MeleeEvasion
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html#TDMaker_Core_Defs_EntityRulesDef_MeleeEvasion
+  name: MeleeEvasion
+  nameWithType: EntityRulesDef.MeleeEvasion
+  fullName: TDMaker.Core.Defs.EntityRulesDef.MeleeEvasion
+- uid: TDMaker.Core.Defs.EntityRulesDef.DeathSummon*
+  commentId: Overload:TDMaker.Core.Defs.EntityRulesDef.DeathSummon
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html#TDMaker_Core_Defs_EntityRulesDef_DeathSummon
+  name: DeathSummon
+  nameWithType: EntityRulesDef.DeathSummon
+  fullName: TDMaker.Core.Defs.EntityRulesDef.DeathSummon
+- uid: TDMaker.Core.Defs.EntityRulesDef.Behavior*
+  commentId: Overload:TDMaker.Core.Defs.EntityRulesDef.Behavior
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html#TDMaker_Core_Defs_EntityRulesDef_Behavior
+  name: Behavior
+  nameWithType: EntityRulesDef.Behavior
+  fullName: TDMaker.Core.Defs.EntityRulesDef.Behavior
+- uid: TDMaker.Core.Defs.EntityRulesDef.Traits*
+  commentId: Overload:TDMaker.Core.Defs.EntityRulesDef.Traits
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html#TDMaker_Core_Defs_EntityRulesDef_Traits
+  name: Traits
+  nameWithType: EntityRulesDef.Traits
+  fullName: TDMaker.Core.Defs.EntityRulesDef.Traits

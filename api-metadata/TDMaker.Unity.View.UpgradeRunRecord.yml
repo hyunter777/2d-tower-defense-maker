@@ -1,0 +1,748 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.View.UpgradeRunRecord
+  commentId: T:TDMaker.Unity.View.UpgradeRunRecord
+  id: UpgradeRunRecord
+  parent: TDMaker.Unity.View
+  children:
+  - TDMaker.Unity.View.UpgradeRunRecord.#ctor
+  - TDMaker.Unity.View.UpgradeRunRecord.Capture(TDMaker.Unity.Campaign.UpgradeShopAsset,System.Func{System.String,System.Int32},System.Int32)
+  - TDMaker.Unity.View.UpgradeRunRecord.HasEffect(TDMaker.Unity.Campaign.UpgradeShopAsset)
+  - TDMaker.Unity.View.UpgradeRunRecord.RankOf(System.String)
+  - TDMaker.Unity.View.UpgradeRunRecord.forcedRank
+  - TDMaker.Unity.View.UpgradeRunRecord.ranks
+  - TDMaker.Unity.View.UpgradeRunRecord.shop
+  langs:
+  - csharp
+  - vb
+  name: UpgradeRunRecord
+  nameWithType: UpgradeRunRecord
+  fullName: TDMaker.Unity.View.UpgradeRunRecord
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: 'The permanent upgrades of one run: the shop''s name, the purchased rank of every track and the forced rank (-1
+    = none).
+
+    Saved next to a recorded command log (<code>&lt;file&gt;.upgrades.json</code>) so a replay rebuilds the same snapshot.'
+  example: []
+  syntax:
+    content: public sealed class UpgradeRunRecord
+    content.vb: Public NotInheritable Class UpgradeRunRecord
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.View.UpgradeRunRecord.shop
+  commentId: F:TDMaker.Unity.View.UpgradeRunRecord.shop
+  id: shop
+  parent: TDMaker.Unity.View.UpgradeRunRecord
+  langs:
+  - csharp
+  - vb
+  name: shop
+  nameWithType: UpgradeRunRecord.shop
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.shop
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Name of the shop asset (informational).
+  example: []
+  syntax:
+    content: public string shop
+    return:
+      type: System.String
+    content.vb: Public shop As String
+- uid: TDMaker.Unity.View.UpgradeRunRecord.forcedRank
+  commentId: F:TDMaker.Unity.View.UpgradeRunRecord.forcedRank
+  id: forcedRank
+  parent: TDMaker.Unity.View.UpgradeRunRecord
+  langs:
+  - csharp
+  - vb
+  name: forcedRank
+  nameWithType: UpgradeRunRecord.forcedRank
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.forcedRank
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Rank forced on every track, or -1.
+  example: []
+  syntax:
+    content: public int forcedRank
+    return:
+      type: System.Int32
+    content.vb: Public forcedRank As Integer
+- uid: TDMaker.Unity.View.UpgradeRunRecord.ranks
+  commentId: F:TDMaker.Unity.View.UpgradeRunRecord.ranks
+  id: ranks
+  parent: TDMaker.Unity.View.UpgradeRunRecord
+  langs:
+  - csharp
+  - vb
+  name: ranks
+  nameWithType: UpgradeRunRecord.ranks
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.ranks
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Purchased rank per track key.
+  example: []
+  syntax:
+    content: public List<UpgradeRankRecord> ranks
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Campaign.UpgradeRankRecord}
+    content.vb: Public ranks As List(Of UpgradeRankRecord)
+- uid: TDMaker.Unity.View.UpgradeRunRecord.RankOf(System.String)
+  commentId: M:TDMaker.Unity.View.UpgradeRunRecord.RankOf(System.String)
+  id: RankOf(System.String)
+  parent: TDMaker.Unity.View.UpgradeRunRecord
+  langs:
+  - csharp
+  - vb
+  name: RankOf(string)
+  nameWithType: UpgradeRunRecord.RankOf(string)
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.RankOf(string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Purchased rank of <code class="paramref">track</code> (0 when absent).
+  example: []
+  syntax:
+    content: public int RankOf(string track)
+    parameters:
+    - id: track
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Public Function RankOf(track As String) As Integer
+  overload: TDMaker.Unity.View.UpgradeRunRecord.RankOf*
+  nameWithType.vb: UpgradeRunRecord.RankOf(String)
+  fullName.vb: TDMaker.Unity.View.UpgradeRunRecord.RankOf(String)
+  name.vb: RankOf(String)
+- uid: TDMaker.Unity.View.UpgradeRunRecord.HasEffect(TDMaker.Unity.Campaign.UpgradeShopAsset)
+  commentId: M:TDMaker.Unity.View.UpgradeRunRecord.HasEffect(TDMaker.Unity.Campaign.UpgradeShopAsset)
+  id: HasEffect(TDMaker.Unity.Campaign.UpgradeShopAsset)
+  parent: TDMaker.Unity.View.UpgradeRunRecord
+  langs:
+  - csharp
+  - vb
+  name: HasEffect(UpgradeShopAsset)
+  nameWithType: UpgradeRunRecord.HasEffect(UpgradeShopAsset)
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.HasEffect(TDMaker.Unity.Campaign.UpgradeShopAsset)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Whether the record applies any rank of <code class="paramref">shop</code>.
+  example: []
+  syntax:
+    content: public bool HasEffect(UpgradeShopAsset shop)
+    parameters:
+    - id: shop
+      type: TDMaker.Unity.Campaign.UpgradeShopAsset
+    return:
+      type: System.Boolean
+    content.vb: Public Function HasEffect(shop As UpgradeShopAsset) As Boolean
+  overload: TDMaker.Unity.View.UpgradeRunRecord.HasEffect*
+- uid: TDMaker.Unity.View.UpgradeRunRecord.Capture(TDMaker.Unity.Campaign.UpgradeShopAsset,System.Func{System.String,System.Int32},System.Int32)
+  commentId: M:TDMaker.Unity.View.UpgradeRunRecord.Capture(TDMaker.Unity.Campaign.UpgradeShopAsset,System.Func{System.String,System.Int32},System.Int32)
+  id: Capture(TDMaker.Unity.Campaign.UpgradeShopAsset,System.Func{System.String,System.Int32},System.Int32)
+  parent: TDMaker.Unity.View.UpgradeRunRecord
+  langs:
+  - csharp
+  - vb
+  name: Capture(UpgradeShopAsset, Func<string, int>, int)
+  nameWithType: UpgradeRunRecord.Capture(UpgradeShopAsset, Func<string, int>, int)
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.Capture(TDMaker.Unity.Campaign.UpgradeShopAsset, System.Func<string, int>,
+    int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Copies the ranks <code class="paramref">purchased</code> reports for every track of <code class="paramref">shop</code>.
+  example: []
+  syntax:
+    content: public static UpgradeRunRecord Capture(UpgradeShopAsset shop, Func<string, int> purchased, int forced = -1)
+    parameters:
+    - id: shop
+      type: TDMaker.Unity.Campaign.UpgradeShopAsset
+    - id: purchased
+      type: System.Func{System.String,System.Int32}
+    - id: forced
+      type: System.Int32
+    return:
+      type: TDMaker.Unity.View.UpgradeRunRecord
+    content.vb: Public Shared Function Capture(shop As UpgradeShopAsset, purchased As Func(Of String, Integer), forced As
+      Integer = -1) As UpgradeRunRecord
+  overload: TDMaker.Unity.View.UpgradeRunRecord.Capture*
+  nameWithType.vb: UpgradeRunRecord.Capture(UpgradeShopAsset, Func(Of String, Integer), Integer)
+  fullName.vb: TDMaker.Unity.View.UpgradeRunRecord.Capture(TDMaker.Unity.Campaign.UpgradeShopAsset, System.Func(Of String,
+    Integer), Integer)
+  name.vb: Capture(UpgradeShopAsset, Func(Of String, Integer), Integer)
+- uid: TDMaker.Unity.View.UpgradeRunRecord.#ctor
+  commentId: M:TDMaker.Unity.View.UpgradeRunRecord.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.View.UpgradeRunRecord
+  langs:
+  - csharp
+  - vb
+  name: UpgradeRunRecord()
+  nameWithType: UpgradeRunRecord.UpgradeRunRecord()
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.UpgradeRunRecord()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public UpgradeRunRecord()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.View.UpgradeRunRecord.#ctor*
+  nameWithType.vb: UpgradeRunRecord.New()
+  fullName.vb: TDMaker.Unity.View.UpgradeRunRecord.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.List{TDMaker.Unity.Campaign.UpgradeRankRecord}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Campaign.UpgradeRankRecord}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<UpgradeRankRecord>
+  nameWithType: List<UpgradeRankRecord>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Campaign.UpgradeRankRecord>
+  nameWithType.vb: List(Of UpgradeRankRecord)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Campaign.UpgradeRankRecord)
+  name.vb: List(Of UpgradeRankRecord)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Campaign.UpgradeRankRecord
+    name: UpgradeRankRecord
+    isExternal: true
+    href: TDMaker.Unity.Campaign.UpgradeRankRecord.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Campaign.UpgradeRankRecord
+    name: UpgradeRankRecord
+    isExternal: true
+    href: TDMaker.Unity.Campaign.UpgradeRankRecord.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Unity.View.UpgradeRunRecord.RankOf*
+  commentId: Overload:TDMaker.Unity.View.UpgradeRunRecord.RankOf
+  isExternal: true
+  href: TDMaker.Unity.View.UpgradeRunRecord.html#TDMaker_Unity_View_UpgradeRunRecord_RankOf_System_String_
+  name: RankOf
+  nameWithType: UpgradeRunRecord.RankOf
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.RankOf
+- uid: TDMaker.Unity.View.UpgradeRunRecord.HasEffect*
+  commentId: Overload:TDMaker.Unity.View.UpgradeRunRecord.HasEffect
+  isExternal: true
+  href: TDMaker.Unity.View.UpgradeRunRecord.html#TDMaker_Unity_View_UpgradeRunRecord_HasEffect_TDMaker_Unity_Campaign_UpgradeShopAsset_
+  name: HasEffect
+  nameWithType: UpgradeRunRecord.HasEffect
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.HasEffect
+- uid: TDMaker.Unity.Campaign.UpgradeShopAsset
+  commentId: T:TDMaker.Unity.Campaign.UpgradeShopAsset
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeShopAsset.html
+  name: UpgradeShopAsset
+  nameWithType: UpgradeShopAsset
+  fullName: TDMaker.Unity.Campaign.UpgradeShopAsset
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: TDMaker.Unity.View.UpgradeRunRecord.Capture*
+  commentId: Overload:TDMaker.Unity.View.UpgradeRunRecord.Capture
+  isExternal: true
+  href: TDMaker.Unity.View.UpgradeRunRecord.html#TDMaker_Unity_View_UpgradeRunRecord_Capture_TDMaker_Unity_Campaign_UpgradeShopAsset_System_Func_System_String_System_Int32__System_Int32_
+  name: Capture
+  nameWithType: UpgradeRunRecord.Capture
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.Capture
+- uid: System.Func{System.String,System.Int32}
+  commentId: T:System.Func{System.String,System.Int32}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<string, int>
+  nameWithType: Func<string, int>
+  fullName: System.Func<string, int>
+  nameWithType.vb: Func(Of String, Integer)
+  fullName.vb: System.Func(Of String, Integer)
+  name.vb: Func(Of String, Integer)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: TDMaker.Unity.View.UpgradeRunRecord
+  commentId: T:TDMaker.Unity.View.UpgradeRunRecord
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.UpgradeRunRecord.html
+  name: UpgradeRunRecord
+  nameWithType: UpgradeRunRecord
+  fullName: TDMaker.Unity.View.UpgradeRunRecord
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: ' '
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: ','
+  - name: ' '
+  - name: TResult
+  - name: )
+- uid: TDMaker.Unity.View.UpgradeRunRecord.#ctor*
+  commentId: Overload:TDMaker.Unity.View.UpgradeRunRecord.#ctor
+  isExternal: true
+  href: TDMaker.Unity.View.UpgradeRunRecord.html#TDMaker_Unity_View_UpgradeRunRecord__ctor
+  name: UpgradeRunRecord
+  nameWithType: UpgradeRunRecord.UpgradeRunRecord
+  fullName: TDMaker.Unity.View.UpgradeRunRecord.UpgradeRunRecord
+  nameWithType.vb: UpgradeRunRecord.New
+  fullName.vb: TDMaker.Unity.View.UpgradeRunRecord.New
+  name.vb: New

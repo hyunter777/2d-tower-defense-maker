@@ -1,0 +1,179 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.UnitSandbox.Verdict
+  commentId: T:TDMaker.Editor.UnitSandbox.Verdict
+  id: UnitSandbox.Verdict
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.UnitSandbox.Verdict.Defeat
+  - TDMaker.Editor.UnitSandbox.Verdict.Error
+  - TDMaker.Editor.UnitSandbox.Verdict.Held
+  - TDMaker.Editor.UnitSandbox.Verdict.Leaked
+  - TDMaker.Editor.UnitSandbox.Verdict.TimeLimit
+  langs:
+  - csharp
+  - vb
+  name: UnitSandbox.Verdict
+  nameWithType: UnitSandbox.Verdict
+  fullName: TDMaker.Editor.UnitSandbox.Verdict
+  type: Enum
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: How a sandbox run ended, judged by what reached the exit (the test level has spare lives, so its phase alone says
+    little).
+  example: []
+  syntax:
+    content: public enum UnitSandbox.Verdict
+    content.vb: Public Enum UnitSandbox.Verdict
+- uid: TDMaker.Editor.UnitSandbox.Verdict.Error
+  commentId: F:TDMaker.Editor.UnitSandbox.Verdict.Error
+  id: Error
+  parent: TDMaker.Editor.UnitSandbox.Verdict
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: UnitSandbox.Verdict.Error
+  fullName: TDMaker.Editor.UnitSandbox.Verdict.Error
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The run could not be built or simulated.
+  example: []
+  syntax:
+    content: Error = 0
+    return:
+      type: TDMaker.Editor.UnitSandbox.Verdict
+- uid: TDMaker.Editor.UnitSandbox.Verdict.Held
+  commentId: F:TDMaker.Editor.UnitSandbox.Verdict.Held
+  id: Held
+  parent: TDMaker.Editor.UnitSandbox.Verdict
+  langs:
+  - csharp
+  - vb
+  name: Held
+  nameWithType: UnitSandbox.Verdict.Held
+  fullName: TDMaker.Editor.UnitSandbox.Verdict.Held
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Every enemy was stopped: nothing reached the exit and no lives were lost.'
+  example: []
+  syntax:
+    content: Held = 1
+    return:
+      type: TDMaker.Editor.UnitSandbox.Verdict
+- uid: TDMaker.Editor.UnitSandbox.Verdict.Leaked
+  commentId: F:TDMaker.Editor.UnitSandbox.Verdict.Leaked
+  id: Leaked
+  parent: TDMaker.Editor.UnitSandbox.Verdict
+  langs:
+  - csharp
+  - vb
+  name: Leaked
+  nameWithType: UnitSandbox.Verdict.Leaked
+  fullName: TDMaker.Editor.UnitSandbox.Verdict.Leaked
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: At least one enemy reached the exit (lives were lost).
+  example: []
+  syntax:
+    content: Leaked = 2
+    return:
+      type: TDMaker.Editor.UnitSandbox.Verdict
+- uid: TDMaker.Editor.UnitSandbox.Verdict.TimeLimit
+  commentId: F:TDMaker.Editor.UnitSandbox.Verdict.TimeLimit
+  id: TimeLimit
+  parent: TDMaker.Editor.UnitSandbox.Verdict
+  langs:
+  - csharp
+  - vb
+  name: TimeLimit
+  nameWithType: UnitSandbox.Verdict.TimeLimit
+  fullName: TDMaker.Editor.UnitSandbox.Verdict.TimeLimit
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The time limit ended the run with enemies still on the lane.
+  example: []
+  syntax:
+    content: TimeLimit = 3
+    return:
+      type: TDMaker.Editor.UnitSandbox.Verdict
+- uid: TDMaker.Editor.UnitSandbox.Verdict.Defeat
+  commentId: F:TDMaker.Editor.UnitSandbox.Verdict.Defeat
+  id: Defeat
+  parent: TDMaker.Editor.UnitSandbox.Verdict
+  langs:
+  - csharp
+  - vb
+  name: Defeat
+  nameWithType: UnitSandbox.Verdict.Defeat
+  fullName: TDMaker.Editor.UnitSandbox.Verdict.Defeat
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The level itself was lost (all lives gone).
+  example: []
+  syntax:
+    content: Defeat = 4
+    return:
+      type: TDMaker.Editor.UnitSandbox.Verdict
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: TDMaker.Editor.UnitSandbox.Verdict
+  commentId: T:TDMaker.Editor.UnitSandbox.Verdict
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html
+  name: UnitSandbox.Verdict
+  nameWithType: UnitSandbox.Verdict
+  fullName: TDMaker.Editor.UnitSandbox.Verdict
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.Verdict
+    name: Verdict
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Verdict.html
+  spec.vb:
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.Verdict
+    name: Verdict
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Verdict.html

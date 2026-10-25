@@ -1,0 +1,149 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.IPointRule
+  commentId: T:TDMaker.Core.Defs.IPointRule
+  id: IPointRule
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.IPointRule.TryResolve(TDMaker.Core.Simulation,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  langs:
+  - csharp
+  - vb
+  name: IPointRule
+  nameWithType: IPointRule
+  fullName: TDMaker.Core.Defs.IPointRule
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Author-supplied terrain validation; implementations must be deterministic and allocation-free.
+  example: []
+  syntax:
+    content: public interface IPointRule
+    content.vb: Public Interface IPointRule
+- uid: TDMaker.Core.Defs.IPointRule.TryResolve(TDMaker.Core.Simulation,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  commentId: M:TDMaker.Core.Defs.IPointRule.TryResolve(TDMaker.Core.Simulation,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  id: TryResolve(TDMaker.Core.Simulation,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  parent: TDMaker.Core.Defs.IPointRule
+  langs:
+  - csharp
+  - vb
+  name: TryResolve(Simulation, Vec2, out Vec2)
+  nameWithType: IPointRule.TryResolve(Simulation, Vec2, out Vec2)
+  fullName: TDMaker.Core.Defs.IPointRule.TryResolve(TDMaker.Core.Simulation, TDMaker.Core.Vec2, out TDMaker.Core.Vec2)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Accepts or rejects a candidate using the same logic for preview and command processing.
+  example: []
+  syntax:
+    content: bool TryResolve(Simulation simulation, Vec2 candidate, out Vec2 accepted)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    - id: candidate
+      type: TDMaker.Core.Vec2
+    - id: accepted
+      type: TDMaker.Core.Vec2
+    return:
+      type: System.Boolean
+    content.vb: Function TryResolve(simulation As Simulation, candidate As Vec2, accepted As Vec2) As Boolean
+  overload: TDMaker.Core.Defs.IPointRule.TryResolve*
+  nameWithType.vb: IPointRule.TryResolve(Simulation, Vec2, Vec2)
+  fullName.vb: TDMaker.Core.Defs.IPointRule.TryResolve(TDMaker.Core.Simulation, TDMaker.Core.Vec2, TDMaker.Core.Vec2)
+  name.vb: TryResolve(Simulation, Vec2, Vec2)
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.IPointRule.TryResolve*
+  commentId: Overload:TDMaker.Core.Defs.IPointRule.TryResolve
+  isExternal: true
+  href: TDMaker.Core.Defs.IPointRule.html#TDMaker_Core_Defs_IPointRule_TryResolve_TDMaker_Core_Simulation_TDMaker_Core_Vec2_TDMaker_Core_Vec2__
+  name: TryResolve
+  nameWithType: IPointRule.TryResolve
+  fullName: TDMaker.Core.Defs.IPointRule.TryResolve
+- uid: TDMaker.Core.Simulation
+  commentId: T:TDMaker.Core.Simulation
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Simulation.html
+  name: Simulation
+  nameWithType: Simulation
+  fullName: TDMaker.Core.Simulation
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

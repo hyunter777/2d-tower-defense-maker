@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.FacingMode
+  commentId: T:TDMaker.Unity.Authoring.FacingMode
+  id: FacingMode
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.FacingMode.FlipSprite
+  - TDMaker.Unity.Authoring.FacingMode.None
+  - TDMaker.Unity.Authoring.FacingMode.ScaleX
+  langs:
+  - csharp
+  - vb
+  name: FacingMode
+  nameWithType: FacingMode
+  fullName: TDMaker.Unity.Authoring.FacingMode
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: How a view mirrors itself to face its movement direction.
+  example: []
+  syntax:
+    content: public enum FacingMode
+    content.vb: Public Enum FacingMode
+- uid: TDMaker.Unity.Authoring.FacingMode.None
+  commentId: F:TDMaker.Unity.Authoring.FacingMode.None
+  id: None
+  parent: TDMaker.Unity.Authoring.FacingMode
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: FacingMode.None
+  fullName: TDMaker.Unity.Authoring.FacingMode.None
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Never flips.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TDMaker.Unity.Authoring.FacingMode
+- uid: TDMaker.Unity.Authoring.FacingMode.FlipSprite
+  commentId: F:TDMaker.Unity.Authoring.FacingMode.FlipSprite
+  id: FlipSprite
+  parent: TDMaker.Unity.Authoring.FacingMode
+  langs:
+  - csharp
+  - vb
+  name: FlipSprite
+  nameWithType: FacingMode.FlipSprite
+  fullName: TDMaker.Unity.Authoring.FacingMode.FlipSprite
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Uses <code>SpriteRenderer.flipX</code> on the body.
+  example: []
+  syntax:
+    content: FlipSprite = 1
+    return:
+      type: TDMaker.Unity.Authoring.FacingMode
+- uid: TDMaker.Unity.Authoring.FacingMode.ScaleX
+  commentId: F:TDMaker.Unity.Authoring.FacingMode.ScaleX
+  id: ScaleX
+  parent: TDMaker.Unity.Authoring.FacingMode
+  langs:
+  - csharp
+  - vb
+  name: ScaleX
+  nameWithType: FacingMode.ScaleX
+  fullName: TDMaker.Unity.Authoring.FacingMode.ScaleX
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Negates the body's local X scale (works for multi-sprite rigs).
+  example: []
+  syntax:
+    content: ScaleX = 2
+    return:
+      type: TDMaker.Unity.Authoring.FacingMode
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.FacingMode
+  commentId: T:TDMaker.Unity.Authoring.FacingMode
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.FacingMode.html
+  name: FacingMode
+  nameWithType: FacingMode
+  fullName: TDMaker.Unity.Authoring.FacingMode

@@ -1,0 +1,412 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.SimLimits
+  commentId: T:TDMaker.Core.SimLimits
+  id: SimLimits
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.SimLimits.#ctor(System.Int32,System.Int32,System.Int32)
+  - TDMaker.Core.SimLimits.Areas
+  - TDMaker.Core.SimLimits.Effects
+  - TDMaker.Core.SimLimits.Schedules
+  langs:
+  - csharp
+  - vb
+  name: SimLimits
+  nameWithType: SimLimits
+  fullName: TDMaker.Core.SimLimits
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Fixed M2 pool sizes. Saturated requests fail without allocating in the tick path.
+  example: []
+  syntax:
+    content: public sealed class SimLimits
+    content.vb: Public NotInheritable Class SimLimits
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.SimLimits.#ctor(System.Int32,System.Int32,System.Int32)
+  commentId: M:TDMaker.Core.SimLimits.#ctor(System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32)'
+  parent: TDMaker.Core.SimLimits
+  langs:
+  - csharp
+  - vb
+  name: SimLimits(int, int, int)
+  nameWithType: SimLimits.SimLimits(int, int, int)
+  fullName: TDMaker.Core.SimLimits.SimLimits(int, int, int)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Creates fixed M2 pool limits.
+  example: []
+  syntax:
+    content: public SimLimits(int effects = 4096, int areas = 256, int schedules = 1024)
+    parameters:
+    - id: effects
+      type: System.Int32
+    - id: areas
+      type: System.Int32
+    - id: schedules
+      type: System.Int32
+    content.vb: Public Sub New(effects As Integer = 4096, areas As Integer = 256, schedules As Integer = 1024)
+  overload: TDMaker.Core.SimLimits.#ctor*
+  nameWithType.vb: SimLimits.New(Integer, Integer, Integer)
+  fullName.vb: TDMaker.Core.SimLimits.New(Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer)
+- uid: TDMaker.Core.SimLimits.Effects
+  commentId: P:TDMaker.Core.SimLimits.Effects
+  id: Effects
+  parent: TDMaker.Core.SimLimits
+  langs:
+  - csharp
+  - vb
+  name: Effects
+  nameWithType: SimLimits.Effects
+  fullName: TDMaker.Core.SimLimits.Effects
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Maximum simultaneous accepted and pending attached effects.
+  example: []
+  syntax:
+    content: public int Effects { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Effects As Integer
+  overload: TDMaker.Core.SimLimits.Effects*
+- uid: TDMaker.Core.SimLimits.Areas
+  commentId: P:TDMaker.Core.SimLimits.Areas
+  id: Areas
+  parent: TDMaker.Core.SimLimits
+  langs:
+  - csharp
+  - vb
+  name: Areas
+  nameWithType: SimLimits.Areas
+  fullName: TDMaker.Core.SimLimits.Areas
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Maximum simultaneous emitted regions.
+  example: []
+  syntax:
+    content: public int Areas { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Areas As Integer
+  overload: TDMaker.Core.SimLimits.Areas*
+- uid: TDMaker.Core.SimLimits.Schedules
+  commentId: P:TDMaker.Core.SimLimits.Schedules
+  id: Schedules
+  parent: TDMaker.Core.SimLimits
+  langs:
+  - csharp
+  - vb
+  name: Schedules
+  nameWithType: SimLimits.Schedules
+  fullName: TDMaker.Core.SimLimits.Schedules
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Maximum delayed summon and strike sequences.
+  example: []
+  syntax:
+    content: public int Schedules { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Schedules As Integer
+  overload: TDMaker.Core.SimLimits.Schedules*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.SimLimits.#ctor*
+  commentId: Overload:TDMaker.Core.SimLimits.#ctor
+  isExternal: true
+  href: TDMaker.Core.SimLimits.html#TDMaker_Core_SimLimits__ctor_System_Int32_System_Int32_System_Int32_
+  name: SimLimits
+  nameWithType: SimLimits.SimLimits
+  fullName: TDMaker.Core.SimLimits.SimLimits
+  nameWithType.vb: SimLimits.New
+  fullName.vb: TDMaker.Core.SimLimits.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.SimLimits.Effects*
+  commentId: Overload:TDMaker.Core.SimLimits.Effects
+  isExternal: true
+  href: TDMaker.Core.SimLimits.html#TDMaker_Core_SimLimits_Effects
+  name: Effects
+  nameWithType: SimLimits.Effects
+  fullName: TDMaker.Core.SimLimits.Effects
+- uid: TDMaker.Core.SimLimits.Areas*
+  commentId: Overload:TDMaker.Core.SimLimits.Areas
+  isExternal: true
+  href: TDMaker.Core.SimLimits.html#TDMaker_Core_SimLimits_Areas
+  name: Areas
+  nameWithType: SimLimits.Areas
+  fullName: TDMaker.Core.SimLimits.Areas
+- uid: TDMaker.Core.SimLimits.Schedules*
+  commentId: Overload:TDMaker.Core.SimLimits.Schedules
+  isExternal: true
+  href: TDMaker.Core.SimLimits.html#TDMaker_Core_SimLimits_Schedules
+  name: Schedules
+  nameWithType: SimLimits.Schedules
+  fullName: TDMaker.Core.SimLimits.Schedules

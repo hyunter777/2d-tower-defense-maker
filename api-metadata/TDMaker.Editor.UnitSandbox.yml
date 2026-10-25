@@ -1,0 +1,792 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.UnitSandbox
+  commentId: T:TDMaker.Editor.UnitSandbox
+  id: UnitSandbox
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup,System.Collections.Generic.List{UnityEngine.Object})
+  - TDMaker.Editor.UnitSandbox.BuyAllAbilities(TDMaker.Core.Simulation)
+  - TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List{UnityEngine.Object})
+  - TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)
+  langs:
+  - csharp
+  - vb
+  name: UnitSandbox
+  nameWithType: UnitSandbox
+  fullName: TDMaker.Editor.UnitSandbox
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'The Unit Workshop''s test range: a straight lane with the chosen towers beside it, and a wave of the unit under
+    test (or, for
+
+    heroes and soldiers, a wave of an opponent enemy against them). <xref href="TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)"
+    data-throw-if-not-resolved="false"></xref> plays it headless and deterministically
+
+    (fixed seed, fixed tick); <xref href="TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup%2cSystem.Collections.Generic.List%7bUnityEngine.Object%7d)"
+    data-throw-if-not-resolved="false"></xref> returns the same level for the play-mode sandbox.'
+  example: []
+  syntax:
+    content: public static class UnitSandbox
+    content.vb: Public Module UnitSandbox
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup,System.Collections.Generic.List{UnityEngine.Object})
+  commentId: M:TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup,System.Collections.Generic.List{UnityEngine.Object})
+  id: BuildLevel(TDMaker.Editor.UnitSandbox.Setup,System.Collections.Generic.List{UnityEngine.Object})
+  parent: TDMaker.Editor.UnitSandbox
+  langs:
+  - csharp
+  - vb
+  name: BuildLevel(Setup, List<Object>)
+  nameWithType: UnitSandbox.BuildLevel(UnitSandbox.Setup, List<Object>)
+  fullName: TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup, System.Collections.Generic.List<UnityEngine.Object>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Builds the in-memory test level (assets marked DontSave; destroy them with <xref href="TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List%7bUnityEngine.Object%7d)"
+    data-throw-if-not-resolved="false"></xref>). Slot i holds tower i;
+
+    a soldier under test gets a barracks of three in the middle; a hero under test stands at the lane centre.'
+  example: []
+  syntax:
+    content: public static LevelAsset BuildLevel(UnitSandbox.Setup setup, List<Object> owned)
+    parameters:
+    - id: setup
+      type: TDMaker.Editor.UnitSandbox.Setup
+    - id: owned
+      type: System.Collections.Generic.List{UnityEngine.Object}
+    return:
+      type: TDMaker.Unity.Authoring.LevelAsset
+    content.vb: Public Shared Function BuildLevel(setup As UnitSandbox.Setup, owned As List(Of [Object])) As LevelAsset
+  overload: TDMaker.Editor.UnitSandbox.BuildLevel*
+  nameWithType.vb: UnitSandbox.BuildLevel(UnitSandbox.Setup, List(Of Object))
+  fullName.vb: TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup, System.Collections.Generic.List(Of
+    UnityEngine.Object))
+  name.vb: BuildLevel(Setup, List(Of Object))
+- uid: TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List{UnityEngine.Object})
+  commentId: M:TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List{UnityEngine.Object})
+  id: Release(System.Collections.Generic.List{UnityEngine.Object})
+  parent: TDMaker.Editor.UnitSandbox
+  langs:
+  - csharp
+  - vb
+  name: Release(List<Object>)
+  nameWithType: UnitSandbox.Release(List<Object>)
+  fullName: TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List<UnityEngine.Object>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Destroys the assets created by <xref href="TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup%2cSystem.Collections.Generic.List%7bUnityEngine.Object%7d)"
+    data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static void Release(List<Object> owned)
+    parameters:
+    - id: owned
+      type: System.Collections.Generic.List{UnityEngine.Object}
+    content.vb: Public Shared Sub Release(owned As List(Of [Object]))
+  overload: TDMaker.Editor.UnitSandbox.Release*
+  nameWithType.vb: UnitSandbox.Release(List(Of Object))
+  fullName.vb: TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List(Of UnityEngine.Object))
+  name.vb: Release(List(Of Object))
+- uid: TDMaker.Editor.UnitSandbox.BuyAllAbilities(TDMaker.Core.Simulation)
+  commentId: M:TDMaker.Editor.UnitSandbox.BuyAllAbilities(TDMaker.Core.Simulation)
+  id: BuyAllAbilities(TDMaker.Core.Simulation)
+  parent: TDMaker.Editor.UnitSandbox
+  langs:
+  - csharp
+  - vb
+  name: BuyAllAbilities(Simulation)
+  nameWithType: UnitSandbox.BuyAllAbilities(Simulation)
+  fullName: TDMaker.Editor.UnitSandbox.BuyAllAbilities(TDMaker.Core.Simulation)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Buys every rank of every ability of the built towers (one rank per tick, so each purchase sees the previous one).
+  example: []
+  syntax:
+    content: public static void BuyAllAbilities(Simulation sim)
+    parameters:
+    - id: sim
+      type: TDMaker.Core.Simulation
+    content.vb: Public Shared Sub BuyAllAbilities(sim As Simulation)
+  overload: TDMaker.Editor.UnitSandbox.BuyAllAbilities*
+- uid: TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)
+  commentId: M:TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)
+  id: Run(TDMaker.Editor.UnitSandbox.Setup)
+  parent: TDMaker.Editor.UnitSandbox
+  langs:
+  - csharp
+  - vb
+  name: Run(Setup)
+  nameWithType: UnitSandbox.Run(UnitSandbox.Setup)
+  fullName: TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Plays the sandbox headless: builds every tower, calls the wave and runs to the end or the time limit.'
+  example: []
+  syntax:
+    content: public static UnitSandbox.Result Run(UnitSandbox.Setup setup)
+    parameters:
+    - id: setup
+      type: TDMaker.Editor.UnitSandbox.Setup
+    return:
+      type: TDMaker.Editor.UnitSandbox.Result
+    content.vb: Public Shared Function Run(setup As UnitSandbox.Setup) As UnitSandbox.Result
+  overload: TDMaker.Editor.UnitSandbox.Run*
+references:
+- uid: TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)
+  commentId: M:TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Run_TDMaker_Editor_UnitSandbox_Setup_
+  name: Run(Setup)
+  nameWithType: UnitSandbox.Run(UnitSandbox.Setup)
+  fullName: TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)
+    name: Run
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Run_TDMaker_Editor_UnitSandbox_Setup_
+  - name: (
+  - uid: TDMaker.Editor.UnitSandbox.Setup
+    name: Setup
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Setup.html
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)
+    name: Run
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Run_TDMaker_Editor_UnitSandbox_Setup_
+  - name: (
+  - uid: TDMaker.Editor.UnitSandbox.Setup
+    name: Setup
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Setup.html
+  - name: )
+- uid: TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup,System.Collections.Generic.List{UnityEngine.Object})
+  commentId: M:TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup,System.Collections.Generic.List{UnityEngine.Object})
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_BuildLevel_TDMaker_Editor_UnitSandbox_Setup_System_Collections_Generic_List_UnityEngine_Object__
+  name: BuildLevel(Setup, List<Object>)
+  nameWithType: UnitSandbox.BuildLevel(UnitSandbox.Setup, List<Object>)
+  fullName: TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup, System.Collections.Generic.List<UnityEngine.Object>)
+  nameWithType.vb: UnitSandbox.BuildLevel(UnitSandbox.Setup, List(Of Object))
+  fullName.vb: TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup, System.Collections.Generic.List(Of
+    UnityEngine.Object))
+  name.vb: BuildLevel(Setup, List(Of Object))
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup,System.Collections.Generic.List{UnityEngine.Object})
+    name: BuildLevel
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_BuildLevel_TDMaker_Editor_UnitSandbox_Setup_System_Collections_Generic_List_UnityEngine_Object__
+  - name: (
+  - uid: TDMaker.Editor.UnitSandbox.Setup
+    name: Setup
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Setup.html
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup,System.Collections.Generic.List{UnityEngine.Object})
+    name: BuildLevel
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_BuildLevel_TDMaker_Editor_UnitSandbox_Setup_System_Collections_Generic_List_UnityEngine_Object__
+  - name: (
+  - uid: TDMaker.Editor.UnitSandbox.Setup
+    name: Setup
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Setup.html
+  - name: ','
+  - name: ' '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+  - name: )
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List{UnityEngine.Object})
+  commentId: M:TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List{UnityEngine.Object})
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Release_System_Collections_Generic_List_UnityEngine_Object__
+  name: Release(List<Object>)
+  nameWithType: UnitSandbox.Release(List<Object>)
+  fullName: TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List<UnityEngine.Object>)
+  nameWithType.vb: UnitSandbox.Release(List(Of Object))
+  fullName.vb: TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List(Of UnityEngine.Object))
+  name.vb: Release(List(Of Object))
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List{UnityEngine.Object})
+    name: Release
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Release_System_Collections_Generic_List_UnityEngine_Object__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List{UnityEngine.Object})
+    name: Release
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Release_System_Collections_Generic_List_UnityEngine_Object__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+  - name: )
+- uid: TDMaker.Editor.UnitSandbox.BuildLevel*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.BuildLevel
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_BuildLevel_TDMaker_Editor_UnitSandbox_Setup_System_Collections_Generic_List_UnityEngine_Object__
+  name: BuildLevel
+  nameWithType: UnitSandbox.BuildLevel
+  fullName: TDMaker.Editor.UnitSandbox.BuildLevel
+- uid: TDMaker.Editor.UnitSandbox.Setup
+  commentId: T:TDMaker.Editor.UnitSandbox.Setup
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html
+  name: UnitSandbox.Setup
+  nameWithType: UnitSandbox.Setup
+  fullName: TDMaker.Editor.UnitSandbox.Setup
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.Setup
+    name: Setup
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Setup.html
+  spec.vb:
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.Setup
+    name: Setup
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Setup.html
+- uid: System.Collections.Generic.List{UnityEngine.Object}
+  commentId: T:System.Collections.Generic.List{UnityEngine.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Object>
+  nameWithType: List<Object>
+  fullName: System.Collections.Generic.List<UnityEngine.Object>
+  nameWithType.vb: List(Of Object)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.Object)
+  name.vb: List(Of Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: TDMaker.Unity.Authoring.LevelAsset
+  commentId: T:TDMaker.Unity.Authoring.LevelAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.LevelAsset.html
+  name: LevelAsset
+  nameWithType: LevelAsset
+  fullName: TDMaker.Unity.Authoring.LevelAsset
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Editor.UnitSandbox.Release*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.Release
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Release_System_Collections_Generic_List_UnityEngine_Object__
+  name: Release
+  nameWithType: UnitSandbox.Release
+  fullName: TDMaker.Editor.UnitSandbox.Release
+- uid: TDMaker.Editor.UnitSandbox.BuyAllAbilities*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.BuyAllAbilities
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_BuyAllAbilities_TDMaker_Core_Simulation_
+  name: BuyAllAbilities
+  nameWithType: UnitSandbox.BuyAllAbilities
+  fullName: TDMaker.Editor.UnitSandbox.BuyAllAbilities
+- uid: TDMaker.Core.Simulation
+  commentId: T:TDMaker.Core.Simulation
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Simulation.html
+  name: Simulation
+  nameWithType: Simulation
+  fullName: TDMaker.Core.Simulation
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Editor.UnitSandbox.Run*
+  commentId: Overload:TDMaker.Editor.UnitSandbox.Run
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Run_TDMaker_Editor_UnitSandbox_Setup_
+  name: Run
+  nameWithType: UnitSandbox.Run
+  fullName: TDMaker.Editor.UnitSandbox.Run
+- uid: TDMaker.Editor.UnitSandbox.Result
+  commentId: T:TDMaker.Editor.UnitSandbox.Result
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UnitSandbox.html
+  name: UnitSandbox.Result
+  nameWithType: UnitSandbox.Result
+  fullName: TDMaker.Editor.UnitSandbox.Result
+  spec.csharp:
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.Result
+    name: Result
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Result.html
+  spec.vb:
+  - uid: TDMaker.Editor.UnitSandbox
+    name: UnitSandbox
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.html
+  - name: .
+  - uid: TDMaker.Editor.UnitSandbox.Result
+    name: Result
+    isExternal: true
+    href: TDMaker.Editor.UnitSandbox.Result.html

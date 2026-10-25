@@ -1,0 +1,785 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  commentId: T:TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  id: AudioCuePlayer.GlobalCues
+  parent: TDMaker.Unity.View
+  children:
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.#ctor
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.abilityPurchased
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.buildMenuClosed
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.buildMenuOpened
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.coinGained
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.defeat
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.heroLevelUp
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.heroMoved
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.lifeLost
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.rallySet
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.rejected
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.spellCast
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.spellReady
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerBuilt
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerSold
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerUpgraded
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.uiClick
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.victory
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveCallable
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveCalled
+  - TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveStarted
+  langs:
+  - csharp
+  - vb
+  name: AudioCuePlayer.GlobalCues
+  nameWithType: AudioCuePlayer.GlobalCues
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Cues for global game events.
+  example: []
+  syntax:
+    content: public sealed class AudioCuePlayer.GlobalCues
+    content.vb: Public NotInheritable Class AudioCuePlayer.GlobalCues
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveStarted
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveStarted
+  id: waveStarted
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: waveStarted
+  nameWithType: AudioCuePlayer.GlobalCues.waveStarted
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveStarted
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A wave started.
+  example: []
+  syntax:
+    content: public AudioCue waveStarted
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public waveStarted As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveCallable
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveCallable
+  id: waveCallable
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: waveCallable
+  nameWithType: AudioCuePlayer.GlobalCues.waveCallable
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveCallable
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: The next wave can be called.
+  example: []
+  syntax:
+    content: public AudioCue waveCallable
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public waveCallable As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveCalled
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveCalled
+  id: waveCalled
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: waveCalled
+  nameWithType: AudioCuePlayer.GlobalCues.waveCalled
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.waveCalled
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: The player called the next wave (button or hotkey); played by the HUD instead of the click.
+  example: []
+  syntax:
+    content: public AudioCue waveCalled
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public waveCalled As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerBuilt
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerBuilt
+  id: towerBuilt
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: towerBuilt
+  nameWithType: AudioCuePlayer.GlobalCues.towerBuilt
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerBuilt
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A tower was built.
+  example: []
+  syntax:
+    content: public AudioCue towerBuilt
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public towerBuilt As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerUpgraded
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerUpgraded
+  id: towerUpgraded
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: towerUpgraded
+  nameWithType: AudioCuePlayer.GlobalCues.towerUpgraded
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerUpgraded
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A tower was upgraded.
+  example: []
+  syntax:
+    content: public AudioCue towerUpgraded
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public towerUpgraded As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerSold
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerSold
+  id: towerSold
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: towerSold
+  nameWithType: AudioCuePlayer.GlobalCues.towerSold
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.towerSold
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A tower was sold.
+  example: []
+  syntax:
+    content: public AudioCue towerSold
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public towerSold As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.abilityPurchased
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.abilityPurchased
+  id: abilityPurchased
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: abilityPurchased
+  nameWithType: AudioCuePlayer.GlobalCues.abilityPurchased
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.abilityPurchased
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A tower ability rank was bought.
+  example: []
+  syntax:
+    content: public AudioCue abilityPurchased
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public abilityPurchased As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.lifeLost
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.lifeLost
+  id: lifeLost
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: lifeLost
+  nameWithType: AudioCuePlayer.GlobalCues.lifeLost
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.lifeLost
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: An enemy reached the exit.
+  example: []
+  syntax:
+    content: public AudioCue lifeLost
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public lifeLost As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.coinGained
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.coinGained
+  id: coinGained
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: coinGained
+  nameWithType: AudioCuePlayer.GlobalCues.coinGained
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.coinGained
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: An enemy with a bounty was killed (throttle it with the cue's Min Interval).
+  example: []
+  syntax:
+    content: public AudioCue coinGained
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public coinGained As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.rejected
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.rejected
+  id: rejected
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: rejected
+  nameWithType: AudioCuePlayer.GlobalCues.rejected
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.rejected
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A command was rejected.
+  example: []
+  syntax:
+    content: public AudioCue rejected
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public rejected As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.spellReady
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.spellReady
+  id: spellReady
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: spellReady
+  nameWithType: AudioCuePlayer.GlobalCues.spellReady
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.spellReady
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A spell became ready.
+  example: []
+  syntax:
+    content: public AudioCue spellReady
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public spellReady As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.spellCast
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.spellCast
+  id: spellCast
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: spellCast
+  nameWithType: AudioCuePlayer.GlobalCues.spellCast
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.spellCast
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A spell was cast whose Spell Asset has no Cast Cue of its own.
+  example: []
+  syntax:
+    content: public AudioCue spellCast
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public spellCast As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.heroMoved
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.heroMoved
+  id: heroMoved
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: heroMoved
+  nameWithType: AudioCuePlayer.GlobalCues.heroMoved
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.heroMoved
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A hero move order was approved.
+  example: []
+  syntax:
+    content: public AudioCue heroMoved
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public heroMoved As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.heroLevelUp
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.heroLevelUp
+  id: heroLevelUp
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: heroLevelUp
+  nameWithType: AudioCuePlayer.GlobalCues.heroLevelUp
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.heroLevelUp
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A hero gained a level.
+  example: []
+  syntax:
+    content: public AudioCue heroLevelUp
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public heroLevelUp As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.rallySet
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.rallySet
+  id: rallySet
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: rallySet
+  nameWithType: AudioCuePlayer.GlobalCues.rallySet
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.rallySet
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: A barracks rally point was set; played by the HUD instead of the click.
+  example: []
+  syntax:
+    content: public AudioCue rallySet
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public rallySet As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.victory
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.victory
+  id: victory
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: victory
+  nameWithType: AudioCuePlayer.GlobalCues.victory
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.victory
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: The level was won (the music player's stinger plays as well).
+  example: []
+  syntax:
+    content: public AudioCue victory
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public victory As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.defeat
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.defeat
+  id: defeat
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: defeat
+  nameWithType: AudioCuePlayer.GlobalCues.defeat
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.defeat
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: The level was lost (the music player's stinger plays as well).
+  example: []
+  syntax:
+    content: public AudioCue defeat
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public defeat As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.uiClick
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.uiClick
+  id: uiClick
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: uiClick
+  nameWithType: AudioCuePlayer.GlobalCues.uiClick
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.uiClick
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: Played by the HUD for button clicks (UI channel).
+  example: []
+  syntax:
+    content: public AudioCue uiClick
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public uiClick As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.buildMenuOpened
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.buildMenuOpened
+  id: buildMenuOpened
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: buildMenuOpened
+  nameWithType: AudioCuePlayer.GlobalCues.buildMenuOpened
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.buildMenuOpened
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: The build menu of an empty slot opened (UI channel; replaces the click).
+  example: []
+  syntax:
+    content: public AudioCue buildMenuOpened
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public buildMenuOpened As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.buildMenuClosed
+  commentId: F:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.buildMenuClosed
+  id: buildMenuClosed
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: buildMenuClosed
+  nameWithType: AudioCuePlayer.GlobalCues.buildMenuClosed
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.buildMenuClosed
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: The build menu closed without a new menu opening (UI channel).
+  example: []
+  syntax:
+    content: public AudioCue buildMenuClosed
+    return:
+      type: TDMaker.Unity.Authoring.AudioCue
+    content.vb: Public buildMenuClosed As AudioCue
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.#ctor
+  commentId: M:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.View.AudioCuePlayer.GlobalCues
+  langs:
+  - csharp
+  - vb
+  name: GlobalCues()
+  nameWithType: AudioCuePlayer.GlobalCues.GlobalCues()
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.GlobalCues()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public GlobalCues()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.#ctor*
+  nameWithType.vb: AudioCuePlayer.GlobalCues.New()
+  fullName.vb: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Authoring.AudioCue
+  commentId: T:TDMaker.Unity.Authoring.AudioCue
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AudioCue.html
+  name: AudioCue
+  nameWithType: AudioCue
+  fullName: TDMaker.Unity.Authoring.AudioCue
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.#ctor*
+  commentId: Overload:TDMaker.Unity.View.AudioCuePlayer.GlobalCues.#ctor
+  isExternal: true
+  href: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.html#TDMaker_Unity_View_AudioCuePlayer_GlobalCues__ctor
+  name: GlobalCues
+  nameWithType: AudioCuePlayer.GlobalCues.GlobalCues
+  fullName: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.GlobalCues
+  nameWithType.vb: AudioCuePlayer.GlobalCues.New
+  fullName.vb: TDMaker.Unity.View.AudioCuePlayer.GlobalCues.New
+  name.vb: New

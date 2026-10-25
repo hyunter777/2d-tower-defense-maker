@@ -1,0 +1,1071 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.SampleContentGenerator
+  commentId: T:TDMaker.Editor.SampleContentGenerator
+  id: SampleContentGenerator
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.SampleContentGenerator.ArtFolder
+  - TDMaker.Editor.SampleContentGenerator.ArtSetPath
+  - TDMaker.Editor.SampleContentGenerator.BasicGroundArt
+  - TDMaker.Editor.SampleContentGenerator.CampaignPath
+  - TDMaker.Editor.SampleContentGenerator.CrossroadsGroundArt
+  - TDMaker.Editor.SampleContentGenerator.CrossroadsRoot
+  - TDMaker.Editor.SampleContentGenerator.CrossroadsScenePath
+  - TDMaker.Editor.SampleContentGenerator.DemoRoot
+  - TDMaker.Editor.SampleContentGenerator.DemoScenePath
+  - TDMaker.Editor.SampleContentGenerator.EnglishTablePath
+  - TDMaker.Editor.SampleContentGenerator.FontRoot
+  - TDMaker.Editor.SampleContentGenerator.Generate
+  - TDMaker.Editor.SampleContentGenerator.GenerateReleaseMechanicSamples
+  - TDMaker.Editor.SampleContentGenerator.GenerateUpgradeShopSample
+  - TDMaker.Editor.SampleContentGenerator.InterFontRoot
+  - TDMaker.Editor.SampleContentGenerator.InterRegularAssetPath
+  - TDMaker.Editor.SampleContentGenerator.KoreanFontAssetPath
+  - TDMaker.Editor.SampleContentGenerator.KoreanFontFilePath
+  - TDMaker.Editor.SampleContentGenerator.KoreanTablePath
+  - TDMaker.Editor.SampleContentGenerator.Root
+  - TDMaker.Editor.SampleContentGenerator.SampleGroundArtPaths
+  - TDMaker.Editor.SampleContentGenerator.SampleLevelPaths
+  - TDMaker.Editor.SampleContentGenerator.SampleScenePaths
+  - TDMaker.Editor.SampleContentGenerator.ScenePath
+  - TDMaker.Editor.SampleContentGenerator.TextRoot
+  - TDMaker.Editor.SampleContentGenerator.UpgradeShopPath
+  - TDMaker.Editor.SampleContentGenerator.WindingPassGroundArt
+  - TDMaker.Editor.SampleContentGenerator.WindingPassRoot
+  - TDMaker.Editor.SampleContentGenerator.WindingPassScenePath
+  - TDMaker.Editor.SampleContentGenerator.WorldMapPath
+  langs:
+  - csharp
+  - vb
+  name: SampleContentGenerator
+  nameWithType: SampleContentGenerator
+  fullName: TDMaker.Editor.SampleContentGenerator
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Generates the "Basic" sample: projectiles, enemies, soldiers, four tower families, five waves on two
+
+    multi-lane paths, status effects (slow, poison, stun, rally buff, shield ward), purchasable abilities on final branches
+
+    (including a chain-lightning ability, a knockback ability, a channelled beam, a path-transfer rift and a trap-laying barracks),
+
+    a support enemy with a shield cast and a permanent pulse-only healing aura, an armored enemy that reflects damage,
+
+    one hero (with life steal and a trap skill), two spells (reinforcement and area strike), a level asset and a ready-to-play
+    scene.
+
+    All content is original and uses hand-authored vector art with procedural fallbacks; the scene uses the uGUI <xref href="TDMaker.Unity.Hud.GameHud"
+    data-throw-if-not-resolved="false"></xref> with a theme asset,
+
+    a fitted camera, a painted ground and the IMGUI HUD as an F1 debug overlay. Re-running updates the existing assets in
+    place.
+
+    The same run also generates the Crossroads and Winding Pass levels (which reuse the Basic towers, enemies and hero) and
+    the
+
+    Demo scene (title, level select, pause and result flow over all three levels), plus the English and Korean sample string
+    tables
+
+    (Samples/Text) that every sample scene''s Game Settings use, and the dynamic Korean fallback font asset of the sample
+    HUD themes
+
+    (Samples/Fonts).'
+  example: []
+  syntax:
+    content: public static class SampleContentGenerator
+    content.vb: Public Module SampleContentGenerator
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.SampleContentGenerator.ArtFolder
+  commentId: F:TDMaker.Editor.SampleContentGenerator.ArtFolder
+  id: ArtFolder
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: ArtFolder
+  nameWithType: SampleContentGenerator.ArtFolder
+  fullName: TDMaker.Editor.SampleContentGenerator.ArtFolder
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Folder with the rendered sample art (see <code>tools/ArtBuild</code>).
+  example: []
+  syntax:
+    content: public const string ArtFolder = "Assets/TDMaker/Samples/Art"
+    return:
+      type: System.String
+    content.vb: Public Const ArtFolder As String = "Assets/TDMaker/Samples/Art"
+- uid: TDMaker.Editor.SampleContentGenerator.BasicGroundArt
+  commentId: F:TDMaker.Editor.SampleContentGenerator.BasicGroundArt
+  id: BasicGroundArt
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: BasicGroundArt
+  nameWithType: SampleContentGenerator.BasicGroundArt
+  fullName: TDMaker.Editor.SampleContentGenerator.BasicGroundArt
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Painted map of the Basic level; its pivot is the world origin.
+  example: []
+  syntax:
+    content: public const string BasicGroundArt = "Assets/TDMaker/Samples/Art/Terrain/twin_roads_ground.png"
+    return:
+      type: System.String
+    content.vb: Public Const BasicGroundArt As String = "Assets/TDMaker/Samples/Art/Terrain/twin_roads_ground.png"
+- uid: TDMaker.Editor.SampleContentGenerator.ArtSetPath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.ArtSetPath
+  id: ArtSetPath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: ArtSetPath
+  nameWithType: SampleContentGenerator.ArtSetPath
+  fullName: TDMaker.Editor.SampleContentGenerator.ArtSetPath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Path of the painted sample art set (Basic scene and the demo scene).
+  example: []
+  syntax:
+    content: public const string ArtSetPath = "Assets/TDMaker/Samples/Basic/Data/BasicArtSet.asset"
+    return:
+      type: System.String
+    content.vb: Public Const ArtSetPath As String = "Assets/TDMaker/Samples/Basic/Data/BasicArtSet.asset"
+- uid: TDMaker.Editor.SampleContentGenerator.WorldMapPath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.WorldMapPath
+  id: WorldMapPath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: WorldMapPath
+  nameWithType: SampleContentGenerator.WorldMapPath
+  fullName: TDMaker.Editor.SampleContentGenerator.WorldMapPath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Painted world map picture of the sample campaign, rendered by <code>tools/ArtBuild</code> from <code>art/src/maps/world_map.json</code>
+
+    (level points and road bends there match <xref href="TDMaker.Editor.SampleContentGenerator.SampleCampaignLevels" data-throw-if-not-resolved="false"></xref>).'
+  example: []
+  syntax:
+    content: public const string WorldMapPath = "Assets/TDMaker/Samples/Demo/Art/world_map.png"
+    return:
+      type: System.String
+    content.vb: Public Const WorldMapPath As String = "Assets/TDMaker/Samples/Demo/Art/world_map.png"
+- uid: TDMaker.Editor.SampleContentGenerator.CampaignPath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.CampaignPath
+  id: CampaignPath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: CampaignPath
+  nameWithType: SampleContentGenerator.CampaignPath
+  fullName: TDMaker.Editor.SampleContentGenerator.CampaignPath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The sample campaign (the three sample levels on the world map).
+  example: []
+  syntax:
+    content: public const string CampaignPath = "Assets/TDMaker/Samples/Demo/Data/SampleCampaign.asset"
+    return:
+      type: System.String
+    content.vb: Public Const CampaignPath As String = "Assets/TDMaker/Samples/Demo/Data/SampleCampaign.asset"
+- uid: TDMaker.Editor.SampleContentGenerator.Root
+  commentId: F:TDMaker.Editor.SampleContentGenerator.Root
+  id: Root
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: Root
+  nameWithType: SampleContentGenerator.Root
+  fullName: TDMaker.Editor.SampleContentGenerator.Root
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Folder that receives the sample.
+  example: []
+  syntax:
+    content: public const string Root = "Assets/TDMaker/Samples/Basic"
+    return:
+      type: System.String
+    content.vb: Public Const Root As String = "Assets/TDMaker/Samples/Basic"
+- uid: TDMaker.Editor.SampleContentGenerator.ScenePath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.ScenePath
+  id: ScenePath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: ScenePath
+  nameWithType: SampleContentGenerator.ScenePath
+  fullName: TDMaker.Editor.SampleContentGenerator.ScenePath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Path of the generated sample scene.
+  example: []
+  syntax:
+    content: public const string ScenePath = "Assets/TDMaker/Samples/Basic/BasicSample.unity"
+    return:
+      type: System.String
+    content.vb: Public Const ScenePath As String = "Assets/TDMaker/Samples/Basic/BasicSample.unity"
+- uid: TDMaker.Editor.SampleContentGenerator.DemoRoot
+  commentId: F:TDMaker.Editor.SampleContentGenerator.DemoRoot
+  id: DemoRoot
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: DemoRoot
+  nameWithType: SampleContentGenerator.DemoRoot
+  fullName: TDMaker.Editor.SampleContentGenerator.DemoRoot
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Folder of the demo flow sample.
+  example: []
+  syntax:
+    content: public const string DemoRoot = "Assets/TDMaker/Samples/Demo"
+    return:
+      type: System.String
+    content.vb: Public Const DemoRoot As String = "Assets/TDMaker/Samples/Demo"
+- uid: TDMaker.Editor.SampleContentGenerator.DemoScenePath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.DemoScenePath
+  id: DemoScenePath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: DemoScenePath
+  nameWithType: SampleContentGenerator.DemoScenePath
+  fullName: TDMaker.Editor.SampleContentGenerator.DemoScenePath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'The demo scene: title, save slots, the world map of the sample campaign, the three sample levels, pause and result
+    flow.'
+  example: []
+  syntax:
+    content: public const string DemoScenePath = "Assets/TDMaker/Samples/Demo/DemoSample.unity"
+    return:
+      type: System.String
+    content.vb: Public Const DemoScenePath As String = "Assets/TDMaker/Samples/Demo/DemoSample.unity"
+- uid: TDMaker.Editor.SampleContentGenerator.FontRoot
+  commentId: F:TDMaker.Editor.SampleContentGenerator.FontRoot
+  id: FontRoot
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: FontRoot
+  nameWithType: SampleContentGenerator.FontRoot
+  fullName: TDMaker.Editor.SampleContentGenerator.FontRoot
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Folder of the sample fonts (font files with their licenses, and the TextMesh Pro font assets made from them).
+  example: []
+  syntax:
+    content: public const string FontRoot = "Assets/TDMaker/Samples/Fonts"
+    return:
+      type: System.String
+    content.vb: Public Const FontRoot As String = "Assets/TDMaker/Samples/Fonts"
+- uid: TDMaker.Editor.SampleContentGenerator.KoreanFontFilePath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.KoreanFontFilePath
+  id: KoreanFontFilePath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: KoreanFontFilePath
+  nameWithType: SampleContentGenerator.KoreanFontFilePath
+  fullName: TDMaker.Editor.SampleContentGenerator.KoreanFontFilePath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Korean font file shipped with the samples (Noto Sans KR Regular, SIL Open Font License 1.1, see OFL.txt).
+  example: []
+  syntax:
+    content: public const string KoreanFontFilePath = "Assets/TDMaker/Samples/Fonts/NotoSansKR-Regular.otf"
+    return:
+      type: System.String
+    content.vb: Public Const KoreanFontFilePath As String = "Assets/TDMaker/Samples/Fonts/NotoSansKR-Regular.otf"
+- uid: TDMaker.Editor.SampleContentGenerator.KoreanFontAssetPath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.KoreanFontAssetPath
+  id: KoreanFontAssetPath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: KoreanFontAssetPath
+  nameWithType: SampleContentGenerator.KoreanFontAssetPath
+  fullName: TDMaker.Editor.SampleContentGenerator.KoreanFontAssetPath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Dynamic TextMesh Pro font asset made from <xref href="TDMaker.Editor.SampleContentGenerator.KoreanFontFilePath"
+    data-throw-if-not-resolved="false"></xref>; the sample HUD themes use it as a fallback.
+  example: []
+  syntax:
+    content: public const string KoreanFontAssetPath = "Assets/TDMaker/Samples/Fonts/NotoSansKR-Regular SDF.asset"
+    return:
+      type: System.String
+    content.vb: Public Const KoreanFontAssetPath As String = "Assets/TDMaker/Samples/Fonts/NotoSansKR-Regular SDF.asset"
+- uid: TDMaker.Editor.SampleContentGenerator.InterFontRoot
+  commentId: F:TDMaker.Editor.SampleContentGenerator.InterFontRoot
+  id: InterFontRoot
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: InterFontRoot
+  nameWithType: SampleContentGenerator.InterFontRoot
+  fullName: TDMaker.Editor.SampleContentGenerator.InterFontRoot
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Original Inter 4.1 faces and the generated static SDF assets; OFL.txt accompanies the font files.
+  example: []
+  syntax:
+    content: public const string InterFontRoot = "Assets/TDMaker/Samples/Fonts/Inter"
+    return:
+      type: System.String
+    content.vb: Public Const InterFontRoot As String = "Assets/TDMaker/Samples/Fonts/Inter"
+- uid: TDMaker.Editor.SampleContentGenerator.InterRegularAssetPath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.InterRegularAssetPath
+  id: InterRegularAssetPath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: InterRegularAssetPath
+  nameWithType: SampleContentGenerator.InterRegularAssetPath
+  fullName: TDMaker.Editor.SampleContentGenerator.InterRegularAssetPath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public const string InterRegularAssetPath = "Assets/TDMaker/Samples/Fonts/Inter/Inter-Regular SDF.asset"
+    return:
+      type: System.String
+    content.vb: Public Const InterRegularAssetPath As String = "Assets/TDMaker/Samples/Fonts/Inter/Inter-Regular SDF.asset"
+- uid: TDMaker.Editor.SampleContentGenerator.CrossroadsRoot
+  commentId: F:TDMaker.Editor.SampleContentGenerator.CrossroadsRoot
+  id: CrossroadsRoot
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: CrossroadsRoot
+  nameWithType: SampleContentGenerator.CrossroadsRoot
+  fullName: TDMaker.Editor.SampleContentGenerator.CrossroadsRoot
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Folder of the Crossroads sample level.
+  example: []
+  syntax:
+    content: public const string CrossroadsRoot = "Assets/TDMaker/Samples/Crossroads"
+    return:
+      type: System.String
+    content.vb: Public Const CrossroadsRoot As String = "Assets/TDMaker/Samples/Crossroads"
+- uid: TDMaker.Editor.SampleContentGenerator.CrossroadsScenePath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.CrossroadsScenePath
+  id: CrossroadsScenePath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: CrossroadsScenePath
+  nameWithType: SampleContentGenerator.CrossroadsScenePath
+  fullName: TDMaker.Editor.SampleContentGenerator.CrossroadsScenePath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Scene of the Crossroads sample level.
+  example: []
+  syntax:
+    content: public const string CrossroadsScenePath = "Assets/TDMaker/Samples/Crossroads/CrossroadsSample.unity"
+    return:
+      type: System.String
+    content.vb: Public Const CrossroadsScenePath As String = "Assets/TDMaker/Samples/Crossroads/CrossroadsSample.unity"
+- uid: TDMaker.Editor.SampleContentGenerator.WindingPassRoot
+  commentId: F:TDMaker.Editor.SampleContentGenerator.WindingPassRoot
+  id: WindingPassRoot
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: WindingPassRoot
+  nameWithType: SampleContentGenerator.WindingPassRoot
+  fullName: TDMaker.Editor.SampleContentGenerator.WindingPassRoot
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Folder of the Winding Pass sample level.
+  example: []
+  syntax:
+    content: public const string WindingPassRoot = "Assets/TDMaker/Samples/WindingPass"
+    return:
+      type: System.String
+    content.vb: Public Const WindingPassRoot As String = "Assets/TDMaker/Samples/WindingPass"
+- uid: TDMaker.Editor.SampleContentGenerator.WindingPassScenePath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.WindingPassScenePath
+  id: WindingPassScenePath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: WindingPassScenePath
+  nameWithType: SampleContentGenerator.WindingPassScenePath
+  fullName: TDMaker.Editor.SampleContentGenerator.WindingPassScenePath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Scene of the Winding Pass sample level.
+  example: []
+  syntax:
+    content: public const string WindingPassScenePath = "Assets/TDMaker/Samples/WindingPass/WindingPassSample.unity"
+    return:
+      type: System.String
+    content.vb: Public Const WindingPassScenePath As String = "Assets/TDMaker/Samples/WindingPass/WindingPassSample.unity"
+- uid: TDMaker.Editor.SampleContentGenerator.SampleLevelPaths
+  commentId: F:TDMaker.Editor.SampleContentGenerator.SampleLevelPaths
+  id: SampleLevelPaths
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: SampleLevelPaths
+  nameWithType: SampleContentGenerator.SampleLevelPaths
+  fullName: TDMaker.Editor.SampleContentGenerator.SampleLevelPaths
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Level asset paths of every generated sample level, in demo order.
+  example: []
+  syntax:
+    content: public static readonly string[] SampleLevelPaths
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly SampleLevelPaths As String()
+- uid: TDMaker.Editor.SampleContentGenerator.SampleScenePaths
+  commentId: F:TDMaker.Editor.SampleContentGenerator.SampleScenePaths
+  id: SampleScenePaths
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: SampleScenePaths
+  nameWithType: SampleContentGenerator.SampleScenePaths
+  fullName: TDMaker.Editor.SampleContentGenerator.SampleScenePaths
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Scenes of every generated sample level, in demo order.
+  example: []
+  syntax:
+    content: public static readonly string[] SampleScenePaths
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly SampleScenePaths As String()
+- uid: TDMaker.Editor.SampleContentGenerator.CrossroadsGroundArt
+  commentId: F:TDMaker.Editor.SampleContentGenerator.CrossroadsGroundArt
+  id: CrossroadsGroundArt
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: CrossroadsGroundArt
+  nameWithType: SampleContentGenerator.CrossroadsGroundArt
+  fullName: TDMaker.Editor.SampleContentGenerator.CrossroadsGroundArt
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Painted map of the Crossroads level (farmland crossroads); its pivot is the world origin.
+  example: []
+  syntax:
+    content: public const string CrossroadsGroundArt = "Assets/TDMaker/Samples/Art/Terrain/crossroads_ground.png"
+    return:
+      type: System.String
+    content.vb: Public Const CrossroadsGroundArt As String = "Assets/TDMaker/Samples/Art/Terrain/crossroads_ground.png"
+- uid: TDMaker.Editor.SampleContentGenerator.WindingPassGroundArt
+  commentId: F:TDMaker.Editor.SampleContentGenerator.WindingPassGroundArt
+  id: WindingPassGroundArt
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: WindingPassGroundArt
+  nameWithType: SampleContentGenerator.WindingPassGroundArt
+  fullName: TDMaker.Editor.SampleContentGenerator.WindingPassGroundArt
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Painted map of the Winding Pass level (rocky mountain pass); its pivot is the world origin.
+  example: []
+  syntax:
+    content: public const string WindingPassGroundArt = "Assets/TDMaker/Samples/Art/Terrain/winding_pass_ground.png"
+    return:
+      type: System.String
+    content.vb: Public Const WindingPassGroundArt As String = "Assets/TDMaker/Samples/Art/Terrain/winding_pass_ground.png"
+- uid: TDMaker.Editor.SampleContentGenerator.SampleGroundArtPaths
+  commentId: F:TDMaker.Editor.SampleContentGenerator.SampleGroundArtPaths
+  id: SampleGroundArtPaths
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: SampleGroundArtPaths
+  nameWithType: SampleContentGenerator.SampleGroundArtPaths
+  fullName: TDMaker.Editor.SampleContentGenerator.SampleGroundArtPaths
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Painted ground of every sample level, index-aligned with <xref href="TDMaker.Editor.SampleContentGenerator.SampleLevelPaths"
+    data-throw-if-not-resolved="false"></xref> (the demo battles use them).
+  example: []
+  syntax:
+    content: public static readonly string[] SampleGroundArtPaths
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly SampleGroundArtPaths As String()
+- uid: TDMaker.Editor.SampleContentGenerator.UpgradeShopPath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.UpgradeShopPath
+  id: UpgradeShopPath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: UpgradeShopPath
+  nameWithType: SampleContentGenerator.UpgradeShopPath
+  fullName: TDMaker.Editor.SampleContentGenerator.UpgradeShopPath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The sample star-upgrade shop (six tracks of five ranks) used by the sample campaign.
+  example: []
+  syntax:
+    content: public const string UpgradeShopPath = "Assets/TDMaker/Samples/Demo/Data/SampleUpgradeShop.asset"
+    return:
+      type: System.String
+    content.vb: Public Const UpgradeShopPath As String = "Assets/TDMaker/Samples/Demo/Data/SampleUpgradeShop.asset"
+- uid: TDMaker.Editor.SampleContentGenerator.TextRoot
+  commentId: F:TDMaker.Editor.SampleContentGenerator.TextRoot
+  id: TextRoot
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: TextRoot
+  nameWithType: SampleContentGenerator.TextRoot
+  fullName: TDMaker.Editor.SampleContentGenerator.TextRoot
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Folder of the sample string tables.
+  example: []
+  syntax:
+    content: public const string TextRoot = "Assets/TDMaker/Samples/Text"
+    return:
+      type: System.String
+    content.vb: Public Const TextRoot As String = "Assets/TDMaker/Samples/Text"
+- uid: TDMaker.Editor.SampleContentGenerator.EnglishTablePath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.EnglishTablePath
+  id: EnglishTablePath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: EnglishTablePath
+  nameWithType: SampleContentGenerator.EnglishTablePath
+  fullName: TDMaker.Editor.SampleContentGenerator.EnglishTablePath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'English sample table: every HUD and campaign screen key (<xref href="TDMaker.Unity.Localization.HudTexts.English"
+    data-throw-if-not-resolved="false"></xref>), the demo menu keys and the sample campaign levels. Copy it to start a translation.'
+  example: []
+  syntax:
+    content: public const string EnglishTablePath = "Assets/TDMaker/Samples/Text/Text_English.asset"
+    return:
+      type: System.String
+    content.vb: Public Const EnglishTablePath As String = "Assets/TDMaker/Samples/Text/Text_English.asset"
+- uid: TDMaker.Editor.SampleContentGenerator.KoreanTablePath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.KoreanTablePath
+  id: KoreanTablePath
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: KoreanTablePath
+  nameWithType: SampleContentGenerator.KoreanTablePath
+  fullName: TDMaker.Editor.SampleContentGenerator.KoreanTablePath
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Korean example table.
+  example: []
+  syntax:
+    content: public const string KoreanTablePath = "Assets/TDMaker/Samples/Text/Text_Korean.asset"
+    return:
+      type: System.String
+    content.vb: Public Const KoreanTablePath As String = "Assets/TDMaker/Samples/Text/Text_Korean.asset"
+- uid: TDMaker.Editor.SampleContentGenerator.Generate
+  commentId: M:TDMaker.Editor.SampleContentGenerator.Generate
+  id: Generate
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: Generate()
+  nameWithType: SampleContentGenerator.Generate()
+  fullName: TDMaker.Editor.SampleContentGenerator.Generate()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Generates all sample assets and the scene. Safe to call from <code>-executeMethod</code>.
+  example: []
+  syntax:
+    content: public static void Generate()
+    content.vb: Public Shared Sub Generate()
+  overload: TDMaker.Editor.SampleContentGenerator.Generate*
+- uid: TDMaker.Editor.SampleContentGenerator.GenerateReleaseMechanicSamples
+  commentId: M:TDMaker.Editor.SampleContentGenerator.GenerateReleaseMechanicSamples
+  id: GenerateReleaseMechanicSamples
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateReleaseMechanicSamples()
+  nameWithType: SampleContentGenerator.GenerateReleaseMechanicSamples()
+  fullName: TDMaker.Editor.SampleContentGenerator.GenerateReleaseMechanicSamples()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Adds the mine field, companion and revival samples to the existing Basic sample assets without regenerating anything
+    else
+
+    (no scenes, no waves). Safe to call from <code>-executeMethod</code>.'
+  example: []
+  syntax:
+    content: public static void GenerateReleaseMechanicSamples()
+    content.vb: Public Shared Sub GenerateReleaseMechanicSamples()
+  overload: TDMaker.Editor.SampleContentGenerator.GenerateReleaseMechanicSamples*
+- uid: TDMaker.Editor.SampleContentGenerator.GenerateUpgradeShopSample
+  commentId: M:TDMaker.Editor.SampleContentGenerator.GenerateUpgradeShopSample
+  id: GenerateUpgradeShopSample
+  parent: TDMaker.Editor.SampleContentGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateUpgradeShopSample()
+  nameWithType: SampleContentGenerator.GenerateUpgradeShopSample()
+  fullName: TDMaker.Editor.SampleContentGenerator.GenerateUpgradeShopSample()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Writes only the sample upgrade shop, assigns it to the sample campaign and rewrites the sample text tables (no
+    scenes are
+
+    touched). Usable with <code>-executeMethod TDMaker.Editor.SampleContentGenerator.GenerateUpgradeShopSample</code>.'
+  example: []
+  syntax:
+    content: public static void GenerateUpgradeShopSample()
+    content.vb: Public Shared Sub GenerateUpgradeShopSample()
+  overload: TDMaker.Editor.SampleContentGenerator.GenerateUpgradeShopSample*
+references:
+- uid: TDMaker.Unity.Hud.GameHud
+  commentId: T:TDMaker.Unity.Hud.GameHud
+  isExternal: true
+  href: TDMaker.Unity.Hud.GameHud.html
+  name: GameHud
+  nameWithType: GameHud
+  fullName: TDMaker.Unity.Hud.GameHud
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Editor.SampleContentGenerator.SampleCampaignLevels
+  commentId: F:TDMaker.Editor.SampleContentGenerator.SampleCampaignLevels
+  isExternal: true
+- uid: TDMaker.Editor.SampleContentGenerator.KoreanFontFilePath
+  commentId: F:TDMaker.Editor.SampleContentGenerator.KoreanFontFilePath
+  isExternal: true
+  href: TDMaker.Editor.SampleContentGenerator.html#TDMaker_Editor_SampleContentGenerator_KoreanFontFilePath
+  name: KoreanFontFilePath
+  nameWithType: SampleContentGenerator.KoreanFontFilePath
+  fullName: TDMaker.Editor.SampleContentGenerator.KoreanFontFilePath
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: TDMaker.Editor.SampleContentGenerator.SampleLevelPaths
+  commentId: F:TDMaker.Editor.SampleContentGenerator.SampleLevelPaths
+  isExternal: true
+  href: TDMaker.Editor.SampleContentGenerator.html#TDMaker_Editor_SampleContentGenerator_SampleLevelPaths
+  name: SampleLevelPaths
+  nameWithType: SampleContentGenerator.SampleLevelPaths
+  fullName: TDMaker.Editor.SampleContentGenerator.SampleLevelPaths
+- uid: TDMaker.Unity.Localization.HudTexts.English
+  commentId: P:TDMaker.Unity.Localization.HudTexts.English
+  isExternal: true
+  href: TDMaker.Unity.Localization.HudTexts.html#TDMaker_Unity_Localization_HudTexts_English
+  name: English
+  nameWithType: HudTexts.English
+  fullName: TDMaker.Unity.Localization.HudTexts.English
+- uid: TDMaker.Editor.SampleContentGenerator.Generate*
+  commentId: Overload:TDMaker.Editor.SampleContentGenerator.Generate
+  isExternal: true
+  href: TDMaker.Editor.SampleContentGenerator.html#TDMaker_Editor_SampleContentGenerator_Generate
+  name: Generate
+  nameWithType: SampleContentGenerator.Generate
+  fullName: TDMaker.Editor.SampleContentGenerator.Generate
+- uid: TDMaker.Editor.SampleContentGenerator.GenerateReleaseMechanicSamples*
+  commentId: Overload:TDMaker.Editor.SampleContentGenerator.GenerateReleaseMechanicSamples
+  isExternal: true
+  href: TDMaker.Editor.SampleContentGenerator.html#TDMaker_Editor_SampleContentGenerator_GenerateReleaseMechanicSamples
+  name: GenerateReleaseMechanicSamples
+  nameWithType: SampleContentGenerator.GenerateReleaseMechanicSamples
+  fullName: TDMaker.Editor.SampleContentGenerator.GenerateReleaseMechanicSamples
+- uid: TDMaker.Editor.SampleContentGenerator.GenerateUpgradeShopSample*
+  commentId: Overload:TDMaker.Editor.SampleContentGenerator.GenerateUpgradeShopSample
+  isExternal: true
+  href: TDMaker.Editor.SampleContentGenerator.html#TDMaker_Editor_SampleContentGenerator_GenerateUpgradeShopSample
+  name: GenerateUpgradeShopSample
+  nameWithType: SampleContentGenerator.GenerateUpgradeShopSample
+  fullName: TDMaker.Editor.SampleContentGenerator.GenerateUpgradeShopSample

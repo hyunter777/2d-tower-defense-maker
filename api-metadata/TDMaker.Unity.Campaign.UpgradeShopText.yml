@@ -1,0 +1,729 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.UpgradeShopText
+  commentId: T:TDMaker.Unity.Campaign.UpgradeShopText
+  id: UpgradeShopText
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.UpgradeShopText.Describe(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeEffectData,System.String)
+  - TDMaker.Unity.Campaign.UpgradeShopText.EffectLines(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeRankData,System.Collections.Generic.List{System.String})
+  - TDMaker.Unity.Campaign.UpgradeShopText.RankDescription(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData,System.Int32)
+  - TDMaker.Unity.Campaign.UpgradeShopText.RankSummary(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData,System.Int32)
+  - TDMaker.Unity.Campaign.UpgradeShopText.TrackName(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData)
+  - TDMaker.Unity.Campaign.UpgradeShopText.TrackSummary(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData)
+  langs:
+  - csharp
+  - vb
+  name: UpgradeShopText
+  nameWithType: UpgradeShopText
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'Texts of the upgrade shop in the current language: track names and summaries (<code>shop.track.&lt;key&gt;.name|summary</code>,
+    then the
+
+    authored English), rank lines (<code>shop.track.&lt;key&gt;.rank&lt;N&gt;</code>) and effect summaries generated from
+    the effect data
+
+    ("Range +10%", "Cooldown -2s", "New: Shell Burst", "Conscript becomes Veteran").'
+  example: []
+  syntax:
+    content: public static class UpgradeShopText
+    content.vb: Public Module UpgradeShopText
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.TrackName(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData)
+  commentId: M:TDMaker.Unity.Campaign.UpgradeShopText.TrackName(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData)
+  id: TrackName(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData)
+  parent: TDMaker.Unity.Campaign.UpgradeShopText
+  langs:
+  - csharp
+  - vb
+  name: TrackName(TextResolver, UpgradeTrackData)
+  nameWithType: UpgradeShopText.TrackName(TextResolver, UpgradeTrackData)
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.TrackName(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeTrackData)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Name of a track.
+  example: []
+  syntax:
+    content: public static string TrackName(TextResolver texts, UpgradeTrackData track)
+    parameters:
+    - id: texts
+      type: TDMaker.Unity.Localization.TextResolver
+    - id: track
+      type: TDMaker.Unity.Campaign.UpgradeTrackData
+    return:
+      type: System.String
+    content.vb: Public Shared Function TrackName(texts As TextResolver, track As UpgradeTrackData) As String
+  overload: TDMaker.Unity.Campaign.UpgradeShopText.TrackName*
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.TrackSummary(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData)
+  commentId: M:TDMaker.Unity.Campaign.UpgradeShopText.TrackSummary(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData)
+  id: TrackSummary(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData)
+  parent: TDMaker.Unity.Campaign.UpgradeShopText
+  langs:
+  - csharp
+  - vb
+  name: TrackSummary(TextResolver, UpgradeTrackData)
+  nameWithType: UpgradeShopText.TrackSummary(TextResolver, UpgradeTrackData)
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.TrackSummary(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeTrackData)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: One-line summary of a track.
+  example: []
+  syntax:
+    content: public static string TrackSummary(TextResolver texts, UpgradeTrackData track)
+    parameters:
+    - id: texts
+      type: TDMaker.Unity.Localization.TextResolver
+    - id: track
+      type: TDMaker.Unity.Campaign.UpgradeTrackData
+    return:
+      type: System.String
+    content.vb: Public Shared Function TrackSummary(texts As TextResolver, track As UpgradeTrackData) As String
+  overload: TDMaker.Unity.Campaign.UpgradeShopText.TrackSummary*
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.RankDescription(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData,System.Int32)
+  commentId: M:TDMaker.Unity.Campaign.UpgradeShopText.RankDescription(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData,System.Int32)
+  id: RankDescription(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData,System.Int32)
+  parent: TDMaker.Unity.Campaign.UpgradeShopText
+  langs:
+  - csharp
+  - vb
+  name: RankDescription(TextResolver, UpgradeTrackData, int)
+  nameWithType: UpgradeShopText.RankDescription(TextResolver, UpgradeTrackData, int)
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.RankDescription(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeTrackData,
+    int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Authored line of rank <code class="paramref">rank</code> (1-based), or an empty string.
+  example: []
+  syntax:
+    content: public static string RankDescription(TextResolver texts, UpgradeTrackData track, int rank)
+    parameters:
+    - id: texts
+      type: TDMaker.Unity.Localization.TextResolver
+    - id: track
+      type: TDMaker.Unity.Campaign.UpgradeTrackData
+    - id: rank
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Public Shared Function RankDescription(texts As TextResolver, track As UpgradeTrackData, rank As Integer)
+      As String
+  overload: TDMaker.Unity.Campaign.UpgradeShopText.RankDescription*
+  nameWithType.vb: UpgradeShopText.RankDescription(TextResolver, UpgradeTrackData, Integer)
+  fullName.vb: TDMaker.Unity.Campaign.UpgradeShopText.RankDescription(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeTrackData,
+    Integer)
+  name.vb: RankDescription(TextResolver, UpgradeTrackData, Integer)
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.EffectLines(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeRankData,System.Collections.Generic.List{System.String})
+  commentId: M:TDMaker.Unity.Campaign.UpgradeShopText.EffectLines(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeRankData,System.Collections.Generic.List{System.String})
+  id: EffectLines(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeRankData,System.Collections.Generic.List{System.String})
+  parent: TDMaker.Unity.Campaign.UpgradeShopText
+  langs:
+  - csharp
+  - vb
+  name: EffectLines(TextResolver, UpgradeRankData, List<string>)
+  nameWithType: UpgradeShopText.EffectLines(TextResolver, UpgradeRankData, List<string>)
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.EffectLines(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeRankData,
+    System.Collections.Generic.List<string>)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The effect lines of a rank, one per effect (minimum and maximum damage changed the same way merge into one "Damage"
+    line).
+  example: []
+  syntax:
+    content: public static void EffectLines(TextResolver texts, UpgradeRankData rank, List<string> output)
+    parameters:
+    - id: texts
+      type: TDMaker.Unity.Localization.TextResolver
+    - id: rank
+      type: TDMaker.Unity.Campaign.UpgradeRankData
+    - id: output
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Shared Sub EffectLines(texts As TextResolver, rank As UpgradeRankData, output As List(Of String))
+  overload: TDMaker.Unity.Campaign.UpgradeShopText.EffectLines*
+  nameWithType.vb: UpgradeShopText.EffectLines(TextResolver, UpgradeRankData, List(Of String))
+  fullName.vb: TDMaker.Unity.Campaign.UpgradeShopText.EffectLines(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeRankData,
+    System.Collections.Generic.List(Of String))
+  name.vb: EffectLines(TextResolver, UpgradeRankData, List(Of String))
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.RankSummary(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData,System.Int32)
+  commentId: M:TDMaker.Unity.Campaign.UpgradeShopText.RankSummary(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData,System.Int32)
+  id: RankSummary(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeTrackData,System.Int32)
+  parent: TDMaker.Unity.Campaign.UpgradeShopText
+  langs:
+  - csharp
+  - vb
+  name: RankSummary(TextResolver, UpgradeTrackData, int)
+  nameWithType: UpgradeShopText.RankSummary(TextResolver, UpgradeTrackData, int)
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.RankSummary(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeTrackData,
+    int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The whole effect summary of a rank (authored line first), one line per effect.
+  example: []
+  syntax:
+    content: public static string RankSummary(TextResolver texts, UpgradeTrackData track, int rank)
+    parameters:
+    - id: texts
+      type: TDMaker.Unity.Localization.TextResolver
+    - id: track
+      type: TDMaker.Unity.Campaign.UpgradeTrackData
+    - id: rank
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Public Shared Function RankSummary(texts As TextResolver, track As UpgradeTrackData, rank As Integer) As String
+  overload: TDMaker.Unity.Campaign.UpgradeShopText.RankSummary*
+  nameWithType.vb: UpgradeShopText.RankSummary(TextResolver, UpgradeTrackData, Integer)
+  fullName.vb: TDMaker.Unity.Campaign.UpgradeShopText.RankSummary(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeTrackData,
+    Integer)
+  name.vb: RankSummary(TextResolver, UpgradeTrackData, Integer)
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.Describe(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeEffectData,System.String)
+  commentId: M:TDMaker.Unity.Campaign.UpgradeShopText.Describe(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeEffectData,System.String)
+  id: Describe(TDMaker.Unity.Localization.TextResolver,TDMaker.Unity.Campaign.UpgradeEffectData,System.String)
+  parent: TDMaker.Unity.Campaign.UpgradeShopText
+  langs:
+  - csharp
+  - vb
+  name: Describe(TextResolver, UpgradeEffectData, string)
+  nameWithType: UpgradeShopText.Describe(TextResolver, UpgradeEffectData, string)
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.Describe(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeEffectData,
+    string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: One effect line; <code class="paramref">fieldLabel</code> overrides the field's label.
+  example: []
+  syntax:
+    content: public static string Describe(TextResolver texts, UpgradeEffectData effect, string fieldLabel = null)
+    parameters:
+    - id: texts
+      type: TDMaker.Unity.Localization.TextResolver
+    - id: effect
+      type: TDMaker.Unity.Campaign.UpgradeEffectData
+    - id: fieldLabel
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function Describe(texts As TextResolver, effect As UpgradeEffectData, fieldLabel As String =
+      Nothing) As String
+  overload: TDMaker.Unity.Campaign.UpgradeShopText.Describe*
+  nameWithType.vb: UpgradeShopText.Describe(TextResolver, UpgradeEffectData, String)
+  fullName.vb: TDMaker.Unity.Campaign.UpgradeShopText.Describe(TDMaker.Unity.Localization.TextResolver, TDMaker.Unity.Campaign.UpgradeEffectData,
+    String)
+  name.vb: Describe(TextResolver, UpgradeEffectData, String)
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.TrackName*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeShopText.TrackName
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeShopText.html#TDMaker_Unity_Campaign_UpgradeShopText_TrackName_TDMaker_Unity_Localization_TextResolver_TDMaker_Unity_Campaign_UpgradeTrackData_
+  name: TrackName
+  nameWithType: UpgradeShopText.TrackName
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.TrackName
+- uid: TDMaker.Unity.Localization.TextResolver
+  commentId: T:TDMaker.Unity.Localization.TextResolver
+  parent: TDMaker.Unity.Localization
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html
+  name: TextResolver
+  nameWithType: TextResolver
+  fullName: TDMaker.Unity.Localization.TextResolver
+- uid: TDMaker.Unity.Campaign.UpgradeTrackData
+  commentId: T:TDMaker.Unity.Campaign.UpgradeTrackData
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeTrackData.html
+  name: UpgradeTrackData
+  nameWithType: UpgradeTrackData
+  fullName: TDMaker.Unity.Campaign.UpgradeTrackData
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Localization
+  commentId: N:TDMaker.Unity.Localization
+  isExternal: true
+  name: TDMaker.Unity.Localization
+  nameWithType: TDMaker.Unity.Localization
+  fullName: TDMaker.Unity.Localization
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Localization
+    name: Localization
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Localization
+    name: Localization
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.TrackSummary*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeShopText.TrackSummary
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeShopText.html#TDMaker_Unity_Campaign_UpgradeShopText_TrackSummary_TDMaker_Unity_Localization_TextResolver_TDMaker_Unity_Campaign_UpgradeTrackData_
+  name: TrackSummary
+  nameWithType: UpgradeShopText.TrackSummary
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.TrackSummary
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.RankDescription*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeShopText.RankDescription
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeShopText.html#TDMaker_Unity_Campaign_UpgradeShopText_RankDescription_TDMaker_Unity_Localization_TextResolver_TDMaker_Unity_Campaign_UpgradeTrackData_System_Int32_
+  name: RankDescription
+  nameWithType: UpgradeShopText.RankDescription
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.RankDescription
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.EffectLines*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeShopText.EffectLines
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeShopText.html#TDMaker_Unity_Campaign_UpgradeShopText_EffectLines_TDMaker_Unity_Localization_TextResolver_TDMaker_Unity_Campaign_UpgradeRankData_System_Collections_Generic_List_System_String__
+  name: EffectLines
+  nameWithType: UpgradeShopText.EffectLines
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.EffectLines
+- uid: TDMaker.Unity.Campaign.UpgradeRankData
+  commentId: T:TDMaker.Unity.Campaign.UpgradeRankData
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeRankData.html
+  name: UpgradeRankData
+  nameWithType: UpgradeRankData
+  fullName: TDMaker.Unity.Campaign.UpgradeRankData
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.RankSummary*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeShopText.RankSummary
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeShopText.html#TDMaker_Unity_Campaign_UpgradeShopText_RankSummary_TDMaker_Unity_Localization_TextResolver_TDMaker_Unity_Campaign_UpgradeTrackData_System_Int32_
+  name: RankSummary
+  nameWithType: UpgradeShopText.RankSummary
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.RankSummary
+- uid: TDMaker.Unity.Campaign.UpgradeShopText.Describe*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeShopText.Describe
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeShopText.html#TDMaker_Unity_Campaign_UpgradeShopText_Describe_TDMaker_Unity_Localization_TextResolver_TDMaker_Unity_Campaign_UpgradeEffectData_System_String_
+  name: Describe
+  nameWithType: UpgradeShopText.Describe
+  fullName: TDMaker.Unity.Campaign.UpgradeShopText.Describe
+- uid: TDMaker.Unity.Campaign.UpgradeEffectData
+  commentId: T:TDMaker.Unity.Campaign.UpgradeEffectData
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeEffectData.html
+  name: UpgradeEffectData
+  nameWithType: UpgradeEffectData
+  fullName: TDMaker.Unity.Campaign.UpgradeEffectData

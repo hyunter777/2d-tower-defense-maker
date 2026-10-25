@@ -1,0 +1,472 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Components.AbilityComponent
+  commentId: T:TDMaker.Core.Components.AbilityComponent
+  id: AbilityComponent
+  parent: TDMaker.Core.Components
+  children:
+  - TDMaker.Core.Components.AbilityComponent.#ctor
+  - TDMaker.Core.Components.AbilityComponent.Count
+  - TDMaker.Core.Components.AbilityComponent.GetCooldown(System.Int32,System.Int32)
+  - TDMaker.Core.Components.AbilityComponent.GetDefinition(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: AbilityComponent
+  nameWithType: AbilityComponent
+  fullName: TDMaker.Core.Components.AbilityComponent
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Prewarmed generic action channels for base behavior, tower abilities, and hero skills.
+  example: []
+  syntax:
+    content: public sealed class AbilityComponent
+    content.vb: Public NotInheritable Class AbilityComponent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Components.AbilityComponent.GetDefinition(System.Int32)
+  commentId: M:TDMaker.Core.Components.AbilityComponent.GetDefinition(System.Int32)
+  id: GetDefinition(System.Int32)
+  parent: TDMaker.Core.Components.AbilityComponent
+  langs:
+  - csharp
+  - vb
+  name: GetDefinition(int)
+  nameWithType: AbilityComponent.GetDefinition(int)
+  fullName: TDMaker.Core.Components.AbilityComponent.GetDefinition(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Reads an active rank payload; unpurchased slots return null.
+  example: []
+  syntax:
+    content: public AbilityRankDef GetDefinition(int slot)
+    parameters:
+    - id: slot
+      type: System.Int32
+    return:
+      type: TDMaker.Core.Defs.AbilityRankDef
+    content.vb: Public Function GetDefinition(slot As Integer) As AbilityRankDef
+  overload: TDMaker.Core.Components.AbilityComponent.GetDefinition*
+  nameWithType.vb: AbilityComponent.GetDefinition(Integer)
+  fullName.vb: TDMaker.Core.Components.AbilityComponent.GetDefinition(Integer)
+  name.vb: GetDefinition(Integer)
+- uid: TDMaker.Core.Components.AbilityComponent.GetCooldown(System.Int32,System.Int32)
+  commentId: M:TDMaker.Core.Components.AbilityComponent.GetCooldown(System.Int32,System.Int32)
+  id: GetCooldown(System.Int32,System.Int32)
+  parent: TDMaker.Core.Components.AbilityComponent
+  langs:
+  - csharp
+  - vb
+  name: GetCooldown(int, int)
+  nameWithType: AbilityComponent.GetCooldown(int, int)
+  fullName: TDMaker.Core.Components.AbilityComponent.GetCooldown(int, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Reads the remaining cooldown of a rank's action channel.
+  example: []
+  syntax:
+    content: public float GetCooldown(int slot, int action)
+    parameters:
+    - id: slot
+      type: System.Int32
+    - id: action
+      type: System.Int32
+    return:
+      type: System.Single
+    content.vb: Public Function GetCooldown(slot As Integer, action As Integer) As Single
+  overload: TDMaker.Core.Components.AbilityComponent.GetCooldown*
+  nameWithType.vb: AbilityComponent.GetCooldown(Integer, Integer)
+  fullName.vb: TDMaker.Core.Components.AbilityComponent.GetCooldown(Integer, Integer)
+  name.vb: GetCooldown(Integer, Integer)
+- uid: TDMaker.Core.Components.AbilityComponent.#ctor
+  commentId: M:TDMaker.Core.Components.AbilityComponent.#ctor
+  id: '#ctor'
+  parent: TDMaker.Core.Components.AbilityComponent
+  langs:
+  - csharp
+  - vb
+  name: AbilityComponent()
+  nameWithType: AbilityComponent.AbilityComponent()
+  fullName: TDMaker.Core.Components.AbilityComponent.AbilityComponent()
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  syntax:
+    content: public AbilityComponent()
+    content.vb: Public Sub New()
+  overload: TDMaker.Core.Components.AbilityComponent.#ctor*
+  nameWithType.vb: AbilityComponent.New()
+  fullName.vb: TDMaker.Core.Components.AbilityComponent.New()
+  name.vb: New()
+- uid: TDMaker.Core.Components.AbilityComponent.Count
+  commentId: P:TDMaker.Core.Components.AbilityComponent.Count
+  id: Count
+  parent: TDMaker.Core.Components.AbilityComponent
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: AbilityComponent.Count
+  fullName: TDMaker.Core.Components.AbilityComponent.Count
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Number of configured slots, including the always-active behavior slot.
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: TDMaker.Core.Components.AbilityComponent.Count*
+references:
+- uid: TDMaker.Core.Components
+  commentId: N:TDMaker.Core.Components
+  isExternal: true
+  name: TDMaker.Core.Components
+  nameWithType: TDMaker.Core.Components
+  fullName: TDMaker.Core.Components
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Components.AbilityComponent.GetDefinition*
+  commentId: Overload:TDMaker.Core.Components.AbilityComponent.GetDefinition
+  isExternal: true
+  href: TDMaker.Core.Components.AbilityComponent.html#TDMaker_Core_Components_AbilityComponent_GetDefinition_System_Int32_
+  name: GetDefinition
+  nameWithType: AbilityComponent.GetDefinition
+  fullName: TDMaker.Core.Components.AbilityComponent.GetDefinition
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.AbilityRankDef
+  commentId: T:TDMaker.Core.Defs.AbilityRankDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AbilityRankDef.html
+  name: AbilityRankDef
+  nameWithType: AbilityRankDef
+  fullName: TDMaker.Core.Defs.AbilityRankDef
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Components.AbilityComponent.GetCooldown*
+  commentId: Overload:TDMaker.Core.Components.AbilityComponent.GetCooldown
+  isExternal: true
+  href: TDMaker.Core.Components.AbilityComponent.html#TDMaker_Core_Components_AbilityComponent_GetCooldown_System_Int32_System_Int32_
+  name: GetCooldown
+  nameWithType: AbilityComponent.GetCooldown
+  fullName: TDMaker.Core.Components.AbilityComponent.GetCooldown
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Components.AbilityComponent.#ctor*
+  commentId: Overload:TDMaker.Core.Components.AbilityComponent.#ctor
+  isExternal: true
+  href: TDMaker.Core.Components.AbilityComponent.html#TDMaker_Core_Components_AbilityComponent__ctor
+  name: AbilityComponent
+  nameWithType: AbilityComponent.AbilityComponent
+  fullName: TDMaker.Core.Components.AbilityComponent.AbilityComponent
+  nameWithType.vb: AbilityComponent.New
+  fullName.vb: TDMaker.Core.Components.AbilityComponent.New
+  name.vb: New
+- uid: TDMaker.Core.Components.AbilityComponent.Count*
+  commentId: Overload:TDMaker.Core.Components.AbilityComponent.Count
+  isExternal: true
+  href: TDMaker.Core.Components.AbilityComponent.html#TDMaker_Core_Components_AbilityComponent_Count
+  name: Count
+  nameWithType: AbilityComponent.Count
+  fullName: TDMaker.Core.Components.AbilityComponent.Count

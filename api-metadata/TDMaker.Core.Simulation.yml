@@ -1,0 +1,3474 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Simulation
+  commentId: T:TDMaker.Core.Simulation
+  id: Simulation
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.Simulation.#ctor(TDMaker.Core.Defs.TemplateRegistry,TDMaker.Core.Defs.LevelDef,TDMaker.Core.SimConfig,System.UInt32)
+  - TDMaker.Core.Simulation.ActiveBeamCount
+  - TDMaker.Core.Simulation.ActiveChainCount
+  - TDMaker.Core.Simulation.AddHeroExperience(System.Int32,System.Double)
+  - TDMaker.Core.Simulation.Beams
+  - TDMaker.Core.Simulation.CancelBeam(System.Int32)
+  - TDMaker.Core.Simulation.CapacityFailureCount
+  - TDMaker.Core.Simulation.ClearEvents
+  - TDMaker.Core.Simulation.ComputeStateHash
+  - TDMaker.Core.Simulation.Config
+  - TDMaker.Core.Simulation.ConfigureSpatialIndex(System.Single,System.Boolean)
+  - TDMaker.Core.Simulation.DeltaTime
+  - TDMaker.Core.Simulation.Deploy(TDMaker.Core.Defs.DeploymentPlanDef,System.Int32)
+  - TDMaker.Core.Simulation.DroppedDamageCount
+  - TDMaker.Core.Simulation.DroppedEventCount
+  - TDMaker.Core.Simulation.Effects
+  - TDMaker.Core.Simulation.Enqueue(TDMaker.Core.Commands.ICommand)
+  - TDMaker.Core.Simulation.Entities
+  - TDMaker.Core.Simulation.Events
+  - TDMaker.Core.Simulation.FindDefaultTarget(TDMaker.Core.TargetQuery@)
+  - TDMaker.Core.Simulation.FindTarget(TDMaker.Core.TargetQuery@)
+  - TDMaker.Core.Simulation.GetTowerAtSlot(System.Int32)
+  - TDMaker.Core.Simulation.IsEligibleTarget(TDMaker.Core.Entity,TDMaker.Core.TargetQuery@)
+  - TDMaker.Core.Simulation.Level
+  - TDMaker.Core.Simulation.PendingRecoveryCount
+  - TDMaker.Core.Simulation.PlaceTrap(TDMaker.Core.Defs.TrapDef,TDMaker.Core.Vec2,System.Int32)
+  - TDMaker.Core.Simulation.PredictTargetPosition(System.Int32,System.Single)
+  - TDMaker.Core.Simulation.PreviewEarlyCallReward
+  - TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut(System.Int32)
+  - TDMaker.Core.Simulation.PreviewSellRefund(System.Int32)
+  - TDMaker.Core.Simulation.PublishEvent(TDMaker.Core.SimEvent)
+  - TDMaker.Core.Simulation.QueryEnemies(TDMaker.Core.Vec2,System.Single,TDMaker.Core.SpatialQueryBuffer)
+  - TDMaker.Core.Simulation.QueuedDamageCount
+  - TDMaker.Core.Simulation.RaiseRemains(TDMaker.Core.Defs.RaiseRemainsDef,System.Int32)
+  - TDMaker.Core.Simulation.Random
+  - TDMaker.Core.Simulation.RangeDistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  - TDMaker.Core.Simulation.RangeYScale
+  - TDMaker.Core.Simulation.RegisterCommandHandler``1(TDMaker.Core.ICommandHandler{``0})
+  - TDMaker.Core.Simulation.RegisterComponent``1(System.Func{``0})
+  - TDMaker.Core.Simulation.RegisterDamageHook(TDMaker.Core.IDamageHook)
+  - TDMaker.Core.Simulation.RegisterStateHashContributor(TDMaker.Core.IStateHashContributor)
+  - TDMaker.Core.Simulation.RegisterSystem(TDMaker.Core.Systems.ISimSystem,TDMaker.Core.SimStage,System.Boolean)
+  - TDMaker.Core.Simulation.RegisterTargetSelector(TDMaker.Core.ITargetSelector)
+  - TDMaker.Core.Simulation.Remains
+  - TDMaker.Core.Simulation.RemoveTrap(System.Int32)
+  - TDMaker.Core.Simulation.RepositionCompanions(System.Int32,TDMaker.Core.Vec2)
+  - TDMaker.Core.Simulation.RequestDamage(TDMaker.Core.DamageContext)
+  - TDMaker.Core.Simulation.ScheduledActionCount
+  - TDMaker.Core.Simulation.Seed
+  - TDMaker.Core.Simulation.SetEntityPosition(System.Int32,TDMaker.Core.Vec2,System.Boolean)
+  - TDMaker.Core.Simulation.SetProfiler(TDMaker.Core.ISimProfiler)
+  - TDMaker.Core.Simulation.SpatialRebuildCount
+  - TDMaker.Core.Simulation.SpawnEnemy(System.String,System.Int32,System.Int32)
+  - TDMaker.Core.Simulation.SpawnHero(System.String,TDMaker.Core.Vec2)
+  - TDMaker.Core.Simulation.Spells
+  - TDMaker.Core.Simulation.StartRecording(TDMaker.Core.CommandLog)
+  - TDMaker.Core.Simulation.StartReplay(TDMaker.Core.CommandLog)
+  - TDMaker.Core.Simulation.State
+  - TDMaker.Core.Simulation.Step
+  - TDMaker.Core.Simulation.StopRecording
+  - TDMaker.Core.Simulation.SystemPipeline
+  - TDMaker.Core.Simulation.Templates
+  - TDMaker.Core.Simulation.Time
+  - TDMaker.Core.Simulation.Traps
+  - TDMaker.Core.Simulation.TryResolvePoint(TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  - TDMaker.Core.Simulation.TryResolveRallyPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  - TDMaker.Core.Simulation.TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32)
+  - TDMaker.Core.Simulation.TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32,System.String)
+  - TDMaker.Core.Simulation.TryValidateSpellPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  - TDMaker.Core.Simulation.UpgradeFingerprint
+  langs:
+  - csharp
+  - vb
+  name: Simulation
+  nameWithType: Simulation
+  fullName: TDMaker.Core.Simulation
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A deterministic fixed-step world. Use commands for player actions and ClearEvents after reading output.
+  example: []
+  syntax:
+    content: public sealed class Simulation
+    content.vb: Public NotInheritable Class Simulation
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Simulation.StartRecording(TDMaker.Core.CommandLog)
+  commentId: M:TDMaker.Core.Simulation.StartRecording(TDMaker.Core.CommandLog)
+  id: StartRecording(TDMaker.Core.CommandLog)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: StartRecording(CommandLog)
+  nameWithType: Simulation.StartRecording(CommandLog)
+  fullName: TDMaker.Core.Simulation.StartRecording(TDMaker.Core.CommandLog)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Begins fixed-capacity recording before the first Step. Only successfully queued external commands are recorded.
+  example: []
+  syntax:
+    content: public void StartRecording(CommandLog log)
+    parameters:
+    - id: log
+      type: TDMaker.Core.CommandLog
+    content.vb: Public Sub StartRecording(log As CommandLog)
+  overload: TDMaker.Core.Simulation.StartRecording*
+- uid: TDMaker.Core.Simulation.StopRecording
+  commentId: M:TDMaker.Core.Simulation.StopRecording
+  id: StopRecording
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: StopRecording()
+  nameWithType: Simulation.StopRecording()
+  fullName: TDMaker.Core.Simulation.StopRecording()
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Seals and detaches the current recording between ticks; does nothing when not recording.
+  example: []
+  syntax:
+    content: public void StopRecording()
+    content.vb: Public Sub StopRecording()
+  overload: TDMaker.Core.Simulation.StopRecording*
+- uid: TDMaker.Core.Simulation.StartReplay(TDMaker.Core.CommandLog)
+  commentId: M:TDMaker.Core.Simulation.StartReplay(TDMaker.Core.CommandLog)
+  id: StartReplay(TDMaker.Core.CommandLog)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: StartReplay(CommandLog)
+  nameWithType: Simulation.StartReplay(CommandLog)
+  fullName: TDMaker.Core.Simulation.StartReplay(TDMaker.Core.CommandLog)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Injects recorded commands at their original ticks. Configure the same initial world and seed; live external input
+    is rejected.
+  example:
+  - <pre><code class="lang-csharp">var replay = new Simulation(templates, level, config, log.Seed); replay.StartReplay(log);</code></pre>
+  syntax:
+    content: public void StartReplay(CommandLog log)
+    parameters:
+    - id: log
+      type: TDMaker.Core.CommandLog
+    content.vb: Public Sub StartReplay(log As CommandLog)
+  overload: TDMaker.Core.Simulation.StartReplay*
+- uid: TDMaker.Core.Simulation.PlaceTrap(TDMaker.Core.Defs.TrapDef,TDMaker.Core.Vec2,System.Int32)
+  commentId: M:TDMaker.Core.Simulation.PlaceTrap(TDMaker.Core.Defs.TrapDef,TDMaker.Core.Vec2,System.Int32)
+  id: PlaceTrap(TDMaker.Core.Defs.TrapDef,TDMaker.Core.Vec2,System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: PlaceTrap(TrapDef, Vec2, int)
+  nameWithType: Simulation.PlaceTrap(TrapDef, Vec2, int)
+  fullName: TDMaker.Core.Simulation.PlaceTrap(TDMaker.Core.Defs.TrapDef, TDMaker.Core.Vec2, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Places a validated deployment without allocating. Returns zero on invalid placement/source, population limit or
+    pool exhaustion.
+  example: []
+  syntax:
+    content: public int PlaceTrap(TrapDef definition, Vec2 desired, int sourceId = 0)
+    parameters:
+    - id: definition
+      type: TDMaker.Core.Defs.TrapDef
+    - id: desired
+      type: TDMaker.Core.Vec2
+    - id: sourceId
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function PlaceTrap(definition As TrapDef, desired As Vec2, sourceId As Integer = 0) As Integer
+  overload: TDMaker.Core.Simulation.PlaceTrap*
+  nameWithType.vb: Simulation.PlaceTrap(TrapDef, Vec2, Integer)
+  fullName.vb: TDMaker.Core.Simulation.PlaceTrap(TDMaker.Core.Defs.TrapDef, TDMaker.Core.Vec2, Integer)
+  name.vb: PlaceTrap(TrapDef, Vec2, Integer)
+- uid: TDMaker.Core.Simulation.RemoveTrap(System.Int32)
+  commentId: M:TDMaker.Core.Simulation.RemoveTrap(System.Int32)
+  id: RemoveTrap(System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RemoveTrap(int)
+  nameWithType: Simulation.RemoveTrap(int)
+  fullName: TDMaker.Core.Simulation.RemoveTrap(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Marks a deployment for removal in the next mechanism stage.
+  example: []
+  syntax:
+    content: public bool RemoveTrap(int trapId)
+    parameters:
+    - id: trapId
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function RemoveTrap(trapId As Integer) As Boolean
+  overload: TDMaker.Core.Simulation.RemoveTrap*
+  nameWithType.vb: Simulation.RemoveTrap(Integer)
+  fullName.vb: TDMaker.Core.Simulation.RemoveTrap(Integer)
+  name.vb: RemoveTrap(Integer)
+- uid: TDMaker.Core.Simulation.CancelBeam(System.Int32)
+  commentId: M:TDMaker.Core.Simulation.CancelBeam(System.Int32)
+  id: CancelBeam(System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: CancelBeam(int)
+  nameWithType: Simulation.CancelBeam(int)
+  fullName: TDMaker.Core.Simulation.CancelBeam(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Cancels a channel at the next mechanism stage.
+  example: []
+  syntax:
+    content: public bool CancelBeam(int beamId)
+    parameters:
+    - id: beamId
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function CancelBeam(beamId As Integer) As Boolean
+  overload: TDMaker.Core.Simulation.CancelBeam*
+  nameWithType.vb: Simulation.CancelBeam(Integer)
+  fullName.vb: TDMaker.Core.Simulation.CancelBeam(Integer)
+  name.vb: CancelBeam(Integer)
+- uid: TDMaker.Core.Simulation.TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32)
+  commentId: M:TDMaker.Core.Simulation.TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32)
+  id: TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: TryTransferToPath(int, PathDestinationDef, int)
+  nameWithType: Simulation.TryTransferToPath(int, PathDestinationDef, int)
+  fullName: TDMaker.Core.Simulation.TryTransferToPath(int, TDMaker.Core.Defs.PathDestinationDef, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Atomically changes path/lane/cursor/position, clears interception and refreshes the spatial index. Invalid geometry
+    changes nothing.
+  example: []
+  syntax:
+    content: public bool TryTransferToPath(int entityId, PathDestinationDef destination, int sourceId = 0)
+    parameters:
+    - id: entityId
+      type: System.Int32
+    - id: destination
+      type: TDMaker.Core.Defs.PathDestinationDef
+    - id: sourceId
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryTransferToPath(entityId As Integer, destination As PathDestinationDef, sourceId As Integer
+      = 0) As Boolean
+  overload: TDMaker.Core.Simulation.TryTransferToPath*
+  nameWithType.vb: Simulation.TryTransferToPath(Integer, PathDestinationDef, Integer)
+  fullName.vb: TDMaker.Core.Simulation.TryTransferToPath(Integer, TDMaker.Core.Defs.PathDestinationDef, Integer)
+  name.vb: TryTransferToPath(Integer, PathDestinationDef, Integer)
+- uid: TDMaker.Core.Simulation.TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32,System.String)
+  commentId: M:TDMaker.Core.Simulation.TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32,System.String)
+  id: TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32,System.String)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: TryTransferToPath(int, PathDestinationDef, int, string)
+  nameWithType: Simulation.TryTransferToPath(int, PathDestinationDef, int, string)
+  fullName: TDMaker.Core.Simulation.TryTransferToPath(int, TDMaker.Core.Defs.PathDestinationDef, int, string)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Transfers a unit and includes the supplied mechanism identity in PathTransferred.Key. Null preserves the legacy
+    unkeyed notification.
+  example: []
+  syntax:
+    content: public bool TryTransferToPath(int entityId, PathDestinationDef destination, int sourceId, string mechanismKey)
+    parameters:
+    - id: entityId
+      type: System.Int32
+    - id: destination
+      type: TDMaker.Core.Defs.PathDestinationDef
+    - id: sourceId
+      type: System.Int32
+    - id: mechanismKey
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryTransferToPath(entityId As Integer, destination As PathDestinationDef, sourceId As Integer,
+      mechanismKey As String) As Boolean
+  overload: TDMaker.Core.Simulation.TryTransferToPath*
+  nameWithType.vb: Simulation.TryTransferToPath(Integer, PathDestinationDef, Integer, String)
+  fullName.vb: TDMaker.Core.Simulation.TryTransferToPath(Integer, TDMaker.Core.Defs.PathDestinationDef, Integer, String)
+  name.vb: TryTransferToPath(Integer, PathDestinationDef, Integer, String)
+- uid: TDMaker.Core.Simulation.RepositionCompanions(System.Int32,TDMaker.Core.Vec2)
+  commentId: M:TDMaker.Core.Simulation.RepositionCompanions(System.Int32,TDMaker.Core.Vec2)
+  id: RepositionCompanions(System.Int32,TDMaker.Core.Vec2)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RepositionCompanions(int, Vec2)
+  nameWithType: Simulation.RepositionCompanions(int, Vec2)
+  fullName: TDMaker.Core.Simulation.RepositionCompanions(int, TDMaker.Core.Vec2)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Reassigns ground escorts around an approved owner destination. MoveHero and SetRallyPoint call this automatically.
+  example: []
+  syntax:
+    content: public void RepositionCompanions(int ownerId, Vec2 destination)
+    parameters:
+    - id: ownerId
+      type: System.Int32
+    - id: destination
+      type: TDMaker.Core.Vec2
+    content.vb: Public Sub RepositionCompanions(ownerId As Integer, destination As Vec2)
+  overload: TDMaker.Core.Simulation.RepositionCompanions*
+  nameWithType.vb: Simulation.RepositionCompanions(Integer, Vec2)
+  fullName.vb: TDMaker.Core.Simulation.RepositionCompanions(Integer, TDMaker.Core.Vec2)
+  name.vb: RepositionCompanions(Integer, Vec2)
+- uid: TDMaker.Core.Simulation.#ctor(TDMaker.Core.Defs.TemplateRegistry,TDMaker.Core.Defs.LevelDef,TDMaker.Core.SimConfig,System.UInt32)
+  commentId: M:TDMaker.Core.Simulation.#ctor(TDMaker.Core.Defs.TemplateRegistry,TDMaker.Core.Defs.LevelDef,TDMaker.Core.SimConfig,System.UInt32)
+  id: '#ctor(TDMaker.Core.Defs.TemplateRegistry,TDMaker.Core.Defs.LevelDef,TDMaker.Core.SimConfig,System.UInt32)'
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Simulation(TemplateRegistry, LevelDef, SimConfig, uint)
+  nameWithType: Simulation.Simulation(TemplateRegistry, LevelDef, SimConfig, uint)
+  fullName: TDMaker.Core.Simulation.Simulation(TDMaker.Core.Defs.TemplateRegistry, TDMaker.Core.Defs.LevelDef, TDMaker.Core.SimConfig,
+    uint)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Creates and prewarms a world; no engine APIs or background clocks are used.
+  example: []
+  syntax:
+    content: public Simulation(TemplateRegistry templates, LevelDef level, SimConfig config = null, uint seed = 1)
+    parameters:
+    - id: templates
+      type: TDMaker.Core.Defs.TemplateRegistry
+    - id: level
+      type: TDMaker.Core.Defs.LevelDef
+    - id: config
+      type: TDMaker.Core.SimConfig
+    - id: seed
+      type: System.UInt32
+    content.vb: Public Sub New(templates As TemplateRegistry, level As LevelDef, config As SimConfig = Nothing, seed As UInteger
+      = 1)
+  overload: TDMaker.Core.Simulation.#ctor*
+  nameWithType.vb: Simulation.New(TemplateRegistry, LevelDef, SimConfig, UInteger)
+  fullName.vb: TDMaker.Core.Simulation.New(TDMaker.Core.Defs.TemplateRegistry, TDMaker.Core.Defs.LevelDef, TDMaker.Core.SimConfig,
+    UInteger)
+  name.vb: New(TemplateRegistry, LevelDef, SimConfig, UInteger)
+- uid: TDMaker.Core.Simulation.Enqueue(TDMaker.Core.Commands.ICommand)
+  commentId: M:TDMaker.Core.Simulation.Enqueue(TDMaker.Core.Commands.ICommand)
+  id: Enqueue(TDMaker.Core.Commands.ICommand)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Enqueue(ICommand)
+  nameWithType: Simulation.Enqueue(ICommand)
+  fullName: TDMaker.Core.Simulation.Enqueue(TDMaker.Core.Commands.ICommand)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Queues an immutable command for the next tick; input allocation is outside Step.
+  example: []
+  syntax:
+    content: public void Enqueue(ICommand command)
+    parameters:
+    - id: command
+      type: TDMaker.Core.Commands.ICommand
+    content.vb: Public Sub Enqueue(command As ICommand)
+  overload: TDMaker.Core.Simulation.Enqueue*
+- uid: TDMaker.Core.Simulation.Step
+  commentId: M:TDMaker.Core.Simulation.Step
+  id: Step
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Step()
+  nameWithType: Simulation.Step()
+  fullName: TDMaker.Core.Simulation.Step()
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: 'Advances one fixed tick: damage precedes exits, outcomes precede Flush, new entities act next tick.'
+  example: []
+  syntax:
+    content: public void Step()
+    content.vb: Public Sub [Step]()
+  overload: TDMaker.Core.Simulation.Step*
+- uid: TDMaker.Core.Simulation.ClearEvents
+  commentId: M:TDMaker.Core.Simulation.ClearEvents
+  id: ClearEvents
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: ClearEvents()
+  nameWithType: Simulation.ClearEvents()
+  fullName: TDMaker.Core.Simulation.ClearEvents()
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Clears consumed events while retaining their backing capacity.
+  example: []
+  syntax:
+    content: public void ClearEvents()
+    content.vb: Public Sub ClearEvents()
+  overload: TDMaker.Core.Simulation.ClearEvents*
+- uid: TDMaker.Core.Simulation.GetTowerAtSlot(System.Int32)
+  commentId: M:TDMaker.Core.Simulation.GetTowerAtSlot(System.Int32)
+  id: GetTowerAtSlot(System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: GetTowerAtSlot(int)
+  nameWithType: Simulation.GetTowerAtSlot(int)
+  fullName: TDMaker.Core.Simulation.GetTowerAtSlot(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Reads a reserved or committed tower at a construction slot, or zero.
+  example: []
+  syntax:
+    content: public int GetTowerAtSlot(int slotIndex)
+    parameters:
+    - id: slotIndex
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetTowerAtSlot(slotIndex As Integer) As Integer
+  overload: TDMaker.Core.Simulation.GetTowerAtSlot*
+  nameWithType.vb: Simulation.GetTowerAtSlot(Integer)
+  fullName.vb: TDMaker.Core.Simulation.GetTowerAtSlot(Integer)
+  name.vb: GetTowerAtSlot(Integer)
+- uid: TDMaker.Core.Simulation.SpawnEnemy(System.String,System.Int32,System.Int32)
+  commentId: M:TDMaker.Core.Simulation.SpawnEnemy(System.String,System.Int32,System.Int32)
+  id: SpawnEnemy(System.String,System.Int32,System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: SpawnEnemy(string, int, int)
+  nameWithType: Simulation.SpawnEnemy(string, int, int)
+  fullName: TDMaker.Core.Simulation.SpawnEnemy(string, int, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Queues an enemy at a validated path entry. Its first action is after the next Flush.
+  example: []
+  syntax:
+    content: public Entity SpawnEnemy(string templateId, int pathIndex, int laneIndex = 0)
+    parameters:
+    - id: templateId
+      type: System.String
+    - id: pathIndex
+      type: System.Int32
+    - id: laneIndex
+      type: System.Int32
+    return:
+      type: TDMaker.Core.Entity
+    content.vb: Public Function SpawnEnemy(templateId As String, pathIndex As Integer, laneIndex As Integer = 0) As Entity
+  overload: TDMaker.Core.Simulation.SpawnEnemy*
+  nameWithType.vb: Simulation.SpawnEnemy(String, Integer, Integer)
+  fullName.vb: TDMaker.Core.Simulation.SpawnEnemy(String, Integer, Integer)
+  name.vb: SpawnEnemy(String, Integer, Integer)
+- uid: TDMaker.Core.Simulation.Deploy(TDMaker.Core.Defs.DeploymentPlanDef,System.Int32)
+  commentId: M:TDMaker.Core.Simulation.Deploy(TDMaker.Core.Defs.DeploymentPlanDef,System.Int32)
+  id: Deploy(TDMaker.Core.Defs.DeploymentPlanDef,System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Deploy(DeploymentPlanDef, int)
+  nameWithType: Simulation.Deploy(DeploymentPlanDef, int)
+  fullName: TDMaker.Core.Simulation.Deploy(TDMaker.Core.Defs.DeploymentPlanDef, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Atomically reserves one seeded path-node site and one trap slot. Zero means no candidate, invalid producer, quota
+    or capacity.
+  example: []
+  syntax:
+    content: public int Deploy(DeploymentPlanDef plan, int sourceId)
+    parameters:
+    - id: plan
+      type: TDMaker.Core.Defs.DeploymentPlanDef
+    - id: sourceId
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function Deploy(plan As DeploymentPlanDef, sourceId As Integer) As Integer
+  overload: TDMaker.Core.Simulation.Deploy*
+  nameWithType.vb: Simulation.Deploy(DeploymentPlanDef, Integer)
+  fullName.vb: TDMaker.Core.Simulation.Deploy(TDMaker.Core.Defs.DeploymentPlanDef, Integer)
+  name.vb: Deploy(DeploymentPlanDef, Integer)
+- uid: TDMaker.Core.Simulation.RegisterSystem(TDMaker.Core.Systems.ISimSystem,TDMaker.Core.SimStage,System.Boolean)
+  commentId: M:TDMaker.Core.Simulation.RegisterSystem(TDMaker.Core.Systems.ISimSystem,TDMaker.Core.SimStage,System.Boolean)
+  id: RegisterSystem(TDMaker.Core.Systems.ISimSystem,TDMaker.Core.SimStage,System.Boolean)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RegisterSystem(ISimSystem, SimStage, bool)
+  nameWithType: Simulation.RegisterSystem(ISimSystem, SimStage, bool)
+  fullName: TDMaker.Core.Simulation.RegisterSystem(TDMaker.Core.Systems.ISimSystem, TDMaker.Core.SimStage, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Inserts a system before or after a built-in stage. Registrations at the same location run in registration order.
+  example:
+  - '<pre><code class="lang-csharp">sim.RegisterSystem(new WeatherSystem(), SimStage.Damage, after: false);</code></pre>'
+  syntax:
+    content: public void RegisterSystem(ISimSystem system, SimStage anchor, bool after = true)
+    parameters:
+    - id: system
+      type: TDMaker.Core.Systems.ISimSystem
+    - id: anchor
+      type: TDMaker.Core.SimStage
+    - id: after
+      type: System.Boolean
+    content.vb: Public Sub RegisterSystem(system As ISimSystem, anchor As SimStage, after As Boolean = True)
+  overload: TDMaker.Core.Simulation.RegisterSystem*
+  nameWithType.vb: Simulation.RegisterSystem(ISimSystem, SimStage, Boolean)
+  fullName.vb: TDMaker.Core.Simulation.RegisterSystem(TDMaker.Core.Systems.ISimSystem, TDMaker.Core.SimStage, Boolean)
+  name.vb: RegisterSystem(ISimSystem, SimStage, Boolean)
+- uid: TDMaker.Core.Simulation.RegisterComponent``1(System.Func{``0})
+  commentId: M:TDMaker.Core.Simulation.RegisterComponent``1(System.Func{``0})
+  id: RegisterComponent``1(System.Func{``0})
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RegisterComponent<T>(Func<T>)
+  nameWithType: Simulation.RegisterComponent<T>(Func<T>)
+  fullName: TDMaker.Core.Simulation.RegisterComponent<T>(System.Func<T>)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Prewarms one unique component instance for every pool bundle. Factories run only here; Reset runs on spawn.
+  example:
+  - <pre><code class="lang-csharp">sim.RegisterComponent(() =&gt; new ShieldState());</code></pre>
+  syntax:
+    content: 'public void RegisterComponent<T>(Func<T> factory) where T : class, ICustomComponent'
+    parameters:
+    - id: factory
+      type: System.Func{{T}}
+    typeParameters:
+    - id: T
+    content.vb: Public Sub RegisterComponent(Of T As {Class, ICustomComponent})(factory As Func(Of T))
+  overload: TDMaker.Core.Simulation.RegisterComponent*
+  nameWithType.vb: Simulation.RegisterComponent(Of T)(Func(Of T))
+  fullName.vb: TDMaker.Core.Simulation.RegisterComponent(Of T)(System.Func(Of T))
+  name.vb: RegisterComponent(Of T)(Func(Of T))
+- uid: TDMaker.Core.Simulation.RegisterTargetSelector(TDMaker.Core.ITargetSelector)
+  commentId: M:TDMaker.Core.Simulation.RegisterTargetSelector(TDMaker.Core.ITargetSelector)
+  id: RegisterTargetSelector(TDMaker.Core.ITargetSelector)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RegisterTargetSelector(ITargetSelector)
+  nameWithType: Simulation.RegisterTargetSelector(ITargetSelector)
+  fullName: TDMaker.Core.Simulation.RegisterTargetSelector(TDMaker.Core.ITargetSelector)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Registers the optional world-wide ranged selector. Candidate and definition data can distinguish actor types.
+  example:
+  - <pre><code class="lang-csharp">sim.RegisterTargetSelector(new LowestShieldSelector());</code></pre>
+  syntax:
+    content: public void RegisterTargetSelector(ITargetSelector selector)
+    parameters:
+    - id: selector
+      type: TDMaker.Core.ITargetSelector
+    content.vb: Public Sub RegisterTargetSelector(selector As ITargetSelector)
+  overload: TDMaker.Core.Simulation.RegisterTargetSelector*
+- uid: TDMaker.Core.Simulation.RegisterDamageHook(TDMaker.Core.IDamageHook)
+  commentId: M:TDMaker.Core.Simulation.RegisterDamageHook(TDMaker.Core.IDamageHook)
+  id: RegisterDamageHook(TDMaker.Core.IDamageHook)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RegisterDamageHook(IDamageHook)
+  nameWithType: Simulation.RegisterDamageHook(IDamageHook)
+  fullName: TDMaker.Core.Simulation.RegisterDamageHook(TDMaker.Core.IDamageHook)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds a damage hook in deterministic registration order.
+  example:
+  - <pre><code class="lang-csharp">sim.RegisterDamageHook(new ShieldDamageHook());</code></pre>
+  syntax:
+    content: public void RegisterDamageHook(IDamageHook hook)
+    parameters:
+    - id: hook
+      type: TDMaker.Core.IDamageHook
+    content.vb: Public Sub RegisterDamageHook(hook As IDamageHook)
+  overload: TDMaker.Core.Simulation.RegisterDamageHook*
+- uid: TDMaker.Core.Simulation.RegisterCommandHandler``1(TDMaker.Core.ICommandHandler{``0})
+  commentId: M:TDMaker.Core.Simulation.RegisterCommandHandler``1(TDMaker.Core.ICommandHandler{``0})
+  id: RegisterCommandHandler``1(TDMaker.Core.ICommandHandler{``0})
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RegisterCommandHandler<T>(ICommandHandler<T>)
+  nameWithType: Simulation.RegisterCommandHandler<T>(ICommandHandler<T>)
+  fullName: TDMaker.Core.Simulation.RegisterCommandHandler<T>(TDMaker.Core.ICommandHandler<T>)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Registers an exact custom command type; built-in commands retain their original handlers.
+  example:
+  - <pre><code class="lang-csharp">sim.RegisterCommandHandler&lt;SetStance&gt;(new SetStanceHandler());</code></pre>
+  syntax:
+    content: 'public void RegisterCommandHandler<T>(ICommandHandler<T> handler) where T : class, ICommand'
+    parameters:
+    - id: handler
+      type: TDMaker.Core.ICommandHandler{{T}}
+    typeParameters:
+    - id: T
+    content.vb: Public Sub RegisterCommandHandler(Of T As {Class, ICommand})(handler As ICommandHandler(Of T))
+  overload: TDMaker.Core.Simulation.RegisterCommandHandler*
+  nameWithType.vb: Simulation.RegisterCommandHandler(Of T)(ICommandHandler(Of T))
+  fullName.vb: TDMaker.Core.Simulation.RegisterCommandHandler(Of T)(TDMaker.Core.ICommandHandler(Of T))
+  name.vb: RegisterCommandHandler(Of T)(ICommandHandler(Of T))
+- uid: TDMaker.Core.Simulation.RegisterStateHashContributor(TDMaker.Core.IStateHashContributor)
+  commentId: M:TDMaker.Core.Simulation.RegisterStateHashContributor(TDMaker.Core.IStateHashContributor)
+  id: RegisterStateHashContributor(TDMaker.Core.IStateHashContributor)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RegisterStateHashContributor(IStateHashContributor)
+  nameWithType: Simulation.RegisterStateHashContributor(IStateHashContributor)
+  fullName: TDMaker.Core.Simulation.RegisterStateHashContributor(TDMaker.Core.IStateHashContributor)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Includes external extension state in ComputeStateHash, in registration order.
+  example:
+  - <pre><code class="lang-csharp">sim.RegisterStateHashContributor(weatherState);</code></pre>
+  syntax:
+    content: public void RegisterStateHashContributor(IStateHashContributor contributor)
+    parameters:
+    - id: contributor
+      type: TDMaker.Core.IStateHashContributor
+    content.vb: Public Sub RegisterStateHashContributor(contributor As IStateHashContributor)
+  overload: TDMaker.Core.Simulation.RegisterStateHashContributor*
+- uid: TDMaker.Core.Simulation.QueryEnemies(TDMaker.Core.Vec2,System.Single,TDMaker.Core.SpatialQueryBuffer)
+  commentId: M:TDMaker.Core.Simulation.QueryEnemies(TDMaker.Core.Vec2,System.Single,TDMaker.Core.SpatialQueryBuffer)
+  id: QueryEnemies(TDMaker.Core.Vec2,System.Single,TDMaker.Core.SpatialQueryBuffer)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: QueryEnemies(Vec2, float, SpatialQueryBuffer)
+  nameWithType: Simulation.QueryEnemies(Vec2, float, SpatialQueryBuffer)
+  fullName: TDMaker.Core.Simulation.QueryEnemies(TDMaker.Core.Vec2, float, TDMaker.Core.SpatialQueryBuffer)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Queries active enemies using the shared ellipse. Results are ascending Id; the caller owns and reuses its buffer.
+  example:
+  - <pre><code class="lang-csharp">sim.QueryEnemies(center, 3, cachedBuffer);</code></pre>
+  syntax:
+    content: public void QueryEnemies(Vec2 center, float range, SpatialQueryBuffer results)
+    parameters:
+    - id: center
+      type: TDMaker.Core.Vec2
+    - id: range
+      type: System.Single
+    - id: results
+      type: TDMaker.Core.SpatialQueryBuffer
+    content.vb: Public Sub QueryEnemies(center As Vec2, range As Single, results As SpatialQueryBuffer)
+  overload: TDMaker.Core.Simulation.QueryEnemies*
+  nameWithType.vb: Simulation.QueryEnemies(Vec2, Single, SpatialQueryBuffer)
+  fullName.vb: TDMaker.Core.Simulation.QueryEnemies(TDMaker.Core.Vec2, Single, TDMaker.Core.SpatialQueryBuffer)
+  name.vb: QueryEnemies(Vec2, Single, SpatialQueryBuffer)
+- uid: TDMaker.Core.Simulation.ConfigureSpatialIndex(System.Single,System.Boolean)
+  commentId: M:TDMaker.Core.Simulation.ConfigureSpatialIndex(System.Single,System.Boolean)
+  id: ConfigureSpatialIndex(System.Single,System.Boolean)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: ConfigureSpatialIndex(float, bool)
+  nameWithType: Simulation.ConfigureSpatialIndex(float, bool)
+  fullName: TDMaker.Core.Simulation.ConfigureSpatialIndex(float, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Configures horizontal grid cell size before stepping. Disabling it selects the Id-ordered linear backend for profiling.
+  example:
+  - '<pre><code class="lang-csharp">sim.ConfigureSpatialIndex(cellSize: 4);</code></pre>'
+  syntax:
+    content: public void ConfigureSpatialIndex(float cellSize = 4, bool enabled = true)
+    parameters:
+    - id: cellSize
+      type: System.Single
+    - id: enabled
+      type: System.Boolean
+    content.vb: Public Sub ConfigureSpatialIndex(cellSize As Single = 4, enabled As Boolean = True)
+  overload: TDMaker.Core.Simulation.ConfigureSpatialIndex*
+  nameWithType.vb: Simulation.ConfigureSpatialIndex(Single, Boolean)
+  fullName.vb: TDMaker.Core.Simulation.ConfigureSpatialIndex(Single, Boolean)
+  name.vb: ConfigureSpatialIndex(Single, Boolean)
+- uid: TDMaker.Core.Simulation.FindTarget(TDMaker.Core.TargetQuery@)
+  commentId: M:TDMaker.Core.Simulation.FindTarget(TDMaker.Core.TargetQuery@)
+  id: FindTarget(TDMaker.Core.TargetQuery@)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: FindTarget(in TargetQuery)
+  nameWithType: Simulation.FindTarget(in TargetQuery)
+  fullName: TDMaker.Core.Simulation.FindTarget(in TDMaker.Core.TargetQuery)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Finds a ranged target using the registered selector or the original scoring and Id tie-breaks.
+  example: []
+  syntax:
+    content: public Entity FindTarget(in TargetQuery query)
+    parameters:
+    - id: query
+      type: TDMaker.Core.TargetQuery
+    return:
+      type: TDMaker.Core.Entity
+    content.vb: Public Function FindTarget(query As TargetQuery) As Entity
+  overload: TDMaker.Core.Simulation.FindTarget*
+  nameWithType.vb: Simulation.FindTarget(TargetQuery)
+  fullName.vb: TDMaker.Core.Simulation.FindTarget(TDMaker.Core.TargetQuery)
+  name.vb: FindTarget(TargetQuery)
+- uid: TDMaker.Core.Simulation.IsEligibleTarget(TDMaker.Core.Entity,TDMaker.Core.TargetQuery@)
+  commentId: M:TDMaker.Core.Simulation.IsEligibleTarget(TDMaker.Core.Entity,TDMaker.Core.TargetQuery@)
+  id: IsEligibleTarget(TDMaker.Core.Entity,TDMaker.Core.TargetQuery@)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: IsEligibleTarget(Entity, in TargetQuery)
+  nameWithType: Simulation.IsEligibleTarget(Entity, in TargetQuery)
+  fullName: TDMaker.Core.Simulation.IsEligibleTarget(TDMaker.Core.Entity, in TDMaker.Core.TargetQuery)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Checks membership, lifecycle, faction, flight filters and the query's elliptical range.
+  example: []
+  syntax:
+    content: public bool IsEligibleTarget(Entity target, in TargetQuery query)
+    parameters:
+    - id: target
+      type: TDMaker.Core.Entity
+    - id: query
+      type: TDMaker.Core.TargetQuery
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsEligibleTarget(target As Entity, query As TargetQuery) As Boolean
+  overload: TDMaker.Core.Simulation.IsEligibleTarget*
+  nameWithType.vb: Simulation.IsEligibleTarget(Entity, TargetQuery)
+  fullName.vb: TDMaker.Core.Simulation.IsEligibleTarget(TDMaker.Core.Entity, TDMaker.Core.TargetQuery)
+  name.vb: IsEligibleTarget(Entity, TargetQuery)
+- uid: TDMaker.Core.Simulation.RequestDamage(TDMaker.Core.DamageContext)
+  commentId: M:TDMaker.Core.Simulation.RequestDamage(TDMaker.Core.DamageContext)
+  id: RequestDamage(TDMaker.Core.DamageContext)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RequestDamage(DamageContext)
+  nameWithType: Simulation.RequestDamage(DamageContext)
+  fullName: TDMaker.Core.Simulation.RequestDamage(TDMaker.Core.DamageContext)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Queues custom raw damage through the same hooks, FIFO, defenses, effects and experience path.
+  example:
+  - <pre><code class="lang-csharp">sim.RequestDamage(new DamageContext(actor.Id, target.Id, 10, damage));</code></pre>
+  syntax:
+    content: public bool RequestDamage(DamageContext request)
+    parameters:
+    - id: request
+      type: TDMaker.Core.DamageContext
+    return:
+      type: System.Boolean
+    content.vb: Public Function RequestDamage(request As DamageContext) As Boolean
+  overload: TDMaker.Core.Simulation.RequestDamage*
+- uid: TDMaker.Core.Simulation.SetEntityPosition(System.Int32,TDMaker.Core.Vec2,System.Boolean)
+  commentId: M:TDMaker.Core.Simulation.SetEntityPosition(System.Int32,TDMaker.Core.Vec2,System.Boolean)
+  id: SetEntityPosition(System.Int32,TDMaker.Core.Vec2,System.Boolean)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: SetEntityPosition(int, Vec2, bool)
+  nameWithType: Simulation.SetEntityPosition(int, Vec2, bool)
+  fullName: TDMaker.Core.Simulation.SetEntityPosition(int, TDMaker.Core.Vec2, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Changes position without advancing a path cursor; invalidates spatial queries immediately.
+  example: []
+  syntax:
+    content: public bool SetEntityPosition(int entityId, Vec2 position, bool resetInterpolation = false)
+    parameters:
+    - id: entityId
+      type: System.Int32
+    - id: position
+      type: TDMaker.Core.Vec2
+    - id: resetInterpolation
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Function SetEntityPosition(entityId As Integer, position As Vec2, resetInterpolation As Boolean = False)
+      As Boolean
+  overload: TDMaker.Core.Simulation.SetEntityPosition*
+  nameWithType.vb: Simulation.SetEntityPosition(Integer, Vec2, Boolean)
+  fullName.vb: TDMaker.Core.Simulation.SetEntityPosition(Integer, TDMaker.Core.Vec2, Boolean)
+  name.vb: SetEntityPosition(Integer, Vec2, Boolean)
+- uid: TDMaker.Core.Simulation.PublishEvent(TDMaker.Core.SimEvent)
+  commentId: M:TDMaker.Core.Simulation.PublishEvent(TDMaker.Core.SimEvent)
+  id: PublishEvent(TDMaker.Core.SimEvent)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: PublishEvent(SimEvent)
+  nameWithType: Simulation.PublishEvent(SimEvent)
+  fullName: TDMaker.Core.Simulation.PublishEvent(TDMaker.Core.SimEvent)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Publishes an event in the reserved custom range. Uses the normal fixed-capacity event buffer.
+  example:
+  - <pre><code class="lang-csharp">sim.PublishEvent(new SimEvent((SimEventKind)((int)SimEventKind.CustomStart + 1), actor.Id));</code></pre>
+  syntax:
+    content: public void PublishEvent(SimEvent value)
+    parameters:
+    - id: value
+      type: TDMaker.Core.SimEvent
+    content.vb: Public Sub PublishEvent(value As SimEvent)
+  overload: TDMaker.Core.Simulation.PublishEvent*
+- uid: TDMaker.Core.Simulation.RangeDistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  commentId: M:TDMaker.Core.Simulation.RangeDistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  id: RangeDistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RangeDistanceSquared(Vec2, Vec2)
+  nameWithType: Simulation.RangeDistanceSquared(Vec2, Vec2)
+  fullName: TDMaker.Core.Simulation.RangeDistanceSquared(TDMaker.Core.Vec2, TDMaker.Core.Vec2)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Elliptical distance squared using the product's vertical radius ratio.
+  example: []
+  syntax:
+    content: public float RangeDistanceSquared(Vec2 a, Vec2 b)
+    parameters:
+    - id: a
+      type: TDMaker.Core.Vec2
+    - id: b
+      type: TDMaker.Core.Vec2
+    return:
+      type: System.Single
+    content.vb: Public Function RangeDistanceSquared(a As Vec2, b As Vec2) As Single
+  overload: TDMaker.Core.Simulation.RangeDistanceSquared*
+- uid: TDMaker.Core.Simulation.SpawnHero(System.String,TDMaker.Core.Vec2)
+  commentId: M:TDMaker.Core.Simulation.SpawnHero(System.String,TDMaker.Core.Vec2)
+  id: SpawnHero(System.String,TDMaker.Core.Vec2)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: SpawnHero(string, Vec2)
+  nameWithType: Simulation.SpawnHero(string, Vec2)
+  fullName: TDMaker.Core.Simulation.SpawnHero(string, TDMaker.Core.Vec2)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Queues an available independent hero at a validated finite starting position; returns null on pool saturation.
+  example: []
+  syntax:
+    content: public Entity SpawnHero(string templateId, Vec2 position)
+    parameters:
+    - id: templateId
+      type: System.String
+    - id: position
+      type: TDMaker.Core.Vec2
+    return:
+      type: TDMaker.Core.Entity
+    content.vb: Public Function SpawnHero(templateId As String, position As Vec2) As Entity
+  overload: TDMaker.Core.Simulation.SpawnHero*
+  nameWithType.vb: Simulation.SpawnHero(String, Vec2)
+  fullName.vb: TDMaker.Core.Simulation.SpawnHero(String, TDMaker.Core.Vec2)
+  name.vb: SpawnHero(String, Vec2)
+- uid: TDMaker.Core.Simulation.AddHeroExperience(System.Int32,System.Double)
+  commentId: M:TDMaker.Core.Simulation.AddHeroExperience(System.Int32,System.Double)
+  id: AddHeroExperience(System.Int32,System.Double)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: AddHeroExperience(int, double)
+  nameWithType: Simulation.AddHeroExperience(int, double)
+  fullName: TDMaker.Core.Simulation.AddHeroExperience(int, double)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Queues nonnegative raw hero experience for the progression stage.
+  example: []
+  syntax:
+    content: public bool AddHeroExperience(int entityId, double amount)
+    parameters:
+    - id: entityId
+      type: System.Int32
+    - id: amount
+      type: System.Double
+    return:
+      type: System.Boolean
+    content.vb: Public Function AddHeroExperience(entityId As Integer, amount As Double) As Boolean
+  overload: TDMaker.Core.Simulation.AddHeroExperience*
+  nameWithType.vb: Simulation.AddHeroExperience(Integer, Double)
+  fullName.vb: TDMaker.Core.Simulation.AddHeroExperience(Integer, Double)
+  name.vb: AddHeroExperience(Integer, Double)
+- uid: TDMaker.Core.Simulation.TryResolvePoint(TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  commentId: M:TDMaker.Core.Simulation.TryResolvePoint(TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  id: TryResolvePoint(TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: TryResolvePoint(PointRuleDef, Vec2, out Vec2)
+  nameWithType: Simulation.TryResolvePoint(PointRuleDef, Vec2, out Vec2)
+  fullName: TDMaker.Core.Simulation.TryResolvePoint(TDMaker.Core.Defs.PointRuleDef, TDMaker.Core.Vec2, out TDMaker.Core.Vec2)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Uses the shared point policy for previews, hero destinations, and spell approvals.
+  example: []
+  syntax:
+    content: public bool TryResolvePoint(PointRuleDef rule, Vec2 candidate, out Vec2 accepted)
+    parameters:
+    - id: rule
+      type: TDMaker.Core.Defs.PointRuleDef
+    - id: candidate
+      type: TDMaker.Core.Vec2
+    - id: accepted
+      type: TDMaker.Core.Vec2
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryResolvePoint(rule As PointRuleDef, candidate As Vec2, accepted As Vec2) As Boolean
+  overload: TDMaker.Core.Simulation.TryResolvePoint*
+  nameWithType.vb: Simulation.TryResolvePoint(PointRuleDef, Vec2, Vec2)
+  fullName.vb: TDMaker.Core.Simulation.TryResolvePoint(TDMaker.Core.Defs.PointRuleDef, TDMaker.Core.Vec2, TDMaker.Core.Vec2)
+  name.vb: TryResolvePoint(PointRuleDef, Vec2, Vec2)
+- uid: TDMaker.Core.Simulation.TryValidateSpellPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  commentId: M:TDMaker.Core.Simulation.TryValidateSpellPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  id: TryValidateSpellPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: TryValidateSpellPoint(int, Vec2, out Vec2)
+  nameWithType: Simulation.TryValidateSpellPoint(int, Vec2, out Vec2)
+  fullName: TDMaker.Core.Simulation.TryValidateSpellPoint(int, TDMaker.Core.Vec2, out TDMaker.Core.Vec2)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Validates spell placement for UI previews without consuming cooldown or randomness.
+  example: []
+  syntax:
+    content: public bool TryValidateSpellPoint(int spellIndex, Vec2 position, out Vec2 accepted)
+    parameters:
+    - id: spellIndex
+      type: System.Int32
+    - id: position
+      type: TDMaker.Core.Vec2
+    - id: accepted
+      type: TDMaker.Core.Vec2
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryValidateSpellPoint(spellIndex As Integer, position As Vec2, accepted As Vec2) As Boolean
+  overload: TDMaker.Core.Simulation.TryValidateSpellPoint*
+  nameWithType.vb: Simulation.TryValidateSpellPoint(Integer, Vec2, Vec2)
+  fullName.vb: TDMaker.Core.Simulation.TryValidateSpellPoint(Integer, TDMaker.Core.Vec2, TDMaker.Core.Vec2)
+  name.vb: TryValidateSpellPoint(Integer, Vec2, Vec2)
+- uid: TDMaker.Core.Simulation.PredictTargetPosition(System.Int32,System.Single)
+  commentId: M:TDMaker.Core.Simulation.PredictTargetPosition(System.Int32,System.Single)
+  id: PredictTargetPosition(System.Int32,System.Single)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: PredictTargetPosition(int, float)
+  nameWithType: Simulation.PredictTargetPosition(int, float)
+  fullName: TDMaker.Core.Simulation.PredictTargetPosition(int, float)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Predicts fixed-course aim by traversing path segments from the current position at observed movement speed. Blocked
+    or stationary targets are not led.
+  remarks: Uses continuous world distance, including connection gaps, rather than rounding to an authored node. Does not anticipate
+    later control changes.
+  example: []
+  syntax:
+    content: public Vec2 PredictTargetPosition(int entityId, float seconds)
+    parameters:
+    - id: entityId
+      type: System.Int32
+    - id: seconds
+      type: System.Single
+    return:
+      type: TDMaker.Core.Vec2
+    content.vb: Public Function PredictTargetPosition(entityId As Integer, seconds As Single) As Vec2
+  overload: TDMaker.Core.Simulation.PredictTargetPosition*
+  nameWithType.vb: Simulation.PredictTargetPosition(Integer, Single)
+  fullName.vb: TDMaker.Core.Simulation.PredictTargetPosition(Integer, Single)
+  name.vb: PredictTargetPosition(Integer, Single)
+- uid: TDMaker.Core.Simulation.FindDefaultTarget(TDMaker.Core.TargetQuery@)
+  commentId: M:TDMaker.Core.Simulation.FindDefaultTarget(TDMaker.Core.TargetQuery@)
+  id: FindDefaultTarget(TDMaker.Core.TargetQuery@)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: FindDefaultTarget(in TargetQuery)
+  nameWithType: Simulation.FindDefaultTarget(in TargetQuery)
+  fullName: TDMaker.Core.Simulation.FindDefaultTarget(in TDMaker.Core.TargetQuery)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Uses the built-in priority scoring and Id tie-breaks without invoking the custom selector. Safe to call from ITargetSelector.Select.
+  remarks: Uses separate reusable storage and leaves the custom selector's candidate buffer unchanged.
+  example:
+  - <pre><code class="lang-csharp">return simulation.FindDefaultTarget(query);</code></pre>
+  syntax:
+    content: public Entity FindDefaultTarget(in TargetQuery query)
+    parameters:
+    - id: query
+      type: TDMaker.Core.TargetQuery
+    return:
+      type: TDMaker.Core.Entity
+    content.vb: Public Function FindDefaultTarget(query As TargetQuery) As Entity
+  overload: TDMaker.Core.Simulation.FindDefaultTarget*
+  nameWithType.vb: Simulation.FindDefaultTarget(TargetQuery)
+  fullName.vb: TDMaker.Core.Simulation.FindDefaultTarget(TDMaker.Core.TargetQuery)
+  name.vb: FindDefaultTarget(TargetQuery)
+- uid: TDMaker.Core.Simulation.TryResolveRallyPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  commentId: M:TDMaker.Core.Simulation.TryResolveRallyPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  id: TryResolveRallyPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: TryResolveRallyPoint(int, Vec2, out Vec2)
+  nameWithType: Simulation.TryResolveRallyPoint(int, Vec2, out Vec2)
+  fullName: TDMaker.Core.Simulation.TryResolveRallyPoint(int, TDMaker.Core.Vec2, out TDMaker.Core.Vec2)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Validates a barracks rally point using the same range, finite-coordinate and lane projection rules as SetRallyPoint.
+  example:
+  - <pre><code class="lang-csharp">bool valid = sim.TryResolveRallyPoint(tower.Id, cursor, out Vec2 preview);</code></pre>
+  syntax:
+    content: public bool TryResolveRallyPoint(int towerId, Vec2 desired, out Vec2 resolved)
+    parameters:
+    - id: towerId
+      type: System.Int32
+    - id: desired
+      type: TDMaker.Core.Vec2
+    - id: resolved
+      type: TDMaker.Core.Vec2
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryResolveRallyPoint(towerId As Integer, desired As Vec2, resolved As Vec2) As Boolean
+  overload: TDMaker.Core.Simulation.TryResolveRallyPoint*
+  nameWithType.vb: Simulation.TryResolveRallyPoint(Integer, Vec2, Vec2)
+  fullName.vb: TDMaker.Core.Simulation.TryResolveRallyPoint(Integer, TDMaker.Core.Vec2, TDMaker.Core.Vec2)
+  name.vb: TryResolveRallyPoint(Integer, Vec2, Vec2)
+- uid: TDMaker.Core.Simulation.PreviewEarlyCallReward
+  commentId: M:TDMaker.Core.Simulation.PreviewEarlyCallReward
+  id: PreviewEarlyCallReward
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: PreviewEarlyCallReward()
+  nameWithType: Simulation.PreviewEarlyCallReward()
+  fullName: TDMaker.Core.Simulation.PreviewEarlyCallReward()
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Previews the next manual wave call at current fixed time, including its gold and shared spell time credit.
+  example:
+  - <pre><code class="lang-csharp">EarlyCallRewardPreview reward = sim.PreviewEarlyCallReward();</code></pre>
+  syntax:
+    content: public EarlyCallRewardPreview PreviewEarlyCallReward()
+    return:
+      type: TDMaker.Core.EarlyCallRewardPreview
+    content.vb: Public Function PreviewEarlyCallReward() As EarlyCallRewardPreview
+  overload: TDMaker.Core.Simulation.PreviewEarlyCallReward*
+- uid: TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut(System.Int32)
+  commentId: M:TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut(System.Int32)
+  id: PreviewEarlyCallSpellCooldownCut(System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: PreviewEarlyCallSpellCooldownCut(int)
+  nameWithType: Simulation.PreviewEarlyCallSpellCooldownCut(int)
+  fullName: TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Previews the exact reduction of one spell's remaining cooldown if the next wave is called now.
+  example: []
+  syntax:
+    content: public float PreviewEarlyCallSpellCooldownCut(int spellIndex)
+    parameters:
+    - id: spellIndex
+      type: System.Int32
+    return:
+      type: System.Single
+    content.vb: Public Function PreviewEarlyCallSpellCooldownCut(spellIndex As Integer) As Single
+  overload: TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut*
+  nameWithType.vb: Simulation.PreviewEarlyCallSpellCooldownCut(Integer)
+  fullName.vb: TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut(Integer)
+  name.vb: PreviewEarlyCallSpellCooldownCut(Integer)
+- uid: TDMaker.Core.Simulation.PreviewSellRefund(System.Int32)
+  commentId: M:TDMaker.Core.Simulation.PreviewSellRefund(System.Int32)
+  id: PreviewSellRefund(System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: PreviewSellRefund(int)
+  nameWithType: Simulation.PreviewSellRefund(int)
+  fullName: TDMaker.Core.Simulation.PreviewSellRefund(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Returns the same nominal refund reported by TowerSold, before wallet saturation. Invalid, removing or non-tower
+    entities return zero.
+  example:
+  - <pre><code class="lang-csharp">int refund = sim.PreviewSellRefund(tower.Id);</code></pre>
+  syntax:
+    content: public int PreviewSellRefund(int towerId)
+    parameters:
+    - id: towerId
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function PreviewSellRefund(towerId As Integer) As Integer
+  overload: TDMaker.Core.Simulation.PreviewSellRefund*
+  nameWithType.vb: Simulation.PreviewSellRefund(Integer)
+  fullName.vb: TDMaker.Core.Simulation.PreviewSellRefund(Integer)
+  name.vb: PreviewSellRefund(Integer)
+- uid: TDMaker.Core.Simulation.SetProfiler(TDMaker.Core.ISimProfiler)
+  commentId: M:TDMaker.Core.Simulation.SetProfiler(TDMaker.Core.ISimProfiler)
+  id: SetProfiler(TDMaker.Core.ISimProfiler)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: SetProfiler(ISimProfiler)
+  nameWithType: Simulation.SetProfiler(ISimProfiler)
+  fullName: TDMaker.Core.Simulation.SetProfiler(TDMaker.Core.ISimProfiler)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Installs or clears observational hooks before the first Step.
+  example:
+  - <pre><code class="lang-csharp">simulation.SetProfiler(new MyPreallocatedProfiler());</code></pre>
+  syntax:
+    content: public void SetProfiler(ISimProfiler value)
+    parameters:
+    - id: value
+      type: TDMaker.Core.ISimProfiler
+    content.vb: Public Sub SetProfiler(value As ISimProfiler)
+  overload: TDMaker.Core.Simulation.SetProfiler*
+- uid: TDMaker.Core.Simulation.RaiseRemains(TDMaker.Core.Defs.RaiseRemainsDef,System.Int32)
+  commentId: M:TDMaker.Core.Simulation.RaiseRemains(TDMaker.Core.Defs.RaiseRemainsDef,System.Int32)
+  id: RaiseRemains(TDMaker.Core.Defs.RaiseRemainsDef,System.Int32)
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RaiseRemains(RaiseRemainsDef, int)
+  nameWithType: Simulation.RaiseRemains(RaiseRemainsDef, int)
+  fullName: TDMaker.Core.Simulation.RaiseRemains(TDMaker.Core.Defs.RaiseRemainsDef, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Reserves closest eligible bodies, breaking ties by body Id. Returns accepted count; capacity and population include
+    existing reservations.
+  example: []
+  syntax:
+    content: public int RaiseRemains(RaiseRemainsDef definition, int actorId)
+    parameters:
+    - id: definition
+      type: TDMaker.Core.Defs.RaiseRemainsDef
+    - id: actorId
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function RaiseRemains(definition As RaiseRemainsDef, actorId As Integer) As Integer
+  overload: TDMaker.Core.Simulation.RaiseRemains*
+  nameWithType.vb: Simulation.RaiseRemains(RaiseRemainsDef, Integer)
+  fullName.vb: TDMaker.Core.Simulation.RaiseRemains(TDMaker.Core.Defs.RaiseRemainsDef, Integer)
+  name.vb: RaiseRemains(RaiseRemainsDef, Integer)
+- uid: TDMaker.Core.Simulation.ComputeStateHash
+  commentId: M:TDMaker.Core.Simulation.ComputeStateHash
+  id: ComputeStateHash
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: ComputeStateHash()
+  nameWithType: Simulation.ComputeStateHash()
+  fullName: TDMaker.Core.Simulation.ComputeStateHash()
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Hashes authoritative runtime state at a tick boundary, including pending work and RNG. Events and render-clock
+    backlog are excluded.
+  remarks: "Use identical definitions, extension registration and seed. Extensions must contribute their mutable state via
+    IStateHashContributor.\n            Exact floating-point bits diagnose same-runtime divergence; this is not a cross-platform
+    numeric determinism guarantee."
+  example:
+  - <pre><code class="lang-csharp">ulong checkpoint = sim.ComputeStateHash();</code></pre>
+  syntax:
+    content: public ulong ComputeStateHash()
+    return:
+      type: System.UInt64
+    content.vb: Public Function ComputeStateHash() As ULong
+  overload: TDMaker.Core.Simulation.ComputeStateHash*
+- uid: TDMaker.Core.Simulation.Traps
+  commentId: P:TDMaker.Core.Simulation.Traps
+  id: Traps
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Traps
+  nameWithType: Simulation.Traps
+  fullName: TDMaker.Core.Simulation.Traps
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Live and pending-removal deployments in creation order.
+  example: []
+  syntax:
+    content: public IReadOnlyList<TrapBinding> Traps { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.TrapBinding}
+    content.vb: Public ReadOnly Property Traps As IReadOnlyList(Of TrapBinding)
+  overload: TDMaker.Core.Simulation.Traps*
+- uid: TDMaker.Core.Simulation.Beams
+  commentId: P:TDMaker.Core.Simulation.Beams
+  id: Beams
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Beams
+  nameWithType: Simulation.Beams
+  fullName: TDMaker.Core.Simulation.Beams
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Live and pending-removal budget channels in creation order.
+  example: []
+  syntax:
+    content: public IReadOnlyList<BeamBinding> Beams { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.BeamBinding}
+    content.vb: Public ReadOnly Property Beams As IReadOnlyList(Of BeamBinding)
+  overload: TDMaker.Core.Simulation.Beams*
+- uid: TDMaker.Core.Simulation.ActiveBeamCount
+  commentId: P:TDMaker.Core.Simulation.ActiveBeamCount
+  id: ActiveBeamCount
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: ActiveBeamCount
+  nameWithType: Simulation.ActiveBeamCount
+  fullName: TDMaker.Core.Simulation.ActiveBeamCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Unfinished budget channels, included in completion accounting.
+  example: []
+  syntax:
+    content: public int ActiveBeamCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ActiveBeamCount As Integer
+  overload: TDMaker.Core.Simulation.ActiveBeamCount*
+- uid: TDMaker.Core.Simulation.Config
+  commentId: P:TDMaker.Core.Simulation.Config
+  id: Config
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: Simulation.Config
+  fullName: TDMaker.Core.Simulation.Config
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Immutable simulation settings.
+  example: []
+  syntax:
+    content: public SimConfig Config { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.SimConfig
+    content.vb: Public ReadOnly Property Config As SimConfig
+  overload: TDMaker.Core.Simulation.Config*
+- uid: TDMaker.Core.Simulation.Level
+  commentId: P:TDMaker.Core.Simulation.Level
+  id: Level
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: Simulation.Level
+  fullName: TDMaker.Core.Simulation.Level
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Immutable baked level.
+  example: []
+  syntax:
+    content: public LevelDef Level { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.LevelDef
+    content.vb: Public ReadOnly Property Level As LevelDef
+  overload: TDMaker.Core.Simulation.Level*
+- uid: TDMaker.Core.Simulation.Templates
+  commentId: P:TDMaker.Core.Simulation.Templates
+  id: Templates
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Templates
+  nameWithType: Simulation.Templates
+  fullName: TDMaker.Core.Simulation.Templates
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Resolved immutable template definitions.
+  example: []
+  syntax:
+    content: public TemplateRegistry Templates { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TemplateRegistry
+    content.vb: Public ReadOnly Property Templates As TemplateRegistry
+  overload: TDMaker.Core.Simulation.Templates*
+- uid: TDMaker.Core.Simulation.Entities
+  commentId: P:TDMaker.Core.Simulation.Entities
+  id: Entities
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Entities
+  nameWithType: Simulation.Entities
+  fullName: TDMaker.Core.Simulation.Entities
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Runtime entity state and deferred queues.
+  example: []
+  syntax:
+    content: public EntityStore Entities { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.EntityStore
+    content.vb: Public ReadOnly Property Entities As EntityStore
+  overload: TDMaker.Core.Simulation.Entities*
+- uid: TDMaker.Core.Simulation.State
+  commentId: P:TDMaker.Core.Simulation.State
+  id: State
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: Simulation.State
+  fullName: TDMaker.Core.Simulation.State
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Read-only global state.
+  example: []
+  syntax:
+    content: public GameState State { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.GameState
+    content.vb: Public ReadOnly Property State As GameState
+  overload: TDMaker.Core.Simulation.State*
+- uid: TDMaker.Core.Simulation.Random
+  commentId: P:TDMaker.Core.Simulation.Random
+  id: Random
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Random
+  nameWithType: Simulation.Random
+  fullName: TDMaker.Core.Simulation.Random
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: The seeded simulation random stream.
+  example: []
+  syntax:
+    content: public SimRandom Random { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.SimRandom
+    content.vb: Public ReadOnly Property Random As SimRandom
+  overload: TDMaker.Core.Simulation.Random*
+- uid: TDMaker.Core.Simulation.Events
+  commentId: P:TDMaker.Core.Simulation.Events
+  id: Events
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Events
+  nameWithType: Simulation.Events
+  fullName: TDMaker.Core.Simulation.Events
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Events retained until ClearEvents is called.
+  example: []
+  syntax:
+    content: public IReadOnlyList<SimEvent> Events { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.SimEvent}
+    content.vb: Public ReadOnly Property Events As IReadOnlyList(Of SimEvent)
+  overload: TDMaker.Core.Simulation.Events*
+- uid: TDMaker.Core.Simulation.DeltaTime
+  commentId: P:TDMaker.Core.Simulation.DeltaTime
+  id: DeltaTime
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: DeltaTime
+  nameWithType: Simulation.DeltaTime
+  fullName: TDMaker.Core.Simulation.DeltaTime
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Seconds per fixed step.
+  example: []
+  syntax:
+    content: public float DeltaTime { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property DeltaTime As Single
+  overload: TDMaker.Core.Simulation.DeltaTime*
+- uid: TDMaker.Core.Simulation.RangeYScale
+  commentId: P:TDMaker.Core.Simulation.RangeYScale
+  id: RangeYScale
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: RangeYScale
+  nameWithType: Simulation.RangeYScale
+  fullName: TDMaker.Core.Simulation.RangeYScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Range multiplier after applying the level override.
+  example: []
+  syntax:
+    content: public float RangeYScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RangeYScale As Single
+  overload: TDMaker.Core.Simulation.RangeYScale*
+- uid: TDMaker.Core.Simulation.UpgradeFingerprint
+  commentId: P:TDMaker.Core.Simulation.UpgradeFingerprint
+  id: UpgradeFingerprint
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: UpgradeFingerprint
+  nameWithType: Simulation.UpgradeFingerprint
+  fullName: TDMaker.Core.Simulation.UpgradeFingerprint
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Stable setup fingerprint of the permanent-upgrade snapshot and applied definitions; zero identifies legacy setup.
+  example: []
+  syntax:
+    content: public ulong UpgradeFingerprint { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property UpgradeFingerprint As ULong
+  overload: TDMaker.Core.Simulation.UpgradeFingerprint*
+- uid: TDMaker.Core.Simulation.Time
+  commentId: P:TDMaker.Core.Simulation.Time
+  id: Time
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Time
+  nameWithType: Simulation.Time
+  fullName: TDMaker.Core.Simulation.Time
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Game time derived from completed fixed ticks.
+  example: []
+  syntax:
+    content: public double Time { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Time As Double
+  overload: TDMaker.Core.Simulation.Time*
+- uid: TDMaker.Core.Simulation.Seed
+  commentId: P:TDMaker.Core.Simulation.Seed
+  id: Seed
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Seed
+  nameWithType: Simulation.Seed
+  fullName: TDMaker.Core.Simulation.Seed
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Original random seed, also stored by command recordings.
+  example: []
+  syntax:
+    content: public uint Seed { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property Seed As UInteger
+  overload: TDMaker.Core.Simulation.Seed*
+- uid: TDMaker.Core.Simulation.Effects
+  commentId: P:TDMaker.Core.Simulation.Effects
+  id: Effects
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Effects
+  nameWithType: Simulation.Effects
+  fullName: TDMaker.Core.Simulation.Effects
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Attached effect and region lifecycle service.
+  example: []
+  syntax:
+    content: public EffectService Effects { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Effects.EffectService
+    content.vb: Public ReadOnly Property Effects As EffectService
+  overload: TDMaker.Core.Simulation.Effects*
+- uid: TDMaker.Core.Simulation.Spells
+  commentId: P:TDMaker.Core.Simulation.Spells
+  id: Spells
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Spells
+  nameWithType: Simulation.Spells
+  fullName: TDMaker.Core.Simulation.Spells
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Spell states in Level.AvailableSpells order; unresolved legacy slots remain locked.
+  example: []
+  syntax:
+    content: public IReadOnlyList<SpellState> Spells { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Components.SpellState}
+    content.vb: Public ReadOnly Property Spells As IReadOnlyList(Of SpellState)
+  overload: TDMaker.Core.Simulation.Spells*
+- uid: TDMaker.Core.Simulation.DroppedEventCount
+  commentId: P:TDMaker.Core.Simulation.DroppedEventCount
+  id: DroppedEventCount
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: DroppedEventCount
+  nameWithType: Simulation.DroppedEventCount
+  fullName: TDMaker.Core.Simulation.DroppedEventCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Number of notifications dropped because the caller did not drain the fixed event buffer.
+  example: []
+  syntax:
+    content: public long DroppedEventCount { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property DroppedEventCount As Long
+  overload: TDMaker.Core.Simulation.DroppedEventCount*
+- uid: TDMaker.Core.Simulation.DroppedDamageCount
+  commentId: P:TDMaker.Core.Simulation.DroppedDamageCount
+  id: DroppedDamageCount
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: DroppedDamageCount
+  nameWithType: Simulation.DroppedDamageCount
+  fullName: TDMaker.Core.Simulation.DroppedDamageCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Number of damage requests rejected by the configured per-tick capacity.
+  example: []
+  syntax:
+    content: public long DroppedDamageCount { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property DroppedDamageCount As Long
+  overload: TDMaker.Core.Simulation.DroppedDamageCount*
+- uid: TDMaker.Core.Simulation.CapacityFailureCount
+  commentId: P:TDMaker.Core.Simulation.CapacityFailureCount
+  id: CapacityFailureCount
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: CapacityFailureCount
+  nameWithType: Simulation.CapacityFailureCount
+  fullName: TDMaker.Core.Simulation.CapacityFailureCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Number of fixed-pool saturation incidents.
+  example: []
+  syntax:
+    content: public long CapacityFailureCount { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property CapacityFailureCount As Long
+  overload: TDMaker.Core.Simulation.CapacityFailureCount*
+- uid: TDMaker.Core.Simulation.ActiveChainCount
+  commentId: P:TDMaker.Core.Simulation.ActiveChainCount
+  id: ActiveChainCount
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: ActiveChainCount
+  nameWithType: Simulation.ActiveChainCount
+  fullName: TDMaker.Core.Simulation.ActiveChainCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Unfinished chain executions, included in level completion accounting.
+  example: []
+  syntax:
+    content: public int ActiveChainCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ActiveChainCount As Integer
+  overload: TDMaker.Core.Simulation.ActiveChainCount*
+- uid: TDMaker.Core.Simulation.SystemPipeline
+  commentId: P:TDMaker.Core.Simulation.SystemPipeline
+  id: SystemPipeline
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: SystemPipeline
+  nameWithType: Simulation.SystemPipeline
+  fullName: TDMaker.Core.Simulation.SystemPipeline
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Read-only metadata snapshot in actual execution order. Refetch after setup-time RegisterSystem calls; unchanged
+    during stepping.
+  example: []
+  syntax:
+    content: public IReadOnlyList<SimSystemInfo> SystemPipeline { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.SimSystemInfo}
+    content.vb: Public ReadOnly Property SystemPipeline As IReadOnlyList(Of SimSystemInfo)
+  overload: TDMaker.Core.Simulation.SystemPipeline*
+- uid: TDMaker.Core.Simulation.QueuedDamageCount
+  commentId: P:TDMaker.Core.Simulation.QueuedDamageCount
+  id: QueuedDamageCount
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: QueuedDamageCount
+  nameWithType: Simulation.QueuedDamageCount
+  fullName: TDMaker.Core.Simulation.QueuedDamageCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Current FIFO length, for allocation-free diagnostics.
+  example: []
+  syntax:
+    content: public int QueuedDamageCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property QueuedDamageCount As Integer
+  overload: TDMaker.Core.Simulation.QueuedDamageCount*
+- uid: TDMaker.Core.Simulation.ScheduledActionCount
+  commentId: P:TDMaker.Core.Simulation.ScheduledActionCount
+  id: ScheduledActionCount
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: ScheduledActionCount
+  nameWithType: Simulation.ScheduledActionCount
+  fullName: TDMaker.Core.Simulation.ScheduledActionCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Pending summon/strike sequences, for diagnostics.
+  example: []
+  syntax:
+    content: public int ScheduledActionCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ScheduledActionCount As Integer
+  overload: TDMaker.Core.Simulation.ScheduledActionCount*
+- uid: TDMaker.Core.Simulation.SpatialRebuildCount
+  commentId: P:TDMaker.Core.Simulation.SpatialRebuildCount
+  id: SpatialRebuildCount
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: SpatialRebuildCount
+  nameWithType: Simulation.SpatialRebuildCount
+  fullName: TDMaker.Core.Simulation.SpatialRebuildCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Enemy and friendly spatial rebuild count, excluded from deterministic state.
+  example: []
+  syntax:
+    content: public long SpatialRebuildCount { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property SpatialRebuildCount As Long
+  overload: TDMaker.Core.Simulation.SpatialRebuildCount*
+- uid: TDMaker.Core.Simulation.Remains
+  commentId: P:TDMaker.Core.Simulation.Remains
+  id: Remains
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: Remains
+  nameWithType: Simulation.Remains
+  fullName: TDMaker.Core.Simulation.Remains
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Neutral bodies in stable creation order, including exclusive reservations.
+  example: []
+  syntax:
+    content: public IReadOnlyList<RemainsRecord> Remains { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.RemainsRecord}
+    content.vb: Public ReadOnly Property Remains As IReadOnlyList(Of RemainsRecord)
+  overload: TDMaker.Core.Simulation.Remains*
+- uid: TDMaker.Core.Simulation.PendingRecoveryCount
+  commentId: P:TDMaker.Core.Simulation.PendingRecoveryCount
+  id: PendingRecoveryCount
+  parent: TDMaker.Core.Simulation
+  langs:
+  - csharp
+  - vb
+  name: PendingRecoveryCount
+  nameWithType: Simulation.PendingRecoveryCount
+  fullName: TDMaker.Core.Simulation.PendingRecoveryCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Pending same-identity returns, successor preparation and body consumption. Unreserved bodies do not hold victory.
+  example: []
+  syntax:
+    content: public int PendingRecoveryCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PendingRecoveryCount As Integer
+  overload: TDMaker.Core.Simulation.PendingRecoveryCount*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Simulation.StartRecording*
+  commentId: Overload:TDMaker.Core.Simulation.StartRecording
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_StartRecording_TDMaker_Core_CommandLog_
+  name: StartRecording
+  nameWithType: Simulation.StartRecording
+  fullName: TDMaker.Core.Simulation.StartRecording
+- uid: TDMaker.Core.CommandLog
+  commentId: T:TDMaker.Core.CommandLog
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.CommandLog.html
+  name: CommandLog
+  nameWithType: CommandLog
+  fullName: TDMaker.Core.CommandLog
+- uid: TDMaker.Core.Simulation.StopRecording*
+  commentId: Overload:TDMaker.Core.Simulation.StopRecording
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_StopRecording
+  name: StopRecording
+  nameWithType: Simulation.StopRecording
+  fullName: TDMaker.Core.Simulation.StopRecording
+- uid: TDMaker.Core.Simulation.StartReplay*
+  commentId: Overload:TDMaker.Core.Simulation.StartReplay
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_StartReplay_TDMaker_Core_CommandLog_
+  name: StartReplay
+  nameWithType: Simulation.StartReplay
+  fullName: TDMaker.Core.Simulation.StartReplay
+- uid: TDMaker.Core.Simulation.PlaceTrap*
+  commentId: Overload:TDMaker.Core.Simulation.PlaceTrap
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_PlaceTrap_TDMaker_Core_Defs_TrapDef_TDMaker_Core_Vec2_System_Int32_
+  name: PlaceTrap
+  nameWithType: Simulation.PlaceTrap
+  fullName: TDMaker.Core.Simulation.PlaceTrap
+- uid: TDMaker.Core.Defs.TrapDef
+  commentId: T:TDMaker.Core.Defs.TrapDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html
+  name: TrapDef
+  nameWithType: TrapDef
+  fullName: TDMaker.Core.Defs.TrapDef
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Simulation.RemoveTrap*
+  commentId: Overload:TDMaker.Core.Simulation.RemoveTrap
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RemoveTrap_System_Int32_
+  name: RemoveTrap
+  nameWithType: Simulation.RemoveTrap
+  fullName: TDMaker.Core.Simulation.RemoveTrap
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Simulation.CancelBeam*
+  commentId: Overload:TDMaker.Core.Simulation.CancelBeam
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_CancelBeam_System_Int32_
+  name: CancelBeam
+  nameWithType: Simulation.CancelBeam
+  fullName: TDMaker.Core.Simulation.CancelBeam
+- uid: TDMaker.Core.Simulation.TryTransferToPath*
+  commentId: Overload:TDMaker.Core.Simulation.TryTransferToPath
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_TryTransferToPath_System_Int32_TDMaker_Core_Defs_PathDestinationDef_System_Int32_
+  name: TryTransferToPath
+  nameWithType: Simulation.TryTransferToPath
+  fullName: TDMaker.Core.Simulation.TryTransferToPath
+- uid: TDMaker.Core.Defs.PathDestinationDef
+  commentId: T:TDMaker.Core.Defs.PathDestinationDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PathDestinationDef.html
+  name: PathDestinationDef
+  nameWithType: PathDestinationDef
+  fullName: TDMaker.Core.Defs.PathDestinationDef
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Simulation.RepositionCompanions*
+  commentId: Overload:TDMaker.Core.Simulation.RepositionCompanions
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RepositionCompanions_System_Int32_TDMaker_Core_Vec2_
+  name: RepositionCompanions
+  nameWithType: Simulation.RepositionCompanions
+  fullName: TDMaker.Core.Simulation.RepositionCompanions
+- uid: TDMaker.Core.Simulation.#ctor*
+  commentId: Overload:TDMaker.Core.Simulation.#ctor
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation__ctor_TDMaker_Core_Defs_TemplateRegistry_TDMaker_Core_Defs_LevelDef_TDMaker_Core_SimConfig_System_UInt32_
+  name: Simulation
+  nameWithType: Simulation.Simulation
+  fullName: TDMaker.Core.Simulation.Simulation
+  nameWithType.vb: Simulation.New
+  fullName.vb: TDMaker.Core.Simulation.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.TemplateRegistry
+  commentId: T:TDMaker.Core.Defs.TemplateRegistry
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TemplateRegistry.html
+  name: TemplateRegistry
+  nameWithType: TemplateRegistry
+  fullName: TDMaker.Core.Defs.TemplateRegistry
+- uid: TDMaker.Core.Defs.LevelDef
+  commentId: T:TDMaker.Core.Defs.LevelDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.LevelDef.html
+  name: LevelDef
+  nameWithType: LevelDef
+  fullName: TDMaker.Core.Defs.LevelDef
+- uid: TDMaker.Core.SimConfig
+  commentId: T:TDMaker.Core.SimConfig
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimConfig.html
+  name: SimConfig
+  nameWithType: SimConfig
+  fullName: TDMaker.Core.SimConfig
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TDMaker.Core.Simulation.Enqueue*
+  commentId: Overload:TDMaker.Core.Simulation.Enqueue
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Enqueue_TDMaker_Core_Commands_ICommand_
+  name: Enqueue
+  nameWithType: Simulation.Enqueue
+  fullName: TDMaker.Core.Simulation.Enqueue
+- uid: TDMaker.Core.Commands.ICommand
+  commentId: T:TDMaker.Core.Commands.ICommand
+  parent: TDMaker.Core.Commands
+  isExternal: true
+  href: TDMaker.Core.Commands.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: TDMaker.Core.Commands.ICommand
+- uid: TDMaker.Core.Commands
+  commentId: N:TDMaker.Core.Commands
+  isExternal: true
+  name: TDMaker.Core.Commands
+  nameWithType: TDMaker.Core.Commands
+  fullName: TDMaker.Core.Commands
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true
+- uid: TDMaker.Core.Simulation.Step*
+  commentId: Overload:TDMaker.Core.Simulation.Step
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Step
+  name: Step
+  nameWithType: Simulation.Step
+  fullName: TDMaker.Core.Simulation.Step
+- uid: TDMaker.Core.Simulation.ClearEvents*
+  commentId: Overload:TDMaker.Core.Simulation.ClearEvents
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_ClearEvents
+  name: ClearEvents
+  nameWithType: Simulation.ClearEvents
+  fullName: TDMaker.Core.Simulation.ClearEvents
+- uid: TDMaker.Core.Simulation.GetTowerAtSlot*
+  commentId: Overload:TDMaker.Core.Simulation.GetTowerAtSlot
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_GetTowerAtSlot_System_Int32_
+  name: GetTowerAtSlot
+  nameWithType: Simulation.GetTowerAtSlot
+  fullName: TDMaker.Core.Simulation.GetTowerAtSlot
+- uid: TDMaker.Core.Simulation.SpawnEnemy*
+  commentId: Overload:TDMaker.Core.Simulation.SpawnEnemy
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_SpawnEnemy_System_String_System_Int32_System_Int32_
+  name: SpawnEnemy
+  nameWithType: Simulation.SpawnEnemy
+  fullName: TDMaker.Core.Simulation.SpawnEnemy
+- uid: TDMaker.Core.Entity
+  commentId: T:TDMaker.Core.Entity
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: TDMaker.Core.Entity
+- uid: TDMaker.Core.Simulation.Deploy*
+  commentId: Overload:TDMaker.Core.Simulation.Deploy
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Deploy_TDMaker_Core_Defs_DeploymentPlanDef_System_Int32_
+  name: Deploy
+  nameWithType: Simulation.Deploy
+  fullName: TDMaker.Core.Simulation.Deploy
+- uid: TDMaker.Core.Defs.DeploymentPlanDef
+  commentId: T:TDMaker.Core.Defs.DeploymentPlanDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DeploymentPlanDef.html
+  name: DeploymentPlanDef
+  nameWithType: DeploymentPlanDef
+  fullName: TDMaker.Core.Defs.DeploymentPlanDef
+- uid: TDMaker.Core.Simulation.RegisterSystem*
+  commentId: Overload:TDMaker.Core.Simulation.RegisterSystem
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RegisterSystem_TDMaker_Core_Systems_ISimSystem_TDMaker_Core_SimStage_System_Boolean_
+  name: RegisterSystem
+  nameWithType: Simulation.RegisterSystem
+  fullName: TDMaker.Core.Simulation.RegisterSystem
+- uid: TDMaker.Core.Systems.ISimSystem
+  commentId: T:TDMaker.Core.Systems.ISimSystem
+  parent: TDMaker.Core.Systems
+  isExternal: true
+  href: TDMaker.Core.Systems.ISimSystem.html
+  name: ISimSystem
+  nameWithType: ISimSystem
+  fullName: TDMaker.Core.Systems.ISimSystem
+- uid: TDMaker.Core.SimStage
+  commentId: T:TDMaker.Core.SimStage
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimStage.html
+  name: SimStage
+  nameWithType: SimStage
+  fullName: TDMaker.Core.SimStage
+- uid: TDMaker.Core.Systems
+  commentId: N:TDMaker.Core.Systems
+  isExternal: true
+  name: TDMaker.Core.Systems
+  nameWithType: TDMaker.Core.Systems
+  fullName: TDMaker.Core.Systems
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Systems
+    name: Systems
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Systems
+    name: Systems
+    isExternal: true
+- uid: TDMaker.Core.Simulation.RegisterComponent*
+  commentId: Overload:TDMaker.Core.Simulation.RegisterComponent
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RegisterComponent__1_System_Func___0__
+  name: RegisterComponent
+  nameWithType: Simulation.RegisterComponent
+  fullName: TDMaker.Core.Simulation.RegisterComponent
+- uid: System.Func{{T}}
+  commentId: T:System.Func{``0}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<T>
+  nameWithType: Func<T>
+  fullName: System.Func<T>
+  nameWithType.vb: Func(Of T)
+  fullName.vb: System.Func(Of T)
+  name.vb: Func(Of T)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: TResult
+  - name: )
+- uid: TDMaker.Core.Simulation.RegisterTargetSelector*
+  commentId: Overload:TDMaker.Core.Simulation.RegisterTargetSelector
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RegisterTargetSelector_TDMaker_Core_ITargetSelector_
+  name: RegisterTargetSelector
+  nameWithType: Simulation.RegisterTargetSelector
+  fullName: TDMaker.Core.Simulation.RegisterTargetSelector
+- uid: TDMaker.Core.ITargetSelector
+  commentId: T:TDMaker.Core.ITargetSelector
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.ITargetSelector.html
+  name: ITargetSelector
+  nameWithType: ITargetSelector
+  fullName: TDMaker.Core.ITargetSelector
+- uid: TDMaker.Core.Simulation.RegisterDamageHook*
+  commentId: Overload:TDMaker.Core.Simulation.RegisterDamageHook
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RegisterDamageHook_TDMaker_Core_IDamageHook_
+  name: RegisterDamageHook
+  nameWithType: Simulation.RegisterDamageHook
+  fullName: TDMaker.Core.Simulation.RegisterDamageHook
+- uid: TDMaker.Core.IDamageHook
+  commentId: T:TDMaker.Core.IDamageHook
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.IDamageHook.html
+  name: IDamageHook
+  nameWithType: IDamageHook
+  fullName: TDMaker.Core.IDamageHook
+- uid: TDMaker.Core.Simulation.RegisterCommandHandler*
+  commentId: Overload:TDMaker.Core.Simulation.RegisterCommandHandler
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RegisterCommandHandler__1_TDMaker_Core_ICommandHandler___0__
+  name: RegisterCommandHandler
+  nameWithType: Simulation.RegisterCommandHandler
+  fullName: TDMaker.Core.Simulation.RegisterCommandHandler
+- uid: TDMaker.Core.ICommandHandler{{T}}
+  commentId: T:TDMaker.Core.ICommandHandler{``0}
+  parent: TDMaker.Core
+  definition: TDMaker.Core.ICommandHandler`1
+  href: TDMaker.Core.ICommandHandler-1.html
+  name: ICommandHandler<T>
+  nameWithType: ICommandHandler<T>
+  fullName: TDMaker.Core.ICommandHandler<T>
+  nameWithType.vb: ICommandHandler(Of T)
+  fullName.vb: TDMaker.Core.ICommandHandler(Of T)
+  name.vb: ICommandHandler(Of T)
+  spec.csharp:
+  - uid: TDMaker.Core.ICommandHandler`1
+    name: ICommandHandler
+    isExternal: true
+    href: TDMaker.Core.ICommandHandler-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TDMaker.Core.ICommandHandler`1
+    name: ICommandHandler
+    isExternal: true
+    href: TDMaker.Core.ICommandHandler-1.html
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Core.ICommandHandler`1
+  commentId: T:TDMaker.Core.ICommandHandler`1
+  isExternal: true
+  href: TDMaker.Core.ICommandHandler-1.html
+  name: ICommandHandler<T>
+  nameWithType: ICommandHandler<T>
+  fullName: TDMaker.Core.ICommandHandler<T>
+  nameWithType.vb: ICommandHandler(Of T)
+  fullName.vb: TDMaker.Core.ICommandHandler(Of T)
+  name.vb: ICommandHandler(Of T)
+  spec.csharp:
+  - uid: TDMaker.Core.ICommandHandler`1
+    name: ICommandHandler
+    isExternal: true
+    href: TDMaker.Core.ICommandHandler-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TDMaker.Core.ICommandHandler`1
+    name: ICommandHandler
+    isExternal: true
+    href: TDMaker.Core.ICommandHandler-1.html
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Core.Simulation.RegisterStateHashContributor*
+  commentId: Overload:TDMaker.Core.Simulation.RegisterStateHashContributor
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RegisterStateHashContributor_TDMaker_Core_IStateHashContributor_
+  name: RegisterStateHashContributor
+  nameWithType: Simulation.RegisterStateHashContributor
+  fullName: TDMaker.Core.Simulation.RegisterStateHashContributor
+- uid: TDMaker.Core.IStateHashContributor
+  commentId: T:TDMaker.Core.IStateHashContributor
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.IStateHashContributor.html
+  name: IStateHashContributor
+  nameWithType: IStateHashContributor
+  fullName: TDMaker.Core.IStateHashContributor
+- uid: TDMaker.Core.Simulation.QueryEnemies*
+  commentId: Overload:TDMaker.Core.Simulation.QueryEnemies
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_QueryEnemies_TDMaker_Core_Vec2_System_Single_TDMaker_Core_SpatialQueryBuffer_
+  name: QueryEnemies
+  nameWithType: Simulation.QueryEnemies
+  fullName: TDMaker.Core.Simulation.QueryEnemies
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.SpatialQueryBuffer
+  commentId: T:TDMaker.Core.SpatialQueryBuffer
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SpatialQueryBuffer.html
+  name: SpatialQueryBuffer
+  nameWithType: SpatialQueryBuffer
+  fullName: TDMaker.Core.SpatialQueryBuffer
+- uid: TDMaker.Core.Simulation.ConfigureSpatialIndex*
+  commentId: Overload:TDMaker.Core.Simulation.ConfigureSpatialIndex
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_ConfigureSpatialIndex_System_Single_System_Boolean_
+  name: ConfigureSpatialIndex
+  nameWithType: Simulation.ConfigureSpatialIndex
+  fullName: TDMaker.Core.Simulation.ConfigureSpatialIndex
+- uid: TDMaker.Core.Simulation.FindTarget*
+  commentId: Overload:TDMaker.Core.Simulation.FindTarget
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_FindTarget_TDMaker_Core_TargetQuery__
+  name: FindTarget
+  nameWithType: Simulation.FindTarget
+  fullName: TDMaker.Core.Simulation.FindTarget
+- uid: TDMaker.Core.TargetQuery
+  commentId: T:TDMaker.Core.TargetQuery
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.TargetQuery.html
+  name: TargetQuery
+  nameWithType: TargetQuery
+  fullName: TDMaker.Core.TargetQuery
+- uid: TDMaker.Core.Simulation.IsEligibleTarget*
+  commentId: Overload:TDMaker.Core.Simulation.IsEligibleTarget
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_IsEligibleTarget_TDMaker_Core_Entity_TDMaker_Core_TargetQuery__
+  name: IsEligibleTarget
+  nameWithType: Simulation.IsEligibleTarget
+  fullName: TDMaker.Core.Simulation.IsEligibleTarget
+- uid: TDMaker.Core.Simulation.RequestDamage*
+  commentId: Overload:TDMaker.Core.Simulation.RequestDamage
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RequestDamage_TDMaker_Core_DamageContext_
+  name: RequestDamage
+  nameWithType: Simulation.RequestDamage
+  fullName: TDMaker.Core.Simulation.RequestDamage
+- uid: TDMaker.Core.DamageContext
+  commentId: T:TDMaker.Core.DamageContext
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.DamageContext.html
+  name: DamageContext
+  nameWithType: DamageContext
+  fullName: TDMaker.Core.DamageContext
+- uid: TDMaker.Core.Simulation.SetEntityPosition*
+  commentId: Overload:TDMaker.Core.Simulation.SetEntityPosition
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_SetEntityPosition_System_Int32_TDMaker_Core_Vec2_System_Boolean_
+  name: SetEntityPosition
+  nameWithType: Simulation.SetEntityPosition
+  fullName: TDMaker.Core.Simulation.SetEntityPosition
+- uid: TDMaker.Core.Simulation.PublishEvent*
+  commentId: Overload:TDMaker.Core.Simulation.PublishEvent
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_PublishEvent_TDMaker_Core_SimEvent_
+  name: PublishEvent
+  nameWithType: Simulation.PublishEvent
+  fullName: TDMaker.Core.Simulation.PublishEvent
+- uid: TDMaker.Core.SimEvent
+  commentId: T:TDMaker.Core.SimEvent
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimEvent.html
+  name: SimEvent
+  nameWithType: SimEvent
+  fullName: TDMaker.Core.SimEvent
+- uid: TDMaker.Core.Simulation.RangeDistanceSquared*
+  commentId: Overload:TDMaker.Core.Simulation.RangeDistanceSquared
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RangeDistanceSquared_TDMaker_Core_Vec2_TDMaker_Core_Vec2_
+  name: RangeDistanceSquared
+  nameWithType: Simulation.RangeDistanceSquared
+  fullName: TDMaker.Core.Simulation.RangeDistanceSquared
+- uid: TDMaker.Core.Simulation.SpawnHero*
+  commentId: Overload:TDMaker.Core.Simulation.SpawnHero
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_SpawnHero_System_String_TDMaker_Core_Vec2_
+  name: SpawnHero
+  nameWithType: Simulation.SpawnHero
+  fullName: TDMaker.Core.Simulation.SpawnHero
+- uid: TDMaker.Core.Simulation.AddHeroExperience*
+  commentId: Overload:TDMaker.Core.Simulation.AddHeroExperience
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_AddHeroExperience_System_Int32_System_Double_
+  name: AddHeroExperience
+  nameWithType: Simulation.AddHeroExperience
+  fullName: TDMaker.Core.Simulation.AddHeroExperience
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TDMaker.Core.Simulation.TryResolvePoint*
+  commentId: Overload:TDMaker.Core.Simulation.TryResolvePoint
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_TryResolvePoint_TDMaker_Core_Defs_PointRuleDef_TDMaker_Core_Vec2_TDMaker_Core_Vec2__
+  name: TryResolvePoint
+  nameWithType: Simulation.TryResolvePoint
+  fullName: TDMaker.Core.Simulation.TryResolvePoint
+- uid: TDMaker.Core.Defs.PointRuleDef
+  commentId: T:TDMaker.Core.Defs.PointRuleDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PointRuleDef.html
+  name: PointRuleDef
+  nameWithType: PointRuleDef
+  fullName: TDMaker.Core.Defs.PointRuleDef
+- uid: TDMaker.Core.Simulation.TryValidateSpellPoint*
+  commentId: Overload:TDMaker.Core.Simulation.TryValidateSpellPoint
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_TryValidateSpellPoint_System_Int32_TDMaker_Core_Vec2_TDMaker_Core_Vec2__
+  name: TryValidateSpellPoint
+  nameWithType: Simulation.TryValidateSpellPoint
+  fullName: TDMaker.Core.Simulation.TryValidateSpellPoint
+- uid: TDMaker.Core.Simulation.PredictTargetPosition*
+  commentId: Overload:TDMaker.Core.Simulation.PredictTargetPosition
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_PredictTargetPosition_System_Int32_System_Single_
+  name: PredictTargetPosition
+  nameWithType: Simulation.PredictTargetPosition
+  fullName: TDMaker.Core.Simulation.PredictTargetPosition
+- uid: TDMaker.Core.Simulation.FindDefaultTarget*
+  commentId: Overload:TDMaker.Core.Simulation.FindDefaultTarget
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_FindDefaultTarget_TDMaker_Core_TargetQuery__
+  name: FindDefaultTarget
+  nameWithType: Simulation.FindDefaultTarget
+  fullName: TDMaker.Core.Simulation.FindDefaultTarget
+- uid: TDMaker.Core.Simulation.TryResolveRallyPoint*
+  commentId: Overload:TDMaker.Core.Simulation.TryResolveRallyPoint
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_TryResolveRallyPoint_System_Int32_TDMaker_Core_Vec2_TDMaker_Core_Vec2__
+  name: TryResolveRallyPoint
+  nameWithType: Simulation.TryResolveRallyPoint
+  fullName: TDMaker.Core.Simulation.TryResolveRallyPoint
+- uid: TDMaker.Core.Simulation.PreviewEarlyCallReward*
+  commentId: Overload:TDMaker.Core.Simulation.PreviewEarlyCallReward
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_PreviewEarlyCallReward
+  name: PreviewEarlyCallReward
+  nameWithType: Simulation.PreviewEarlyCallReward
+  fullName: TDMaker.Core.Simulation.PreviewEarlyCallReward
+- uid: TDMaker.Core.EarlyCallRewardPreview
+  commentId: T:TDMaker.Core.EarlyCallRewardPreview
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.EarlyCallRewardPreview.html
+  name: EarlyCallRewardPreview
+  nameWithType: EarlyCallRewardPreview
+  fullName: TDMaker.Core.EarlyCallRewardPreview
+- uid: TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut*
+  commentId: Overload:TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_PreviewEarlyCallSpellCooldownCut_System_Int32_
+  name: PreviewEarlyCallSpellCooldownCut
+  nameWithType: Simulation.PreviewEarlyCallSpellCooldownCut
+  fullName: TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut
+- uid: TDMaker.Core.Simulation.PreviewSellRefund*
+  commentId: Overload:TDMaker.Core.Simulation.PreviewSellRefund
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_PreviewSellRefund_System_Int32_
+  name: PreviewSellRefund
+  nameWithType: Simulation.PreviewSellRefund
+  fullName: TDMaker.Core.Simulation.PreviewSellRefund
+- uid: TDMaker.Core.Simulation.SetProfiler*
+  commentId: Overload:TDMaker.Core.Simulation.SetProfiler
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_SetProfiler_TDMaker_Core_ISimProfiler_
+  name: SetProfiler
+  nameWithType: Simulation.SetProfiler
+  fullName: TDMaker.Core.Simulation.SetProfiler
+- uid: TDMaker.Core.ISimProfiler
+  commentId: T:TDMaker.Core.ISimProfiler
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.ISimProfiler.html
+  name: ISimProfiler
+  nameWithType: ISimProfiler
+  fullName: TDMaker.Core.ISimProfiler
+- uid: TDMaker.Core.Simulation.RaiseRemains*
+  commentId: Overload:TDMaker.Core.Simulation.RaiseRemains
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RaiseRemains_TDMaker_Core_Defs_RaiseRemainsDef_System_Int32_
+  name: RaiseRemains
+  nameWithType: Simulation.RaiseRemains
+  fullName: TDMaker.Core.Simulation.RaiseRemains
+- uid: TDMaker.Core.Defs.RaiseRemainsDef
+  commentId: T:TDMaker.Core.Defs.RaiseRemainsDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.RaiseRemainsDef.html
+  name: RaiseRemainsDef
+  nameWithType: RaiseRemainsDef
+  fullName: TDMaker.Core.Defs.RaiseRemainsDef
+- uid: TDMaker.Core.Simulation.ComputeStateHash*
+  commentId: Overload:TDMaker.Core.Simulation.ComputeStateHash
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_ComputeStateHash
+  name: ComputeStateHash
+  nameWithType: Simulation.ComputeStateHash
+  fullName: TDMaker.Core.Simulation.ComputeStateHash
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: TDMaker.Core.Simulation.Traps*
+  commentId: Overload:TDMaker.Core.Simulation.Traps
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Traps
+  name: Traps
+  nameWithType: Simulation.Traps
+  fullName: TDMaker.Core.Simulation.Traps
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.TrapBinding}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.TrapBinding}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<TrapBinding>
+  nameWithType: IReadOnlyList<TrapBinding>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.TrapBinding>
+  nameWithType.vb: IReadOnlyList(Of TrapBinding)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.TrapBinding)
+  name.vb: IReadOnlyList(Of TrapBinding)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.TrapBinding
+    name: TrapBinding
+    isExternal: true
+    href: TDMaker.Core.TrapBinding.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.TrapBinding
+    name: TrapBinding
+    isExternal: true
+    href: TDMaker.Core.TrapBinding.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Core.Simulation.Beams*
+  commentId: Overload:TDMaker.Core.Simulation.Beams
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Beams
+  name: Beams
+  nameWithType: Simulation.Beams
+  fullName: TDMaker.Core.Simulation.Beams
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.BeamBinding}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.BeamBinding}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<BeamBinding>
+  nameWithType: IReadOnlyList<BeamBinding>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.BeamBinding>
+  nameWithType.vb: IReadOnlyList(Of BeamBinding)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.BeamBinding)
+  name.vb: IReadOnlyList(Of BeamBinding)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.BeamBinding
+    name: BeamBinding
+    isExternal: true
+    href: TDMaker.Core.BeamBinding.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.BeamBinding
+    name: BeamBinding
+    isExternal: true
+    href: TDMaker.Core.BeamBinding.html
+  - name: )
+- uid: TDMaker.Core.Simulation.ActiveBeamCount*
+  commentId: Overload:TDMaker.Core.Simulation.ActiveBeamCount
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_ActiveBeamCount
+  name: ActiveBeamCount
+  nameWithType: Simulation.ActiveBeamCount
+  fullName: TDMaker.Core.Simulation.ActiveBeamCount
+- uid: TDMaker.Core.Simulation.Config*
+  commentId: Overload:TDMaker.Core.Simulation.Config
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Config
+  name: Config
+  nameWithType: Simulation.Config
+  fullName: TDMaker.Core.Simulation.Config
+- uid: TDMaker.Core.Simulation.Level*
+  commentId: Overload:TDMaker.Core.Simulation.Level
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Level
+  name: Level
+  nameWithType: Simulation.Level
+  fullName: TDMaker.Core.Simulation.Level
+- uid: TDMaker.Core.Simulation.Templates*
+  commentId: Overload:TDMaker.Core.Simulation.Templates
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Templates
+  name: Templates
+  nameWithType: Simulation.Templates
+  fullName: TDMaker.Core.Simulation.Templates
+- uid: TDMaker.Core.Simulation.Entities*
+  commentId: Overload:TDMaker.Core.Simulation.Entities
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Entities
+  name: Entities
+  nameWithType: Simulation.Entities
+  fullName: TDMaker.Core.Simulation.Entities
+- uid: TDMaker.Core.EntityStore
+  commentId: T:TDMaker.Core.EntityStore
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.EntityStore.html
+  name: EntityStore
+  nameWithType: EntityStore
+  fullName: TDMaker.Core.EntityStore
+- uid: TDMaker.Core.Simulation.State*
+  commentId: Overload:TDMaker.Core.Simulation.State
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_State
+  name: State
+  nameWithType: Simulation.State
+  fullName: TDMaker.Core.Simulation.State
+- uid: TDMaker.Core.GameState
+  commentId: T:TDMaker.Core.GameState
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.GameState.html
+  name: GameState
+  nameWithType: GameState
+  fullName: TDMaker.Core.GameState
+- uid: TDMaker.Core.Simulation.Random*
+  commentId: Overload:TDMaker.Core.Simulation.Random
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Random
+  name: Random
+  nameWithType: Simulation.Random
+  fullName: TDMaker.Core.Simulation.Random
+- uid: TDMaker.Core.SimRandom
+  commentId: T:TDMaker.Core.SimRandom
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimRandom.html
+  name: SimRandom
+  nameWithType: SimRandom
+  fullName: TDMaker.Core.SimRandom
+- uid: TDMaker.Core.Simulation.Events*
+  commentId: Overload:TDMaker.Core.Simulation.Events
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Events
+  name: Events
+  nameWithType: Simulation.Events
+  fullName: TDMaker.Core.Simulation.Events
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.SimEvent}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.SimEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<SimEvent>
+  nameWithType: IReadOnlyList<SimEvent>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.SimEvent>
+  nameWithType.vb: IReadOnlyList(Of SimEvent)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.SimEvent)
+  name.vb: IReadOnlyList(Of SimEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.SimEvent
+    name: SimEvent
+    isExternal: true
+    href: TDMaker.Core.SimEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.SimEvent
+    name: SimEvent
+    isExternal: true
+    href: TDMaker.Core.SimEvent.html
+  - name: )
+- uid: TDMaker.Core.Simulation.DeltaTime*
+  commentId: Overload:TDMaker.Core.Simulation.DeltaTime
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_DeltaTime
+  name: DeltaTime
+  nameWithType: Simulation.DeltaTime
+  fullName: TDMaker.Core.Simulation.DeltaTime
+- uid: TDMaker.Core.Simulation.RangeYScale*
+  commentId: Overload:TDMaker.Core.Simulation.RangeYScale
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_RangeYScale
+  name: RangeYScale
+  nameWithType: Simulation.RangeYScale
+  fullName: TDMaker.Core.Simulation.RangeYScale
+- uid: TDMaker.Core.Simulation.UpgradeFingerprint*
+  commentId: Overload:TDMaker.Core.Simulation.UpgradeFingerprint
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_UpgradeFingerprint
+  name: UpgradeFingerprint
+  nameWithType: Simulation.UpgradeFingerprint
+  fullName: TDMaker.Core.Simulation.UpgradeFingerprint
+- uid: TDMaker.Core.Simulation.Time*
+  commentId: Overload:TDMaker.Core.Simulation.Time
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Time
+  name: Time
+  nameWithType: Simulation.Time
+  fullName: TDMaker.Core.Simulation.Time
+- uid: TDMaker.Core.Simulation.Seed*
+  commentId: Overload:TDMaker.Core.Simulation.Seed
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Seed
+  name: Seed
+  nameWithType: Simulation.Seed
+  fullName: TDMaker.Core.Simulation.Seed
+- uid: TDMaker.Core.Simulation.Effects*
+  commentId: Overload:TDMaker.Core.Simulation.Effects
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Effects
+  name: Effects
+  nameWithType: Simulation.Effects
+  fullName: TDMaker.Core.Simulation.Effects
+- uid: TDMaker.Core.Effects.EffectService
+  commentId: T:TDMaker.Core.Effects.EffectService
+  parent: TDMaker.Core.Effects
+  isExternal: true
+  href: TDMaker.Core.Effects.EffectService.html
+  name: EffectService
+  nameWithType: EffectService
+  fullName: TDMaker.Core.Effects.EffectService
+- uid: TDMaker.Core.Effects
+  commentId: N:TDMaker.Core.Effects
+  isExternal: true
+  name: TDMaker.Core.Effects
+  nameWithType: TDMaker.Core.Effects
+  fullName: TDMaker.Core.Effects
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Effects
+    name: Effects
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Effects
+    name: Effects
+    isExternal: true
+- uid: TDMaker.Core.Simulation.Spells*
+  commentId: Overload:TDMaker.Core.Simulation.Spells
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Spells
+  name: Spells
+  nameWithType: Simulation.Spells
+  fullName: TDMaker.Core.Simulation.Spells
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Components.SpellState}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Components.SpellState}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<SpellState>
+  nameWithType: IReadOnlyList<SpellState>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Components.SpellState>
+  nameWithType.vb: IReadOnlyList(Of SpellState)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Components.SpellState)
+  name.vb: IReadOnlyList(Of SpellState)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Components.SpellState
+    name: SpellState
+    isExternal: true
+    href: TDMaker.Core.Components.SpellState.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Components.SpellState
+    name: SpellState
+    isExternal: true
+    href: TDMaker.Core.Components.SpellState.html
+  - name: )
+- uid: TDMaker.Core.Simulation.DroppedEventCount*
+  commentId: Overload:TDMaker.Core.Simulation.DroppedEventCount
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_DroppedEventCount
+  name: DroppedEventCount
+  nameWithType: Simulation.DroppedEventCount
+  fullName: TDMaker.Core.Simulation.DroppedEventCount
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: TDMaker.Core.Simulation.DroppedDamageCount*
+  commentId: Overload:TDMaker.Core.Simulation.DroppedDamageCount
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_DroppedDamageCount
+  name: DroppedDamageCount
+  nameWithType: Simulation.DroppedDamageCount
+  fullName: TDMaker.Core.Simulation.DroppedDamageCount
+- uid: TDMaker.Core.Simulation.CapacityFailureCount*
+  commentId: Overload:TDMaker.Core.Simulation.CapacityFailureCount
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_CapacityFailureCount
+  name: CapacityFailureCount
+  nameWithType: Simulation.CapacityFailureCount
+  fullName: TDMaker.Core.Simulation.CapacityFailureCount
+- uid: TDMaker.Core.Simulation.ActiveChainCount*
+  commentId: Overload:TDMaker.Core.Simulation.ActiveChainCount
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_ActiveChainCount
+  name: ActiveChainCount
+  nameWithType: Simulation.ActiveChainCount
+  fullName: TDMaker.Core.Simulation.ActiveChainCount
+- uid: TDMaker.Core.Simulation.SystemPipeline*
+  commentId: Overload:TDMaker.Core.Simulation.SystemPipeline
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_SystemPipeline
+  name: SystemPipeline
+  nameWithType: Simulation.SystemPipeline
+  fullName: TDMaker.Core.Simulation.SystemPipeline
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.SimSystemInfo}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.SimSystemInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<SimSystemInfo>
+  nameWithType: IReadOnlyList<SimSystemInfo>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.SimSystemInfo>
+  nameWithType.vb: IReadOnlyList(Of SimSystemInfo)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.SimSystemInfo)
+  name.vb: IReadOnlyList(Of SimSystemInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.SimSystemInfo
+    name: SimSystemInfo
+    isExternal: true
+    href: TDMaker.Core.SimSystemInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.SimSystemInfo
+    name: SimSystemInfo
+    isExternal: true
+    href: TDMaker.Core.SimSystemInfo.html
+  - name: )
+- uid: TDMaker.Core.Simulation.QueuedDamageCount*
+  commentId: Overload:TDMaker.Core.Simulation.QueuedDamageCount
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_QueuedDamageCount
+  name: QueuedDamageCount
+  nameWithType: Simulation.QueuedDamageCount
+  fullName: TDMaker.Core.Simulation.QueuedDamageCount
+- uid: TDMaker.Core.Simulation.ScheduledActionCount*
+  commentId: Overload:TDMaker.Core.Simulation.ScheduledActionCount
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_ScheduledActionCount
+  name: ScheduledActionCount
+  nameWithType: Simulation.ScheduledActionCount
+  fullName: TDMaker.Core.Simulation.ScheduledActionCount
+- uid: TDMaker.Core.Simulation.SpatialRebuildCount*
+  commentId: Overload:TDMaker.Core.Simulation.SpatialRebuildCount
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_SpatialRebuildCount
+  name: SpatialRebuildCount
+  nameWithType: Simulation.SpatialRebuildCount
+  fullName: TDMaker.Core.Simulation.SpatialRebuildCount
+- uid: TDMaker.Core.Simulation.Remains*
+  commentId: Overload:TDMaker.Core.Simulation.Remains
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_Remains
+  name: Remains
+  nameWithType: Simulation.Remains
+  fullName: TDMaker.Core.Simulation.Remains
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.RemainsRecord}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.RemainsRecord}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<RemainsRecord>
+  nameWithType: IReadOnlyList<RemainsRecord>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.RemainsRecord>
+  nameWithType.vb: IReadOnlyList(Of RemainsRecord)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.RemainsRecord)
+  name.vb: IReadOnlyList(Of RemainsRecord)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.RemainsRecord
+    name: RemainsRecord
+    isExternal: true
+    href: TDMaker.Core.RemainsRecord.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.RemainsRecord
+    name: RemainsRecord
+    isExternal: true
+    href: TDMaker.Core.RemainsRecord.html
+  - name: )
+- uid: TDMaker.Core.Simulation.PendingRecoveryCount*
+  commentId: Overload:TDMaker.Core.Simulation.PendingRecoveryCount
+  isExternal: true
+  href: TDMaker.Core.Simulation.html#TDMaker_Core_Simulation_PendingRecoveryCount
+  name: PendingRecoveryCount
+  nameWithType: Simulation.PendingRecoveryCount
+  fullName: TDMaker.Core.Simulation.PendingRecoveryCount

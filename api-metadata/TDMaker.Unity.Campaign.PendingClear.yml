@@ -1,0 +1,417 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.PendingClear
+  commentId: T:TDMaker.Unity.Campaign.PendingClear
+  id: PendingClear
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.PendingClear.#ctor
+  - TDMaker.Unity.Campaign.PendingClear.key
+  - TDMaker.Unity.Campaign.PendingClear.stars
+  - TDMaker.Unity.Campaign.PendingClear.wins
+  langs:
+  - csharp
+  - vb
+  name: PendingClear
+  nameWithType: PendingClear
+  fullName: TDMaker.Unity.Campaign.PendingClear
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: A victory recorded at the end of a battle and not yet merged into the map (see <xref href="TDMaker.Unity.Campaign.CampaignProgress.ApplyPending"
+    data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: public sealed class PendingClear
+    content.vb: Public NotInheritable Class PendingClear
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Campaign.PendingClear.key
+  commentId: F:TDMaker.Unity.Campaign.PendingClear.key
+  id: key
+  parent: TDMaker.Unity.Campaign.PendingClear
+  langs:
+  - csharp
+  - vb
+  name: key
+  nameWithType: PendingClear.key
+  fullName: TDMaker.Unity.Campaign.PendingClear.key
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Level key.
+  example: []
+  syntax:
+    content: public string key
+    return:
+      type: System.String
+    content.vb: Public key As String
+- uid: TDMaker.Unity.Campaign.PendingClear.stars
+  commentId: F:TDMaker.Unity.Campaign.PendingClear.stars
+  id: stars
+  parent: TDMaker.Unity.Campaign.PendingClear
+  langs:
+  - csharp
+  - vb
+  name: stars
+  nameWithType: PendingClear.stars
+  fullName: TDMaker.Unity.Campaign.PendingClear.stars
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Best rating of the victories recorded for this level since the map last merged them.
+  example: []
+  syntax:
+    content: public int stars
+    return:
+      type: System.Int32
+    content.vb: Public stars As Integer
+- uid: TDMaker.Unity.Campaign.PendingClear.wins
+  commentId: F:TDMaker.Unity.Campaign.PendingClear.wins
+  id: wins
+  parent: TDMaker.Unity.Campaign.PendingClear
+  langs:
+  - csharp
+  - vb
+  name: wins
+  nameWithType: PendingClear.wins
+  fullName: TDMaker.Unity.Campaign.PendingClear.wins
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Victories recorded since the map last merged them.
+  example: []
+  syntax:
+    content: public int wins
+    return:
+      type: System.Int32
+    content.vb: Public wins As Integer
+- uid: TDMaker.Unity.Campaign.PendingClear.#ctor
+  commentId: M:TDMaker.Unity.Campaign.PendingClear.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Campaign.PendingClear
+  langs:
+  - csharp
+  - vb
+  name: PendingClear()
+  nameWithType: PendingClear.PendingClear()
+  fullName: TDMaker.Unity.Campaign.PendingClear.PendingClear()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  syntax:
+    content: public PendingClear()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Campaign.PendingClear.#ctor*
+  nameWithType.vb: PendingClear.New()
+  fullName.vb: TDMaker.Unity.Campaign.PendingClear.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Unity.Campaign.CampaignProgress.ApplyPending
+  commentId: M:TDMaker.Unity.Campaign.CampaignProgress.ApplyPending
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_ApplyPending
+  name: ApplyPending()
+  nameWithType: CampaignProgress.ApplyPending()
+  fullName: TDMaker.Unity.Campaign.CampaignProgress.ApplyPending()
+  spec.csharp:
+  - uid: TDMaker.Unity.Campaign.CampaignProgress.ApplyPending
+    name: ApplyPending
+    isExternal: true
+    href: TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_ApplyPending
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Unity.Campaign.CampaignProgress.ApplyPending
+    name: ApplyPending
+    isExternal: true
+    href: TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_ApplyPending
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.Campaign.PendingClear.#ctor*
+  commentId: Overload:TDMaker.Unity.Campaign.PendingClear.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Campaign.PendingClear.html#TDMaker_Unity_Campaign_PendingClear__ctor
+  name: PendingClear
+  nameWithType: PendingClear.PendingClear
+  fullName: TDMaker.Unity.Campaign.PendingClear.PendingClear
+  nameWithType.vb: PendingClear.New
+  fullName.vb: TDMaker.Unity.Campaign.PendingClear.New
+  name.vb: New

@@ -1,0 +1,807 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.ChainAttackDef
+  commentId: T:TDMaker.Core.Defs.ChainAttackDef
+  id: ChainAttackDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.ChainAttackDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Single,System.Single,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)
+  - TDMaker.Core.Defs.ChainAttackDef.CancelWithSource
+  - TDMaker.Core.Defs.ChainAttackDef.Chance
+  - TDMaker.Core.Defs.ChainAttackDef.Damage
+  - TDMaker.Core.Defs.ChainAttackDef.Id
+  - TDMaker.Core.Defs.ChainAttackDef.LinkDelay
+  - TDMaker.Core.Defs.ChainAttackDef.LinkRange
+  - TDMaker.Core.Defs.ChainAttackDef.LinkScale
+  - TDMaker.Core.Defs.ChainAttackDef.MaxTargets
+  - TDMaker.Core.Defs.ChainAttackDef.Range
+  - TDMaker.Core.Defs.ChainAttackDef.Targets
+  - TDMaker.Core.Defs.ChainAttackDef.TargetsFlying
+  - TDMaker.Core.Defs.ChainAttackDef.TargetsGround
+  langs:
+  - csharp
+  - vb
+  name: ChainAttackDef
+  nameWithType: ChainAttackDef
+  fullName: TDMaker.Core.Defs.ChainAttackDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: One attack whose successive links visit distinct opposing units; state is held in a fixed simulation pool.
+  example:
+  - <pre><code class="lang-csharp">var channel = new AbilityActionDef(new ChainAttackDef("arc", hit, 5, 2, 4), 3);</code></pre>
+  syntax:
+    content: 'public sealed class ChainAttackDef : IAbilityAction'
+    content.vb: Public NotInheritable Class ChainAttackDef Implements IAbilityAction
+  inheritance:
+  - System.Object
+  implements:
+  - TDMaker.Core.IAbilityAction
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.ChainAttackDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Single,System.Single,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:TDMaker.Core.Defs.ChainAttackDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Single,System.Single,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)
+  id: '#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Single,System.Single,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)'
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: ChainAttackDef(string, DamageDef, float, float, int, float, float, float, MechanicTargetDef, bool, bool, bool)
+  nameWithType: ChainAttackDef.ChainAttackDef(string, DamageDef, float, float, int, float, float, float, MechanicTargetDef,
+    bool, bool, bool)
+  fullName: TDMaker.Core.Defs.ChainAttackDef.ChainAttackDef(string, TDMaker.Core.Defs.DamageDef, float, float, int, float,
+    float, float, TDMaker.Core.Defs.MechanicTargetDef, bool, bool, bool)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates chain behavior; nearest eligible targets and then smaller Id break ties at every link.
+  example: []
+  syntax:
+    content: public ChainAttackDef(string id, DamageDef damage, float range, float linkRange, int maxTargets, float linkDelay
+      = 0, float linkScale = 1, float chance = 1, MechanicTargetDef targets = null, bool targetsFlying = true, bool targetsGround
+      = true, bool cancelWithSource = true)
+    parameters:
+    - id: id
+      type: System.String
+    - id: damage
+      type: TDMaker.Core.Defs.DamageDef
+    - id: range
+      type: System.Single
+    - id: linkRange
+      type: System.Single
+    - id: maxTargets
+      type: System.Int32
+    - id: linkDelay
+      type: System.Single
+    - id: linkScale
+      type: System.Single
+    - id: chance
+      type: System.Single
+    - id: targets
+      type: TDMaker.Core.Defs.MechanicTargetDef
+    - id: targetsFlying
+      type: System.Boolean
+    - id: targetsGround
+      type: System.Boolean
+    - id: cancelWithSource
+      type: System.Boolean
+    content.vb: Public Sub New(id As String, damage As DamageDef, range As Single, linkRange As Single, maxTargets As Integer,
+      linkDelay As Single = 0, linkScale As Single = 1, chance As Single = 1, targets As MechanicTargetDef = Nothing, targetsFlying
+      As Boolean = True, targetsGround As Boolean = True, cancelWithSource As Boolean = True)
+  overload: TDMaker.Core.Defs.ChainAttackDef.#ctor*
+  nameWithType.vb: ChainAttackDef.New(String, DamageDef, Single, Single, Integer, Single, Single, Single, MechanicTargetDef,
+    Boolean, Boolean, Boolean)
+  fullName.vb: TDMaker.Core.Defs.ChainAttackDef.New(String, TDMaker.Core.Defs.DamageDef, Single, Single, Integer, Single,
+    Single, Single, TDMaker.Core.Defs.MechanicTargetDef, Boolean, Boolean, Boolean)
+  name.vb: New(String, DamageDef, Single, Single, Integer, Single, Single, Single, MechanicTargetDef, Boolean, Boolean, Boolean)
+- uid: TDMaker.Core.Defs.ChainAttackDef.Id
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.Id
+  id: Id
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ChainAttackDef.Id
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Neutral author-defined event key.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Core.Defs.ChainAttackDef.Id*
+- uid: TDMaker.Core.Defs.ChainAttackDef.Damage
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.Damage
+  id: Damage
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: Damage
+  nameWithType: ChainAttackDef.Damage
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Damage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Payload at each link, including optional on-hit extensions.
+  example: []
+  syntax:
+    content: public DamageDef Damage { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageDef
+    content.vb: Public ReadOnly Property Damage As DamageDef
+  overload: TDMaker.Core.Defs.ChainAttackDef.Damage*
+- uid: TDMaker.Core.Defs.ChainAttackDef.Range
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.Range
+  id: Range
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: ChainAttackDef.Range
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Range
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Initial horizontal range; affected by the source's range modifier.
+  example: []
+  syntax:
+    content: public float Range { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Range As Single
+  overload: TDMaker.Core.Defs.ChainAttackDef.Range*
+- uid: TDMaker.Core.Defs.ChainAttackDef.LinkRange
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.LinkRange
+  id: LinkRange
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: LinkRange
+  nameWithType: ChainAttackDef.LinkRange
+  fullName: TDMaker.Core.Defs.ChainAttackDef.LinkRange
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Horizontal range from the preceding impact position for later links.
+  example: []
+  syntax:
+    content: public float LinkRange { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property LinkRange As Single
+  overload: TDMaker.Core.Defs.ChainAttackDef.LinkRange*
+- uid: TDMaker.Core.Defs.ChainAttackDef.MaxTargets
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.MaxTargets
+  id: MaxTargets
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: MaxTargets
+  nameWithType: ChainAttackDef.MaxTargets
+  fullName: TDMaker.Core.Defs.ChainAttackDef.MaxTargets
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum distinct primary recipients, including the first; cannot exceed simulation EntityCapacity.
+  example: []
+  syntax:
+    content: public int MaxTargets { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxTargets As Integer
+  overload: TDMaker.Core.Defs.ChainAttackDef.MaxTargets*
+- uid: TDMaker.Core.Defs.ChainAttackDef.LinkDelay
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.LinkDelay
+  id: LinkDelay
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: LinkDelay
+  nameWithType: ChainAttackDef.LinkDelay
+  fullName: TDMaker.Core.Defs.ChainAttackDef.LinkDelay
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Game seconds between links; even zero yields until the next fixed tick.
+  example: []
+  syntax:
+    content: public float LinkDelay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property LinkDelay As Single
+  overload: TDMaker.Core.Defs.ChainAttackDef.LinkDelay*
+- uid: TDMaker.Core.Defs.ChainAttackDef.LinkScale
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.LinkScale
+  id: LinkScale
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: LinkScale
+  nameWithType: ChainAttackDef.LinkScale
+  fullName: TDMaker.Core.Defs.ChainAttackDef.LinkScale
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Outgoing multiplier applied after each link; the first uses the source's captured output.
+  example: []
+  syntax:
+    content: public float LinkScale { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property LinkScale As Single
+  overload: TDMaker.Core.Defs.ChainAttackDef.LinkScale*
+- uid: TDMaker.Core.Defs.ChainAttackDef.Chance
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.Chance
+  id: Chance
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: Chance
+  nameWithType: ChainAttackDef.Chance
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Chance
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: One probability roll per eligible activation; a failed roll still consumes its cooldown.
+  example: []
+  syntax:
+    content: public float Chance { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Chance As Single
+  overload: TDMaker.Core.Defs.ChainAttackDef.Chance*
+- uid: TDMaker.Core.Defs.ChainAttackDef.Targets
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.Targets
+  id: Targets
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: Targets
+  nameWithType: ChainAttackDef.Targets
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Targets
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Recipient restrictions.
+  example: []
+  syntax:
+    content: public MechanicTargetDef Targets { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.MechanicTargetDef
+    content.vb: Public ReadOnly Property Targets As MechanicTargetDef
+  overload: TDMaker.Core.Defs.ChainAttackDef.Targets*
+- uid: TDMaker.Core.Defs.ChainAttackDef.TargetsFlying
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.TargetsFlying
+  id: TargetsFlying
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: TargetsFlying
+  nameWithType: ChainAttackDef.TargetsFlying
+  fullName: TDMaker.Core.Defs.ChainAttackDef.TargetsFlying
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Whether links may hit airborne units.
+  example: []
+  syntax:
+    content: public bool TargetsFlying { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsFlying As Boolean
+  overload: TDMaker.Core.Defs.ChainAttackDef.TargetsFlying*
+- uid: TDMaker.Core.Defs.ChainAttackDef.TargetsGround
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.TargetsGround
+  id: TargetsGround
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: TargetsGround
+  nameWithType: ChainAttackDef.TargetsGround
+  fullName: TDMaker.Core.Defs.ChainAttackDef.TargetsGround
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Whether links may hit ground units.
+  example: []
+  syntax:
+    content: public bool TargetsGround { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TargetsGround As Boolean
+  overload: TDMaker.Core.Defs.ChainAttackDef.TargetsGround*
+- uid: TDMaker.Core.Defs.ChainAttackDef.CancelWithSource
+  commentId: P:TDMaker.Core.Defs.ChainAttackDef.CancelWithSource
+  id: CancelWithSource
+  parent: TDMaker.Core.Defs.ChainAttackDef
+  langs:
+  - csharp
+  - vb
+  name: CancelWithSource
+  nameWithType: ChainAttackDef.CancelWithSource
+  fullName: TDMaker.Core.Defs.ChainAttackDef.CancelWithSource
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Cancels remaining links if the source dies, disappears, is stunned, disarmed or ordered to rally.
+  example: []
+  syntax:
+    content: public bool CancelWithSource { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CancelWithSource As Boolean
+  overload: TDMaker.Core.Defs.ChainAttackDef.CancelWithSource*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TDMaker.Core.IAbilityAction
+  commentId: T:TDMaker.Core.IAbilityAction
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.IAbilityAction.html
+  name: IAbilityAction
+  nameWithType: IAbilityAction
+  fullName: TDMaker.Core.IAbilityAction
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.Defs.ChainAttackDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef__ctor_System_String_TDMaker_Core_Defs_DamageDef_System_Single_System_Single_System_Int32_System_Single_System_Single_System_Single_TDMaker_Core_Defs_MechanicTargetDef_System_Boolean_System_Boolean_System_Boolean_
+  name: ChainAttackDef
+  nameWithType: ChainAttackDef.ChainAttackDef
+  fullName: TDMaker.Core.Defs.ChainAttackDef.ChainAttackDef
+  nameWithType.vb: ChainAttackDef.New
+  fullName.vb: TDMaker.Core.Defs.ChainAttackDef.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Defs.DamageDef
+  commentId: T:TDMaker.Core.Defs.DamageDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageDef.html
+  name: DamageDef
+  nameWithType: DamageDef
+  fullName: TDMaker.Core.Defs.DamageDef
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.MechanicTargetDef
+  commentId: T:TDMaker.Core.Defs.MechanicTargetDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.MechanicTargetDef.html
+  name: MechanicTargetDef
+  nameWithType: MechanicTargetDef
+  fullName: TDMaker.Core.Defs.MechanicTargetDef
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.ChainAttackDef.Id*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.Id
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_Id
+  name: Id
+  nameWithType: ChainAttackDef.Id
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Id
+- uid: TDMaker.Core.Defs.ChainAttackDef.Damage*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.Damage
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_Damage
+  name: Damage
+  nameWithType: ChainAttackDef.Damage
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Damage
+- uid: TDMaker.Core.Defs.ChainAttackDef.Range*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.Range
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_Range
+  name: Range
+  nameWithType: ChainAttackDef.Range
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Range
+- uid: TDMaker.Core.Defs.ChainAttackDef.LinkRange*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.LinkRange
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_LinkRange
+  name: LinkRange
+  nameWithType: ChainAttackDef.LinkRange
+  fullName: TDMaker.Core.Defs.ChainAttackDef.LinkRange
+- uid: TDMaker.Core.Defs.ChainAttackDef.MaxTargets*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.MaxTargets
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_MaxTargets
+  name: MaxTargets
+  nameWithType: ChainAttackDef.MaxTargets
+  fullName: TDMaker.Core.Defs.ChainAttackDef.MaxTargets
+- uid: TDMaker.Core.Defs.ChainAttackDef.LinkDelay*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.LinkDelay
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_LinkDelay
+  name: LinkDelay
+  nameWithType: ChainAttackDef.LinkDelay
+  fullName: TDMaker.Core.Defs.ChainAttackDef.LinkDelay
+- uid: TDMaker.Core.Defs.ChainAttackDef.LinkScale*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.LinkScale
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_LinkScale
+  name: LinkScale
+  nameWithType: ChainAttackDef.LinkScale
+  fullName: TDMaker.Core.Defs.ChainAttackDef.LinkScale
+- uid: TDMaker.Core.Defs.ChainAttackDef.Chance*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.Chance
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_Chance
+  name: Chance
+  nameWithType: ChainAttackDef.Chance
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Chance
+- uid: TDMaker.Core.Defs.ChainAttackDef.Targets*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.Targets
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_Targets
+  name: Targets
+  nameWithType: ChainAttackDef.Targets
+  fullName: TDMaker.Core.Defs.ChainAttackDef.Targets
+- uid: TDMaker.Core.Defs.ChainAttackDef.TargetsFlying*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.TargetsFlying
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_TargetsFlying
+  name: TargetsFlying
+  nameWithType: ChainAttackDef.TargetsFlying
+  fullName: TDMaker.Core.Defs.ChainAttackDef.TargetsFlying
+- uid: TDMaker.Core.Defs.ChainAttackDef.TargetsGround*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.TargetsGround
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_TargetsGround
+  name: TargetsGround
+  nameWithType: ChainAttackDef.TargetsGround
+  fullName: TDMaker.Core.Defs.ChainAttackDef.TargetsGround
+- uid: TDMaker.Core.Defs.ChainAttackDef.CancelWithSource*
+  commentId: Overload:TDMaker.Core.Defs.ChainAttackDef.CancelWithSource
+  isExternal: true
+  href: TDMaker.Core.Defs.ChainAttackDef.html#TDMaker_Core_Defs_ChainAttackDef_CancelWithSource
+  name: CancelWithSource
+  nameWithType: ChainAttackDef.CancelWithSource
+  fullName: TDMaker.Core.Defs.ChainAttackDef.CancelWithSource

@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.DeploymentPhase
+  commentId: T:TDMaker.Core.DeploymentPhase
+  id: DeploymentPhase
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.DeploymentPhase.Armed
+  - TDMaker.Core.DeploymentPhase.InTransit
+  - TDMaker.Core.DeploymentPhase.Reserved
+  - TDMaker.Core.DeploymentPhase.Settling
+  langs:
+  - csharp
+  - vb
+  name: DeploymentPhase
+  nameWithType: DeploymentPhase
+  fullName: TDMaker.Core.DeploymentPhase
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Observable automatic-deployment preparation.
+  example: []
+  syntax:
+    content: public enum DeploymentPhase
+    content.vb: Public Enum DeploymentPhase
+- uid: TDMaker.Core.DeploymentPhase.Reserved
+  commentId: F:TDMaker.Core.DeploymentPhase.Reserved
+  id: Reserved
+  parent: TDMaker.Core.DeploymentPhase
+  langs:
+  - csharp
+  - vb
+  name: Reserved
+  nameWithType: DeploymentPhase.Reserved
+  fullName: TDMaker.Core.DeploymentPhase.Reserved
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Site and capacity are reserved.
+  example: []
+  syntax:
+    content: Reserved = 0
+    return:
+      type: TDMaker.Core.DeploymentPhase
+- uid: TDMaker.Core.DeploymentPhase.InTransit
+  commentId: F:TDMaker.Core.DeploymentPhase.InTransit
+  id: InTransit
+  parent: TDMaker.Core.DeploymentPhase
+  langs:
+  - csharp
+  - vb
+  name: InTransit
+  nameWithType: DeploymentPhase.InTransit
+  fullName: TDMaker.Core.DeploymentPhase.InTransit
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: In flight toward the selected site.
+  example: []
+  syntax:
+    content: InTransit = 1
+    return:
+      type: TDMaker.Core.DeploymentPhase
+- uid: TDMaker.Core.DeploymentPhase.Settling
+  commentId: F:TDMaker.Core.DeploymentPhase.Settling
+  id: Settling
+  parent: TDMaker.Core.DeploymentPhase
+  langs:
+  - csharp
+  - vb
+  name: Settling
+  nameWithType: DeploymentPhase.Settling
+  fullName: TDMaker.Core.DeploymentPhase.Settling
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Landed, not yet armed.
+  example: []
+  syntax:
+    content: Settling = 2
+    return:
+      type: TDMaker.Core.DeploymentPhase
+- uid: TDMaker.Core.DeploymentPhase.Armed
+  commentId: F:TDMaker.Core.DeploymentPhase.Armed
+  id: Armed
+  parent: TDMaker.Core.DeploymentPhase
+  langs:
+  - csharp
+  - vb
+  name: Armed
+  nameWithType: DeploymentPhase.Armed
+  fullName: TDMaker.Core.DeploymentPhase.Armed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Ready to sense eligible recipients.
+  example: []
+  syntax:
+    content: Armed = 3
+    return:
+      type: TDMaker.Core.DeploymentPhase
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.DeploymentPhase
+  commentId: T:TDMaker.Core.DeploymentPhase
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.DeploymentPhase.html
+  name: DeploymentPhase
+  nameWithType: DeploymentPhase
+  fullName: TDMaker.Core.DeploymentPhase

@@ -1,0 +1,325 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.View.TemplateDecorator
+  commentId: T:TDMaker.Unity.View.TemplateDecorator
+  id: TemplateDecorator
+  parent: TDMaker.Unity.View
+  children:
+  - TDMaker.Unity.View.TemplateDecorator.#ctor(System.Object,System.IntPtr)
+  - TDMaker.Unity.View.TemplateDecorator.BeginInvoke(TDMaker.Core.Defs.EntityTemplate,TDMaker.Unity.Authoring.EntityAssetBase,System.AsyncCallback,System.Object)
+  - TDMaker.Unity.View.TemplateDecorator.EndInvoke(System.IAsyncResult)
+  - TDMaker.Unity.View.TemplateDecorator.Invoke(TDMaker.Core.Defs.EntityTemplate,TDMaker.Unity.Authoring.EntityAssetBase)
+  langs:
+  - csharp
+  - vb
+  name: TemplateDecorator
+  nameWithType: TemplateDecorator
+  fullName: TDMaker.Unity.View.TemplateDecorator
+  type: Delegate
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  summary: 'Changes a baked template before the simulation is created (for example to add <code>WithCustomData</code> values).
+
+    <code class="paramref">asset</code> is the authoring asset the template came from, or null. Return the template to use.'
+  example: []
+  syntax:
+    content: public delegate EntityTemplate TemplateDecorator(EntityTemplate template, EntityAssetBase asset)
+    parameters:
+    - id: template
+      type: TDMaker.Core.Defs.EntityTemplate
+    - id: asset
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    return:
+      type: TDMaker.Core.Defs.EntityTemplate
+    content.vb: Public Delegate Function TemplateDecorator(template As EntityTemplate, asset As EntityAssetBase) As EntityTemplate
+- uid: TDMaker.Unity.View.TemplateDecorator.#ctor(System.Object,System.IntPtr)
+  commentId: M:TDMaker.Unity.View.TemplateDecorator.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: TDMaker.Unity.View.TemplateDecorator
+  langs:
+  - csharp
+  - vb
+  name: TemplateDecorator(object, IntPtr)
+  nameWithType: TemplateDecorator.TemplateDecorator(object, IntPtr)
+  fullName: TDMaker.Unity.View.TemplateDecorator.TemplateDecorator(object, System.IntPtr)
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public TemplateDecorator(object @object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New([object] As Object, method As IntPtr)
+  overload: TDMaker.Unity.View.TemplateDecorator.#ctor*
+  nameWithType.vb: TemplateDecorator.New(Object, IntPtr)
+  fullName.vb: TDMaker.Unity.View.TemplateDecorator.New(Object, System.IntPtr)
+  name.vb: New(Object, IntPtr)
+- uid: TDMaker.Unity.View.TemplateDecorator.Invoke(TDMaker.Core.Defs.EntityTemplate,TDMaker.Unity.Authoring.EntityAssetBase)
+  commentId: M:TDMaker.Unity.View.TemplateDecorator.Invoke(TDMaker.Core.Defs.EntityTemplate,TDMaker.Unity.Authoring.EntityAssetBase)
+  id: Invoke(TDMaker.Core.Defs.EntityTemplate,TDMaker.Unity.Authoring.EntityAssetBase)
+  parent: TDMaker.Unity.View.TemplateDecorator
+  langs:
+  - csharp
+  - vb
+  name: Invoke(EntityTemplate, EntityAssetBase)
+  nameWithType: TemplateDecorator.Invoke(EntityTemplate, EntityAssetBase)
+  fullName: TDMaker.Unity.View.TemplateDecorator.Invoke(TDMaker.Core.Defs.EntityTemplate, TDMaker.Unity.Authoring.EntityAssetBase)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public virtual EntityTemplate Invoke(EntityTemplate template, EntityAssetBase asset)
+    parameters:
+    - id: template
+      type: TDMaker.Core.Defs.EntityTemplate
+    - id: asset
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    return:
+      type: TDMaker.Core.Defs.EntityTemplate
+    content.vb: Public Overridable Function Invoke(template As EntityTemplate, asset As EntityAssetBase) As EntityTemplate
+  overload: TDMaker.Unity.View.TemplateDecorator.Invoke*
+- uid: TDMaker.Unity.View.TemplateDecorator.BeginInvoke(TDMaker.Core.Defs.EntityTemplate,TDMaker.Unity.Authoring.EntityAssetBase,System.AsyncCallback,System.Object)
+  commentId: M:TDMaker.Unity.View.TemplateDecorator.BeginInvoke(TDMaker.Core.Defs.EntityTemplate,TDMaker.Unity.Authoring.EntityAssetBase,System.AsyncCallback,System.Object)
+  id: BeginInvoke(TDMaker.Core.Defs.EntityTemplate,TDMaker.Unity.Authoring.EntityAssetBase,System.AsyncCallback,System.Object)
+  parent: TDMaker.Unity.View.TemplateDecorator
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(EntityTemplate, EntityAssetBase, AsyncCallback, object)
+  nameWithType: TemplateDecorator.BeginInvoke(EntityTemplate, EntityAssetBase, AsyncCallback, object)
+  fullName: TDMaker.Unity.View.TemplateDecorator.BeginInvoke(TDMaker.Core.Defs.EntityTemplate, TDMaker.Unity.Authoring.EntityAssetBase,
+    System.AsyncCallback, object)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(EntityTemplate template, EntityAssetBase asset, AsyncCallback callback,
+      object @object)
+    parameters:
+    - id: template
+      type: TDMaker.Core.Defs.EntityTemplate
+    - id: asset
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(template As EntityTemplate, asset As EntityAssetBase, callback As
+      AsyncCallback, [object] As Object) As IAsyncResult
+  overload: TDMaker.Unity.View.TemplateDecorator.BeginInvoke*
+  nameWithType.vb: TemplateDecorator.BeginInvoke(EntityTemplate, EntityAssetBase, AsyncCallback, Object)
+  fullName.vb: TDMaker.Unity.View.TemplateDecorator.BeginInvoke(TDMaker.Core.Defs.EntityTemplate, TDMaker.Unity.Authoring.EntityAssetBase,
+    System.AsyncCallback, Object)
+  name.vb: BeginInvoke(EntityTemplate, EntityAssetBase, AsyncCallback, Object)
+- uid: TDMaker.Unity.View.TemplateDecorator.EndInvoke(System.IAsyncResult)
+  commentId: M:TDMaker.Unity.View.TemplateDecorator.EndInvoke(System.IAsyncResult)
+  id: EndInvoke(System.IAsyncResult)
+  parent: TDMaker.Unity.View.TemplateDecorator
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(IAsyncResult)
+  nameWithType: TemplateDecorator.EndInvoke(IAsyncResult)
+  fullName: TDMaker.Unity.View.TemplateDecorator.EndInvoke(System.IAsyncResult)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.View
+  syntax:
+    content: public virtual EntityTemplate EndInvoke(IAsyncResult result)
+    parameters:
+    - id: result
+      type: System.IAsyncResult
+    return:
+      type: TDMaker.Core.Defs.EntityTemplate
+    content.vb: Public Overridable Function EndInvoke(result As IAsyncResult) As EntityTemplate
+  overload: TDMaker.Unity.View.TemplateDecorator.EndInvoke*
+references:
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: TDMaker.Core.Defs.EntityTemplate
+  commentId: T:TDMaker.Core.Defs.EntityTemplate
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html
+  name: EntityTemplate
+  nameWithType: EntityTemplate
+  fullName: TDMaker.Core.Defs.EntityTemplate
+- uid: TDMaker.Unity.Authoring.EntityAssetBase
+  commentId: T:TDMaker.Unity.Authoring.EntityAssetBase
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.EntityAssetBase.html
+  name: EntityAssetBase
+  nameWithType: EntityAssetBase
+  fullName: TDMaker.Unity.Authoring.EntityAssetBase
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Unity.View.TemplateDecorator.#ctor*
+  commentId: Overload:TDMaker.Unity.View.TemplateDecorator.#ctor
+  isExternal: true
+  href: TDMaker.Unity.View.TemplateDecorator.html#TDMaker_Unity_View_TemplateDecorator__ctor_System_Object_System_IntPtr_
+  name: TemplateDecorator
+  nameWithType: TemplateDecorator.TemplateDecorator
+  fullName: TDMaker.Unity.View.TemplateDecorator.TemplateDecorator
+  nameWithType.vb: TemplateDecorator.New
+  fullName.vb: TDMaker.Unity.View.TemplateDecorator.New
+  name.vb: New
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.View.TemplateDecorator.Invoke*
+  commentId: Overload:TDMaker.Unity.View.TemplateDecorator.Invoke
+  isExternal: true
+  href: TDMaker.Unity.View.TemplateDecorator.html#TDMaker_Unity_View_TemplateDecorator_Invoke_TDMaker_Core_Defs_EntityTemplate_TDMaker_Unity_Authoring_EntityAssetBase_
+  name: Invoke
+  nameWithType: TemplateDecorator.Invoke
+  fullName: TDMaker.Unity.View.TemplateDecorator.Invoke
+- uid: TDMaker.Unity.View.TemplateDecorator.BeginInvoke*
+  commentId: Overload:TDMaker.Unity.View.TemplateDecorator.BeginInvoke
+  isExternal: true
+  href: TDMaker.Unity.View.TemplateDecorator.html#TDMaker_Unity_View_TemplateDecorator_BeginInvoke_TDMaker_Core_Defs_EntityTemplate_TDMaker_Unity_Authoring_EntityAssetBase_System_AsyncCallback_System_Object_
+  name: BeginInvoke
+  nameWithType: TemplateDecorator.BeginInvoke
+  fullName: TDMaker.Unity.View.TemplateDecorator.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.asynccallback
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncresult
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: TDMaker.Unity.View.TemplateDecorator.EndInvoke*
+  commentId: Overload:TDMaker.Unity.View.TemplateDecorator.EndInvoke
+  isExternal: true
+  href: TDMaker.Unity.View.TemplateDecorator.html#TDMaker_Unity_View_TemplateDecorator_EndInvoke_System_IAsyncResult_
+  name: EndInvoke
+  nameWithType: TemplateDecorator.EndInvoke
+  fullName: TDMaker.Unity.View.TemplateDecorator.EndInvoke

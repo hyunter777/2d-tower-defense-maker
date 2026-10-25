@@ -1,0 +1,510 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.BarracksDef
+  commentId: T:TDMaker.Core.Defs.BarracksDef
+  id: BarracksDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.BarracksDef.#ctor(System.String,System.Int32,System.Single,System.Single,System.Single)
+  - TDMaker.Core.Defs.BarracksDef.Count
+  - TDMaker.Core.Defs.BarracksDef.FormationRadius
+  - TDMaker.Core.Defs.BarracksDef.RallyRadius
+  - TDMaker.Core.Defs.BarracksDef.RespawnTime
+  - TDMaker.Core.Defs.BarracksDef.SoldierTemplateId
+  langs:
+  - csharp
+  - vb
+  name: BarracksDef
+  nameWithType: BarracksDef
+  fullName: TDMaker.Core.Defs.BarracksDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Soldier population and rally settings.
+  example: []
+  syntax:
+    content: public sealed class BarracksDef
+    content.vb: Public NotInheritable Class BarracksDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.BarracksDef.#ctor(System.String,System.Int32,System.Single,System.Single,System.Single)
+  commentId: M:TDMaker.Core.Defs.BarracksDef.#ctor(System.String,System.Int32,System.Single,System.Single,System.Single)
+  id: '#ctor(System.String,System.Int32,System.Single,System.Single,System.Single)'
+  parent: TDMaker.Core.Defs.BarracksDef
+  langs:
+  - csharp
+  - vb
+  name: BarracksDef(string, int, float, float, float)
+  nameWithType: BarracksDef.BarracksDef(string, int, float, float, float)
+  fullName: TDMaker.Core.Defs.BarracksDef.BarracksDef(string, int, float, float, float)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates barracks data.
+  example: []
+  syntax:
+    content: public BarracksDef(string soldierTemplateId, int count, float rallyRadius, float respawnTime, float formationRadius
+      = 0)
+    parameters:
+    - id: soldierTemplateId
+      type: System.String
+    - id: count
+      type: System.Int32
+    - id: rallyRadius
+      type: System.Single
+    - id: respawnTime
+      type: System.Single
+    - id: formationRadius
+      type: System.Single
+    content.vb: Public Sub New(soldierTemplateId As String, count As Integer, rallyRadius As Single, respawnTime As Single,
+      formationRadius As Single = 0)
+  overload: TDMaker.Core.Defs.BarracksDef.#ctor*
+  nameWithType.vb: BarracksDef.New(String, Integer, Single, Single, Single)
+  fullName.vb: TDMaker.Core.Defs.BarracksDef.New(String, Integer, Single, Single, Single)
+  name.vb: New(String, Integer, Single, Single, Single)
+- uid: TDMaker.Core.Defs.BarracksDef.SoldierTemplateId
+  commentId: P:TDMaker.Core.Defs.BarracksDef.SoldierTemplateId
+  id: SoldierTemplateId
+  parent: TDMaker.Core.Defs.BarracksDef
+  langs:
+  - csharp
+  - vb
+  name: SoldierTemplateId
+  nameWithType: BarracksDef.SoldierTemplateId
+  fullName: TDMaker.Core.Defs.BarracksDef.SoldierTemplateId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Template instantiated for each soldier.
+  example: []
+  syntax:
+    content: public string SoldierTemplateId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property SoldierTemplateId As String
+  overload: TDMaker.Core.Defs.BarracksDef.SoldierTemplateId*
+- uid: TDMaker.Core.Defs.BarracksDef.Count
+  commentId: P:TDMaker.Core.Defs.BarracksDef.Count
+  id: Count
+  parent: TDMaker.Core.Defs.BarracksDef
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: BarracksDef.Count
+  fullName: TDMaker.Core.Defs.BarracksDef.Count
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum living soldiers.
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: TDMaker.Core.Defs.BarracksDef.Count*
+- uid: TDMaker.Core.Defs.BarracksDef.RallyRadius
+  commentId: P:TDMaker.Core.Defs.BarracksDef.RallyRadius
+  id: RallyRadius
+  parent: TDMaker.Core.Defs.BarracksDef
+  langs:
+  - csharp
+  - vb
+  name: RallyRadius
+  nameWithType: BarracksDef.RallyRadius
+  fullName: TDMaker.Core.Defs.BarracksDef.RallyRadius
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Maximum distance between tower and rally point.
+  example: []
+  syntax:
+    content: public float RallyRadius { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RallyRadius As Single
+  overload: TDMaker.Core.Defs.BarracksDef.RallyRadius*
+- uid: TDMaker.Core.Defs.BarracksDef.RespawnTime
+  commentId: P:TDMaker.Core.Defs.BarracksDef.RespawnTime
+  id: RespawnTime
+  parent: TDMaker.Core.Defs.BarracksDef
+  langs:
+  - csharp
+  - vb
+  name: RespawnTime
+  nameWithType: BarracksDef.RespawnTime
+  fullName: TDMaker.Core.Defs.BarracksDef.RespawnTime
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Delay before a dead soldier is replaced.
+  example: []
+  syntax:
+    content: public float RespawnTime { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property RespawnTime As Single
+  overload: TDMaker.Core.Defs.BarracksDef.RespawnTime*
+- uid: TDMaker.Core.Defs.BarracksDef.FormationRadius
+  commentId: P:TDMaker.Core.Defs.BarracksDef.FormationRadius
+  id: FormationRadius
+  parent: TDMaker.Core.Defs.BarracksDef
+  langs:
+  - csharp
+  - vb
+  name: FormationRadius
+  nameWithType: BarracksDef.FormationRadius
+  fullName: TDMaker.Core.Defs.BarracksDef.FormationRadius
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Radius of the idle formation around the rally center.
+  example: []
+  syntax:
+    content: public float FormationRadius { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property FormationRadius As Single
+  overload: TDMaker.Core.Defs.BarracksDef.FormationRadius*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.BarracksDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.BarracksDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.BarracksDef.html#TDMaker_Core_Defs_BarracksDef__ctor_System_String_System_Int32_System_Single_System_Single_System_Single_
+  name: BarracksDef
+  nameWithType: BarracksDef.BarracksDef
+  fullName: TDMaker.Core.Defs.BarracksDef.BarracksDef
+  nameWithType.vb: BarracksDef.New
+  fullName.vb: TDMaker.Core.Defs.BarracksDef.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.BarracksDef.SoldierTemplateId*
+  commentId: Overload:TDMaker.Core.Defs.BarracksDef.SoldierTemplateId
+  isExternal: true
+  href: TDMaker.Core.Defs.BarracksDef.html#TDMaker_Core_Defs_BarracksDef_SoldierTemplateId
+  name: SoldierTemplateId
+  nameWithType: BarracksDef.SoldierTemplateId
+  fullName: TDMaker.Core.Defs.BarracksDef.SoldierTemplateId
+- uid: TDMaker.Core.Defs.BarracksDef.Count*
+  commentId: Overload:TDMaker.Core.Defs.BarracksDef.Count
+  isExternal: true
+  href: TDMaker.Core.Defs.BarracksDef.html#TDMaker_Core_Defs_BarracksDef_Count
+  name: Count
+  nameWithType: BarracksDef.Count
+  fullName: TDMaker.Core.Defs.BarracksDef.Count
+- uid: TDMaker.Core.Defs.BarracksDef.RallyRadius*
+  commentId: Overload:TDMaker.Core.Defs.BarracksDef.RallyRadius
+  isExternal: true
+  href: TDMaker.Core.Defs.BarracksDef.html#TDMaker_Core_Defs_BarracksDef_RallyRadius
+  name: RallyRadius
+  nameWithType: BarracksDef.RallyRadius
+  fullName: TDMaker.Core.Defs.BarracksDef.RallyRadius
+- uid: TDMaker.Core.Defs.BarracksDef.RespawnTime*
+  commentId: Overload:TDMaker.Core.Defs.BarracksDef.RespawnTime
+  isExternal: true
+  href: TDMaker.Core.Defs.BarracksDef.html#TDMaker_Core_Defs_BarracksDef_RespawnTime
+  name: RespawnTime
+  nameWithType: BarracksDef.RespawnTime
+  fullName: TDMaker.Core.Defs.BarracksDef.RespawnTime
+- uid: TDMaker.Core.Defs.BarracksDef.FormationRadius*
+  commentId: Overload:TDMaker.Core.Defs.BarracksDef.FormationRadius
+  isExternal: true
+  href: TDMaker.Core.Defs.BarracksDef.html#TDMaker_Core_Defs_BarracksDef_FormationRadius
+  name: FormationRadius
+  nameWithType: BarracksDef.FormationRadius
+  fullName: TDMaker.Core.Defs.BarracksDef.FormationRadius

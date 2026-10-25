@@ -1,0 +1,922 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.MapSceneGUI
+  commentId: T:TDMaker.Editor.MapSceneGUI
+  id: MapSceneGUI
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.MapSceneGUI.DrawPath(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Boolean,System.Single,System.Boolean)
+  - TDMaker.Editor.MapSceneGUI.DrawRect(UnityEngine.Rect,UnityEngine.Color,System.String)
+  - TDMaker.Editor.MapSceneGUI.DrawWaveCall(TDMaker.Unity.Authoring.PathAuthoring,System.Boolean)
+  - TDMaker.Editor.MapSceneGUI.EditPointHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32@,System.Single)
+  - TDMaker.Editor.MapSceneGUI.FindInsert(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single,System.Int32@,UnityEngine.Vector2@)
+  - TDMaker.Editor.MapSceneGUI.Label(UnityEngine.Vector3,UnityEngine.Vector2,System.String,System.Boolean)
+  - TDMaker.Editor.MapSceneGUI.MouseWorld(UnityEngine.Vector2,System.Single)
+  - TDMaker.Editor.MapSceneGUI.PickPoint(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single)
+  - TDMaker.Editor.MapSceneGUI.PixelDistance(TDMaker.Unity.Authoring.PathAuthoring)
+  - TDMaker.Editor.MapSceneGUI.PixelRadius(UnityEngine.Vector3,System.Single)
+  - TDMaker.Editor.MapSceneGUI.PointHandle
+  - TDMaker.Editor.MapSceneGUI.SelectedPointHandle
+  - TDMaker.Editor.MapSceneGUI.WaveCallRadius
+  - TDMaker.Editor.MapSceneGUI.WidthHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Single)
+  langs:
+  - csharp
+  - vb
+  name: MapSceneGUI
+  nameWithType: MapSceneGUI
+  fullName: TDMaker.Editor.MapSceneGUI
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Scene-view drawing and handles shared by the Map Editor and the Path Authoring inspector: road band (lanes plus
+    the
+
+    painted-road padding), every sub-lane, direction arrows, entry/exit markers, wave-call buttons and edit-point handles
+
+    for curve and polyline paths.'
+  example: []
+  syntax:
+    content: public static class MapSceneGUI
+    content.vb: Public Module MapSceneGUI
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.MapSceneGUI.WaveCallRadius
+  commentId: F:TDMaker.Editor.MapSceneGUI.WaveCallRadius
+  id: WaveCallRadius
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: WaveCallRadius
+  nameWithType: MapSceneGUI.WaveCallRadius
+  fullName: TDMaker.Editor.MapSceneGUI.WaveCallRadius
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Wave-call button radius drawn in the Scene view (world units).
+  example: []
+  syntax:
+    content: public const float WaveCallRadius = 0.45
+    return:
+      type: System.Single
+    content.vb: Public Const WaveCallRadius As Single = 0.45
+- uid: TDMaker.Editor.MapSceneGUI.PointHandle
+  commentId: F:TDMaker.Editor.MapSceneGUI.PointHandle
+  id: PointHandle
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: PointHandle
+  nameWithType: MapSceneGUI.PointHandle
+  fullName: TDMaker.Editor.MapSceneGUI.PointHandle
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Edit-point handle radius as a share of the handle size (about 10 screen pixels; 13 when selected).
+  example: []
+  syntax:
+    content: public const float PointHandle = 0.13
+    return:
+      type: System.Single
+    content.vb: Public Const PointHandle As Single = 0.13
+- uid: TDMaker.Editor.MapSceneGUI.SelectedPointHandle
+  commentId: F:TDMaker.Editor.MapSceneGUI.SelectedPointHandle
+  id: SelectedPointHandle
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: SelectedPointHandle
+  nameWithType: MapSceneGUI.SelectedPointHandle
+  fullName: TDMaker.Editor.MapSceneGUI.SelectedPointHandle
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Edit-point handle radius as a share of the handle size (about 10 screen pixels; 13 when selected).
+  example: []
+  syntax:
+    content: public const float SelectedPointHandle = 0.16
+    return:
+      type: System.Single
+    content.vb: Public Const SelectedPointHandle As Single = 0.16
+- uid: TDMaker.Editor.MapSceneGUI.Label(UnityEngine.Vector3,UnityEngine.Vector2,System.String,System.Boolean)
+  commentId: M:TDMaker.Editor.MapSceneGUI.Label(UnityEngine.Vector3,UnityEngine.Vector2,System.String,System.Boolean)
+  id: Label(UnityEngine.Vector3,UnityEngine.Vector2,System.String,System.Boolean)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: Label(Vector3, Vector2, string, bool)
+  nameWithType: MapSceneGUI.Label(Vector3, Vector2, string, bool)
+  fullName: TDMaker.Editor.MapSceneGUI.Label(UnityEngine.Vector3, UnityEngine.Vector2, string, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Draws a Scene-view label at a world point shifted by <code class="paramref">pixelOffset</code> screen pixels.
+    With
+
+    <code class="paramref">leftAligned</code> the label starts at that point, otherwise it is centred on it.'
+  example: []
+  syntax:
+    content: public static void Label(Vector3 world, Vector2 pixelOffset, string text, bool leftAligned = false)
+    parameters:
+    - id: world
+      type: UnityEngine.Vector3
+    - id: pixelOffset
+      type: UnityEngine.Vector2
+    - id: text
+      type: System.String
+    - id: leftAligned
+      type: System.Boolean
+    content.vb: Public Shared Sub Label(world As Vector3, pixelOffset As Vector2, text As String, leftAligned As Boolean =
+      False)
+  overload: TDMaker.Editor.MapSceneGUI.Label*
+  nameWithType.vb: MapSceneGUI.Label(Vector3, Vector2, String, Boolean)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.Label(UnityEngine.Vector3, UnityEngine.Vector2, String, Boolean)
+  name.vb: Label(Vector3, Vector2, String, Boolean)
+- uid: TDMaker.Editor.MapSceneGUI.PixelRadius(UnityEngine.Vector3,System.Single)
+  commentId: M:TDMaker.Editor.MapSceneGUI.PixelRadius(UnityEngine.Vector3,System.Single)
+  id: PixelRadius(UnityEngine.Vector3,System.Single)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: PixelRadius(Vector3, float)
+  nameWithType: MapSceneGUI.PixelRadius(Vector3, float)
+  fullName: TDMaker.Editor.MapSceneGUI.PixelRadius(UnityEngine.Vector3, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Screen-pixel radius of a disc of world radius <code class="paramref">radius</code> at <code class="paramref">world</code>.
+  example: []
+  syntax:
+    content: public static float PixelRadius(Vector3 world, float radius)
+    parameters:
+    - id: world
+      type: UnityEngine.Vector3
+    - id: radius
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function PixelRadius(world As Vector3, radius As Single) As Single
+  overload: TDMaker.Editor.MapSceneGUI.PixelRadius*
+  nameWithType.vb: MapSceneGUI.PixelRadius(Vector3, Single)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.PixelRadius(UnityEngine.Vector3, Single)
+  name.vb: PixelRadius(Vector3, Single)
+- uid: TDMaker.Editor.MapSceneGUI.MouseWorld(UnityEngine.Vector2,System.Single)
+  commentId: M:TDMaker.Editor.MapSceneGUI.MouseWorld(UnityEngine.Vector2,System.Single)
+  id: MouseWorld(UnityEngine.Vector2,System.Single)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: MouseWorld(Vector2, float)
+  nameWithType: MapSceneGUI.MouseWorld(Vector2, float)
+  fullName: TDMaker.Editor.MapSceneGUI.MouseWorld(UnityEngine.Vector2, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: World point under a GUI position on the XY plane at <code class="paramref">z</code>.
+  example: []
+  syntax:
+    content: public static Vector2 MouseWorld(Vector2 guiPoint, float z = 0)
+    parameters:
+    - id: guiPoint
+      type: UnityEngine.Vector2
+    - id: z
+      type: System.Single
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Function MouseWorld(guiPoint As Vector2, z As Single = 0) As Vector2
+  overload: TDMaker.Editor.MapSceneGUI.MouseWorld*
+  nameWithType.vb: MapSceneGUI.MouseWorld(Vector2, Single)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.MouseWorld(UnityEngine.Vector2, Single)
+  name.vb: MouseWorld(Vector2, Single)
+- uid: TDMaker.Editor.MapSceneGUI.DrawPath(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Boolean,System.Single,System.Boolean)
+  commentId: M:TDMaker.Editor.MapSceneGUI.DrawPath(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Boolean,System.Single,System.Boolean)
+  id: DrawPath(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Boolean,System.Single,System.Boolean)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: DrawPath(PathAuthoring, int, bool, float, bool)
+  nameWithType: MapSceneGUI.DrawPath(PathAuthoring, int, bool, float, bool)
+  fullName: TDMaker.Editor.MapSceneGUI.DrawPath(TDMaker.Unity.Authoring.PathAuthoring, int, bool, float, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Draws a path: road band, lanes, center line with arrows, entry/exit markers and its label (Repaint only).'
+  example: []
+  syntax:
+    content: public static void DrawPath(PathAuthoring path, int index, bool selected, float roadPadding, bool showEditPoints)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: index
+      type: System.Int32
+    - id: selected
+      type: System.Boolean
+    - id: roadPadding
+      type: System.Single
+    - id: showEditPoints
+      type: System.Boolean
+    content.vb: Public Shared Sub DrawPath(path As PathAuthoring, index As Integer, selected As Boolean, roadPadding As Single,
+      showEditPoints As Boolean)
+  overload: TDMaker.Editor.MapSceneGUI.DrawPath*
+  nameWithType.vb: MapSceneGUI.DrawPath(PathAuthoring, Integer, Boolean, Single, Boolean)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.DrawPath(TDMaker.Unity.Authoring.PathAuthoring, Integer, Boolean, Single, Boolean)
+  name.vb: DrawPath(PathAuthoring, Integer, Boolean, Single, Boolean)
+- uid: TDMaker.Editor.MapSceneGUI.DrawWaveCall(TDMaker.Unity.Authoring.PathAuthoring,System.Boolean)
+  commentId: M:TDMaker.Editor.MapSceneGUI.DrawWaveCall(TDMaker.Unity.Authoring.PathAuthoring,System.Boolean)
+  id: DrawWaveCall(TDMaker.Unity.Authoring.PathAuthoring,System.Boolean)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: DrawWaveCall(PathAuthoring, bool)
+  nameWithType: MapSceneGUI.DrawWaveCall(PathAuthoring, bool)
+  fullName: TDMaker.Editor.MapSceneGUI.DrawWaveCall(TDMaker.Unity.Authoring.PathAuthoring, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws a path's wave-call button (where the HUD will show it).
+  example: []
+  syntax:
+    content: public static void DrawWaveCall(PathAuthoring path, bool highlighted)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: highlighted
+      type: System.Boolean
+    content.vb: Public Shared Sub DrawWaveCall(path As PathAuthoring, highlighted As Boolean)
+  overload: TDMaker.Editor.MapSceneGUI.DrawWaveCall*
+  nameWithType.vb: MapSceneGUI.DrawWaveCall(PathAuthoring, Boolean)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.DrawWaveCall(TDMaker.Unity.Authoring.PathAuthoring, Boolean)
+  name.vb: DrawWaveCall(PathAuthoring, Boolean)
+- uid: TDMaker.Editor.MapSceneGUI.EditPointHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32@,System.Single)
+  commentId: M:TDMaker.Editor.MapSceneGUI.EditPointHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32@,System.Single)
+  id: EditPointHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32@,System.Single)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: EditPointHandles(PathAuthoring, ref int, float)
+  nameWithType: MapSceneGUI.EditPointHandles(PathAuthoring, ref int, float)
+  fullName: TDMaker.Editor.MapSceneGUI.EditPointHandles(TDMaker.Unity.Authoring.PathAuthoring, ref int, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Draggable handles for a path''s edit points (curve controls or polyline points). Updates <code class="paramref">selected</code>
+
+    when a handle is grabbed. Returns true when a point moved.'
+  example: []
+  syntax:
+    content: public static bool EditPointHandles(PathAuthoring path, ref int selected, float snapStep)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: selected
+      type: System.Int32
+    - id: snapStep
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function EditPointHandles(path As PathAuthoring, selected As Integer, snapStep As Single) As
+      Boolean
+  overload: TDMaker.Editor.MapSceneGUI.EditPointHandles*
+  nameWithType.vb: MapSceneGUI.EditPointHandles(PathAuthoring, Integer, Single)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.EditPointHandles(TDMaker.Unity.Authoring.PathAuthoring, Integer, Single)
+  name.vb: EditPointHandles(PathAuthoring, Integer, Single)
+- uid: TDMaker.Editor.MapSceneGUI.WidthHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Single)
+  commentId: M:TDMaker.Editor.MapSceneGUI.WidthHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Single)
+  id: WidthHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Single)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: WidthHandles(PathAuthoring, int, float)
+  nameWithType: MapSceneGUI.WidthHandles(PathAuthoring, int, float)
+  fullName: TDMaker.Editor.MapSceneGUI.WidthHandles(TDMaker.Unity.Authoring.PathAuthoring, int, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Side handles at an edit point that set its lane width (needs two or more lanes).
+  example: []
+  syntax:
+    content: public static void WidthHandles(PathAuthoring path, int index, float snapStep)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: index
+      type: System.Int32
+    - id: snapStep
+      type: System.Single
+    content.vb: Public Shared Sub WidthHandles(path As PathAuthoring, index As Integer, snapStep As Single)
+  overload: TDMaker.Editor.MapSceneGUI.WidthHandles*
+  nameWithType.vb: MapSceneGUI.WidthHandles(PathAuthoring, Integer, Single)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.WidthHandles(TDMaker.Unity.Authoring.PathAuthoring, Integer, Single)
+  name.vb: WidthHandles(PathAuthoring, Integer, Single)
+- uid: TDMaker.Editor.MapSceneGUI.FindInsert(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single,System.Int32@,UnityEngine.Vector2@)
+  commentId: M:TDMaker.Editor.MapSceneGUI.FindInsert(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single,System.Int32@,UnityEngine.Vector2@)
+  id: FindInsert(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single,System.Int32@,UnityEngine.Vector2@)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: FindInsert(PathAuthoring, Vector2, float, out int, out Vector2)
+  nameWithType: MapSceneGUI.FindInsert(PathAuthoring, Vector2, float, out int, out Vector2)
+  fullName: TDMaker.Editor.MapSceneGUI.FindInsert(TDMaker.Unity.Authoring.PathAuthoring, UnityEngine.Vector2, float, out int,
+    out UnityEngine.Vector2)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Where a new edit point would go for a click at <code class="paramref">world</code>: on the nearest segment of
+    the generated
+
+    center line when within <code class="paramref">pickPixels</code>, else -1. <code class="paramref">insertIndex</code> is
+    the edit-point index.'
+  example: []
+  syntax:
+    content: public static bool FindInsert(PathAuthoring path, Vector2 mouseGui, float pickPixels, out int insertIndex, out
+      Vector2 world)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: mouseGui
+      type: UnityEngine.Vector2
+    - id: pickPixels
+      type: System.Single
+    - id: insertIndex
+      type: System.Int32
+    - id: world
+      type: UnityEngine.Vector2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function FindInsert(path As PathAuthoring, mouseGui As Vector2, pickPixels As Single, insertIndex
+      As Integer, world As Vector2) As Boolean
+  overload: TDMaker.Editor.MapSceneGUI.FindInsert*
+  nameWithType.vb: MapSceneGUI.FindInsert(PathAuthoring, Vector2, Single, Integer, Vector2)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.FindInsert(TDMaker.Unity.Authoring.PathAuthoring, UnityEngine.Vector2, Single, Integer,
+    UnityEngine.Vector2)
+  name.vb: FindInsert(PathAuthoring, Vector2, Single, Integer, Vector2)
+- uid: TDMaker.Editor.MapSceneGUI.PickPoint(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single)
+  commentId: M:TDMaker.Editor.MapSceneGUI.PickPoint(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single)
+  id: PickPoint(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: PickPoint(PathAuthoring, Vector2, float)
+  nameWithType: MapSceneGUI.PickPoint(PathAuthoring, Vector2, float)
+  fullName: TDMaker.Editor.MapSceneGUI.PickPoint(TDMaker.Unity.Authoring.PathAuthoring, UnityEngine.Vector2, float)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Index of the edit point within <code class="paramref">pickPixels</code> of the mouse, or -1.
+  example: []
+  syntax:
+    content: public static int PickPoint(PathAuthoring path, Vector2 mouseGui, float pickPixels)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    - id: mouseGui
+      type: UnityEngine.Vector2
+    - id: pickPixels
+      type: System.Single
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function PickPoint(path As PathAuthoring, mouseGui As Vector2, pickPixels As Single) As Integer
+  overload: TDMaker.Editor.MapSceneGUI.PickPoint*
+  nameWithType.vb: MapSceneGUI.PickPoint(PathAuthoring, Vector2, Single)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.PickPoint(TDMaker.Unity.Authoring.PathAuthoring, UnityEngine.Vector2, Single)
+  name.vb: PickPoint(PathAuthoring, Vector2, Single)
+- uid: TDMaker.Editor.MapSceneGUI.PixelDistance(TDMaker.Unity.Authoring.PathAuthoring)
+  commentId: M:TDMaker.Editor.MapSceneGUI.PixelDistance(TDMaker.Unity.Authoring.PathAuthoring)
+  id: PixelDistance(TDMaker.Unity.Authoring.PathAuthoring)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: PixelDistance(PathAuthoring)
+  nameWithType: MapSceneGUI.PixelDistance(PathAuthoring)
+  fullName: TDMaker.Editor.MapSceneGUI.PixelDistance(TDMaker.Unity.Authoring.PathAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: GUI distance in pixels from the mouse to a path's generated center line.
+  example: []
+  syntax:
+    content: public static float PixelDistance(PathAuthoring path)
+    parameters:
+    - id: path
+      type: TDMaker.Unity.Authoring.PathAuthoring
+    return:
+      type: System.Single
+    content.vb: Public Shared Function PixelDistance(path As PathAuthoring) As Single
+  overload: TDMaker.Editor.MapSceneGUI.PixelDistance*
+- uid: TDMaker.Editor.MapSceneGUI.DrawRect(UnityEngine.Rect,UnityEngine.Color,System.String)
+  commentId: M:TDMaker.Editor.MapSceneGUI.DrawRect(UnityEngine.Rect,UnityEngine.Color,System.String)
+  id: DrawRect(UnityEngine.Rect,UnityEngine.Color,System.String)
+  parent: TDMaker.Editor.MapSceneGUI
+  langs:
+  - csharp
+  - vb
+  name: DrawRect(Rect, Color, string)
+  nameWithType: MapSceneGUI.DrawRect(Rect, Color, string)
+  fullName: TDMaker.Editor.MapSceneGUI.DrawRect(UnityEngine.Rect, UnityEngine.Color, string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws a world rectangle outline with a caption.
+  example: []
+  syntax:
+    content: public static void DrawRect(Rect r, Color color, string caption)
+    parameters:
+    - id: r
+      type: UnityEngine.Rect
+    - id: color
+      type: UnityEngine.Color
+    - id: caption
+      type: System.String
+    content.vb: Public Shared Sub DrawRect(r As Rect, color As Color, caption As String)
+  overload: TDMaker.Editor.MapSceneGUI.DrawRect*
+  nameWithType.vb: MapSceneGUI.DrawRect(Rect, Color, String)
+  fullName.vb: TDMaker.Editor.MapSceneGUI.DrawRect(UnityEngine.Rect, UnityEngine.Color, String)
+  name.vb: DrawRect(Rect, Color, String)
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Editor.MapSceneGUI.Label*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.Label
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_Label_UnityEngine_Vector3_UnityEngine_Vector2_System_String_System_Boolean_
+  name: Label
+  nameWithType: MapSceneGUI.Label
+  fullName: TDMaker.Editor.MapSceneGUI.Label
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Editor.MapSceneGUI.PixelRadius*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.PixelRadius
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_PixelRadius_UnityEngine_Vector3_System_Single_
+  name: PixelRadius
+  nameWithType: MapSceneGUI.PixelRadius
+  fullName: TDMaker.Editor.MapSceneGUI.PixelRadius
+- uid: TDMaker.Editor.MapSceneGUI.MouseWorld*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.MouseWorld
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_MouseWorld_UnityEngine_Vector2_System_Single_
+  name: MouseWorld
+  nameWithType: MapSceneGUI.MouseWorld
+  fullName: TDMaker.Editor.MapSceneGUI.MouseWorld
+- uid: TDMaker.Editor.MapSceneGUI.DrawPath*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.DrawPath
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_DrawPath_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_System_Boolean_System_Single_System_Boolean_
+  name: DrawPath
+  nameWithType: MapSceneGUI.DrawPath
+  fullName: TDMaker.Editor.MapSceneGUI.DrawPath
+- uid: TDMaker.Unity.Authoring.PathAuthoring
+  commentId: T:TDMaker.Unity.Authoring.PathAuthoring
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.PathAuthoring.html
+  name: PathAuthoring
+  nameWithType: PathAuthoring
+  fullName: TDMaker.Unity.Authoring.PathAuthoring
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Editor.MapSceneGUI.DrawWaveCall*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.DrawWaveCall
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_DrawWaveCall_TDMaker_Unity_Authoring_PathAuthoring_System_Boolean_
+  name: DrawWaveCall
+  nameWithType: MapSceneGUI.DrawWaveCall
+  fullName: TDMaker.Editor.MapSceneGUI.DrawWaveCall
+- uid: TDMaker.Editor.MapSceneGUI.EditPointHandles*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.EditPointHandles
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_EditPointHandles_TDMaker_Unity_Authoring_PathAuthoring_System_Int32__System_Single_
+  name: EditPointHandles
+  nameWithType: MapSceneGUI.EditPointHandles
+  fullName: TDMaker.Editor.MapSceneGUI.EditPointHandles
+- uid: TDMaker.Editor.MapSceneGUI.WidthHandles*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.WidthHandles
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_WidthHandles_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_System_Single_
+  name: WidthHandles
+  nameWithType: MapSceneGUI.WidthHandles
+  fullName: TDMaker.Editor.MapSceneGUI.WidthHandles
+- uid: TDMaker.Editor.MapSceneGUI.FindInsert*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.FindInsert
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_FindInsert_TDMaker_Unity_Authoring_PathAuthoring_UnityEngine_Vector2_System_Single_System_Int32__UnityEngine_Vector2__
+  name: FindInsert
+  nameWithType: MapSceneGUI.FindInsert
+  fullName: TDMaker.Editor.MapSceneGUI.FindInsert
+- uid: TDMaker.Editor.MapSceneGUI.PickPoint*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.PickPoint
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_PickPoint_TDMaker_Unity_Authoring_PathAuthoring_UnityEngine_Vector2_System_Single_
+  name: PickPoint
+  nameWithType: MapSceneGUI.PickPoint
+  fullName: TDMaker.Editor.MapSceneGUI.PickPoint
+- uid: TDMaker.Editor.MapSceneGUI.PixelDistance*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.PixelDistance
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_PixelDistance_TDMaker_Unity_Authoring_PathAuthoring_
+  name: PixelDistance
+  nameWithType: MapSceneGUI.PixelDistance
+  fullName: TDMaker.Editor.MapSceneGUI.PixelDistance
+- uid: TDMaker.Editor.MapSceneGUI.DrawRect*
+  commentId: Overload:TDMaker.Editor.MapSceneGUI.DrawRect
+  isExternal: true
+  href: TDMaker.Editor.MapSceneGUI.html#TDMaker_Editor_MapSceneGUI_DrawRect_UnityEngine_Rect_UnityEngine_Color_System_String_
+  name: DrawRect
+  nameWithType: MapSceneGUI.DrawRect
+  fullName: TDMaker.Editor.MapSceneGUI.DrawRect
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color

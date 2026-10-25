@@ -1,0 +1,166 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.TargetPriority
+  commentId: T:TDMaker.Core.Defs.TargetPriority
+  id: TargetPriority
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.TargetPriority.Closest
+  - TDMaker.Core.Defs.TargetPriority.First
+  - TDMaker.Core.Defs.TargetPriority.Last
+  - TDMaker.Core.Defs.TargetPriority.Strongest
+  - TDMaker.Core.Defs.TargetPriority.Weakest
+  langs:
+  - csharp
+  - vb
+  name: TargetPriority
+  nameWithType: TargetPriority
+  fullName: TDMaker.Core.Defs.TargetPriority
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Stable tower target ordering, with entity Id as the final tie breaker.
+  example: []
+  syntax:
+    content: public enum TargetPriority
+    content.vb: Public Enum TargetPriority
+- uid: TDMaker.Core.Defs.TargetPriority.First
+  commentId: F:TDMaker.Core.Defs.TargetPriority.First
+  id: First
+  parent: TDMaker.Core.Defs.TargetPriority
+  langs:
+  - csharp
+  - vb
+  name: First
+  nameWithType: TargetPriority.First
+  fullName: TDMaker.Core.Defs.TargetPriority.First
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Shortest remaining path.
+  example: []
+  syntax:
+    content: First = 0
+    return:
+      type: TDMaker.Core.Defs.TargetPriority
+- uid: TDMaker.Core.Defs.TargetPriority.Last
+  commentId: F:TDMaker.Core.Defs.TargetPriority.Last
+  id: Last
+  parent: TDMaker.Core.Defs.TargetPriority
+  langs:
+  - csharp
+  - vb
+  name: Last
+  nameWithType: TargetPriority.Last
+  fullName: TDMaker.Core.Defs.TargetPriority.Last
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Longest remaining path.
+  example: []
+  syntax:
+    content: Last = 1
+    return:
+      type: TDMaker.Core.Defs.TargetPriority
+- uid: TDMaker.Core.Defs.TargetPriority.Strongest
+  commentId: F:TDMaker.Core.Defs.TargetPriority.Strongest
+  id: Strongest
+  parent: TDMaker.Core.Defs.TargetPriority
+  langs:
+  - csharp
+  - vb
+  name: Strongest
+  nameWithType: TargetPriority.Strongest
+  fullName: TDMaker.Core.Defs.TargetPriority.Strongest
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Highest current health.
+  example: []
+  syntax:
+    content: Strongest = 2
+    return:
+      type: TDMaker.Core.Defs.TargetPriority
+- uid: TDMaker.Core.Defs.TargetPriority.Weakest
+  commentId: F:TDMaker.Core.Defs.TargetPriority.Weakest
+  id: Weakest
+  parent: TDMaker.Core.Defs.TargetPriority
+  langs:
+  - csharp
+  - vb
+  name: Weakest
+  nameWithType: TargetPriority.Weakest
+  fullName: TDMaker.Core.Defs.TargetPriority.Weakest
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Lowest current health.
+  example: []
+  syntax:
+    content: Weakest = 3
+    return:
+      type: TDMaker.Core.Defs.TargetPriority
+- uid: TDMaker.Core.Defs.TargetPriority.Closest
+  commentId: F:TDMaker.Core.Defs.TargetPriority.Closest
+  id: Closest
+  parent: TDMaker.Core.Defs.TargetPriority
+  langs:
+  - csharp
+  - vb
+  name: Closest
+  nameWithType: TargetPriority.Closest
+  fullName: TDMaker.Core.Defs.TargetPriority.Closest
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Shortest elliptical distance to the attacker.
+  example: []
+  syntax:
+    content: Closest = 4
+    return:
+      type: TDMaker.Core.Defs.TargetPriority
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.TargetPriority
+  commentId: T:TDMaker.Core.Defs.TargetPriority
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetPriority.html
+  name: TargetPriority
+  nameWithType: TargetPriority
+  fullName: TDMaker.Core.Defs.TargetPriority

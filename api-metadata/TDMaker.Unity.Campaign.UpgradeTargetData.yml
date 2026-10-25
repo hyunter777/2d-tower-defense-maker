@@ -1,0 +1,917 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData
+  commentId: T:TDMaker.Unity.Campaign.UpgradeTargetData
+  id: UpgradeTargetData
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.UpgradeTargetData.#ctor
+  - TDMaker.Unity.Campaign.UpgradeTargetData.Ids
+  - TDMaker.Unity.Campaign.UpgradeTargetData.IsUnfiltered
+  - TDMaker.Unity.Campaign.UpgradeTargetData.Matches(TDMaker.Core.Defs.UpgradeTargetDef,TDMaker.Core.Defs.EntityTemplate)
+  - TDMaker.Unity.Campaign.UpgradeTargetData.MatchesSpell(TDMaker.Core.Defs.UpgradeTargetDef,System.String)
+  - TDMaker.Unity.Campaign.UpgradeTargetData.ToDef
+  - TDMaker.Unity.Campaign.UpgradeTargetData.assets
+  - TDMaker.Unity.Campaign.UpgradeTargetData.kinds
+  - TDMaker.Unity.Campaign.UpgradeTargetData.requiredTags
+  - TDMaker.Unity.Campaign.UpgradeTargetData.spells
+  - TDMaker.Unity.Campaign.UpgradeTargetData.templateIds
+  langs:
+  - csharp
+  - vb
+  name: UpgradeTargetData
+  nameWithType: UpgradeTargetData
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'Which templates or spells an effect changes. Filters combine with AND; inside the asset list and inside the kind
+    mask they are
+
+    alternatives. Empty filters do not restrict (an effect with no filter at all changes everything of the field''s kind).'
+  example: []
+  syntax:
+    content: public sealed class UpgradeTargetData
+    content.vb: Public NotInheritable Class UpgradeTargetData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.assets
+  commentId: F:TDMaker.Unity.Campaign.UpgradeTargetData.assets
+  id: assets
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: assets
+  nameWithType: UpgradeTargetData.assets
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.assets
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Towers, soldiers, heroes or enemies whose template ids are selected.
+  example: []
+  syntax:
+    content: '[Tooltip("Towers, soldiers, heroes or enemies to change (their template ids). Leave empty to select by tags
+      or kind only.")]
+
+      public List<EntityAssetBase> assets'
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.EntityAssetBase}
+    content.vb: '<Tooltip("Towers, soldiers, heroes or enemies to change (their template ids). Leave empty to select by tags
+      or kind only.")>
+
+      Public assets As List(Of EntityAssetBase)'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Towers, soldiers, heroes or enemies to change (their template ids). Leave empty to select by tags or kind only.
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.spells
+  commentId: F:TDMaker.Unity.Campaign.UpgradeTargetData.spells
+  id: spells
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: spells
+  nameWithType: UpgradeTargetData.spells
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.spells
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Player spells selected by spell id.
+  example: []
+  syntax:
+    content: '[Tooltip("Player spells to change (their spell ids).")]
+
+      public List<SpellAsset> spells'
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.SpellAsset}
+    content.vb: '<Tooltip("Player spells to change (their spell ids).")>
+
+      Public spells As List(Of SpellAsset)'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Player spells to change (their spell ids).
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.templateIds
+  commentId: F:TDMaker.Unity.Campaign.UpgradeTargetData.templateIds
+  id: templateIds
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: templateIds
+  nameWithType: UpgradeTargetData.templateIds
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.templateIds
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Further template or spell ids (for templates registered by code, for example projectile templates).
+  example: []
+  syntax:
+    content: '[Tooltip("Further template or spell ids, for templates registered by code.")]
+
+      public List<string> templateIds'
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: '<Tooltip("Further template or spell ids, for templates registered by code.")>
+
+      Public templateIds As List(Of String)'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Further template or spell ids, for templates registered by code.
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.requiredTags
+  commentId: F:TDMaker.Unity.Campaign.UpgradeTargetData.requiredTags
+  id: requiredTags
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: requiredTags
+  nameWithType: UpgradeTargetData.requiredTags
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.requiredTags
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Tag bits every selected template must have (the Tags field of units). Spells have no tags.
+  example: []
+  syntax:
+    content: '[Tooltip("Tag bits every selected template must carry (the Tags field of units). Spells have no tags.")]
+
+      public int requiredTags'
+    return:
+      type: System.Int32
+    content.vb: '<Tooltip("Tag bits every selected template must carry (the Tags field of units). Spells have no tags.")>
+
+      Public requiredTags As Integer'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Tag bits every selected template must carry (the Tags field of units). Spells have no tags.
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.kinds
+  commentId: F:TDMaker.Unity.Campaign.UpgradeTargetData.kinds
+  id: kinds
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: kinds
+  nameWithType: UpgradeTargetData.kinds
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.kinds
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Optional role filter (towers, soldiers, heroes, spells, projectiles, enemies).
+  example: []
+  syntax:
+    content: '[Tooltip("Optional role filter. Nothing selected: any role.")]
+
+      public UpgradeTargetKind kinds'
+    return:
+      type: TDMaker.Core.Defs.UpgradeTargetKind
+    content.vb: '<Tooltip("Optional role filter. Nothing selected: any role.")>
+
+      Public kinds As UpgradeTargetKind'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Optional role filter. Nothing selected: any role.'
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.Ids
+  commentId: M:TDMaker.Unity.Campaign.UpgradeTargetData.Ids
+  id: Ids
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: Ids()
+  nameWithType: UpgradeTargetData.Ids()
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.Ids()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Template and spell ids of the asset lists and the id list, without blanks and duplicates.
+  example: []
+  syntax:
+    content: public string[] Ids()
+    return:
+      type: System.String[]
+    content.vb: Public Function Ids() As String()
+  overload: TDMaker.Unity.Campaign.UpgradeTargetData.Ids*
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.ToDef
+  commentId: M:TDMaker.Unity.Campaign.UpgradeTargetData.ToDef
+  id: ToDef
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: ToDef()
+  nameWithType: UpgradeTargetData.ToDef()
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.ToDef()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Bakes the core selector.
+  example: []
+  syntax:
+    content: public UpgradeTargetDef ToDef()
+    return:
+      type: TDMaker.Core.Defs.UpgradeTargetDef
+    content.vb: Public Function ToDef() As UpgradeTargetDef
+  overload: TDMaker.Unity.Campaign.UpgradeTargetData.ToDef*
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.Matches(TDMaker.Core.Defs.UpgradeTargetDef,TDMaker.Core.Defs.EntityTemplate)
+  commentId: M:TDMaker.Unity.Campaign.UpgradeTargetData.Matches(TDMaker.Core.Defs.UpgradeTargetDef,TDMaker.Core.Defs.EntityTemplate)
+  id: Matches(TDMaker.Core.Defs.UpgradeTargetDef,TDMaker.Core.Defs.EntityTemplate)
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: Matches(UpgradeTargetDef, EntityTemplate)
+  nameWithType: UpgradeTargetData.Matches(UpgradeTargetDef, EntityTemplate)
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.Matches(TDMaker.Core.Defs.UpgradeTargetDef, TDMaker.Core.Defs.EntityTemplate)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Whether the selector picks <code class="paramref">template</code> (the same rule the core applies when the battle
+    starts).
+  example: []
+  syntax:
+    content: public static bool Matches(UpgradeTargetDef target, EntityTemplate template)
+    parameters:
+    - id: target
+      type: TDMaker.Core.Defs.UpgradeTargetDef
+    - id: template
+      type: TDMaker.Core.Defs.EntityTemplate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Matches(target As UpgradeTargetDef, template As EntityTemplate) As Boolean
+  overload: TDMaker.Unity.Campaign.UpgradeTargetData.Matches*
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.MatchesSpell(TDMaker.Core.Defs.UpgradeTargetDef,System.String)
+  commentId: M:TDMaker.Unity.Campaign.UpgradeTargetData.MatchesSpell(TDMaker.Core.Defs.UpgradeTargetDef,System.String)
+  id: MatchesSpell(TDMaker.Core.Defs.UpgradeTargetDef,System.String)
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: MatchesSpell(UpgradeTargetDef, string)
+  nameWithType: UpgradeTargetData.MatchesSpell(UpgradeTargetDef, string)
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.MatchesSpell(TDMaker.Core.Defs.UpgradeTargetDef, string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Whether the selector picks the spell <code class="paramref">spellId</code>.
+  example: []
+  syntax:
+    content: public static bool MatchesSpell(UpgradeTargetDef target, string spellId)
+    parameters:
+    - id: target
+      type: TDMaker.Core.Defs.UpgradeTargetDef
+    - id: spellId
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function MatchesSpell(target As UpgradeTargetDef, spellId As String) As Boolean
+  overload: TDMaker.Unity.Campaign.UpgradeTargetData.MatchesSpell*
+  nameWithType.vb: UpgradeTargetData.MatchesSpell(UpgradeTargetDef, String)
+  fullName.vb: TDMaker.Unity.Campaign.UpgradeTargetData.MatchesSpell(TDMaker.Core.Defs.UpgradeTargetDef, String)
+  name.vb: MatchesSpell(UpgradeTargetDef, String)
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.#ctor
+  commentId: M:TDMaker.Unity.Campaign.UpgradeTargetData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: UpgradeTargetData()
+  nameWithType: UpgradeTargetData.UpgradeTargetData()
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.UpgradeTargetData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  syntax:
+    content: public UpgradeTargetData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Campaign.UpgradeTargetData.#ctor*
+  nameWithType.vb: UpgradeTargetData.New()
+  fullName.vb: TDMaker.Unity.Campaign.UpgradeTargetData.New()
+  name.vb: New()
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.IsUnfiltered
+  commentId: P:TDMaker.Unity.Campaign.UpgradeTargetData.IsUnfiltered
+  id: IsUnfiltered
+  parent: TDMaker.Unity.Campaign.UpgradeTargetData
+  langs:
+  - csharp
+  - vb
+  name: IsUnfiltered
+  nameWithType: UpgradeTargetData.IsUnfiltered
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.IsUnfiltered
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Whether no filter is set (the effect would change every template that has the field).
+  example: []
+  syntax:
+    content: public bool IsUnfiltered { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnfiltered As Boolean
+  overload: TDMaker.Unity.Campaign.UpgradeTargetData.IsUnfiltered*
+references:
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.EntityAssetBase}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.EntityAssetBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EntityAssetBase>
+  nameWithType: List<EntityAssetBase>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.EntityAssetBase>
+  nameWithType.vb: List(Of EntityAssetBase)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.EntityAssetBase)
+  name.vb: List(Of EntityAssetBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.EntityAssetBase
+    name: EntityAssetBase
+    isExternal: true
+    href: TDMaker.Unity.Authoring.EntityAssetBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.EntityAssetBase
+    name: EntityAssetBase
+    isExternal: true
+    href: TDMaker.Unity.Authoring.EntityAssetBase.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{TDMaker.Unity.Authoring.SpellAsset}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Authoring.SpellAsset}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<SpellAsset>
+  nameWithType: List<SpellAsset>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Authoring.SpellAsset>
+  nameWithType.vb: List(Of SpellAsset)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Authoring.SpellAsset)
+  name.vb: List(Of SpellAsset)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Authoring.SpellAsset
+    name: SpellAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.SpellAsset.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.SpellAsset
+    name: SpellAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.SpellAsset.html
+  - name: )
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.UpgradeTargetKind
+  commentId: T:TDMaker.Core.Defs.UpgradeTargetKind
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeTargetKind.html
+  name: UpgradeTargetKind
+  nameWithType: UpgradeTargetKind
+  fullName: TDMaker.Core.Defs.UpgradeTargetKind
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.Ids*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeTargetData.Ids
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeTargetData.html#TDMaker_Unity_Campaign_UpgradeTargetData_Ids
+  name: Ids
+  nameWithType: UpgradeTargetData.Ids
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.Ids
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.ToDef*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeTargetData.ToDef
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeTargetData.html#TDMaker_Unity_Campaign_UpgradeTargetData_ToDef
+  name: ToDef
+  nameWithType: UpgradeTargetData.ToDef
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.ToDef
+- uid: TDMaker.Core.Defs.UpgradeTargetDef
+  commentId: T:TDMaker.Core.Defs.UpgradeTargetDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.UpgradeTargetDef.html
+  name: UpgradeTargetDef
+  nameWithType: UpgradeTargetDef
+  fullName: TDMaker.Core.Defs.UpgradeTargetDef
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.Matches*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeTargetData.Matches
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeTargetData.html#TDMaker_Unity_Campaign_UpgradeTargetData_Matches_TDMaker_Core_Defs_UpgradeTargetDef_TDMaker_Core_Defs_EntityTemplate_
+  name: Matches
+  nameWithType: UpgradeTargetData.Matches
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.Matches
+- uid: TDMaker.Core.Defs.EntityTemplate
+  commentId: T:TDMaker.Core.Defs.EntityTemplate
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html
+  name: EntityTemplate
+  nameWithType: EntityTemplate
+  fullName: TDMaker.Core.Defs.EntityTemplate
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.MatchesSpell*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeTargetData.MatchesSpell
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeTargetData.html#TDMaker_Unity_Campaign_UpgradeTargetData_MatchesSpell_TDMaker_Core_Defs_UpgradeTargetDef_System_String_
+  name: MatchesSpell
+  nameWithType: UpgradeTargetData.MatchesSpell
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.MatchesSpell
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.#ctor*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeTargetData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeTargetData.html#TDMaker_Unity_Campaign_UpgradeTargetData__ctor
+  name: UpgradeTargetData
+  nameWithType: UpgradeTargetData.UpgradeTargetData
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.UpgradeTargetData
+  nameWithType.vb: UpgradeTargetData.New
+  fullName.vb: TDMaker.Unity.Campaign.UpgradeTargetData.New
+  name.vb: New
+- uid: TDMaker.Unity.Campaign.UpgradeTargetData.IsUnfiltered*
+  commentId: Overload:TDMaker.Unity.Campaign.UpgradeTargetData.IsUnfiltered
+  isExternal: true
+  href: TDMaker.Unity.Campaign.UpgradeTargetData.html#TDMaker_Unity_Campaign_UpgradeTargetData_IsUnfiltered
+  name: IsUnfiltered
+  nameWithType: UpgradeTargetData.IsUnfiltered
+  fullName: TDMaker.Unity.Campaign.UpgradeTargetData.IsUnfiltered

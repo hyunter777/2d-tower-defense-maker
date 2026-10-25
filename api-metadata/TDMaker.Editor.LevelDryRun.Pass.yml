@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.LevelDryRun.Pass
+  commentId: T:TDMaker.Editor.LevelDryRun.Pass
+  id: LevelDryRun.Pass
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.LevelDryRun.Pass.Budget
+  - TDMaker.Editor.LevelDryRun.Pass.Fortified
+  - TDMaker.Editor.LevelDryRun.Pass.Undefended
+  langs:
+  - csharp
+  - vb
+  name: LevelDryRun.Pass
+  nameWithType: LevelDryRun.Pass
+  fullName: TDMaker.Editor.LevelDryRun.Pass
+  type: Enum
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: The three passes of a dry run.
+  example: []
+  syntax:
+    content: public enum LevelDryRun.Pass
+    content.vb: Public Enum LevelDryRun.Pass
+- uid: TDMaker.Editor.LevelDryRun.Pass.Undefended
+  commentId: F:TDMaker.Editor.LevelDryRun.Pass.Undefended
+  id: Undefended
+  parent: TDMaker.Editor.LevelDryRun.Pass
+  langs:
+  - csharp
+  - vb
+  name: Undefended
+  nameWithType: LevelDryRun.Pass.Undefended
+  fullName: TDMaker.Editor.LevelDryRun.Pass.Undefended
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: No towers, every wave called as early as possible.
+  example: []
+  syntax:
+    content: Undefended = 0
+    return:
+      type: TDMaker.Editor.LevelDryRun.Pass
+- uid: TDMaker.Editor.LevelDryRun.Pass.Fortified
+  commentId: F:TDMaker.Editor.LevelDryRun.Pass.Fortified
+  id: Fortified
+  parent: TDMaker.Editor.LevelDryRun.Pass
+  langs:
+  - csharp
+  - vb
+  name: Fortified
+  nameWithType: LevelDryRun.Pass.Fortified
+  fullName: TDMaker.Editor.LevelDryRun.Pass.Fortified
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Unlimited gold: every slot built and fully upgraded, every ability bought.'
+  example: []
+  syntax:
+    content: Fortified = 1
+    return:
+      type: TDMaker.Editor.LevelDryRun.Pass
+- uid: TDMaker.Editor.LevelDryRun.Pass.Budget
+  commentId: F:TDMaker.Editor.LevelDryRun.Pass.Budget
+  id: Budget
+  parent: TDMaker.Editor.LevelDryRun.Pass
+  langs:
+  - csharp
+  - vb
+  name: Budget
+  nameWithType: LevelDryRun.Pass.Budget
+  fullName: TDMaker.Editor.LevelDryRun.Pass.Budget
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Real starting gold spent greedily.
+  example: []
+  syntax:
+    content: Budget = 2
+    return:
+      type: TDMaker.Editor.LevelDryRun.Pass
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: TDMaker.Editor.LevelDryRun.Pass
+  commentId: T:TDMaker.Editor.LevelDryRun.Pass
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.LevelDryRun.html
+  name: LevelDryRun.Pass
+  nameWithType: LevelDryRun.Pass
+  fullName: TDMaker.Editor.LevelDryRun.Pass
+  spec.csharp:
+  - uid: TDMaker.Editor.LevelDryRun
+    name: LevelDryRun
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.html
+  - name: .
+  - uid: TDMaker.Editor.LevelDryRun.Pass
+    name: Pass
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.Pass.html
+  spec.vb:
+  - uid: TDMaker.Editor.LevelDryRun
+    name: LevelDryRun
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.html
+  - name: .
+  - uid: TDMaker.Editor.LevelDryRun.Pass
+    name: Pass
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.Pass.html

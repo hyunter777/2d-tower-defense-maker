@@ -1,0 +1,633 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.WaveDef
+  commentId: T:TDMaker.Core.Defs.WaveDef
+  id: WaveDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.WaveDef.#ctor(TDMaker.Core.Defs.WaveGroupDef[],System.Single,System.Single,System.Int32,System.Boolean)
+  - TDMaker.Core.Defs.WaveDef.AutoDelay
+  - TDMaker.Core.Defs.WaveDef.AutoStartFirst
+  - TDMaker.Core.Defs.WaveDef.CallDelay
+  - TDMaker.Core.Defs.WaveDef.EarlyGoldPerSecond
+  - TDMaker.Core.Defs.WaveDef.Groups
+  langs:
+  - csharp
+  - vb
+  name: WaveDef
+  nameWithType: WaveDef
+  fullName: TDMaker.Core.Defs.WaveDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: A wave whose call timing starts after the preceding wave finishes all emissions.
+  example: []
+  syntax:
+    content: public sealed class WaveDef
+    content.vb: Public NotInheritable Class WaveDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.WaveDef.#ctor(TDMaker.Core.Defs.WaveGroupDef[],System.Single,System.Single,System.Int32,System.Boolean)
+  commentId: M:TDMaker.Core.Defs.WaveDef.#ctor(TDMaker.Core.Defs.WaveGroupDef[],System.Single,System.Single,System.Int32,System.Boolean)
+  id: '#ctor(TDMaker.Core.Defs.WaveGroupDef[],System.Single,System.Single,System.Int32,System.Boolean)'
+  parent: TDMaker.Core.Defs.WaveDef
+  langs:
+  - csharp
+  - vb
+  name: WaveDef(WaveGroupDef[], float, float, int, bool)
+  nameWithType: WaveDef.WaveDef(WaveGroupDef[], float, float, int, bool)
+  fullName: TDMaker.Core.Defs.WaveDef.WaveDef(TDMaker.Core.Defs.WaveGroupDef[], float, float, int, bool)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a wave with explicit call timing.
+  example: []
+  syntax:
+    content: public WaveDef(WaveGroupDef[] groups, float autoDelay = 0, float callDelay = 0, int earlyGoldPerSecond = 0, bool
+      autoStartFirst = false)
+    parameters:
+    - id: groups
+      type: TDMaker.Core.Defs.WaveGroupDef[]
+    - id: autoDelay
+      type: System.Single
+    - id: callDelay
+      type: System.Single
+    - id: earlyGoldPerSecond
+      type: System.Int32
+    - id: autoStartFirst
+      type: System.Boolean
+    content.vb: Public Sub New(groups As WaveGroupDef(), autoDelay As Single = 0, callDelay As Single = 0, earlyGoldPerSecond
+      As Integer = 0, autoStartFirst As Boolean = False)
+  overload: TDMaker.Core.Defs.WaveDef.#ctor*
+  nameWithType.vb: WaveDef.New(WaveGroupDef(), Single, Single, Integer, Boolean)
+  fullName.vb: TDMaker.Core.Defs.WaveDef.New(TDMaker.Core.Defs.WaveGroupDef(), Single, Single, Integer, Boolean)
+  name.vb: New(WaveGroupDef(), Single, Single, Integer, Boolean)
+- uid: TDMaker.Core.Defs.WaveDef.Groups
+  commentId: P:TDMaker.Core.Defs.WaveDef.Groups
+  id: Groups
+  parent: TDMaker.Core.Defs.WaveDef
+  langs:
+  - csharp
+  - vb
+  name: Groups
+  nameWithType: WaveDef.Groups
+  fullName: TDMaker.Core.Defs.WaveDef.Groups
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Enemy groups.
+  example: []
+  syntax:
+    content: public IReadOnlyList<WaveGroupDef> Groups { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.WaveGroupDef}
+    content.vb: Public ReadOnly Property Groups As IReadOnlyList(Of WaveGroupDef)
+  overload: TDMaker.Core.Defs.WaveDef.Groups*
+- uid: TDMaker.Core.Defs.WaveDef.AutoDelay
+  commentId: P:TDMaker.Core.Defs.WaveDef.AutoDelay
+  id: AutoDelay
+  parent: TDMaker.Core.Defs.WaveDef
+  langs:
+  - csharp
+  - vb
+  name: AutoDelay
+  nameWithType: WaveDef.AutoDelay
+  fullName: TDMaker.Core.Defs.WaveDef.AutoDelay
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Automatic start delay after the previous wave's final trailing interval.
+  example: []
+  syntax:
+    content: public float AutoDelay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property AutoDelay As Single
+  overload: TDMaker.Core.Defs.WaveDef.AutoDelay*
+- uid: TDMaker.Core.Defs.WaveDef.CallDelay
+  commentId: P:TDMaker.Core.Defs.WaveDef.CallDelay
+  id: CallDelay
+  parent: TDMaker.Core.Defs.WaveDef
+  langs:
+  - csharp
+  - vb
+  name: CallDelay
+  nameWithType: WaveDef.CallDelay
+  fullName: TDMaker.Core.Defs.WaveDef.CallDelay
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Minimum delay before a manual early call is accepted.
+  example: []
+  syntax:
+    content: public float CallDelay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property CallDelay As Single
+  overload: TDMaker.Core.Defs.WaveDef.CallDelay*
+- uid: TDMaker.Core.Defs.WaveDef.EarlyGoldPerSecond
+  commentId: P:TDMaker.Core.Defs.WaveDef.EarlyGoldPerSecond
+  id: EarlyGoldPerSecond
+  parent: TDMaker.Core.Defs.WaveDef
+  langs:
+  - csharp
+  - vb
+  name: EarlyGoldPerSecond
+  nameWithType: WaveDef.EarlyGoldPerSecond
+  fullName: TDMaker.Core.Defs.WaveDef.EarlyGoldPerSecond
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Gold per rounded remaining second; the first wave gives no call reward.
+  example: []
+  syntax:
+    content: public int EarlyGoldPerSecond { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property EarlyGoldPerSecond As Integer
+  overload: TDMaker.Core.Defs.WaveDef.EarlyGoldPerSecond*
+- uid: TDMaker.Core.Defs.WaveDef.AutoStartFirst
+  commentId: P:TDMaker.Core.Defs.WaveDef.AutoStartFirst
+  id: AutoStartFirst
+  parent: TDMaker.Core.Defs.WaveDef
+  langs:
+  - csharp
+  - vb
+  name: AutoStartFirst
+  nameWithType: WaveDef.AutoStartFirst
+  fullName: TDMaker.Core.Defs.WaveDef.AutoStartFirst
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Whether the first wave starts automatically; otherwise it waits for input.
+  example: []
+  syntax:
+    content: public bool AutoStartFirst { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property AutoStartFirst As Boolean
+  overload: TDMaker.Core.Defs.WaveDef.AutoStartFirst*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.WaveDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.WaveDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.WaveDef.html#TDMaker_Core_Defs_WaveDef__ctor_TDMaker_Core_Defs_WaveGroupDef___System_Single_System_Single_System_Int32_System_Boolean_
+  name: WaveDef
+  nameWithType: WaveDef.WaveDef
+  fullName: TDMaker.Core.Defs.WaveDef.WaveDef
+  nameWithType.vb: WaveDef.New
+  fullName.vb: TDMaker.Core.Defs.WaveDef.New
+  name.vb: New
+- uid: TDMaker.Core.Defs.WaveGroupDef[]
+  isExternal: true
+  href: TDMaker.Core.Defs.WaveGroupDef.html
+  name: WaveGroupDef[]
+  nameWithType: WaveGroupDef[]
+  fullName: TDMaker.Core.Defs.WaveGroupDef[]
+  nameWithType.vb: WaveGroupDef()
+  fullName.vb: TDMaker.Core.Defs.WaveGroupDef()
+  name.vb: WaveGroupDef()
+  spec.csharp:
+  - uid: TDMaker.Core.Defs.WaveGroupDef
+    name: WaveGroupDef
+    isExternal: true
+    href: TDMaker.Core.Defs.WaveGroupDef.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TDMaker.Core.Defs.WaveGroupDef
+    name: WaveGroupDef
+    isExternal: true
+    href: TDMaker.Core.Defs.WaveGroupDef.html
+  - name: (
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.WaveDef.Groups*
+  commentId: Overload:TDMaker.Core.Defs.WaveDef.Groups
+  isExternal: true
+  href: TDMaker.Core.Defs.WaveDef.html#TDMaker_Core_Defs_WaveDef_Groups
+  name: Groups
+  nameWithType: WaveDef.Groups
+  fullName: TDMaker.Core.Defs.WaveDef.Groups
+- uid: System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.WaveGroupDef}
+  commentId: T:System.Collections.Generic.IReadOnlyList{TDMaker.Core.Defs.WaveGroupDef}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<WaveGroupDef>
+  nameWithType: IReadOnlyList<WaveGroupDef>
+  fullName: System.Collections.Generic.IReadOnlyList<TDMaker.Core.Defs.WaveGroupDef>
+  nameWithType.vb: IReadOnlyList(Of WaveGroupDef)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TDMaker.Core.Defs.WaveGroupDef)
+  name.vb: IReadOnlyList(Of WaveGroupDef)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: TDMaker.Core.Defs.WaveGroupDef
+    name: WaveGroupDef
+    isExternal: true
+    href: TDMaker.Core.Defs.WaveGroupDef.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Core.Defs.WaveGroupDef
+    name: WaveGroupDef
+    isExternal: true
+    href: TDMaker.Core.Defs.WaveGroupDef.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Core.Defs.WaveDef.AutoDelay*
+  commentId: Overload:TDMaker.Core.Defs.WaveDef.AutoDelay
+  isExternal: true
+  href: TDMaker.Core.Defs.WaveDef.html#TDMaker_Core_Defs_WaveDef_AutoDelay
+  name: AutoDelay
+  nameWithType: WaveDef.AutoDelay
+  fullName: TDMaker.Core.Defs.WaveDef.AutoDelay
+- uid: TDMaker.Core.Defs.WaveDef.CallDelay*
+  commentId: Overload:TDMaker.Core.Defs.WaveDef.CallDelay
+  isExternal: true
+  href: TDMaker.Core.Defs.WaveDef.html#TDMaker_Core_Defs_WaveDef_CallDelay
+  name: CallDelay
+  nameWithType: WaveDef.CallDelay
+  fullName: TDMaker.Core.Defs.WaveDef.CallDelay
+- uid: TDMaker.Core.Defs.WaveDef.EarlyGoldPerSecond*
+  commentId: Overload:TDMaker.Core.Defs.WaveDef.EarlyGoldPerSecond
+  isExternal: true
+  href: TDMaker.Core.Defs.WaveDef.html#TDMaker_Core_Defs_WaveDef_EarlyGoldPerSecond
+  name: EarlyGoldPerSecond
+  nameWithType: WaveDef.EarlyGoldPerSecond
+  fullName: TDMaker.Core.Defs.WaveDef.EarlyGoldPerSecond
+- uid: TDMaker.Core.Defs.WaveDef.AutoStartFirst*
+  commentId: Overload:TDMaker.Core.Defs.WaveDef.AutoStartFirst
+  isExternal: true
+  href: TDMaker.Core.Defs.WaveDef.html#TDMaker_Core_Defs_WaveDef_AutoStartFirst
+  name: AutoStartFirst
+  nameWithType: WaveDef.AutoStartFirst
+  fullName: TDMaker.Core.Defs.WaveDef.AutoStartFirst

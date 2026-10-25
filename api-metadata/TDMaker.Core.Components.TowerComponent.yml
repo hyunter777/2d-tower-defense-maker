@@ -1,0 +1,516 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Components.TowerComponent
+  commentId: T:TDMaker.Core.Components.TowerComponent
+  id: TowerComponent
+  parent: TDMaker.Core.Components
+  children:
+  - TDMaker.Core.Components.TowerComponent.#ctor
+  - TDMaker.Core.Components.TowerComponent.AbilityCount
+  - TDMaker.Core.Components.TowerComponent.GetAbilityRank(System.Int32)
+  - TDMaker.Core.Components.TowerComponent.Priority
+  - TDMaker.Core.Components.TowerComponent.SlotIndex
+  - TDMaker.Core.Components.TowerComponent.TotalSpent
+  langs:
+  - csharp
+  - vb
+  name: TowerComponent
+  nameWithType: TowerComponent
+  fullName: TDMaker.Core.Components.TowerComponent
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Runtime tower construction and economy state.
+  example: []
+  syntax:
+    content: public sealed class TowerComponent
+    content.vb: Public NotInheritable Class TowerComponent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Components.TowerComponent.GetAbilityRank(System.Int32)
+  commentId: M:TDMaker.Core.Components.TowerComponent.GetAbilityRank(System.Int32)
+  id: GetAbilityRank(System.Int32)
+  parent: TDMaker.Core.Components.TowerComponent
+  langs:
+  - csharp
+  - vb
+  name: GetAbilityRank(int)
+  nameWithType: TowerComponent.GetAbilityRank(int)
+  fullName: TDMaker.Core.Components.TowerComponent.GetAbilityRank(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Reads an ability's purchased rank; zero means unpurchased.
+  example: []
+  syntax:
+    content: public int GetAbilityRank(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetAbilityRank(index As Integer) As Integer
+  overload: TDMaker.Core.Components.TowerComponent.GetAbilityRank*
+  nameWithType.vb: TowerComponent.GetAbilityRank(Integer)
+  fullName.vb: TDMaker.Core.Components.TowerComponent.GetAbilityRank(Integer)
+  name.vb: GetAbilityRank(Integer)
+- uid: TDMaker.Core.Components.TowerComponent.#ctor
+  commentId: M:TDMaker.Core.Components.TowerComponent.#ctor
+  id: '#ctor'
+  parent: TDMaker.Core.Components.TowerComponent
+  langs:
+  - csharp
+  - vb
+  name: TowerComponent()
+  nameWithType: TowerComponent.TowerComponent()
+  fullName: TDMaker.Core.Components.TowerComponent.TowerComponent()
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  syntax:
+    content: public TowerComponent()
+    content.vb: Public Sub New()
+  overload: TDMaker.Core.Components.TowerComponent.#ctor*
+  nameWithType.vb: TowerComponent.New()
+  fullName.vb: TDMaker.Core.Components.TowerComponent.New()
+  name.vb: New()
+- uid: TDMaker.Core.Components.TowerComponent.SlotIndex
+  commentId: P:TDMaker.Core.Components.TowerComponent.SlotIndex
+  id: SlotIndex
+  parent: TDMaker.Core.Components.TowerComponent
+  langs:
+  - csharp
+  - vb
+  name: SlotIndex
+  nameWithType: TowerComponent.SlotIndex
+  fullName: TDMaker.Core.Components.TowerComponent.SlotIndex
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Occupied build slot index.
+  example: []
+  syntax:
+    content: public int SlotIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SlotIndex As Integer
+  overload: TDMaker.Core.Components.TowerComponent.SlotIndex*
+- uid: TDMaker.Core.Components.TowerComponent.TotalSpent
+  commentId: P:TDMaker.Core.Components.TowerComponent.TotalSpent
+  id: TotalSpent
+  parent: TDMaker.Core.Components.TowerComponent
+  langs:
+  - csharp
+  - vb
+  name: TotalSpent
+  nameWithType: TowerComponent.TotalSpent
+  fullName: TDMaker.Core.Components.TowerComponent.TotalSpent
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Total gold spent on this tower.
+  example: []
+  syntax:
+    content: public int TotalSpent { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalSpent As Integer
+  overload: TDMaker.Core.Components.TowerComponent.TotalSpent*
+- uid: TDMaker.Core.Components.TowerComponent.Priority
+  commentId: P:TDMaker.Core.Components.TowerComponent.Priority
+  id: Priority
+  parent: TDMaker.Core.Components.TowerComponent
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: TowerComponent.Priority
+  fullName: TDMaker.Core.Components.TowerComponent.Priority
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Runtime target priority, initialized from the template and retained across upgrades.
+  example: []
+  syntax:
+    content: public TargetPriority Priority { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TargetPriority
+    content.vb: Public ReadOnly Property Priority As TargetPriority
+  overload: TDMaker.Core.Components.TowerComponent.Priority*
+- uid: TDMaker.Core.Components.TowerComponent.AbilityCount
+  commentId: P:TDMaker.Core.Components.TowerComponent.AbilityCount
+  id: AbilityCount
+  parent: TDMaker.Core.Components.TowerComponent
+  langs:
+  - csharp
+  - vb
+  name: AbilityCount
+  nameWithType: TowerComponent.AbilityCount
+  fullName: TDMaker.Core.Components.TowerComponent.AbilityCount
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Components
+  summary: Number of purchasable ability slots.
+  example: []
+  syntax:
+    content: public int AbilityCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property AbilityCount As Integer
+  overload: TDMaker.Core.Components.TowerComponent.AbilityCount*
+references:
+- uid: TDMaker.Core.Components
+  commentId: N:TDMaker.Core.Components
+  isExternal: true
+  name: TDMaker.Core.Components
+  nameWithType: TDMaker.Core.Components
+  fullName: TDMaker.Core.Components
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Components
+    name: Components
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Components.TowerComponent.GetAbilityRank*
+  commentId: Overload:TDMaker.Core.Components.TowerComponent.GetAbilityRank
+  isExternal: true
+  href: TDMaker.Core.Components.TowerComponent.html#TDMaker_Core_Components_TowerComponent_GetAbilityRank_System_Int32_
+  name: GetAbilityRank
+  nameWithType: TowerComponent.GetAbilityRank
+  fullName: TDMaker.Core.Components.TowerComponent.GetAbilityRank
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Components.TowerComponent.#ctor*
+  commentId: Overload:TDMaker.Core.Components.TowerComponent.#ctor
+  isExternal: true
+  href: TDMaker.Core.Components.TowerComponent.html#TDMaker_Core_Components_TowerComponent__ctor
+  name: TowerComponent
+  nameWithType: TowerComponent.TowerComponent
+  fullName: TDMaker.Core.Components.TowerComponent.TowerComponent
+  nameWithType.vb: TowerComponent.New
+  fullName.vb: TDMaker.Core.Components.TowerComponent.New
+  name.vb: New
+- uid: TDMaker.Core.Components.TowerComponent.SlotIndex*
+  commentId: Overload:TDMaker.Core.Components.TowerComponent.SlotIndex
+  isExternal: true
+  href: TDMaker.Core.Components.TowerComponent.html#TDMaker_Core_Components_TowerComponent_SlotIndex
+  name: SlotIndex
+  nameWithType: TowerComponent.SlotIndex
+  fullName: TDMaker.Core.Components.TowerComponent.SlotIndex
+- uid: TDMaker.Core.Components.TowerComponent.TotalSpent*
+  commentId: Overload:TDMaker.Core.Components.TowerComponent.TotalSpent
+  isExternal: true
+  href: TDMaker.Core.Components.TowerComponent.html#TDMaker_Core_Components_TowerComponent_TotalSpent
+  name: TotalSpent
+  nameWithType: TowerComponent.TotalSpent
+  fullName: TDMaker.Core.Components.TowerComponent.TotalSpent
+- uid: TDMaker.Core.Components.TowerComponent.Priority*
+  commentId: Overload:TDMaker.Core.Components.TowerComponent.Priority
+  isExternal: true
+  href: TDMaker.Core.Components.TowerComponent.html#TDMaker_Core_Components_TowerComponent_Priority
+  name: Priority
+  nameWithType: TowerComponent.Priority
+  fullName: TDMaker.Core.Components.TowerComponent.Priority
+- uid: TDMaker.Core.Defs.TargetPriority
+  commentId: T:TDMaker.Core.Defs.TargetPriority
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetPriority.html
+  name: TargetPriority
+  nameWithType: TargetPriority
+  fullName: TDMaker.Core.Defs.TargetPriority
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Components.TowerComponent.AbilityCount*
+  commentId: Overload:TDMaker.Core.Components.TowerComponent.AbilityCount
+  isExternal: true
+  href: TDMaker.Core.Components.TowerComponent.html#TDMaker_Core_Components_TowerComponent_AbilityCount
+  name: AbilityCount
+  nameWithType: TowerComponent.AbilityCount
+  fullName: TDMaker.Core.Components.TowerComponent.AbilityCount

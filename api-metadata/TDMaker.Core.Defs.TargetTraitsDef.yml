@@ -1,0 +1,576 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.TargetTraitsDef
+  commentId: T:TDMaker.Core.Defs.TargetTraitsDef
+  id: TargetTraitsDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.TargetTraitsDef.#ctor(System.UInt64,TDMaker.Core.Defs.DamageMask,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  - TDMaker.Core.Defs.TargetTraitsDef.BlockImmune
+  - TDMaker.Core.Defs.TargetTraitsDef.IgnoreDamage
+  - TDMaker.Core.Defs.TargetTraitsDef.IgnoreStun
+  - TDMaker.Core.Defs.TargetTraitsDef.Immunities
+  - TDMaker.Core.Defs.TargetTraitsDef.LockSpeed
+  - TDMaker.Core.Defs.TargetTraitsDef.Tags
+  - TDMaker.Core.Defs.TargetTraitsDef.Untargetable
+  langs:
+  - csharp
+  - vb
+  name: TargetTraitsDef
+  nameWithType: TargetTraitsDef
+  fullName: TDMaker.Core.Defs.TargetTraitsDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Target and immunity traits, distinct from damage mitigation.
+  example: []
+  syntax:
+    content: public sealed class TargetTraitsDef
+    content.vb: Public NotInheritable Class TargetTraitsDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.TargetTraitsDef.#ctor(System.UInt64,TDMaker.Core.Defs.DamageMask,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:TDMaker.Core.Defs.TargetTraitsDef.#ctor(System.UInt64,TDMaker.Core.Defs.DamageMask,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  id: '#ctor(System.UInt64,TDMaker.Core.Defs.DamageMask,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)'
+  parent: TDMaker.Core.Defs.TargetTraitsDef
+  langs:
+  - csharp
+  - vb
+  name: TargetTraitsDef(ulong, DamageMask, bool, bool, bool, bool, bool)
+  nameWithType: TargetTraitsDef.TargetTraitsDef(ulong, DamageMask, bool, bool, bool, bool, bool)
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.TargetTraitsDef(ulong, TDMaker.Core.Defs.DamageMask, bool, bool, bool, bool,
+    bool)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates eligibility data.
+  example: []
+  syntax:
+    content: public TargetTraitsDef(ulong tags = 0, DamageMask immunities = DamageMask.None, bool ignoreDamage = false, bool
+      ignoreStun = false, bool lockSpeed = false, bool untargetable = false, bool blockImmune = false)
+    parameters:
+    - id: tags
+      type: System.UInt64
+    - id: immunities
+      type: TDMaker.Core.Defs.DamageMask
+    - id: ignoreDamage
+      type: System.Boolean
+    - id: ignoreStun
+      type: System.Boolean
+    - id: lockSpeed
+      type: System.Boolean
+    - id: untargetable
+      type: System.Boolean
+    - id: blockImmune
+      type: System.Boolean
+    content.vb: Public Sub New(tags As ULong = 0, immunities As DamageMask = DamageMask.None, ignoreDamage As Boolean = False,
+      ignoreStun As Boolean = False, lockSpeed As Boolean = False, untargetable As Boolean = False, blockImmune As Boolean
+      = False)
+  overload: TDMaker.Core.Defs.TargetTraitsDef.#ctor*
+  nameWithType.vb: TargetTraitsDef.New(ULong, DamageMask, Boolean, Boolean, Boolean, Boolean, Boolean)
+  fullName.vb: TDMaker.Core.Defs.TargetTraitsDef.New(ULong, TDMaker.Core.Defs.DamageMask, Boolean, Boolean, Boolean, Boolean,
+    Boolean)
+  name.vb: New(ULong, DamageMask, Boolean, Boolean, Boolean, Boolean, Boolean)
+- uid: TDMaker.Core.Defs.TargetTraitsDef.Tags
+  commentId: P:TDMaker.Core.Defs.TargetTraitsDef.Tags
+  id: Tags
+  parent: TDMaker.Core.Defs.TargetTraitsDef
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  nameWithType: TargetTraitsDef.Tags
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.Tags
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Author-defined eligibility bits.
+  example: []
+  syntax:
+    content: public ulong Tags { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property Tags As ULong
+  overload: TDMaker.Core.Defs.TargetTraitsDef.Tags*
+- uid: TDMaker.Core.Defs.TargetTraitsDef.Immunities
+  commentId: P:TDMaker.Core.Defs.TargetTraitsDef.Immunities
+  id: Immunities
+  parent: TDMaker.Core.Defs.TargetTraitsDef
+  langs:
+  - csharp
+  - vb
+  name: Immunities
+  nameWithType: TargetTraitsDef.Immunities
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.Immunities
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Immune damage channels, including true damage when selected.
+  example: []
+  syntax:
+    content: public DamageMask Immunities { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.DamageMask
+    content.vb: Public ReadOnly Property Immunities As DamageMask
+  overload: TDMaker.Core.Defs.TargetTraitsDef.Immunities*
+- uid: TDMaker.Core.Defs.TargetTraitsDef.IgnoreDamage
+  commentId: P:TDMaker.Core.Defs.TargetTraitsDef.IgnoreDamage
+  id: IgnoreDamage
+  parent: TDMaker.Core.Defs.TargetTraitsDef
+  langs:
+  - csharp
+  - vb
+  name: IgnoreDamage
+  nameWithType: TargetTraitsDef.IgnoreDamage
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.IgnoreDamage
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ignores all damage requests.
+  example: []
+  syntax:
+    content: public bool IgnoreDamage { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IgnoreDamage As Boolean
+  overload: TDMaker.Core.Defs.TargetTraitsDef.IgnoreDamage*
+- uid: TDMaker.Core.Defs.TargetTraitsDef.IgnoreStun
+  commentId: P:TDMaker.Core.Defs.TargetTraitsDef.IgnoreStun
+  id: IgnoreStun
+  parent: TDMaker.Core.Defs.TargetTraitsDef
+  langs:
+  - csharp
+  - vb
+  name: IgnoreStun
+  nameWithType: TargetTraitsDef.IgnoreStun
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.IgnoreStun
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ignores stun modifiers.
+  example: []
+  syntax:
+    content: public bool IgnoreStun { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IgnoreStun As Boolean
+  overload: TDMaker.Core.Defs.TargetTraitsDef.IgnoreStun*
+- uid: TDMaker.Core.Defs.TargetTraitsDef.LockSpeed
+  commentId: P:TDMaker.Core.Defs.TargetTraitsDef.LockSpeed
+  id: LockSpeed
+  parent: TDMaker.Core.Defs.TargetTraitsDef
+  langs:
+  - csharp
+  - vb
+  name: LockSpeed
+  nameWithType: TargetTraitsDef.LockSpeed
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.LockSpeed
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ignores speed multipliers.
+  example: []
+  syntax:
+    content: public bool LockSpeed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property LockSpeed As Boolean
+  overload: TDMaker.Core.Defs.TargetTraitsDef.LockSpeed*
+- uid: TDMaker.Core.Defs.TargetTraitsDef.Untargetable
+  commentId: P:TDMaker.Core.Defs.TargetTraitsDef.Untargetable
+  id: Untargetable
+  parent: TDMaker.Core.Defs.TargetTraitsDef
+  langs:
+  - csharp
+  - vb
+  name: Untargetable
+  nameWithType: TargetTraitsDef.Untargetable
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.Untargetable
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Cannot be selected for attacks.
+  example: []
+  syntax:
+    content: public bool Untargetable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Untargetable As Boolean
+  overload: TDMaker.Core.Defs.TargetTraitsDef.Untargetable*
+- uid: TDMaker.Core.Defs.TargetTraitsDef.BlockImmune
+  commentId: P:TDMaker.Core.Defs.TargetTraitsDef.BlockImmune
+  id: BlockImmune
+  parent: TDMaker.Core.Defs.TargetTraitsDef
+  langs:
+  - csharp
+  - vb
+  name: BlockImmune
+  nameWithType: TargetTraitsDef.BlockImmune
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.BlockImmune
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Cannot be blocked.
+  example: []
+  syntax:
+    content: public bool BlockImmune { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property BlockImmune As Boolean
+  overload: TDMaker.Core.Defs.TargetTraitsDef.BlockImmune*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.TargetTraitsDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.TargetTraitsDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetTraitsDef.html#TDMaker_Core_Defs_TargetTraitsDef__ctor_System_UInt64_TDMaker_Core_Defs_DamageMask_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
+  name: TargetTraitsDef
+  nameWithType: TargetTraitsDef.TargetTraitsDef
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.TargetTraitsDef
+  nameWithType.vb: TargetTraitsDef.New
+  fullName.vb: TDMaker.Core.Defs.TargetTraitsDef.New
+  name.vb: New
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: TDMaker.Core.Defs.DamageMask
+  commentId: T:TDMaker.Core.Defs.DamageMask
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.DamageMask.html
+  name: DamageMask
+  nameWithType: DamageMask
+  fullName: TDMaker.Core.Defs.DamageMask
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Core.Defs.TargetTraitsDef.Tags*
+  commentId: Overload:TDMaker.Core.Defs.TargetTraitsDef.Tags
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetTraitsDef.html#TDMaker_Core_Defs_TargetTraitsDef_Tags
+  name: Tags
+  nameWithType: TargetTraitsDef.Tags
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.Tags
+- uid: TDMaker.Core.Defs.TargetTraitsDef.Immunities*
+  commentId: Overload:TDMaker.Core.Defs.TargetTraitsDef.Immunities
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetTraitsDef.html#TDMaker_Core_Defs_TargetTraitsDef_Immunities
+  name: Immunities
+  nameWithType: TargetTraitsDef.Immunities
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.Immunities
+- uid: TDMaker.Core.Defs.TargetTraitsDef.IgnoreDamage*
+  commentId: Overload:TDMaker.Core.Defs.TargetTraitsDef.IgnoreDamage
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetTraitsDef.html#TDMaker_Core_Defs_TargetTraitsDef_IgnoreDamage
+  name: IgnoreDamage
+  nameWithType: TargetTraitsDef.IgnoreDamage
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.IgnoreDamage
+- uid: TDMaker.Core.Defs.TargetTraitsDef.IgnoreStun*
+  commentId: Overload:TDMaker.Core.Defs.TargetTraitsDef.IgnoreStun
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetTraitsDef.html#TDMaker_Core_Defs_TargetTraitsDef_IgnoreStun
+  name: IgnoreStun
+  nameWithType: TargetTraitsDef.IgnoreStun
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.IgnoreStun
+- uid: TDMaker.Core.Defs.TargetTraitsDef.LockSpeed*
+  commentId: Overload:TDMaker.Core.Defs.TargetTraitsDef.LockSpeed
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetTraitsDef.html#TDMaker_Core_Defs_TargetTraitsDef_LockSpeed
+  name: LockSpeed
+  nameWithType: TargetTraitsDef.LockSpeed
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.LockSpeed
+- uid: TDMaker.Core.Defs.TargetTraitsDef.Untargetable*
+  commentId: Overload:TDMaker.Core.Defs.TargetTraitsDef.Untargetable
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetTraitsDef.html#TDMaker_Core_Defs_TargetTraitsDef_Untargetable
+  name: Untargetable
+  nameWithType: TargetTraitsDef.Untargetable
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.Untargetable
+- uid: TDMaker.Core.Defs.TargetTraitsDef.BlockImmune*
+  commentId: Overload:TDMaker.Core.Defs.TargetTraitsDef.BlockImmune
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetTraitsDef.html#TDMaker_Core_Defs_TargetTraitsDef_BlockImmune
+  name: BlockImmune
+  nameWithType: TargetTraitsDef.BlockImmune
+  fullName: TDMaker.Core.Defs.TargetTraitsDef.BlockImmune

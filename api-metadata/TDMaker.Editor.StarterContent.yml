@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.StarterContent
+  commentId: T:TDMaker.Editor.StarterContent
+  id: StarterContent
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.StarterContent.FreshPresets
+  - TDMaker.Editor.StarterContent.SampleKit
+  langs:
+  - csharp
+  - vb
+  name: StarterContent
+  nameWithType: StarterContent
+  fullName: TDMaker.Editor.StarterContent
+  type: Enum
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: What the New Level wizard puts into a new level.
+  example: []
+  syntax:
+    content: public enum StarterContent
+    content.vb: Public Enum StarterContent
+- uid: TDMaker.Editor.StarterContent.SampleKit
+  commentId: F:TDMaker.Editor.StarterContent.SampleKit
+  id: SampleKit
+  parent: TDMaker.Editor.StarterContent
+  langs:
+  - csharp
+  - vb
+  name: SampleKit
+  nameWithType: StarterContent.SampleKit
+  fullName: TDMaker.Editor.StarterContent.SampleKit
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Reuse the Basic sample's towers, enemies, hero and spells (needs <code>Samples/Basic/Data</code>).
+  example: []
+  syntax:
+    content: SampleKit = 0
+    return:
+      type: TDMaker.Editor.StarterContent
+- uid: TDMaker.Editor.StarterContent.FreshPresets
+  commentId: F:TDMaker.Editor.StarterContent.FreshPresets
+  id: FreshPresets
+  parent: TDMaker.Editor.StarterContent
+  langs:
+  - csharp
+  - vb
+  name: FreshPresets
+  nameWithType: StarterContent.FreshPresets
+  fullName: TDMaker.Editor.StarterContent.FreshPresets
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Create new assets in the level folder from the Unit Workshop presets: one enemy, an archer tower with a second
+    tier, a barracks with its soldier and optionally a hero.'
+  example: []
+  syntax:
+    content: FreshPresets = 1
+    return:
+      type: TDMaker.Editor.StarterContent
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: TDMaker.Editor.StarterContent
+  commentId: T:TDMaker.Editor.StarterContent
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.StarterContent.html
+  name: StarterContent
+  nameWithType: StarterContent
+  fullName: TDMaker.Editor.StarterContent

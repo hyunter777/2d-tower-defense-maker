@@ -1,0 +1,222 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.ISimProfiler
+  commentId: T:TDMaker.Core.ISimProfiler
+  id: ISimProfiler
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  - TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  - TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+  - TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+  langs:
+  - csharp
+  - vb
+  name: ISimProfiler
+  nameWithType: ISimProfiler
+  fullName: TDMaker.Core.ISimProfiler
+  type: Interface
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Optional observational profiling hooks. Preallocate storage, avoid allocation, and do not mutate the world from
+    callbacks.
+  remarks: The core never reads a wall clock. Host timestamps are excluded from deterministic state and disabled when no profiler
+    is installed.
+  example: []
+  syntax:
+    content: public interface ISimProfiler
+    content.vb: Public Interface ISimProfiler
+  derivedClasses:
+  - TDMaker.Unity.View.SimProfilerMarkers
+- uid: TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+  commentId: M:TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+  id: TickStarted(TDMaker.Core.Simulation)
+  parent: TDMaker.Core.ISimProfiler
+  langs:
+  - csharp
+  - vb
+  name: TickStarted(Simulation)
+  nameWithType: ISimProfiler.TickStarted(Simulation)
+  fullName: TDMaker.Core.ISimProfiler.TickStarted(TDMaker.Core.Simulation)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Begins a fixed step, before input injection and previous-position snapshots.
+  example: []
+  syntax:
+    content: void TickStarted(Simulation simulation)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    content.vb: Sub TickStarted(simulation As Simulation)
+  overload: TDMaker.Core.ISimProfiler.TickStarted*
+- uid: TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  commentId: M:TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  id: SystemStarted(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  parent: TDMaker.Core.ISimProfiler
+  langs:
+  - csharp
+  - vb
+  name: SystemStarted(Simulation, SimStage, int)
+  nameWithType: ISimProfiler.SystemStarted(Simulation, SimStage, int)
+  fullName: TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation, TDMaker.Core.SimStage, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Begins a pipeline entry. Custom systems retain their registered anchor stage; systemIndex distinguishes entries.
+  example: []
+  syntax:
+    content: void SystemStarted(Simulation simulation, SimStage stage, int systemIndex)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    - id: stage
+      type: TDMaker.Core.SimStage
+    - id: systemIndex
+      type: System.Int32
+    content.vb: Sub SystemStarted(simulation As Simulation, stage As SimStage, systemIndex As Integer)
+  overload: TDMaker.Core.ISimProfiler.SystemStarted*
+  nameWithType.vb: ISimProfiler.SystemStarted(Simulation, SimStage, Integer)
+  fullName.vb: TDMaker.Core.ISimProfiler.SystemStarted(TDMaker.Core.Simulation, TDMaker.Core.SimStage, Integer)
+  name.vb: SystemStarted(Simulation, SimStage, Integer)
+- uid: TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  commentId: M:TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  id: SystemFinished(TDMaker.Core.Simulation,TDMaker.Core.SimStage,System.Int32)
+  parent: TDMaker.Core.ISimProfiler
+  langs:
+  - csharp
+  - vb
+  name: SystemFinished(Simulation, SimStage, int)
+  nameWithType: ISimProfiler.SystemFinished(Simulation, SimStage, int)
+  fullName: TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation, TDMaker.Core.SimStage, int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Ends one pipeline entry.
+  example: []
+  syntax:
+    content: void SystemFinished(Simulation simulation, SimStage stage, int systemIndex)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    - id: stage
+      type: TDMaker.Core.SimStage
+    - id: systemIndex
+      type: System.Int32
+    content.vb: Sub SystemFinished(simulation As Simulation, stage As SimStage, systemIndex As Integer)
+  overload: TDMaker.Core.ISimProfiler.SystemFinished*
+  nameWithType.vb: ISimProfiler.SystemFinished(Simulation, SimStage, Integer)
+  fullName.vb: TDMaker.Core.ISimProfiler.SystemFinished(TDMaker.Core.Simulation, TDMaker.Core.SimStage, Integer)
+  name.vb: SystemFinished(Simulation, SimStage, Integer)
+- uid: TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+  commentId: M:TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+  id: TickFinished(TDMaker.Core.Simulation)
+  parent: TDMaker.Core.ISimProfiler
+  langs:
+  - csharp
+  - vb
+  name: TickFinished(Simulation)
+  nameWithType: ISimProfiler.TickFinished(Simulation)
+  fullName: TDMaker.Core.ISimProfiler.TickFinished(TDMaker.Core.Simulation)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Ends a step, including an exceptional or terminal command-only step.
+  example: []
+  syntax:
+    content: void TickFinished(Simulation simulation)
+    parameters:
+    - id: simulation
+      type: TDMaker.Core.Simulation
+    content.vb: Sub TickFinished(simulation As Simulation)
+  overload: TDMaker.Core.ISimProfiler.TickFinished*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.ISimProfiler.TickStarted*
+  commentId: Overload:TDMaker.Core.ISimProfiler.TickStarted
+  isExternal: true
+  href: TDMaker.Core.ISimProfiler.html#TDMaker_Core_ISimProfiler_TickStarted_TDMaker_Core_Simulation_
+  name: TickStarted
+  nameWithType: ISimProfiler.TickStarted
+  fullName: TDMaker.Core.ISimProfiler.TickStarted
+- uid: TDMaker.Core.Simulation
+  commentId: T:TDMaker.Core.Simulation
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Simulation.html
+  name: Simulation
+  nameWithType: Simulation
+  fullName: TDMaker.Core.Simulation
+- uid: TDMaker.Core.ISimProfiler.SystemStarted*
+  commentId: Overload:TDMaker.Core.ISimProfiler.SystemStarted
+  isExternal: true
+  href: TDMaker.Core.ISimProfiler.html#TDMaker_Core_ISimProfiler_SystemStarted_TDMaker_Core_Simulation_TDMaker_Core_SimStage_System_Int32_
+  name: SystemStarted
+  nameWithType: ISimProfiler.SystemStarted
+  fullName: TDMaker.Core.ISimProfiler.SystemStarted
+- uid: TDMaker.Core.SimStage
+  commentId: T:TDMaker.Core.SimStage
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimStage.html
+  name: SimStage
+  nameWithType: SimStage
+  fullName: TDMaker.Core.SimStage
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.ISimProfiler.SystemFinished*
+  commentId: Overload:TDMaker.Core.ISimProfiler.SystemFinished
+  isExternal: true
+  href: TDMaker.Core.ISimProfiler.html#TDMaker_Core_ISimProfiler_SystemFinished_TDMaker_Core_Simulation_TDMaker_Core_SimStage_System_Int32_
+  name: SystemFinished
+  nameWithType: ISimProfiler.SystemFinished
+  fullName: TDMaker.Core.ISimProfiler.SystemFinished
+- uid: TDMaker.Core.ISimProfiler.TickFinished*
+  commentId: Overload:TDMaker.Core.ISimProfiler.TickFinished
+  isExternal: true
+  href: TDMaker.Core.ISimProfiler.html#TDMaker_Core_ISimProfiler_TickFinished_TDMaker_Core_Simulation_
+  name: TickFinished
+  nameWithType: ISimProfiler.TickFinished
+  fullName: TDMaker.Core.ISimProfiler.TickFinished

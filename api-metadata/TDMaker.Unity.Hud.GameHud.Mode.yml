@@ -1,0 +1,222 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Hud.GameHud.Mode
+  commentId: T:TDMaker.Unity.Hud.GameHud.Mode
+  id: GameHud.Mode
+  parent: TDMaker.Unity.Hud
+  children:
+  - TDMaker.Unity.Hud.GameHud.Mode.Browsing
+  - TDMaker.Unity.Hud.GameHud.Mode.BuildMenu
+  - TDMaker.Unity.Hud.GameHud.Mode.HeroSelected
+  - TDMaker.Unity.Hud.GameHud.Mode.RallyAiming
+  - TDMaker.Unity.Hud.GameHud.Mode.TowerMenu
+  - TDMaker.Unity.Hud.GameHud.Mode.UnitSelected
+  langs:
+  - csharp
+  - vb
+  name: GameHud.Mode
+  nameWithType: GameHud.Mode
+  fullName: TDMaker.Unity.Hud.GameHud.Mode
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Interaction state. Spell aiming is tracked separately (<xref href="TDMaker.Unity.Hud.GameHud.AimingSpell" data-throw-if-not-resolved="false"></xref>)
+    and always runs in <xref href="TDMaker.Unity.Hud.GameHud.Mode.Browsing" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public enum GameHud.Mode
+    content.vb: Public Enum GameHud.Mode
+- uid: TDMaker.Unity.Hud.GameHud.Mode.Browsing
+  commentId: F:TDMaker.Unity.Hud.GameHud.Mode.Browsing
+  id: Browsing
+  parent: TDMaker.Unity.Hud.GameHud.Mode
+  langs:
+  - csharp
+  - vb
+  name: Browsing
+  nameWithType: GameHud.Mode.Browsing
+  fullName: TDMaker.Unity.Hud.GameHud.Mode.Browsing
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Nothing selected.
+  example: []
+  syntax:
+    content: Browsing = 0
+    return:
+      type: TDMaker.Unity.Hud.GameHud.Mode
+- uid: TDMaker.Unity.Hud.GameHud.Mode.BuildMenu
+  commentId: F:TDMaker.Unity.Hud.GameHud.Mode.BuildMenu
+  id: BuildMenu
+  parent: TDMaker.Unity.Hud.GameHud.Mode
+  langs:
+  - csharp
+  - vb
+  name: BuildMenu
+  nameWithType: GameHud.Mode.BuildMenu
+  fullName: TDMaker.Unity.Hud.GameHud.Mode.BuildMenu
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Build options of an empty slot are open.
+  example: []
+  syntax:
+    content: BuildMenu = 1
+    return:
+      type: TDMaker.Unity.Hud.GameHud.Mode
+- uid: TDMaker.Unity.Hud.GameHud.Mode.TowerMenu
+  commentId: F:TDMaker.Unity.Hud.GameHud.Mode.TowerMenu
+  id: TowerMenu
+  parent: TDMaker.Unity.Hud.GameHud.Mode
+  langs:
+  - csharp
+  - vb
+  name: TowerMenu
+  nameWithType: GameHud.Mode.TowerMenu
+  fullName: TDMaker.Unity.Hud.GameHud.Mode.TowerMenu
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A tower's panel is open.
+  example: []
+  syntax:
+    content: TowerMenu = 2
+    return:
+      type: TDMaker.Unity.Hud.GameHud.Mode
+- uid: TDMaker.Unity.Hud.GameHud.Mode.RallyAiming
+  commentId: F:TDMaker.Unity.Hud.GameHud.Mode.RallyAiming
+  id: RallyAiming
+  parent: TDMaker.Unity.Hud.GameHud.Mode
+  langs:
+  - csharp
+  - vb
+  name: RallyAiming
+  nameWithType: GameHud.Mode.RallyAiming
+  fullName: TDMaker.Unity.Hud.GameHud.Mode.RallyAiming
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Choosing a barracks rally point (the tower stays selected, its panel is hidden).
+  example: []
+  syntax:
+    content: RallyAiming = 3
+    return:
+      type: TDMaker.Unity.Hud.GameHud.Mode
+- uid: TDMaker.Unity.Hud.GameHud.Mode.HeroSelected
+  commentId: F:TDMaker.Unity.Hud.GameHud.Mode.HeroSelected
+  id: HeroSelected
+  parent: TDMaker.Unity.Hud.GameHud.Mode
+  langs:
+  - csharp
+  - vb
+  name: HeroSelected
+  nameWithType: GameHud.Mode.HeroSelected
+  fullName: TDMaker.Unity.Hud.GameHud.Mode.HeroSelected
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A hero is selected; every battlefield click is a move attempt at that point.
+  example: []
+  syntax:
+    content: HeroSelected = 4
+    return:
+      type: TDMaker.Unity.Hud.GameHud.Mode
+- uid: TDMaker.Unity.Hud.GameHud.Mode.UnitSelected
+  commentId: F:TDMaker.Unity.Hud.GameHud.Mode.UnitSelected
+  id: UnitSelected
+  parent: TDMaker.Unity.Hud.GameHud.Mode
+  langs:
+  - csharp
+  - vb
+  name: UnitSelected
+  nameWithType: GameHud.Mode.UnitSelected
+  fullName: TDMaker.Unity.Hud.GameHud.Mode.UnitSelected
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: An enemy or soldier is inspected (information only, not an attack order).
+  example: []
+  syntax:
+    content: UnitSelected = 5
+    return:
+      type: TDMaker.Unity.Hud.GameHud.Mode
+references:
+- uid: TDMaker.Unity.Hud.GameHud.AimingSpell
+  commentId: P:TDMaker.Unity.Hud.GameHud.AimingSpell
+  isExternal: true
+  href: TDMaker.Unity.Hud.GameHud.html#TDMaker_Unity_Hud_GameHud_AimingSpell
+  name: AimingSpell
+  nameWithType: GameHud.AimingSpell
+  fullName: TDMaker.Unity.Hud.GameHud.AimingSpell
+- uid: TDMaker.Unity.Hud.GameHud.Mode.Browsing
+  commentId: F:TDMaker.Unity.Hud.GameHud.Mode.Browsing
+  isExternal: true
+  href: TDMaker.Unity.Hud.GameHud.Mode.html#TDMaker_Unity_Hud_GameHud_Mode_Browsing
+  name: Browsing
+  nameWithType: GameHud.Mode.Browsing
+  fullName: TDMaker.Unity.Hud.GameHud.Mode.Browsing
+- uid: TDMaker.Unity.Hud
+  commentId: N:TDMaker.Unity.Hud
+  isExternal: true
+  name: TDMaker.Unity.Hud
+  nameWithType: TDMaker.Unity.Hud
+  fullName: TDMaker.Unity.Hud
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+- uid: TDMaker.Unity.Hud.GameHud.Mode
+  commentId: T:TDMaker.Unity.Hud.GameHud.Mode
+  parent: TDMaker.Unity.Hud
+  isExternal: true
+  href: TDMaker.Unity.Hud.GameHud.html
+  name: GameHud.Mode
+  nameWithType: GameHud.Mode
+  fullName: TDMaker.Unity.Hud.GameHud.Mode
+  spec.csharp:
+  - uid: TDMaker.Unity.Hud.GameHud
+    name: GameHud
+    isExternal: true
+    href: TDMaker.Unity.Hud.GameHud.html
+  - name: .
+  - uid: TDMaker.Unity.Hud.GameHud.Mode
+    name: Mode
+    isExternal: true
+    href: TDMaker.Unity.Hud.GameHud.Mode.html
+  spec.vb:
+  - uid: TDMaker.Unity.Hud.GameHud
+    name: GameHud
+    isExternal: true
+    href: TDMaker.Unity.Hud.GameHud.html
+  - name: .
+  - uid: TDMaker.Unity.Hud.GameHud.Mode
+    name: Mode
+    isExternal: true
+    href: TDMaker.Unity.Hud.GameHud.Mode.html

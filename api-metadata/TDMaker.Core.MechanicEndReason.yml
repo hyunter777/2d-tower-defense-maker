@@ -1,0 +1,200 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.MechanicEndReason
+  commentId: T:TDMaker.Core.MechanicEndReason
+  id: MechanicEndReason
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.MechanicEndReason.Cancelled
+  - TDMaker.Core.MechanicEndReason.Completed
+  - TDMaker.Core.MechanicEndReason.Expired
+  - TDMaker.Core.MechanicEndReason.Interrupted
+  - TDMaker.Core.MechanicEndReason.OutOfRange
+  - TDMaker.Core.MechanicEndReason.SourceLost
+  - TDMaker.Core.MechanicEndReason.TargetLost
+  langs:
+  - csharp
+  - vb
+  name: MechanicEndReason
+  nameWithType: MechanicEndReason
+  fullName: TDMaker.Core.MechanicEndReason
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Stable reason codes used by deployment and channel end events.
+  example: []
+  syntax:
+    content: public enum MechanicEndReason
+    content.vb: Public Enum MechanicEndReason
+- uid: TDMaker.Core.MechanicEndReason.Completed
+  commentId: F:TDMaker.Core.MechanicEndReason.Completed
+  id: Completed
+  parent: TDMaker.Core.MechanicEndReason
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: MechanicEndReason.Completed
+  fullName: TDMaker.Core.MechanicEndReason.Completed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Authored trigger/pulse quota was consumed.
+  example: []
+  syntax:
+    content: Completed = 0
+    return:
+      type: TDMaker.Core.MechanicEndReason
+- uid: TDMaker.Core.MechanicEndReason.Expired
+  commentId: F:TDMaker.Core.MechanicEndReason.Expired
+  id: Expired
+  parent: TDMaker.Core.MechanicEndReason
+  langs:
+  - csharp
+  - vb
+  name: Expired
+  nameWithType: MechanicEndReason.Expired
+  fullName: TDMaker.Core.MechanicEndReason.Expired
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Deployment lifetime elapsed.
+  example: []
+  syntax:
+    content: Expired = 1
+    return:
+      type: TDMaker.Core.MechanicEndReason
+- uid: TDMaker.Core.MechanicEndReason.SourceLost
+  commentId: F:TDMaker.Core.MechanicEndReason.SourceLost
+  id: SourceLost
+  parent: TDMaker.Core.MechanicEndReason
+  langs:
+  - csharp
+  - vb
+  name: SourceLost
+  nameWithType: MechanicEndReason.SourceLost
+  fullName: TDMaker.Core.MechanicEndReason.SourceLost
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Required source died or disappeared.
+  example: []
+  syntax:
+    content: SourceLost = 2
+    return:
+      type: TDMaker.Core.MechanicEndReason
+- uid: TDMaker.Core.MechanicEndReason.TargetLost
+  commentId: F:TDMaker.Core.MechanicEndReason.TargetLost
+  id: TargetLost
+  parent: TDMaker.Core.MechanicEndReason
+  langs:
+  - csharp
+  - vb
+  name: TargetLost
+  nameWithType: MechanicEndReason.TargetLost
+  fullName: TDMaker.Core.MechanicEndReason.TargetLost
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Recipient died, disappeared or became ineligible.
+  example: []
+  syntax:
+    content: TargetLost = 3
+    return:
+      type: TDMaker.Core.MechanicEndReason
+- uid: TDMaker.Core.MechanicEndReason.OutOfRange
+  commentId: F:TDMaker.Core.MechanicEndReason.OutOfRange
+  id: OutOfRange
+  parent: TDMaker.Core.MechanicEndReason
+  langs:
+  - csharp
+  - vb
+  name: OutOfRange
+  nameWithType: MechanicEndReason.OutOfRange
+  fullName: TDMaker.Core.MechanicEndReason.OutOfRange
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Recipient left tracking range.
+  example: []
+  syntax:
+    content: OutOfRange = 4
+    return:
+      type: TDMaker.Core.MechanicEndReason
+- uid: TDMaker.Core.MechanicEndReason.Interrupted
+  commentId: F:TDMaker.Core.MechanicEndReason.Interrupted
+  id: Interrupted
+  parent: TDMaker.Core.MechanicEndReason
+  langs:
+  - csharp
+  - vb
+  name: Interrupted
+  nameWithType: MechanicEndReason.Interrupted
+  fullName: TDMaker.Core.MechanicEndReason.Interrupted
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Source was stunned, disarmed or ordered to move.
+  example: []
+  syntax:
+    content: Interrupted = 5
+    return:
+      type: TDMaker.Core.MechanicEndReason
+- uid: TDMaker.Core.MechanicEndReason.Cancelled
+  commentId: F:TDMaker.Core.MechanicEndReason.Cancelled
+  id: Cancelled
+  parent: TDMaker.Core.MechanicEndReason
+  langs:
+  - csharp
+  - vb
+  name: Cancelled
+  nameWithType: MechanicEndReason.Cancelled
+  fullName: TDMaker.Core.MechanicEndReason.Cancelled
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Explicit cancellation.
+  example: []
+  syntax:
+    content: Cancelled = 6
+    return:
+      type: TDMaker.Core.MechanicEndReason
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.MechanicEndReason
+  commentId: T:TDMaker.Core.MechanicEndReason
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.MechanicEndReason.html
+  name: MechanicEndReason
+  nameWithType: MechanicEndReason
+  fullName: TDMaker.Core.MechanicEndReason

@@ -1,0 +1,541 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.ScenePreview
+  commentId: T:TDMaker.Editor.ScenePreview
+  id: ScenePreview
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.ScenePreview.DrawSlot(TDMaker.Unity.Authoring.BuildSlotAuthoring,System.Single,System.Boolean)
+  - TDMaker.Editor.ScenePreview.DrawSlots(TDMaker.Unity.Authoring.BuildSlotAuthoring)
+  - TDMaker.Editor.ScenePreview.DrawToggles
+  - TDMaker.Editor.ScenePreview.Invalidate
+  - TDMaker.Editor.ScenePreview.ShowRanges
+  - TDMaker.Editor.ScenePreview.ShowSlots
+  langs:
+  - csharp
+  - vb
+  name: ScenePreview
+  nameWithType: ScenePreview
+  fullName: TDMaker.Editor.ScenePreview
+  type: Class
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Shared scene-view context drawing for level authoring: build slots, rally points, rally radius and tower range
+
+    ellipses (same shape the simulation tests). Toggles persist in editor preferences.'
+  example: []
+  syntax:
+    content: public static class ScenePreview
+    content.vb: Public Module ScenePreview
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Editor.ScenePreview.DrawToggles
+  commentId: M:TDMaker.Editor.ScenePreview.DrawToggles
+  id: DrawToggles
+  parent: TDMaker.Editor.ScenePreview
+  langs:
+  - csharp
+  - vb
+  name: DrawToggles()
+  nameWithType: ScenePreview.DrawToggles()
+  fullName: TDMaker.Editor.ScenePreview.DrawToggles()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws the preview toggles in an inspector.
+  example: []
+  syntax:
+    content: public static void DrawToggles()
+    content.vb: Public Shared Sub DrawToggles()
+  overload: TDMaker.Editor.ScenePreview.DrawToggles*
+- uid: TDMaker.Editor.ScenePreview.DrawSlots(TDMaker.Unity.Authoring.BuildSlotAuthoring)
+  commentId: M:TDMaker.Editor.ScenePreview.DrawSlots(TDMaker.Unity.Authoring.BuildSlotAuthoring)
+  id: DrawSlots(TDMaker.Unity.Authoring.BuildSlotAuthoring)
+  parent: TDMaker.Editor.ScenePreview
+  langs:
+  - csharp
+  - vb
+  name: DrawSlots(BuildSlotAuthoring)
+  nameWithType: ScenePreview.DrawSlots(BuildSlotAuthoring)
+  fullName: TDMaker.Editor.ScenePreview.DrawSlots(TDMaker.Unity.Authoring.BuildSlotAuthoring)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws every build slot in the open scenes, highlighting <code class="paramref">highlight</code>.
+  example: []
+  syntax:
+    content: public static void DrawSlots(BuildSlotAuthoring highlight = null)
+    parameters:
+    - id: highlight
+      type: TDMaker.Unity.Authoring.BuildSlotAuthoring
+    content.vb: Public Shared Sub DrawSlots(highlight As BuildSlotAuthoring = Nothing)
+  overload: TDMaker.Editor.ScenePreview.DrawSlots*
+- uid: TDMaker.Editor.ScenePreview.DrawSlot(TDMaker.Unity.Authoring.BuildSlotAuthoring,System.Single,System.Boolean)
+  commentId: M:TDMaker.Editor.ScenePreview.DrawSlot(TDMaker.Unity.Authoring.BuildSlotAuthoring,System.Single,System.Boolean)
+  id: DrawSlot(TDMaker.Unity.Authoring.BuildSlotAuthoring,System.Single,System.Boolean)
+  parent: TDMaker.Editor.ScenePreview
+  langs:
+  - csharp
+  - vb
+  name: DrawSlot(BuildSlotAuthoring, float, bool)
+  nameWithType: ScenePreview.DrawSlot(BuildSlotAuthoring, float, bool)
+  fullName: TDMaker.Editor.ScenePreview.DrawSlot(TDMaker.Unity.Authoring.BuildSlotAuthoring, float, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws one slot with its rally point, rally radius and preview range.
+  example: []
+  syntax:
+    content: public static void DrawSlot(BuildSlotAuthoring slot, float yScale, bool highlighted)
+    parameters:
+    - id: slot
+      type: TDMaker.Unity.Authoring.BuildSlotAuthoring
+    - id: yScale
+      type: System.Single
+    - id: highlighted
+      type: System.Boolean
+    content.vb: Public Shared Sub DrawSlot(slot As BuildSlotAuthoring, yScale As Single, highlighted As Boolean)
+  overload: TDMaker.Editor.ScenePreview.DrawSlot*
+  nameWithType.vb: ScenePreview.DrawSlot(BuildSlotAuthoring, Single, Boolean)
+  fullName.vb: TDMaker.Editor.ScenePreview.DrawSlot(TDMaker.Unity.Authoring.BuildSlotAuthoring, Single, Boolean)
+  name.vb: DrawSlot(BuildSlotAuthoring, Single, Boolean)
+- uid: TDMaker.Editor.ScenePreview.Invalidate
+  commentId: M:TDMaker.Editor.ScenePreview.Invalidate
+  id: Invalidate
+  parent: TDMaker.Editor.ScenePreview
+  langs:
+  - csharp
+  - vb
+  name: Invalidate()
+  nameWithType: ScenePreview.Invalidate()
+  fullName: TDMaker.Editor.ScenePreview.Invalidate()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Forces the slot cache to refresh.
+  example: []
+  syntax:
+    content: public static void Invalidate()
+    content.vb: Public Shared Sub Invalidate()
+  overload: TDMaker.Editor.ScenePreview.Invalidate*
+- uid: TDMaker.Editor.ScenePreview.ShowSlots
+  commentId: P:TDMaker.Editor.ScenePreview.ShowSlots
+  id: ShowSlots
+  parent: TDMaker.Editor.ScenePreview
+  langs:
+  - csharp
+  - vb
+  name: ShowSlots
+  nameWithType: ScenePreview.ShowSlots
+  fullName: TDMaker.Editor.ScenePreview.ShowSlots
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether build slots are drawn while editing paths and slots.
+  example: []
+  syntax:
+    content: public static bool ShowSlots { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property ShowSlots As Boolean
+  overload: TDMaker.Editor.ScenePreview.ShowSlots*
+- uid: TDMaker.Editor.ScenePreview.ShowRanges
+  commentId: P:TDMaker.Editor.ScenePreview.ShowRanges
+  id: ShowRanges
+  parent: TDMaker.Editor.ScenePreview
+  langs:
+  - csharp
+  - vb
+  name: ShowRanges
+  nameWithType: ScenePreview.ShowRanges
+  fullName: TDMaker.Editor.ScenePreview.ShowRanges
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Whether tower ranges and rally radii are drawn around slots.
+  example: []
+  syntax:
+    content: public static bool ShowRanges { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property ShowRanges As Boolean
+  overload: TDMaker.Editor.ScenePreview.ShowRanges*
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Editor.ScenePreview.DrawToggles*
+  commentId: Overload:TDMaker.Editor.ScenePreview.DrawToggles
+  isExternal: true
+  href: TDMaker.Editor.ScenePreview.html#TDMaker_Editor_ScenePreview_DrawToggles
+  name: DrawToggles
+  nameWithType: ScenePreview.DrawToggles
+  fullName: TDMaker.Editor.ScenePreview.DrawToggles
+- uid: TDMaker.Editor.ScenePreview.DrawSlots*
+  commentId: Overload:TDMaker.Editor.ScenePreview.DrawSlots
+  isExternal: true
+  href: TDMaker.Editor.ScenePreview.html#TDMaker_Editor_ScenePreview_DrawSlots_TDMaker_Unity_Authoring_BuildSlotAuthoring_
+  name: DrawSlots
+  nameWithType: ScenePreview.DrawSlots
+  fullName: TDMaker.Editor.ScenePreview.DrawSlots
+- uid: TDMaker.Unity.Authoring.BuildSlotAuthoring
+  commentId: T:TDMaker.Unity.Authoring.BuildSlotAuthoring
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.BuildSlotAuthoring.html
+  name: BuildSlotAuthoring
+  nameWithType: BuildSlotAuthoring
+  fullName: TDMaker.Unity.Authoring.BuildSlotAuthoring
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Editor.ScenePreview.DrawSlot*
+  commentId: Overload:TDMaker.Editor.ScenePreview.DrawSlot
+  isExternal: true
+  href: TDMaker.Editor.ScenePreview.html#TDMaker_Editor_ScenePreview_DrawSlot_TDMaker_Unity_Authoring_BuildSlotAuthoring_System_Single_System_Boolean_
+  name: DrawSlot
+  nameWithType: ScenePreview.DrawSlot
+  fullName: TDMaker.Editor.ScenePreview.DrawSlot
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.ScenePreview.Invalidate*
+  commentId: Overload:TDMaker.Editor.ScenePreview.Invalidate
+  isExternal: true
+  href: TDMaker.Editor.ScenePreview.html#TDMaker_Editor_ScenePreview_Invalidate
+  name: Invalidate
+  nameWithType: ScenePreview.Invalidate
+  fullName: TDMaker.Editor.ScenePreview.Invalidate
+- uid: TDMaker.Editor.ScenePreview.ShowSlots*
+  commentId: Overload:TDMaker.Editor.ScenePreview.ShowSlots
+  isExternal: true
+  href: TDMaker.Editor.ScenePreview.html#TDMaker_Editor_ScenePreview_ShowSlots
+  name: ShowSlots
+  nameWithType: ScenePreview.ShowSlots
+  fullName: TDMaker.Editor.ScenePreview.ShowSlots
+- uid: TDMaker.Editor.ScenePreview.ShowRanges*
+  commentId: Overload:TDMaker.Editor.ScenePreview.ShowRanges
+  isExternal: true
+  href: TDMaker.Editor.ScenePreview.html#TDMaker_Editor_ScenePreview_ShowRanges
+  name: ShowRanges
+  nameWithType: ScenePreview.ShowRanges
+  fullName: TDMaker.Editor.ScenePreview.ShowRanges

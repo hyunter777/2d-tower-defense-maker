@@ -1,0 +1,741 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.SpellDef
+  commentId: T:TDMaker.Core.Defs.SpellDef
+  id: SpellDef
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.SpellDef.#ctor(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.StrikeSequenceDef,TDMaker.Core.Defs.AreaEffectDef,System.Int32)
+  - TDMaker.Core.Defs.SpellDef.Area
+  - TDMaker.Core.Defs.SpellDef.Cooldown
+  - TDMaker.Core.Defs.SpellDef.CreateTrap(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.TrapDef,System.Int32)
+  - TDMaker.Core.Defs.SpellDef.Id
+  - TDMaker.Core.Defs.SpellDef.PointRule
+  - TDMaker.Core.Defs.SpellDef.Strikes
+  - TDMaker.Core.Defs.SpellDef.Support
+  - TDMaker.Core.Defs.SpellDef.Trap
+  - TDMaker.Core.Defs.SpellDef.UnlockWave
+  - TDMaker.Core.Defs.SpellDef.WithTrap(TDMaker.Core.Defs.TrapDef)
+  langs:
+  - csharp
+  - vb
+  name: SpellDef
+  nameWithType: SpellDef
+  fullName: TDMaker.Core.Defs.SpellDef
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: An authored spell combining support units, strikes, traps, and optional residual fields.
+  example: []
+  syntax:
+    content: public sealed class SpellDef
+    content.vb: Public NotInheritable Class SpellDef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.SpellDef.#ctor(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.StrikeSequenceDef,TDMaker.Core.Defs.AreaEffectDef,System.Int32)
+  commentId: M:TDMaker.Core.Defs.SpellDef.#ctor(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.StrikeSequenceDef,TDMaker.Core.Defs.AreaEffectDef,System.Int32)
+  id: '#ctor(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.StrikeSequenceDef,TDMaker.Core.Defs.AreaEffectDef,System.Int32)'
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: SpellDef(string, float, PointRuleDef, SummonDef, StrikeSequenceDef, AreaEffectDef, int)
+  nameWithType: SpellDef.SpellDef(string, float, PointRuleDef, SummonDef, StrikeSequenceDef, AreaEffectDef, int)
+  fullName: TDMaker.Core.Defs.SpellDef.SpellDef(string, float, TDMaker.Core.Defs.PointRuleDef, TDMaker.Core.Defs.SummonDef,
+    TDMaker.Core.Defs.StrikeSequenceDef, TDMaker.Core.Defs.AreaEffectDef, int)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a spell definition.
+  example: []
+  syntax:
+    content: public SpellDef(string id, float cooldown, PointRuleDef pointRule, SummonDef support = null, StrikeSequenceDef
+      strikes = null, AreaEffectDef area = null, int unlockWave = 0)
+    parameters:
+    - id: id
+      type: System.String
+    - id: cooldown
+      type: System.Single
+    - id: pointRule
+      type: TDMaker.Core.Defs.PointRuleDef
+    - id: support
+      type: TDMaker.Core.Defs.SummonDef
+    - id: strikes
+      type: TDMaker.Core.Defs.StrikeSequenceDef
+    - id: area
+      type: TDMaker.Core.Defs.AreaEffectDef
+    - id: unlockWave
+      type: System.Int32
+    content.vb: Public Sub New(id As String, cooldown As Single, pointRule As PointRuleDef, support As SummonDef = Nothing,
+      strikes As StrikeSequenceDef = Nothing, area As AreaEffectDef = Nothing, unlockWave As Integer = 0)
+  overload: TDMaker.Core.Defs.SpellDef.#ctor*
+  nameWithType.vb: SpellDef.New(String, Single, PointRuleDef, SummonDef, StrikeSequenceDef, AreaEffectDef, Integer)
+  fullName.vb: TDMaker.Core.Defs.SpellDef.New(String, Single, TDMaker.Core.Defs.PointRuleDef, TDMaker.Core.Defs.SummonDef,
+    TDMaker.Core.Defs.StrikeSequenceDef, TDMaker.Core.Defs.AreaEffectDef, Integer)
+  name.vb: New(String, Single, PointRuleDef, SummonDef, StrikeSequenceDef, AreaEffectDef, Integer)
+- uid: TDMaker.Core.Defs.SpellDef.CreateTrap(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.TrapDef,System.Int32)
+  commentId: M:TDMaker.Core.Defs.SpellDef.CreateTrap(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.TrapDef,System.Int32)
+  id: CreateTrap(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.TrapDef,System.Int32)
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: CreateTrap(string, float, PointRuleDef, TrapDef, int)
+  nameWithType: SpellDef.CreateTrap(string, float, PointRuleDef, TrapDef, int)
+  fullName: TDMaker.Core.Defs.SpellDef.CreateTrap(string, float, TDMaker.Core.Defs.PointRuleDef, TDMaker.Core.Defs.TrapDef,
+    int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a trap-only spell while preserving the existing constructor and its overload resolution.
+  example:
+  - <pre><code class="lang-csharp">SpellDef.CreateTrap("deploy", 4, pointRule, trap);</code></pre>
+  syntax:
+    content: public static SpellDef CreateTrap(string id, float cooldown, PointRuleDef pointRule, TrapDef trap, int unlockWave
+      = 0)
+    parameters:
+    - id: id
+      type: System.String
+    - id: cooldown
+      type: System.Single
+    - id: pointRule
+      type: TDMaker.Core.Defs.PointRuleDef
+    - id: trap
+      type: TDMaker.Core.Defs.TrapDef
+    - id: unlockWave
+      type: System.Int32
+    return:
+      type: TDMaker.Core.Defs.SpellDef
+    content.vb: Public Shared Function CreateTrap(id As String, cooldown As Single, pointRule As PointRuleDef, trap As TrapDef,
+      unlockWave As Integer = 0) As SpellDef
+  overload: TDMaker.Core.Defs.SpellDef.CreateTrap*
+  nameWithType.vb: SpellDef.CreateTrap(String, Single, PointRuleDef, TrapDef, Integer)
+  fullName.vb: TDMaker.Core.Defs.SpellDef.CreateTrap(String, Single, TDMaker.Core.Defs.PointRuleDef, TDMaker.Core.Defs.TrapDef,
+    Integer)
+  name.vb: CreateTrap(String, Single, PointRuleDef, TrapDef, Integer)
+- uid: TDMaker.Core.Defs.SpellDef.WithTrap(TDMaker.Core.Defs.TrapDef)
+  commentId: M:TDMaker.Core.Defs.SpellDef.WithTrap(TDMaker.Core.Defs.TrapDef)
+  id: WithTrap(TDMaker.Core.Defs.TrapDef)
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: WithTrap(TrapDef)
+  nameWithType: SpellDef.WithTrap(TrapDef)
+  fullName: TDMaker.Core.Defs.SpellDef.WithTrap(TDMaker.Core.Defs.TrapDef)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies every spell payload and replaces or adds the deployment. Trap capacity and its source-zero population limit
+    are checked before any cast side effects.
+  example: []
+  syntax:
+    content: public SpellDef WithTrap(TrapDef trap)
+    parameters:
+    - id: trap
+      type: TDMaker.Core.Defs.TrapDef
+    return:
+      type: TDMaker.Core.Defs.SpellDef
+    content.vb: Public Function WithTrap(trap As TrapDef) As SpellDef
+  overload: TDMaker.Core.Defs.SpellDef.WithTrap*
+- uid: TDMaker.Core.Defs.SpellDef.Id
+  commentId: P:TDMaker.Core.Defs.SpellDef.Id
+  id: Id
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: SpellDef.Id
+  fullName: TDMaker.Core.Defs.SpellDef.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Author-defined spell identifier.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Core.Defs.SpellDef.Id*
+- uid: TDMaker.Core.Defs.SpellDef.Cooldown
+  commentId: P:TDMaker.Core.Defs.SpellDef.Cooldown
+  id: Cooldown
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: Cooldown
+  nameWithType: SpellDef.Cooldown
+  fullName: TDMaker.Core.Defs.SpellDef.Cooldown
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Cooldown consumed only by an approved cast.
+  example: []
+  syntax:
+    content: public float Cooldown { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Cooldown As Single
+  overload: TDMaker.Core.Defs.SpellDef.Cooldown*
+- uid: TDMaker.Core.Defs.SpellDef.PointRule
+  commentId: P:TDMaker.Core.Defs.SpellDef.PointRule
+  id: PointRule
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: PointRule
+  nameWithType: SpellDef.PointRule
+  fullName: TDMaker.Core.Defs.SpellDef.PointRule
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Shared preview and cast point validation.
+  example: []
+  syntax:
+    content: public PointRuleDef PointRule { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.PointRuleDef
+    content.vb: Public ReadOnly Property PointRule As PointRuleDef
+  overload: TDMaker.Core.Defs.SpellDef.PointRule*
+- uid: TDMaker.Core.Defs.SpellDef.Support
+  commentId: P:TDMaker.Core.Defs.SpellDef.Support
+  id: Support
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: Support
+  nameWithType: SpellDef.Support
+  fullName: TDMaker.Core.Defs.SpellDef.Support
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional temporary support units.
+  example: []
+  syntax:
+    content: public SummonDef Support { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.SummonDef
+    content.vb: Public ReadOnly Property Support As SummonDef
+  overload: TDMaker.Core.Defs.SpellDef.Support*
+- uid: TDMaker.Core.Defs.SpellDef.Strikes
+  commentId: P:TDMaker.Core.Defs.SpellDef.Strikes
+  id: Strikes
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: Strikes
+  nameWithType: SpellDef.Strikes
+  fullName: TDMaker.Core.Defs.SpellDef.Strikes
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional independently scheduled area strikes.
+  example: []
+  syntax:
+    content: public StrikeSequenceDef Strikes { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.StrikeSequenceDef
+    content.vb: Public ReadOnly Property Strikes As StrikeSequenceDef
+  overload: TDMaker.Core.Defs.SpellDef.Strikes*
+- uid: TDMaker.Core.Defs.SpellDef.Area
+  commentId: P:TDMaker.Core.Defs.SpellDef.Area
+  id: Area
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: SpellDef.Area
+  fullName: TDMaker.Core.Defs.SpellDef.Area
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional residual region.
+  example: []
+  syntax:
+    content: public AreaEffectDef Area { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.AreaEffectDef
+    content.vb: Public ReadOnly Property Area As AreaEffectDef
+  overload: TDMaker.Core.Defs.SpellDef.Area*
+- uid: TDMaker.Core.Defs.SpellDef.Trap
+  commentId: P:TDMaker.Core.Defs.SpellDef.Trap
+  id: Trap
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: Trap
+  nameWithType: SpellDef.Trap
+  fullName: TDMaker.Core.Defs.SpellDef.Trap
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional deployment placed exactly at the spell-approved point with no entity owner. The spell's point rule replaces
+    automatic trap placement and its point rule.
+  example: []
+  syntax:
+    content: public TrapDef Trap { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TrapDef
+    content.vb: Public ReadOnly Property Trap As TrapDef
+  overload: TDMaker.Core.Defs.SpellDef.Trap*
+- uid: TDMaker.Core.Defs.SpellDef.UnlockWave
+  commentId: P:TDMaker.Core.Defs.SpellDef.UnlockWave
+  id: UnlockWave
+  parent: TDMaker.Core.Defs.SpellDef
+  langs:
+  - csharp
+  - vb
+  name: UnlockWave
+  nameWithType: SpellDef.UnlockWave
+  fullName: TDMaker.Core.Defs.SpellDef.UnlockWave
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Minimum started wave number; zero enables the spell during preparation.
+  example: []
+  syntax:
+    content: public int UnlockWave { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property UnlockWave As Integer
+  overload: TDMaker.Core.Defs.SpellDef.UnlockWave*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.SpellDef.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef__ctor_System_String_System_Single_TDMaker_Core_Defs_PointRuleDef_TDMaker_Core_Defs_SummonDef_TDMaker_Core_Defs_StrikeSequenceDef_TDMaker_Core_Defs_AreaEffectDef_System_Int32_
+  name: SpellDef
+  nameWithType: SpellDef.SpellDef
+  fullName: TDMaker.Core.Defs.SpellDef.SpellDef
+  nameWithType.vb: SpellDef.New
+  fullName.vb: TDMaker.Core.Defs.SpellDef.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Core.Defs.PointRuleDef
+  commentId: T:TDMaker.Core.Defs.PointRuleDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PointRuleDef.html
+  name: PointRuleDef
+  nameWithType: PointRuleDef
+  fullName: TDMaker.Core.Defs.PointRuleDef
+- uid: TDMaker.Core.Defs.SummonDef
+  commentId: T:TDMaker.Core.Defs.SummonDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.SummonDef.html
+  name: SummonDef
+  nameWithType: SummonDef
+  fullName: TDMaker.Core.Defs.SummonDef
+- uid: TDMaker.Core.Defs.StrikeSequenceDef
+  commentId: T:TDMaker.Core.Defs.StrikeSequenceDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.StrikeSequenceDef.html
+  name: StrikeSequenceDef
+  nameWithType: StrikeSequenceDef
+  fullName: TDMaker.Core.Defs.StrikeSequenceDef
+- uid: TDMaker.Core.Defs.AreaEffectDef
+  commentId: T:TDMaker.Core.Defs.AreaEffectDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AreaEffectDef.html
+  name: AreaEffectDef
+  nameWithType: AreaEffectDef
+  fullName: TDMaker.Core.Defs.AreaEffectDef
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.SpellDef.CreateTrap*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.CreateTrap
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_CreateTrap_System_String_System_Single_TDMaker_Core_Defs_PointRuleDef_TDMaker_Core_Defs_TrapDef_System_Int32_
+  name: CreateTrap
+  nameWithType: SpellDef.CreateTrap
+  fullName: TDMaker.Core.Defs.SpellDef.CreateTrap
+- uid: TDMaker.Core.Defs.TrapDef
+  commentId: T:TDMaker.Core.Defs.TrapDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TrapDef.html
+  name: TrapDef
+  nameWithType: TrapDef
+  fullName: TDMaker.Core.Defs.TrapDef
+- uid: TDMaker.Core.Defs.SpellDef
+  commentId: T:TDMaker.Core.Defs.SpellDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html
+  name: SpellDef
+  nameWithType: SpellDef
+  fullName: TDMaker.Core.Defs.SpellDef
+- uid: TDMaker.Core.Defs.SpellDef.WithTrap*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.WithTrap
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_WithTrap_TDMaker_Core_Defs_TrapDef_
+  name: WithTrap
+  nameWithType: SpellDef.WithTrap
+  fullName: TDMaker.Core.Defs.SpellDef.WithTrap
+- uid: TDMaker.Core.Defs.SpellDef.Id*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.Id
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_Id
+  name: Id
+  nameWithType: SpellDef.Id
+  fullName: TDMaker.Core.Defs.SpellDef.Id
+- uid: TDMaker.Core.Defs.SpellDef.Cooldown*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.Cooldown
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_Cooldown
+  name: Cooldown
+  nameWithType: SpellDef.Cooldown
+  fullName: TDMaker.Core.Defs.SpellDef.Cooldown
+- uid: TDMaker.Core.Defs.SpellDef.PointRule*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.PointRule
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_PointRule
+  name: PointRule
+  nameWithType: SpellDef.PointRule
+  fullName: TDMaker.Core.Defs.SpellDef.PointRule
+- uid: TDMaker.Core.Defs.SpellDef.Support*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.Support
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_Support
+  name: Support
+  nameWithType: SpellDef.Support
+  fullName: TDMaker.Core.Defs.SpellDef.Support
+- uid: TDMaker.Core.Defs.SpellDef.Strikes*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.Strikes
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_Strikes
+  name: Strikes
+  nameWithType: SpellDef.Strikes
+  fullName: TDMaker.Core.Defs.SpellDef.Strikes
+- uid: TDMaker.Core.Defs.SpellDef.Area*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.Area
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_Area
+  name: Area
+  nameWithType: SpellDef.Area
+  fullName: TDMaker.Core.Defs.SpellDef.Area
+- uid: TDMaker.Core.Defs.SpellDef.Trap*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.Trap
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_Trap
+  name: Trap
+  nameWithType: SpellDef.Trap
+  fullName: TDMaker.Core.Defs.SpellDef.Trap
+- uid: TDMaker.Core.Defs.SpellDef.UnlockWave*
+  commentId: Overload:TDMaker.Core.Defs.SpellDef.UnlockWave
+  isExternal: true
+  href: TDMaker.Core.Defs.SpellDef.html#TDMaker_Core_Defs_SpellDef_UnlockWave
+  name: UnlockWave
+  nameWithType: SpellDef.UnlockWave
+  fullName: TDMaker.Core.Defs.SpellDef.UnlockWave

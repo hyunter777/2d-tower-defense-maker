@@ -1,0 +1,192 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Localization.ITextProvider
+  commentId: T:TDMaker.Unity.Localization.ITextProvider
+  id: ITextProvider
+  parent: TDMaker.Unity.Localization
+  children:
+  - TDMaker.Unity.Localization.ITextProvider.TryGetText(System.String,System.String@)
+  langs:
+  - csharp
+  - vb
+  name: ITextProvider
+  nameWithType: ITextProvider
+  fullName: TDMaker.Unity.Localization.ITextProvider
+  type: Interface
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: 'A source of user-visible text by key. <xref href="TDMaker.Unity.Localization.TextTable" data-throw-if-not-resolved="false"></xref>
+    assets implement it; implement it yourself to feed the HUD from
+
+    another system (for example the Unity Localization package or a spreadsheet import) and assign it to
+
+    <xref href="TDMaker.Unity.Localization.TextResolver.Provider" data-throw-if-not-resolved="false"></xref>. Lookups happen
+    when a label changes, not every frame, but should not allocate.'
+  example: []
+  syntax:
+    content: public interface ITextProvider
+    content.vb: Public Interface ITextProvider
+  derivedClasses:
+  - TDMaker.Unity.Localization.TextTable
+- uid: TDMaker.Unity.Localization.ITextProvider.TryGetText(System.String,System.String@)
+  commentId: M:TDMaker.Unity.Localization.ITextProvider.TryGetText(System.String,System.String@)
+  id: TryGetText(System.String,System.String@)
+  parent: TDMaker.Unity.Localization.ITextProvider
+  langs:
+  - csharp
+  - vb
+  name: TryGetText(string, out string)
+  nameWithType: ITextProvider.TryGetText(string, out string)
+  fullName: TDMaker.Unity.Localization.ITextProvider.TryGetText(string, out string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: 'Looks up <code class="paramref">key</code>. Returns false (or an empty text) when the provider has no text for
+    it, so the resolver
+
+    falls back to the English text and then to the key itself. Texts may contain rich-text tags and
+
+    <xref href="System.String.Format(System.String%2cSystem.Object)" data-throw-if-not-resolved="false"></xref> placeholders
+    (<code>{0}</code>, <code>{1}</code>) where the key expects numbers or names.'
+  example: []
+  syntax:
+    content: bool TryGetText(string key, out string text)
+    parameters:
+    - id: key
+      type: System.String
+    - id: text
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Function TryGetText(key As String, text As String) As Boolean
+  overload: TDMaker.Unity.Localization.ITextProvider.TryGetText*
+  nameWithType.vb: ITextProvider.TryGetText(String, String)
+  fullName.vb: TDMaker.Unity.Localization.ITextProvider.TryGetText(String, String)
+  name.vb: TryGetText(String, String)
+references:
+- uid: TDMaker.Unity.Localization.TextTable
+  commentId: T:TDMaker.Unity.Localization.TextTable
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextTable.html
+  name: TextTable
+  nameWithType: TextTable
+  fullName: TDMaker.Unity.Localization.TextTable
+- uid: TDMaker.Unity.Localization.TextResolver.Provider
+  commentId: P:TDMaker.Unity.Localization.TextResolver.Provider
+  isExternal: true
+  href: TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Provider
+  name: Provider
+  nameWithType: TextResolver.Provider
+  fullName: TDMaker.Unity.Localization.TextResolver.Provider
+- uid: TDMaker.Unity.Localization
+  commentId: N:TDMaker.Unity.Localization
+  isExternal: true
+  name: TDMaker.Unity.Localization
+  nameWithType: TDMaker.Unity.Localization
+  fullName: TDMaker.Unity.Localization
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Localization
+    name: Localization
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Localization
+    name: Localization
+    isExternal: true
+- uid: System.String.Format(System.String,System.Object)
+  commentId: M:System.String.Format(System.String,System.Object)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string.format#system-string-format(system-string-system-object)
+  name: Format(string, object)
+  nameWithType: string.Format(string, object)
+  fullName: string.Format(string, object)
+  nameWithType.vb: String.Format(String, Object)
+  fullName.vb: String.Format(String, Object)
+  name.vb: Format(String, Object)
+  spec.csharp:
+  - uid: System.String.Format(System.String,System.Object)
+    name: Format
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string.format#system-string-format(system-string-system-object)
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.String.Format(System.String,System.Object)
+    name: Format
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string.format#system-string-format(system-string-system-object)
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: TDMaker.Unity.Localization.ITextProvider.TryGetText*
+  commentId: Overload:TDMaker.Unity.Localization.ITextProvider.TryGetText
+  isExternal: true
+  href: TDMaker.Unity.Localization.ITextProvider.html#TDMaker_Unity_Localization_ITextProvider_TryGetText_System_String_System_String__
+  name: TryGetText
+  nameWithType: ITextProvider.TryGetText
+  fullName: TDMaker.Unity.Localization.ITextProvider.TryGetText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

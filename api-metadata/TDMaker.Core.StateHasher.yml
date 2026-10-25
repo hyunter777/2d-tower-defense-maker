@@ -1,0 +1,642 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.StateHasher
+  commentId: T:TDMaker.Core.StateHasher
+  id: StateHasher
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.StateHasher.#ctor(System.UInt64)
+  - TDMaker.Core.StateHasher.Add(System.Boolean)
+  - TDMaker.Core.StateHasher.Add(System.Double)
+  - TDMaker.Core.StateHasher.Add(System.Int32)
+  - TDMaker.Core.StateHasher.Add(System.Int64)
+  - TDMaker.Core.StateHasher.Add(System.Single)
+  - TDMaker.Core.StateHasher.Add(System.String)
+  - TDMaker.Core.StateHasher.Add(System.UInt64)
+  - TDMaker.Core.StateHasher.Add(TDMaker.Core.Vec2)
+  - TDMaker.Core.StateHasher.Value
+  langs:
+  - csharp
+  - vb
+  name: StateHasher
+  nameWithType: StateHasher
+  fullName: TDMaker.Core.StateHasher
+  type: Struct
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Stable FNV-1a value hashing with explicit byte order; never uses runtime object or string hashes.
+  example: []
+  syntax:
+    content: public struct StateHasher
+    content.vb: Public Structure StateHasher
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Core.StateHasher.#ctor(System.UInt64)
+  commentId: M:TDMaker.Core.StateHasher.#ctor(System.UInt64)
+  id: '#ctor(System.UInt64)'
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: StateHasher(ulong)
+  nameWithType: StateHasher.StateHasher(ulong)
+  fullName: TDMaker.Core.StateHasher.StateHasher(ulong)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Creates a hash accumulator with an explicit seed; FNV-1a uses 14695981039346656037UL.
+  example: []
+  syntax:
+    content: public StateHasher(ulong seed)
+    parameters:
+    - id: seed
+      type: System.UInt64
+    content.vb: Public Sub New(seed As ULong)
+  overload: TDMaker.Core.StateHasher.#ctor*
+  nameWithType.vb: StateHasher.New(ULong)
+  fullName.vb: TDMaker.Core.StateHasher.New(ULong)
+  name.vb: New(ULong)
+- uid: TDMaker.Core.StateHasher.Add(System.Int32)
+  commentId: M:TDMaker.Core.StateHasher.Add(System.Int32)
+  id: Add(System.Int32)
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: Add(int)
+  nameWithType: StateHasher.Add(int)
+  fullName: TDMaker.Core.StateHasher.Add(int)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds a signed integer in little-endian order.
+  example: []
+  syntax:
+    content: public void Add(int item)
+    parameters:
+    - id: item
+      type: System.Int32
+    content.vb: Public Sub Add(item As Integer)
+  overload: TDMaker.Core.StateHasher.Add*
+  nameWithType.vb: StateHasher.Add(Integer)
+  fullName.vb: TDMaker.Core.StateHasher.Add(Integer)
+  name.vb: Add(Integer)
+- uid: TDMaker.Core.StateHasher.Add(System.Int64)
+  commentId: M:TDMaker.Core.StateHasher.Add(System.Int64)
+  id: Add(System.Int64)
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: Add(long)
+  nameWithType: StateHasher.Add(long)
+  fullName: TDMaker.Core.StateHasher.Add(long)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds a signed long in little-endian order.
+  example: []
+  syntax:
+    content: public void Add(long item)
+    parameters:
+    - id: item
+      type: System.Int64
+    content.vb: Public Sub Add(item As Long)
+  overload: TDMaker.Core.StateHasher.Add*
+  nameWithType.vb: StateHasher.Add(Long)
+  fullName.vb: TDMaker.Core.StateHasher.Add(Long)
+  name.vb: Add(Long)
+- uid: TDMaker.Core.StateHasher.Add(System.UInt64)
+  commentId: M:TDMaker.Core.StateHasher.Add(System.UInt64)
+  id: Add(System.UInt64)
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: Add(ulong)
+  nameWithType: StateHasher.Add(ulong)
+  fullName: TDMaker.Core.StateHasher.Add(ulong)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds an unsigned long in little-endian order.
+  example: []
+  syntax:
+    content: public void Add(ulong item)
+    parameters:
+    - id: item
+      type: System.UInt64
+    content.vb: Public Sub Add(item As ULong)
+  overload: TDMaker.Core.StateHasher.Add*
+  nameWithType.vb: StateHasher.Add(ULong)
+  fullName.vb: TDMaker.Core.StateHasher.Add(ULong)
+  name.vb: Add(ULong)
+- uid: TDMaker.Core.StateHasher.Add(System.Single)
+  commentId: M:TDMaker.Core.StateHasher.Add(System.Single)
+  id: Add(System.Single)
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: Add(float)
+  nameWithType: StateHasher.Add(float)
+  fullName: TDMaker.Core.StateHasher.Add(float)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds exact IEEE single bits.
+  example: []
+  syntax:
+    content: public void Add(float item)
+    parameters:
+    - id: item
+      type: System.Single
+    content.vb: Public Sub Add(item As Single)
+  overload: TDMaker.Core.StateHasher.Add*
+  nameWithType.vb: StateHasher.Add(Single)
+  fullName.vb: TDMaker.Core.StateHasher.Add(Single)
+  name.vb: Add(Single)
+- uid: TDMaker.Core.StateHasher.Add(System.Double)
+  commentId: M:TDMaker.Core.StateHasher.Add(System.Double)
+  id: Add(System.Double)
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: Add(double)
+  nameWithType: StateHasher.Add(double)
+  fullName: TDMaker.Core.StateHasher.Add(double)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds exact IEEE double bits.
+  example: []
+  syntax:
+    content: public void Add(double item)
+    parameters:
+    - id: item
+      type: System.Double
+    content.vb: Public Sub Add(item As Double)
+  overload: TDMaker.Core.StateHasher.Add*
+  nameWithType.vb: StateHasher.Add(Double)
+  fullName.vb: TDMaker.Core.StateHasher.Add(Double)
+  name.vb: Add(Double)
+- uid: TDMaker.Core.StateHasher.Add(System.Boolean)
+  commentId: M:TDMaker.Core.StateHasher.Add(System.Boolean)
+  id: Add(System.Boolean)
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: Add(bool)
+  nameWithType: StateHasher.Add(bool)
+  fullName: TDMaker.Core.StateHasher.Add(bool)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds a boolean.
+  example: []
+  syntax:
+    content: public void Add(bool item)
+    parameters:
+    - id: item
+      type: System.Boolean
+    content.vb: Public Sub Add(item As Boolean)
+  overload: TDMaker.Core.StateHasher.Add*
+  nameWithType.vb: StateHasher.Add(Boolean)
+  fullName.vb: TDMaker.Core.StateHasher.Add(Boolean)
+  name.vb: Add(Boolean)
+- uid: TDMaker.Core.StateHasher.Add(System.String)
+  commentId: M:TDMaker.Core.StateHasher.Add(System.String)
+  id: Add(System.String)
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: Add(string)
+  nameWithType: StateHasher.Add(string)
+  fullName: TDMaker.Core.StateHasher.Add(string)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds string length and ordinal UTF-16 characters; null differs from empty.
+  example: []
+  syntax:
+    content: public void Add(string item)
+    parameters:
+    - id: item
+      type: System.String
+    content.vb: Public Sub Add(item As String)
+  overload: TDMaker.Core.StateHasher.Add*
+  nameWithType.vb: StateHasher.Add(String)
+  fullName.vb: TDMaker.Core.StateHasher.Add(String)
+  name.vb: Add(String)
+- uid: TDMaker.Core.StateHasher.Add(TDMaker.Core.Vec2)
+  commentId: M:TDMaker.Core.StateHasher.Add(TDMaker.Core.Vec2)
+  id: Add(TDMaker.Core.Vec2)
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: Add(Vec2)
+  nameWithType: StateHasher.Add(Vec2)
+  fullName: TDMaker.Core.StateHasher.Add(TDMaker.Core.Vec2)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Adds two exact coordinates.
+  example: []
+  syntax:
+    content: public void Add(Vec2 item)
+    parameters:
+    - id: item
+      type: TDMaker.Core.Vec2
+    content.vb: Public Sub Add(item As Vec2)
+  overload: TDMaker.Core.StateHasher.Add*
+- uid: TDMaker.Core.StateHasher.Value
+  commentId: P:TDMaker.Core.StateHasher.Value
+  id: Value
+  parent: TDMaker.Core.StateHasher
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: StateHasher.Value
+  fullName: TDMaker.Core.StateHasher.Value
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Current hash value.
+  example: []
+  syntax:
+    content: public ulong Value { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property Value As ULong
+  overload: TDMaker.Core.StateHasher.Value*
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.StateHasher.#ctor*
+  commentId: Overload:TDMaker.Core.StateHasher.#ctor
+  isExternal: true
+  href: TDMaker.Core.StateHasher.html#TDMaker_Core_StateHasher__ctor_System_UInt64_
+  name: StateHasher
+  nameWithType: StateHasher.StateHasher
+  fullName: TDMaker.Core.StateHasher.StateHasher
+  nameWithType.vb: StateHasher.New
+  fullName.vb: TDMaker.Core.StateHasher.New
+  name.vb: New
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: TDMaker.Core.StateHasher.Add*
+  commentId: Overload:TDMaker.Core.StateHasher.Add
+  isExternal: true
+  href: TDMaker.Core.StateHasher.html#TDMaker_Core_StateHasher_Add_System_Int32_
+  name: Add
+  nameWithType: StateHasher.Add
+  fullName: TDMaker.Core.StateHasher.Add
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Vec2
+  commentId: T:TDMaker.Core.Vec2
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: TDMaker.Core.Vec2
+- uid: TDMaker.Core.StateHasher.Value*
+  commentId: Overload:TDMaker.Core.StateHasher.Value
+  isExternal: true
+  href: TDMaker.Core.StateHasher.html#TDMaker_Core_StateHasher_Value
+  name: Value
+  nameWithType: StateHasher.Value
+  fullName: TDMaker.Core.StateHasher.Value

@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.LaneSelection
+  commentId: T:TDMaker.Core.Defs.LaneSelection
+  id: LaneSelection
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.LaneSelection.Fixed
+  - TDMaker.Core.Defs.LaneSelection.Random
+  - TDMaker.Core.Defs.LaneSelection.RoundRobin
+  langs:
+  - csharp
+  - vb
+  name: LaneSelection
+  nameWithType: LaneSelection
+  fullName: TDMaker.Core.Defs.LaneSelection
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Lane selection for each spawned unit.
+  example: []
+  syntax:
+    content: public enum LaneSelection
+    content.vb: Public Enum LaneSelection
+- uid: TDMaker.Core.Defs.LaneSelection.Fixed
+  commentId: F:TDMaker.Core.Defs.LaneSelection.Fixed
+  id: Fixed
+  parent: TDMaker.Core.Defs.LaneSelection
+  langs:
+  - csharp
+  - vb
+  name: Fixed
+  nameWithType: LaneSelection.Fixed
+  fullName: TDMaker.Core.Defs.LaneSelection.Fixed
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Always uses the configured lane index.
+  example: []
+  syntax:
+    content: Fixed = 0
+    return:
+      type: TDMaker.Core.Defs.LaneSelection
+- uid: TDMaker.Core.Defs.LaneSelection.RoundRobin
+  commentId: F:TDMaker.Core.Defs.LaneSelection.RoundRobin
+  id: RoundRobin
+  parent: TDMaker.Core.Defs.LaneSelection
+  langs:
+  - csharp
+  - vb
+  name: RoundRobin
+  nameWithType: LaneSelection.RoundRobin
+  fullName: TDMaker.Core.Defs.LaneSelection.RoundRobin
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Cycles lanes from the configured index.
+  example: []
+  syntax:
+    content: RoundRobin = 1
+    return:
+      type: TDMaker.Core.Defs.LaneSelection
+- uid: TDMaker.Core.Defs.LaneSelection.Random
+  commentId: F:TDMaker.Core.Defs.LaneSelection.Random
+  id: Random
+  parent: TDMaker.Core.Defs.LaneSelection
+  langs:
+  - csharp
+  - vb
+  name: Random
+  nameWithType: LaneSelection.Random
+  fullName: TDMaker.Core.Defs.LaneSelection.Random
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Samples a lane independently for each unit.
+  example: []
+  syntax:
+    content: Random = 2
+    return:
+      type: TDMaker.Core.Defs.LaneSelection
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.LaneSelection
+  commentId: T:TDMaker.Core.Defs.LaneSelection
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.LaneSelection.html
+  name: LaneSelection
+  nameWithType: LaneSelection
+  fullName: TDMaker.Core.Defs.LaneSelection

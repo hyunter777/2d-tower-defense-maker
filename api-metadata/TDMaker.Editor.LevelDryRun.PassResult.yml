@@ -1,0 +1,481 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.LevelDryRun.PassResult
+  commentId: T:TDMaker.Editor.LevelDryRun.PassResult
+  id: LevelDryRun.PassResult
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.LevelDryRun.PassResult.Lives
+  - TDMaker.Editor.LevelDryRun.PassResult.Pass
+  - TDMaker.Editor.LevelDryRun.PassResult.Phase
+  - TDMaker.Editor.LevelDryRun.PassResult.Seconds
+  - TDMaker.Editor.LevelDryRun.PassResult.Stars
+  - TDMaker.Editor.LevelDryRun.PassResult.Waves
+  langs:
+  - csharp
+  - vb
+  name: LevelDryRun.PassResult
+  nameWithType: LevelDryRun.PassResult
+  fullName: TDMaker.Editor.LevelDryRun.PassResult
+  type: Struct
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Outcome of one pass.
+  example: []
+  syntax:
+    content: public struct LevelDryRun.PassResult
+    content.vb: Public Structure LevelDryRun.PassResult
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Editor.LevelDryRun.PassResult.Pass
+  commentId: F:TDMaker.Editor.LevelDryRun.PassResult.Pass
+  id: Pass
+  parent: TDMaker.Editor.LevelDryRun.PassResult
+  langs:
+  - csharp
+  - vb
+  name: Pass
+  nameWithType: LevelDryRun.PassResult.Pass
+  fullName: TDMaker.Editor.LevelDryRun.PassResult.Pass
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Which pass.
+  example: []
+  syntax:
+    content: public LevelDryRun.Pass Pass
+    return:
+      type: TDMaker.Editor.LevelDryRun.Pass
+    content.vb: Public Pass As LevelDryRun.Pass
+- uid: TDMaker.Editor.LevelDryRun.PassResult.Phase
+  commentId: F:TDMaker.Editor.LevelDryRun.PassResult.Phase
+  id: Phase
+  parent: TDMaker.Editor.LevelDryRun.PassResult
+  langs:
+  - csharp
+  - vb
+  name: Phase
+  nameWithType: LevelDryRun.PassResult.Phase
+  fullName: TDMaker.Editor.LevelDryRun.PassResult.Phase
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Final phase (Running means the time limit was hit).
+  example: []
+  syntax:
+    content: public GamePhase Phase
+    return:
+      type: TDMaker.Core.GamePhase
+    content.vb: Public Phase As GamePhase
+- uid: TDMaker.Editor.LevelDryRun.PassResult.Stars
+  commentId: F:TDMaker.Editor.LevelDryRun.PassResult.Stars
+  id: Stars
+  parent: TDMaker.Editor.LevelDryRun.PassResult
+  langs:
+  - csharp
+  - vb
+  name: Stars
+  nameWithType: LevelDryRun.PassResult.Stars
+  fullName: TDMaker.Editor.LevelDryRun.PassResult.Stars
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Victory rating (0 unless won).
+  example: []
+  syntax:
+    content: public int Stars
+    return:
+      type: System.Int32
+    content.vb: Public Stars As Integer
+- uid: TDMaker.Editor.LevelDryRun.PassResult.Lives
+  commentId: F:TDMaker.Editor.LevelDryRun.PassResult.Lives
+  id: Lives
+  parent: TDMaker.Editor.LevelDryRun.PassResult
+  langs:
+  - csharp
+  - vb
+  name: Lives
+  nameWithType: LevelDryRun.PassResult.Lives
+  fullName: TDMaker.Editor.LevelDryRun.PassResult.Lives
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Lives left at the end.
+  example: []
+  syntax:
+    content: public int Lives
+    return:
+      type: System.Int32
+    content.vb: Public Lives As Integer
+- uid: TDMaker.Editor.LevelDryRun.PassResult.Seconds
+  commentId: F:TDMaker.Editor.LevelDryRun.PassResult.Seconds
+  id: Seconds
+  parent: TDMaker.Editor.LevelDryRun.PassResult
+  langs:
+  - csharp
+  - vb
+  name: Seconds
+  nameWithType: LevelDryRun.PassResult.Seconds
+  fullName: TDMaker.Editor.LevelDryRun.PassResult.Seconds
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Game seconds simulated.
+  example: []
+  syntax:
+    content: public double Seconds
+    return:
+      type: System.Double
+    content.vb: Public Seconds As Double
+- uid: TDMaker.Editor.LevelDryRun.PassResult.Waves
+  commentId: F:TDMaker.Editor.LevelDryRun.PassResult.Waves
+  id: Waves
+  parent: TDMaker.Editor.LevelDryRun.PassResult
+  langs:
+  - csharp
+  - vb
+  name: Waves
+  nameWithType: LevelDryRun.PassResult.Waves
+  fullName: TDMaker.Editor.LevelDryRun.PassResult.Waves
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Waves started.
+  example: []
+  syntax:
+    content: public int Waves
+    return:
+      type: System.Int32
+    content.vb: Public Waves As Integer
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Editor.LevelDryRun.Pass
+  commentId: T:TDMaker.Editor.LevelDryRun.Pass
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.LevelDryRun.html
+  name: LevelDryRun.Pass
+  nameWithType: LevelDryRun.Pass
+  fullName: TDMaker.Editor.LevelDryRun.Pass
+  spec.csharp:
+  - uid: TDMaker.Editor.LevelDryRun
+    name: LevelDryRun
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.html
+  - name: .
+  - uid: TDMaker.Editor.LevelDryRun.Pass
+    name: Pass
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.Pass.html
+  spec.vb:
+  - uid: TDMaker.Editor.LevelDryRun
+    name: LevelDryRun
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.html
+  - name: .
+  - uid: TDMaker.Editor.LevelDryRun.Pass
+    name: Pass
+    isExternal: true
+    href: TDMaker.Editor.LevelDryRun.Pass.html
+- uid: TDMaker.Core.GamePhase
+  commentId: T:TDMaker.Core.GamePhase
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.GamePhase.html
+  name: GamePhase
+  nameWithType: GamePhase
+  fullName: TDMaker.Core.GamePhase
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double

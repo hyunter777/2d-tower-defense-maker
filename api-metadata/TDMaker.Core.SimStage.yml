@@ -1,0 +1,347 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.SimStage
+  commentId: T:TDMaker.Core.SimStage
+  id: SimStage
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.SimStage.Blocking
+  - TDMaker.Core.SimStage.Commands
+  - TDMaker.Core.SimStage.Damage
+  - TDMaker.Core.SimStage.Death
+  - TDMaker.Core.SimStage.Effects
+  - TDMaker.Core.SimStage.Exits
+  - TDMaker.Core.SimStage.Flow
+  - TDMaker.Core.SimStage.Flush
+  - TDMaker.Core.SimStage.HeroesAndSpells
+  - TDMaker.Core.SimStage.Melee
+  - TDMaker.Core.SimStage.Motion
+  - TDMaker.Core.SimStage.Projectiles
+  - TDMaker.Core.SimStage.Ranged
+  - TDMaker.Core.SimStage.Waves
+  langs:
+  - csharp
+  - vb
+  name: SimStage
+  nameWithType: SimStage
+  fullName: TDMaker.Core.SimStage
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Stable anchors for systems registered before the first tick.
+  example: []
+  syntax:
+    content: public enum SimStage
+    content.vb: Public Enum SimStage
+- uid: TDMaker.Core.SimStage.Commands
+  commentId: F:TDMaker.Core.SimStage.Commands
+  id: Commands
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Commands
+  nameWithType: SimStage.Commands
+  fullName: TDMaker.Core.SimStage.Commands
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Input command processing.
+  example: []
+  syntax:
+    content: Commands = 0
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Waves
+  commentId: F:TDMaker.Core.SimStage.Waves
+  id: Waves
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Waves
+  nameWithType: SimStage.Waves
+  fullName: TDMaker.Core.SimStage.Waves
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Wave and summon emission.
+  example: []
+  syntax:
+    content: Waves = 1
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Effects
+  commentId: F:TDMaker.Core.SimStage.Effects
+  id: Effects
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Effects
+  nameWithType: SimStage.Effects
+  fullName: TDMaker.Core.SimStage.Effects
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Status effects and recovery.
+  example: []
+  syntax:
+    content: Effects = 2
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Motion
+  commentId: F:TDMaker.Core.SimStage.Motion
+  id: Motion
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Motion
+  nameWithType: SimStage.Motion
+  fullName: TDMaker.Core.SimStage.Motion
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Path and friendly movement.
+  example: []
+  syntax:
+    content: Motion = 3
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Blocking
+  commentId: F:TDMaker.Core.SimStage.Blocking
+  id: Blocking
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Blocking
+  nameWithType: SimStage.Blocking
+  fullName: TDMaker.Core.SimStage.Blocking
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Soldier and hero interception.
+  example: []
+  syntax:
+    content: Blocking = 4
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Melee
+  commentId: F:TDMaker.Core.SimStage.Melee
+  id: Melee
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Melee
+  nameWithType: SimStage.Melee
+  fullName: TDMaker.Core.SimStage.Melee
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Melee attack cycles.
+  example: []
+  syntax:
+    content: Melee = 5
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Ranged
+  commentId: F:TDMaker.Core.SimStage.Ranged
+  id: Ranged
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Ranged
+  nameWithType: SimStage.Ranged
+  fullName: TDMaker.Core.SimStage.Ranged
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Ranged attacks and ability actions.
+  example: []
+  syntax:
+    content: Ranged = 6
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Projectiles
+  commentId: F:TDMaker.Core.SimStage.Projectiles
+  id: Projectiles
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Projectiles
+  nameWithType: SimStage.Projectiles
+  fullName: TDMaker.Core.SimStage.Projectiles
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Projectile flight and impact.
+  example: []
+  syntax:
+    content: Projectiles = 7
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Damage
+  commentId: F:TDMaker.Core.SimStage.Damage
+  id: Damage
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Damage
+  nameWithType: SimStage.Damage
+  fullName: TDMaker.Core.SimStage.Damage
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: FIFO damage resolution.
+  example: []
+  syntax:
+    content: Damage = 8
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Death
+  commentId: F:TDMaker.Core.SimStage.Death
+  id: Death
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Death
+  nameWithType: SimStage.Death
+  fullName: TDMaker.Core.SimStage.Death
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Death and bounty resolution.
+  example: []
+  syntax:
+    content: Death = 9
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Exits
+  commentId: F:TDMaker.Core.SimStage.Exits
+  id: Exits
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Exits
+  nameWithType: SimStage.Exits
+  fullName: TDMaker.Core.SimStage.Exits
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Path exit resolution.
+  example: []
+  syntax:
+    content: Exits = 10
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.HeroesAndSpells
+  commentId: F:TDMaker.Core.SimStage.HeroesAndSpells
+  id: HeroesAndSpells
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: HeroesAndSpells
+  nameWithType: SimStage.HeroesAndSpells
+  fullName: TDMaker.Core.SimStage.HeroesAndSpells
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Hero progression and spell readiness.
+  example: []
+  syntax:
+    content: HeroesAndSpells = 11
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Flow
+  commentId: F:TDMaker.Core.SimStage.Flow
+  id: Flow
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Flow
+  nameWithType: SimStage.Flow
+  fullName: TDMaker.Core.SimStage.Flow
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Victory and defeat decisions.
+  example: []
+  syntax:
+    content: Flow = 12
+    return:
+      type: TDMaker.Core.SimStage
+- uid: TDMaker.Core.SimStage.Flush
+  commentId: F:TDMaker.Core.SimStage.Flush
+  id: Flush
+  parent: TDMaker.Core.SimStage
+  langs:
+  - csharp
+  - vb
+  name: Flush
+  nameWithType: SimStage.Flush
+  fullName: TDMaker.Core.SimStage.Flush
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Deferred structural changes.
+  example: []
+  syntax:
+    content: Flush = 13
+    return:
+      type: TDMaker.Core.SimStage
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.SimStage
+  commentId: T:TDMaker.Core.SimStage
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.SimStage.html
+  name: SimStage
+  nameWithType: SimStage
+  fullName: TDMaker.Core.SimStage

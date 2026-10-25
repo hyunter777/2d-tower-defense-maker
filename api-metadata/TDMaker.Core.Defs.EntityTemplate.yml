@@ -1,0 +1,1230 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.EntityTemplate
+  commentId: T:TDMaker.Core.Defs.EntityTemplate
+  id: EntityTemplate
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.EntityTemplate.#ctor(System.String,System.String,TDMaker.Core.Defs.HealthDef,TDMaker.Core.Defs.ArmorDef,TDMaker.Core.Defs.MotionDef,TDMaker.Core.Defs.PathFollowDef,TDMaker.Core.Defs.BountyDef,TDMaker.Core.Defs.MeleeDef,TDMaker.Core.Defs.RangedDef,TDMaker.Core.Defs.TowerDef,TDMaker.Core.Defs.BarracksDef,TDMaker.Core.Defs.SoldierDef,TDMaker.Core.Defs.HeroDef,TDMaker.Core.Defs.ProjectileDef,TDMaker.Core.Defs.AuraDef,TDMaker.Core.Defs.StatusImmunityDef,TDMaker.Core.Defs.FlyingDef,TDMaker.Core.Defs.RenderDef)
+  - TDMaker.Core.Defs.EntityTemplate.Armor
+  - TDMaker.Core.Defs.EntityTemplate.Aura
+  - TDMaker.Core.Defs.EntityTemplate.Barracks
+  - TDMaker.Core.Defs.EntityTemplate.BaseId
+  - TDMaker.Core.Defs.EntityTemplate.Bounty
+  - TDMaker.Core.Defs.EntityTemplate.CustomData
+  - TDMaker.Core.Defs.EntityTemplate.Flying
+  - TDMaker.Core.Defs.EntityTemplate.Health
+  - TDMaker.Core.Defs.EntityTemplate.Hero
+  - TDMaker.Core.Defs.EntityTemplate.Id
+  - TDMaker.Core.Defs.EntityTemplate.Melee
+  - TDMaker.Core.Defs.EntityTemplate.Motion
+  - TDMaker.Core.Defs.EntityTemplate.PathFollow
+  - TDMaker.Core.Defs.EntityTemplate.Projectile
+  - TDMaker.Core.Defs.EntityTemplate.Ranged
+  - TDMaker.Core.Defs.EntityTemplate.Render
+  - TDMaker.Core.Defs.EntityTemplate.Rules
+  - TDMaker.Core.Defs.EntityTemplate.Soldier
+  - TDMaker.Core.Defs.EntityTemplate.StatusImmunity
+  - TDMaker.Core.Defs.EntityTemplate.Tower
+  - TDMaker.Core.Defs.EntityTemplate.WithCustomData``1(``0)
+  - TDMaker.Core.Defs.EntityTemplate.WithRules(TDMaker.Core.Defs.EntityRulesDef)
+  langs:
+  - csharp
+  - vb
+  name: EntityTemplate
+  nameWithType: EntityTemplate
+  fullName: TDMaker.Core.Defs.EntityTemplate
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: An immutable template with nullable definition slots; null inherits its parent's slot.
+  example: []
+  syntax:
+    content: public sealed class EntityTemplate
+    content.vb: Public NotInheritable Class EntityTemplate
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Defs.EntityTemplate.WithCustomData``1(``0)
+  commentId: M:TDMaker.Core.Defs.EntityTemplate.WithCustomData``1(``0)
+  id: WithCustomData``1(``0)
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: WithCustomData<T>(T)
+  nameWithType: EntityTemplate.WithCustomData<T>(T)
+  fullName: TDMaker.Core.Defs.EntityTemplate.WithCustomData<T>(T)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Copies the template and adds or replaces one custom definition slot.
+  example:
+  - <pre><code class="lang-csharp">var custom = template.WithCustomData(new ShieldDef(100));</code></pre>
+  syntax:
+    content: 'public EntityTemplate WithCustomData<T>(T value) where T : class'
+    parameters:
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: TDMaker.Core.Defs.EntityTemplate
+    content.vb: Public Function WithCustomData(Of T As Class)(value As T) As EntityTemplate
+  overload: TDMaker.Core.Defs.EntityTemplate.WithCustomData*
+  nameWithType.vb: EntityTemplate.WithCustomData(Of T)(T)
+  fullName.vb: TDMaker.Core.Defs.EntityTemplate.WithCustomData(Of T)(T)
+  name.vb: WithCustomData(Of T)(T)
+- uid: TDMaker.Core.Defs.EntityTemplate.#ctor(System.String,System.String,TDMaker.Core.Defs.HealthDef,TDMaker.Core.Defs.ArmorDef,TDMaker.Core.Defs.MotionDef,TDMaker.Core.Defs.PathFollowDef,TDMaker.Core.Defs.BountyDef,TDMaker.Core.Defs.MeleeDef,TDMaker.Core.Defs.RangedDef,TDMaker.Core.Defs.TowerDef,TDMaker.Core.Defs.BarracksDef,TDMaker.Core.Defs.SoldierDef,TDMaker.Core.Defs.HeroDef,TDMaker.Core.Defs.ProjectileDef,TDMaker.Core.Defs.AuraDef,TDMaker.Core.Defs.StatusImmunityDef,TDMaker.Core.Defs.FlyingDef,TDMaker.Core.Defs.RenderDef)
+  commentId: M:TDMaker.Core.Defs.EntityTemplate.#ctor(System.String,System.String,TDMaker.Core.Defs.HealthDef,TDMaker.Core.Defs.ArmorDef,TDMaker.Core.Defs.MotionDef,TDMaker.Core.Defs.PathFollowDef,TDMaker.Core.Defs.BountyDef,TDMaker.Core.Defs.MeleeDef,TDMaker.Core.Defs.RangedDef,TDMaker.Core.Defs.TowerDef,TDMaker.Core.Defs.BarracksDef,TDMaker.Core.Defs.SoldierDef,TDMaker.Core.Defs.HeroDef,TDMaker.Core.Defs.ProjectileDef,TDMaker.Core.Defs.AuraDef,TDMaker.Core.Defs.StatusImmunityDef,TDMaker.Core.Defs.FlyingDef,TDMaker.Core.Defs.RenderDef)
+  id: '#ctor(System.String,System.String,TDMaker.Core.Defs.HealthDef,TDMaker.Core.Defs.ArmorDef,TDMaker.Core.Defs.MotionDef,TDMaker.Core.Defs.PathFollowDef,TDMaker.Core.Defs.BountyDef,TDMaker.Core.Defs.MeleeDef,TDMaker.Core.Defs.RangedDef,TDMaker.Core.Defs.TowerDef,TDMaker.Core.Defs.BarracksDef,TDMaker.Core.Defs.SoldierDef,TDMaker.Core.Defs.HeroDef,TDMaker.Core.Defs.ProjectileDef,TDMaker.Core.Defs.AuraDef,TDMaker.Core.Defs.StatusImmunityDef,TDMaker.Core.Defs.FlyingDef,TDMaker.Core.Defs.RenderDef)'
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: EntityTemplate(string, string, HealthDef, ArmorDef, MotionDef, PathFollowDef, BountyDef, MeleeDef, RangedDef, TowerDef,
+    BarracksDef, SoldierDef, HeroDef, ProjectileDef, AuraDef, StatusImmunityDef, FlyingDef, RenderDef)
+  nameWithType: EntityTemplate.EntityTemplate(string, string, HealthDef, ArmorDef, MotionDef, PathFollowDef, BountyDef, MeleeDef,
+    RangedDef, TowerDef, BarracksDef, SoldierDef, HeroDef, ProjectileDef, AuraDef, StatusImmunityDef, FlyingDef, RenderDef)
+  fullName: TDMaker.Core.Defs.EntityTemplate.EntityTemplate(string, string, TDMaker.Core.Defs.HealthDef, TDMaker.Core.Defs.ArmorDef,
+    TDMaker.Core.Defs.MotionDef, TDMaker.Core.Defs.PathFollowDef, TDMaker.Core.Defs.BountyDef, TDMaker.Core.Defs.MeleeDef,
+    TDMaker.Core.Defs.RangedDef, TDMaker.Core.Defs.TowerDef, TDMaker.Core.Defs.BarracksDef, TDMaker.Core.Defs.SoldierDef,
+    TDMaker.Core.Defs.HeroDef, TDMaker.Core.Defs.ProjectileDef, TDMaker.Core.Defs.AuraDef, TDMaker.Core.Defs.StatusImmunityDef,
+    TDMaker.Core.Defs.FlyingDef, TDMaker.Core.Defs.RenderDef)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates template data; resolution happens when a registry is constructed.
+  example: []
+  syntax:
+    content: public EntityTemplate(string id, string baseId = null, HealthDef health = null, ArmorDef armor = null, MotionDef
+      motion = null, PathFollowDef pathFollow = null, BountyDef bounty = null, MeleeDef melee = null, RangedDef ranged = null,
+      TowerDef tower = null, BarracksDef barracks = null, SoldierDef soldier = null, HeroDef hero = null, ProjectileDef projectile
+      = null, AuraDef aura = null, StatusImmunityDef statusImmunity = null, FlyingDef flying = null, RenderDef render = null)
+    parameters:
+    - id: id
+      type: System.String
+    - id: baseId
+      type: System.String
+    - id: health
+      type: TDMaker.Core.Defs.HealthDef
+    - id: armor
+      type: TDMaker.Core.Defs.ArmorDef
+    - id: motion
+      type: TDMaker.Core.Defs.MotionDef
+    - id: pathFollow
+      type: TDMaker.Core.Defs.PathFollowDef
+    - id: bounty
+      type: TDMaker.Core.Defs.BountyDef
+    - id: melee
+      type: TDMaker.Core.Defs.MeleeDef
+    - id: ranged
+      type: TDMaker.Core.Defs.RangedDef
+    - id: tower
+      type: TDMaker.Core.Defs.TowerDef
+    - id: barracks
+      type: TDMaker.Core.Defs.BarracksDef
+    - id: soldier
+      type: TDMaker.Core.Defs.SoldierDef
+    - id: hero
+      type: TDMaker.Core.Defs.HeroDef
+    - id: projectile
+      type: TDMaker.Core.Defs.ProjectileDef
+    - id: aura
+      type: TDMaker.Core.Defs.AuraDef
+    - id: statusImmunity
+      type: TDMaker.Core.Defs.StatusImmunityDef
+    - id: flying
+      type: TDMaker.Core.Defs.FlyingDef
+    - id: render
+      type: TDMaker.Core.Defs.RenderDef
+    content.vb: Public Sub New(id As String, baseId As String = Nothing, health As HealthDef = Nothing, armor As ArmorDef
+      = Nothing, motion As MotionDef = Nothing, pathFollow As PathFollowDef = Nothing, bounty As BountyDef = Nothing, melee
+      As MeleeDef = Nothing, ranged As RangedDef = Nothing, tower As TowerDef = Nothing, barracks As BarracksDef = Nothing,
+      soldier As SoldierDef = Nothing, hero As HeroDef = Nothing, projectile As ProjectileDef = Nothing, aura As AuraDef =
+      Nothing, statusImmunity As StatusImmunityDef = Nothing, flying As FlyingDef = Nothing, render As RenderDef = Nothing)
+  overload: TDMaker.Core.Defs.EntityTemplate.#ctor*
+  nameWithType.vb: EntityTemplate.New(String, String, HealthDef, ArmorDef, MotionDef, PathFollowDef, BountyDef, MeleeDef,
+    RangedDef, TowerDef, BarracksDef, SoldierDef, HeroDef, ProjectileDef, AuraDef, StatusImmunityDef, FlyingDef, RenderDef)
+  fullName.vb: TDMaker.Core.Defs.EntityTemplate.New(String, String, TDMaker.Core.Defs.HealthDef, TDMaker.Core.Defs.ArmorDef,
+    TDMaker.Core.Defs.MotionDef, TDMaker.Core.Defs.PathFollowDef, TDMaker.Core.Defs.BountyDef, TDMaker.Core.Defs.MeleeDef,
+    TDMaker.Core.Defs.RangedDef, TDMaker.Core.Defs.TowerDef, TDMaker.Core.Defs.BarracksDef, TDMaker.Core.Defs.SoldierDef,
+    TDMaker.Core.Defs.HeroDef, TDMaker.Core.Defs.ProjectileDef, TDMaker.Core.Defs.AuraDef, TDMaker.Core.Defs.StatusImmunityDef,
+    TDMaker.Core.Defs.FlyingDef, TDMaker.Core.Defs.RenderDef)
+  name.vb: New(String, String, HealthDef, ArmorDef, MotionDef, PathFollowDef, BountyDef, MeleeDef, RangedDef, TowerDef, BarracksDef,
+    SoldierDef, HeroDef, ProjectileDef, AuraDef, StatusImmunityDef, FlyingDef, RenderDef)
+- uid: TDMaker.Core.Defs.EntityTemplate.WithRules(TDMaker.Core.Defs.EntityRulesDef)
+  commentId: M:TDMaker.Core.Defs.EntityTemplate.WithRules(TDMaker.Core.Defs.EntityRulesDef)
+  id: WithRules(TDMaker.Core.Defs.EntityRulesDef)
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: WithRules(EntityRulesDef)
+  nameWithType: EntityTemplate.WithRules(EntityRulesDef)
+  fullName: TDMaker.Core.Defs.EntityTemplate.WithRules(TDMaker.Core.Defs.EntityRulesDef)
+  type: Method
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Creates a template copy with additional behavior data.
+  example: []
+  syntax:
+    content: public EntityTemplate WithRules(EntityRulesDef rules)
+    parameters:
+    - id: rules
+      type: TDMaker.Core.Defs.EntityRulesDef
+    return:
+      type: TDMaker.Core.Defs.EntityTemplate
+    content.vb: Public Function WithRules(rules As EntityRulesDef) As EntityTemplate
+  overload: TDMaker.Core.Defs.EntityTemplate.WithRules*
+- uid: TDMaker.Core.Defs.EntityTemplate.CustomData
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.CustomData
+  id: CustomData
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: CustomData
+  nameWithType: EntityTemplate.CustomData
+  fullName: TDMaker.Core.Defs.EntityTemplate.CustomData
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Immutable custom definition slots, inherited by type with child overrides.
+  example: []
+  syntax:
+    content: public TemplateData CustomData { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TemplateData
+    content.vb: Public ReadOnly Property CustomData As TemplateData
+  overload: TDMaker.Core.Defs.EntityTemplate.CustomData*
+- uid: TDMaker.Core.Defs.EntityTemplate.Id
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Id
+  id: Id
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: EntityTemplate.Id
+  fullName: TDMaker.Core.Defs.EntityTemplate.Id
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Unique template identifier.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: TDMaker.Core.Defs.EntityTemplate.Id*
+- uid: TDMaker.Core.Defs.EntityTemplate.BaseId
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.BaseId
+  id: BaseId
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: BaseId
+  nameWithType: EntityTemplate.BaseId
+  fullName: TDMaker.Core.Defs.EntityTemplate.BaseId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional parent identifier.
+  example: []
+  syntax:
+    content: public string BaseId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property BaseId As String
+  overload: TDMaker.Core.Defs.EntityTemplate.BaseId*
+- uid: TDMaker.Core.Defs.EntityTemplate.Health
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Health
+  id: Health
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Health
+  nameWithType: EntityTemplate.Health
+  fullName: TDMaker.Core.Defs.EntityTemplate.Health
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Health definition.
+  example: []
+  syntax:
+    content: public HealthDef Health { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.HealthDef
+    content.vb: Public ReadOnly Property Health As HealthDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Health*
+- uid: TDMaker.Core.Defs.EntityTemplate.Armor
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Armor
+  id: Armor
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Armor
+  nameWithType: EntityTemplate.Armor
+  fullName: TDMaker.Core.Defs.EntityTemplate.Armor
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Defense definition.
+  example: []
+  syntax:
+    content: public ArmorDef Armor { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.ArmorDef
+    content.vb: Public ReadOnly Property Armor As ArmorDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Armor*
+- uid: TDMaker.Core.Defs.EntityTemplate.Motion
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Motion
+  id: Motion
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Motion
+  nameWithType: EntityTemplate.Motion
+  fullName: TDMaker.Core.Defs.EntityTemplate.Motion
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Movement definition.
+  example: []
+  syntax:
+    content: public MotionDef Motion { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.MotionDef
+    content.vb: Public ReadOnly Property Motion As MotionDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Motion*
+- uid: TDMaker.Core.Defs.EntityTemplate.PathFollow
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.PathFollow
+  id: PathFollow
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: PathFollow
+  nameWithType: EntityTemplate.PathFollow
+  fullName: TDMaker.Core.Defs.EntityTemplate.PathFollow
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Path traversal definition.
+  example: []
+  syntax:
+    content: public PathFollowDef PathFollow { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.PathFollowDef
+    content.vb: Public ReadOnly Property PathFollow As PathFollowDef
+  overload: TDMaker.Core.Defs.EntityTemplate.PathFollow*
+- uid: TDMaker.Core.Defs.EntityTemplate.Bounty
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Bounty
+  id: Bounty
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Bounty
+  nameWithType: EntityTemplate.Bounty
+  fullName: TDMaker.Core.Defs.EntityTemplate.Bounty
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reward and exit cost definition.
+  example: []
+  syntax:
+    content: public BountyDef Bounty { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.BountyDef
+    content.vb: Public ReadOnly Property Bounty As BountyDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Bounty*
+- uid: TDMaker.Core.Defs.EntityTemplate.Melee
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Melee
+  id: Melee
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Melee
+  nameWithType: EntityTemplate.Melee
+  fullName: TDMaker.Core.Defs.EntityTemplate.Melee
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Melee definition.
+  example: []
+  syntax:
+    content: public MeleeDef Melee { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.MeleeDef
+    content.vb: Public ReadOnly Property Melee As MeleeDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Melee*
+- uid: TDMaker.Core.Defs.EntityTemplate.Ranged
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Ranged
+  id: Ranged
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Ranged
+  nameWithType: EntityTemplate.Ranged
+  fullName: TDMaker.Core.Defs.EntityTemplate.Ranged
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Ranged attack definitions.
+  example: []
+  syntax:
+    content: public RangedDef Ranged { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.RangedDef
+    content.vb: Public ReadOnly Property Ranged As RangedDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Ranged*
+- uid: TDMaker.Core.Defs.EntityTemplate.Tower
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Tower
+  id: Tower
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Tower
+  nameWithType: EntityTemplate.Tower
+  fullName: TDMaker.Core.Defs.EntityTemplate.Tower
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Tower economy definition.
+  example: []
+  syntax:
+    content: public TowerDef Tower { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TowerDef
+    content.vb: Public ReadOnly Property Tower As TowerDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Tower*
+- uid: TDMaker.Core.Defs.EntityTemplate.Barracks
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Barracks
+  id: Barracks
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Barracks
+  nameWithType: EntityTemplate.Barracks
+  fullName: TDMaker.Core.Defs.EntityTemplate.Barracks
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Barracks definition.
+  example: []
+  syntax:
+    content: public BarracksDef Barracks { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.BarracksDef
+    content.vb: Public ReadOnly Property Barracks As BarracksDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Barracks*
+- uid: TDMaker.Core.Defs.EntityTemplate.Soldier
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Soldier
+  id: Soldier
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Soldier
+  nameWithType: EntityTemplate.Soldier
+  fullName: TDMaker.Core.Defs.EntityTemplate.Soldier
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Soldier definition.
+  example: []
+  syntax:
+    content: public SoldierDef Soldier { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.SoldierDef
+    content.vb: Public ReadOnly Property Soldier As SoldierDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Soldier*
+- uid: TDMaker.Core.Defs.EntityTemplate.Hero
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Hero
+  id: Hero
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Hero
+  nameWithType: EntityTemplate.Hero
+  fullName: TDMaker.Core.Defs.EntityTemplate.Hero
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Independent hero behavior definition.
+  example: []
+  syntax:
+    content: public HeroDef Hero { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.HeroDef
+    content.vb: Public ReadOnly Property Hero As HeroDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Hero*
+- uid: TDMaker.Core.Defs.EntityTemplate.Projectile
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Projectile
+  id: Projectile
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Projectile
+  nameWithType: EntityTemplate.Projectile
+  fullName: TDMaker.Core.Defs.EntityTemplate.Projectile
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Projectile definition.
+  example: []
+  syntax:
+    content: public ProjectileDef Projectile { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.ProjectileDef
+    content.vb: Public ReadOnly Property Projectile As ProjectileDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Projectile*
+- uid: TDMaker.Core.Defs.EntityTemplate.Aura
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Aura
+  id: Aura
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Aura
+  nameWithType: EntityTemplate.Aura
+  fullName: TDMaker.Core.Defs.EntityTemplate.Aura
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional region emitter definition.
+  example: []
+  syntax:
+    content: public AuraDef Aura { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.AuraDef
+    content.vb: Public ReadOnly Property Aura As AuraDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Aura*
+- uid: TDMaker.Core.Defs.EntityTemplate.StatusImmunity
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.StatusImmunity
+  id: StatusImmunity
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: StatusImmunity
+  nameWithType: EntityTemplate.StatusImmunity
+  fullName: TDMaker.Core.Defs.EntityTemplate.StatusImmunity
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Effect identity and family immunities.
+  example: []
+  syntax:
+    content: public StatusImmunityDef StatusImmunity { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.StatusImmunityDef
+    content.vb: Public ReadOnly Property StatusImmunity As StatusImmunityDef
+  overload: TDMaker.Core.Defs.EntityTemplate.StatusImmunity*
+- uid: TDMaker.Core.Defs.EntityTemplate.Flying
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Flying
+  id: Flying
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Flying
+  nameWithType: EntityTemplate.Flying
+  fullName: TDMaker.Core.Defs.EntityTemplate.Flying
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Flying marker.
+  example: []
+  syntax:
+    content: public FlyingDef Flying { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.FlyingDef
+    content.vb: Public ReadOnly Property Flying As FlyingDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Flying*
+- uid: TDMaker.Core.Defs.EntityTemplate.Render
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Render
+  id: Render
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Render
+  nameWithType: EntityTemplate.Render
+  fullName: TDMaker.Core.Defs.EntityTemplate.Render
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: View lookup definition.
+  example: []
+  syntax:
+    content: public RenderDef Render { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.RenderDef
+    content.vb: Public ReadOnly Property Render As RenderDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Render*
+- uid: TDMaker.Core.Defs.EntityTemplate.Rules
+  commentId: P:TDMaker.Core.Defs.EntityTemplate.Rules
+  id: Rules
+  parent: TDMaker.Core.Defs.EntityTemplate
+  langs:
+  - csharp
+  - vb
+  name: Rules
+  nameWithType: EntityTemplate.Rules
+  fullName: TDMaker.Core.Defs.EntityTemplate.Rules
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Optional additional behavior slots, inherited as one immutable bundle.
+  example: []
+  syntax:
+    content: public EntityRulesDef Rules { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.EntityRulesDef
+    content.vb: Public ReadOnly Property Rules As EntityRulesDef
+  overload: TDMaker.Core.Defs.EntityTemplate.Rules*
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Defs.EntityTemplate.WithCustomData*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.WithCustomData
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_WithCustomData__1___0_
+  name: WithCustomData
+  nameWithType: EntityTemplate.WithCustomData
+  fullName: TDMaker.Core.Defs.EntityTemplate.WithCustomData
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: TDMaker.Core.Defs.EntityTemplate
+  commentId: T:TDMaker.Core.Defs.EntityTemplate
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html
+  name: EntityTemplate
+  nameWithType: EntityTemplate
+  fullName: TDMaker.Core.Defs.EntityTemplate
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: TDMaker.Core.Defs.EntityTemplate.#ctor*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.#ctor
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate__ctor_System_String_System_String_TDMaker_Core_Defs_HealthDef_TDMaker_Core_Defs_ArmorDef_TDMaker_Core_Defs_MotionDef_TDMaker_Core_Defs_PathFollowDef_TDMaker_Core_Defs_BountyDef_TDMaker_Core_Defs_MeleeDef_TDMaker_Core_Defs_RangedDef_TDMaker_Core_Defs_TowerDef_TDMaker_Core_Defs_BarracksDef_TDMaker_Core_Defs_SoldierDef_TDMaker_Core_Defs_HeroDef_TDMaker_Core_Defs_ProjectileDef_TDMaker_Core_Defs_AuraDef_TDMaker_Core_Defs_StatusImmunityDef_TDMaker_Core_Defs_FlyingDef_TDMaker_Core_Defs_RenderDef_
+  name: EntityTemplate
+  nameWithType: EntityTemplate.EntityTemplate
+  fullName: TDMaker.Core.Defs.EntityTemplate.EntityTemplate
+  nameWithType.vb: EntityTemplate.New
+  fullName.vb: TDMaker.Core.Defs.EntityTemplate.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Core.Defs.HealthDef
+  commentId: T:TDMaker.Core.Defs.HealthDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.HealthDef.html
+  name: HealthDef
+  nameWithType: HealthDef
+  fullName: TDMaker.Core.Defs.HealthDef
+- uid: TDMaker.Core.Defs.ArmorDef
+  commentId: T:TDMaker.Core.Defs.ArmorDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ArmorDef.html
+  name: ArmorDef
+  nameWithType: ArmorDef
+  fullName: TDMaker.Core.Defs.ArmorDef
+- uid: TDMaker.Core.Defs.MotionDef
+  commentId: T:TDMaker.Core.Defs.MotionDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.MotionDef.html
+  name: MotionDef
+  nameWithType: MotionDef
+  fullName: TDMaker.Core.Defs.MotionDef
+- uid: TDMaker.Core.Defs.PathFollowDef
+  commentId: T:TDMaker.Core.Defs.PathFollowDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.PathFollowDef.html
+  name: PathFollowDef
+  nameWithType: PathFollowDef
+  fullName: TDMaker.Core.Defs.PathFollowDef
+- uid: TDMaker.Core.Defs.BountyDef
+  commentId: T:TDMaker.Core.Defs.BountyDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.BountyDef.html
+  name: BountyDef
+  nameWithType: BountyDef
+  fullName: TDMaker.Core.Defs.BountyDef
+- uid: TDMaker.Core.Defs.MeleeDef
+  commentId: T:TDMaker.Core.Defs.MeleeDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.MeleeDef.html
+  name: MeleeDef
+  nameWithType: MeleeDef
+  fullName: TDMaker.Core.Defs.MeleeDef
+- uid: TDMaker.Core.Defs.RangedDef
+  commentId: T:TDMaker.Core.Defs.RangedDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.RangedDef.html
+  name: RangedDef
+  nameWithType: RangedDef
+  fullName: TDMaker.Core.Defs.RangedDef
+- uid: TDMaker.Core.Defs.TowerDef
+  commentId: T:TDMaker.Core.Defs.TowerDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TowerDef.html
+  name: TowerDef
+  nameWithType: TowerDef
+  fullName: TDMaker.Core.Defs.TowerDef
+- uid: TDMaker.Core.Defs.BarracksDef
+  commentId: T:TDMaker.Core.Defs.BarracksDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.BarracksDef.html
+  name: BarracksDef
+  nameWithType: BarracksDef
+  fullName: TDMaker.Core.Defs.BarracksDef
+- uid: TDMaker.Core.Defs.SoldierDef
+  commentId: T:TDMaker.Core.Defs.SoldierDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.SoldierDef.html
+  name: SoldierDef
+  nameWithType: SoldierDef
+  fullName: TDMaker.Core.Defs.SoldierDef
+- uid: TDMaker.Core.Defs.HeroDef
+  commentId: T:TDMaker.Core.Defs.HeroDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.HeroDef.html
+  name: HeroDef
+  nameWithType: HeroDef
+  fullName: TDMaker.Core.Defs.HeroDef
+- uid: TDMaker.Core.Defs.ProjectileDef
+  commentId: T:TDMaker.Core.Defs.ProjectileDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.ProjectileDef.html
+  name: ProjectileDef
+  nameWithType: ProjectileDef
+  fullName: TDMaker.Core.Defs.ProjectileDef
+- uid: TDMaker.Core.Defs.AuraDef
+  commentId: T:TDMaker.Core.Defs.AuraDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.AuraDef.html
+  name: AuraDef
+  nameWithType: AuraDef
+  fullName: TDMaker.Core.Defs.AuraDef
+- uid: TDMaker.Core.Defs.StatusImmunityDef
+  commentId: T:TDMaker.Core.Defs.StatusImmunityDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.StatusImmunityDef.html
+  name: StatusImmunityDef
+  nameWithType: StatusImmunityDef
+  fullName: TDMaker.Core.Defs.StatusImmunityDef
+- uid: TDMaker.Core.Defs.FlyingDef
+  commentId: T:TDMaker.Core.Defs.FlyingDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.FlyingDef.html
+  name: FlyingDef
+  nameWithType: FlyingDef
+  fullName: TDMaker.Core.Defs.FlyingDef
+- uid: TDMaker.Core.Defs.RenderDef
+  commentId: T:TDMaker.Core.Defs.RenderDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.RenderDef.html
+  name: RenderDef
+  nameWithType: RenderDef
+  fullName: TDMaker.Core.Defs.RenderDef
+- uid: TDMaker.Core.Defs.EntityTemplate.WithRules*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.WithRules
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_WithRules_TDMaker_Core_Defs_EntityRulesDef_
+  name: WithRules
+  nameWithType: EntityTemplate.WithRules
+  fullName: TDMaker.Core.Defs.EntityTemplate.WithRules
+- uid: TDMaker.Core.Defs.EntityRulesDef
+  commentId: T:TDMaker.Core.Defs.EntityRulesDef
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityRulesDef.html
+  name: EntityRulesDef
+  nameWithType: EntityRulesDef
+  fullName: TDMaker.Core.Defs.EntityRulesDef
+- uid: TDMaker.Core.Defs.EntityTemplate.CustomData*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.CustomData
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_CustomData
+  name: CustomData
+  nameWithType: EntityTemplate.CustomData
+  fullName: TDMaker.Core.Defs.EntityTemplate.CustomData
+- uid: TDMaker.Core.Defs.TemplateData
+  commentId: T:TDMaker.Core.Defs.TemplateData
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TemplateData.html
+  name: TemplateData
+  nameWithType: TemplateData
+  fullName: TDMaker.Core.Defs.TemplateData
+- uid: TDMaker.Core.Defs.EntityTemplate.Id*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Id
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Id
+  name: Id
+  nameWithType: EntityTemplate.Id
+  fullName: TDMaker.Core.Defs.EntityTemplate.Id
+- uid: TDMaker.Core.Defs.EntityTemplate.BaseId*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.BaseId
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_BaseId
+  name: BaseId
+  nameWithType: EntityTemplate.BaseId
+  fullName: TDMaker.Core.Defs.EntityTemplate.BaseId
+- uid: TDMaker.Core.Defs.EntityTemplate.Health*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Health
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Health
+  name: Health
+  nameWithType: EntityTemplate.Health
+  fullName: TDMaker.Core.Defs.EntityTemplate.Health
+- uid: TDMaker.Core.Defs.EntityTemplate.Armor*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Armor
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Armor
+  name: Armor
+  nameWithType: EntityTemplate.Armor
+  fullName: TDMaker.Core.Defs.EntityTemplate.Armor
+- uid: TDMaker.Core.Defs.EntityTemplate.Motion*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Motion
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Motion
+  name: Motion
+  nameWithType: EntityTemplate.Motion
+  fullName: TDMaker.Core.Defs.EntityTemplate.Motion
+- uid: TDMaker.Core.Defs.EntityTemplate.PathFollow*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.PathFollow
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_PathFollow
+  name: PathFollow
+  nameWithType: EntityTemplate.PathFollow
+  fullName: TDMaker.Core.Defs.EntityTemplate.PathFollow
+- uid: TDMaker.Core.Defs.EntityTemplate.Bounty*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Bounty
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Bounty
+  name: Bounty
+  nameWithType: EntityTemplate.Bounty
+  fullName: TDMaker.Core.Defs.EntityTemplate.Bounty
+- uid: TDMaker.Core.Defs.EntityTemplate.Melee*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Melee
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Melee
+  name: Melee
+  nameWithType: EntityTemplate.Melee
+  fullName: TDMaker.Core.Defs.EntityTemplate.Melee
+- uid: TDMaker.Core.Defs.EntityTemplate.Ranged*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Ranged
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Ranged
+  name: Ranged
+  nameWithType: EntityTemplate.Ranged
+  fullName: TDMaker.Core.Defs.EntityTemplate.Ranged
+- uid: TDMaker.Core.Defs.EntityTemplate.Tower*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Tower
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Tower
+  name: Tower
+  nameWithType: EntityTemplate.Tower
+  fullName: TDMaker.Core.Defs.EntityTemplate.Tower
+- uid: TDMaker.Core.Defs.EntityTemplate.Barracks*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Barracks
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Barracks
+  name: Barracks
+  nameWithType: EntityTemplate.Barracks
+  fullName: TDMaker.Core.Defs.EntityTemplate.Barracks
+- uid: TDMaker.Core.Defs.EntityTemplate.Soldier*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Soldier
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Soldier
+  name: Soldier
+  nameWithType: EntityTemplate.Soldier
+  fullName: TDMaker.Core.Defs.EntityTemplate.Soldier
+- uid: TDMaker.Core.Defs.EntityTemplate.Hero*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Hero
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Hero
+  name: Hero
+  nameWithType: EntityTemplate.Hero
+  fullName: TDMaker.Core.Defs.EntityTemplate.Hero
+- uid: TDMaker.Core.Defs.EntityTemplate.Projectile*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Projectile
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Projectile
+  name: Projectile
+  nameWithType: EntityTemplate.Projectile
+  fullName: TDMaker.Core.Defs.EntityTemplate.Projectile
+- uid: TDMaker.Core.Defs.EntityTemplate.Aura*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Aura
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Aura
+  name: Aura
+  nameWithType: EntityTemplate.Aura
+  fullName: TDMaker.Core.Defs.EntityTemplate.Aura
+- uid: TDMaker.Core.Defs.EntityTemplate.StatusImmunity*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.StatusImmunity
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_StatusImmunity
+  name: StatusImmunity
+  nameWithType: EntityTemplate.StatusImmunity
+  fullName: TDMaker.Core.Defs.EntityTemplate.StatusImmunity
+- uid: TDMaker.Core.Defs.EntityTemplate.Flying*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Flying
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Flying
+  name: Flying
+  nameWithType: EntityTemplate.Flying
+  fullName: TDMaker.Core.Defs.EntityTemplate.Flying
+- uid: TDMaker.Core.Defs.EntityTemplate.Render*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Render
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Render
+  name: Render
+  nameWithType: EntityTemplate.Render
+  fullName: TDMaker.Core.Defs.EntityTemplate.Render
+- uid: TDMaker.Core.Defs.EntityTemplate.Rules*
+  commentId: Overload:TDMaker.Core.Defs.EntityTemplate.Rules
+  isExternal: true
+  href: TDMaker.Core.Defs.EntityTemplate.html#TDMaker_Core_Defs_EntityTemplate_Rules
+  name: Rules
+  nameWithType: EntityTemplate.Rules
+  fullName: TDMaker.Core.Defs.EntityTemplate.Rules

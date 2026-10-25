@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Editor.IssueSeverity
+  commentId: T:TDMaker.Editor.IssueSeverity
+  id: IssueSeverity
+  parent: TDMaker.Editor
+  children:
+  - TDMaker.Editor.IssueSeverity.Error
+  - TDMaker.Editor.IssueSeverity.Info
+  - TDMaker.Editor.IssueSeverity.Warning
+  langs:
+  - csharp
+  - vb
+  name: IssueSeverity
+  nameWithType: IssueSeverity
+  fullName: TDMaker.Editor.IssueSeverity
+  type: Enum
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Severity of a validation issue.
+  example: []
+  syntax:
+    content: public enum IssueSeverity
+    content.vb: Public Enum IssueSeverity
+- uid: TDMaker.Editor.IssueSeverity.Error
+  commentId: F:TDMaker.Editor.IssueSeverity.Error
+  id: Error
+  parent: TDMaker.Editor.IssueSeverity
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: IssueSeverity.Error
+  fullName: TDMaker.Editor.IssueSeverity.Error
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Breaks baking or gameplay.
+  example: []
+  syntax:
+    content: Error = 0
+    return:
+      type: TDMaker.Editor.IssueSeverity
+- uid: TDMaker.Editor.IssueSeverity.Warning
+  commentId: F:TDMaker.Editor.IssueSeverity.Warning
+  id: Warning
+  parent: TDMaker.Editor.IssueSeverity
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: IssueSeverity.Warning
+  fullName: TDMaker.Editor.IssueSeverity.Warning
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Probably a mistake.
+  example: []
+  syntax:
+    content: Warning = 1
+    return:
+      type: TDMaker.Editor.IssueSeverity
+- uid: TDMaker.Editor.IssueSeverity.Info
+  commentId: F:TDMaker.Editor.IssueSeverity.Info
+  id: Info
+  parent: TDMaker.Editor.IssueSeverity
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: IssueSeverity.Info
+  fullName: TDMaker.Editor.IssueSeverity.Info
+  type: Field
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Worth knowing.
+  example: []
+  syntax:
+    content: Info = 2
+    return:
+      type: TDMaker.Editor.IssueSeverity
+references:
+- uid: TDMaker.Editor
+  commentId: N:TDMaker.Editor
+  isExternal: true
+  name: TDMaker.Editor
+  nameWithType: TDMaker.Editor
+  fullName: TDMaker.Editor
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Editor
+    name: Editor
+    isExternal: true
+- uid: TDMaker.Editor.IssueSeverity
+  commentId: T:TDMaker.Editor.IssueSeverity
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.IssueSeverity.html
+  name: IssueSeverity
+  nameWithType: IssueSeverity
+  fullName: TDMaker.Editor.IssueSeverity

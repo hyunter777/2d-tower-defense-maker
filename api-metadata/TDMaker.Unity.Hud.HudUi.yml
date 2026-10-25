@@ -1,0 +1,1127 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Hud.HudUi
+  commentId: T:TDMaker.Unity.Hud.HudUi
+  id: HudUi
+  parent: TDMaker.Unity.Hud
+  children:
+  - TDMaker.Unity.Hud.HudUi.Align(UnityEngine.TextAnchor)
+  - TDMaker.Unity.Hud.HudUi.ApplyFont(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme)
+  - TDMaker.Unity.Hud.HudUi.Bar(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,UnityEngine.Color,UnityEngine.UI.Image@)
+  - TDMaker.Unity.Hud.HudUi.Image(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color,System.Boolean)
+  - TDMaker.Unity.Hud.HudUi.Label(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
+  - TDMaker.Unity.Hud.HudUi.Place(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  - TDMaker.Unity.Hud.HudUi.Radial(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color)
+  - TDMaker.Unity.Hud.HudUi.Rect(System.String,UnityEngine.Transform)
+  - TDMaker.Unity.Hud.HudUi.SetActive(UnityEngine.Component,System.Boolean)
+  - TDMaker.Unity.Hud.HudUi.SetColor(UnityEngine.UI.Graphic,UnityEngine.Color)
+  - TDMaker.Unity.Hud.HudUi.SetFraction(UnityEngine.RectTransform,System.Single)
+  - TDMaker.Unity.Hud.HudUi.SetOutline(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme,UnityEngine.Color,System.Single)
+  - TDMaker.Unity.Hud.HudUi.SetText(TMPro.TMP_Text,System.String)
+  - TDMaker.Unity.Hud.HudUi.Stretch(UnityEngine.RectTransform,System.Single)
+  - TDMaker.Unity.Hud.HudUi.TextMaterial(TMPro.TMP_FontAsset,UnityEngine.Material,System.Boolean,UnityEngine.Color,System.Single)
+  - TDMaker.Unity.Hud.HudUi.UiLayer
+  langs:
+  - csharp
+  - vb
+  name: HudUi
+  nameWithType: HudUi
+  fullName: TDMaker.Unity.Hud.HudUi
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Small helpers that build themed uGUI elements from code.
+  example: []
+  syntax:
+    content: public static class HudUi
+    content.vb: Public Module HudUi
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Hud.HudUi.UiLayer
+  commentId: F:TDMaker.Unity.Hud.HudUi.UiLayer
+  id: UiLayer
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: UiLayer
+  nameWithType: HudUi.UiLayer
+  fullName: TDMaker.Unity.Hud.HudUi.UiLayer
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: The built-in UI layer index.
+  example: []
+  syntax:
+    content: public const int UiLayer = 5
+    return:
+      type: System.Int32
+    content.vb: Public Const UiLayer As Integer = 5
+- uid: TDMaker.Unity.Hud.HudUi.Rect(System.String,UnityEngine.Transform)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Rect(System.String,UnityEngine.Transform)
+  id: Rect(System.String,UnityEngine.Transform)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Rect(string, Transform)
+  nameWithType: HudUi.Rect(string, Transform)
+  fullName: TDMaker.Unity.Hud.HudUi.Rect(string, UnityEngine.Transform)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Creates a child RectTransform.
+  example: []
+  syntax:
+    content: public static RectTransform Rect(string name, Transform parent)
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Public Shared Function Rect(name As String, parent As Transform) As RectTransform
+  overload: TDMaker.Unity.Hud.HudUi.Rect*
+  nameWithType.vb: HudUi.Rect(String, Transform)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.Rect(String, UnityEngine.Transform)
+  name.vb: Rect(String, Transform)
+- uid: TDMaker.Unity.Hud.HudUi.Place(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Place(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  id: Place(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Place(RectTransform, Vector2, Vector2, Vector2, Vector2)
+  nameWithType: HudUi.Place(RectTransform, Vector2, Vector2, Vector2, Vector2)
+  fullName: TDMaker.Unity.Hud.HudUi.Place(UnityEngine.RectTransform, UnityEngine.Vector2, UnityEngine.Vector2, UnityEngine.Vector2,
+    UnityEngine.Vector2)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Anchors at a single point with a pivot, position and size.
+  example: []
+  syntax:
+    content: public static RectTransform Place(RectTransform rt, Vector2 anchor, Vector2 pivot, Vector2 position, Vector2
+      size)
+    parameters:
+    - id: rt
+      type: UnityEngine.RectTransform
+    - id: anchor
+      type: UnityEngine.Vector2
+    - id: pivot
+      type: UnityEngine.Vector2
+    - id: position
+      type: UnityEngine.Vector2
+    - id: size
+      type: UnityEngine.Vector2
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Public Shared Function Place(rt As RectTransform, anchor As Vector2, pivot As Vector2, position As Vector2,
+      size As Vector2) As RectTransform
+  overload: TDMaker.Unity.Hud.HudUi.Place*
+- uid: TDMaker.Unity.Hud.HudUi.Stretch(UnityEngine.RectTransform,System.Single)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Stretch(UnityEngine.RectTransform,System.Single)
+  id: Stretch(UnityEngine.RectTransform,System.Single)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Stretch(RectTransform, float)
+  nameWithType: HudUi.Stretch(RectTransform, float)
+  fullName: TDMaker.Unity.Hud.HudUi.Stretch(UnityEngine.RectTransform, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Stretches to fill the parent with an inset.
+  example: []
+  syntax:
+    content: public static RectTransform Stretch(RectTransform rt, float inset = 0)
+    parameters:
+    - id: rt
+      type: UnityEngine.RectTransform
+    - id: inset
+      type: System.Single
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Public Shared Function Stretch(rt As RectTransform, inset As Single = 0) As RectTransform
+  overload: TDMaker.Unity.Hud.HudUi.Stretch*
+  nameWithType.vb: HudUi.Stretch(RectTransform, Single)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.Stretch(UnityEngine.RectTransform, Single)
+  name.vb: Stretch(RectTransform, Single)
+- uid: TDMaker.Unity.Hud.HudUi.Image(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color,System.Boolean)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Image(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color,System.Boolean)
+  id: Image(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color,System.Boolean)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Image(string, Transform, Sprite, Color, bool)
+  nameWithType: HudUi.Image(string, Transform, Sprite, Color, bool)
+  fullName: TDMaker.Unity.Hud.HudUi.Image(string, UnityEngine.Transform, UnityEngine.Sprite, UnityEngine.Color, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Creates an image.
+  example: []
+  syntax:
+    content: public static Image Image(string name, Transform parent, Sprite sprite, Color color, bool raycast = false)
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    - id: sprite
+      type: UnityEngine.Sprite
+    - id: color
+      type: UnityEngine.Color
+    - id: raycast
+      type: System.Boolean
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public Shared Function Image(name As String, parent As Transform, sprite As Sprite, color As Color, raycast
+      As Boolean = False) As Image
+  overload: TDMaker.Unity.Hud.HudUi.Image*
+  nameWithType.vb: HudUi.Image(String, Transform, Sprite, Color, Boolean)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.Image(String, UnityEngine.Transform, UnityEngine.Sprite, UnityEngine.Color, Boolean)
+  name.vb: Image(String, Transform, Sprite, Color, Boolean)
+- uid: TDMaker.Unity.Hud.HudUi.Radial(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Radial(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color)
+  id: Radial(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Radial(string, Transform, Sprite, Color)
+  nameWithType: HudUi.Radial(string, Transform, Sprite, Color)
+  fullName: TDMaker.Unity.Hud.HudUi.Radial(string, UnityEngine.Transform, UnityEngine.Sprite, UnityEngine.Color)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Creates a radial fill image (cooldowns, countdown rings).
+  example: []
+  syntax:
+    content: public static Image Radial(string name, Transform parent, Sprite sprite, Color color)
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    - id: sprite
+      type: UnityEngine.Sprite
+    - id: color
+      type: UnityEngine.Color
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public Shared Function Radial(name As String, parent As Transform, sprite As Sprite, color As Color) As Image
+  overload: TDMaker.Unity.Hud.HudUi.Radial*
+  nameWithType.vb: HudUi.Radial(String, Transform, Sprite, Color)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.Radial(String, UnityEngine.Transform, UnityEngine.Sprite, UnityEngine.Color)
+  name.vb: Radial(String, Transform, Sprite, Color)
+- uid: TDMaker.Unity.Hud.HudUi.Label(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Label(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
+  id: Label(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Label(string, Transform, HudTheme, float, Color, TextAnchor, string)
+  nameWithType: HudUi.Label(string, Transform, HudTheme, float, Color, TextAnchor, string)
+  fullName: TDMaker.Unity.Hud.HudUi.Label(string, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, float, UnityEngine.Color,
+    UnityEngine.TextAnchor, string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'Creates a TextMesh Pro label with the theme''s font (and drop shadow when <xref href="TDMaker.Unity.Hud.HudTheme.textShadow"
+    data-throw-if-not-resolved="false"></xref> is on). Labels do
+
+    not wrap and may overflow their rect; set <xref href="TMPro.TMP_Text.textWrappingMode" data-throw-if-not-resolved="false"></xref>
+    for wrapping text.'
+  example: []
+  syntax:
+    content: public static TextMeshProUGUI Label(string name, Transform parent, HudTheme theme, float size, Color color, TextAnchor
+      anchor, string text = "")
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    - id: size
+      type: System.Single
+    - id: color
+      type: UnityEngine.Color
+    - id: anchor
+      type: UnityEngine.TextAnchor
+    - id: text
+      type: System.String
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public Shared Function Label(name As String, parent As Transform, theme As HudTheme, size As Single, color
+      As Color, anchor As TextAnchor, text As String = "") As TextMeshProUGUI
+  overload: TDMaker.Unity.Hud.HudUi.Label*
+  nameWithType.vb: HudUi.Label(String, Transform, HudTheme, Single, Color, TextAnchor, String)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.Label(String, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, Single, UnityEngine.Color,
+    UnityEngine.TextAnchor, String)
+  name.vb: Label(String, Transform, HudTheme, Single, Color, TextAnchor, String)
+- uid: TDMaker.Unity.Hud.HudUi.ApplyFont(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme)
+  commentId: M:TDMaker.Unity.Hud.HudUi.ApplyFont(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme)
+  id: ApplyFont(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: ApplyFont(TMP_Text, HudTheme)
+  nameWithType: HudUi.ApplyFont(TMP_Text, HudTheme)
+  fullName: TDMaker.Unity.Hud.HudUi.ApplyFont(TMPro.TMP_Text, TDMaker.Unity.Hud.HudTheme)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Assigns the theme's font and material (shadowed when the theme asks for it) to a label.
+  example: []
+  syntax:
+    content: public static void ApplyFont(TMP_Text label, HudTheme theme)
+    parameters:
+    - id: label
+      type: TMPro.TMP_Text
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    content.vb: Public Shared Sub ApplyFont(label As TMP_Text, theme As HudTheme)
+  overload: TDMaker.Unity.Hud.HudUi.ApplyFont*
+- uid: TDMaker.Unity.Hud.HudUi.SetOutline(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme,UnityEngine.Color,System.Single)
+  commentId: M:TDMaker.Unity.Hud.HudUi.SetOutline(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme,UnityEngine.Color,System.Single)
+  id: SetOutline(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme,UnityEngine.Color,System.Single)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: SetOutline(TMP_Text, HudTheme, Color, float)
+  nameWithType: HudUi.SetOutline(TMP_Text, HudTheme, Color, float)
+  fullName: TDMaker.Unity.Hud.HudUi.SetOutline(TMPro.TMP_Text, TDMaker.Unity.Hud.HudTheme, UnityEngine.Color, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Gives a label an outline (a shared material cached per font, colour and width; keeps the theme's shadow).
+  example: []
+  syntax:
+    content: public static void SetOutline(TMP_Text label, HudTheme theme, Color color, float width)
+    parameters:
+    - id: label
+      type: TMPro.TMP_Text
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    - id: color
+      type: UnityEngine.Color
+    - id: width
+      type: System.Single
+    content.vb: Public Shared Sub SetOutline(label As TMP_Text, theme As HudTheme, color As Color, width As Single)
+  overload: TDMaker.Unity.Hud.HudUi.SetOutline*
+  nameWithType.vb: HudUi.SetOutline(TMP_Text, HudTheme, Color, Single)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.SetOutline(TMPro.TMP_Text, TDMaker.Unity.Hud.HudTheme, UnityEngine.Color, Single)
+  name.vb: SetOutline(TMP_Text, HudTheme, Color, Single)
+- uid: TDMaker.Unity.Hud.HudUi.Align(UnityEngine.TextAnchor)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Align(UnityEngine.TextAnchor)
+  id: Align(UnityEngine.TextAnchor)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Align(TextAnchor)
+  nameWithType: HudUi.Align(TextAnchor)
+  fullName: TDMaker.Unity.Hud.HudUi.Align(UnityEngine.TextAnchor)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Converts a uGUI anchor to the matching TextMesh Pro alignment.
+  example: []
+  syntax:
+    content: public static TextAlignmentOptions Align(TextAnchor anchor)
+    parameters:
+    - id: anchor
+      type: UnityEngine.TextAnchor
+    return:
+      type: TMPro.TextAlignmentOptions
+    content.vb: Public Shared Function Align(anchor As TextAnchor) As TextAlignmentOptions
+  overload: TDMaker.Unity.Hud.HudUi.Align*
+- uid: TDMaker.Unity.Hud.HudUi.TextMaterial(TMPro.TMP_FontAsset,UnityEngine.Material,System.Boolean,UnityEngine.Color,System.Single)
+  commentId: M:TDMaker.Unity.Hud.HudUi.TextMaterial(TMPro.TMP_FontAsset,UnityEngine.Material,System.Boolean,UnityEngine.Color,System.Single)
+  id: TextMaterial(TMPro.TMP_FontAsset,UnityEngine.Material,System.Boolean,UnityEngine.Color,System.Single)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: TextMaterial(TMP_FontAsset, Material, bool, Color, float)
+  nameWithType: HudUi.TextMaterial(TMP_FontAsset, Material, bool, Color, float)
+  fullName: TDMaker.Unity.Hud.HudUi.TextMaterial(TMPro.TMP_FontAsset, UnityEngine.Material, bool, UnityEngine.Color, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'A shared material for <code class="paramref">font</code>: <code class="paramref">preset</code> (or the font''s
+    material) with an optional drop
+
+    shadow (underlay) and outline (<code class="paramref">outlineWidth</code> 0..1 of the SDF range, 0 = none). Cached, so
+    labels with the
+
+    same look share one material and keep batching. Effects the shader does not support are skipped.'
+  example: []
+  syntax:
+    content: public static Material TextMaterial(TMP_FontAsset font, Material preset, bool shadow, Color outline, float outlineWidth)
+    parameters:
+    - id: font
+      type: TMPro.TMP_FontAsset
+    - id: preset
+      type: UnityEngine.Material
+    - id: shadow
+      type: System.Boolean
+    - id: outline
+      type: UnityEngine.Color
+    - id: outlineWidth
+      type: System.Single
+    return:
+      type: UnityEngine.Material
+    content.vb: Public Shared Function TextMaterial(font As TMP_FontAsset, preset As Material, shadow As Boolean, outline
+      As Color, outlineWidth As Single) As Material
+  overload: TDMaker.Unity.Hud.HudUi.TextMaterial*
+  nameWithType.vb: HudUi.TextMaterial(TMP_FontAsset, Material, Boolean, Color, Single)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.TextMaterial(TMPro.TMP_FontAsset, UnityEngine.Material, Boolean, UnityEngine.Color,
+    Single)
+  name.vb: TextMaterial(TMP_FontAsset, Material, Boolean, Color, Single)
+- uid: TDMaker.Unity.Hud.HudUi.Bar(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,UnityEngine.Color,UnityEngine.UI.Image@)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Bar(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,UnityEngine.Color,UnityEngine.UI.Image@)
+  id: Bar(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,UnityEngine.Color,UnityEngine.UI.Image@)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Bar(string, Transform, HudTheme, Color, out Image)
+  nameWithType: HudUi.Bar(string, Transform, HudTheme, Color, out Image)
+  fullName: TDMaker.Unity.Hud.HudUi.Bar(string, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, UnityEngine.Color, out
+    UnityEngine.UI.Image)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Creates a horizontal bar (background + fill); returns the fill rect whose anchorMax.x is the fraction.
+  example: []
+  syntax:
+    content: public static RectTransform Bar(string name, Transform parent, HudTheme theme, Color fill, out Image fillImage)
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    - id: fill
+      type: UnityEngine.Color
+    - id: fillImage
+      type: UnityEngine.UI.Image
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Public Shared Function Bar(name As String, parent As Transform, theme As HudTheme, fill As Color, fillImage
+      As Image) As RectTransform
+  overload: TDMaker.Unity.Hud.HudUi.Bar*
+  nameWithType.vb: HudUi.Bar(String, Transform, HudTheme, Color, Image)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.Bar(String, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, UnityEngine.Color, UnityEngine.UI.Image)
+  name.vb: Bar(String, Transform, HudTheme, Color, Image)
+- uid: TDMaker.Unity.Hud.HudUi.SetFraction(UnityEngine.RectTransform,System.Single)
+  commentId: M:TDMaker.Unity.Hud.HudUi.SetFraction(UnityEngine.RectTransform,System.Single)
+  id: SetFraction(UnityEngine.RectTransform,System.Single)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: SetFraction(RectTransform, float)
+  nameWithType: HudUi.SetFraction(RectTransform, float)
+  fullName: TDMaker.Unity.Hud.HudUi.SetFraction(UnityEngine.RectTransform, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Sets a bar fill fraction (only touches the transform when it changes).
+  example: []
+  syntax:
+    content: public static void SetFraction(RectTransform fill, float fraction)
+    parameters:
+    - id: fill
+      type: UnityEngine.RectTransform
+    - id: fraction
+      type: System.Single
+    content.vb: Public Shared Sub SetFraction(fill As RectTransform, fraction As Single)
+  overload: TDMaker.Unity.Hud.HudUi.SetFraction*
+  nameWithType.vb: HudUi.SetFraction(RectTransform, Single)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.SetFraction(UnityEngine.RectTransform, Single)
+  name.vb: SetFraction(RectTransform, Single)
+- uid: TDMaker.Unity.Hud.HudUi.SetActive(UnityEngine.Component,System.Boolean)
+  commentId: M:TDMaker.Unity.Hud.HudUi.SetActive(UnityEngine.Component,System.Boolean)
+  id: SetActive(UnityEngine.Component,System.Boolean)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: SetActive(Component, bool)
+  nameWithType: HudUi.SetActive(Component, bool)
+  fullName: TDMaker.Unity.Hud.HudUi.SetActive(UnityEngine.Component, bool)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Activates a GameObject only when the state differs.
+  example: []
+  syntax:
+    content: public static void SetActive(Component component, bool active)
+    parameters:
+    - id: component
+      type: UnityEngine.Component
+    - id: active
+      type: System.Boolean
+    content.vb: Public Shared Sub SetActive(component As Component, active As Boolean)
+  overload: TDMaker.Unity.Hud.HudUi.SetActive*
+  nameWithType.vb: HudUi.SetActive(Component, Boolean)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.SetActive(UnityEngine.Component, Boolean)
+  name.vb: SetActive(Component, Boolean)
+- uid: TDMaker.Unity.Hud.HudUi.SetText(TMPro.TMP_Text,System.String)
+  commentId: M:TDMaker.Unity.Hud.HudUi.SetText(TMPro.TMP_Text,System.String)
+  id: SetText(TMPro.TMP_Text,System.String)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: SetText(TMP_Text, string)
+  nameWithType: HudUi.SetText(TMP_Text, string)
+  fullName: TDMaker.Unity.Hud.HudUi.SetText(TMPro.TMP_Text, string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Sets text only when the reference differs (cached strings make this allocation-free).
+  example: []
+  syntax:
+    content: public static void SetText(TMP_Text label, string text)
+    parameters:
+    - id: label
+      type: TMPro.TMP_Text
+    - id: text
+      type: System.String
+    content.vb: Public Shared Sub SetText(label As TMP_Text, text As String)
+  overload: TDMaker.Unity.Hud.HudUi.SetText*
+  nameWithType.vb: HudUi.SetText(TMP_Text, String)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.SetText(TMPro.TMP_Text, String)
+  name.vb: SetText(TMP_Text, String)
+- uid: TDMaker.Unity.Hud.HudUi.SetColor(UnityEngine.UI.Graphic,UnityEngine.Color)
+  commentId: M:TDMaker.Unity.Hud.HudUi.SetColor(UnityEngine.UI.Graphic,UnityEngine.Color)
+  id: SetColor(UnityEngine.UI.Graphic,UnityEngine.Color)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: SetColor(Graphic, Color)
+  nameWithType: HudUi.SetColor(Graphic, Color)
+  fullName: TDMaker.Unity.Hud.HudUi.SetColor(UnityEngine.UI.Graphic, UnityEngine.Color)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Sets a graphic colour only when it differs.
+  example: []
+  syntax:
+    content: public static void SetColor(Graphic graphic, Color color)
+    parameters:
+    - id: graphic
+      type: UnityEngine.UI.Graphic
+    - id: color
+      type: UnityEngine.Color
+    content.vb: Public Shared Sub SetColor(graphic As Graphic, color As Color)
+  overload: TDMaker.Unity.Hud.HudUi.SetColor*
+references:
+- uid: TDMaker.Unity.Hud
+  commentId: N:TDMaker.Unity.Hud
+  isExternal: true
+  name: TDMaker.Unity.Hud
+  nameWithType: TDMaker.Unity.Hud
+  fullName: TDMaker.Unity.Hud
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Unity.Hud.HudUi.Rect*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Rect
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Rect_System_String_UnityEngine_Transform_
+  name: Rect
+  nameWithType: HudUi.Rect
+  fullName: TDMaker.Unity.Hud.HudUi.Rect
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: UnityEngine.RectTransform
+  commentId: T:UnityEngine.RectTransform
+  parent: UnityEngine
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TDMaker.Unity.Hud.HudUi.Place*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Place
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Place_UnityEngine_RectTransform_UnityEngine_Vector2_UnityEngine_Vector2_UnityEngine_Vector2_UnityEngine_Vector2_
+  name: Place
+  nameWithType: HudUi.Place
+  fullName: TDMaker.Unity.Hud.HudUi.Place
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: TDMaker.Unity.Hud.HudUi.Stretch*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Stretch
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Stretch_UnityEngine_RectTransform_System_Single_
+  name: Stretch
+  nameWithType: HudUi.Stretch
+  fullName: TDMaker.Unity.Hud.HudUi.Stretch
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: TDMaker.Unity.Hud.HudUi.Image*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Image
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Image_System_String_UnityEngine_Transform_UnityEngine_Sprite_UnityEngine_Color_System_Boolean_
+  name: Image
+  nameWithType: HudUi.Image
+  fullName: TDMaker.Unity.Hud.HudUi.Image
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.UI.Image
+  commentId: T:UnityEngine.UI.Image
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  isExternal: true
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
+- uid: TDMaker.Unity.Hud.HudUi.Radial*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Radial
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Radial_System_String_UnityEngine_Transform_UnityEngine_Sprite_UnityEngine_Color_
+  name: Radial
+  nameWithType: HudUi.Radial
+  fullName: TDMaker.Unity.Hud.HudUi.Radial
+- uid: TDMaker.Unity.Hud.HudTheme.textShadow
+  commentId: F:TDMaker.Unity.Hud.HudTheme.textShadow
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_textShadow
+  name: textShadow
+  nameWithType: HudTheme.textShadow
+  fullName: TDMaker.Unity.Hud.HudTheme.textShadow
+- uid: TMPro.TMP_Text.textWrappingMode
+  commentId: P:TMPro.TMP_Text.textWrappingMode
+  isExternal: true
+  name: textWrappingMode
+  nameWithType: TMP_Text.textWrappingMode
+  fullName: TMPro.TMP_Text.textWrappingMode
+- uid: TDMaker.Unity.Hud.HudUi.Label*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Label
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Label_System_String_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_System_Single_UnityEngine_Color_UnityEngine_TextAnchor_System_String_
+  name: Label
+  nameWithType: HudUi.Label
+  fullName: TDMaker.Unity.Hud.HudUi.Label
+- uid: TDMaker.Unity.Hud.HudTheme
+  commentId: T:TDMaker.Unity.Hud.HudTheme
+  parent: TDMaker.Unity.Hud
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html
+  name: HudTheme
+  nameWithType: HudTheme
+  fullName: TDMaker.Unity.Hud.HudTheme
+- uid: UnityEngine.TextAnchor
+  commentId: T:UnityEngine.TextAnchor
+  parent: UnityEngine
+  isExternal: true
+  name: TextAnchor
+  nameWithType: TextAnchor
+  fullName: UnityEngine.TextAnchor
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro
+- uid: TDMaker.Unity.Hud.HudUi.ApplyFont*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.ApplyFont
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_ApplyFont_TMPro_TMP_Text_TDMaker_Unity_Hud_HudTheme_
+  name: ApplyFont
+  nameWithType: HudUi.ApplyFont
+  fullName: TDMaker.Unity.Hud.HudUi.ApplyFont
+- uid: TMPro.TMP_Text
+  commentId: T:TMPro.TMP_Text
+  parent: TMPro
+  isExternal: true
+  name: TMP_Text
+  nameWithType: TMP_Text
+  fullName: TMPro.TMP_Text
+- uid: TDMaker.Unity.Hud.HudUi.SetOutline*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.SetOutline
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_SetOutline_TMPro_TMP_Text_TDMaker_Unity_Hud_HudTheme_UnityEngine_Color_System_Single_
+  name: SetOutline
+  nameWithType: HudUi.SetOutline
+  fullName: TDMaker.Unity.Hud.HudUi.SetOutline
+- uid: TDMaker.Unity.Hud.HudUi.Align*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Align
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Align_UnityEngine_TextAnchor_
+  name: Align
+  nameWithType: HudUi.Align
+  fullName: TDMaker.Unity.Hud.HudUi.Align
+- uid: TMPro.TextAlignmentOptions
+  commentId: T:TMPro.TextAlignmentOptions
+  parent: TMPro
+  isExternal: true
+  name: TextAlignmentOptions
+  nameWithType: TextAlignmentOptions
+  fullName: TMPro.TextAlignmentOptions
+- uid: TDMaker.Unity.Hud.HudUi.TextMaterial*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.TextMaterial
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_TextMaterial_TMPro_TMP_FontAsset_UnityEngine_Material_System_Boolean_UnityEngine_Color_System_Single_
+  name: TextMaterial
+  nameWithType: HudUi.TextMaterial
+  fullName: TDMaker.Unity.Hud.HudUi.TextMaterial
+- uid: TMPro.TMP_FontAsset
+  commentId: T:TMPro.TMP_FontAsset
+  parent: TMPro
+  isExternal: true
+  name: TMP_FontAsset
+  nameWithType: TMP_FontAsset
+  fullName: TMPro.TMP_FontAsset
+- uid: UnityEngine.Material
+  commentId: T:UnityEngine.Material
+  parent: UnityEngine
+  isExternal: true
+  name: Material
+  nameWithType: Material
+  fullName: UnityEngine.Material
+- uid: TDMaker.Unity.Hud.HudUi.Bar*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Bar
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Bar_System_String_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_UnityEngine_Color_UnityEngine_UI_Image__
+  name: Bar
+  nameWithType: HudUi.Bar
+  fullName: TDMaker.Unity.Hud.HudUi.Bar
+- uid: TDMaker.Unity.Hud.HudUi.SetFraction*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.SetFraction
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_SetFraction_UnityEngine_RectTransform_System_Single_
+  name: SetFraction
+  nameWithType: HudUi.SetFraction
+  fullName: TDMaker.Unity.Hud.HudUi.SetFraction
+- uid: TDMaker.Unity.Hud.HudUi.SetActive*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.SetActive
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_SetActive_UnityEngine_Component_System_Boolean_
+  name: SetActive
+  nameWithType: HudUi.SetActive
+  fullName: TDMaker.Unity.Hud.HudUi.SetActive
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: TDMaker.Unity.Hud.HudUi.SetText*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.SetText
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_SetText_TMPro_TMP_Text_System_String_
+  name: SetText
+  nameWithType: HudUi.SetText
+  fullName: TDMaker.Unity.Hud.HudUi.SetText
+- uid: TDMaker.Unity.Hud.HudUi.SetColor*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.SetColor
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_SetColor_UnityEngine_UI_Graphic_UnityEngine_Color_
+  name: SetColor
+  nameWithType: HudUi.SetColor
+  fullName: TDMaker.Unity.Hud.HudUi.SetColor
+- uid: UnityEngine.UI.Graphic
+  commentId: T:UnityEngine.UI.Graphic
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Graphic
+  nameWithType: Graphic
+  fullName: UnityEngine.UI.Graphic

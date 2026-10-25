@@ -1,0 +1,436 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Commands.SetTargetPriority
+  commentId: T:TDMaker.Core.Commands.SetTargetPriority
+  id: SetTargetPriority
+  parent: TDMaker.Core.Commands
+  children:
+  - TDMaker.Core.Commands.SetTargetPriority.#ctor(System.Int32,TDMaker.Core.Defs.TargetPriority)
+  - TDMaker.Core.Commands.SetTargetPriority.EntityId
+  - TDMaker.Core.Commands.SetTargetPriority.Priority
+  langs:
+  - csharp
+  - vb
+  name: SetTargetPriority
+  nameWithType: SetTargetPriority
+  fullName: TDMaker.Core.Commands.SetTargetPriority
+  type: Class
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Commands
+  summary: Changes a tower's runtime target priority without interrupting its current attack or resetting cooldowns.
+  example:
+  - <pre><code class="lang-csharp">sim.Enqueue(new SetTargetPriority(tower.Id, TargetPriority.Strongest));</code></pre>
+  syntax:
+    content: 'public sealed class SetTargetPriority : ICommand'
+    content.vb: Public NotInheritable Class SetTargetPriority Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - TDMaker.Core.Commands.ICommand
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Core.Commands.SetTargetPriority.#ctor(System.Int32,TDMaker.Core.Defs.TargetPriority)
+  commentId: M:TDMaker.Core.Commands.SetTargetPriority.#ctor(System.Int32,TDMaker.Core.Defs.TargetPriority)
+  id: '#ctor(System.Int32,TDMaker.Core.Defs.TargetPriority)'
+  parent: TDMaker.Core.Commands.SetTargetPriority
+  langs:
+  - csharp
+  - vb
+  name: SetTargetPriority(int, TargetPriority)
+  nameWithType: SetTargetPriority.SetTargetPriority(int, TargetPriority)
+  fullName: TDMaker.Core.Commands.SetTargetPriority.SetTargetPriority(int, TDMaker.Core.Defs.TargetPriority)
+  type: Constructor
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Commands
+  summary: Creates a runtime target-priority command.
+  example: []
+  syntax:
+    content: public SetTargetPriority(int entityId, TargetPriority priority)
+    parameters:
+    - id: entityId
+      type: System.Int32
+    - id: priority
+      type: TDMaker.Core.Defs.TargetPriority
+    content.vb: Public Sub New(entityId As Integer, priority As TargetPriority)
+  overload: TDMaker.Core.Commands.SetTargetPriority.#ctor*
+  nameWithType.vb: SetTargetPriority.New(Integer, TargetPriority)
+  fullName.vb: TDMaker.Core.Commands.SetTargetPriority.New(Integer, TDMaker.Core.Defs.TargetPriority)
+  name.vb: New(Integer, TargetPriority)
+- uid: TDMaker.Core.Commands.SetTargetPriority.EntityId
+  commentId: P:TDMaker.Core.Commands.SetTargetPriority.EntityId
+  id: EntityId
+  parent: TDMaker.Core.Commands.SetTargetPriority
+  langs:
+  - csharp
+  - vb
+  name: EntityId
+  nameWithType: SetTargetPriority.EntityId
+  fullName: TDMaker.Core.Commands.SetTargetPriority.EntityId
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Commands
+  summary: Tower identifier.
+  example: []
+  syntax:
+    content: public int EntityId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property EntityId As Integer
+  overload: TDMaker.Core.Commands.SetTargetPriority.EntityId*
+- uid: TDMaker.Core.Commands.SetTargetPriority.Priority
+  commentId: P:TDMaker.Core.Commands.SetTargetPriority.Priority
+  id: Priority
+  parent: TDMaker.Core.Commands.SetTargetPriority
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: SetTargetPriority.Priority
+  fullName: TDMaker.Core.Commands.SetTargetPriority.Priority
+  type: Property
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Commands
+  summary: Requested priority; undefined values are rejected during command processing.
+  example: []
+  syntax:
+    content: public TargetPriority Priority { get; }
+    parameters: []
+    return:
+      type: TDMaker.Core.Defs.TargetPriority
+    content.vb: Public ReadOnly Property Priority As TargetPriority
+  overload: TDMaker.Core.Commands.SetTargetPriority.Priority*
+references:
+- uid: TDMaker.Core.Commands
+  commentId: N:TDMaker.Core.Commands
+  isExternal: true
+  name: TDMaker.Core.Commands
+  nameWithType: TDMaker.Core.Commands
+  fullName: TDMaker.Core.Commands
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Commands
+    name: Commands
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TDMaker.Core.Commands.ICommand
+  commentId: T:TDMaker.Core.Commands.ICommand
+  parent: TDMaker.Core.Commands
+  isExternal: true
+  href: TDMaker.Core.Commands.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: TDMaker.Core.Commands.ICommand
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Core.Commands.SetTargetPriority.#ctor*
+  commentId: Overload:TDMaker.Core.Commands.SetTargetPriority.#ctor
+  isExternal: true
+  href: TDMaker.Core.Commands.SetTargetPriority.html#TDMaker_Core_Commands_SetTargetPriority__ctor_System_Int32_TDMaker_Core_Defs_TargetPriority_
+  name: SetTargetPriority
+  nameWithType: SetTargetPriority.SetTargetPriority
+  fullName: TDMaker.Core.Commands.SetTargetPriority.SetTargetPriority
+  nameWithType.vb: SetTargetPriority.New
+  fullName.vb: TDMaker.Core.Commands.SetTargetPriority.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TDMaker.Core.Defs.TargetPriority
+  commentId: T:TDMaker.Core.Defs.TargetPriority
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.TargetPriority.html
+  name: TargetPriority
+  nameWithType: TargetPriority
+  fullName: TDMaker.Core.Defs.TargetPriority
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Commands.SetTargetPriority.EntityId*
+  commentId: Overload:TDMaker.Core.Commands.SetTargetPriority.EntityId
+  isExternal: true
+  href: TDMaker.Core.Commands.SetTargetPriority.html#TDMaker_Core_Commands_SetTargetPriority_EntityId
+  name: EntityId
+  nameWithType: SetTargetPriority.EntityId
+  fullName: TDMaker.Core.Commands.SetTargetPriority.EntityId
+- uid: TDMaker.Core.Commands.SetTargetPriority.Priority*
+  commentId: Overload:TDMaker.Core.Commands.SetTargetPriority.Priority
+  isExternal: true
+  href: TDMaker.Core.Commands.SetTargetPriority.html#TDMaker_Core_Commands_SetTargetPriority_Priority
+  name: Priority
+  nameWithType: SetTargetPriority.Priority
+  fullName: TDMaker.Core.Commands.SetTargetPriority.Priority

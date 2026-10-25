@@ -1,0 +1,1258 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.ProfileData
+  commentId: T:TDMaker.Unity.Campaign.ProfileData
+  id: ProfileData
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.ProfileData.#ctor
+  - TDMaker.Unity.Campaign.ProfileData.Clone
+  - TDMaker.Unity.Campaign.ProfileData.CreateNew
+  - TDMaker.Unity.Campaign.ProfileData.CurrentVersion
+  - TDMaker.Unity.Campaign.ProfileData.FindLevel(System.String)
+  - TDMaker.Unity.Campaign.ProfileData.FindPending(System.String)
+  - TDMaker.Unity.Campaign.ProfileData.FormatName
+  - TDMaker.Unity.Campaign.ProfileData.GetCustom(System.String,System.String)
+  - TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank(System.String)
+  - TDMaker.Unity.Campaign.ProfileData.Normalize
+  - TDMaker.Unity.Campaign.ProfileData.OpenLevel(System.String,System.Boolean@)
+  - TDMaker.Unity.Campaign.ProfileData.SetCustom(System.String,System.String)
+  - TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank(System.String,System.Int32)
+  - TDMaker.Unity.Campaign.ProfileData.created
+  - TDMaker.Unity.Campaign.ProfileData.custom
+  - TDMaker.Unity.Campaign.ProfileData.earnedStars
+  - TDMaker.Unity.Campaign.ProfileData.format
+  - TDMaker.Unity.Campaign.ProfileData.levels
+  - TDMaker.Unity.Campaign.ProfileData.pendingClears
+  - TDMaker.Unity.Campaign.ProfileData.saved
+  - TDMaker.Unity.Campaign.ProfileData.starsSpent
+  - TDMaker.Unity.Campaign.ProfileData.upgradeRanks
+  - TDMaker.Unity.Campaign.ProfileData.version
+  langs:
+  - csharp
+  - vb
+  name: ProfileData
+  nameWithType: ProfileData
+  fullName: TDMaker.Unity.Campaign.ProfileData
+  type: Class
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'Everything one save slot stores: opened levels with best stars, victories not yet merged into the map, purchased
+
+    permanent upgrade ranks per track, stars spent on them, and free game-specific entries. App settings (volumes,
+
+    language) are not part of a slot; they stay in <xref href="TDMaker.Unity.View.TDGameSettings" data-throw-if-not-resolved="false"></xref>.
+    Serialized with
+
+    <xref href="UnityEngine.JsonUtility" data-throw-if-not-resolved="false"></xref> by <xref href="TDMaker.Unity.Campaign.ProfileSerializer"
+    data-throw-if-not-resolved="false"></xref>; <xref href="TDMaker.Unity.Campaign.ProfileData.version" data-throw-if-not-resolved="false"></xref>
+    drives migrations.'
+  example: []
+  syntax:
+    content: public sealed class ProfileData
+    content.vb: Public NotInheritable Class ProfileData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: TDMaker.Unity.Campaign.ProfileData.CurrentVersion
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.CurrentVersion
+  id: CurrentVersion
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: CurrentVersion
+  nameWithType: ProfileData.CurrentVersion
+  fullName: TDMaker.Unity.Campaign.ProfileData.CurrentVersion
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Schema version written by this code.
+  example: []
+  syntax:
+    content: public const int CurrentVersion = 1
+    return:
+      type: System.Int32
+    content.vb: Public Const CurrentVersion As Integer = 1
+- uid: TDMaker.Unity.Campaign.ProfileData.FormatName
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.FormatName
+  id: FormatName
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: FormatName
+  nameWithType: ProfileData.FormatName
+  fullName: TDMaker.Unity.Campaign.ProfileData.FormatName
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Marker of 2D Tower Defense Maker profile files.
+  example: []
+  syntax:
+    content: public const string FormatName = "TDMakerProfile"
+    return:
+      type: System.String
+    content.vb: Public Const FormatName As String = "TDMakerProfile"
+- uid: TDMaker.Unity.Campaign.ProfileData.format
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.format
+  id: format
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: format
+  nameWithType: ProfileData.format
+  fullName: TDMaker.Unity.Campaign.ProfileData.format
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Format marker (<xref href="TDMaker.Unity.Campaign.ProfileData.FormatName" data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: public string format
+    return:
+      type: System.String
+    content.vb: Public format As String
+- uid: TDMaker.Unity.Campaign.ProfileData.version
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.version
+  id: version
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: version
+  nameWithType: ProfileData.version
+  fullName: TDMaker.Unity.Campaign.ProfileData.version
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Schema version of the data (see <xref href="TDMaker.Unity.Campaign.ProfileSerializer.Migrate" data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: public int version
+    return:
+      type: System.Int32
+    content.vb: Public version As Integer
+- uid: TDMaker.Unity.Campaign.ProfileData.created
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.created
+  id: created
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: created
+  nameWithType: ProfileData.created
+  fullName: TDMaker.Unity.Campaign.ProfileData.created
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Creation time (UTC, round-trip format).
+  example: []
+  syntax:
+    content: public string created
+    return:
+      type: System.String
+    content.vb: Public created As String
+- uid: TDMaker.Unity.Campaign.ProfileData.saved
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.saved
+  id: saved
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: saved
+  nameWithType: ProfileData.saved
+  fullName: TDMaker.Unity.Campaign.ProfileData.saved
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Time of the last save (UTC, round-trip format).
+  example: []
+  syntax:
+    content: public string saved
+    return:
+      type: System.String
+    content.vb: Public saved As String
+- uid: TDMaker.Unity.Campaign.ProfileData.levels
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.levels
+  id: levels
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: levels
+  nameWithType: ProfileData.levels
+  fullName: TDMaker.Unity.Campaign.ProfileData.levels
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Opened levels (a level without a record is locked).
+  example: []
+  syntax:
+    content: public List<LevelRecord> levels
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Campaign.LevelRecord}
+    content.vb: Public levels As List(Of LevelRecord)
+- uid: TDMaker.Unity.Campaign.ProfileData.pendingClears
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.pendingClears
+  id: pendingClears
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: pendingClears
+  nameWithType: ProfileData.pendingClears
+  fullName: TDMaker.Unity.Campaign.ProfileData.pendingClears
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Victories waiting to be merged into the map.
+  example: []
+  syntax:
+    content: public List<PendingClear> pendingClears
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Campaign.PendingClear}
+    content.vb: Public pendingClears As List(Of PendingClear)
+- uid: TDMaker.Unity.Campaign.ProfileData.upgradeRanks
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.upgradeRanks
+  id: upgradeRanks
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: upgradeRanks
+  nameWithType: ProfileData.upgradeRanks
+  fullName: TDMaker.Unity.Campaign.ProfileData.upgradeRanks
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Purchased permanent upgrade ranks by track key.
+  example: []
+  syntax:
+    content: public List<UpgradeRankRecord> upgradeRanks
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Campaign.UpgradeRankRecord}
+    content.vb: Public upgradeRanks As List(Of UpgradeRankRecord)
+- uid: TDMaker.Unity.Campaign.ProfileData.starsSpent
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.starsSpent
+  id: starsSpent
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: starsSpent
+  nameWithType: ProfileData.starsSpent
+  fullName: TDMaker.Unity.Campaign.ProfileData.starsSpent
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Stars spent on permanent upgrades (available = earned − spent).
+  example: []
+  syntax:
+    content: public int starsSpent
+    return:
+      type: System.Int32
+    content.vb: Public starsSpent As Integer
+- uid: TDMaker.Unity.Campaign.ProfileData.earnedStars
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.earnedStars
+  id: earnedStars
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: earnedStars
+  nameWithType: ProfileData.earnedStars
+  fullName: TDMaker.Unity.Campaign.ProfileData.earnedStars
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Earned star total when the slot was last saved (for slot pickers that do not load the campaign).
+  example: []
+  syntax:
+    content: public int earnedStars
+    return:
+      type: System.Int32
+    content.vb: Public earnedStars As Integer
+- uid: TDMaker.Unity.Campaign.ProfileData.custom
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.custom
+  id: custom
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: custom
+  nameWithType: ProfileData.custom
+  fullName: TDMaker.Unity.Campaign.ProfileData.custom
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Free game-specific entries.
+  example: []
+  syntax:
+    content: public List<ProfileEntry> custom
+    return:
+      type: System.Collections.Generic.List{TDMaker.Unity.Campaign.ProfileEntry}
+    content.vb: Public custom As List(Of ProfileEntry)
+- uid: TDMaker.Unity.Campaign.ProfileData.CreateNew
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.CreateNew
+  id: CreateNew
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: CreateNew()
+  nameWithType: ProfileData.CreateNew()
+  fullName: TDMaker.Unity.Campaign.ProfileData.CreateNew()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: A new empty profile stamped with the current time.
+  example: []
+  syntax:
+    content: public static ProfileData CreateNew()
+    return:
+      type: TDMaker.Unity.Campaign.ProfileData
+    content.vb: Public Shared Function CreateNew() As ProfileData
+  overload: TDMaker.Unity.Campaign.ProfileData.CreateNew*
+- uid: TDMaker.Unity.Campaign.ProfileData.FindLevel(System.String)
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.FindLevel(System.String)
+  id: FindLevel(System.String)
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: FindLevel(string)
+  nameWithType: ProfileData.FindLevel(string)
+  fullName: TDMaker.Unity.Campaign.ProfileData.FindLevel(string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The record of <code class="paramref">key</code>, or null (locked).
+  example: []
+  syntax:
+    content: public LevelRecord FindLevel(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: TDMaker.Unity.Campaign.LevelRecord
+    content.vb: Public Function FindLevel(key As String) As LevelRecord
+  overload: TDMaker.Unity.Campaign.ProfileData.FindLevel*
+  nameWithType.vb: ProfileData.FindLevel(String)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileData.FindLevel(String)
+  name.vb: FindLevel(String)
+- uid: TDMaker.Unity.Campaign.ProfileData.OpenLevel(System.String,System.Boolean@)
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.OpenLevel(System.String,System.Boolean@)
+  id: OpenLevel(System.String,System.Boolean@)
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: OpenLevel(string, out bool)
+  nameWithType: ProfileData.OpenLevel(string, out bool)
+  fullName: TDMaker.Unity.Campaign.ProfileData.OpenLevel(string, out bool)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The record of <code class="paramref">key</code>, created (opened) when missing.
+  example: []
+  syntax:
+    content: public LevelRecord OpenLevel(string key, out bool created)
+    parameters:
+    - id: key
+      type: System.String
+    - id: created
+      type: System.Boolean
+    return:
+      type: TDMaker.Unity.Campaign.LevelRecord
+    content.vb: Public Function OpenLevel(key As String, created As Boolean) As LevelRecord
+  overload: TDMaker.Unity.Campaign.ProfileData.OpenLevel*
+  nameWithType.vb: ProfileData.OpenLevel(String, Boolean)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileData.OpenLevel(String, Boolean)
+  name.vb: OpenLevel(String, Boolean)
+- uid: TDMaker.Unity.Campaign.ProfileData.FindPending(System.String)
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.FindPending(System.String)
+  id: FindPending(System.String)
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: FindPending(string)
+  nameWithType: ProfileData.FindPending(string)
+  fullName: TDMaker.Unity.Campaign.ProfileData.FindPending(string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: The pending victory of <code class="paramref">key</code>, or null.
+  example: []
+  syntax:
+    content: public PendingClear FindPending(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: TDMaker.Unity.Campaign.PendingClear
+    content.vb: Public Function FindPending(key As String) As PendingClear
+  overload: TDMaker.Unity.Campaign.ProfileData.FindPending*
+  nameWithType.vb: ProfileData.FindPending(String)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileData.FindPending(String)
+  name.vb: FindPending(String)
+- uid: TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank(System.String)
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank(System.String)
+  id: GetUpgradeRank(System.String)
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: GetUpgradeRank(string)
+  nameWithType: ProfileData.GetUpgradeRank(string)
+  fullName: TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank(string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Purchased rank of an upgrade track (0 when never bought).
+  example: []
+  syntax:
+    content: public int GetUpgradeRank(string track)
+    parameters:
+    - id: track
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Public Function GetUpgradeRank(track As String) As Integer
+  overload: TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank*
+  nameWithType.vb: ProfileData.GetUpgradeRank(String)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank(String)
+  name.vb: GetUpgradeRank(String)
+- uid: TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank(System.String,System.Int32)
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank(System.String,System.Int32)
+  id: SetUpgradeRank(System.String,System.Int32)
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: SetUpgradeRank(string, int)
+  nameWithType: ProfileData.SetUpgradeRank(string, int)
+  fullName: TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank(string, int)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Sets the purchased rank of an upgrade track (0 removes the entry).
+  example: []
+  syntax:
+    content: public void SetUpgradeRank(string track, int rank)
+    parameters:
+    - id: track
+      type: System.String
+    - id: rank
+      type: System.Int32
+    content.vb: Public Sub SetUpgradeRank(track As String, rank As Integer)
+  overload: TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank*
+  nameWithType.vb: ProfileData.SetUpgradeRank(String, Integer)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank(String, Integer)
+  name.vb: SetUpgradeRank(String, Integer)
+- uid: TDMaker.Unity.Campaign.ProfileData.GetCustom(System.String,System.String)
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.GetCustom(System.String,System.String)
+  id: GetCustom(System.String,System.String)
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: GetCustom(string, string)
+  nameWithType: ProfileData.GetCustom(string, string)
+  fullName: TDMaker.Unity.Campaign.ProfileData.GetCustom(string, string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: A game-specific value, or <code class="paramref">fallback</code>.
+  example: []
+  syntax:
+    content: public string GetCustom(string key, string fallback = null)
+    parameters:
+    - id: key
+      type: System.String
+    - id: fallback
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function GetCustom(key As String, fallback As String = Nothing) As String
+  overload: TDMaker.Unity.Campaign.ProfileData.GetCustom*
+  nameWithType.vb: ProfileData.GetCustom(String, String)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileData.GetCustom(String, String)
+  name.vb: GetCustom(String, String)
+- uid: TDMaker.Unity.Campaign.ProfileData.SetCustom(System.String,System.String)
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.SetCustom(System.String,System.String)
+  id: SetCustom(System.String,System.String)
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: SetCustom(string, string)
+  nameWithType: ProfileData.SetCustom(string, string)
+  fullName: TDMaker.Unity.Campaign.ProfileData.SetCustom(string, string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Sets a game-specific value (null removes it).
+  example: []
+  syntax:
+    content: public void SetCustom(string key, string value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.String
+    content.vb: Public Sub SetCustom(key As String, value As String)
+  overload: TDMaker.Unity.Campaign.ProfileData.SetCustom*
+  nameWithType.vb: ProfileData.SetCustom(String, String)
+  fullName.vb: TDMaker.Unity.Campaign.ProfileData.SetCustom(String, String)
+  name.vb: SetCustom(String, String)
+- uid: TDMaker.Unity.Campaign.ProfileData.Normalize
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.Normalize
+  id: Normalize
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: Normalize()
+  nameWithType: ProfileData.Normalize()
+  fullName: TDMaker.Unity.Campaign.ProfileData.Normalize()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Replaces missing lists, drops empty entries and merges duplicate keys (keeping the best values). Run after loading.
+  example: []
+  syntax:
+    content: public void Normalize()
+    content.vb: Public Sub Normalize()
+  overload: TDMaker.Unity.Campaign.ProfileData.Normalize*
+- uid: TDMaker.Unity.Campaign.ProfileData.Clone
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.Clone
+  id: Clone
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: ProfileData.Clone()
+  fullName: TDMaker.Unity.Campaign.ProfileData.Clone()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: A deep copy (through JSON).
+  example: []
+  syntax:
+    content: public ProfileData Clone()
+    return:
+      type: TDMaker.Unity.Campaign.ProfileData
+    content.vb: Public Function Clone() As ProfileData
+  overload: TDMaker.Unity.Campaign.ProfileData.Clone*
+- uid: TDMaker.Unity.Campaign.ProfileData.#ctor
+  commentId: M:TDMaker.Unity.Campaign.ProfileData.#ctor
+  id: '#ctor'
+  parent: TDMaker.Unity.Campaign.ProfileData
+  langs:
+  - csharp
+  - vb
+  name: ProfileData()
+  nameWithType: ProfileData.ProfileData()
+  fullName: TDMaker.Unity.Campaign.ProfileData.ProfileData()
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  syntax:
+    content: public ProfileData()
+    content.vb: Public Sub New()
+  overload: TDMaker.Unity.Campaign.ProfileData.#ctor*
+  nameWithType.vb: ProfileData.New()
+  fullName.vb: TDMaker.Unity.Campaign.ProfileData.New()
+  name.vb: New()
+references:
+- uid: TDMaker.Unity.View.TDGameSettings
+  commentId: T:TDMaker.Unity.View.TDGameSettings
+  parent: TDMaker.Unity.View
+  isExternal: true
+  href: TDMaker.Unity.View.TDGameSettings.html
+  name: TDGameSettings
+  nameWithType: TDGameSettings
+  fullName: TDMaker.Unity.View.TDGameSettings
+- uid: UnityEngine.JsonUtility
+  commentId: T:UnityEngine.JsonUtility
+  isExternal: true
+  name: JsonUtility
+  nameWithType: JsonUtility
+  fullName: UnityEngine.JsonUtility
+- uid: TDMaker.Unity.Campaign.ProfileSerializer
+  commentId: T:TDMaker.Unity.Campaign.ProfileSerializer
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileSerializer.html
+  name: ProfileSerializer
+  nameWithType: ProfileSerializer
+  fullName: TDMaker.Unity.Campaign.ProfileSerializer
+- uid: TDMaker.Unity.Campaign.ProfileData.version
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.version
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_version
+  name: version
+  nameWithType: ProfileData.version
+  fullName: TDMaker.Unity.Campaign.ProfileData.version
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.View
+  commentId: N:TDMaker.Unity.View
+  isExternal: true
+  name: TDMaker.Unity.View
+  nameWithType: TDMaker.Unity.View
+  fullName: TDMaker.Unity.View
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.View
+    name: View
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Campaign.ProfileData.FormatName
+  commentId: F:TDMaker.Unity.Campaign.ProfileData.FormatName
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_FormatName
+  name: FormatName
+  nameWithType: ProfileData.FormatName
+  fullName: TDMaker.Unity.Campaign.ProfileData.FormatName
+- uid: TDMaker.Unity.Campaign.ProfileSerializer.Migrate
+  commentId: E:TDMaker.Unity.Campaign.ProfileSerializer.Migrate
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileSerializer.html#TDMaker_Unity_Campaign_ProfileSerializer_Migrate
+  name: Migrate
+  nameWithType: ProfileSerializer.Migrate
+  fullName: TDMaker.Unity.Campaign.ProfileSerializer.Migrate
+- uid: System.Collections.Generic.List{TDMaker.Unity.Campaign.LevelRecord}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Campaign.LevelRecord}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<LevelRecord>
+  nameWithType: List<LevelRecord>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Campaign.LevelRecord>
+  nameWithType.vb: List(Of LevelRecord)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Campaign.LevelRecord)
+  name.vb: List(Of LevelRecord)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Campaign.LevelRecord
+    name: LevelRecord
+    isExternal: true
+    href: TDMaker.Unity.Campaign.LevelRecord.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Campaign.LevelRecord
+    name: LevelRecord
+    isExternal: true
+    href: TDMaker.Unity.Campaign.LevelRecord.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{TDMaker.Unity.Campaign.PendingClear}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Campaign.PendingClear}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PendingClear>
+  nameWithType: List<PendingClear>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Campaign.PendingClear>
+  nameWithType.vb: List(Of PendingClear)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Campaign.PendingClear)
+  name.vb: List(Of PendingClear)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Campaign.PendingClear
+    name: PendingClear
+    isExternal: true
+    href: TDMaker.Unity.Campaign.PendingClear.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Campaign.PendingClear
+    name: PendingClear
+    isExternal: true
+    href: TDMaker.Unity.Campaign.PendingClear.html
+  - name: )
+- uid: System.Collections.Generic.List{TDMaker.Unity.Campaign.UpgradeRankRecord}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Campaign.UpgradeRankRecord}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<UpgradeRankRecord>
+  nameWithType: List<UpgradeRankRecord>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Campaign.UpgradeRankRecord>
+  nameWithType.vb: List(Of UpgradeRankRecord)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Campaign.UpgradeRankRecord)
+  name.vb: List(Of UpgradeRankRecord)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Campaign.UpgradeRankRecord
+    name: UpgradeRankRecord
+    isExternal: true
+    href: TDMaker.Unity.Campaign.UpgradeRankRecord.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Campaign.UpgradeRankRecord
+    name: UpgradeRankRecord
+    isExternal: true
+    href: TDMaker.Unity.Campaign.UpgradeRankRecord.html
+  - name: )
+- uid: System.Collections.Generic.List{TDMaker.Unity.Campaign.ProfileEntry}
+  commentId: T:System.Collections.Generic.List{TDMaker.Unity.Campaign.ProfileEntry}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ProfileEntry>
+  nameWithType: List<ProfileEntry>
+  fullName: System.Collections.Generic.List<TDMaker.Unity.Campaign.ProfileEntry>
+  nameWithType.vb: List(Of ProfileEntry)
+  fullName.vb: System.Collections.Generic.List(Of TDMaker.Unity.Campaign.ProfileEntry)
+  name.vb: List(Of ProfileEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TDMaker.Unity.Campaign.ProfileEntry
+    name: ProfileEntry
+    isExternal: true
+    href: TDMaker.Unity.Campaign.ProfileEntry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TDMaker.Unity.Campaign.ProfileEntry
+    name: ProfileEntry
+    isExternal: true
+    href: TDMaker.Unity.Campaign.ProfileEntry.html
+  - name: )
+- uid: TDMaker.Unity.Campaign.ProfileData.CreateNew*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.CreateNew
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_CreateNew
+  name: CreateNew
+  nameWithType: ProfileData.CreateNew
+  fullName: TDMaker.Unity.Campaign.ProfileData.CreateNew
+- uid: TDMaker.Unity.Campaign.ProfileData
+  commentId: T:TDMaker.Unity.Campaign.ProfileData
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html
+  name: ProfileData
+  nameWithType: ProfileData
+  fullName: TDMaker.Unity.Campaign.ProfileData
+- uid: TDMaker.Unity.Campaign.ProfileData.FindLevel*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.FindLevel
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_FindLevel_System_String_
+  name: FindLevel
+  nameWithType: ProfileData.FindLevel
+  fullName: TDMaker.Unity.Campaign.ProfileData.FindLevel
+- uid: TDMaker.Unity.Campaign.LevelRecord
+  commentId: T:TDMaker.Unity.Campaign.LevelRecord
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.LevelRecord.html
+  name: LevelRecord
+  nameWithType: LevelRecord
+  fullName: TDMaker.Unity.Campaign.LevelRecord
+- uid: TDMaker.Unity.Campaign.ProfileData.OpenLevel*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.OpenLevel
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_OpenLevel_System_String_System_Boolean__
+  name: OpenLevel
+  nameWithType: ProfileData.OpenLevel
+  fullName: TDMaker.Unity.Campaign.ProfileData.OpenLevel
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Unity.Campaign.ProfileData.FindPending*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.FindPending
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_FindPending_System_String_
+  name: FindPending
+  nameWithType: ProfileData.FindPending
+  fullName: TDMaker.Unity.Campaign.ProfileData.FindPending
+- uid: TDMaker.Unity.Campaign.PendingClear
+  commentId: T:TDMaker.Unity.Campaign.PendingClear
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.PendingClear.html
+  name: PendingClear
+  nameWithType: PendingClear
+  fullName: TDMaker.Unity.Campaign.PendingClear
+- uid: TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_GetUpgradeRank_System_String_
+  name: GetUpgradeRank
+  nameWithType: ProfileData.GetUpgradeRank
+  fullName: TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank
+- uid: TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_SetUpgradeRank_System_String_System_Int32_
+  name: SetUpgradeRank
+  nameWithType: ProfileData.SetUpgradeRank
+  fullName: TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank
+- uid: TDMaker.Unity.Campaign.ProfileData.GetCustom*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.GetCustom
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_GetCustom_System_String_System_String_
+  name: GetCustom
+  nameWithType: ProfileData.GetCustom
+  fullName: TDMaker.Unity.Campaign.ProfileData.GetCustom
+- uid: TDMaker.Unity.Campaign.ProfileData.SetCustom*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.SetCustom
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_SetCustom_System_String_System_String_
+  name: SetCustom
+  nameWithType: ProfileData.SetCustom
+  fullName: TDMaker.Unity.Campaign.ProfileData.SetCustom
+- uid: TDMaker.Unity.Campaign.ProfileData.Normalize*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.Normalize
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_Normalize
+  name: Normalize
+  nameWithType: ProfileData.Normalize
+  fullName: TDMaker.Unity.Campaign.ProfileData.Normalize
+- uid: TDMaker.Unity.Campaign.ProfileData.Clone*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.Clone
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_Clone
+  name: Clone
+  nameWithType: ProfileData.Clone
+  fullName: TDMaker.Unity.Campaign.ProfileData.Clone
+- uid: TDMaker.Unity.Campaign.ProfileData.#ctor*
+  commentId: Overload:TDMaker.Unity.Campaign.ProfileData.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData__ctor
+  name: ProfileData
+  nameWithType: ProfileData.ProfileData
+  fullName: TDMaker.Unity.Campaign.ProfileData.ProfileData
+  nameWithType.vb: ProfileData.New
+  fullName.vb: TDMaker.Unity.Campaign.ProfileData.New
+  name.vb: New

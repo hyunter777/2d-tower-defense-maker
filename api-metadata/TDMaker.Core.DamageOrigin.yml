@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.DamageOrigin
+  commentId: T:TDMaker.Core.DamageOrigin
+  id: DamageOrigin
+  parent: TDMaker.Core
+  children:
+  - TDMaker.Core.DamageOrigin.Channel
+  - TDMaker.Core.DamageOrigin.Direct
+  - TDMaker.Core.DamageOrigin.Periodic
+  - TDMaker.Core.DamageOrigin.Reflected
+  - TDMaker.Core.DamageOrigin.Trap
+  langs:
+  - csharp
+  - vb
+  name: DamageOrigin
+  nameWithType: DamageOrigin
+  fullName: TDMaker.Core.DamageOrigin
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Native request origin. Reflected packets are leaves and cannot trigger reflection or life steal again.
+  example: []
+  syntax:
+    content: public enum DamageOrigin
+    content.vb: Public Enum DamageOrigin
+- uid: TDMaker.Core.DamageOrigin.Direct
+  commentId: F:TDMaker.Core.DamageOrigin.Direct
+  id: Direct
+  parent: TDMaker.Core.DamageOrigin
+  langs:
+  - csharp
+  - vb
+  name: Direct
+  nameWithType: DamageOrigin.Direct
+  fullName: TDMaker.Core.DamageOrigin.Direct
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Normal melee, projectile or extension damage.
+  example: []
+  syntax:
+    content: Direct = 0
+    return:
+      type: TDMaker.Core.DamageOrigin
+- uid: TDMaker.Core.DamageOrigin.Periodic
+  commentId: F:TDMaker.Core.DamageOrigin.Periodic
+  id: Periodic
+  parent: TDMaker.Core.DamageOrigin
+  langs:
+  - csharp
+  - vb
+  name: Periodic
+  nameWithType: DamageOrigin.Periodic
+  fullName: TDMaker.Core.DamageOrigin.Periodic
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Attached periodic damage.
+  example: []
+  syntax:
+    content: Periodic = 1
+    return:
+      type: TDMaker.Core.DamageOrigin
+- uid: TDMaker.Core.DamageOrigin.Trap
+  commentId: F:TDMaker.Core.DamageOrigin.Trap
+  id: Trap
+  parent: TDMaker.Core.DamageOrigin
+  langs:
+  - csharp
+  - vb
+  name: Trap
+  nameWithType: DamageOrigin.Trap
+  fullName: TDMaker.Core.DamageOrigin.Trap
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: Deployed trigger damage.
+  example: []
+  syntax:
+    content: Trap = 2
+    return:
+      type: TDMaker.Core.DamageOrigin
+- uid: TDMaker.Core.DamageOrigin.Channel
+  commentId: F:TDMaker.Core.DamageOrigin.Channel
+  id: Channel
+  parent: TDMaker.Core.DamageOrigin
+  langs:
+  - csharp
+  - vb
+  name: Channel
+  nameWithType: DamageOrigin.Channel
+  fullName: TDMaker.Core.DamageOrigin.Channel
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A budget channel pulse.
+  example: []
+  syntax:
+    content: Channel = 3
+    return:
+      type: TDMaker.Core.DamageOrigin
+- uid: TDMaker.Core.DamageOrigin.Reflected
+  commentId: F:TDMaker.Core.DamageOrigin.Reflected
+  id: Reflected
+  parent: TDMaker.Core.DamageOrigin
+  langs:
+  - csharp
+  - vb
+  name: Reflected
+  nameWithType: DamageOrigin.Reflected
+  fullName: TDMaker.Core.DamageOrigin.Reflected
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core
+  summary: A native or explicitly marked reflection leaf.
+  example: []
+  syntax:
+    content: Reflected = 4
+    return:
+      type: TDMaker.Core.DamageOrigin
+references:
+- uid: TDMaker.Core
+  commentId: N:TDMaker.Core
+  isExternal: true
+  name: TDMaker.Core
+  nameWithType: TDMaker.Core
+  fullName: TDMaker.Core
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+- uid: TDMaker.Core.DamageOrigin
+  commentId: T:TDMaker.Core.DamageOrigin
+  parent: TDMaker.Core
+  isExternal: true
+  href: TDMaker.Core.DamageOrigin.html
+  name: DamageOrigin
+  nameWithType: DamageOrigin
+  fullName: TDMaker.Core.DamageOrigin

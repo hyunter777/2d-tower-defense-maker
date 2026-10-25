@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Core.Defs.SuccessorBountyPolicy
+  commentId: T:TDMaker.Core.Defs.SuccessorBountyPolicy
+  id: SuccessorBountyPolicy
+  parent: TDMaker.Core.Defs
+  children:
+  - TDMaker.Core.Defs.SuccessorBountyPolicy.OncePerLineage
+  - TDMaker.Core.Defs.SuccessorBountyPolicy.SuppressSuccessor
+  langs:
+  - csharp
+  - vb
+  name: SuccessorBountyPolicy
+  nameWithType: SuccessorBountyPolicy
+  fullName: TDMaker.Core.Defs.SuccessorBountyPolicy
+  type: Enum
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Reward policy for successors. A lineage can never pay twice.
+  example: []
+  syntax:
+    content: public enum SuccessorBountyPolicy
+    content.vb: Public Enum SuccessorBountyPolicy
+- uid: TDMaker.Core.Defs.SuccessorBountyPolicy.OncePerLineage
+  commentId: F:TDMaker.Core.Defs.SuccessorBountyPolicy.OncePerLineage
+  id: OncePerLineage
+  parent: TDMaker.Core.Defs.SuccessorBountyPolicy
+  langs:
+  - csharp
+  - vb
+  name: OncePerLineage
+  nameWithType: SuccessorBountyPolicy.OncePerLineage
+  fullName: TDMaker.Core.Defs.SuccessorBountyPolicy.OncePerLineage
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Allow one reward over the complete lineage.
+  example: []
+  syntax:
+    content: OncePerLineage = 0
+    return:
+      type: TDMaker.Core.Defs.SuccessorBountyPolicy
+- uid: TDMaker.Core.Defs.SuccessorBountyPolicy.SuppressSuccessor
+  commentId: F:TDMaker.Core.Defs.SuccessorBountyPolicy.SuppressSuccessor
+  id: SuppressSuccessor
+  parent: TDMaker.Core.Defs.SuccessorBountyPolicy
+  langs:
+  - csharp
+  - vb
+  name: SuppressSuccessor
+  nameWithType: SuccessorBountyPolicy.SuppressSuccessor
+  fullName: TDMaker.Core.Defs.SuccessorBountyPolicy.SuppressSuccessor
+  type: Field
+  assemblies:
+  - TDMaker.Core
+  namespace: TDMaker.Core.Defs
+  summary: Explicitly forbid rewards from this successor.
+  example: []
+  syntax:
+    content: SuppressSuccessor = 1
+    return:
+      type: TDMaker.Core.Defs.SuccessorBountyPolicy
+references:
+- uid: TDMaker.Core.Defs
+  commentId: N:TDMaker.Core.Defs
+  isExternal: true
+  name: TDMaker.Core.Defs
+  nameWithType: TDMaker.Core.Defs
+  fullName: TDMaker.Core.Defs
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Core.Defs
+    name: Defs
+    isExternal: true
+- uid: TDMaker.Core.Defs.SuccessorBountyPolicy
+  commentId: T:TDMaker.Core.Defs.SuccessorBountyPolicy
+  parent: TDMaker.Core.Defs
+  isExternal: true
+  href: TDMaker.Core.Defs.SuccessorBountyPolicy.html
+  name: SuccessorBountyPolicy
+  nameWithType: SuccessorBountyPolicy
+  fullName: TDMaker.Core.Defs.SuccessorBountyPolicy

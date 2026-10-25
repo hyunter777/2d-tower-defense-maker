@@ -1,0 +1,464 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Campaign.CampaignIssue
+  commentId: T:TDMaker.Unity.Campaign.CampaignIssue
+  id: CampaignIssue
+  parent: TDMaker.Unity.Campaign
+  children:
+  - TDMaker.Unity.Campaign.CampaignIssue.#ctor(TDMaker.Unity.Campaign.CampaignIssueSeverity,System.Int32,System.String)
+  - TDMaker.Unity.Campaign.CampaignIssue.LevelIndex
+  - TDMaker.Unity.Campaign.CampaignIssue.Message
+  - TDMaker.Unity.Campaign.CampaignIssue.Severity
+  - TDMaker.Unity.Campaign.CampaignIssue.ToString
+  langs:
+  - csharp
+  - vb
+  name: CampaignIssue
+  nameWithType: CampaignIssue
+  fullName: TDMaker.Unity.Campaign.CampaignIssue
+  type: Struct
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: One problem found by <xref href="TDMaker.Unity.Campaign.CampaignAsset.Validate" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public readonly struct CampaignIssue
+    content.vb: Public Structure CampaignIssue
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TDMaker.Unity.Campaign.CampaignIssue.Severity
+  commentId: F:TDMaker.Unity.Campaign.CampaignIssue.Severity
+  id: Severity
+  parent: TDMaker.Unity.Campaign.CampaignIssue
+  langs:
+  - csharp
+  - vb
+  name: Severity
+  nameWithType: CampaignIssue.Severity
+  fullName: TDMaker.Unity.Campaign.CampaignIssue.Severity
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Severity.
+  example: []
+  syntax:
+    content: public readonly CampaignIssueSeverity Severity
+    return:
+      type: TDMaker.Unity.Campaign.CampaignIssueSeverity
+    content.vb: Public ReadOnly Severity As CampaignIssueSeverity
+- uid: TDMaker.Unity.Campaign.CampaignIssue.LevelIndex
+  commentId: F:TDMaker.Unity.Campaign.CampaignIssue.LevelIndex
+  id: LevelIndex
+  parent: TDMaker.Unity.Campaign.CampaignIssue
+  langs:
+  - csharp
+  - vb
+  name: LevelIndex
+  nameWithType: CampaignIssue.LevelIndex
+  fullName: TDMaker.Unity.Campaign.CampaignIssue.LevelIndex
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Index of the level concerned, or -1 for the whole campaign.
+  example: []
+  syntax:
+    content: public readonly int LevelIndex
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly LevelIndex As Integer
+- uid: TDMaker.Unity.Campaign.CampaignIssue.Message
+  commentId: F:TDMaker.Unity.Campaign.CampaignIssue.Message
+  id: Message
+  parent: TDMaker.Unity.Campaign.CampaignIssue
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: CampaignIssue.Message
+  fullName: TDMaker.Unity.Campaign.CampaignIssue.Message
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Human-readable description.
+  example: []
+  syntax:
+    content: public readonly string Message
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Message As String
+- uid: TDMaker.Unity.Campaign.CampaignIssue.#ctor(TDMaker.Unity.Campaign.CampaignIssueSeverity,System.Int32,System.String)
+  commentId: M:TDMaker.Unity.Campaign.CampaignIssue.#ctor(TDMaker.Unity.Campaign.CampaignIssueSeverity,System.Int32,System.String)
+  id: '#ctor(TDMaker.Unity.Campaign.CampaignIssueSeverity,System.Int32,System.String)'
+  parent: TDMaker.Unity.Campaign.CampaignIssue
+  langs:
+  - csharp
+  - vb
+  name: CampaignIssue(CampaignIssueSeverity, int, string)
+  nameWithType: CampaignIssue.CampaignIssue(CampaignIssueSeverity, int, string)
+  fullName: TDMaker.Unity.Campaign.CampaignIssue.CampaignIssue(TDMaker.Unity.Campaign.CampaignIssueSeverity, int, string)
+  type: Constructor
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: Creates an issue.
+  example: []
+  syntax:
+    content: public CampaignIssue(CampaignIssueSeverity severity, int levelIndex, string message)
+    parameters:
+    - id: severity
+      type: TDMaker.Unity.Campaign.CampaignIssueSeverity
+    - id: levelIndex
+      type: System.Int32
+    - id: message
+      type: System.String
+    content.vb: Public Sub New(severity As CampaignIssueSeverity, levelIndex As Integer, message As String)
+  overload: TDMaker.Unity.Campaign.CampaignIssue.#ctor*
+  nameWithType.vb: CampaignIssue.New(CampaignIssueSeverity, Integer, String)
+  fullName.vb: TDMaker.Unity.Campaign.CampaignIssue.New(TDMaker.Unity.Campaign.CampaignIssueSeverity, Integer, String)
+  name.vb: New(CampaignIssueSeverity, Integer, String)
+- uid: TDMaker.Unity.Campaign.CampaignIssue.ToString
+  commentId: M:TDMaker.Unity.Campaign.CampaignIssue.ToString
+  id: ToString
+  parent: TDMaker.Unity.Campaign.CampaignIssue
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: CampaignIssue.ToString()
+  fullName: TDMaker.Unity.Campaign.CampaignIssue.ToString()
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: TDMaker.Unity.Campaign.CampaignIssue.ToString*
+references:
+- uid: TDMaker.Unity.Campaign.CampaignAsset.Validate
+  commentId: M:TDMaker.Unity.Campaign.CampaignAsset.Validate
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignAsset.html#TDMaker_Unity_Campaign_CampaignAsset_Validate
+  name: Validate()
+  nameWithType: CampaignAsset.Validate()
+  fullName: TDMaker.Unity.Campaign.CampaignAsset.Validate()
+  spec.csharp:
+  - uid: TDMaker.Unity.Campaign.CampaignAsset.Validate
+    name: Validate
+    isExternal: true
+    href: TDMaker.Unity.Campaign.CampaignAsset.html#TDMaker_Unity_Campaign_CampaignAsset_Validate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Unity.Campaign.CampaignAsset.Validate
+    name: Validate
+    isExternal: true
+    href: TDMaker.Unity.Campaign.CampaignAsset.html#TDMaker_Unity_Campaign_CampaignAsset_Validate
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.Campaign
+  commentId: N:TDMaker.Unity.Campaign
+  isExternal: true
+  name: TDMaker.Unity.Campaign
+  nameWithType: TDMaker.Unity.Campaign
+  fullName: TDMaker.Unity.Campaign
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Campaign
+    name: Campaign
+    isExternal: true
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: ' '
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TDMaker.Unity.Campaign.CampaignIssueSeverity
+  commentId: T:TDMaker.Unity.Campaign.CampaignIssueSeverity
+  parent: TDMaker.Unity.Campaign
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignIssueSeverity.html
+  name: CampaignIssueSeverity
+  nameWithType: CampaignIssueSeverity
+  fullName: TDMaker.Unity.Campaign.CampaignIssueSeverity
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TDMaker.Unity.Campaign.CampaignIssue.#ctor*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignIssue.#ctor
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignIssue.html#TDMaker_Unity_Campaign_CampaignIssue__ctor_TDMaker_Unity_Campaign_CampaignIssueSeverity_System_Int32_System_String_
+  name: CampaignIssue
+  nameWithType: CampaignIssue.CampaignIssue
+  fullName: TDMaker.Unity.Campaign.CampaignIssue.CampaignIssue
+  nameWithType.vb: CampaignIssue.New
+  fullName.vb: TDMaker.Unity.Campaign.CampaignIssue.New
+  name.vb: New
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: TDMaker.Unity.Campaign.CampaignIssue.ToString*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignIssue.ToString
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignIssue.html#TDMaker_Unity_Campaign_CampaignIssue_ToString
+  name: ToString
+  nameWithType: CampaignIssue.ToString
+  fullName: TDMaker.Unity.Campaign.CampaignIssue.ToString

@@ -336,6 +336,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../package-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maker and Samples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../quick-start/" class="md-nav__link">
         
   
@@ -1701,7 +1729,7 @@
 </table>
 <h2 id="gamehud">GameHud<a class="headerlink" href="#gamehud" title="Permanent link">&para;</a></h2>
 <p><strong>Add Component &gt; 2D Tower Defense Maker &gt; Game HUD</strong> (<code>TDMaker.Unity.Hud.GameHud</code>). Built in uGUI from code at runtime – no prefabs to maintain – and styled by a <code>HudTheme</code> asset.</p>
-<p>Contents: top bar (gold, lives, wave, pause, 1×/2×/3×), wave-call indicators at path entrances (countdown ring, early-call bonus), radial build menu, tower panel (upgrade/branch choices, ability ranks, target priority, rally, sell), hero portraits with health/experience and skill buttons, spell bar with cooldowns and hotkeys, unit info, pause and victory/defeat screens with star rating, tooltips, toasts for rejected commands, and world feedback (range ellipses, slot highlight, placement ghost, rally/move markers, spell aim valid/invalid).</p>
+<p>Contents: top bar (gold, lives, wave, pause, 1×/2×/3×), wave-call indicators at path entrances (countdown ring, early-call bonus), radial build menu, tower panel (upgrade/branch choices, ability ranks, target priority, rally, sell), compact hero portraits with health bars (manual skill buttons are an opt-in on Game HUD), spell bar with cooldowns and hotkeys, unit info, pause and victory/defeat screens with star rating, tooltips, toasts for rejected commands, and world feedback (range ellipses, slot highlight, placement ghost, rally/move markers, spell aim valid/invalid).</p>
 <h3 id="controls-pc-mouse-and-keyboard">Controls (PC mouse and keyboard)<a class="headerlink" href="#controls-pc-mouse-and-keyboard" title="Permanent link">&para;</a></h3>
 <p>One thing is selected or aimed at a time. A battlefield left click acts where the button is <strong>released</strong> (press and release must both be on the battlefield, not on HUD panels or buttons).</p>
 <table>
@@ -1863,8 +1891,9 @@
 </table>
 <p>Text: <code>Texts</code> (the scene's <code>TDGameSettings.Texts</code>), static <code>Describe(texts, failure)</code> (the text of a rejected command).</p>
 <p>Scripting: <code>Configure(runner, registry, camera, theme, debugHud)</code>, <code>Connect()</code>, <code>Refresh()</code>, <code>SelectTower(entityId)</code>, <code>SelectBuildSlot(index)</code>, <code>ClearSelection()</code>, <code>CancelAll()</code>, <code>CurrentMode</code> (<code>Browsing</code>, <code>BuildMenu</code>, <code>TowerMenu</code>, <code>RallyAiming</code>, <code>HeroSelected</code>, <code>UnitSelected</code>), <code>AimingSpell</code>, <code>SelectedHero</code>, <code>SelectedTower</code>, <code>SelectedUnit</code>, <code>HasSelection</code>, the input entry points above, <code>Theme</code>, <code>Canvas</code>, <code>Runner</code>, <code>SetPauseMenu(open)</code>, <code>IsPauseMenuOpen</code>, static <code>EnsureEventSystem()</code>.</p>
+<p><strong>Hero skill UI is optional.</strong> The compact default shows a portrait and health bar per hero. <code>HeroSkillButtons</code> (Inspector: <strong>Hero Skill Buttons</strong>) enables small skill-purchase buttons when your hero uses <code>SpendPoints</code>; you can also supply your own allocation UI. The sample heroes use <code>AutoUnlock</code>, so they need no purchase buttons. Spell buttons retain cooldowns, hotkeys and aiming without a large background panel. Short feedback appears under the top bar. Early wave-call rewards update the gold counter and call button; <code>WaveCalledEarly(int gold)</code> is available for a custom notification.</p>
 <p><strong>Game flow from code.</strong> A menu script that adds <code>onContinue</code>/<code>onQuit</code> listeners at runtime calls <code>SetNavigation(showContinue, showQuit, continueText, quitText)</code> to choose which buttons show and their labels – text keys or literal texts (for example "Next Battle" only when a next level exists, and "Main Menu"); with both shown the result screen places them side by side. <code>ClearNavigation()</code> returns to the Inspector rule. The pause button in the top bar opens the same pause menu as <strong>Space</strong>/<strong>P</strong>/<strong>Esc</strong>. The campaign screens (world map, save slots) are described in <a href="../campaign/">Campaign</a>. See the Demo sample (<code>Samples/Demo/Scripts/DemoFlow.cs</code>): one scene, one runner, levels swapped with <code>SimulationRunner.Configure(null, levelAsset)</code> + <code>StartSimulation()</code> (set <code>StartOnPlay</code> off so nothing starts behind the title screen).</p>
-<p>Every value the HUD shows is read back from the simulation; failed or cancelled aims never send commands. Rules are never recomputed in the view: the sell price uses <code>Simulation.PreviewSellRefund</code>, the call-wave bonus and tooltip use <code>PreviewEarlyCallReward</code>, spell tooltips show <code>PreviewEarlyCallSpellCooldownCut</code>, the countdown ring is <code>NextWaveRemaining / NextWaveWaitDuration</code>, the rally cursor is drawn at the point <code>TryResolveRallyPoint</code> resolves (invalid points are refused before a command is sent), the early-call toast shows the <code>GoldChanged</code> delta that precedes <code>WaveStarted</code>, and the result screen shows the core's <code>Victory</code> star rating. Splash rings use <code>ProjectileHit.Value</code> for instant hits. Text is TextMesh Pro with the theme's font, and every string comes from the string tables (<a href="#text-fonts-and-languages">Text, fonts and languages</a>).</p>
+<p>Every value the HUD shows is read back from the simulation; failed or cancelled aims never send commands. Rules are never recomputed in the view: the sell price uses <code>Simulation.PreviewSellRefund</code>, the call-wave bonus and tooltip use <code>PreviewEarlyCallReward</code>, spell tooltips show <code>PreviewEarlyCallSpellCooldownCut</code>, the countdown ring is <code>NextWaveRemaining / NextWaveWaitDuration</code>, the rally cursor is drawn at the point <code>TryResolveRallyPoint</code> resolves (invalid points are refused before a command is sent), early-call feedback uses the <code>GoldChanged</code> delta that precedes <code>WaveStarted</code>, and the result screen shows the core's <code>Victory</code> star rating. Splash rings use <code>ProjectileHit.Value</code> for instant hits. Text is TextMesh Pro with the theme's font, and every string comes from the string tables (<a href="#text-fonts-and-languages">Text, fonts and languages</a>).</p>
 <h2 id="hudtheme">HudTheme<a class="headerlink" href="#hudtheme" title="Permanent link">&para;</a></h2>
 <p><strong>Create &gt; 2D Tower Defense Maker &gt; HUD Theme</strong> (<code>HudTheme</code>). All fields are optional; empty sprites use generated defaults (<code>HudSprites</code>).</p>
 <table>
@@ -1892,8 +1921,12 @@
 <td>panel/button states, text, accent, gold, lives, wave, positive/negative, health, experience, cooldown shade, stars, overlay</td>
 </tr>
 <tr>
+<td>Controls</td>
+<td><code>Button Frame Color</code>, <code>Button Frame Sprite</code>, <code>Selected Text Color</code>, <code>Primary Button Color</code>, <code>Primary Text Color</code>, <code>Tooltip Color</code>, <code>Inset Color</code>, <code>Section Color</code>; <code>HudButton.SetPrimary</code> marks the main action</td>
+</tr>
+<tr>
 <td>Layout</td>
-<td><code>Top Bar Height</code>, <code>Padding</code> (spacing), <code>Panel Padding</code> (sample: 36), <code>Screen Padding</code> (24), <code>Button Text Padding</code> (18 horizontal / 10 vertical), radial menu radius and button size, spell button, portrait, wave indicator, tower panel width, button height</td>
+<td><code>Top Bar Height</code>, <code>Padding</code> (spacing), <code>Panel Padding</code> (sample: 30), <code>Screen Padding</code> (24), <code>Button Text Padding</code> (18 horizontal / 10 vertical), radial menu radius and button size, spell button, portrait, wave indicator, tower panel width, button height</td>
 </tr>
 <tr>
 <td>World feedback</td>
@@ -1926,7 +1959,7 @@
 <p>To make a font asset: select a <code>.ttf</code>/<code>.otf</code> and use <strong>Assets &gt; Create &gt; TextMeshPro &gt; Font Asset</strong> (or <strong>Window &gt; TextMeshPro &gt; Font Asset Creator</strong> for a static atlas).</p>
 <h3 id="chinese-japanese-and-korean-cjk-fonts">Chinese, Japanese and Korean (CJK) fonts<a class="headerlink" href="#chinese-japanese-and-korean-cjk-fonts" title="Permanent link">&para;</a></h3>
 <p>The bundled Inter faces and the TMP default LiberationSans font do not cover CJK scripts; without a CJK font those characters render as boxes (and TMP logs which characters are missing). Add one font that covers the language, as a <strong>dynamic</strong> fallback so only the glyphs you use are rasterized.</p>
-<p><strong>Sample Korean font.</strong> The samples include <strong>Noto Sans KR Regular</strong> (<code>Samples/Fonts/NotoSansKR-Regular.otf</code>, about 4.4 MB, SIL Open Font License 1.1 – <code>Samples/Fonts/OFL.txt</code>, see <code>ThirdPartyNotices.txt</code>) and a dynamic font asset made from it by the sample generator, <code>Samples/Fonts/NotoSansKR-Regular SDF.asset</code> (48 pt sampling, 1024 atlas pages, multi atlas, dynamic data cleared on build). Both sample HUD themes list it in <strong><code>HudTheme &gt; Fallback Fonts</code></strong>, so the Korean sample table renders out of the box (switch <code>TDGameSettings &gt; Language</code> to <code>ko</code>, or use the language button of the Demo). The fallback is applied to a runtime copy of the HUD font, so your TMP Settings and the TMP default font asset are not changed. Keep the font and its license file together if you ship it; if Korean is not required, remove only the Noto Sans KR font and its theme fallback entries; keep the Inter folder and its license.</p>
+<p><strong>Sample Korean font.</strong> The samples include <strong>Noto Sans KR Regular</strong> (<code>Samples/Fonts/NotoSansKR-Regular.otf</code>, about 4.4 MB, SIL Open Font License 1.1 – <code>Samples/Fonts/OFL.txt</code>, see <code>ThirdPartyNotices.txt</code>) and a dynamic font asset made from it by the sample generator, <code>Samples/Fonts/NotoSansKR-Regular SDF.asset</code> (48 pt sampling, 1024 atlas pages, multi atlas, dynamic data cleared on build). Both sample HUD themes list it in <strong><code>HudTheme &gt; Fallback Fonts</code></strong>, so the Korean sample table renders out of the box (switch <code>TDGameSettings &gt; Language</code> to <code>ko</code>, or call the language API in your own UI; the optional sample title has no language buttons). The fallback is applied to a runtime copy of the HUD font, so your TMP Settings and the TMP default font asset are not changed. Keep the font and its license file together if you ship it; if Korean is not required, remove only the Noto Sans KR font and its theme fallback entries; keep the Inter folder and its license.</p>
 <p><strong>Adding a font for another language</strong> (Japanese, Chinese, another Korean typeface):</p>
 <ol>
 <li>Import a font file you are licensed to ship (for example Noto Sans JP / SC / TC, SIL Open Font License).</li>

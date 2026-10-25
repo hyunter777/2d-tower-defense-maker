@@ -290,6 +290,50 @@ Class HudUi
 
 
 
+  <a id="TDMaker_Unity_Hud_HudUi_FitUniform_" data-uid="TDMaker.Unity.Hud.HudUi.FitUniform*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudUi_FitUniform_System_Collections_Generic_IList_TMPro_TMP_Text__System_Single_System_Single_" data-uid="TDMaker.Unity.Hud.HudUi.FitUniform(System.Collections.Generic.IList{TMPro.TMP_Text},System.Single,System.Single)">
+  FitUniform(IList&lt;TMP_Text&gt;, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives a group of labels (a row of toggles, a set of cards) one shared font size: the largest size from maxSize down to
+minSize at which every label fits its rectangle (wrapping labels may break between words but never inside one). Mixed
+sizes inside one row look accidental; one size reads as a set. Labels that still do not fit at minSize ellipsize.
+Call after the labels' rectangles are laid out; turns their auto-sizing off.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float FitUniform(IList&lt;TMP_Text&gt; labels, float maxSize, float minSize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>labels</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<span class="xref">TMP_Text</span>&gt;</dt>
+    <dd></dd>
+    <dt><code>maxSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>minSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="TDMaker_Unity_Hud_HudUi_Image_" data-uid="TDMaker.Unity.Hud.HudUi.Image*"></a>
 
   <h3 id="TDMaker_Unity_Hud_HudUi_Image_System_String_UnityEngine_Transform_UnityEngine_Sprite_UnityEngine_Color_System_Boolean_" data-uid="TDMaker.Unity.Hud.HudUi.Image(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color,System.Boolean)">
@@ -499,6 +543,91 @@ not wrap and may overflow their rect; set <span class="xref">TMPro.TMP_Text.text
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">RectTransform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudUi_Rule_" data-uid="TDMaker.Unity.Hud.HudUi.Rule*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudUi_Rule_System_String_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_" data-uid="TDMaker.Unity.Hud.HudUi.Rule(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme)">
+  Rule(string, Transform, HudTheme)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A thin horizontal rule (tinted like section labels) to separate panel sections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Rule(string name, Transform parent, HudTheme theme)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parent</code> <span class="xref">Transform</span></dt>
+    <dd></dd>
+    <dt><code>theme</code> <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Image</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudUi_Section_" data-uid="TDMaker.Unity.Hud.HudUi.Section*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudUi_Section_System_String_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_System_String_" data-uid="TDMaker.Unity.Hud.HudUi.Section(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.String)">
+  Section(string, Transform, HudTheme, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A small section label inside a panel (&quot;ABILITIES&quot;, &quot;TARGET&quot;): <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_sectionColor">sectionColor</a>, upper case, medium
+weight and a little letter spacing, so it reads as structure rather than content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextMeshProUGUI Section(string name, Transform parent, HudTheme theme, string text = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parent</code> <span class="xref">Transform</span></dt>
+    <dd></dd>
+    <dt><code>theme</code> <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TextMeshProUGUI</span></dt>
     <dd></dd>
   </dl>
 

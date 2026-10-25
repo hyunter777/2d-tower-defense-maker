@@ -151,6 +151,11 @@ cheapest upgrade, branch or ability rank), with the same hero and spell assistan
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.LevelSceneBuilder.html">LevelSceneBuilder</a></dt>
+      <dd><p>Builds a playable scene from caller-owned assets. No sample content is loaded unless explicitly supplied by the caller.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.MapBackgroundPreview.html">MapBackgroundPreview</a></dt>
       <dd><p>Edit-mode stand-in for the painted map: a hidden, never-saved sprite object that shows the level's ground art in the
 Scene view while the Map Editor is open (the Level View only builds the ground in Play mode). It is removed before
@@ -251,6 +256,16 @@ The key tables are public so tests (and buyers copying the scheme) can check the
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.SampleBrowserWindow.html">SampleBrowserWindow</a></dt>
+      <dd><p>Separate entry point for optional examples and the complete sample game.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.SampleCatalog.html">SampleCatalog</a></dt>
+      <dd><p>Optional sample locations. The Maker works without these assets or their generator.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.SampleContentGenerator.html">SampleContentGenerator</a></dt>
       <dd><p>Generates the &quot;Basic&quot; sample: projectiles, enemies, soldiers, four tower families, five waves on two
 multi-lane paths, status effects (slow, poison, stun, rally buff, shield ward), purchasable abilities on final branches
@@ -284,7 +299,9 @@ over the same throw-away slot, with a few ranks bought and one rank's tooltip sh
 pad left empty by <code>-tdmSlots</code> instead of a tower panel; <code>-tdmHidePause</code> keeps the frozen capture from showing the paused state.
 <code>-tdmDemoLevel N</code> starts battle N of the demo scene through its flow (instead of driving the scene's own runner);
 <code>-tdmPanel</code> opens a tower panel in every shot mode (normally only the beam mode shows one). <code>-tdmLang code</code> (for example
-<code>ko</code>) shows the HUD and menus in that language of the scene's text tables (not saved to PlayerPrefs).
+<code>ko</code>) shows the HUD and menus in that language of the scene's text tables (not saved to PlayerPrefs). Demo-scene modes
+<code>levelinfo</code> (the world map with a level's info panel open) and <code>controls</code> (the How to Play page);
+<code>-tdmPauseMenu</code> opens the pause menu in battle shots.
 Script errors logged during the run are counted and reported, so the batch run doubles as a play-mode smoke test.</p>
 </dd>
     </dl>
@@ -444,7 +461,7 @@ shows the waves of the selected Wave Set / Level asset, or of the Level Authorin
     <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.WelcomeWindow.html">WelcomeWindow</a></dt>
       <dd><p><b>Tools &gt; 2D Tower Defense Maker &gt; Welcome</b>: first stop after importing the package – check (and import) the TextMesh Pro
-Essential Resources, open the sample scenes, start a new level,
+Essential Resources, start an independent new level, browse optional examples,
 and open the Unit Workshop or the Map Editor. Shown automatically the first time a project loads
 the package, and then at each editor start while <b>Show on startup</b> is on (per project).</p>
 </dd>

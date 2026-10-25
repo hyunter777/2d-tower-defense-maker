@@ -2771,6 +2771,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.LevelSceneBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.LevelSceneBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.LevelSceneBuilder",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.LevelSceneBuilder.yml\" sourcestartlinenumber=\"1\">Builds a playable scene from caller-owned assets. No sample content is loaded unless explicitly supplied by the caller.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../api-metadata/TDMaker.Editor.MapBackgroundPreview.yml",
       "output": {
         ".html": {
@@ -2995,6 +3009,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.SampleBrowserWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.SampleBrowserWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.SampleBrowserWindow",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.SampleBrowserWindow.yml\" sourcestartlinenumber=\"1\">Separate entry point for optional examples and the complete sample game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.SampleCatalog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.SampleCatalog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.SampleCatalog",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.SampleCatalog.yml\" sourcestartlinenumber=\"1\">Optional sample locations. The Maker works without these assets or their generator.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../api-metadata/TDMaker.Editor.SampleContentGenerator.yml",
       "output": {
         ".html": {
@@ -3019,7 +3061,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Editor.SampleScreenshot",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.SampleScreenshot.yml\" sourcestartlinenumber=\"1\">Plays the sample scene with a scripted run (build on every slot, upgrade, call waves early) and renders the main\ncamera, HUD included, to a PNG (for store-page drafts). Works from the menu and from batch mode\n(<code>-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture</code>, without <code>-quit</code>: the editor exits\nby itself). Needs a graphics device, so it does nothing under <code>-nographics</code>.\nOptions: <code>-tdmSeconds N</code> (game seconds, default 50), <code>-tdmWidth</code>/<code>-tdmHeight</code> (default 1920x1080),\n<code>-tdmOut folder</code> (default <code>.work/screenshots</code>), <code>-tdmScene path</code> (default the Basic sample scene),\n<code>-tdmName file</code> (PNG name without extension), <code>-tdmGold N</code> (starting gold, default 4000), <code>-tdmUpgradeEvery S</code>\n(game seconds between scripted upgrades, default 1.5), <code>-tdmCallEvery S</code> (game seconds between early wave calls, default 8)\n<code>-tdmSlots N</code> (build on the first N pads only, default all), <code>-tdmNoHud</code> (map only, for key art) and <code>-tdmShot mode</code>:\n<code>beam</code> (default: waits for a channelled beam or chain lightning), <code>barracks</code> (waits for soldiers blocking\nseveral enemies), <code>hero</code> (sends the hero to the fight and casts every ready spell just before the shot) or\n<code>worldmap</code> (alias <code>levelselect</code>: the demo scene's world map with preview progress in a throw-away slot; use with the demo scene)\nor <code>title</code> (the title and its language buttons), or <code>slots</code> (the demo scene's save slot page over the same throw-away store) or <code>shop</code> (the world map's star-upgrade shop\nover the same throw-away slot, with a few ranks bought and one rank's tooltip shown). <code>-tdmMenu build</code> opens the build menu on the first\npad left empty by <code>-tdmSlots</code> instead of a tower panel; <code>-tdmHidePause</code> keeps the frozen capture from showing the paused state.\n<code>-tdmDemoLevel N</code> starts battle N of the demo scene through its flow (instead of driving the scene's own runner);\n<code>-tdmPanel</code> opens a tower panel in every shot mode (normally only the beam mode shows one). <code>-tdmLang code</code> (for example\n<code>ko</code>) shows the HUD and menus in that language of the scene's text tables (not saved to PlayerPrefs).\nScript errors logged during the run are counted and reported, so the batch run doubles as a play-mode smoke test.</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.SampleScreenshot.yml\" sourcestartlinenumber=\"1\">Plays the sample scene with a scripted run (build on every slot, upgrade, call waves early) and renders the main\ncamera, HUD included, to a PNG (for store-page drafts). Works from the menu and from batch mode\n(<code>-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture</code>, without <code>-quit</code>: the editor exits\nby itself). Needs a graphics device, so it does nothing under <code>-nographics</code>.\nOptions: <code>-tdmSeconds N</code> (game seconds, default 50), <code>-tdmWidth</code>/<code>-tdmHeight</code> (default 1920x1080),\n<code>-tdmOut folder</code> (default <code>.work/screenshots</code>), <code>-tdmScene path</code> (default the Basic sample scene),\n<code>-tdmName file</code> (PNG name without extension), <code>-tdmGold N</code> (starting gold, default 4000), <code>-tdmUpgradeEvery S</code>\n(game seconds between scripted upgrades, default 1.5), <code>-tdmCallEvery S</code> (game seconds between early wave calls, default 8)\n<code>-tdmSlots N</code> (build on the first N pads only, default all), <code>-tdmNoHud</code> (map only, for key art) and <code>-tdmShot mode</code>:\n<code>beam</code> (default: waits for a channelled beam or chain lightning), <code>barracks</code> (waits for soldiers blocking\nseveral enemies), <code>hero</code> (sends the hero to the fight and casts every ready spell just before the shot) or\n<code>worldmap</code> (alias <code>levelselect</code>: the demo scene's world map with preview progress in a throw-away slot; use with the demo scene)\nor <code>title</code> (the title and its language buttons), or <code>slots</code> (the demo scene's save slot page over the same throw-away store) or <code>shop</code> (the world map's star-upgrade shop\nover the same throw-away slot, with a few ranks bought and one rank's tooltip shown). <code>-tdmMenu build</code> opens the build menu on the first\npad left empty by <code>-tdmSlots</code> instead of a tower panel; <code>-tdmHidePause</code> keeps the frozen capture from showing the paused state.\n<code>-tdmDemoLevel N</code> starts battle N of the demo scene through its flow (instead of driving the scene's own runner);\n<code>-tdmPanel</code> opens a tower panel in every shot mode (normally only the beam mode shows one). <code>-tdmLang code</code> (for example\n<code>ko</code>) shows the HUD and menus in that language of the scene's text tables (not saved to PlayerPrefs). Demo-scene modes\n<code>levelinfo</code> (the world map with a level's info panel open) and <code>controls</code> (the How to Play page);\n<code>-tdmPauseMenu</code> opens the pause menu in battle shots.\nScript errors logged during the run are counted and reported, so the batch run doubles as a play-mode smoke test.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3565,7 +3607,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Editor.WelcomeWindow",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.WelcomeWindow.yml\" sourcestartlinenumber=\"1\"><b>Tools &gt; 2D Tower Defense Maker &gt; Welcome</b>: first stop after importing the package – check (and import) the TextMesh Pro\nEssential Resources, open the sample scenes, start a new level,\nand open the Unit Workshop or the Map Editor. Shown automatically the first time a project loads\nthe package, and then at each editor start while <b>Show on startup</b> is on (per project).</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.WelcomeWindow.yml\" sourcestartlinenumber=\"1\"><b>Tools &gt; 2D Tower Defense Maker &gt; Welcome</b>: first stop after importing the package – check (and import) the TextMesh Pro\nEssential Resources, start an independent new level, browse optional examples,\nand open the Unit Workshop or the Map Editor. Shown automatically the first time a project loads\nthe package, and then at each editor start while <b>Show on startup</b> is on (per project).</p>\n"
     },
     {
       "type": "ManagedReference",

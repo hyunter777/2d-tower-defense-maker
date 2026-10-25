@@ -336,6 +336,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../package-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maker and Samples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../quick-start/" class="md-nav__link">
         
   
@@ -576,6 +604,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Welcome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-sample-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional sample browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1315,6 +1360,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Welcome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-sample-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional sample browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1671,15 +1733,21 @@
 <td><strong>Tools &gt; 2D Tower Defense Maker &gt; Dry Run Level</strong></td>
 </tr>
 <tr>
+<td>Sample browser</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Browse Samples</strong></td>
+</tr>
+<tr>
 <td>Sample generator</td>
-<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Create Sample Content</strong></td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Regenerate Sample Content</strong></td>
 </tr>
 </tbody>
 </table>
 <p>All range ellipses drawn by the tools use the same shape as the simulation (<code>RangeShape</code>). The Y scale is taken from the open scene (level override, else the runner's value, else 0.8).</p>
 <hr />
 <h2 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">&para;</a></h2>
-<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Welcome</strong> is the starting point after importing the package: the TextMesh Pro Essential Resources status with an <strong>Import</strong> button while they are missing, buttons for <strong>New Level…</strong>, <strong>Unit Workshop</strong> and <strong>Map Editor</strong>, and <strong>Open</strong> for each sample scene (Basic, Crossroads, Winding Pass, Demo; <strong>Create Sample Content</strong> when one is missing). <strong>Online Documentation</strong> opens this guide in your browser; <strong>API Reference</strong> opens the generated C# reference. You can also open this guide directly through <strong>Tools &gt; 2D Tower Defense Maker &gt; Online Documentation</strong>. The window opens automatically at editor startup unless <strong>Show on startup</strong> is off (stored per project). Opening it from the menu restores its bounds and focuses it. It never opens in batch mode.</p>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Welcome</strong> starts with TextMesh Pro setup, then <strong>Create your game</strong>: New Level, Unit Workshop and Map Editor. <strong>New Level</strong> defaults to fresh assets in your own folder and works without the Samples add-on. The <strong>Browse Samples</strong> button opens a separate browser for the optional complete sample game and feature examples. Missing samples are not a setup failure. <strong>Online Documentation</strong> and <strong>API Reference</strong> open the guide and C# reference. <strong>Show on startup</strong> is stored per project; the window never opens in batch mode.</p>
+<h3 id="optional-sample-browser">Optional sample browser<a class="headerlink" href="#optional-sample-browser" title="Permanent link">&para;</a></h3>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Browse Samples</strong> separates the complete <strong>Sample Game</strong> (title, slots, campaign, star shop and battles) from feature examples (Basic, Crossroads and Winding Pass). It also links back to New Level. Sample regeneration is available only when the add-on's editor scripts are installed and asks before resetting generated samples. These examples demonstrate choices you can replace in your own game; they are not mandatory Maker configuration.</p>
 <hr />
 <h2 id="new-level-wizard">New Level wizard<a class="headerlink" href="#new-level-wizard" title="Permanent link">&para;</a></h2>
 <p><strong>Tools &gt; 2D Tower Defense Maker &gt; New Level</strong> makes a playable level in one step.</p>
@@ -2171,7 +2239,7 @@
 <h2 id="permanent-upgrade-shop">Permanent upgrade shop<a class="headerlink" href="#permanent-upgrade-shop" title="Permanent link">&para;</a></h2>
 <p><strong>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Shop</strong> edits ordered track/rank columns, a back-loaded star-price curve and stat/mechanic/template-swap effects, with validation and before/after stat previews. Link the shop on the Campaign asset; the world map then offers <strong>Upgrades</strong>. See <a href="../campaign/#the-star-upgrade-shop">Campaigns, Progress and Saves</a> for purchases, Undo Changes, Reset All, save integration and battle snapshots.</p>
 <h2 id="sample-generator">Sample generator<a class="headerlink" href="#sample-generator" title="Permanent link">&para;</a></h2>
-<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Create Sample Content</strong> (re)creates every generated sample: <code>Samples/Basic</code> (data assets and <code>BasicSample.unity</code>), <code>Samples/Crossroads</code> and <code>Samples/WindingPass</code> (their own data plus references to the Basic towers, enemies, hero and spells) and <code>Samples/Demo/DemoSample.unity</code> (title, save slots, world map and result flow over the three levels, with the sample campaign <code>Samples/Demo/Data/SampleCampaign.asset</code> and its painted map picture <code>Samples/Demo/Art/world_map.png</code>; the scripts in <code>Samples/Demo/Scripts</code> are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: <code>TDMaker.Editor.SampleContentGenerator.Generate()</code>.</p>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Regenerate Sample Content</strong> (re)creates every generated sample: <code>Samples/Basic</code> (data assets and <code>BasicSample.unity</code>), <code>Samples/Crossroads</code> and <code>Samples/WindingPass</code> (their own data plus references to the Basic towers, enemies, hero and spells) and <code>Samples/Demo/DemoSample.unity</code> (title, save slots, world map and result flow over the three levels, with the sample campaign <code>Samples/Demo/Data/SampleCampaign.asset</code> and its painted map picture <code>Samples/Demo/Art/world_map.png</code>; the scripts in <code>Samples/Demo/Scripts</code> are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: <code>TDMaker.Editor.SampleContentGenerator.Generate()</code>.</p>
 <hr />
 <h2 id="sample-screenshot">Sample screenshot<a class="headerlink" href="#sample-screenshot" title="Permanent link">&para;</a></h2>
 <p><strong>Tools &gt; 2D Tower Defense Maker &gt; Capture Sample Screenshot</strong> plays the Basic sample with a scripted run and saves a PNG of the camera and HUD. Batch: <code>-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture</code> (without <code>-quit</code> and without <code>-nographics</code>). Details and options: <a href="../presentation/#sample-screenshots">Sample screenshots</a>.</p>

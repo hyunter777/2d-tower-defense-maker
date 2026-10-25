@@ -4,6 +4,10 @@ A Unity 6 toolkit for building **tower defense** games in 2D (URP): enemies foll
 
 2D Tower Defense Maker is split into a deterministic, engine-independent **simulation core** and a Unity **view/authoring layer**, plus a set of **editor tools** for paths, waves and upgrade trees.
 
+## Create your game first
+
+The **Maker** is the reusable runtime and authoring tools. The **Samples** add-on is a separate, optional reference game with its own art, balance and campaign. Install the Maker, open **Welcome > New Level**, and use **Fresh starter assets** to create independent content in `Assets/TDMakerContent/`. Browse the sample game only when you want an example. [See the package boundaries and installation order](package-layout.md).
+
 ## Features
 
 **Gameplay (simulation core)**
@@ -72,7 +76,7 @@ Namespaces: `TDMaker.Core.*`, `TDMaker.Unity.*`, `TDMaker.Editor.*`. Global menu
 
 ## Where to start
 
-1. [Quick Start](quick-start.md) – play the samples (or the whole demo: `Samples/Demo/DemoSample.unity`), then build a first level with the New Level wizard in about 5 minutes (and see how it is made by hand).
+1. [Quick Start](quick-start.md) – build your own level or explore the optional samples (or the whole demo: `Samples/Demo/DemoSample.unity`), then build a first level with the New Level wizard in about 5 minutes (and see how it is made by hand).
 2. [Concepts](concepts.md) – how the simulation works (ticks, ranges, targeting, damage, economy).
 3. [Authoring Reference](authoring.md) – every asset and scene component, field by field.
 4. [Editor Tools](editor-tools.md) – path editor, Unit Workshop, Wave Timeline, Upgrade Tree, Validator, Dry Run.

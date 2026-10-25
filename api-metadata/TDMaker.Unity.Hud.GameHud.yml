@@ -23,6 +23,7 @@ items:
   - TDMaker.Unity.Hud.GameHud.Describe(TDMaker.Unity.Localization.TextResolver,TDMaker.Core.CommandFailure)
   - TDMaker.Unity.Hud.GameHud.EnsureEventSystem
   - TDMaker.Unity.Hud.GameHud.HasSelection
+  - TDMaker.Unity.Hud.GameHud.HeroSkillButtons
   - TDMaker.Unity.Hud.GameHud.IsPauseMenuOpen
   - TDMaker.Unity.Hud.GameHud.PanelCornerCount
   - TDMaker.Unity.Hud.GameHud.PanelCornerPosition(System.Int32,UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Single)
@@ -52,6 +53,7 @@ items:
   - TDMaker.Unity.Hud.GameHud.Texts
   - TDMaker.Unity.Hud.GameHud.Theme
   - TDMaker.Unity.Hud.GameHud.Toast(System.String,System.Boolean)
+  - TDMaker.Unity.Hud.GameHud.WaveCalledEarly
   - TDMaker.Unity.Hud.GameHud.onContinue
   - TDMaker.Unity.Hud.GameHud.onQuit
   langs:
@@ -1253,6 +1255,29 @@ items:
   nameWithType.vb: GameHud.New()
   fullName.vb: TDMaker.Unity.Hud.GameHud.New()
   name.vb: New()
+- uid: TDMaker.Unity.Hud.GameHud.HeroSkillButtons
+  commentId: P:TDMaker.Unity.Hud.GameHud.HeroSkillButtons
+  id: HeroSkillButtons
+  parent: TDMaker.Unity.Hud.GameHud
+  langs:
+  - csharp
+  - vb
+  name: HeroSkillButtons
+  nameWithType: GameHud.HeroSkillButtons
+  fullName: TDMaker.Unity.Hud.GameHud.HeroSkillButtons
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'Whether hero tiles show skill buttons next to the portrait (off by default: portrait and health only).'
+  example: []
+  syntax:
+    content: public bool HeroSkillButtons { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HeroSkillButtons As Boolean
+  overload: TDMaker.Unity.Hud.GameHud.HeroSkillButtons*
 - uid: TDMaker.Unity.Hud.GameHud.CurrentMode
   commentId: P:TDMaker.Unity.Hud.GameHud.CurrentMode
   id: CurrentMode
@@ -1577,6 +1602,27 @@ items:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsPauseMenuOpen As Boolean
   overload: TDMaker.Unity.Hud.GameHud.IsPauseMenuOpen*
+- uid: TDMaker.Unity.Hud.GameHud.WaveCalledEarly
+  commentId: E:TDMaker.Unity.Hud.GameHud.WaveCalledEarly
+  id: WaveCalledEarly
+  parent: TDMaker.Unity.Hud.GameHud
+  langs:
+  - csharp
+  - vb
+  name: WaveCalledEarly
+  nameWithType: GameHud.WaveCalledEarly
+  fullName: TDMaker.Unity.Hud.GameHud.WaveCalledEarly
+  type: Event
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Raised when a wave was called early, with the bonus gold it paid (the HUD itself shows no message for it).
+  example: []
+  syntax:
+    content: public event Action<int> WaveCalledEarly
+    return:
+      type: System.Action{System.Int32}
+    content.vb: Public Event WaveCalledEarly As Action(Of Integer)
 references:
 - uid: TDMaker.Unity.Hud.HudTheme
   commentId: T:TDMaker.Unity.Hud.HudTheme
@@ -9500,6 +9546,13 @@ references:
   nameWithType.vb: GameHud.New
   fullName.vb: TDMaker.Unity.Hud.GameHud.New
   name.vb: New
+- uid: TDMaker.Unity.Hud.GameHud.HeroSkillButtons*
+  commentId: Overload:TDMaker.Unity.Hud.GameHud.HeroSkillButtons
+  isExternal: true
+  href: TDMaker.Unity.Hud.GameHud.html#TDMaker_Unity_Hud_GameHud_HeroSkillButtons
+  name: HeroSkillButtons
+  nameWithType: GameHud.HeroSkillButtons
+  fullName: TDMaker.Unity.Hud.GameHud.HeroSkillButtons
 - uid: TDMaker.Unity.Hud.GameHud.CurrentMode*
   commentId: Overload:TDMaker.Unity.Hud.GameHud.CurrentMode
   isExternal: true
@@ -9655,3 +9708,66 @@ references:
   name: IsPauseMenuOpen
   nameWithType: GameHud.IsPauseMenuOpen
   fullName: TDMaker.Unity.Hud.GameHud.IsPauseMenuOpen
+- uid: System.Action{System.Int32}
+  commentId: T:System.Action{System.Int32}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<int>
+  nameWithType: Action<int>
+  fullName: System.Action<int>
+  nameWithType.vb: Action(Of Integer)
+  fullName.vb: System.Action(Of Integer)
+  name.vb: Action(Of Integer)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )

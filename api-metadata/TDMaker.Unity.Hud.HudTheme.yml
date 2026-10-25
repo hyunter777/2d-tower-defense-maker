@@ -8,12 +8,16 @@ items:
   - TDMaker.Unity.Hud.HudTheme.#ctor
   - TDMaker.Unity.Hud.HudTheme.BarSprite
   - TDMaker.Unity.Hud.HudTheme.Button
+  - TDMaker.Unity.Hud.HudTheme.ButtonFrame
   - TDMaker.Unity.Hud.HudTheme.Circle
   - TDMaker.Unity.Hud.HudTheme.DamageIcon
   - TDMaker.Unity.Hud.HudTheme.Default
   - TDMaker.Unity.Hud.HudTheme.Gold
+  - TDMaker.Unity.Hud.HudTheme.HasButtonFrame
   - TDMaker.Unity.Hud.HudTheme.HasMedallion
+  - TDMaker.Unity.Hud.HudTheme.HasTooltipPlate
   - TDMaker.Unity.Hud.HudTheme.Incoming
+  - TDMaker.Unity.Hud.HudTheme.Inset
   - TDMaker.Unity.Hud.HudTheme.Lives
   - TDMaker.Unity.Hud.HudTheme.LockIcon
   - TDMaker.Unity.Hud.HudTheme.Medallion
@@ -26,6 +30,8 @@ items:
   - TDMaker.Unity.Hud.HudTheme.RingSprite
   - TDMaker.Unity.Hud.HudTheme.SpellButton
   - TDMaker.Unity.Hud.HudTheme.Star
+  - TDMaker.Unity.Hud.HudTheme.TooltipColor
+  - TDMaker.Unity.Hud.HudTheme.TooltipSprite
   - TDMaker.Unity.Hud.HudTheme.TryGetIcon(System.String,UnityEngine.Sprite@)
   - TDMaker.Unity.Hud.HudTheme.Wave
   - TDMaker.Unity.Hud.HudTheme.accentColor
@@ -37,6 +43,8 @@ items:
   - TDMaker.Unity.Hud.HudTheme.buttonColor
   - TDMaker.Unity.Hud.HudTheme.buttonDisabled
   - TDMaker.Unity.Hud.HudTheme.buttonFontWeight
+  - TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+  - TDMaker.Unity.Hud.HudTheme.buttonFrameSprite
   - TDMaker.Unity.Hud.HudTheme.buttonHeight
   - TDMaker.Unity.Hud.HudTheme.buttonHighlight
   - TDMaker.Unity.Hud.HudTheme.buttonPressed
@@ -63,6 +71,7 @@ items:
   - TDMaker.Unity.Hud.HudTheme.heroColor
   - TDMaker.Unity.Hud.HudTheme.iconOverrides
   - TDMaker.Unity.Hud.HudTheme.incomingIcon
+  - TDMaker.Unity.Hud.HudTheme.insetColor
   - TDMaker.Unity.Hud.HudTheme.invalidColor
   - TDMaker.Unity.Hud.HudTheme.largeFontSize
   - TDMaker.Unity.Hud.HudTheme.livesColor
@@ -83,6 +92,8 @@ items:
   - TDMaker.Unity.Hud.HudTheme.portraitSize
   - TDMaker.Unity.Hud.HudTheme.positiveColor
   - TDMaker.Unity.Hud.HudTheme.previewColor
+  - TDMaker.Unity.Hud.HudTheme.primaryButtonColor
+  - TDMaker.Unity.Hud.HudTheme.primaryTextColor
   - TDMaker.Unity.Hud.HudTheme.radialButtonSize
   - TDMaker.Unity.Hud.HudTheme.radialRadius
   - TDMaker.Unity.Hud.HudTheme.rallyColor
@@ -92,7 +103,9 @@ items:
   - TDMaker.Unity.Hud.HudTheme.ribbonSprite
   - TDMaker.Unity.Hud.HudTheme.ringSprite
   - TDMaker.Unity.Hud.HudTheme.screenPadding
+  - TDMaker.Unity.Hud.HudTheme.sectionColor
   - TDMaker.Unity.Hud.HudTheme.selectedColor
+  - TDMaker.Unity.Hud.HudTheme.selectedTextColor
   - TDMaker.Unity.Hud.HudTheme.slotHoverColor
   - TDMaker.Unity.Hud.HudTheme.smallFontSize
   - TDMaker.Unity.Hud.HudTheme.sortingOrder
@@ -103,6 +116,7 @@ items:
   - TDMaker.Unity.Hud.HudTheme.textColor
   - TDMaker.Unity.Hud.HudTheme.textShadow
   - TDMaker.Unity.Hud.HudTheme.titleFontSize
+  - TDMaker.Unity.Hud.HudTheme.tooltipColor
   - TDMaker.Unity.Hud.HudTheme.topBarHeight
   - TDMaker.Unity.Hud.HudTheme.towerPanelWidth
   - TDMaker.Unity.Hud.HudTheme.unitSelectColor
@@ -1597,6 +1611,219 @@ items:
     return:
       type: UnityEngine.Color
     content.vb: Public overlayColor As Color
+- uid: TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+  id: buttonFrameColor
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: buttonFrameColor
+  nameWithType: HudTheme.buttonFrameColor
+  fullName: TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'Trim drawn over every rectangular button (a thin rounded frame; transparent = no trim, the classic look). With
+    a trim,
+
+    an empty <xref href="TDMaker.Unity.Hud.HudTheme.buttonSprite" data-throw-if-not-resolved="false"></xref> uses a flat generated
+    face so the trim draws the edge.'
+  example: []
+  syntax:
+    content: '[Header("Controls (optional)")]
+
+      [Tooltip("Thin frame drawn around rectangular buttons. Transparent = no frame.")]
+
+      public Color buttonFrameColor'
+    return:
+      type: UnityEngine.Color
+    content.vb: '<Header("Controls (optional)")>
+
+      <Tooltip("Thin frame drawn around rectangular buttons. Transparent = no frame.")>
+
+      Public buttonFrameColor As Color'
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Controls (optional)
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Thin frame drawn around rectangular buttons. Transparent = no frame.
+- uid: TDMaker.Unity.Hud.HudTheme.buttonFrameSprite
+  commentId: F:TDMaker.Unity.Hud.HudTheme.buttonFrameSprite
+  id: buttonFrameSprite
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: buttonFrameSprite
+  nameWithType: HudTheme.buttonFrameSprite
+  fullName: TDMaker.Unity.Hud.HudTheme.buttonFrameSprite
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 9-sliced frame sprite for <xref href="TDMaker.Unity.Hud.HudTheme.buttonFrameColor" data-throw-if-not-resolved="false"></xref>;
+    empty uses a generated rounded frame.
+  example: []
+  syntax:
+    content: public Sprite buttonFrameSprite
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public buttonFrameSprite As Sprite
+- uid: TDMaker.Unity.Hud.HudTheme.selectedTextColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.selectedTextColor
+  id: selectedTextColor
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: selectedTextColor
+  nameWithType: HudTheme.selectedTextColor
+  fullName: TDMaker.Unity.Hud.HudTheme.selectedTextColor
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Label colour of a selected (toggled on) button; transparent keeps each label's own colour.
+  example: []
+  syntax:
+    content: '[Tooltip("Label colour on selected buttons (for example dark text on a gold selection). Transparent = unchanged.")]
+
+      public Color selectedTextColor'
+    return:
+      type: UnityEngine.Color
+    content.vb: '<Tooltip("Label colour on selected buttons (for example dark text on a gold selection). Transparent = unchanged.")>
+
+      Public selectedTextColor As Color'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Label colour on selected buttons (for example dark text on a gold selection). Transparent = unchanged.
+- uid: TDMaker.Unity.Hud.HudTheme.primaryButtonColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.primaryButtonColor
+  id: primaryButtonColor
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: primaryButtonColor
+  nameWithType: HudTheme.primaryButtonColor
+  fullName: TDMaker.Unity.Hud.HudTheme.primaryButtonColor
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Face of primary action buttons (Play, Continue, Done ...).
+  example: []
+  syntax:
+    content: public Color primaryButtonColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public primaryButtonColor As Color
+- uid: TDMaker.Unity.Hud.HudTheme.primaryTextColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.primaryTextColor
+  id: primaryTextColor
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: primaryTextColor
+  nameWithType: HudTheme.primaryTextColor
+  fullName: TDMaker.Unity.Hud.HudTheme.primaryTextColor
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Label colour of primary action buttons.
+  example: []
+  syntax:
+    content: public Color primaryTextColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public primaryTextColor As Color
+- uid: TDMaker.Unity.Hud.HudTheme.tooltipColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.tooltipColor
+  id: tooltipColor
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: tooltipColor
+  nameWithType: HudTheme.tooltipColor
+  fullName: TDMaker.Unity.Hud.HudTheme.tooltipColor
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Tooltip plate colour (a generated rounded plate); transparent uses a darkened <xref href="TDMaker.Unity.Hud.HudTheme.panelSprite"
+    data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: '[Tooltip("Tooltip plate colour. Transparent = the panel sprite, darkened.")]
+
+      public Color tooltipColor'
+    return:
+      type: UnityEngine.Color
+    content.vb: '<Tooltip("Tooltip plate colour. Transparent = the panel sprite, darkened.")>
+
+      Public tooltipColor As Color'
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Tooltip plate colour. Transparent = the panel sprite, darkened.
+- uid: TDMaker.Unity.Hud.HudTheme.insetColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.insetColor
+  id: insetColor
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: insetColor
+  nameWithType: HudTheme.insetColor
+  fullName: TDMaker.Unity.Hud.HudTheme.insetColor
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Background of inset strips (target priority row, value wells) drawn inside panels.
+  example: []
+  syntax:
+    content: public Color insetColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public insetColor As Color
+- uid: TDMaker.Unity.Hud.HudTheme.sectionColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.sectionColor
+  id: sectionColor
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: sectionColor
+  nameWithType: HudTheme.sectionColor
+  fullName: TDMaker.Unity.Hud.HudTheme.sectionColor
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Section labels inside panels (ABILITIES, TARGET ...).
+  example: []
+  syntax:
+    content: public Color sectionColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public sectionColor As Color
 - uid: TDMaker.Unity.Hud.HudTheme.topBarHeight
   commentId: F:TDMaker.Unity.Hud.HudTheme.topBarHeight
   id: topBarHeight
@@ -2441,7 +2668,7 @@ items:
   assemblies:
   - TDMaker.Unity
   namespace: TDMaker.Unity.Hud
-  summary: Button sprite.
+  summary: 'Button sprite (with a trim, the generated face has no rim of its own: the trim draws it).'
   example: []
   syntax:
     content: public Sprite Button { get; }
@@ -2450,6 +2677,146 @@ items:
       type: UnityEngine.Sprite
     content.vb: Public ReadOnly Property Button As Sprite
   overload: TDMaker.Unity.Hud.HudTheme.Button*
+- uid: TDMaker.Unity.Hud.HudTheme.HasButtonFrame
+  commentId: P:TDMaker.Unity.Hud.HudTheme.HasButtonFrame
+  id: HasButtonFrame
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: HasButtonFrame
+  nameWithType: HudTheme.HasButtonFrame
+  fullName: TDMaker.Unity.Hud.HudTheme.HasButtonFrame
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Whether rectangular buttons get the <xref href="TDMaker.Unity.Hud.HudTheme.buttonFrameColor" data-throw-if-not-resolved="false"></xref>
+    trim.
+  example: []
+  syntax:
+    content: public bool HasButtonFrame { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasButtonFrame As Boolean
+  overload: TDMaker.Unity.Hud.HudTheme.HasButtonFrame*
+- uid: TDMaker.Unity.Hud.HudTheme.ButtonFrame
+  commentId: P:TDMaker.Unity.Hud.HudTheme.ButtonFrame
+  id: ButtonFrame
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: ButtonFrame
+  nameWithType: HudTheme.ButtonFrame
+  fullName: TDMaker.Unity.Hud.HudTheme.ButtonFrame
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Button trim sprite.
+  example: []
+  syntax:
+    content: public Sprite ButtonFrame { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public ReadOnly Property ButtonFrame As Sprite
+  overload: TDMaker.Unity.Hud.HudTheme.ButtonFrame*
+- uid: TDMaker.Unity.Hud.HudTheme.HasTooltipPlate
+  commentId: P:TDMaker.Unity.Hud.HudTheme.HasTooltipPlate
+  id: HasTooltipPlate
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: HasTooltipPlate
+  nameWithType: HudTheme.HasTooltipPlate
+  fullName: TDMaker.Unity.Hud.HudTheme.HasTooltipPlate
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Whether tooltips use their own plate (<xref href="TDMaker.Unity.Hud.HudTheme.tooltipColor" data-throw-if-not-resolved="false"></xref>)
+    instead of a darkened panel.
+  example: []
+  syntax:
+    content: public bool HasTooltipPlate { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasTooltipPlate As Boolean
+  overload: TDMaker.Unity.Hud.HudTheme.HasTooltipPlate*
+- uid: TDMaker.Unity.Hud.HudTheme.TooltipSprite
+  commentId: P:TDMaker.Unity.Hud.HudTheme.TooltipSprite
+  id: TooltipSprite
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: TooltipSprite
+  nameWithType: HudTheme.TooltipSprite
+  fullName: TDMaker.Unity.Hud.HudTheme.TooltipSprite
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Tooltip background sprite.
+  example: []
+  syntax:
+    content: public Sprite TooltipSprite { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public ReadOnly Property TooltipSprite As Sprite
+  overload: TDMaker.Unity.Hud.HudTheme.TooltipSprite*
+- uid: TDMaker.Unity.Hud.HudTheme.TooltipColor
+  commentId: P:TDMaker.Unity.Hud.HudTheme.TooltipColor
+  id: TooltipColor
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: TooltipColor
+  nameWithType: HudTheme.TooltipColor
+  fullName: TDMaker.Unity.Hud.HudTheme.TooltipColor
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Tooltip background tint.
+  example: []
+  syntax:
+    content: public Color TooltipColor { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public ReadOnly Property TooltipColor As Color
+  overload: TDMaker.Unity.Hud.HudTheme.TooltipColor*
+- uid: TDMaker.Unity.Hud.HudTheme.Inset
+  commentId: P:TDMaker.Unity.Hud.HudTheme.Inset
+  id: Inset
+  parent: TDMaker.Unity.Hud.HudTheme
+  langs:
+  - csharp
+  - vb
+  name: Inset
+  nameWithType: HudTheme.Inset
+  fullName: TDMaker.Unity.Hud.HudTheme.Inset
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Inset strip sprite (segmented controls, value wells).
+  example: []
+  syntax:
+    content: public Sprite Inset { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public ReadOnly Property Inset As Sprite
+  overload: TDMaker.Unity.Hud.HudTheme.Inset*
 - uid: TDMaker.Unity.Hud.HudTheme.Circle
   commentId: P:TDMaker.Unity.Hud.HudTheme.Circle
   id: Circle
@@ -2874,6 +3241,7 @@ references:
   fullName: TDMaker.Unity.Hud.HudSprites
 - uid: TDMaker.Unity.Hud.GameHud
   commentId: T:TDMaker.Unity.Hud.GameHud
+  parent: TDMaker.Unity.Hud
   isExternal: true
   href: TDMaker.Unity.Hud.GameHud.html
   name: GameHud
@@ -8086,6 +8454,27 @@ references:
     isExternal: true
     href: TDMaker.Unity.Hud.HudTheme.IconOverride.html
   - name: )
+- uid: TDMaker.Unity.Hud.HudTheme.buttonSprite
+  commentId: F:TDMaker.Unity.Hud.HudTheme.buttonSprite
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_buttonSprite
+  name: buttonSprite
+  nameWithType: HudTheme.buttonSprite
+  fullName: TDMaker.Unity.Hud.HudTheme.buttonSprite
+- uid: TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_buttonFrameColor
+  name: buttonFrameColor
+  nameWithType: HudTheme.buttonFrameColor
+  fullName: TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+- uid: TDMaker.Unity.Hud.HudTheme.panelSprite
+  commentId: F:TDMaker.Unity.Hud.HudTheme.panelSprite
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_panelSprite
+  name: panelSprite
+  nameWithType: HudTheme.panelSprite
+  fullName: TDMaker.Unity.Hud.HudTheme.panelSprite
 - uid: TDMaker.Unity.Hud.HudTheme.ResolveFont*
   commentId: Overload:TDMaker.Unity.Hud.HudTheme.ResolveFont
   isExternal: true
@@ -8135,6 +8524,55 @@ references:
   name: Button
   nameWithType: HudTheme.Button
   fullName: TDMaker.Unity.Hud.HudTheme.Button
+- uid: TDMaker.Unity.Hud.HudTheme.HasButtonFrame*
+  commentId: Overload:TDMaker.Unity.Hud.HudTheme.HasButtonFrame
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_HasButtonFrame
+  name: HasButtonFrame
+  nameWithType: HudTheme.HasButtonFrame
+  fullName: TDMaker.Unity.Hud.HudTheme.HasButtonFrame
+- uid: TDMaker.Unity.Hud.HudTheme.ButtonFrame*
+  commentId: Overload:TDMaker.Unity.Hud.HudTheme.ButtonFrame
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_ButtonFrame
+  name: ButtonFrame
+  nameWithType: HudTheme.ButtonFrame
+  fullName: TDMaker.Unity.Hud.HudTheme.ButtonFrame
+- uid: TDMaker.Unity.Hud.HudTheme.tooltipColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.tooltipColor
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_tooltipColor
+  name: tooltipColor
+  nameWithType: HudTheme.tooltipColor
+  fullName: TDMaker.Unity.Hud.HudTheme.tooltipColor
+- uid: TDMaker.Unity.Hud.HudTheme.HasTooltipPlate*
+  commentId: Overload:TDMaker.Unity.Hud.HudTheme.HasTooltipPlate
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_HasTooltipPlate
+  name: HasTooltipPlate
+  nameWithType: HudTheme.HasTooltipPlate
+  fullName: TDMaker.Unity.Hud.HudTheme.HasTooltipPlate
+- uid: TDMaker.Unity.Hud.HudTheme.TooltipSprite*
+  commentId: Overload:TDMaker.Unity.Hud.HudTheme.TooltipSprite
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_TooltipSprite
+  name: TooltipSprite
+  nameWithType: HudTheme.TooltipSprite
+  fullName: TDMaker.Unity.Hud.HudTheme.TooltipSprite
+- uid: TDMaker.Unity.Hud.HudTheme.TooltipColor*
+  commentId: Overload:TDMaker.Unity.Hud.HudTheme.TooltipColor
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_TooltipColor
+  name: TooltipColor
+  nameWithType: HudTheme.TooltipColor
+  fullName: TDMaker.Unity.Hud.HudTheme.TooltipColor
+- uid: TDMaker.Unity.Hud.HudTheme.Inset*
+  commentId: Overload:TDMaker.Unity.Hud.HudTheme.Inset
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_Inset
+  name: Inset
+  nameWithType: HudTheme.Inset
+  fullName: TDMaker.Unity.Hud.HudTheme.Inset
 - uid: TDMaker.Unity.Hud.HudTheme.Circle*
   commentId: Overload:TDMaker.Unity.Hud.HudTheme.Circle
   isExternal: true

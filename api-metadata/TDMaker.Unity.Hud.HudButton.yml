@@ -12,10 +12,12 @@ items:
   - TDMaker.Unity.Hud.HudButton.Button
   - TDMaker.Unity.Hud.HudButton.Clicked
   - TDMaker.Unity.Hud.HudButton.Create(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,UnityEngine.Sprite,UnityEngine.Vector2,System.Boolean,System.Boolean,System.Boolean)
+  - TDMaker.Unity.Hud.HudButton.Frame
   - TDMaker.Unity.Hud.HudButton.Highlight
   - TDMaker.Unity.Hud.HudButton.Hovered
   - TDMaker.Unity.Hud.HudButton.Icon
   - TDMaker.Unity.Hud.HudButton.IsHovered
+  - TDMaker.Unity.Hud.HudButton.IsPrimary
   - TDMaker.Unity.Hud.HudButton.Key
   - TDMaker.Unity.Hud.HudButton.Label
   - TDMaker.Unity.Hud.HudButton.LayoutText(System.Boolean,System.Boolean,System.Single,System.Single,System.Single)
@@ -23,6 +25,7 @@ items:
   - TDMaker.Unity.Hud.HudButton.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
   - TDMaker.Unity.Hud.HudButton.PreviewsTemplate
   - TDMaker.Unity.Hud.HudButton.SetInteractable(System.Boolean)
+  - TDMaker.Unity.Hud.HudButton.SetPrimary(System.Boolean)
   - TDMaker.Unity.Hud.HudButton.SetSelected(System.Boolean)
   - TDMaker.Unity.Hud.HudButton.Shade
   - TDMaker.Unity.Hud.HudButton.SubLabel
@@ -395,6 +398,36 @@ items:
   nameWithType.vb: HudButton.SetSelected(Boolean)
   fullName.vb: TDMaker.Unity.Hud.HudButton.SetSelected(Boolean)
   name.vb: SetSelected(Boolean)
+- uid: TDMaker.Unity.Hud.HudButton.SetPrimary(System.Boolean)
+  commentId: M:TDMaker.Unity.Hud.HudButton.SetPrimary(System.Boolean)
+  id: SetPrimary(System.Boolean)
+  parent: TDMaker.Unity.Hud.HudButton
+  langs:
+  - csharp
+  - vb
+  name: SetPrimary(bool)
+  nameWithType: HudButton.SetPrimary(bool)
+  fullName: TDMaker.Unity.Hud.HudButton.SetPrimary(bool)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'Gives the button the theme''s primary action look (<xref href="TDMaker.Unity.Hud.HudTheme.primaryButtonColor"
+    data-throw-if-not-resolved="false"></xref> face and
+
+    <xref href="TDMaker.Unity.Hud.HudTheme.primaryTextColor" data-throw-if-not-resolved="false"></xref> label): one per screen
+    for the action most players take next.'
+  example: []
+  syntax:
+    content: public void SetPrimary(bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+    content.vb: Public Sub SetPrimary(value As Boolean)
+  overload: TDMaker.Unity.Hud.HudButton.SetPrimary*
+  nameWithType.vb: HudButton.SetPrimary(Boolean)
+  fullName.vb: TDMaker.Unity.Hud.HudButton.SetPrimary(Boolean)
+  name.vb: SetPrimary(Boolean)
 - uid: TDMaker.Unity.Hud.HudButton.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
   commentId: M:TDMaker.Unity.Hud.HudButton.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
   id: OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
@@ -602,6 +635,54 @@ items:
       type: UnityEngine.UI.Image
     content.vb: Public ReadOnly Property Highlight As Image
   overload: TDMaker.Unity.Hud.HudButton.Highlight*
+- uid: TDMaker.Unity.Hud.HudButton.Frame
+  commentId: P:TDMaker.Unity.Hud.HudButton.Frame
+  id: Frame
+  parent: TDMaker.Unity.Hud.HudButton
+  langs:
+  - csharp
+  - vb
+  name: Frame
+  nameWithType: HudButton.Frame
+  fullName: TDMaker.Unity.Hud.HudButton.Frame
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: The theme's trim over a rectangular button (<xref href="TDMaker.Unity.Hud.HudTheme.buttonFrameColor" data-throw-if-not-resolved="false"></xref>),
+    or null.
+  example: []
+  syntax:
+    content: public Image Frame { get; }
+    parameters: []
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public ReadOnly Property Frame As Image
+  overload: TDMaker.Unity.Hud.HudButton.Frame*
+- uid: TDMaker.Unity.Hud.HudButton.IsPrimary
+  commentId: P:TDMaker.Unity.Hud.HudButton.IsPrimary
+  id: IsPrimary
+  parent: TDMaker.Unity.Hud.HudButton
+  langs:
+  - csharp
+  - vb
+  name: IsPrimary
+  nameWithType: HudButton.IsPrimary
+  fullName: TDMaker.Unity.Hud.HudButton.IsPrimary
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: Whether the button uses the primary action look (<xref href="TDMaker.Unity.Hud.HudButton.SetPrimary(System.Boolean)"
+    data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: public bool IsPrimary { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPrimary As Boolean
+  overload: TDMaker.Unity.Hud.HudButton.IsPrimary*
 - uid: TDMaker.Unity.Hud.HudButton.Button
   commentId: P:TDMaker.Unity.Hud.HudButton.Button
   id: Button
@@ -8253,6 +8334,27 @@ references:
   name: SetSelected
   nameWithType: HudButton.SetSelected
   fullName: TDMaker.Unity.Hud.HudButton.SetSelected
+- uid: TDMaker.Unity.Hud.HudTheme.primaryButtonColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.primaryButtonColor
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_primaryButtonColor
+  name: primaryButtonColor
+  nameWithType: HudTheme.primaryButtonColor
+  fullName: TDMaker.Unity.Hud.HudTheme.primaryButtonColor
+- uid: TDMaker.Unity.Hud.HudTheme.primaryTextColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.primaryTextColor
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_primaryTextColor
+  name: primaryTextColor
+  nameWithType: HudTheme.primaryTextColor
+  fullName: TDMaker.Unity.Hud.HudTheme.primaryTextColor
+- uid: TDMaker.Unity.Hud.HudButton.SetPrimary*
+  commentId: Overload:TDMaker.Unity.Hud.HudButton.SetPrimary
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudButton.html#TDMaker_Unity_Hud_HudButton_SetPrimary_System_Boolean_
+  name: SetPrimary
+  nameWithType: HudButton.SetPrimary
+  fullName: TDMaker.Unity.Hud.HudButton.SetPrimary
 - uid: TDMaker.Unity.Hud.HudButton.OnPointerEnter*
   commentId: Overload:TDMaker.Unity.Hud.HudButton.OnPointerEnter
   isExternal: true
@@ -8389,6 +8491,59 @@ references:
   name: Highlight
   nameWithType: HudButton.Highlight
   fullName: TDMaker.Unity.Hud.HudButton.Highlight
+- uid: TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_buttonFrameColor
+  name: buttonFrameColor
+  nameWithType: HudTheme.buttonFrameColor
+  fullName: TDMaker.Unity.Hud.HudTheme.buttonFrameColor
+- uid: TDMaker.Unity.Hud.HudButton.Frame*
+  commentId: Overload:TDMaker.Unity.Hud.HudButton.Frame
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudButton.html#TDMaker_Unity_Hud_HudButton_Frame
+  name: Frame
+  nameWithType: HudButton.Frame
+  fullName: TDMaker.Unity.Hud.HudButton.Frame
+- uid: TDMaker.Unity.Hud.HudButton.SetPrimary(System.Boolean)
+  commentId: M:TDMaker.Unity.Hud.HudButton.SetPrimary(System.Boolean)
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudButton.html#TDMaker_Unity_Hud_HudButton_SetPrimary_System_Boolean_
+  name: SetPrimary(bool)
+  nameWithType: HudButton.SetPrimary(bool)
+  fullName: TDMaker.Unity.Hud.HudButton.SetPrimary(bool)
+  nameWithType.vb: HudButton.SetPrimary(Boolean)
+  fullName.vb: TDMaker.Unity.Hud.HudButton.SetPrimary(Boolean)
+  name.vb: SetPrimary(Boolean)
+  spec.csharp:
+  - uid: TDMaker.Unity.Hud.HudButton.SetPrimary(System.Boolean)
+    name: SetPrimary
+    isExternal: true
+    href: TDMaker.Unity.Hud.HudButton.html#TDMaker_Unity_Hud_HudButton_SetPrimary_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Unity.Hud.HudButton.SetPrimary(System.Boolean)
+    name: SetPrimary
+    isExternal: true
+    href: TDMaker.Unity.Hud.HudButton.html#TDMaker_Unity_Hud_HudButton_SetPrimary_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: TDMaker.Unity.Hud.HudButton.IsPrimary*
+  commentId: Overload:TDMaker.Unity.Hud.HudButton.IsPrimary
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudButton.html#TDMaker_Unity_Hud_HudButton_IsPrimary
+  name: IsPrimary
+  nameWithType: HudButton.IsPrimary
+  fullName: TDMaker.Unity.Hud.HudButton.IsPrimary
 - uid: TDMaker.Unity.Hud.HudButton.Button*
   commentId: Overload:TDMaker.Unity.Hud.HudButton.Button
   isExternal: true

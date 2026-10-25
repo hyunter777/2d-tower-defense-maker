@@ -45,7 +45,10 @@ items:
   assemblies:
   - TDMaker.Unity
   namespace: TDMaker.Unity.Hud
-  summary: Adds English and Korean choices to the lower corner without overlapping the title actions.
+  summary: 'Adds English and Korean choices to the top-right corner (clear of the title and its actions); the current language
+    shows
+
+    as selected. Menus rebuild on a language change, so the selection is read when they are built.'
   example: []
   syntax:
     content: public static RectTransform Create(Transform parent, HudTheme theme)

@@ -103,6 +103,7 @@ items:
   - TDMaker.Unity.Localization.HudTexts.ShopEffectSwap
   - TDMaker.Unity.Localization.HudTexts.ShopField(TDMaker.Core.Defs.UpgradeField)
   - TDMaker.Unity.Localization.HudTexts.ShopFieldDamage
+  - TDMaker.Unity.Localization.HudTexts.ShopFree
   - TDMaker.Unity.Localization.HudTexts.ShopHint
   - TDMaker.Unity.Localization.HudTexts.ShopLocked
   - TDMaker.Unity.Localization.HudTexts.ShopNeedStars
@@ -3635,6 +3636,27 @@ items:
     return:
       type: System.String
     content.vb: Public Const ShopOwned As String = "campaign.shop.owned"
+- uid: TDMaker.Unity.Localization.HudTexts.ShopFree
+  commentId: F:TDMaker.Unity.Localization.HudTexts.ShopFree
+  id: ShopFree
+  parent: TDMaker.Unity.Localization.HudTexts
+  langs:
+  - csharp
+  - vb
+  name: ShopFree
+  nameWithType: HudTexts.ShopFree
+  fullName: TDMaker.Unity.Localization.HudTexts.ShopFree
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Price label of a rank that costs no stars.
+  example: []
+  syntax:
+    content: public const string ShopFree = "campaign.shop.free"
+    return:
+      type: System.String
+    content.vb: Public Const ShopFree As String = "campaign.shop.free"
 - uid: TDMaker.Unity.Localization.HudTexts.ShopBuy
   commentId: F:TDMaker.Unity.Localization.HudTexts.ShopBuy
   id: ShopBuy
@@ -3938,6 +3960,7 @@ items:
 references:
 - uid: TDMaker.Unity.Hud.GameHud
   commentId: T:TDMaker.Unity.Hud.GameHud
+  parent: TDMaker.Unity.Hud
   isExternal: true
   href: TDMaker.Unity.Hud.GameHud.html
   name: GameHud
@@ -4203,6 +4226,36 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: TDMaker.Unity.Hud
+  commentId: N:TDMaker.Unity.Hud
+  isExternal: true
+  name: TDMaker.Unity.Hud
+  nameWithType: TDMaker.Unity.Hud
+  fullName: TDMaker.Unity.Hud
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Hud
+    name: Hud
+    isExternal: true
 - uid: System
   commentId: N:System
   isExternal: true

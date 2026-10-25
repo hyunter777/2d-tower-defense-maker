@@ -6,6 +6,7 @@ items:
   parent: TDMaker.Unity.Campaign
   children:
   - TDMaker.Unity.Campaign.CampaignUi.Canvas(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Int32)
+  - TDMaker.Unity.Campaign.CampaignUi.Chip(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme)
   - TDMaker.Unity.Campaign.CampaignUi.DestroyObject(UnityEngine.GameObject)
   - TDMaker.Unity.Campaign.CampaignUi.LevelSummary(TDMaker.Unity.Campaign.CampaignLevel)
   - TDMaker.Unity.Campaign.CampaignUi.LevelTitle(TDMaker.Unity.Campaign.CampaignLevel)
@@ -140,6 +141,41 @@ items:
   fullName.vb: TDMaker.Unity.Campaign.CampaignUi.TextButton(UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, String, String,
     UnityEngine.Vector2, UnityEngine.Vector2, System.Action)
   name.vb: TextButton(Transform, HudTheme, String, String, Vector2, Vector2, Action)
+- uid: TDMaker.Unity.Campaign.CampaignUi.Chip(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme)
+  commentId: M:TDMaker.Unity.Campaign.CampaignUi.Chip(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme)
+  id: Chip(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme)
+  parent: TDMaker.Unity.Campaign.CampaignUi
+  langs:
+  - csharp
+  - vb
+  name: Chip(string, Transform, HudTheme)
+  nameWithType: CampaignUi.Chip(string, Transform, HudTheme)
+  fullName: TDMaker.Unity.Campaign.CampaignUi.Chip(string, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Campaign
+  summary: 'A small value plate (star totals, counters): the theme''s tooltip plate with its trim when the theme has one,
+    otherwise
+
+    the panel sprite. Small enough plates should not use a decorative panel frame, whose borders need more room.'
+  example: []
+  syntax:
+    content: public static Image Chip(string name, Transform parent, HudTheme theme)
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public Shared Function Chip(name As String, parent As Transform, theme As HudTheme) As Image
+  overload: TDMaker.Unity.Campaign.CampaignUi.Chip*
+  nameWithType.vb: CampaignUi.Chip(String, Transform, HudTheme)
+  fullName.vb: TDMaker.Unity.Campaign.CampaignUi.Chip(String, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme)
+  name.vb: Chip(String, Transform, HudTheme)
 - uid: TDMaker.Unity.Campaign.CampaignUi.Paragraph(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
   commentId: M:TDMaker.Unity.Campaign.CampaignUi.Paragraph(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
   id: Paragraph(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
@@ -658,6 +694,42 @@ references:
   name: HudButton
   nameWithType: HudButton
   fullName: TDMaker.Unity.Hud.HudButton
+- uid: TDMaker.Unity.Campaign.CampaignUi.Chip*
+  commentId: Overload:TDMaker.Unity.Campaign.CampaignUi.Chip
+  isExternal: true
+  href: TDMaker.Unity.Campaign.CampaignUi.html#TDMaker_Unity_Campaign_CampaignUi_Chip_System_String_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_
+  name: Chip
+  nameWithType: CampaignUi.Chip
+  fullName: TDMaker.Unity.Campaign.CampaignUi.Chip
+- uid: UnityEngine.UI.Image
+  commentId: T:UnityEngine.UI.Image
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  isExternal: true
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
 - uid: TDMaker.Unity.Campaign.CampaignUi.Paragraph*
   commentId: Overload:TDMaker.Unity.Campaign.CampaignUi.Paragraph
   isExternal: true

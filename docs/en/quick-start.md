@@ -1,9 +1,33 @@
 # Quick Start
 
-## 1. Play the Basic sample (1 minute)
+Start with the **Maker** package to create your own game. The separate **Samples** add-on provides a reference game and feature examples; it is optional. See [Maker and Samples](package-layout.md) for installation and ownership.
+
+## Build your first level (about 5 minutes)
+
+1. Open **Tools > 2D Tower Defense Maker > New Level** (also on the **Welcome** window, **Tools > 2D Tower Defense Maker > Welcome**).
+2. Enter a **Level Name**. The folder follows it (`Assets/TDMakerContent/<Name>`); change it if you like, but not to a folder inside `Assets/TDMaker` (the package).
+3. Optional: drop your painted map on **Background**. The default road and build slots are stretched over it and the camera is framed on it.
+4. Pick the **Starter content**:
+   - **Fresh starter assets** – a new enemy (Walker), an archer tower with a level 2 upgrade, a barracks with its soldier and, with **Include Hero**, a hero, all in the level's `Data` folder. **Include Starter Spell** is on by default and adds Reinforcements using the Footman in the same folder. **Use Sample Sounds** is off by default; enable it only when you want references to `Samples/Audio`.
+   - **Sample kit** – the Basic sample's towers, enemies, hero and spells (the level then depends on `Samples/Basic`).
+5. Set the number of **Waves** (default 3) and press **Create Level**.
+
+You get `<Folder>/<Name>.unity` (open), `<Folder>/Data/` with the Level asset, the Wave Set and the units, and the **Map Editor** open on the **Paths** tool. Then:
+
+1. **Road.** In the Scene view drag the road points where the road should run (Shift+click on the road inserts a point, Ctrl+click deletes). Points run from the entrance (ENTRY) to the exit (EXIT). See [Editor Tools](editor-tools.md#map-editor).
+2. **Build slots.** Press **B** and drag the six pads beside the road, or click to add more. Rally points snap to the nearest road.
+3. **Units and waves.** Tune the towers and the enemy in the **Unit Workshop** (Tools > 2D Tower Defense Maker > Unit Workshop) and the waves in the **Wave Timeline**.
+4. **Check.** **Validate** and **Dry Run** in the Map Editor (or Tools > 2D Tower Defense Maker > Validate Project / Dry Run Level). A sound level is lost without towers and won with a defense.
+5. **Spells.** Edit the starter spell in Unit Workshop, or create a Spell asset and add it to the Level asset's **Spells** list.
+6. **Play.** Build on an empty pad, then click the tower artwork or pad to upgrade it. Start the battle with the entrance skull button labeled **Start Wave**.
+
+
+## Optional: play the Basic sample (1 minute)
+
+Install the optional Samples add-on after the Maker package, then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples**.
 
 1. Open `Assets/TDMaker/Samples/Basic/BasicSample.unity`.
-   - If the scene or its `Data` folder is missing, run **Tools > 2D Tower Defense Maker > Create Sample Content**. It (re)creates all sample assets and the scene in place.
+   - If the scene or its `Data` folder is missing, run **Tools > 2D Tower Defense Maker > Samples > Regenerate Sample Content**. It (re)creates all sample assets and the scene in place.
 2. If prompted, import **TextMesh Pro Essential Resources** (or use **Tools > 2D Tower Defense Maker > Import TMP Essential Resources**), then press **Play**.
 
 The sample contains two multi-lane paths, five waves, six wave enemy types (including a shielding healer, a Revenant that returns once and a Gravecaller that raises weak Husks), four tower families (archer, cannon, arcane, garrison/barracks) with branching final tiers and purchasable abilities, the Warden with a Hound companion, two spells and five status effects. Volley Nest can buy Barbed Mines. The scenes use original vector maps, sprites and HUD art, with generated primitives as fallbacks.
@@ -12,7 +36,7 @@ The sample contains two multi-lane paths, five waves, six wave enemy types (incl
 
 | Scene | What it shows |
 |---|---|
-| `Samples/Crossroads/CrossroadsSample.unity` | Three entrances whose roads merge before the gate, flying Gliders on a separate air route (dotted line; barracks cannot block them, cannons cannot hit them), a tough Marauder for the barracks, and two heroes – the Warden (skills unlock automatically) and the ranged Ranger (spends skill points from its portrait panel). |
+| `Samples/Crossroads/CrossroadsSample.unity` | Three entrances whose roads merge before the gate, flying Gliders on a separate air route (dotted line; barracks cannot block them, cannons cannot hit them), a tough Marauder for the barracks, and two heroes – the Warden (skills unlock automatically) and the ranged Ranger (both sample heroes unlock skills automatically). |
 | `Samples/WindingPass/WindingPassSample.unity` | One long serpentine road, Ironclads (high armor) and Runeguards (high magic resist) and a Bulwark boss; the Mortar family (minimum range, branches into armor-shredding Siege Mortar or slowing Tar Mortar, each with abilities) and a third spell, Hex Circle, that lowers both resistances. |
 | `Samples/Demo/DemoSample.unity` | The playable sample flow: title screen, three save slots (delete with confirmation), the campaign world map (each win opens the next level and keeps the best stars), the three levels, pause menu (Resume / Restart / World Map) and result screen (Restart / World Map). Every action has an on-screen button. The world map also opens the permanent star-upgrade shop. See [Campaign](campaign.md). |
 
@@ -34,26 +58,8 @@ The three levels share gameplay assets and use separate original vector maps. Us
 
 The HUD is the TextMesh Pro/uGUI `Game HUD`, styled by `PaintedHudTheme`; see [Presentation](presentation.md) to restyle or replace it.
 
-## 2. Build your first level (about 5 minutes)
 
-1. Open **Tools > 2D Tower Defense Maker > New Level** (also on the **Welcome** window, **Tools > 2D Tower Defense Maker > Welcome**).
-2. Enter a **Level Name**. The folder follows it (`Assets/TDMakerContent/<Name>`); change it if you like, but not to a folder inside `Assets/TDMaker` (the package).
-3. Optional: drop your painted map on **Background**. The default road and build slots are stretched over it and the camera is framed on it.
-4. Pick the **Starter content**:
-   - **Fresh starter assets** – a new enemy (Walker), an archer tower with a level 2 upgrade, a barracks with its soldier and, with **Include Hero**, a hero, all in the level's `Data` folder. **Include Starter Spell** is on by default and adds Reinforcements using the Footman in the same folder. **Use Sample Sounds** is off by default; enable it only when you want references to `Samples/Audio`.
-   - **Sample kit** – the Basic sample's towers, enemies, hero and spells (the level then depends on `Samples/Basic`).
-5. Set the number of **Waves** (default 3) and press **Create Level**.
-
-You get `<Folder>/<Name>.unity` (open), `<Folder>/Data/` with the Level asset, the Wave Set and the units, and the **Map Editor** open on the **Paths** tool. Then:
-
-1. **Road.** In the Scene view drag the road points where the road should run (Shift+click on the road inserts a point, Ctrl+click deletes). Points run from the entrance (ENTRY) to the exit (EXIT). See [Editor Tools](editor-tools.md#map-editor).
-2. **Build slots.** Press **B** and drag the six pads beside the road, or click to add more. Rally points snap to the nearest road.
-3. **Units and waves.** Tune the towers and the enemy in the **Unit Workshop** (Tools > 2D Tower Defense Maker > Unit Workshop) and the waves in the **Wave Timeline**.
-4. **Check.** **Validate** and **Dry Run** in the Map Editor (or Tools > 2D Tower Defense Maker > Validate Project / Dry Run Level). A sound level is lost without towers and won with a defense.
-5. **Spells.** Edit the starter spell in Unit Workshop, or create a Spell asset and add it to the Level asset's **Spells** list.
-6. **Play.** Build on an empty pad, then click the tower artwork or pad to upgrade it. Start the battle with the entrance skull button labeled **Start Wave**.
-
-## 3. Under the hood: a level asset by asset
+## Under the hood: a level asset by asset
 
 The wizard only creates ordinary assets and components; this is the same level made by hand, useful when you want to know what each part does or build a scene layout of your own.
 

@@ -8,20 +8,25 @@ items:
   - TDMaker.Unity.Hud.HudSprites.Arrow
   - TDMaker.Unity.Hud.HudSprites.Bar
   - TDMaker.Unity.Hud.HudSprites.Button
+  - TDMaker.Unity.Hud.HudSprites.ButtonFace
+  - TDMaker.Unity.Hud.HudSprites.ButtonFrame
   - TDMaker.Unity.Hud.HudSprites.Circle
   - TDMaker.Unity.Hud.HudSprites.Coin
+  - TDMaker.Unity.Hud.HudSprites.Cross
   - TDMaker.Unity.Hud.HudSprites.Flag
   - TDMaker.Unity.Hud.HudSprites.Glow
   - TDMaker.Unity.Hud.HudSprites.Heart
   - TDMaker.Unity.Hud.HudSprites.Lock
   - TDMaker.Unity.Hud.HudSprites.Panel
   - TDMaker.Unity.Hud.HudSprites.Pause
+  - TDMaker.Unity.Hud.HudSprites.Plate
   - TDMaker.Unity.Hud.HudSprites.Play
   - TDMaker.Unity.Hud.HudSprites.Ring
   - TDMaker.Unity.Hud.HudSprites.Skull
   - TDMaker.Unity.Hud.HudSprites.Star
   - TDMaker.Unity.Hud.HudSprites.Sword
   - TDMaker.Unity.Hud.HudSprites.ThickRing
+  - TDMaker.Unity.Hud.HudSprites.Vignette
   langs:
   - csharp
   - vb
@@ -50,6 +55,52 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+- uid: TDMaker.Unity.Hud.HudSprites.Cross
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Cross
+  id: Cross
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Cross
+  nameWithType: HudSprites.Cross
+  fullName: TDMaker.Unity.Hud.HudSprites.Cross
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A diagonal cross (close buttons).
+  example: []
+  syntax:
+    content: public static Sprite Cross { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Cross As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Cross*
+- uid: TDMaker.Unity.Hud.HudSprites.Vignette
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Vignette
+  id: Vignette
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Vignette
+  nameWithType: HudSprites.Vignette
+  fullName: TDMaker.Unity.Hud.HudSprites.Vignette
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A soft vignette (clear centre, opaque corners) for darkening a picture behind menus.
+  example: []
+  syntax:
+    content: public static Sprite Vignette { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Vignette As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Vignette*
 - uid: TDMaker.Unity.Hud.HudSprites.Panel
   commentId: P:TDMaker.Unity.Hud.HudSprites.Panel
   id: Panel
@@ -96,6 +147,79 @@ items:
       type: UnityEngine.Sprite
     content.vb: Public Shared ReadOnly Property Button As Sprite
   overload: TDMaker.Unity.Hud.HudSprites.Button*
+- uid: TDMaker.Unity.Hud.HudSprites.ButtonFace
+  commentId: P:TDMaker.Unity.Hud.HudSprites.ButtonFace
+  id: ButtonFace
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: ButtonFace
+  nameWithType: HudSprites.ButtonFace
+  fullName: TDMaker.Unity.Hud.HudSprites.ButtonFace
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'A rounded button face without a rim (9-sliced): a soft top light fading to a slightly darker base, so tinted faces
+    read as
+
+    raised. Paired with <xref href="TDMaker.Unity.Hud.HudSprites.ButtonFrame" data-throw-if-not-resolved="false"></xref>,
+    which draws the edge.'
+  example: []
+  syntax:
+    content: public static Sprite ButtonFace { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property ButtonFace As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.ButtonFace*
+- uid: TDMaker.Unity.Hud.HudSprites.ButtonFrame
+  commentId: P:TDMaker.Unity.Hud.HudSprites.ButtonFrame
+  id: ButtonFrame
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: ButtonFrame
+  nameWithType: HudSprites.ButtonFrame
+  fullName: TDMaker.Unity.Hud.HudSprites.ButtonFrame
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'A thin rounded frame (9-sliced): a light outer line with a fainter inner bevel; tint it with the trim colour.'
+  example: []
+  syntax:
+    content: public static Sprite ButtonFrame { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property ButtonFrame As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.ButtonFrame*
+- uid: TDMaker.Unity.Hud.HudSprites.Plate
+  commentId: P:TDMaker.Unity.Hud.HudSprites.Plate
+  id: Plate
+  parent: TDMaker.Unity.Hud.HudSprites
+  langs:
+  - csharp
+  - vb
+  name: Plate
+  nameWithType: HudSprites.Plate
+  fullName: TDMaker.Unity.Hud.HudSprites.Plate
+  type: Property
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A flat rounded plate (9-sliced) for tooltips, inset strips and wells.
+  example: []
+  syntax:
+    content: public static Sprite Plate { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared ReadOnly Property Plate As Sprite
+  overload: TDMaker.Unity.Hud.HudSprites.Plate*
 - uid: TDMaker.Unity.Hud.HudSprites.Bar
   commentId: P:TDMaker.Unity.Hud.HudSprites.Bar
   id: Bar
@@ -717,13 +841,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TDMaker.Unity.Hud.HudSprites.Panel*
-  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Panel
+- uid: TDMaker.Unity.Hud.HudSprites.Cross*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Cross
   isExternal: true
-  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Panel
-  name: Panel
-  nameWithType: HudSprites.Panel
-  fullName: TDMaker.Unity.Hud.HudSprites.Panel
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Cross
+  name: Cross
+  nameWithType: HudSprites.Cross
+  fullName: TDMaker.Unity.Hud.HudSprites.Cross
 - uid: UnityEngine.Sprite
   commentId: T:UnityEngine.Sprite
   parent: UnityEngine
@@ -737,6 +861,20 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: TDMaker.Unity.Hud.HudSprites.Vignette*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Vignette
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Vignette
+  name: Vignette
+  nameWithType: HudSprites.Vignette
+  fullName: TDMaker.Unity.Hud.HudSprites.Vignette
+- uid: TDMaker.Unity.Hud.HudSprites.Panel*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Panel
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Panel
+  name: Panel
+  nameWithType: HudSprites.Panel
+  fullName: TDMaker.Unity.Hud.HudSprites.Panel
 - uid: TDMaker.Unity.Hud.HudSprites.Button*
   commentId: Overload:TDMaker.Unity.Hud.HudSprites.Button
   isExternal: true
@@ -744,6 +882,34 @@ references:
   name: Button
   nameWithType: HudSprites.Button
   fullName: TDMaker.Unity.Hud.HudSprites.Button
+- uid: TDMaker.Unity.Hud.HudSprites.ButtonFrame
+  commentId: P:TDMaker.Unity.Hud.HudSprites.ButtonFrame
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_ButtonFrame
+  name: ButtonFrame
+  nameWithType: HudSprites.ButtonFrame
+  fullName: TDMaker.Unity.Hud.HudSprites.ButtonFrame
+- uid: TDMaker.Unity.Hud.HudSprites.ButtonFace*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.ButtonFace
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_ButtonFace
+  name: ButtonFace
+  nameWithType: HudSprites.ButtonFace
+  fullName: TDMaker.Unity.Hud.HudSprites.ButtonFace
+- uid: TDMaker.Unity.Hud.HudSprites.ButtonFrame*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.ButtonFrame
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_ButtonFrame
+  name: ButtonFrame
+  nameWithType: HudSprites.ButtonFrame
+  fullName: TDMaker.Unity.Hud.HudSprites.ButtonFrame
+- uid: TDMaker.Unity.Hud.HudSprites.Plate*
+  commentId: Overload:TDMaker.Unity.Hud.HudSprites.Plate
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudSprites.html#TDMaker_Unity_Hud_HudSprites_Plate
+  name: Plate
+  nameWithType: HudSprites.Plate
+  fullName: TDMaker.Unity.Hud.HudSprites.Plate
 - uid: TDMaker.Unity.Hud.HudSprites.Bar*
   commentId: Overload:TDMaker.Unity.Hud.HudSprites.Bar
   isExternal: true

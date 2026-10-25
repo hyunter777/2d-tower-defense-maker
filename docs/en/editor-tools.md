@@ -12,7 +12,8 @@
 | Upgrade Tree | **Tools > 2D Tower Defense Maker > Upgrade Tree** |
 | Project Validator | **Tools > 2D Tower Defense Maker > Validate Project** |
 | Dry Run | **Tools > 2D Tower Defense Maker > Dry Run Level** |
-| Sample generator | **Tools > 2D Tower Defense Maker > Create Sample Content** |
+| Sample browser | **Tools > 2D Tower Defense Maker > Samples > Browse Samples** |
+| Sample generator | **Tools > 2D Tower Defense Maker > Samples > Regenerate Sample Content** |
 
 All range ellipses drawn by the tools use the same shape as the simulation (`RangeShape`). The Y scale is taken from the open scene (level override, else the runner's value, else 0.8).
 
@@ -20,7 +21,11 @@ All range ellipses drawn by the tools use the same shape as the simulation (`Ran
 
 ## Welcome
 
-**Tools > 2D Tower Defense Maker > Welcome** is the starting point after importing the package: the TextMesh Pro Essential Resources status with an **Import** button while they are missing, buttons for **New Level…**, **Unit Workshop** and **Map Editor**, and **Open** for each sample scene (Basic, Crossroads, Winding Pass, Demo; **Create Sample Content** when one is missing). **Online Documentation** opens this guide in your browser; **API Reference** opens the generated C# reference. You can also open this guide directly through **Tools > 2D Tower Defense Maker > Online Documentation**. The window opens automatically at editor startup unless **Show on startup** is off (stored per project). Opening it from the menu restores its bounds and focuses it. It never opens in batch mode.
+**Tools > 2D Tower Defense Maker > Welcome** starts with TextMesh Pro setup, then **Create your game**: New Level, Unit Workshop and Map Editor. **New Level** defaults to fresh assets in your own folder and works without the Samples add-on. The **Browse Samples** button opens a separate browser for the optional complete sample game and feature examples. Missing samples are not a setup failure. **Online Documentation** and **API Reference** open the guide and C# reference. **Show on startup** is stored per project; the window never opens in batch mode.
+
+### Optional sample browser
+
+**Tools > 2D Tower Defense Maker > Samples > Browse Samples** separates the complete **Sample Game** (title, slots, campaign, star shop and battles) from feature examples (Basic, Crossroads and Winding Pass). It also links back to New Level. Sample regeneration is available only when the add-on's editor scripts are installed and asks before resetting generated samples. These examples demonstrate choices you can replace in your own game; they are not mandatory Maker configuration.
 
 ---
 
@@ -305,7 +310,7 @@ The range Y scale is the level's override when set, otherwise the open scene's `
 
 ## Sample generator
 
-**Tools > 2D Tower Defense Maker > Create Sample Content** (re)creates every generated sample: `Samples/Basic` (data assets and `BasicSample.unity`), `Samples/Crossroads` and `Samples/WindingPass` (their own data plus references to the Basic towers, enemies, hero and spells) and `Samples/Demo/DemoSample.unity` (title, save slots, world map and result flow over the three levels, with the sample campaign `Samples/Demo/Data/SampleCampaign.asset` and its painted map picture `Samples/Demo/Art/world_map.png`; the scripts in `Samples/Demo/Scripts` are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: `TDMaker.Editor.SampleContentGenerator.Generate()`.
+**Tools > 2D Tower Defense Maker > Samples > Regenerate Sample Content** (re)creates every generated sample: `Samples/Basic` (data assets and `BasicSample.unity`), `Samples/Crossroads` and `Samples/WindingPass` (their own data plus references to the Basic towers, enemies, hero and spells) and `Samples/Demo/DemoSample.unity` (title, save slots, world map and result flow over the three levels, with the sample campaign `Samples/Demo/Data/SampleCampaign.asset` and its painted map picture `Samples/Demo/Art/world_map.png`; the scripts in `Samples/Demo/Scripts` are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: `TDMaker.Editor.SampleContentGenerator.Generate()`.
 
 ---
 

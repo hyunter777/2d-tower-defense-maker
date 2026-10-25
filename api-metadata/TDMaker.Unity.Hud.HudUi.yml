@@ -8,11 +8,14 @@ items:
   - TDMaker.Unity.Hud.HudUi.Align(UnityEngine.TextAnchor)
   - TDMaker.Unity.Hud.HudUi.ApplyFont(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme)
   - TDMaker.Unity.Hud.HudUi.Bar(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,UnityEngine.Color,UnityEngine.UI.Image@)
+  - TDMaker.Unity.Hud.HudUi.FitUniform(System.Collections.Generic.IList{TMPro.TMP_Text},System.Single,System.Single)
   - TDMaker.Unity.Hud.HudUi.Image(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color,System.Boolean)
   - TDMaker.Unity.Hud.HudUi.Label(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.Single,UnityEngine.Color,UnityEngine.TextAnchor,System.String)
   - TDMaker.Unity.Hud.HudUi.Place(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
   - TDMaker.Unity.Hud.HudUi.Radial(System.String,UnityEngine.Transform,UnityEngine.Sprite,UnityEngine.Color)
   - TDMaker.Unity.Hud.HudUi.Rect(System.String,UnityEngine.Transform)
+  - TDMaker.Unity.Hud.HudUi.Rule(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme)
+  - TDMaker.Unity.Hud.HudUi.Section(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.String)
   - TDMaker.Unity.Hud.HudUi.SetActive(UnityEngine.Component,System.Boolean)
   - TDMaker.Unity.Hud.HudUi.SetColor(UnityEngine.UI.Graphic,UnityEngine.Color)
   - TDMaker.Unity.Hud.HudUi.SetFraction(UnityEngine.RectTransform,System.Single)
@@ -282,6 +285,115 @@ items:
   fullName.vb: TDMaker.Unity.Hud.HudUi.Label(String, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, Single, UnityEngine.Color,
     UnityEngine.TextAnchor, String)
   name.vb: Label(String, Transform, HudTheme, Single, Color, TextAnchor, String)
+- uid: TDMaker.Unity.Hud.HudUi.Section(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.String)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Section(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.String)
+  id: Section(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme,System.String)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Section(string, Transform, HudTheme, string)
+  nameWithType: HudUi.Section(string, Transform, HudTheme, string)
+  fullName: TDMaker.Unity.Hud.HudUi.Section(string, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, string)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'A small section label inside a panel ("ABILITIES", "TARGET"): <xref href="TDMaker.Unity.Hud.HudTheme.sectionColor"
+    data-throw-if-not-resolved="false"></xref>, upper case, medium
+
+    weight and a little letter spacing, so it reads as structure rather than content.'
+  example: []
+  syntax:
+    content: public static TextMeshProUGUI Section(string name, Transform parent, HudTheme theme, string text = "")
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    - id: text
+      type: System.String
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public Shared Function Section(name As String, parent As Transform, theme As HudTheme, text As String = "")
+      As TextMeshProUGUI
+  overload: TDMaker.Unity.Hud.HudUi.Section*
+  nameWithType.vb: HudUi.Section(String, Transform, HudTheme, String)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.Section(String, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme, String)
+  name.vb: Section(String, Transform, HudTheme, String)
+- uid: TDMaker.Unity.Hud.HudUi.FitUniform(System.Collections.Generic.IList{TMPro.TMP_Text},System.Single,System.Single)
+  commentId: M:TDMaker.Unity.Hud.HudUi.FitUniform(System.Collections.Generic.IList{TMPro.TMP_Text},System.Single,System.Single)
+  id: FitUniform(System.Collections.Generic.IList{TMPro.TMP_Text},System.Single,System.Single)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: FitUniform(IList<TMP_Text>, float, float)
+  nameWithType: HudUi.FitUniform(IList<TMP_Text>, float, float)
+  fullName: TDMaker.Unity.Hud.HudUi.FitUniform(System.Collections.Generic.IList<TMPro.TMP_Text>, float, float)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: 'Gives a group of labels (a row of toggles, a set of cards) one shared font size: the largest size from maxSize
+    down to
+
+    minSize at which every label fits its rectangle (wrapping labels may break between words but never inside one). Mixed
+
+    sizes inside one row look accidental; one size reads as a set. Labels that still do not fit at minSize ellipsize.
+
+    Call after the labels'' rectangles are laid out; turns their auto-sizing off.'
+  example: []
+  syntax:
+    content: public static float FitUniform(IList<TMP_Text> labels, float maxSize, float minSize)
+    parameters:
+    - id: labels
+      type: System.Collections.Generic.IList{TMPro.TMP_Text}
+    - id: maxSize
+      type: System.Single
+    - id: minSize
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function FitUniform(labels As IList(Of TMP_Text), maxSize As Single, minSize As Single) As Single
+  overload: TDMaker.Unity.Hud.HudUi.FitUniform*
+  nameWithType.vb: HudUi.FitUniform(IList(Of TMP_Text), Single, Single)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.FitUniform(System.Collections.Generic.IList(Of TMPro.TMP_Text), Single, Single)
+  name.vb: FitUniform(IList(Of TMP_Text), Single, Single)
+- uid: TDMaker.Unity.Hud.HudUi.Rule(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme)
+  commentId: M:TDMaker.Unity.Hud.HudUi.Rule(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme)
+  id: Rule(System.String,UnityEngine.Transform,TDMaker.Unity.Hud.HudTheme)
+  parent: TDMaker.Unity.Hud.HudUi
+  langs:
+  - csharp
+  - vb
+  name: Rule(string, Transform, HudTheme)
+  nameWithType: HudUi.Rule(string, Transform, HudTheme)
+  fullName: TDMaker.Unity.Hud.HudUi.Rule(string, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme)
+  type: Method
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Hud
+  summary: A thin horizontal rule (tinted like section labels) to separate panel sections.
+  example: []
+  syntax:
+    content: public static Image Rule(string name, Transform parent, HudTheme theme)
+    parameters:
+    - id: name
+      type: System.String
+    - id: parent
+      type: UnityEngine.Transform
+    - id: theme
+      type: TDMaker.Unity.Hud.HudTheme
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public Shared Function Rule(name As String, parent As Transform, theme As HudTheme) As Image
+  overload: TDMaker.Unity.Hud.HudUi.Rule*
+  nameWithType.vb: HudUi.Rule(String, Transform, HudTheme)
+  fullName.vb: TDMaker.Unity.Hud.HudUi.Rule(String, UnityEngine.Transform, TDMaker.Unity.Hud.HudTheme)
+  name.vb: Rule(String, Transform, HudTheme)
 - uid: TDMaker.Unity.Hud.HudUi.ApplyFont(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme)
   commentId: M:TDMaker.Unity.Hud.HudUi.ApplyFont(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme)
   id: ApplyFont(TMPro.TMP_Text,TDMaker.Unity.Hud.HudTheme)
@@ -1020,6 +1132,132 @@ references:
   name: TMPro
   nameWithType: TMPro
   fullName: TMPro
+- uid: TDMaker.Unity.Hud.HudTheme.sectionColor
+  commentId: F:TDMaker.Unity.Hud.HudTheme.sectionColor
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudTheme.html#TDMaker_Unity_Hud_HudTheme_sectionColor
+  name: sectionColor
+  nameWithType: HudTheme.sectionColor
+  fullName: TDMaker.Unity.Hud.HudTheme.sectionColor
+- uid: TDMaker.Unity.Hud.HudUi.Section*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Section
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Section_System_String_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_System_String_
+  name: Section
+  nameWithType: HudUi.Section
+  fullName: TDMaker.Unity.Hud.HudUi.Section
+- uid: TDMaker.Unity.Hud.HudUi.FitUniform*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.FitUniform
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_FitUniform_System_Collections_Generic_IList_TMPro_TMP_Text__System_Single_System_Single_
+  name: FitUniform
+  nameWithType: HudUi.FitUniform
+  fullName: TDMaker.Unity.Hud.HudUi.FitUniform
+- uid: System.Collections.Generic.IList{TMPro.TMP_Text}
+  commentId: T:System.Collections.Generic.IList{TMPro.TMP_Text}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<TMP_Text>
+  nameWithType: IList<TMP_Text>
+  fullName: System.Collections.Generic.IList<TMPro.TMP_Text>
+  nameWithType.vb: IList(Of TMP_Text)
+  fullName.vb: System.Collections.Generic.IList(Of TMPro.TMP_Text)
+  name.vb: IList(Of TMP_Text)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: TMPro.TMP_Text
+    name: TMP_Text
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: TMPro.TMP_Text
+    name: TMP_Text
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Unity.Hud.HudUi.Rule*
+  commentId: Overload:TDMaker.Unity.Hud.HudUi.Rule
+  isExternal: true
+  href: TDMaker.Unity.Hud.HudUi.html#TDMaker_Unity_Hud_HudUi_Rule_System_String_UnityEngine_Transform_TDMaker_Unity_Hud_HudTheme_
+  name: Rule
+  nameWithType: HudUi.Rule
+  fullName: TDMaker.Unity.Hud.HudUi.Rule
 - uid: TDMaker.Unity.Hud.HudUi.ApplyFont*
   commentId: Overload:TDMaker.Unity.Hud.HudUi.ApplyFont
   isExternal: true

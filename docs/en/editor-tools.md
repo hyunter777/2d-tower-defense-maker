@@ -310,7 +310,7 @@ The range Y scale is the level's override when set, otherwise the open scene's `
 
 ## Sample generator
 
-**Tools > 2D Tower Defense Maker > Samples > Regenerate Sample Content** (re)creates every generated sample: `Samples/Basic` (data assets and `BasicSample.unity`), `Samples/Crossroads` and `Samples/WindingPass` (their own data plus references to the Basic towers, enemies, hero and spells) and `Samples/Demo/DemoSample.unity` (title, save slots, world map and result flow over the three levels, with the sample campaign `Samples/Demo/Data/SampleCampaign.asset` and its painted map picture `Samples/Demo/Art/world_map.png`; the scripts in `Samples/Demo/Scripts` are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: `TDMaker.Editor.SampleContentGenerator.Generate()`.
+**Tools > 2D Tower Defense Maker > Samples > Regenerate Sample Content** (re)creates every generated sample: `Samples/Basic` (data assets and `BasicSample.unity`), `Samples/Crossroads` and `Samples/WindingPass` (their own data plus references to the Basic towers, enemies, hero and spells) and `Samples/Demo/DemoSample.unity` (title, save slots, world map and result flow over the three levels, with the sample campaign `Samples/Demo/Data/SampleCampaign.asset` and its map image `Samples/Demo/Art/world_map.png`; the scripts in `Samples/Demo/Scripts` are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: `TDMaker.Editor.SampleContentGenerator.Generate()`.
 
 ---
 
@@ -324,3 +324,17 @@ The range Y scale is the level's override when set, otherwise the open scene's `
 - A Wave Timeline group's **+** opens an enemy picker before adding the entry. Count and Interval are copied from the previous entry, and the operation supports Undo. Double-clicking an empty group row uses the existing copy-entry workflow.
 - Map Editor keeps Validate/Dry Run controls and their latest summaries at the top of the window. Click the error/warning summary to open the Validator. The separate all-slot **Auto Rally** action asks for confirmation and supports a single Undo step.
 - **Sample kit** refers to existing sample units. Disabling **Use Sample Sounds** does not remove audio references already stored on those shared units. For content independent of Samples, choose **Fresh starter assets** and leave sample sounds off.
+
+## Authoring screenshots
+
+These are actual editor captures. The Unit Workshop and Map Editor use their standard window sizes.
+
+### Unit Workshop: attacks and preview
+
+![Unit Workshop with an archer tower, attack settings and sprite preview](assets/images/workshop.png)
+
+### Paths and build slots
+
+![Scene view with editable paths, entrances, exits and construction slots](assets/images/map-paths.png)
+
+![Map Editor path and slot controls](assets/images/map-editor.png)

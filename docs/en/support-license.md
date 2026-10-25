@@ -17,7 +17,11 @@ Remove credentials and private project data from shared logs or reproduction pro
 
 The license supplied with your purchase governs use of **2D Tower Defense Maker**. Included third-party font software retains its own license. The package's complete third-party inventory is in `Assets/TDMaker/Documentation/ThirdPartyNotices.txt`; keep that file and the applicable font notices with redistributed font software.
 
-The included sample gameplay content, maps and sprites are original. Sample maps and sprites use hand-authored vector artwork with procedural shape fallbacks. The font software and generated sample audio are described below.
+The included sample gameplay content, maps and sprites are original. Sample maps and sprites use SVG artwork and procedural map tooling rendered to PNG, with procedural shape fallbacks. The font software and generated sample audio are described below.
+
+## AI-assisted development
+
+OpenAI Codex and Anthropic Claude assisted development of the C# framework, editor tools, SVG-based sample artwork and documentation. The results were integrated and adjusted for this toolkit and checked with automated tests and editor/sample QA. Stable Audio 3 generated the optional sample audio. Model weights are not included, and using the Maker does not require an AI account, API key or AI service.
 
 ## Inter
 

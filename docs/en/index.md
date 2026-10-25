@@ -38,7 +38,7 @@ The **Maker** is the reusable runtime and authoring tools. The **Samples** add-o
 
 **Editor tools**
 
-- New Level wizard and Welcome window; Map Editor with painted backgrounds, curve paths, build slots, snapping and previews.
+- New Level wizard and Welcome window; Map Editor with map backgrounds, curve paths, build slots, snapping and previews.
 - Unit Workshop: every unit, projectile and effect in one window – presets, animation preview, mechanic cards, bulk frame registration, computed values and a headless sandbox.
 - Wave Timeline window.
 - Upgrade Tree window.
@@ -47,6 +47,12 @@ The **Maker** is the reusable runtime and authoring tools. The **Samples** add-o
 - Campaign: a world map asset with level points and unlock rules (previous level, required levels, star gates, side branches), progress with best stars and a star total, three save slots (JSON files with versioned migration, atomic writes and kept backups; an optional PlayerPrefs-backed store), and ready-made world map and save slot screens with a map editor in the inspector.
 - Permanent star-upgrade shop: six sample tracks, ordered purchases, saved ranks, Undo/Reset and deterministic battle snapshots.
 - One-click sample content generator: three sample levels and a complete playable sample flow with title, save slots, world map, pause and result screens.
+
+## A workflow built around your game
+
+![Maker Welcome: create your own game or explore optional samples](assets/images/welcome.png)
+
+Start with your own content, then use the [New Level wizard](editor-tools.md), [Unit Workshop](editor-tools.md) and [Map Editor](editor-tools.md) to author and validate it. The complete sample game is optional.
 
 ## Requirements
 

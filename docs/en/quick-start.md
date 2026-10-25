@@ -150,3 +150,9 @@ The complete packaged sample flow is `Assets/TDMaker/Samples/Demo/DemoSample.uni
 - Creating a Unit Workshop asset clears search, type and tag filters, refreshes the list and scrolls to the selected row. The save dialog prefers the current user level's Data folder; otherwise it suggests the last user folder or `Assets/TDMakerContent/Units`.
 - A Wave Timeline group's **+** opens an enemy picker. The new entry copies the preceding entry's Count and Interval, so check both values. Double-clicking a group row copies its preceding entry instead.
 - Map Editor results remain above the scroll view. Click the error/warning summary for the complete list. **Auto Rally** for all slots asks for confirmation and can be undone in one step.
+
+## New Level window
+
+![New Level wizard with fresh starter assets](assets/images/new-level.png)
+
+The wizard writes independent content into your chosen folder. Samples are optional.

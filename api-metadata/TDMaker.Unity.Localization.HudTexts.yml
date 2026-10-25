@@ -26,6 +26,7 @@ items:
   - TDMaker.Unity.Localization.HudTexts.HeroFallbackName
   - TDMaker.Unity.Localization.HudTexts.HeroFallen
   - TDMaker.Unity.Localization.HudTexts.HeroIdleHint
+  - TDMaker.Unity.Localization.HudTexts.HeroLevel
   - TDMaker.Unity.Localization.HudTexts.HeroPoints
   - TDMaker.Unity.Localization.HudTexts.HeroReturning
   - TDMaker.Unity.Localization.HudTexts.HeroSelectedHint
@@ -444,6 +445,27 @@ items:
     return:
       type: System.String
     content.vb: Public Const HeroFallbackName As String = "hud.hero.name"
+- uid: TDMaker.Unity.Localization.HudTexts.HeroLevel
+  commentId: F:TDMaker.Unity.Localization.HudTexts.HeroLevel
+  id: HeroLevel
+  parent: TDMaker.Unity.Localization.HudTexts
+  langs:
+  - csharp
+  - vb
+  name: HeroLevel
+  nameWithType: HudTexts.HeroLevel
+  fullName: TDMaker.Unity.Localization.HudTexts.HeroLevel
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Localization
+  summary: Hero card level; {0} = level.
+  example: []
+  syntax:
+    content: public const string HeroLevel = "hud.hero.level"
+    return:
+      type: System.String
+    content.vb: Public Const HeroLevel As String = "hud.hero.level"
 - uid: TDMaker.Unity.Localization.HudTexts.HeroPoints
   commentId: F:TDMaker.Unity.Localization.HudTexts.HeroPoints
   id: HeroPoints

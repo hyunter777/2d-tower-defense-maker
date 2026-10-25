@@ -4,7 +4,7 @@
 
 ## Install the Maker
 
-1. Import `2D-Tower-Defense-Maker-0.1.0.unitypackage` into a Unity 6 URP 2D project.
+1. For split archives, import `2D-Tower-Defense-Maker-0.1.0.unitypackage` into a Unity 6 URP 2D project. For a single Asset Store import, include `Runtime`, `Editor` and `Documentation`; to omit the optional examples, uncheck **both** `Samples` and `Editor/Samples` in the import dialog.
 2. Import TMP Essential Resources once when prompted.
 3. Open **Tools > 2D Tower Defense Maker > Welcome**, then **New Level**.
 4. Keep **Fresh starter assets** selected and **Use Sample Sounds** off. Create the level in your own folder, such as `Assets/TDMakerContent/MyLevel`.
@@ -14,7 +14,7 @@ The Maker package works on its own. The default New Level flow does not load the
 
 ## Add optional examples
 
-Import `2D-Tower-Defense-Maker-Samples-0.1.0.unitypackage` **after** the Maker package. Then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples**.
+With split archives, import `2D-Tower-Defense-Maker-Samples-0.1.0.unitypackage` **after** the Maker package. With a single Store import, include both `Samples` and `Editor/Samples`; if previously omitted, import those folders from the same product. Then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples**.
 
 | Part | Purpose | Location |
 |---|---|---|
@@ -33,8 +33,8 @@ The sample add-on uses the same Maker runtime. It does not contain a second copy
 ## Features are choices, samples are examples
 
 - Campaigns, saving and the permanent star shop are reusable Maker features. The sample's map, track prices, unlock sequence and title menu are example content.
-- The engine supports both automatic hero skill unlocking and explicit skill-point purchases. The compact sample HUD shows portraits and health bars, so its heroes use automatic skill growth. To use `SpendPoints` in your own game, enable **Hero Skill Buttons** on Game HUD or supply a skill-allocation UI. Combat skill points are separate from the campaign's saved star-upgrade shop.
+- The engine supports both automatic hero skill unlocking and explicit skill-point purchases. Sample heroes use `AutoUnlock`. Their compact cards show portraits, names, levels, health bars and slim experience bars; the cards do not allocate skill points. To use `SpendPoints` in your own game, enable **Hero Skill Buttons** on Game HUD or supply a skill-allocation UI. Combat skill points are separate from the campaign's saved star-upgrade shop.
 - The sample game starts in English and has no title-screen language buttons. String tables, Korean fallback fonts and the language API remain available for your own game.
-- The compact sample battle HUD displays spell buttons without a large background panel. Hero portraits and health bars sit at the bottom left. You may restyle or replace the HUD through `HudTheme` and the runtime API.
+- The compact sample battle HUD displays spell buttons without a large background panel. Low hero cards sit side by side at the bottom left, with a portrait, name, level, health bar, slim experience bar and a border around the selected hero. You may restyle or replace the HUD through `HudTheme` and the runtime API.
 
 Use the examples to learn the authoring model. Start production content with New Level and keep it in your own folder.

@@ -1,12 +1,12 @@
 # Sample gallery
 
-The optional **Samples add-on** includes original vector artwork and four playable sample scenes. Install it after the Maker package, then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples**. The Maker works without these examples; see [Maker and Samples](package-layout.md). Import **TMP Essential Resources** once before playing. These images show the included package samples.
+The optional **Samples content** includes original vector artwork and four playable sample scenes. Include it during import, or install the separate Samples archive after the Maker when using split archives. Then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples**. The Maker works without these examples; see [Maker and Samples](package-layout.md) for folder selection. Import **TMP Essential Resources** once before playing. These images show the included package samples.
 
 ## Battle HUD
 
-![A battle with the hero, spells and a tower upgrade panel](assets/images/battle.png)
+![A sample battle with two compact hero cards, towers and spell buttons](assets/images/battle.png)
 
-Build towers on the marked slots, upgrade them into branches, command the hero and use spells. The sample HUD uses Inter and separate padded text regions for button titles and prices. See [Presentation](presentation.md) to replace the theme, fonts and artwork.
+Build towers on the marked slots, upgrade them into branches, command the heroes and use spells. Low hero cards show a portrait, name, level, health and experience, with a border around the selected hero. The sample HUD uses Inter and separate padded text regions for button titles and prices. See [Presentation](presentation.md) to replace the theme, fonts and artwork.
 
 ## Title and campaign flow
 

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SpellDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SpellDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="An authored spell combining support units, strikes, traps, and optional residual fields.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.SpellDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_SpellDef" data-uid="TDMaker.Core.Defs.SpellDef" class="text-break">
+Class SpellDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An authored spell combining support units, strikes, traps, and optional residual fields.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SpellDef</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SpellDef</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_SpellDef__ctor_" data-uid="TDMaker.Core.Defs.SpellDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef__ctor_System_String_System_Single_TDMaker_Core_Defs_PointRuleDef_TDMaker_Core_Defs_SummonDef_TDMaker_Core_Defs_StrikeSequenceDef_TDMaker_Core_Defs_AreaEffectDef_System_Int32_" data-uid="TDMaker.Core.Defs.SpellDef.#ctor(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.StrikeSequenceDef,TDMaker.Core.Defs.AreaEffectDef,System.Int32)">
+  SpellDef(string, float, PointRuleDef, SummonDef, StrikeSequenceDef, AreaEffectDef, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a spell definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpellDef(string id, float cooldown, PointRuleDef pointRule, SummonDef support = null, StrikeSequenceDef strikes = null, AreaEffectDef area = null, int unlockWave = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cooldown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>pointRule</code> <a class="xref" href="TDMaker.Core.Defs.PointRuleDef.html">PointRuleDef</a></dt>
+    <dd></dd>
+    <dt><code>support</code> <a class="xref" href="TDMaker.Core.Defs.SummonDef.html">SummonDef</a></dt>
+    <dd></dd>
+    <dt><code>strikes</code> <a class="xref" href="TDMaker.Core.Defs.StrikeSequenceDef.html">StrikeSequenceDef</a></dt>
+    <dd></dd>
+    <dt><code>area</code> <a class="xref" href="TDMaker.Core.Defs.AreaEffectDef.html">AreaEffectDef</a></dt>
+    <dd></dd>
+    <dt><code>unlockWave</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_Area_" data-uid="TDMaker.Core.Defs.SpellDef.Area*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_Area" data-uid="TDMaker.Core.Defs.SpellDef.Area">
+  Area
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional residual region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AreaEffectDef Area { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.AreaEffectDef.html">AreaEffectDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_Cooldown_" data-uid="TDMaker.Core.Defs.SpellDef.Cooldown*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_Cooldown" data-uid="TDMaker.Core.Defs.SpellDef.Cooldown">
+  Cooldown
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cooldown consumed only by an approved cast.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Cooldown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_Id_" data-uid="TDMaker.Core.Defs.SpellDef.Id*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_Id" data-uid="TDMaker.Core.Defs.SpellDef.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Author-defined spell identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_PointRule_" data-uid="TDMaker.Core.Defs.SpellDef.PointRule*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_PointRule" data-uid="TDMaker.Core.Defs.SpellDef.PointRule">
+  PointRule
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shared preview and cast point validation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointRuleDef PointRule { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.PointRuleDef.html">PointRuleDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_Strikes_" data-uid="TDMaker.Core.Defs.SpellDef.Strikes*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_Strikes" data-uid="TDMaker.Core.Defs.SpellDef.Strikes">
+  Strikes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional independently scheduled area strikes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StrikeSequenceDef Strikes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.StrikeSequenceDef.html">StrikeSequenceDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_Support_" data-uid="TDMaker.Core.Defs.SpellDef.Support*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_Support" data-uid="TDMaker.Core.Defs.SpellDef.Support">
+  Support
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional temporary support units.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SummonDef Support { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.SummonDef.html">SummonDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_Trap_" data-uid="TDMaker.Core.Defs.SpellDef.Trap*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_Trap" data-uid="TDMaker.Core.Defs.SpellDef.Trap">
+  Trap
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional deployment placed exactly at the spell-approved point with no entity owner. The spell's point rule replaces automatic trap placement and its point rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TrapDef Trap { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.TrapDef.html">TrapDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_UnlockWave_" data-uid="TDMaker.Core.Defs.SpellDef.UnlockWave*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_UnlockWave" data-uid="TDMaker.Core.Defs.SpellDef.UnlockWave">
+  UnlockWave
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Minimum started wave number; zero enables the spell during preparation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int UnlockWave { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_CreateTrap_" data-uid="TDMaker.Core.Defs.SpellDef.CreateTrap*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_CreateTrap_System_String_System_Single_TDMaker_Core_Defs_PointRuleDef_TDMaker_Core_Defs_TrapDef_System_Int32_" data-uid="TDMaker.Core.Defs.SpellDef.CreateTrap(System.String,System.Single,TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Defs.TrapDef,System.Int32)">
+  CreateTrap(string, float, PointRuleDef, TrapDef, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a trap-only spell while preserving the existing constructor and its overload resolution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SpellDef CreateTrap(string id, float cooldown, PointRuleDef pointRule, TrapDef trap, int unlockWave = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cooldown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>pointRule</code> <a class="xref" href="TDMaker.Core.Defs.PointRuleDef.html">PointRuleDef</a></dt>
+    <dd></dd>
+    <dt><code>trap</code> <a class="xref" href="TDMaker.Core.Defs.TrapDef.html">TrapDef</a></dt>
+    <dd></dd>
+    <dt><code>unlockWave</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.SpellDef.html">SpellDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Defs_SpellDef_CreateTrap_System_String_System_Single_TDMaker_Core_Defs_PointRuleDef_TDMaker_Core_Defs_TrapDef_System_Int32__examples">Examples</h4>
+  <pre><code class="lang-csharp">SpellDef.CreateTrap("deploy", 4, pointRule, trap);</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SpellDef_WithTrap_" data-uid="TDMaker.Core.Defs.SpellDef.WithTrap*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SpellDef_WithTrap_TDMaker_Core_Defs_TrapDef_" data-uid="TDMaker.Core.Defs.SpellDef.WithTrap(TDMaker.Core.Defs.TrapDef)">
+  WithTrap(TrapDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies every spell payload and replaces or adds the deployment. Trap capacity and its source-zero population limit are checked before any cast side effects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpellDef WithTrap(TrapDef trap)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trap</code> <a class="xref" href="TDMaker.Core.Defs.TrapDef.html">TrapDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.SpellDef.html">SpellDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

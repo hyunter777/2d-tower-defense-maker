@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AbilityActionDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AbilityActionDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="A generic timed action channel; payloads can be combined.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.AbilityActionDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_AbilityActionDef" data-uid="TDMaker.Core.Defs.AbilityActionDef" class="text-break">
+Class AbilityActionDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A generic timed action channel; payloads can be combined.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class AbilityActionDef</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AbilityActionDef</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef__ctor_" data-uid="TDMaker.Core.Defs.AbilityActionDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef__ctor_System_Single_TDMaker_Core_Defs_RangedAttackDef_TDMaker_Core_Defs_StatusEffectDef_TDMaker_Core_Defs_SummonDef_TDMaker_Core_Defs_AreaEffectDef_System_Single_System_Single_" data-uid="TDMaker.Core.Defs.AbilityActionDef.#ctor(System.Single,TDMaker.Core.Defs.RangedAttackDef,TDMaker.Core.Defs.StatusEffectDef,TDMaker.Core.Defs.SummonDef,TDMaker.Core.Defs.AreaEffectDef,System.Single,System.Single)">
+  AbilityActionDef(float, RangedAttackDef, StatusEffectDef, SummonDef, AreaEffectDef, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a generic activation channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbilityActionDef(float cooldown, RangedAttackDef attack = null, StatusEffectDef selfEffect = null, SummonDef summon = null, AreaEffectDef area = null, float skillExperiencePerRank = 0, float initialDelay = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cooldown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>attack</code> <a class="xref" href="TDMaker.Core.Defs.RangedAttackDef.html">RangedAttackDef</a></dt>
+    <dd></dd>
+    <dt><code>selfEffect</code> <a class="xref" href="TDMaker.Core.Defs.StatusEffectDef.html">StatusEffectDef</a></dt>
+    <dd></dd>
+    <dt><code>summon</code> <a class="xref" href="TDMaker.Core.Defs.SummonDef.html">SummonDef</a></dt>
+    <dd></dd>
+    <dt><code>area</code> <a class="xref" href="TDMaker.Core.Defs.AreaEffectDef.html">AreaEffectDef</a></dt>
+    <dd></dd>
+    <dt><code>skillExperiencePerRank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>initialDelay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef__ctor_" data-uid="TDMaker.Core.Defs.AbilityActionDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef__ctor_TDMaker_Core_IAbilityAction_System_Single_System_Single_" data-uid="TDMaker.Core.Defs.AbilityActionDef.#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single)">
+  AbilityActionDef(IAbilityAction, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a custom-only timed action without changing the original constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbilityActionDef(IAbilityAction customAction, float cooldown, float initialDelay = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>customAction</code> <a class="xref" href="TDMaker.Core.IAbilityAction.html">IAbilityAction</a></dt>
+    <dd></dd>
+    <dt><code>cooldown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>initialDelay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Defs_AbilityActionDef__ctor_TDMaker_Core_IAbilityAction_System_Single_System_Single__examples">Examples</h4>
+  <pre><code class="lang-csharp">new AbilityActionDef(new ShieldPulse(), 2, initialDelay: 1);</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef__ctor_" data-uid="TDMaker.Core.Defs.AbilityActionDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef__ctor_TDMaker_Core_IAbilityAction_System_Single_System_Single_System_Single_" data-uid="TDMaker.Core.Defs.AbilityActionDef.#ctor(TDMaker.Core.IAbilityAction,System.Single,System.Single,System.Single)">
+  AbilityActionDef(IAbilityAction, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a custom action awarding skill experience per active hero rank on successful activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbilityActionDef(IAbilityAction customAction, float cooldown, float initialDelay, float skillExperiencePerRank)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>customAction</code> <a class="xref" href="TDMaker.Core.IAbilityAction.html">IAbilityAction</a></dt>
+    <dd></dd>
+    <dt><code>cooldown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>initialDelay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>skillExperiencePerRank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Defs_AbilityActionDef__ctor_TDMaker_Core_IAbilityAction_System_Single_System_Single_System_Single__examples">Examples</h4>
+  <pre><code class="lang-csharp">new AbilityActionDef(new ShieldPulse(), 2, initialDelay: 1, skillExperiencePerRank: 3);</code></pre>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef_Area_" data-uid="TDMaker.Core.Defs.AbilityActionDef.Area*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef_Area" data-uid="TDMaker.Core.Defs.AbilityActionDef.Area">
+  Area
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional emitted region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AreaEffectDef Area { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.AreaEffectDef.html">AreaEffectDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef_Attack_" data-uid="TDMaker.Core.Defs.AbilityActionDef.Attack*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef_Attack" data-uid="TDMaker.Core.Defs.AbilityActionDef.Attack">
+  Attack
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional additional ranged attack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RangedAttackDef Attack { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.RangedAttackDef.html">RangedAttackDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef_Cooldown_" data-uid="TDMaker.Core.Defs.AbilityActionDef.Cooldown*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef_Cooldown" data-uid="TDMaker.Core.Defs.AbilityActionDef.Cooldown">
+  Cooldown
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Repeat delay measured from successful activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Cooldown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef_CustomAction_" data-uid="TDMaker.Core.Defs.AbilityActionDef.CustomAction*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef_CustomAction" data-uid="TDMaker.Core.Defs.AbilityActionDef.CustomAction">
+  CustomAction
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional custom activation payload; shared configuration must remain immutable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAbilityAction CustomAction { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.IAbilityAction.html">IAbilityAction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef_InitialDelay_" data-uid="TDMaker.Core.Defs.AbilityActionDef.InitialDelay*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef_InitialDelay" data-uid="TDMaker.Core.Defs.AbilityActionDef.InitialDelay">
+  InitialDelay
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delay before a newly activated channel can run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InitialDelay { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef_SelfEffect_" data-uid="TDMaker.Core.Defs.AbilityActionDef.SelfEffect*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef_SelfEffect" data-uid="TDMaker.Core.Defs.AbilityActionDef.SelfEffect">
+  SelfEffect
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional self attachment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatusEffectDef SelfEffect { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.StatusEffectDef.html">StatusEffectDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef_SkillExperiencePerRank_" data-uid="TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef_SkillExperiencePerRank" data-uid="TDMaker.Core.Defs.AbilityActionDef.SkillExperiencePerRank">
+  SkillExperiencePerRank
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional hero skill experience per active rank on successful activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SkillExperiencePerRank { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef_Summon_" data-uid="TDMaker.Core.Defs.AbilityActionDef.Summon*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef_Summon" data-uid="TDMaker.Core.Defs.AbilityActionDef.Summon">
+  Summon
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional summon sequence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SummonDef Summon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.SummonDef.html">SummonDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_AbilityActionDef_WithCustomAction_" data-uid="TDMaker.Core.Defs.AbilityActionDef.WithCustomAction*"></a>
+
+  <h3 id="TDMaker_Core_Defs_AbilityActionDef_WithCustomAction_TDMaker_Core_IAbilityAction_" data-uid="TDMaker.Core.Defs.AbilityActionDef.WithCustomAction(TDMaker.Core.IAbilityAction)">
+  WithCustomAction(IAbilityAction)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies a built-in or custom action and replaces its custom payload.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbilityActionDef WithCustomAction(IAbilityAction customAction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>customAction</code> <a class="xref" href="TDMaker.Core.IAbilityAction.html">IAbilityAction</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.AbilityActionDef.html">AbilityActionDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Defs_AbilityActionDef_WithCustomAction_TDMaker_Core_IAbilityAction__examples">Examples</h4>
+  <pre><code class="lang-csharp">var combined = attackAction.WithCustomAction(new ShieldPulse());</code></pre>
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

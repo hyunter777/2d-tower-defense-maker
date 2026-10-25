@@ -1,0 +1,1837 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="English guides and API reference for building 2D tower defense games in Unity 6.">
+      
+      
+      
+        <link rel="canonical" href="https://hyunter777.github.io/2d-tower-defense-maker/concepts/">
+      
+      
+        <link rel="prev" href="../samples/">
+      
+      
+        <link rel="next" href="../authoring/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Core concepts - 2D Tower Defense Maker</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/styles.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#concepts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="2D Tower Defense Maker" class="md-header__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2D Tower Defense Maker
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Core concepts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="2D Tower Defense Maker" class="md-nav__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    2D Tower Defense Maker
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start here
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build your game
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build your game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core concepts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-vs-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation vs. view
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed tick
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fixed tick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-order-within-one-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System order within one tick
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#campaign-and-release-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campaign and release mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates-components-and-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Templates, components and systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determinism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Determinism
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-and-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands and events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordinate-system-and-the-range-ellipse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinate system and the range ellipse
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target priorities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-kill-vs-leak-in-the-same-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolution: kill vs. leak in the same tick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#economy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Economy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waves-and-early-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waves and early calls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#barracks-soldiers-and-heroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barracks, soldiers and heroes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View layer
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gameplay mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campaigns and upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize and extend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customize and extend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HUD, fonts and audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extending the framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../determinism-and-replay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Determinism and replay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference and support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference and support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and licenses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-vs-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation vs. view
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed tick
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fixed tick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-order-within-one-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System order within one tick
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#campaign-and-release-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campaign and release mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates-components-and-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Templates, components and systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determinism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Determinism
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-and-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands and events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordinate-system-and-the-range-ellipse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinate system and the range ellipse
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target priorities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-kill-vs-leak-in-the-same-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolution: kill vs. leak in the same tick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#economy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Economy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waves-and-early-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waves and early calls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#barracks-soldiers-and-heroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barracks, soldiers and heroes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View layer
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h1>
+<p>This page explains the rules the simulation follows. Field-level details are in <a href="../authoring/">Authoring Reference</a>; code-level extension is in <a href="../extending/">Extending the Framework</a>.</p>
+<h2 id="simulation-vs-view">Simulation vs. view<a class="headerlink" href="#simulation-vs-view" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>ScriptableObjects (TDMaker.Unity.Authoring)
+      │  LevelAsset.Bake()  →  TemplateRegistry + LevelDef  (immutable definitions)
+      ▼
+Simulation (TDMaker.Core)          fixed ticks · entities + components + systems
+      │  reads: sim.State, sim.Entities, sim.Spells      writes: sim.Enqueue(command)
+      │  outputs: sim.Events (SimEvent list)
+      ▼
+View (TDMaker.Unity.View / .Hud)  SimulationRunner, EntityViewRegistry, LevelView, GameHud, …
+</code></pre></div>
+<ul>
+<li><strong><code>TDMaker.Core</code></strong> is plain C#. It does not reference <code>UnityEngine</code>, uses its own <code>Vec2</code> and its own seeded random stream (<code>SimRandom</code>, xorshift32). Gameplay outcomes (damage, gold, lives, spawns, builds) are decided here only.</li>
+<li><strong><code>TDMaker.Unity</code></strong> bakes authoring assets into core definitions, advances the simulation every frame, and draws it. The view only <em>reads</em> state and <em>sends commands</em>; it never changes simulation state directly.</li>
+</ul>
+<h2 id="fixed-tick">Fixed tick<a class="headerlink" href="#fixed-tick" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The simulation advances in fixed steps: <code>Simulation.Step()</code>; <code>SimConfig.TickRate</code> defaults to <strong>30 ticks per second</strong> (<code>Simulation.DeltaTime = 1/30 s</code>). All durations in assets are in game seconds.</li>
+<li><code>SimulationRunner</code> advances the core <code>SimulationClock</code>: it accumulates <code>Time.deltaTime × TimeScale</code> and runs as many steps as fit, up to <code>Catch Up Ticks Per Speed × speed</code> (default <code>8 × speed</code>) per rendered frame; excess backlog is dropped so a slow frame cannot snowball. <code>TimeScale</code> 0 pauses; the HUD offers 1×, 2×, 3×.</li>
+<li>Speeding up changes only how many ticks run per frame, not the tick length, so the outcome at 3× is the same as at 1× for the same inputs.</li>
+<li>Views interpolate between <code>Entity.PreviousPosition</code> and <code>Entity.Position</code> using <code>SimulationRunner.InterpolationAlpha</code>.</li>
+<li><code>SimulationClock</code> is engine-independent, so custom hosts use the same catch-up rule (see <a href="../extending/#hosting-the-simulation-without-simulationrunner">Extending the Framework</a>).</li>
+</ul>
+<h3 id="system-order-within-one-tick">System order within one tick<a class="headerlink" href="#system-order-within-one-tick" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th><code>SimStage</code></th>
+<th>Work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Commands</code></td>
+<td>Apply queued player commands</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Waves</code></td>
+<td>Unit expiry, scheduled summons, barracks respawn, wave start and spawning</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Effects</code></td>
+<td>Status effects, areas, recovery</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Motion</code></td>
+<td>Path following and friendly movement</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Blocking</code></td>
+<td>Pair soldiers/heroes with enemies</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Melee</code></td>
+<td>Melee attack cycles</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Ranged</code></td>
+<td>Target selection, ranged attacks, ability actions</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Projectiles</code></td>
+<td>Projectile flight and impact</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>Damage</code></td>
+<td>Apply all queued damage in FIFO order</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>Death</code></td>
+<td>Resolve kills, pay bounties, death summons</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>Exits</code></td>
+<td>Resolve leaks, remove lives</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>HeroesAndSpells</code></td>
+<td>Hero progression, spell readiness</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>Flow</code></td>
+<td>Victory/defeat</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>Flush</code></td>
+<td>Commit spawns and removals</td>
+</tr>
+</tbody>
+</table>
+<p>Entities created during a tick are committed at <code>Flush</code> and act <strong>from the next tick</strong>. Entities marked for removal are ignored by the rest of the tick.</p>
+<h2 id="campaign-and-release-mechanics">Campaign and release mechanics<a class="headerlink" href="#campaign-and-release-mechanics" title="Permanent link">&para;</a></h2>
+<p>Campaign progress and shop purchases live outside the battle. At battle start the core applies a fixed upgrade snapshot to copied definitions; the snapshot is included in replay validation and state hashes. See <a href="../campaign/">Campaigns, Progress and Saves</a>.</p>
+<p>Mine fields reserve lane sites and capacity before flight and arming. Companion slots follow their owner and refill after a child falls. Reviving enemies are not final kills until their return budget ends; pending returns and raised successors keep victory waiting. Bodies are neutral records consumed by raising actions, not extra enemy kills. See <a href="../mechanics/">Mechanic Library</a>.</p>
+<h2 id="templates-components-and-systems">Templates, components and systems<a class="headerlink" href="#templates-components-and-systems" title="Permanent link">&para;</a></h2>
+<ul>
+<li>An <strong><code>EntityTemplate</code></strong> is an immutable definition with optional slots: <code>Health</code>, <code>Armor</code>, <code>Motion</code>, <code>PathFollow</code>, <code>Bounty</code>, <code>Melee</code>, <code>Ranged</code>, <code>Tower</code>, <code>Barracks</code>, <code>Soldier</code>, <code>Hero</code>, <code>Projectile</code>, <code>Aura</code>, <code>StatusImmunity</code>, <code>Flying</code>, <code>Render</code>, plus <code>Rules</code> (recovery, evasion, death summon, always-on behaviors, traits) and <code>CustomData</code>.</li>
+<li>Templates may inherit from another template through <code>BaseId</code>; empty (null) slots inherit the parent's slot. Inheritance is resolved once when the <code>TemplateRegistry</code> is built.</li>
+<li>A runtime <strong><code>Entity</code></strong> carries one runtime component per filled slot (<code>entity.Health.Current</code>, <code>entity.PathFollow.RemainingDistance</code>, <code>entity.Tower.Priority</code>, …). Entities come from a fixed, prewarmed pool (<code>SimConfig.EntityCapacity</code>, default 1024). Ids only increase and are never reused.</li>
+<li><strong>Systems</strong> implement <code>ISimSystem.Tick(Simulation sim, float dt)</code> and run in the fixed order above. You can insert your own; see <a href="../extending/">Extending the Framework</a>.</li>
+<li>Authoring assets bake into templates: <code>EnemyAsset</code>, <code>TowerAsset</code>, <code>SoldierAsset</code>, <code>HeroAsset</code> each produce one template. Each tower tier is its own template.</li>
+</ul>
+<h2 id="determinism">Determinism<a class="headerlink" href="#determinism" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Same templates + same level + same seed + same commands at the same ticks ⇒ same result, at any game speed.</li>
+<li>The core uses only its own random stream, iterates in entity-Id order, and breaks ties by the smaller Id.</li>
+<li><code>ComputeStateHash()</code> hashes the full authoritative state for comparison. Command recording and replay: <a href="../determinism-and-replay/">Determinism and Replay</a>.</li>
+</ul>
+<h2 id="commands-and-events">Commands and events<a class="headerlink" href="#commands-and-events" title="Permanent link">&para;</a></h2>
+<p><strong>Input</strong> – the view queues immutable commands with <code>Simulation.Enqueue(command)</code> (or <code>SimulationRunner.Enqueue</code>). They are applied at the start of the next tick.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BuildTower(slotIndex, templateId)</code></td>
+<td>Build an available base tower on an empty slot</td>
+</tr>
+<tr>
+<td><code>UpgradeTower(entityId, toTemplateId)</code></td>
+<td>Upgrade into one of the tower's listed next tiers</td>
+</tr>
+<tr>
+<td><code>SellTower(entityId)</code></td>
+<td>Sell (see <em>Economy</em>)</td>
+</tr>
+<tr>
+<td><code>BuyAbility(entityId, abilityIndex)</code></td>
+<td>Buy the next rank of a tower ability</td>
+</tr>
+<tr>
+<td><code>SetTargetPriority(entityId, priority)</code></td>
+<td>Change a tower's priority without resetting its cooldown</td>
+</tr>
+<tr>
+<td><code>SetRallyPoint(entityId, position)</code></td>
+<td>Move a barracks rally point (must be inside the rally ellipse; projected onto the nearest lane)</td>
+</tr>
+<tr>
+<td><code>CallNextWave()</code></td>
+<td>Start the next wave now</td>
+</tr>
+<tr>
+<td><code>MoveHero(entityId, position)</code></td>
+<td>Order a hero to a validated point</td>
+</tr>
+<tr>
+<td><code>CastSpell(spellIndex, position)</code></td>
+<td>Cast a ready spell at a validated point</td>
+</tr>
+<tr>
+<td><code>SpendHeroPoint(entityId, skillIndex)</code></td>
+<td>Buy a hero skill rank (<code>SpendPoints</code> mode)</td>
+</tr>
+</tbody>
+</table>
+<p>A failed command produces a <code>CommandRejected</code> event with a <code>CommandFailure</code> reason (<code>InsufficientGold</code>, <code>SlotOccupied</code>, <code>InvalidRallyPoint</code>, <code>WaveUnavailable</code>, <code>SpellUnavailable</code>, …) and the command name in <code>Key</code>.</p>
+<p><strong>Output</strong> – each tick appends <code>SimEvent</code>s (<code>Kind</code>, <code>EntityId</code>, <code>OtherId</code>, <code>Value</code>, <code>IntValue</code>, <code>Position</code>, <code>Failure</code>, <code>Key</code>) to <code>Simulation.Events</code>. Examples: <code>Spawned</code>, <code>Removed</code>, <code>Damaged</code>, <code>Died</code>, <code>AttackStarted</code>, <code>ProjectileFired</code>, <code>ProjectileHit</code>, <code>GoldChanged</code>, <code>LivesChanged</code>, <code>WaveStarted</code>, <code>WaveCallable</code>, <code>TowerBuilt/Upgraded/Sold</code>, <code>EffectAttached/Removed</code>, <code>AbilityPurchased</code>, <code>HeroLevelChanged</code>, <code>SpellCast</code>, <code>Victory</code>, <code>Defeat</code>, plus the mechanic events (<code>ChainLinked</code>, <code>AreaPulsed</code>, <code>Healed</code>, <code>ShieldChanged</code>, <code>Displaced</code>, … – see <a href="../mechanics/">Mechanic Library</a>). The reader calls <code>ClearEvents()</code> afterwards; <code>SimulationRunner</code> does this for you after raising <code>EventRaised</code>.</p>
+<p><strong>State</strong> – <code>Simulation.State</code> exposes <code>Gold</code>, <code>Lives</code>, <code>WaveNumber</code>, <code>CanCallNextWave</code>, <code>NextWaveRemaining</code>, <code>NextWaveWaitDuration</code> (the authored auto delay of the pending wave – the countdown's denominator; 0 while a wave is emitting or after the last one), <code>VictoryStars</code>, <code>Phase</code> and <code>Tick</code>.</p>
+<p><strong>Event values worth knowing</strong> – <code>ProjectileHit.Value</code> is the damage radius of instant (hitscan) and scheduled strikes (0 = single target; flight projectiles report 0, their radius is on the projectile). <code>WaveStarted.Value</code> is the early-call time credit in seconds and <code>IntValue</code> the one-based wave number; an early-call reward arrives as the <code>GoldChanged</code> event emitted just before it. <code>Victory.IntValue</code> is the star rating.</p>
+<p><strong>Previews (never duplicate a rule in the view)</strong> – read-only functions that use exactly the code the commands use. They do not change the world or emit events.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PreviewEarlyCallReward()</code> → <code>EarlyCallRewardPreview</code></td>
+<td><code>CanCall</code>, <code>WaveNumber</code>, <code>GoldReward</code> (authored award), <code>GoldGain</code> (after the wallet limit), <code>TimeCredit</code>, <code>SpellCooldownCut</code>, <code>SpellCooldownsAffected</code> of calling the next wave now.</td>
+</tr>
+<tr>
+<td><code>PreviewEarlyCallSpellCooldownCut(spellIndex)</code></td>
+<td>Seconds that spell's remaining cooldown would lose if the next wave were called now.</td>
+</tr>
+<tr>
+<td><code>PreviewSellRefund(towerId)</code></td>
+<td>The refund <code>SellTower</code> would report (<code>TowerSold.Value</code>).</td>
+</tr>
+<tr>
+<td><code>TryResolveRallyPoint(towerId, desired, out resolved)</code></td>
+<td>Whether <code>SetRallyPoint</code> would accept the point, and the lane-projected point the soldiers would use.</td>
+</tr>
+<tr>
+<td><code>TryValidateSpellPoint</code> / <code>TryResolvePoint</code></td>
+<td>Spell targets and hero destinations (see <a href="../authoring/">Authoring Reference</a>).</td>
+</tr>
+</tbody>
+</table>
+<p>The bundled HUDs (<code>GameHud</code>, <code>TDHud</code>) use only these functions for their sell price, call-wave bonus, spell-cut tooltip and rally preview.</p>
+<p><strong>Commands after the end</strong> – once the game is won or lost, every queued command is rejected with <code>GameEnded</code> (a <code>CommandRejected</code> event). <code>SimulationClock</code> stops stepping a finished world, so <code>SimulationRunner</code> runs one terminal step on the next frame when commands were queued after the end; the step only processes commands (the tick counter does not advance).</p>
+<h2 id="coordinate-system-and-the-range-ellipse">Coordinate system and the range ellipse<a class="headerlink" href="#coordinate-system-and-the-range-ellipse" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Simulation space is the Unity XY plane in world units (scene components convert their transforms to world XY when baking). Y is "up the screen".</li>
+<li>To suggest an oblique top-down view, every range is an <strong>ellipse</strong>: horizontal semi-axis <code>r</code>, vertical semi-axis <code>k·r</code>, where <code>k</code> is the <strong>range Y scale</strong>.</li>
+<li>A point is in range when</li>
+</ul>
+<div class="highlight"><pre><span></span><code>dx² / r²  +  dy² / (k·r)²  ≤  1        (boundary included)
+</code></pre></div>
+<ul>
+<li><code>k</code> comes from the level (<code>LevelAsset.overrideRangeYScale</code> / <code>rangeYScale</code>) or else from the runner (<code>SimulationRunner</code> "Range Y Scale", default <code>0.8</code>). <code>k &lt; 1</code> flattens ranges vertically.</li>
+<li><strong>One formula for checks and display.</strong> The simulation uses <code>Simulation.RangeDistanceSquared</code> for tower ranges, melee contact, area damage, rally limits, spell scatter and aura radii. Everything drawn in the view, gizmos and editor previews uses <code>RangeShape</code> (Unity layer), which implements the same ellipse. What you see is exactly what is hit.</li>
+<li>Authored "range" or "radius" values are the horizontal semi-axis <code>r</code>.</li>
+</ul>
+<h2 id="target-priorities">Target priorities<a class="headerlink" href="#target-priorities" title="Permanent link">&para;</a></h2>
+<p>Ranged attacks choose among eligible enemies inside the ellipse (and outside <code>Minimum Range</code>), respecting flying/ground filters. Ties always go to the lower entity Id.</p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Picks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>First</strong> (default)</td>
+<td>Shortest <strong>remaining real path length</strong> to the exit (sum of actual segment lengths, including connected paths), not "closest to the exit point"</td>
+</tr>
+<tr>
+<td>Last</td>
+<td>Longest remaining path length</td>
+</tr>
+<tr>
+<td>Strongest</td>
+<td>Highest current health</td>
+</tr>
+<tr>
+<td>Weakest</td>
+<td>Lowest current health</td>
+</tr>
+<tr>
+<td>Closest</td>
+<td>Smallest elliptical distance to the attacker</td>
+</tr>
+</tbody>
+</table>
+<p>A tower's default comes from <code>TowerAsset.targetPriority</code>; the player can change it at runtime (<code>SetTargetPriority</code>) and the choice survives upgrades. Enemies attacking friendly units use Closest. Soldiers and heroes choose melee opponents through their own blocking rules.</p>
+<h2 id="damage-pipeline">Damage pipeline<a class="headerlink" href="#damage-pipeline" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Roll.</strong> Single-target hits roll <code>ceil(lerp(min, max, random))</code>, then multiply by the attacker's output scale (rounded up). Projectile hits deal at least 1.</li>
+<li><strong>Area.</strong> If the damage has a <code>Radius</code>, every eligible unit inside the ellipse is hit. With <code>q = distance / radius</code> (elliptical) and <code>edge = Edge Multiplier</code>, the amount is <code>ceil(base × (1 − (1 − edge)·q) × outputScale)</code> where <code>base</code> depends on <code>Falloff</code>:</li>
+<li><code>DistanceEndpoints</code>: <code>floor(max − (max − min)·q)</code></li>
+<li><code>RolledLinear</code>: one roll per impact</li>
+<li><code>ConstantMaximum</code>: <code>max</code></li>
+<li><strong>Hooks.</strong> Registered <code>IDamageHook.BeforeDamage</code> may change or cancel the raw amount.</li>
+<li><strong>Queue.</strong> Requests are applied in the <code>Damage</code> stage in request order (stage order × entity Id), so results do not depend on frame timing.</li>
+<li><strong>Mitigation</strong> (per request):</li>
+<li>Immune channel (<code>TargetTraitsDef.Immunities</code>) or <code>IgnoreDamage</code> → 0.</li>
+<li>
+<p>Reduction <code>R</code>, clamped to <code>[0, 1]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical</td>
+<td>armor + armor shifts − physical pierce</td>
+</tr>
+<tr>
+<td>Magical</td>
+<td>magic resist + shifts − magical pierce</td>
+</tr>
+<tr>
+<td>Explosion, Electric</td>
+<td>½ × (armor + armor shifts − physical pierce)</td>
+</tr>
+<tr>
+<td>Poison</td>
+<td>poison resist + shifts</td>
+</tr>
+<tr>
+<td>True</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Incoming multipliers (rounded half away from zero): magical damage first × <code>MagicalIncomingMultiplier</code> × status magical input scale, then all damage × <code>IncomingMultiplier</code> × status input scale.</p>
+</li>
+<li>Enemies lose <code>floor(value × (1 − R))</code>. Friendly units (soldiers, heroes) lose <code>round(value − floor(value × R))</code>.</li>
+<li>Shields from status effects absorb the mitigated amount of matching channels, in attachment order (<a href="../mechanics/#shields">Mechanic Library</a>).</li>
+<li>
+<p>Flags: <code>Execute</code> removes all remaining health; <code>NonLethal</code> leaves <code>SurvivalHealth</code>; <code>Despawn</code> removes without reward; armor-reduction flags change defense instead of health.</p>
+</li>
+<li>
+<p><strong>After.</strong> <code>Damaged</code> event, on-hit status effects, the damage's impact payload (secondary blast, residual region, knockback), hero experience, then <code>IDamageHook.AfterDamage</code>.</p>
+</li>
+</ol>
+<p>Armor and magic resist are fractions: <code>0.3</code> armor removes 30% of physical damage. <code>1.0</code> makes a unit immune to that kind.</p>
+<h2 id="resolution-kill-vs-leak-in-the-same-tick">Resolution: kill vs. leak in the same tick<a class="headerlink" href="#resolution-kill-vs-leak-in-the-same-tick" title="Permanent link">&para;</a></h2>
+<p>Every enemy is resolved exactly once as <code>Killed</code>, <code>Leaked</code> or <code>Despawned</code>. Because <code>Damage → Death → Exits</code> run in that order, an enemy that takes lethal damage in the same tick it reaches the exit counts as <strong>Killed</strong>: the bounty is paid and no life is lost.</p>
+<ul>
+<li><strong>Killed</strong>: <code>+Bounty.Gold</code>.</li>
+<li><strong>Leaked</strong>: <code>−LifeCost</code> lives and <code>+round(Gold × LeakBountyShare)</code> (level rule, default 0).</li>
+<li><strong>Defeat</strong> when lives reach 0. <strong>Victory</strong> when every wave has finished emitting, nothing is pending (spawns, scheduled summons) and no enemy remains. If both happen in the same tick, defeat wins. Once decided, the outcome never changes and further commands are rejected with <code>GameEnded</code>.</li>
+<li><strong>Star rating</strong>: on victory the core rates the result from the share of starting lives left (<code>remaining / starting</code>, capped at 1) against the level's <code>Victory Rating</code> bands (inclusive): three stars at or above the three-star share, two at or above the two-star share, otherwise one. The result is <code>State.VictoryStars</code> and the <code>Victory</code> event's <code>IntValue</code>; defeat leaves it at 0. Product default: two stars at half the lives, three at all of them.</li>
+</ul>
+<h2 id="economy">Economy<a class="headerlink" href="#economy" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Build</strong>: pay the tower tier's <code>Cost</code>.</li>
+<li><strong>Upgrade</strong>: pay the <em>target</em> tier's <code>Cost</code> (each tier's cost is incremental).</li>
+<li><strong>Ability rank</strong>: pay that rank's cost.</li>
+<li><strong>Total investment</strong> = build + upgrades + ability ranks bought on that tower.</li>
+<li><strong>Sell</strong>:</li>
+<li>before the first wave has started (<code>WaveNumber == 0</code>): <strong>full refund</strong> of the investment;</li>
+<li>afterwards: <code>round(investment × RefundShare)</code>, <code>RefundShare</code> from the level rules (default <code>0.6</code>). Rounding is half away from zero.</li>
+<li>The per-tower <code>Refund Ratio</code> field is a hidden legacy value and does not affect the simulation; editor previews also use the level's <code>Refund Share</code>.</li>
+<li>During play, <code>Simulation.PreviewSellRefund(towerId)</code> returns exactly the amount a sale would pay.</li>
+<li>There is no interest.</li>
+</ul>
+<h2 id="waves-and-early-calls">Waves and early calls<a class="headerlink" href="#waves-and-early-calls" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A wave contains groups; each group belongs to one path and has a start delay; each group runs its spawn entries one after another. The first unit of an entry appears one <code>Interval</code> after the entry starts; an interval of 0 spawns one unit per tick.</li>
+<li>After a wave <strong>finishes emitting</strong>, the next wave's timers start:</li>
+<li><code>Call Delay</code>: from then on the player may call it early (<code>CanCallNextWave</code>, <code>WaveCallable</code> event);</li>
+<li><code>Auto Delay</code>: it starts automatically.</li>
+<li>The first wave waits for the player unless <code>Auto Start First</code> is set.</li>
+<li><strong>Early call reward</strong>: calling wave <em>n &gt; 1</em> early pays <code>ceil(round(remaining seconds) × rate)</code> gold, where <code>remaining = Auto Delay − time already waited</code>, rounded half away from zero, and <code>rate</code> is the wave's <code>Early Gold Per Second</code> (or the level's override). Calling the first wave gives no reward.</li>
+<li>If the level rule <code>Early Call Spell Cooldown Cut</code> is on and the rounded remaining time exceeds <code>Early Call Cut Threshold</code>, cooling, unlocked spells are shortened by that many seconds.</li>
+<li><code>Simulation.PreviewEarlyCallReward()</code> and <code>PreviewEarlyCallSpellCooldownCut(spellIndex)</code> return both effects for the current tick; the countdown ring is <code>NextWaveRemaining / NextWaveWaitDuration</code>.</li>
+</ul>
+<h2 id="barracks-soldiers-and-heroes">Barracks, soldiers and heroes<a class="headerlink" href="#barracks-soldiers-and-heroes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A barracks tower keeps <code>Soldier Count</code> soldiers alive and replaces a fallen one after <code>Respawn Time</code>. Soldiers stand in a formation around the <strong>rally point</strong>, which is always projected onto the nearest lane inside the tower's rally ellipse.</li>
+<li>Soldiers engage enemies inside their <code>Intercept Radius</code> around the rally point. An engaged enemy stops walking while blocked and waits for its blocker to reach its place: beside the enemy on the side it walks toward, at the summed <code>Engagement</code> contact bias of the enemy and the blocker (2nd and 3rd blockers take rows above and below, by the enemy's <code>Row Spacing</code>). Blockers attack only once they stand in place; both face each other. <code>Blocker Capacity</code> on the enemy limits how many friendly units can hold it; flying or non-blockable enemies cannot be blocked.</li>
+<li>Heroes are friendly units that block and fight like soldiers, gain experience from damage, level up through growth rows, unlock skills, die and return after <code>Respawn Delay</code>, and move by command.</li>
+</ul>
+<h2 id="view-layer">View layer<a class="headerlink" href="#view-layer" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>SimulationRunner</code> bakes the level (applying template decorators), creates the <code>Simulation</code>, spawns heroes, advances it with <code>SimulationClock</code>, and raises <code>EventRaised</code> for each event once per frame (then clears them).</li>
+<li><code>EntityViewRegistry</code> creates pooled <code>EntityView</code>s on <code>Spawned</code>, removes them on <code>Removed</code>, and reacts to damage, death, effects, upgrades, projectile and mechanic events (chain arcs, pulse rings, shield bubbles, …). A prefab is taken from the asset's <code>View</code> settings (or the registry's overrides by view key); otherwise a primitive sprite is generated.</li>
+<li><code>LevelView</code> draws a generated placeholder ground, path ribbons and slot pads.</li>
+<li><code>GameHud</code> is the production uGUI HUD (themeable with <code>HudTheme</code>); <code>DamageNumbers</code>, <code>VfxPool</code>, <code>AudioCuePlayer</code>, <code>TDCameraController</code> and <code>TDGameSettings</code> complete the presentation. See <a href="../presentation/">Presentation</a>. <code>TDHud</code> is a minimal IMGUI reference HUD. Any of them can be replaced by your own UI that reads <code>Simulation.State</code> and sends commands.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../samples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sample gallery">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Sample gallery
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../authoring/" class="md-footer__link md-footer__link--next" aria-label="Next: Content authoring">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content authoring
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © FlyCat
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

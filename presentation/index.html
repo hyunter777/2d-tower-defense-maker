@@ -1,0 +1,2243 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="English guides and API reference for building 2D tower defense games in Unity 6.">
+      
+      
+      
+        <link rel="canonical" href="https://hyunter777.github.io/2d-tower-defense-maker/presentation/">
+      
+      
+        <link rel="prev" href="../campaign/">
+      
+      
+        <link rel="next" href="../extending/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>HUD, fonts and audio - 2D Tower Defense Maker</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/styles.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#presentation-hud-feedback-camera-and-audio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="2D Tower Defense Maker" class="md-header__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2D Tower Defense Maker
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HUD, fonts and audio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="2D Tower Defense Maker" class="md-nav__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    2D Tower Defense Maker
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start here
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build your game
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build your game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gameplay mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campaigns and upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize and extend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customize and extend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HUD, fonts and audio
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HUD, fonts and audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simulationrunner-scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SimulationRunner (scripting)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gamehud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GameHud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GameHud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controls-pc-mouse-and-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls (PC mouse and keyboard)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hudtheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HudTheme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damagenumbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DamageNumbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-fonts-and-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text, fonts and languages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text, fonts and languages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmp-essential-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TMP Essential Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chinese-japanese-and-korean-cjk-fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chinese, Japanese and Korean (CJK) fonts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translating-content-names-and-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Translating content names and descriptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentation-hooks-vfx-and-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presentation hooks, VFX and audio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cues-audiocueplayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cues (AudioCuePlayer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#music-musicplayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Music (MusicPlayer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-and-mixer-tdgamesettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volume and mixer (TDGameSettings)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editor preview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#art-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Art sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entity-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entity views
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-settings-and-ellipses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera, settings and ellipses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample screenshots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-selection-and-click-area-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Language selection and click-area priority
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extending the framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../determinism-and-replay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Determinism and replay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference and support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference and support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and licenses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simulationrunner-scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SimulationRunner (scripting)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gamehud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GameHud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GameHud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controls-pc-mouse-and-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls (PC mouse and keyboard)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hudtheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HudTheme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damagenumbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DamageNumbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-fonts-and-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text, fonts and languages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text, fonts and languages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmp-essential-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TMP Essential Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chinese-japanese-and-korean-cjk-fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chinese, Japanese and Korean (CJK) fonts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translating-content-names-and-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Translating content names and descriptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentation-hooks-vfx-and-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presentation hooks, VFX and audio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cues-audiocueplayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cues (AudioCuePlayer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#music-musicplayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Music (MusicPlayer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-and-mixer-tdgamesettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volume and mixer (TDGameSettings)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editor preview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#art-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Art sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entity-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entity views
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-settings-and-ellipses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera, settings and ellipses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample screenshots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-selection-and-click-area-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Language selection and click-area priority
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="presentation-hud-feedback-camera-and-audio">Presentation: HUD, Feedback, Camera and Audio<a class="headerlink" href="#presentation-hud-feedback-camera-and-audio" title="Permanent link">&para;</a></h1>
+<p>Everything on this page lives in the Unity layer (<code>TDMaker.Unity.View</code>, <code>TDMaker.Unity.Hud</code>). It only <strong>reads</strong> simulation state and events and <strong>sends commands</strong>; you can replace any piece without touching the core. The Basic sample scene wires all of them on the <code>2D Tower Defense Maker</code> object (see <code>SampleContentGenerator</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Component (Add Component &gt; 2D Tower Defense Maker &gt; …)</th>
+<th>Class</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simulation Runner</td>
+<td><code>SimulationRunner</code></td>
+<td>Owns and advances the simulation; event source for everything below</td>
+</tr>
+<tr>
+<td>Entity View Registry</td>
+<td><code>EntityViewRegistry</code></td>
+<td>Pooled unit, tower and projectile views; built-in hit, death, spell and mechanic feedback</td>
+</tr>
+<tr>
+<td>Level View</td>
+<td><code>LevelView</code></td>
+<td>Generated placeholder ground with decorations, path ribbons and slot pads</td>
+</tr>
+<tr>
+<td>Game HUD</td>
+<td><code>GameHud</code></td>
+<td>Production uGUI HUD for mouse and keyboard, styled by a <code>HudTheme</code></td>
+</tr>
+<tr>
+<td>Damage Numbers</td>
+<td><code>DamageNumbers</code></td>
+<td>Pooled floating damage and heal numbers</td>
+</tr>
+<tr>
+<td>VFX Pool</td>
+<td><code>VfxPool</code></td>
+<td>Pools VFX prefabs from presentation hooks</td>
+</tr>
+<tr>
+<td>Audio Cue Player</td>
+<td><code>AudioCuePlayer</code></td>
+<td>Pools AudioSources; plays global, mechanic and per-template cues</td>
+</tr>
+<tr>
+<td>Music Player</td>
+<td><code>MusicPlayer</code></td>
+<td>Menu / battle / intense loops with crossfade, victory and defeat stingers</td>
+</tr>
+<tr>
+<td>Camera Controller</td>
+<td><code>TDCameraController</code></td>
+<td>Frames the level (whole map by default; optional scrolling framings with pan and zoom)</td>
+</tr>
+<tr>
+<td>Game Settings</td>
+<td><code>TDGameSettings</code></td>
+<td>Player-facing toggles read by the camera, HUD and feedback</td>
+</tr>
+<tr>
+<td>Ellipse Renderer</td>
+<td><code>EllipseRenderer</code></td>
+<td>Draws a range ellipse (fill + outline) with the simulation's shape</td>
+</tr>
+<tr>
+<td>TD Hud</td>
+<td><code>TDHud</code></td>
+<td>Minimal IMGUI HUD, used by the sample as an <strong>F1</strong> debug overlay</td>
+</tr>
+</tbody>
+</table>
+<h2 id="simulationrunner-scripting">SimulationRunner (scripting)<a class="headerlink" href="#simulationrunner-scripting" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Simulation</code>, <code>Baked</code></td>
+<td>The running world and its baked level (authoring lookups: <code>TryGetAsset</code>, <code>GetTower</code>, <code>GetHero</code>, <code>GetSpell</code>, <code>TryGetProjectile</code>, <code>TryGetEffect</code>, <code>TryGetMechanicVisual</code>).</td>
+</tr>
+<tr>
+<td><code>StartSimulation()</code> / <code>Restart()</code></td>
+<td>Bake and create a fresh world.</td>
+</tr>
+<tr>
+<td><code>Enqueue(command)</code></td>
+<td>Queue a player command (ignored while replaying). After victory/defeat the command is rejected with <code>GameEnded</code> on the next frame.</td>
+</tr>
+<tr>
+<td><code>Advance(realDeltaTime)</code></td>
+<td>Advance the clock and dispatch events. Called from <code>Update</code>; tools may call it directly (edit-mode captures, replays). Uses the core <code>SimulationClock</code>: at most <code>Catch Up Ticks Per Speed × speed</code> ticks per call.</td>
+</tr>
+<tr>
+<td><code>TimeScale</code>, <code>SetPaused(bool)</code>, <code>IsPaused</code>, <code>SetSpeed(scale)</code>, <code>ResumeScale</code></td>
+<td>Game speed; pause remembers the last non-zero speed.</td>
+</tr>
+<tr>
+<td><code>InterpolationAlpha</code></td>
+<td>Fraction of a tick for render interpolation.</td>
+</tr>
+<tr>
+<td><code>RangeYScale</code>, <code>DefaultRangeYScale</code></td>
+<td>Effective <code>k</code> of the running level, and the runner's own setting.</td>
+</tr>
+<tr>
+<td><code>StartingGoldOverride</code></td>
+<td>Debug: replaces the level's starting gold (≥ 0) on the next start.</td>
+</tr>
+<tr>
+<td><code>CreateConfig()</code></td>
+<td>The <code>SimConfig</code> built from the Inspector (tick rate, <code>k</code>, capacities).</td>
+</tr>
+<tr>
+<td><code>AddTemplateDecorator</code> / <code>RemoveTemplateDecorator</code></td>
+<td>Change baked templates before each start (<a href="../extending/#registering-extensions-in-a-unity-scene">Extending the Framework</a>).</td>
+</tr>
+<tr>
+<td><code>RecordCommands</code>, <code>RecordingFile</code>, <code>ReplayOnStart</code>, <code>ReplayFile</code>, <code>CommandLog</code>, <code>IsReplaying</code>, <code>CommandCodec</code>, <code>SaveRecording()</code></td>
+<td>Built-in recording and replay (<a href="../determinism-and-replay/">Determinism and Replay</a>).</td>
+</tr>
+<tr>
+<td><code>SimulationStarted</code>, <code>EventRaised</code></td>
+<td>Events: new world created (register extensions); every simulation event, once per frame in emission order (the frame's events must fit <code>Event Capacity</code>; a warning is logged once per run if any are dropped).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gamehud">GameHud<a class="headerlink" href="#gamehud" title="Permanent link">&para;</a></h2>
+<p><strong>Add Component &gt; 2D Tower Defense Maker &gt; Game HUD</strong> (<code>TDMaker.Unity.Hud.GameHud</code>). Built in uGUI from code at runtime – no prefabs to maintain – and styled by a <code>HudTheme</code> asset.</p>
+<p>Contents: top bar (gold, lives, wave, pause, 1×/2×/3×), wave-call indicators at path entrances (countdown ring, early-call bonus), radial build menu, tower panel (upgrade/branch choices, ability ranks, target priority, rally, sell), hero portraits with health/experience and skill buttons, spell bar with cooldowns and hotkeys, unit info, pause and victory/defeat screens with star rating, tooltips, toasts for rejected commands, and world feedback (range ellipses, slot highlight, placement ghost, rally/move markers, spell aim valid/invalid).</p>
+<h3 id="controls-pc-mouse-and-keyboard">Controls (PC mouse and keyboard)<a class="headerlink" href="#controls-pc-mouse-and-keyboard" title="Permanent link">&para;</a></h3>
+<p>One thing is selected or aimed at a time. A battlefield left click acts where the button is <strong>released</strong> (press and release must both be on the battlefield, not on HUD panels or buttons).</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Input</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nothing selected, or a menu/info is open</td>
+<td>Left click an empty build slot / a tower</td>
+<td>Opens its build menu / tower panel (clicking the same one again keeps it open)</td>
+</tr>
+<tr>
+<td></td>
+<td>Left click a soldier or an enemy</td>
+<td>Shows its info panel (not an attack order)</td>
+</tr>
+<tr>
+<td></td>
+<td>Left click a hero, its portrait, or <strong>H</strong></td>
+<td>Selects the hero for moving</td>
+</tr>
+<tr>
+<td></td>
+<td>Left click empty ground or road</td>
+<td>Clears the selection</td>
+</tr>
+<tr>
+<td>Build menu / tower panel</td>
+<td>One click on a build, upgrade or branch item</td>
+<td>Buys it and closes the menu (hovering previews range, ghost and price; there is no second confirmation click)</td>
+</tr>
+<tr>
+<td></td>
+<td>One click on an ability</td>
+<td>Buys one rank; the panel stays open</td>
+</tr>
+<tr>
+<td></td>
+<td>One click on <strong>Sell</strong></td>
+<td>Sells immediately (no confirmation by default)</td>
+</tr>
+<tr>
+<td></td>
+<td>Click on <strong>Set Rally</strong></td>
+<td>Hides the panel and starts rally aiming</td>
+</tr>
+<tr>
+<td>Hero selected</td>
+<td>Left click anywhere on the battlefield (ground, road, slot, tower, unit, the hero itself)</td>
+<td>Moves the hero to that point; a valid point ends the selection, an invalid one shows a marker and keeps the hero selected</td>
+</tr>
+<tr>
+<td></td>
+<td>The same portrait again or <strong>H</strong> (after the last hero)</td>
+<td>Deselects</td>
+</tr>
+<tr>
+<td></td>
+<td>Another hero's portrait</td>
+<td>Selects that hero</td>
+</tr>
+<tr>
+<td>Rally aiming</td>
+<td>Left click anywhere on the battlefield</td>
+<td>Sets the rally point when it is inside the ring and on an allowed lane spot (then back to browsing); otherwise a marker and aiming continues</td>
+</tr>
+<tr>
+<td>Spell aiming (spell button or <strong>1–9</strong>)</td>
+<td>Left click anywhere on the battlefield, including empty ground</td>
+<td>Casts at that point when it is valid for the spell (then back to browsing and the cooldown starts); otherwise a marker and aiming continues, no cooldown is used</td>
+</tr>
+<tr>
+<td></td>
+<td>The same spell button or key again</td>
+<td>Cancels aiming</td>
+</tr>
+<tr>
+<td></td>
+<td>A locked or recharging spell button or key</td>
+<td>Nothing is selected</td>
+</tr>
+<tr>
+<td>Any selection or aim</td>
+<td><strong>Right click</strong> (anywhere) or <strong>Esc</strong></td>
+<td>Cancels everything and returns to browsing; never moves a hero; a cancelled rally keeps the old rally point</td>
+</tr>
+<tr>
+<td>Nothing selected</td>
+<td><strong>Right click</strong></td>
+<td>Nothing (it never pauses)</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Esc</strong></td>
+<td>Opens the pause menu</td>
+</tr>
+<tr>
+<td>Pause menu</td>
+<td><strong>Esc</strong> or <strong>Resume</strong></td>
+<td>Closes it; the battle continues with nothing selected</td>
+</tr>
+<tr>
+<td>Result screen</td>
+<td><strong>Esc</strong></td>
+<td>Leaves the battle like the Quit button (when a Quit listener exists)</td>
+</tr>
+<tr>
+<td>Wave call</td>
+<td>One click on an entrance's call button, or <strong>N</strong></td>
+<td>Calls the whole next wave at once (every entrance); hovering shows what comes through that entrance</td>
+</tr>
+</tbody>
+</table>
+<p>Keys: <strong>Esc</strong> cancel / pause, <strong>Space</strong> or <strong>P</strong> pause, <strong>1–9</strong> spells, <strong>H</strong> hero, <strong>N</strong> next wave, <strong>F1</strong> debug overlay. Product additions that a buyer can turn off: the <strong>1× / 2× / 3×</strong> speed buttons (<code>TDGameSettings.speedControls</code>), the early-call gold preview on wave buttons and tooltips (<code>showEarlyCallBonus</code>, off by default), the tower panel's target-priority buttons and close button, and an optional sell confirmation (<code>confirmSell</code>, off). Camera pan and zoom exist only in levels whose Camera Framing scrolls; with left-drag pan on (<code>leftDragPan</code>, off by default) a press that turns into a drag pans the camera and is not also a click.</p>
+<p>Click targets are world rectangles around each unit (the border itself is outside): heroes are roughly square, soldiers and enemies taller than wide, towers slightly wider than tall and empty build slots clearly wider than tall. Where rectangles overlap, a hero wins; otherwise the target whose position is lower on the map wins. Per content, <code>View &gt; Click Area</code> on an entity asset replaces the rectangle (<code>Custom Area</code>, <code>Size</code>, <code>Offset</code>) and raises or lowers its priority (<code>Priority Bonus</code>).</p>
+<p>The same entry points are public for tutorials, tests and other input devices: <code>BattlefieldClick(worldPoint)</code>, <code>SecondaryClick()</code>, <code>PressEscape()</code>, <code>PressSpellKey(index)</code>, <code>PressHeroKey()</code>, <code>ClickHeroPortrait(heroId)</code>, <code>CancelAll()</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Runner</code>, <code>Registry</code>, <code>World Camera</code></td>
+<td>Dependencies (empty camera = <code>Camera.main</code>).</td>
+</tr>
+<tr>
+<td><code>Theme</code></td>
+<td><code>HudTheme</code> asset (empty = built-in defaults).</td>
+</tr>
+<tr>
+<td><code>Debug Hud</code></td>
+<td>Optional <code>TDHud</code> toggled with <strong>F1</strong>.</td>
+</tr>
+<tr>
+<td><code>Audio Player</code></td>
+<td>Optional; plays the interface cues (click, build menu open/close, rally set, wave called).</td>
+</tr>
+<tr>
+<td><code>Pause Volume Sliders</code></td>
+<td>Master / Music / Effects / Interface sliders in the pause menu (on).</td>
+</tr>
+<tr>
+<td><code>Hero / Unit / Tower / Slot Click Size</code>, <code>… Click Offset</code></td>
+<td>Default click rectangles in world units (size, centre offset from the position).</td>
+</tr>
+<tr>
+<td><code>On Continue</code>, <code>On Quit</code></td>
+<td>UnityEvents for the result screen buttons and the pause menu's Quit (hidden when nothing is assigned in the Inspector; see <code>SetNavigation</code> for listeners added from code).</td>
+</tr>
+</tbody>
+</table>
+<p>Text: <code>Texts</code> (the scene's <code>TDGameSettings.Texts</code>), static <code>Describe(texts, failure)</code> (the text of a rejected command).</p>
+<p>Scripting: <code>Configure(runner, registry, camera, theme, debugHud)</code>, <code>Connect()</code>, <code>Refresh()</code>, <code>SelectTower(entityId)</code>, <code>SelectBuildSlot(index)</code>, <code>ClearSelection()</code>, <code>CancelAll()</code>, <code>CurrentMode</code> (<code>Browsing</code>, <code>BuildMenu</code>, <code>TowerMenu</code>, <code>RallyAiming</code>, <code>HeroSelected</code>, <code>UnitSelected</code>), <code>AimingSpell</code>, <code>SelectedHero</code>, <code>SelectedTower</code>, <code>SelectedUnit</code>, <code>HasSelection</code>, the input entry points above, <code>Theme</code>, <code>Canvas</code>, <code>Runner</code>, <code>SetPauseMenu(open)</code>, <code>IsPauseMenuOpen</code>, static <code>EnsureEventSystem()</code>.</p>
+<p><strong>Game flow from code.</strong> A menu script that adds <code>onContinue</code>/<code>onQuit</code> listeners at runtime calls <code>SetNavigation(showContinue, showQuit, continueText, quitText)</code> to choose which buttons show and their labels – text keys or literal texts (for example "Next Battle" only when a next level exists, and "Main Menu"); with both shown the result screen places them side by side. <code>ClearNavigation()</code> returns to the Inspector rule. The pause button in the top bar opens the same pause menu as <strong>Space</strong>/<strong>P</strong>/<strong>Esc</strong>. The campaign screens (world map, save slots) are described in <a href="../campaign/">Campaign</a>. See the Demo sample (<code>Samples/Demo/Scripts/DemoFlow.cs</code>): one scene, one runner, levels swapped with <code>SimulationRunner.Configure(null, levelAsset)</code> + <code>StartSimulation()</code> (set <code>StartOnPlay</code> off so nothing starts behind the title screen).</p>
+<p>Every value the HUD shows is read back from the simulation; failed or cancelled aims never send commands. Rules are never recomputed in the view: the sell price uses <code>Simulation.PreviewSellRefund</code>, the call-wave bonus and tooltip use <code>PreviewEarlyCallReward</code>, spell tooltips show <code>PreviewEarlyCallSpellCooldownCut</code>, the countdown ring is <code>NextWaveRemaining / NextWaveWaitDuration</code>, the rally cursor is drawn at the point <code>TryResolveRallyPoint</code> resolves (invalid points are refused before a command is sent), the early-call toast shows the <code>GoldChanged</code> delta that precedes <code>WaveStarted</code>, and the result screen shows the core's <code>Victory</code> star rating. Splash rings use <code>ProjectileHit.Value</code> for instant hits. Text is TextMesh Pro with the theme's font, and every string comes from the string tables (<a href="#text-fonts-and-languages">Text, fonts and languages</a>).</p>
+<h2 id="hudtheme">HudTheme<a class="headerlink" href="#hudtheme" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; HUD Theme</strong> (<code>HudTheme</code>). All fields are optional; empty sprites use generated defaults (<code>HudSprites</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canvas</td>
+<td><code>Reference Resolution</code>, <code>Match Width Or Height</code>, <code>Sorting Order</code></td>
+</tr>
+<tr>
+<td>Text</td>
+<td><code>Font</code> (<code>TMP_FontAsset</code>; empty = the TMP Settings default), <code>Font Material</code> (optional preset), <code>Fallback Fonts</code> (for characters the font lacks, for example CJK), <code>Body Font Weight</code>, <code>Button Font Weight</code>, <code>Small Font Size</code>, <code>Font Size</code>, <code>Large Font Size</code>, <code>Title Font Size</code>, <code>Text Shadow</code> (underlay)</td>
+</tr>
+<tr>
+<td>Sprites</td>
+<td><code>Panel</code>, <code>Button</code>, <code>Circle</code>, <code>Ring</code>, <code>Bar</code> (9-sliced where useful), icons for gold, lives, wave, incoming, star, pause, play, lock, damage</td>
+</tr>
+<tr>
+<td>Colours</td>
+<td>panel/button states, text, accent, gold, lives, wave, positive/negative, health, experience, cooldown shade, stars, overlay</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td><code>Top Bar Height</code>, <code>Padding</code> (spacing), <code>Panel Padding</code> (sample: 36), <code>Screen Padding</code> (24), <code>Button Text Padding</code> (18 horizontal / 10 vertical), radial menu radius and button size, spell button, portrait, wave indicator, tower panel width, button height</td>
+</tr>
+<tr>
+<td>World feedback</td>
+<td>range/preview/rally/hero/valid/invalid/slot-hover/unit-select colours, <code>Range Fill Alpha</code>, <code>Outline Width</code>, <code>Ghost Alpha</code></td>
+</tr>
+<tr>
+<td>Damage numbers</td>
+<td><code>Damage Number Color</code>, <code>Heal Number Color</code>, <code>Damage Number Size</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>HudTheme.Default</code> is the in-memory default; <code>ResolveFont()</code> returns the configured font or the TMP Settings default (null when the TMP Essential Resources are missing), or a runtime copy of it when <code>Fallback Fonts</code> are set (see below).</p>
+<h2 id="damagenumbers">DamageNumbers<a class="headerlink" href="#damagenumbers" title="Permanent link">&para;</a></h2>
+<p><strong>Add Component &gt; 2D Tower Defense Maker &gt; Damage Numbers.</strong> Pooled floating TextMesh Pro numbers (outlined) on a screen-space canvas, merged per target for a short window; digits are cached strings and the fade uses the canvas renderer alpha, so they do not allocate per frame. Fields: <code>Runner</code>, <code>World Camera</code>, <code>Theme</code>, <code>Merge Window</code>, <code>Lifetime</code>, <code>Rise</code>, <code>Minimum Value</code>, <code>Max Numbers</code>, <code>Show Heals</code>. Disabled when <code>TDGameSettings.damageNumbers</code> is off. <code>Configure(runner, camera, theme)</code>.</p>
+<h2 id="text-fonts-and-languages">Text, fonts and languages<a class="headerlink" href="#text-fonts-and-languages" title="Permanent link">&para;</a></h2>
+<p>All runtime text – <code>GameHud</code>, <code>DamageNumbers</code> and the sample menus – is <strong>TextMesh Pro</strong> (<code>TextMeshProUGUI</code>, built from code by <code>HudUi.Label</code>). TextMesh Pro is part of the uGUI package in Unity 6 (<code>com.unity.ugui</code> 2.0), so there is no extra dependency; the 2D Tower Defense Maker assemblies reference <code>Unity.TextMeshPro</code>.</p>
+<h3 id="tmp-essential-resources">TMP Essential Resources<a class="headerlink" href="#tmp-essential-resources" title="Permanent link">&para;</a></h3>
+<p>TextMesh Pro needs its <strong>Essential Resources</strong> (TMP Settings, the default LiberationSans SDF font asset and the SDF shaders) in the project once. 2D Tower Defense Maker does not ship them. When they are missing:</p>
+<ul>
+<li>the editor logs one message per session and offers <strong>Import</strong> in a dialog;</li>
+<li><strong>Tools &gt; 2D Tower Defense Maker &gt; Import TMP Essential Resources</strong> (or Unity's <strong>Window &gt; TextMeshPro &gt; Import TMP Essential Resources</strong>) imports them into <code>Assets/TextMesh Pro</code>;</li>
+<li><strong>Validate</strong> reports an error in the <em>Text</em> category;</li>
+<li>the HUD still builds and plays, but text stays invisible until the resources exist.</li>
+</ul>
+<p>Batch: <code>-batchmode -executeMethod TDMaker.Editor.TextMeshProSetup.ImportEssentials</code> <strong>without</strong> <code>-quit</code> (the editor exits when the import finishes). Scripts can ask <code>TextMeshProSetup.EssentialsImported</code>.</p>
+<h3 id="fonts">Fonts<a class="headerlink" href="#fonts" title="Permanent link">&para;</a></h3>
+<p><strong>Included sample typography.</strong> Both sample HUD themes explicitly use <strong>Inter 4.1</strong> from <code>Samples/Fonts/Inter/</code>. Regular (400), Medium (500), SemiBold (600) and Bold (700) have separate static SDF atlases and real weight-face links: body text uses Regular, button titles SemiBold, button prices Medium and headings Bold. Small/body sizes are 20/24 and the sample text shadow is disabled. Button titles and prices use separate padded regions; long text fits or truncates inside its region. The original four TTF files and their SIL Open Font License 1.1 are included alongside the generated assets (<code>ThirdPartyNotices.txt</code>).</p>
+<p>The static atlases use 80 pt sampling, 8 px padding and a 2048-square texture per face. They include the shipped English table and common Latin UI characters. If you add characters outside that set, regenerate the atlas or add a licensed fallback. Re-running Create Sample Content preserves existing Inter assets and their GUIDs.</p>
+<p><code>HudTheme &gt; Font</code> takes a <code>TMP_FontAsset</code>; empty uses the <strong>default font asset of your TMP Settings</strong>. <code>Font Material</code> is an optional material preset (outline, glow ...); empty uses the font's own material, and <strong>Text Shadow</strong> adds a drop shadow through a generated underlay material (<code>HudUi.TextMaterial</code>, shared and cached per font, so labels keep batching). Damage numbers add an outline the same way; <code>HudUi.SetOutline(label, theme, color, width)</code> does it for your own labels.</p>
+<p>To make a font asset: select a <code>.ttf</code>/<code>.otf</code> and use <strong>Assets &gt; Create &gt; TextMeshPro &gt; Font Asset</strong> (or <strong>Window &gt; TextMeshPro &gt; Font Asset Creator</strong> for a static atlas).</p>
+<h3 id="chinese-japanese-and-korean-cjk-fonts">Chinese, Japanese and Korean (CJK) fonts<a class="headerlink" href="#chinese-japanese-and-korean-cjk-fonts" title="Permanent link">&para;</a></h3>
+<p>The bundled Inter faces and the TMP default LiberationSans font do not cover CJK scripts; without a CJK font those characters render as boxes (and TMP logs which characters are missing). Add one font that covers the language, as a <strong>dynamic</strong> fallback so only the glyphs you use are rasterized.</p>
+<p><strong>Sample Korean font.</strong> The samples include <strong>Noto Sans KR Regular</strong> (<code>Samples/Fonts/NotoSansKR-Regular.otf</code>, about 4.4 MB, SIL Open Font License 1.1 – <code>Samples/Fonts/OFL.txt</code>, see <code>ThirdPartyNotices.txt</code>) and a dynamic font asset made from it by the sample generator, <code>Samples/Fonts/NotoSansKR-Regular SDF.asset</code> (48 pt sampling, 1024 atlas pages, multi atlas, dynamic data cleared on build). Both sample HUD themes list it in <strong><code>HudTheme &gt; Fallback Fonts</code></strong>, so the Korean sample table renders out of the box (switch <code>TDGameSettings &gt; Language</code> to <code>ko</code>, or use the language button of the Demo). The fallback is applied to a runtime copy of the HUD font, so your TMP Settings and the TMP default font asset are not changed. Keep the font and its license file together if you ship it; if Korean is not required, remove only the Noto Sans KR font and its theme fallback entries; keep the Inter folder and its license.</p>
+<p><strong>Adding a font for another language</strong> (Japanese, Chinese, another Korean typeface):</p>
+<ol>
+<li>Import a font file you are licensed to ship (for example Noto Sans JP / SC / TC, SIL Open Font License).</li>
+<li>Select it, <strong>Assets &gt; Create &gt; TextMeshPro &gt; Font Asset &gt; SDF</strong>. In the new asset set <strong>Atlas Population Mode = Dynamic</strong>, an atlas of 1024 (or 2048), <em>Multi Atlas Textures</em> on and <em>Clear Dynamic Data On Build</em> on.</li>
+<li>Add it to your theme's <strong><code>HudTheme &gt; Fallback Fonts</code></strong> (tried in order after the HUD font's own fallbacks). Alternatives: the HUD font asset's own <strong>Fallback Font Assets</strong> list (required when <code>HudTheme &gt; Font</code> is itself a dynamic font – <code>Fallback Fonts</code> only applies to static fonts and logs a warning otherwise), <strong>Project Settings &gt; TextMesh Pro &gt; Settings &gt; Fallback Font Assets</strong> (every TMP text in the project), or the font directly as <code>HudTheme &gt; Font</code> for a single-language build.</li>
+<li>Play the scene in that language once and check the console for missing-character warnings.</li>
+</ol>
+<p>Keep Latin text in the primary font and CJK in the fallback: the HUD's numbers and the English fallback texts keep the primary font's metrics (CJK fonts have taller line metrics, so multi-line panels grow a little). Dynamic atlases fill while the game runs; in the editor the glyphs are written into the font asset (re-run <strong>Create Sample Content</strong> to reset the sample one). For a shipped static atlas, use the Font Asset Creator with your table's characters (<em>Characters from File</em>).</p>
+<h3 id="string-tables">String tables<a class="headerlink" href="#string-tables" title="Permanent link">&para;</a></h3>
+<p>Every user-visible HUD string is a key (<code>HudTexts</code> lists them, for example <code>hud.pause.title</code>, <code>hud.tower.sell</code> = <code>Sell  +{0}</code>). Texts come from <strong><code>TDGameSettings.Texts</code></strong> (a <code>TextResolver</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>TextResolver.Provider</code> – an optional <code>ITextProvider</code> set from code (an adapter to the Unity Localization package, a spreadsheet import ...)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>TDGameSettings &gt; Text Tables</code> whose language matches <code>TDGameSettings &gt; Language</code> (later tables override earlier ones)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>the English tables in the same list (<code>en</code>)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>the built-in English texts (<code>HudTexts.English</code>)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>the caller's fallback (<code>Get(key, fallback)</code>), then the key itself</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>Text Table</strong> (<strong>Create &gt; 2D Tower Defense Maker &gt; Text Table</strong>, <code>TextTable</code>) has a <code>Language Code</code> (<code>en</code>, <code>ko</code>, <code>de</code>, <code>zh-Hans</code> ...; matched ignoring case, and <code>ko</code> serves <code>ko-KR</code>), a <code>Language Name</code> for menus and <code>key → text</code> entries. Empty texts count as missing, so a partly translated table works. Texts may use rich text (<code>&lt;b&gt;</code>, <code>&lt;color=#ff7766&gt;</code>) and <code>{0}</code>, <code>{1}</code> placeholders for numbers and names; preserve the placeholder indices, although translations may reorder them. A broken placeholder shows the text unformatted instead of throwing, and <strong>Validate</strong> reports placeholders the HUD does not fill.</p>
+<p>The samples include <code>Samples/Text/Text_English.asset</code> and <code>Samples/Text/Text_Korean.asset</code>; the sample generator updates both. Sample scenes assign both tables and use <code>en</code> as their default language. Sample menu keys start with <code>demo.*</code>, campaign screen keys with <code>campaign.*</code>, and level titles and summaries use <code>campaign.level.&lt;key&gt;.title</code> and <code>.summary</code>. Content names and descriptions use the <code>content.*</code> keys below; missing translations display the asset's authored text.</p>
+<p><strong>Adding a language</strong></p>
+<ol>
+<li>Duplicate <code>Text_English</code> (or create a Text Table), set <code>Language Code</code> and <code>Language Name</code>, translate the texts (leave a text empty to keep English).</li>
+<li>Add the table to <code>TDGameSettings &gt; Text Tables</code> in your scenes (keep the English table in the list for keys you add yourself).</li>
+<li>Make sure the HUD font or its fallbacks cover the script (see CJK above).</li>
+<li>Select the language: <code>TDGameSettings &gt; Language</code> in the Inspector, or <code>TDGameSettings.Current.SetLanguage("de")</code> from an options menu (<code>GetLanguages(list)</code> lists the codes of the assigned tables; <code>LanguageChanged</code> fires). Open HUDs and the sample menus relabel themselves on the next frame. With <code>Persist Language</code> on (default), the choice is saved in PlayerPrefs (<code>Language Prefs Key</code>, default <code>TDMaker.Language</code>) and loaded when play starts in a build (<code>LoadLanguage()</code>). In the Editor, <strong>Ignore Saved Language In Editor</strong> is enabled by default so the Inspector value takes precedence. Like volumes, the language is an app setting kept outside save slots.</li>
+</ol>
+<p><strong>Scripting</strong>: <code>Texts.Get(key)</code>, <code>Texts.Get(key, fallback)</code>, <code>Texts.Format(key, a[, b[, c]])</code>, <code>Texts.FormatText(text, a)</code>, <code>Texts.Has(key)</code>, <code>Texts.Version</code> (changes when the language, the tables or the provider change), <code>Texts.Invalidate()</code>; <code>TextTable.TryGetText</code>, <code>Set</code>, <code>Remove</code>, <code>Clear</code>, <code>Entries</code>; <code>CachedText</code> caches the formatted text of a key per number and language. HUD labels are updated only when their value changes, and the strings are cached per value (<code>NumberText.Get(int)</code> shares one string per integer; <code>CachedNumber</code> and <code>CachedText</code> keep the text of every value they have shown), so the HUD adds no per-frame allocation at any game speed – a count, timer or health value that comes back costs nothing; a language switch rebuilds the labels once. Top bar values and hero hints shrink (TMP auto size) instead of running past their panel in longer languages.</p>
+<h3 id="translating-content-names-and-descriptions">Translating content names and descriptions<a class="headerlink" href="#translating-content-names-and-descriptions" title="Permanent link">&para;</a></h3>
+<p>The game HUD uses <code>ContentTexts</code> to resolve names and descriptions for units, towers, heroes, spells, status effects, purchased abilities and hero skills. Keys follow <code>content.&lt;category&gt;.&lt;id&gt;.&lt;field&gt;</code>. Categories are <code>unit</code>, <code>spell</code>, <code>effect</code> and <code>ability</code>; fields are <code>name</code> and <code>description</code>. General units and status effects have no description field, so only their names are translated.</p>
+<p>For example, <code>content.unit.garrison_1.name</code>, <code>content.unit.militia.name</code> and <code>content.ability.piercing_shot.name</code> translate Garrison, Militia and Piercing Shot. Both sample tables include content names and descriptions. Add keys following the same pattern for your own content. When a translation is absent, the original authored name or description is used.</p>
+<p>Changing the display language preserves <code>TemplateId</code> and the authored <code>DisplayName</code>; it does not change core definitions, saves or command replay. Open tower panels, hero names and tooltips update when the language changes. Authoring tools such as Unit Workshop continue to show asset filenames and authored text.</p>
+<h2 id="presentation-hooks-vfx-and-audio">Presentation hooks, VFX and audio<a class="headerlink" href="#presentation-hooks-vfx-and-audio" title="Permanent link">&para;</a></h2>
+<p>Each entity asset's <code>View</code> has <strong><code>Hooks</code></strong> (<code>PresentationHooks</code>): <code>Spawn / Attack / Hit / Death Vfx</code> prefabs and <code>Spawn / Attack / Hit / Death Cue</code> audio cues. Projectiles have <code>Launch Vfx</code>, <code>Impact Vfx</code>, <code>Launch Cue</code>, <code>Impact Cue</code>; spells have <code>Cast Vfx</code> and <code>Cast Cue</code>. Every slot is optional.</p>
+<p><strong><code>AudioCue</code></strong>: <code>Clips</code> (one picked at random), <code>Volume</code>, <code>Pitch Min/Max</code>, <code>Min Interval</code> (prevents stacking), <code>Spatial Blend</code>. <code>HasClips</code> tells whether anything would play.</p>
+<p><strong><code>VfxPool</code></strong> (<strong>2D Tower Defense Maker &gt; VFX Pool</strong>): <code>Spawn(prefab, position, lifetime = -1)</code> places a pooled instance; particle systems are restarted on reuse and the instance returns after its particle duration (or <code>Default Lifetime</code>). <code>Max Active</code> caps live instances. Implement <code>IPooledVfx.OnSpawned()</code> on a prefab component to reset custom state. <code>Clear()</code> returns everything.</p>
+<h2 id="audio">Audio<a class="headerlink" href="#audio" title="Permanent link">&para;</a></h2>
+<p>Three components play sound: <code>AudioCuePlayer</code> (one-shot cues), <code>MusicPlayer</code> (loops and stingers) and <code>TDGameSettings</code> (volumes and mixer routing). All of them are optional and every cue or clip slot may stay empty (silent).</p>
+<h3 id="cues-audiocueplayer">Cues (<code>AudioCuePlayer</code>)<a class="headerlink" href="#cues-audiocueplayer" title="Permanent link">&para;</a></h3>
+<p><strong>2D Tower Defense Maker &gt; Audio Cue Player.</strong> Plays cues through a pool of AudioSources.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Voices</code></td>
+<td>Pool size = global voice limit. When every voice is busy the oldest one is reused.</td>
+</tr>
+<tr>
+<td><code>Max Voices Per Cue</code></td>
+<td>Copies of one cue that may sound at once (default 3, 0 = no limit). Together with each cue's <code>Min Interval</code> this keeps dense fights from stacking.</td>
+</tr>
+<tr>
+<td><code>Master Volume</code></td>
+<td>Extra volume of this player (multiplied with the Game Settings volumes).</td>
+</tr>
+<tr>
+<td><code>Cues</code></td>
+<td>Global events: wave started, wave callable, <strong>wave called</strong> (button/N, played by the HUD instead of the click), tower built / upgraded / sold, ability purchased, life lost, <strong>coin gained</strong> (an enemy with a bounty died; throttle with <code>Min Interval</code>), command rejected, spell ready, <strong>spell cast</strong> (fallback for spells without their own <code>Cast Cue</code>), <strong>hero moved</strong> (order approved), hero level-up, <strong>rally set</strong>, victory, defeat, UI click, <strong>build menu opened / closed</strong>.</td>
+</tr>
+<tr>
+<td><code>Mechanic Cues</code></td>
+<td>Built-in mechanic events: chain started, trap placed, trap triggered, beam started, healed (give it a long <code>Min Interval</code>), shield applied (an effect with a shield was attached), damage reflected, knockback (displacement), path transferred.</td>
+</tr>
+<tr>
+<td><code>Keyed Cues</code></td>
+<td><code>Key</code> + <code>Cue</code>: replaces the mechanic default for one mechanic id (chain, trap, beam, pulse, reflection or transfer id) or plays on attach of one status effect id. <code>SetKeyedCue(key, cue)</code> from code.</td>
+</tr>
+<tr>
+<td><code>Ensure Listener</code></td>
+<td>On Start, adds an <code>AudioListener</code> to the main camera when the scene has none.</td>
+</tr>
+</tbody>
+</table>
+<p>Per-template cues are on the assets (see above) and are routed by the <code>EntityViewRegistry</code>. Cues on the UI channel: UI click, build menu, command rejected; everything else is SFX.</p>
+<p>Scripting: <code>Play(cue)</code>, <code>Play(cue, position)</code>, <code>Play(cue, position, AudioChannel)</code>, <code>PlayUi(cue)</code>, <code>PlayUi(preferred, fallback)</code>, <code>Keyed(key, fallback)</code>, <code>StopAll()</code>, <code>ActiveVoices</code>, static <code>EnsureListener()</code>.</p>
+<h3 id="music-musicplayer">Music (<code>MusicPlayer</code>)<a class="headerlink" href="#music-musicplayer" title="Permanent link">&para;</a></h3>
+<p><strong>2D Tower Defense Maker &gt; Music Player.</strong> Two pooled loop sources crossfade (<code>Crossfade</code>, real seconds) and a third plays stingers.</p>
+<ul>
+<li><strong>Level music</strong>: <code>Level Asset &gt; Audio &gt; Music</code> (<code>LevelMusicData</code>): <code>Battle</code> loop, <code>Intense</code> loop, <code>Victory</code> / <code>Defeat</code> stingers, <code>Volume</code>. The intense loop is crossfaded in when a wave starts that matches a rule: <code>Intense On Last Wave</code>, <code>Intense On Boss Waves</code> (waves with <code>Boss Wave</code> ticked in the Wave Set – a presentation hint that is not baked into the core) or <code>Intense From Wave</code> (one-based, 0 = off).</li>
+<li><strong>Defaults</strong> on the Music Player (<code>Menu Music</code>, <code>Battle Music</code>, <code>Intense Music</code>, <code>Victory Stinger</code>, <code>Defeat Stinger</code>) are used for every slot a level leaves empty.</li>
+<li><strong>Menu music</strong>: plays while no simulation runs, or while the optional <code>Battle Root</code> object is inactive (assign the HUD a menu flow hides, as the Demo sample does). <code>Follow Battle Root</code> switches back to the battle loop when it shows again.</li>
+<li><strong>Stingers</strong>: <code>Stinger Mode</code> <code>Stop Loop</code> (default: the loop fades out) or <code>Duck Loop</code> (lowered to <code>Duck Volume</code> while the stinger plays). <code>Paused Volume</code> lowers the loop while the game is paused.</li>
+</ul>
+<p>Scripting: <code>PlayMenu()</code>, <code>PlayBattle(intense)</code>, <code>PlayOutcome(victory)</code>, <code>Stop()</code>, <code>CrossfadeTo(clip, volume)</code>, <code>Current</code> (<code>Silent</code>, <code>Menu</code>, <code>Battle</code>, <code>Intense</code>, <code>Outcome</code>), <code>CurrentClip</code>, <code>IsPlaying</code>, <code>IsIntenseWave(wave)</code>, <code>Configure(runner, battleRoot, menu, battle, intense, victory, defeat)</code>.</p>
+<h3 id="volume-and-mixer-tdgamesettings">Volume and mixer (<code>TDGameSettings</code>)<a class="headerlink" href="#volume-and-mixer-tdgamesettings" title="Permanent link">&para;</a></h3>
+<p><code>Master Volume</code>, <code>Music Volume</code>, <code>Sfx Volume</code>, <code>Ui Volume</code> (0..1). A sound plays at cue volume × player volume × Master × its channel. With <code>Persist Volumes</code> on (default) the four values are loaded from PlayerPrefs on enable and written when they change (keys <code>Prefs Key Prefix</code> + <code>Master</code>/<code>Music</code>/<code>Sfx</code>/<code>Ui</code>; PlayerPrefs failures only log a warning).</p>
+<p>Mixer routing is optional: assign <code>Music Group</code>, <code>Sfx Group</code>, <code>Ui Group</code> (<code>AudioMixerGroup</code>) to route each channel through your mixer for effects or snapshots. Volumes are applied on the AudioSources either way, so everything works without a mixer.</p>
+<p>Options menu API: <code>GetVolume(AudioChannel)</code>, <code>SetVolume(AudioChannel, value)</code>, <code>EffectiveVolume(channel)</code>, <code>MixerGroup(channel)</code>, <code>LoadVolumes()</code>, <code>SaveVolumes()</code> (flushes PlayerPrefs), event <code>VolumeChanged</code>. The sample pause menu shows Master / Music / Effects / Interface sliders bound to these (<code>GameHud &gt; Pause Volume Sliders</code>, on by default); closing the pause menu saves them.</p>
+<h3 id="sample-audio">Sample audio<a class="headerlink" href="#sample-audio" title="Permanent link">&para;</a></h3>
+<p>The samples use the sound effects and music in <code>Samples/Audio</code> (<code>Sfx/&lt;key&gt;.ogg</code>, <code>Music/&lt;key&gt;.ogg</code>, generated with Stable Audio, see <code>ThirdPartyNotices.txt</code>). The sample generator assigns them by key (<code>TDMaker.Editor.SampleAudio</code>): tower families get shot sounds (<code>tower_arrow_shot</code>, <code>tower_cannon_fire</code>, <code>tower_magic_cast</code>), projectiles impact sounds (<code>arrow_hit</code>, <code>cannon_explosion</code>, <code>magic_impact</code>), enemies <code>enemy_hit</code> and <code>enemy_death_small</code> / <code>enemy_death_big</code> by size, soldiers <code>sword_clash</code> / <code>soldier_death</code>, spells their cast sounds, the audio player the global and mechanic cues, levels <code>music_battle</code> / <code>music_battle_intense</code> / <code>music_victory</code> / <code>music_defeat</code>, and the Demo scene <code>music_menu</code>. A missing file leaves its cue empty, so generation works (and stays deterministic) without the folder.</p>
+<h3 id="editor-preview">Editor preview<a class="headerlink" href="#editor-preview" title="Permanent link">&para;</a></h3>
+<p><code>TDMaker.Editor.AudioCuePreview</code> plays cues in the editor (edit or play mode): <code>Play(cue)</code>, <code>PlayClip(clip, volume, pitch)</code>, <code>Stop()</code>, <code>IsPlaying</code>, <code>FromProperty(serializedCue)</code>, <code>DrawCueRow(label, cue)</code> and <code>DrawSection(expanded, title, cues)</code> (an "Audio" foldout with each cue's field and Play/Stop buttons) for custom inspectors and windows.</p>
+<h2 id="art-sets">Art sets<a class="headerlink" href="#art-sets" title="Permanent link">&para;</a></h2>
+<p>An <code>ArtSet</code> (Create › 2D Tower Defense Maker › Art Set) maps template view keys to sprites so a whole look can be swapped without code. Assign it on the <code>EntityViewRegistry</code>; keys without an entry fall back to the asset's prefab or a generated primitive. All three samples use <code>BasicArtSet</code>: original vector units, towers and separate painted maps. The Hound, Revenant, Gravecaller and Husk have their own entries. Imported sprites remain available even when external authoring tools are absent.</p>
+<p>Per entry: <code>View Key</code>, <code>Sprite</code>, optional frame loops (<code>Walk</code>, <code>Idle</code>, <code>Attack</code>, <code>Hurt</code>, <code>Death</code> frames with their frames-per-second), <code>Death Sprite</code> + <code>Death Hold</code> (e.g. a grave shown briefly), <code>Icon</code> (menus and portraits), <code>Scale</code>, health-bar height/width, <code>Walk Bob</code>, and for projectiles <code>Rotate To Flight</code>, <code>Impact Sprite</code> / <code>Impact Frames</code>, <code>Impact Size</code>. Set-wide: build-slot sprite and scale, <code>Draw Build Slots</code>, health-bar back/fill/low sprites.</p>
+<p><strong>Facing direction</strong> – draw or import unit art facing either way. Right-facing art needs nothing; for art drawn facing left, tick <strong><code>Faces Left</code></strong> on its entry. Units face their movement direction; in a melee engagement (and when an attack starts) they use the simulation's latched facing (<code>Entity.FacingX</code>), so a blocker and its enemy face each other. Left- and right-facing sheets can be mixed in one set. (Requires the template's <code>Facing</code> to be <code>FlipSprite</code> or <code>ScaleX</code>.)</p>
+<h2 id="entity-views">Entity views<a class="headerlink" href="#entity-views" title="Permanent link">&para;</a></h2>
+<p><code>EntityViewRegistry</code> pools one <code>EntityView</code> per entity (prefab from the asset's <code>View</code>, the registry's <code>Overrides</code>, or a generated primitive). <code>View</code> settings: <code>Shape</code>/<code>Color</code>/<code>Size</code>, <code>Shaded</code> (outlined style), <code>Facing</code> (<code>None</code>, <code>FlipSprite</code>, <code>ScaleX</code>), <code>Show Health Bar</code>, <code>Drive Animator</code>, <code>Hooks</code>.</p>
+<p><strong>Animator parameters</strong> – with <code>Drive Animator</code> on, an <code>Animator</code> on the prefab receives the parameters it declares (others are skipped):</p>
+<table>
+<thead>
+<tr>
+<th><code>EntityView.AnimatorParameters</code></th>
+<th>Type</th>
+<th>Set when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Move</code></td>
+<td>Bool</td>
+<td>The unit moved this frame</td>
+</tr>
+<tr>
+<td><code>Speed</code></td>
+<td>Float</td>
+<td>Movement speed (units per second)</td>
+</tr>
+<tr>
+<td><code>Attack</code></td>
+<td>Trigger</td>
+<td>An attack starts</td>
+</tr>
+<tr>
+<td><code>Hit</code></td>
+<td>Trigger</td>
+<td>Positive damage is taken</td>
+</tr>
+<tr>
+<td><code>Die</code></td>
+<td>Trigger</td>
+<td>Death fade begins</td>
+</tr>
+</tbody>
+</table>
+<p>Animator speed follows the game speed. Built-in feedback: hit flash, death fade, status-effect tint and icons, tower tier pips, projectile trails, impact flashes, splash rings, instant-hit beams, spell cast flash.</p>
+<p><strong>Mechanic feedback</strong> (see <a href="../mechanics/">Mechanic Library</a>): jagged arcs between chain victims, beams for multi-target attacks, rings for every region pulse (including pulse-only regions) and projectile impact areas, heal glows, a shield bubble that fades with the remaining capacity, dust rings on displacement, greyed disarmed units and translucent untargetable units, trap markers (dim while arming, detection ring once armed, trigger flash), pooled continuous beam lines that follow source and target, reflection and life-steal lines, and path-transfer trails. Colours come from each mechanic's <code>Color</code> (or the effect tint; transfers use the registry's <code>Transfer Color</code>); optional <code>Vfx</code> prefabs go through <code>VfxPool</code>. Registry toggles: <code>Mechanic Arcs</code>, <code>Pulse Rings</code>, <code>Heal Glows</code>, <code>Trap Markers</code>, <code>Channel Beams</code>, <code>Reaction Lines</code>.</p>
+<h2 id="camera-settings-and-ellipses">Camera, settings and ellipses<a class="headerlink" href="#camera-settings-and-ellipses" title="Permanent link">&para;</a></h2>
+<p><strong><code>TDCameraController</code></strong> (on the orthographic camera) frames the level on start for any aspect ratio. Its bounds are the level geometry plus <code>Padding</code> and the HUD reserve (<code>Hud Reserve Top/Bottom</code>), or a fixed rectangle (<code>Use Fixed Bounds</code>, set by the Map Editor to the painted map). How the level is framed comes from the level's <strong>Camera Framing</strong> (<code>LevelAsset.cameraFraming</code>, or a scene override on Level Authoring):</p>
+<table>
+<thead>
+<tr>
+<th>Framing (<code>mode</code>)</th>
+<th>View</th>
+<th>Player camera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fit Whole Map</strong> (default)</td>
+<td>The whole map on one screen; other aspect ratios show the camera background at the sides or top/bottom</td>
+<td>None – no pan, no zoom</td>
+</tr>
+<tr>
+<td><strong>Fit Height Scroll Horizontally</strong></td>
+<td>View height = map height</td>
+<td>Pan left/right, zoom in</td>
+</tr>
+<tr>
+<td><strong>Fit Width Scroll Vertically</strong></td>
+<td>View width = map width</td>
+<td>Pan up/down, zoom in</td>
+</tr>
+<tr>
+<td><strong>Fixed View Size</strong></td>
+<td><code>viewHeight</code> world units (capped to the map)</td>
+<td>Pan both ways, zoom in</td>
+</tr>
+</tbody>
+</table>
+<p><code>startFocus</code> picks the first view (<code>Center</code>, <code>FirstEntrance</code>, <code>FirstExit</code> of path 0) and <code>introPan</code> (<code>introPanSeconds</code>) pans along the first path from its entrance to its exit when the level starts, then settles on the start focus; any pan or zoom input skips it. Off-screen wave-call buttons are pulled to the screen edge, so scrolling levels still show every entrance. Fields: <code>Padding</code>, <code>Min Zoom</code>, <code>Pan Speed</code>, <code>Edge Size</code>, <code>Zoom Step</code>, <code>Smoothing</code>. <code>FitToLevel()</code>, <code>Bounds</code>, <code>Framing</code>, <code>IntroPanActive</code>, <code>LeftDragging</code>, <code>VisibleRect()</code>, static <code>FocusPoint(level, area, focus)</code>.</p>
+<p>By default the whole map is visible and the camera does not move. Scrolling is an opt-in per level for maps larger than the screen.</p>
+<p><strong><code>TDGameSettings</code></strong>: camera inputs – used only in levels whose framing scrolls – <code>cameraPan</code> (master), <code>edgePan</code> (off by default), <code>dragPan</code> (middle mouse), <code>keyboardPan</code> (WASD/arrows), <code>cameraZoom</code> (wheel, +/−), <code>leftDragPan</code> (left drag on the battlefield past a small threshold, not starting over UI; off by default; a press that became a drag is not also a click); <code>speedControls</code> (show the 1×/2×/3× buttons; off resets the speed to 1×); <code>language</code> and <code>textTables</code> (<a href="#string-tables">string tables</a>; <code>Texts</code>, <code>SetLanguage</code>, <code>GetLanguages</code>, <code>LanguageChanged</code>); <code>damageNumbers</code>, <code>confirmSell</code> (off: selling is one click), <code>showEarlyCallBonus</code> (off by default), <code>allowDebugOverlay</code>. <code>TDGameSettings.Current</code> returns the scene instance (or a hidden default). Bind these to your options menu.</p>
+<p><strong><code>EllipseRenderer</code></strong>: <code>EllipseRenderer.Create(name, parent, material, sortingOrder, width)</code>, then <code>Show(center, range, yScale, lineColor, fillAlpha)</code> / <code>Hide()</code> / <code>SetWidth(width)</code>. The shape comes from <code>RangeShape</code>, so what is drawn is exactly what the simulation tests.</p>
+<h2 id="sample-screenshots">Sample screenshots<a class="headerlink" href="#sample-screenshots" title="Permanent link">&para;</a></h2>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Capture Sample Screenshot</strong> (<code>TDMaker.Editor.SampleScreenshot</code>) plays the Basic sample with a scripted run (builds on every slot, upgrades, calls waves early) and renders the camera with the HUD to a PNG. Batch: <code>-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture</code> <strong>without</strong> <code>-quit</code> and <strong>without</strong> <code>-nographics</code> (the editor exits by itself). Options: <code>-tdmSeconds N</code> (default 50), <code>-tdmWidth</code> / <code>-tdmHeight</code> (default 1920×1080), and <code>-tdmOut folder</code> for your chosen output folder. Script errors during capture are counted in the Console log.</p>
+<h2 id="language-selection-and-click-area-priority">Language selection and click-area priority<a class="headerlink" href="#language-selection-and-click-area-priority" title="Permanent link">&para;</a></h2>
+<p>The sample title screen's English and Korean buttons call <code>TDGameSettings.SetLanguage</code>. With <strong>Persist Language</strong> enabled, the choice is saved in PlayerPrefs. Builds load that choice when present, otherwise use the Inspector language. <strong>Ignore Saved Language In Editor</strong> is on by default so the current Inspector language controls that Play session; turn it off to test persisted-language loading. Turning off <strong>Persist Language</strong> stops saving new choices.</p>
+<p>The default tower hit area includes its pad rectangle and the body SpriteRenderer's world bounds. Shadows, health bars and feedback decorations are excluded. When <strong>View &gt; Click Area &gt; Custom Area</strong> is enabled, only the authored rectangle is checked. Heroes keep selection priority; equal-priority overlaps prefer the lower anchor point. While aiming a move, rally point or spell, battlefield clicks remain point attempts.</p>
+<p>Before wave 1, the entrance skull button shows the translated <strong>Start Wave</strong> label. Later, its ring shows the time until automatic wave start, and calling early uses the level's early-call reward rules. Twin Roads uses an early-call gold rate of 2 per second.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../campaign/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Campaigns and upgrades">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Campaigns and upgrades
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../extending/" class="md-footer__link md-footer__link--next" aria-label="Next: Extending the framework">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Extending the framework
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © FlyCat
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

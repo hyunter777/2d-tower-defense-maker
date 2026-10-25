@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MapSceneGUI | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MapSceneGUI | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Scene-view drawing and handles shared by the Map Editor and the Path Authoring inspector: road band (lanes plus the painted-road padding), every sub-lane, direction arrows, entry/exit markers, wave-call buttons and edit-point handles for curve and polyline paths.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.MapSceneGUI">
+
+
+
+  <h1 id="TDMaker_Editor_MapSceneGUI" data-uid="TDMaker.Editor.MapSceneGUI" class="text-break">
+Class MapSceneGUI  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Scene-view drawing and handles shared by the Map Editor and the Path Authoring inspector: road band (lanes plus the
+painted-road padding), every sub-lane, direction arrows, entry/exit markers, wave-call buttons and edit-point handles
+for curve and polyline paths.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class MapSceneGUI</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">MapSceneGUI</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_PointHandle" data-uid="TDMaker.Editor.MapSceneGUI.PointHandle">
+  PointHandle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Edit-point handle radius as a share of the handle size (about 10 screen pixels; 13 when selected).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const float PointHandle = 0.13</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_SelectedPointHandle" data-uid="TDMaker.Editor.MapSceneGUI.SelectedPointHandle">
+  SelectedPointHandle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Edit-point handle radius as a share of the handle size (about 10 screen pixels; 13 when selected).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const float SelectedPointHandle = 0.16</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_WaveCallRadius" data-uid="TDMaker.Editor.MapSceneGUI.WaveCallRadius">
+  WaveCallRadius
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Wave-call button radius drawn in the Scene view (world units).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const float WaveCallRadius = 0.45</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_DrawPath_" data-uid="TDMaker.Editor.MapSceneGUI.DrawPath*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_DrawPath_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_System_Boolean_System_Single_System_Boolean_" data-uid="TDMaker.Editor.MapSceneGUI.DrawPath(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Boolean,System.Single,System.Boolean)">
+  DrawPath(PathAuthoring, int, bool, float, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a path: road band, lanes, center line with arrows, entry/exit markers and its label (Repaint only).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawPath(PathAuthoring path, int index, bool selected, float roadPadding, bool showEditPoints)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="TDMaker.Unity.Authoring.PathAuthoring.html">PathAuthoring</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>selected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>roadPadding</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>showEditPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_DrawRect_" data-uid="TDMaker.Editor.MapSceneGUI.DrawRect*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_DrawRect_UnityEngine_Rect_UnityEngine_Color_System_String_" data-uid="TDMaker.Editor.MapSceneGUI.DrawRect(UnityEngine.Rect,UnityEngine.Color,System.String)">
+  DrawRect(Rect, Color, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a world rectangle outline with a caption.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawRect(Rect r, Color color, string caption)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <span class="xref">Rect</span></dt>
+    <dd></dd>
+    <dt><code>color</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+    <dt><code>caption</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_DrawWaveCall_" data-uid="TDMaker.Editor.MapSceneGUI.DrawWaveCall*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_DrawWaveCall_TDMaker_Unity_Authoring_PathAuthoring_System_Boolean_" data-uid="TDMaker.Editor.MapSceneGUI.DrawWaveCall(TDMaker.Unity.Authoring.PathAuthoring,System.Boolean)">
+  DrawWaveCall(PathAuthoring, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a path's wave-call button (where the HUD will show it).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawWaveCall(PathAuthoring path, bool highlighted)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="TDMaker.Unity.Authoring.PathAuthoring.html">PathAuthoring</a></dt>
+    <dd></dd>
+    <dt><code>highlighted</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_EditPointHandles_" data-uid="TDMaker.Editor.MapSceneGUI.EditPointHandles*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_EditPointHandles_TDMaker_Unity_Authoring_PathAuthoring_System_Int32__System_Single_" data-uid="TDMaker.Editor.MapSceneGUI.EditPointHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32@,System.Single)">
+  EditPointHandles(PathAuthoring, ref int, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draggable handles for a path's edit points (curve controls or polyline points). Updates <code class="paramref">selected</code>
+when a handle is grabbed. Returns true when a point moved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EditPointHandles(PathAuthoring path, ref int selected, float snapStep)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="TDMaker.Unity.Authoring.PathAuthoring.html">PathAuthoring</a></dt>
+    <dd></dd>
+    <dt><code>selected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>snapStep</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_FindInsert_" data-uid="TDMaker.Editor.MapSceneGUI.FindInsert*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_FindInsert_TDMaker_Unity_Authoring_PathAuthoring_UnityEngine_Vector2_System_Single_System_Int32__UnityEngine_Vector2__" data-uid="TDMaker.Editor.MapSceneGUI.FindInsert(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single,System.Int32@,UnityEngine.Vector2@)">
+  FindInsert(PathAuthoring, Vector2, float, out int, out Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Where a new edit point would go for a click at <code class="paramref">world</code>: on the nearest segment of the generated
+center line when within <code class="paramref">pickPixels</code>, else -1. <code class="paramref">insertIndex</code> is the edit-point index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool FindInsert(PathAuthoring path, Vector2 mouseGui, float pickPixels, out int insertIndex, out Vector2 world)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="TDMaker.Unity.Authoring.PathAuthoring.html">PathAuthoring</a></dt>
+    <dd></dd>
+    <dt><code>mouseGui</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>pickPixels</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>insertIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>world</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_Label_" data-uid="TDMaker.Editor.MapSceneGUI.Label*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_Label_UnityEngine_Vector3_UnityEngine_Vector2_System_String_System_Boolean_" data-uid="TDMaker.Editor.MapSceneGUI.Label(UnityEngine.Vector3,UnityEngine.Vector2,System.String,System.Boolean)">
+  Label(Vector3, Vector2, string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a Scene-view label at a world point shifted by <code class="paramref">pixelOffset</code> screen pixels. With
+<code class="paramref">leftAligned</code> the label starts at that point, otherwise it is centred on it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Label(Vector3 world, Vector2 pixelOffset, string text, bool leftAligned = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+    <dt><code>pixelOffset</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>leftAligned</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_MouseWorld_" data-uid="TDMaker.Editor.MapSceneGUI.MouseWorld*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_MouseWorld_UnityEngine_Vector2_System_Single_" data-uid="TDMaker.Editor.MapSceneGUI.MouseWorld(UnityEngine.Vector2,System.Single)">
+  MouseWorld(Vector2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>World point under a GUI position on the XY plane at <code class="paramref">z</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 MouseWorld(Vector2 guiPoint, float z = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>guiPoint</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>z</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_PickPoint_" data-uid="TDMaker.Editor.MapSceneGUI.PickPoint*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_PickPoint_TDMaker_Unity_Authoring_PathAuthoring_UnityEngine_Vector2_System_Single_" data-uid="TDMaker.Editor.MapSceneGUI.PickPoint(TDMaker.Unity.Authoring.PathAuthoring,UnityEngine.Vector2,System.Single)">
+  PickPoint(PathAuthoring, Vector2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Index of the edit point within <code class="paramref">pickPixels</code> of the mouse, or -1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int PickPoint(PathAuthoring path, Vector2 mouseGui, float pickPixels)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="TDMaker.Unity.Authoring.PathAuthoring.html">PathAuthoring</a></dt>
+    <dd></dd>
+    <dt><code>mouseGui</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>pickPixels</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_PixelDistance_" data-uid="TDMaker.Editor.MapSceneGUI.PixelDistance*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_PixelDistance_TDMaker_Unity_Authoring_PathAuthoring_" data-uid="TDMaker.Editor.MapSceneGUI.PixelDistance(TDMaker.Unity.Authoring.PathAuthoring)">
+  PixelDistance(PathAuthoring)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>GUI distance in pixels from the mouse to a path's generated center line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float PixelDistance(PathAuthoring path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="TDMaker.Unity.Authoring.PathAuthoring.html">PathAuthoring</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_PixelRadius_" data-uid="TDMaker.Editor.MapSceneGUI.PixelRadius*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_PixelRadius_UnityEngine_Vector3_System_Single_" data-uid="TDMaker.Editor.MapSceneGUI.PixelRadius(UnityEngine.Vector3,System.Single)">
+  PixelRadius(Vector3, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Screen-pixel radius of a disc of world radius <code class="paramref">radius</code> at <code class="paramref">world</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float PixelRadius(Vector3 world, float radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_MapSceneGUI_WidthHandles_" data-uid="TDMaker.Editor.MapSceneGUI.WidthHandles*"></a>
+
+  <h3 id="TDMaker_Editor_MapSceneGUI_WidthHandles_TDMaker_Unity_Authoring_PathAuthoring_System_Int32_System_Single_" data-uid="TDMaker.Editor.MapSceneGUI.WidthHandles(TDMaker.Unity.Authoring.PathAuthoring,System.Int32,System.Single)">
+  WidthHandles(PathAuthoring, int, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Side handles at an edit point that set its lane width (needs two or more lanes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WidthHandles(PathAuthoring path, int index, float snapStep)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="TDMaker.Unity.Authoring.PathAuthoring.html">PathAuthoring</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>snapStep</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

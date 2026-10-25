@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LevelDryRun | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LevelDryRun | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Headless content check: bakes a level and runs the simulation without rendering. The undefended run calls every wave as early as possible with no towers (shows total threat); the fortified run builds and upgrades towers on every slot with unlimited gold, buys every tower ability, spawns the level&#39;s heroes (moving them to the front enemy and spending skill points), and casts ready spells at the leading enemy (checks that every build, branch, rally, ability, move and cast is accepted and that the level can be completed). The budget pass plays with the level&#39;s real starting gold: it starts the first wave, lets later waves arrive on their timers and spends gold greedily (builds slots in list order, cycling the buildable towers, then the cheapest upgrade, branch or ability rank), with the same hero and spell assistance (checks that a sensible defense wins).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.LevelDryRun">
+
+
+
+  <h1 id="TDMaker_Editor_LevelDryRun" data-uid="TDMaker.Editor.LevelDryRun" class="text-break">
+Class LevelDryRun  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Headless content check: bakes a level and runs the simulation without rendering.
+The undefended run calls every wave as early as possible with no towers (shows total threat);
+the fortified run builds and upgrades towers on every slot with unlimited gold, buys every tower ability,
+spawns the level's heroes (moving them to the front enemy and spending skill points), and casts ready spells
+at the leading enemy (checks that every build, branch, rally, ability, move and cast is accepted and that the
+level can be completed). The budget pass plays with the level's real starting gold: it starts the first wave, lets later
+waves arrive on their timers and spends gold greedily (builds slots in list order, cycling the buildable towers, then the
+cheapest upgrade, branch or ability rank), with the same hero and spell assistance (checks that a sensible defense wins).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class LevelDryRun</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LevelDryRun</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_LevelDryRun_Report_" data-uid="TDMaker.Editor.LevelDryRun.Report*"></a>
+
+  <h3 id="TDMaker_Editor_LevelDryRun_Report_System_String_System_Func_System_Nullable_System_Int32__TDMaker_Unity_Authoring_BakedLevel__System_Single_System_Int32_System_Single_" data-uid="TDMaker.Editor.LevelDryRun.Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,System.Int32,System.Single)">
+  Report(string, Func&lt;int?, BakedLevel&gt;, float, int, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs all passes and formats a report.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Report(string label, Func&lt;int?, BakedLevel&gt; bake, float defaultRangeYScale, int tickRate = 30, float maxSeconds = 1800)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>bake</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?, <a class="xref" href="TDMaker.Unity.Authoring.BakedLevel.html">BakedLevel</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>defaultRangeYScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>tickRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>maxSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_LevelDryRun_Report_" data-uid="TDMaker.Editor.LevelDryRun.Report*"></a>
+
+  <h3 id="TDMaker_Editor_LevelDryRun_Report_System_String_System_Func_System_Nullable_System_Int32__TDMaker_Unity_Authoring_BakedLevel__System_Single_TDMaker_Editor_LevelDryRun_PassResult____System_Int32_System_Single_" data-uid="TDMaker.Editor.LevelDryRun.Report(System.String,System.Func{System.Nullable{System.Int32},TDMaker.Unity.Authoring.BakedLevel},System.Single,TDMaker.Editor.LevelDryRun.PassResult[]@,System.Int32,System.Single)">
+  Report(string, Func&lt;int?, BakedLevel&gt;, float, out PassResult[], int, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs all passes, formats a report and returns each pass' outcome (passes that threw are missing).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Report(string label, Func&lt;int?, BakedLevel&gt; bake, float defaultRangeYScale, out LevelDryRun.PassResult[] results, int tickRate = 30, float maxSeconds = 1800)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>bake</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?, <a class="xref" href="TDMaker.Unity.Authoring.BakedLevel.html">BakedLevel</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>defaultRangeYScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>results</code> <a class="xref" href="TDMaker.Editor.LevelDryRun.PassResult.html">PassResult</a>[]</dt>
+    <dd></dd>
+    <dt><code>tickRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>maxSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_LevelDryRun_Report_" data-uid="TDMaker.Editor.LevelDryRun.Report*"></a>
+
+  <h3 id="TDMaker_Editor_LevelDryRun_Report_TDMaker_Unity_Authoring_LevelAsset_" data-uid="TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset)">
+  Report(LevelAsset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs all passes on a level asset (its own geometry) and formats a report.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Report(LevelAsset level)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="TDMaker.Unity.Authoring.LevelAsset.html">LevelAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_LevelDryRun_Report_" data-uid="TDMaker.Editor.LevelDryRun.Report*"></a>
+
+  <h3 id="TDMaker_Editor_LevelDryRun_Report_TDMaker_Unity_Authoring_LevelAsset_TDMaker_Editor_LevelDryRun_PassResult____" data-uid="TDMaker.Editor.LevelDryRun.Report(TDMaker.Unity.Authoring.LevelAsset,TDMaker.Editor.LevelDryRun.PassResult[]@)">
+  Report(LevelAsset, out PassResult[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs all passes on a level asset (its own geometry), formats a report and returns each pass' outcome.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Report(LevelAsset level, out LevelDryRun.PassResult[] results)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="TDMaker.Unity.Authoring.LevelAsset.html">LevelAsset</a></dt>
+    <dd></dd>
+    <dt><code>results</code> <a class="xref" href="TDMaker.Editor.LevelDryRun.PassResult.html">PassResult</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_LevelDryRun_RunSample_" data-uid="TDMaker.Editor.LevelDryRun.RunSample*"></a>
+
+  <h3 id="TDMaker_Editor_LevelDryRun_RunSample" data-uid="TDMaker.Editor.LevelDryRun.RunSample">
+  RunSample()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dry-runs every generated sample level (Basic, Crossroads, Winding Pass); usable with <code>-executeMethod</code>.
+Add <code>-dryRunLevel &lt;asset path&gt;</code> to run one level asset instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RunSample()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

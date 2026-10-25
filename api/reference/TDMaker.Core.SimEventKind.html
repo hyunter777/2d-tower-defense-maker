@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum SimEventKind | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum SimEventKind | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="View-facing notifications in simulation processing order.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.SimEventKind">
+
+
+
+
+  <h1 id="TDMaker_Core_SimEventKind" data-uid="TDMaker.Core.SimEventKind" class="text-break">
+Enum SimEventKind  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>View-facing notifications in simulation processing order.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum SimEventKind</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="TDMaker_Core_SimEventKind_AbilityPurchased"><code>AbilityPurchased = 20</code></dt>
+  
+  <dd><p>A tower ability rank was purchased.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_AreaPulsed"><code>AreaPulsed = 39</code></dt>
+  
+  <dd><p>A direct region pulse ran; Position is its center, Value its radius, IntValue its accepted target count.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_AttackRangeChanged"><code>AttackRangeChanged = 43</code></dt>
+  
+  <dd><p>Value is the new effective attack-range multiplier.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_AttackStarted"><code>AttackStarted = 4</code></dt>
+  
+  <dd><p>An actor began an attack against OtherId.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_BeamEnded"><code>BeamEnded = 54</code></dt>
+  
+  <dd><p>A channel ended; IntValue is its Id and Value is MechanicEndReason.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_BeamPulsed"><code>BeamPulsed = 53</code></dt>
+  
+  <dd><p>A channel requested a pulse; IntValue is its Id and Value its exact raw slice before hooks and mitigation.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_BeamStarted"><code>BeamStarted = 52</code></dt>
+  
+  <dd><p>A budget channel began; IntValue is its Id, OtherId the recipient, Value its captured raw budget.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CapacityExceeded"><code>CapacityExceeded = 32</code></dt>
+  
+  <dd><p>A configured pool or queue limit was reached.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_ChainEnded"><code>ChainEnded = 36</code></dt>
+  
+  <dd><p>A chain completed or was cancelled; IntValue is its execution Id and Value its visited count.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_ChainLinked"><code>ChainLinked = 35</code></dt>
+  
+  <dd><p>A chain requested a link impact; IntValue is its execution Id, OtherId its victim, Value the output scale.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_ChainStarted"><code>ChainStarted = 34</code></dt>
+  
+  <dd><p>A pooled chain began; IntValue is its stable execution Id and Position its first origin.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CombatControlChanged"><code>CombatControlChanged = 42</code></dt>
+  
+  <dd><p>IntValue contains active control bits: attack disabled=1, interception ignored=2, untargetable=4.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CommandRejected"><code>CommandRejected = 14</code></dt>
+  
+  <dd><p>Failure explains why Key's command was rejected.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CompanionDetached"><code>CompanionDetached = 135</code></dt>
+  
+  <dd><p>Companion detached under an independent-removal policy.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CompanionReconnected"><code>CompanionReconnected = 133</code></dt>
+  
+  <dd><p>Companion reconnected after owner return.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CompanionRetired"><code>CompanionRetired = 134</code></dt>
+  
+  <dd><p>Companion retired with its owner.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CompanionSpawned"><code>CompanionSpawned = 131</code></dt>
+  
+  <dd><p>Companion queued for insertion; EntityId is child, OtherId owner, IntValue slot.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CompanionWaiting"><code>CompanionWaiting = 132</code></dt>
+  
+  <dd><p>Companion stopped combat while its owner is dead.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CustomEnd"><code>CustomEnd = 2147483647</code></dt>
+  
+  <dd><p>Last application-defined event value, inclusive.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_CustomStart"><code>CustomStart = 65536</code></dt>
+  
+  <dd><p>First application-defined event value; publish via Simulation.PublishEvent.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_DamageReflected"><code>DamageReflected = 56</code></dt>
+  
+  <dd><p>A one-bounce reflection was queued; OtherId is its recipient, Value the raw amount, Key its rule identity.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_Damaged"><code>Damaged = 2</code></dt>
+  
+  <dd><p>Value is applied damage; OtherId identifies the source.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_Defeat"><code>Defeat = 16</code></dt>
+  
+  <dd><p>The simulation entered its terminal defeat phase.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_DeploymentInTransit"><code>DeploymentInTransit = 129</code></dt>
+  
+  <dd><p>Automatic deployment began flight; IntValue is the trap Id.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_DeploymentLanded"><code>DeploymentLanded = 130</code></dt>
+  
+  <dd><p>Automatic deployment landed; IntValue is the trap Id.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_DeploymentReserved"><code>DeploymentReserved = 128</code></dt>
+  
+  <dd><p>Automatic site/capacity reservation; IntValue is the trap Id.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_Died"><code>Died = 3</code></dt>
+  
+  <dd><p>An entity's health was exhausted.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_Displaced"><code>Displaced = 44</code></dt>
+  
+  <dd><p>A path shift occurred; EntityId is the recipient, OtherId the source, Value the signed actual distance, IntValue the path index.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_Dodged"><code>Dodged = 31</code></dt>
+  
+  <dd><p>A recipient avoided a melee strike.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_EffectAttached"><code>EffectAttached = 17</code></dt>
+  
+  <dd><p>An effect was attached.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_EffectRefreshed"><code>EffectRefreshed = 18</code></dt>
+  
+  <dd><p>An effect lifetime was refreshed without reapplying its modifiers.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_EffectRemoved"><code>EffectRemoved = 19</code></dt>
+  
+  <dd><p>An effect was removed; IntValue is the removal reason.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_GoldChanged"><code>GoldChanged = 7</code></dt>
+  
+  <dd><p>Value is the gold total; IntValue is its signed delta.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_Healed"><code>Healed = 30</code></dt>
+  
+  <dd><p>A unit restored health.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_HeroLevelChanged"><code>HeroLevelChanged = 21</code></dt>
+  
+  <dd><p>A hero acquired another level.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_HeroMoved"><code>HeroMoved = 23</code></dt>
+  
+  <dd><p>A hero movement order was approved.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_HeroReturning"><code>HeroReturning = 24</code></dt>
+  
+  <dd><p>A dead hero began returning.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_HeroRevived"><code>HeroRevived = 25</code></dt>
+  
+  <dd><p>A hero became active again.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_HeroSkillChanged"><code>HeroSkillChanged = 22</code></dt>
+  
+  <dd><p>A hero skill rank changed.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_ImpactAreaCreated"><code>ImpactAreaCreated = 47</code></dt>
+  
+  <dd><p>A projectile created its once-per-arrival region; Value is radius, Position is impact, Key is the area payload key.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_ImpactPayloadTriggered"><code>ImpactPayloadTriggered = 46</code></dt>
+  
+  <dd><p>An impact payload triggered at Position; IntValue contains operations: secondary damage=1, area=2, displacement=4, path transfer=8.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_LifeStolen"><code>LifeStolen = 57</code></dt>
+  
+  <dd><p>Life steal restored actual health; OtherId is the damaged victim, Value the restored amount.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_LivesChanged"><code>LivesChanged = 8</code></dt>
+  
+  <dd><p>Value is the lives total; IntValue is its signed delta.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_MechanicActivated"><code>MechanicActivated = 37</code></dt>
+  
+  <dd><p>A data-driven multiple-target activation ran; IntValue is its primary target count and Key its definition Id.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_MechanicMissed"><code>MechanicMissed = 38</code></dt>
+  
+  <dd><p>An eligible activation failed its one probability roll; cooldown is still consumed.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_MechanicTargeted"><code>MechanicTargeted = 45</code></dt>
+  
+  <dd><p>A multiple-target mechanic requested one hit; OtherId is the victim, IntValue its one-based index, Key the mechanic Id.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_PathTransferred"><code>PathTransferred = 55</code></dt>
+  
+  <dd><p>A unit moved to an exact path cursor; IntValue is path index, Value segment fraction, Position the destination, Key the action Id or explicit transfer key (null for unkeyed direct or legacy hit transfers).</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_ProjectileFired"><code>ProjectileFired = 5</code></dt>
+  
+  <dd><p>A shot was emitted; instant shots use the attacker's Id, flight shots store the source in IntValue.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_ProjectileHit"><code>ProjectileHit = 6</code></dt>
+  
+  <dd><p>A projectile arrived at its aim point, including misses. Instant impacts carry their damage radius in Value, or zero for single-target damage.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_RemainsConsumed"><code>RemainsConsumed = 142</code></dt>
+  
+  <dd><p>Body atomically consumed; OtherId is newly created entity, IntValue body Id.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_RemainsCreated"><code>RemainsCreated = 139</code></dt>
+  
+  <dd><p>Neutral body stored; IntValue is body Id.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_RemainsReleased"><code>RemainsReleased = 141</code></dt>
+  
+  <dd><p>Body reservation cancelled without consumption.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_RemainsReserved"><code>RemainsReserved = 140</code></dt>
+  
+  <dd><p>Body exclusively reserved; EntityId is caster, OtherId original entity, IntValue body Id.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_Removed"><code>Removed = 1</code></dt>
+  
+  <dd><p>An active entity was detached at Flush.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_ShieldAbsorbed"><code>ShieldAbsorbed = 41</code></dt>
+  
+  <dd><p>Value is post-mitigation damage absorbed by one shield; OtherId identifies the attacker.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_ShieldChanged"><code>ShieldChanged = 40</code></dt>
+  
+  <dd><p>Value is one binding's new shield capacity; Key identifies the effect.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_Spawned"><code>Spawned = 0</code></dt>
+  
+  <dd><p>An entity was committed at Flush.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_SpellCast"><code>SpellCast = 26</code></dt>
+  
+  <dd><p>A spell cast was approved.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_SpellReady"><code>SpellReady = 27</code></dt>
+  
+  <dd><p>A spell became ready.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_TargetPriorityChanged"><code>TargetPriorityChanged = 33</code></dt>
+  
+  <dd><p>A tower's runtime target priority changed; IntValue is the new TargetPriority.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_TowerBuilt"><code>TowerBuilt = 11</code></dt>
+  
+  <dd><p>A tower reserved IntValue's build slot.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_TowerSold"><code>TowerSold = 13</code></dt>
+  
+  <dd><p>A tower was sold; Value is its refund.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_TowerUpgraded"><code>TowerUpgraded = 12</code></dt>
+  
+  <dd><p>A tower changed template, retaining its entity identifier.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_TrapArmed"><code>TrapArmed = 49</code></dt>
+  
+  <dd><p>A deployment became active; IntValue is its Id and Value its detection radius.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_TrapPlaced"><code>TrapPlaced = 48</code></dt>
+  
+  <dd><p>A deployment was accepted; IntValue is its Id, Value its lifetime, Key its definition.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_TrapRemoved"><code>TrapRemoved = 51</code></dt>
+  
+  <dd><p>A deployment ended; IntValue is its Id and Value is MechanicEndReason.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_TrapTriggered"><code>TrapTriggered = 50</code></dt>
+  
+  <dd><p>A deployment triggered; IntValue is its Id, OtherId the trigger recipient, Value the damage radius.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_UnitChanged"><code>UnitChanged = 29</code></dt>
+  
+  <dd><p>A living soldier changed template after an ability purchase.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_UnitDowned"><code>UnitDowned = 136</code></dt>
+  
+  <dd><p>Same entity entered its down delay; IntValue is used-return count.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_UnitRevived"><code>UnitRevived = 138</code></dt>
+  
+  <dd><p>Entity finished preparation; Value is current health.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_UnitRising"><code>UnitRising = 137</code></dt>
+  
+  <dd><p>Health restored and rise preparation started; Value is its duration.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_UnitSummoned"><code>UnitSummoned = 28</code></dt>
+  
+  <dd><p>A generic summon was queued for insertion.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_Victory"><code>Victory = 15</code></dt>
+  
+  <dd><p>The simulation entered its terminal victory phase; IntValue is the final star rating.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_WaveCallable"><code>WaveCallable = 10</code></dt>
+  
+  <dd><p>IntValue is the next callable one-based wave number.</p>
+</dd>
+    <dt id="TDMaker_Core_SimEventKind_WaveStarted"><code>WaveStarted = 9</code></dt>
+  
+  <dd><p>IntValue is the wave number; Value is rounded early-call time credit for M2 spell cooldowns.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

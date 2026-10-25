@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace TDMaker.Unity.Hud | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace TDMaker.Unity.Hud | 2D Tower Defense Maker API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Hud">
+
+  <h1 id="TDMaker_Unity_Hud" data-uid="TDMaker.Unity.Hud" class="text-break">Namespace TDMaker.Unity.Hud</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.CachedNumber.html">CachedNumber</a></dt>
+      <dd><p>Caches the string for an integer so frequently updated labels do not allocate: the text of every value seen is kept
+(<a class="xref" href="TDMaker.Unity.Hud.NumberText.html">NumberText</a>; with a prefix or suffix, per cache), so a value that comes back costs nothing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.CachedText.html">CachedText</a></dt>
+      <dd><p>Caches the formatted text of a key with one integer (for example &quot;Sell  +{0}&quot;), keeping the text of every number seen until the
+texts (<a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Version">Version</a>: language, tables) change, so frequently updated labels do not allocate.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.ClickPicking.html">ClickPicking</a></dt>
+      <dd><p>Battlefield click-target rules used by <a class="xref" href="TDMaker.Unity.Hud.GameHud.html">GameHud</a> (input grammar, spec 14 §1): every clickable thing has an
+axis-aligned world rectangle placed relative to its reference point; a click hits it only strictly inside (the border
+is excluded). Among the hits the higher selection priority wins, then the lower world reference point (smaller y).
+Equal priority and equal y keep the first candidate found.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.DamageNumbers.html">DamageNumbers</a></dt>
+      <dd><p>Pooled floating damage and heal numbers (TextMesh Pro, outlined) on a screen-space canvas. Numbers are merged per target
+for a short window so rapid hits do not flood the screen; digits come from a cached string table and fading uses the
+canvas renderer alpha, so steady-state updates do not allocate. Toggle with <a class="xref" href="TDMaker.Unity.View.TDGameSettings.html#TDMaker_Unity_View_TDGameSettings_damageNumbers">damageNumbers</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.GameHud.html">GameHud</a></dt>
+      <dd><p>Production HUD for PC (mouse + keyboard), built in uGUI from code and styled by a <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a>:
+top bar (gold, lives, wave, pause, speed), wave-call indicators at path entrances (countdown ring, early bonus),
+radial build menu, tower panel (upgrades, branches, abilities, target priority, rally, sell), hero portraits,
+spell bar with cooldowns and hotkeys, unit info, pause and victory/defeat screens, tooltips and world feedback
+(range ellipses, slot highlight, placement ghost, rally/move markers, spell aim).
+Interaction follows the input grammar of spec 14 (docs/specs/14-input-grammar.md): one selection or aiming state at a
+time; a battlefield left click acts at the release point; while a hero, rally point or spell is being aimed every
+battlefield click is a point attempt (valid: act and return to browsing; invalid: feedback and keep aiming); build,
+upgrade, branch, ability, sell and wave call are single clicks; right click cancels everything (and does nothing
+without a selection); Esc cancels a selection, otherwise opens/closes the pause menu. Failed or cancelled aims send
+no command and every result shown is read back from the simulation.
+Keys: Esc cancel/pause, Space/P pause, 1-9 spells, H hero, N next wave, F1 debug overlay.
+Text is TextMesh Pro; every string comes from <a class="xref" href="TDMaker.Unity.View.TDGameSettings.html#TDMaker_Unity_View_TDGameSettings_Texts">Texts</a> (keys in <a class="xref" href="TDMaker.Unity.Localization.HudTexts.html">HudTexts</a>), and the
+HUD relabels itself when the language or a table changes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.HudButton.html">HudButton</a></dt>
+      <dd><p>A themed button built from code: background, optional icon, label, secondary label, cooldown shade and badge.
+Reports hover for tooltips and previews. Setters only touch components when a value changes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.HudSprites.html">HudSprites</a></dt>
+      <dd><p>Procedurally generated UI sprites used when a <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a> slot is empty. All are white/grayscale so
+theme colours tint them. Panels and buttons are 9-sliced.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a></dt>
+      <dd><p>Look of the production HUD and of the world-space feedback (ranges, rally, aim). Every sprite slot is optional:
+empty slots use generated sprites from <a class="xref" href="TDMaker.Unity.Hud.HudSprites.html">HudSprites</a>. Create one with
+<code>Assets/Create/2D Tower Defense Maker/HUD Theme</code> and assign it to <a class="xref" href="TDMaker.Unity.Hud.GameHud.html">GameHud</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.HudTheme.IconOverride.html">HudTheme.IconOverride</a></dt>
+      <dd><p>A HUD icon for one key.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.HudUi.html">HudUi</a></dt>
+      <dd><p>Small helpers that build themed uGUI elements from code.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.LanguageSelector.html">LanguageSelector</a></dt>
+      <dd><p>Small native-language buttons for the sample title screens. Choices persist outside campaign slots.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.NumberText.html">NumberText</a></dt>
+      <dd><p>Shared strings for integers (0..<a class="xref" href="TDMaker.Unity.Hud.NumberText.html#TDMaker_Unity_Hud_NumberText_TableSize">TableSize</a>-1 in a table, other values in a bounded map): each number is turned
+into a string once per session, so labels that show changing counts, timers or health do not allocate when a value comes back.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Hud.GameHud.Mode.html">GameHud.Mode</a></dt>
+      <dd><p>Interaction state. Spell aiming is tracked separately (<a class="xref" href="TDMaker.Unity.Hud.GameHud.html#TDMaker_Unity_Hud_GameHud_AimingSpell">AimingSpell</a>) and always runs in <a class="xref" href="TDMaker.Unity.Hud.GameHud.Mode.html#TDMaker_Unity_Hud_GameHud_Mode_Browsing">Browsing</a>.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DamageDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DamageDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Immutable damage roll and optional impact area.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.DamageDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_DamageDef" data-uid="TDMaker.Core.Defs.DamageDef" class="text-break">
+Class DamageDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Immutable damage roll and optional impact area.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DamageDef</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DamageDef</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_DamageDef__ctor_" data-uid="TDMaker.Core.Defs.DamageDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef__ctor_TDMaker_Core_Defs_DamageKind_System_Single_System_Single_System_Single_System_Single_TDMaker_Core_Defs_DamageFalloff_System_Single_System_Single_" data-uid="TDMaker.Core.Defs.DamageDef.#ctor(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,TDMaker.Core.Defs.DamageFalloff,System.Single,System.Single)">
+  DamageDef(DamageKind, float, float, float, float, DamageFalloff, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates damage data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageDef(DamageKind kind, float minimum, float maximum, float radius = 0, float edgeMultiplier = 1, DamageFalloff falloff = DamageFalloff.DistanceEndpoints, float physicalPierce = 0, float magicalPierce = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kind</code> <a class="xref" href="TDMaker.Core.Defs.DamageKind.html">DamageKind</a></dt>
+    <dd></dd>
+    <dt><code>minimum</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>maximum</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>edgeMultiplier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>falloff</code> <a class="xref" href="TDMaker.Core.Defs.DamageFalloff.html">DamageFalloff</a></dt>
+    <dd></dd>
+    <dt><code>physicalPierce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>magicalPierce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_EdgeMultiplier_" data-uid="TDMaker.Core.Defs.DamageDef.EdgeMultiplier*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_EdgeMultiplier" data-uid="TDMaker.Core.Defs.DamageDef.EdgeMultiplier">
+  EdgeMultiplier
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Damage multiplier at the edge, interpolated linearly from one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float EdgeMultiplier { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_Falloff_" data-uid="TDMaker.Core.Defs.DamageDef.Falloff*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_Falloff" data-uid="TDMaker.Core.Defs.DamageDef.Falloff">
+  Falloff
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Area damage evaluation mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageFalloff Falloff { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageFalloff.html">DamageFalloff</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_Impact_" data-uid="TDMaker.Core.Defs.DamageDef.Impact*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_Impact" data-uid="TDMaker.Core.Defs.DamageDef.Impact">
+  Impact
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional payload executed after an eligible resolved impact.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImpactPayloadDef Impact { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.ImpactPayloadDef.html">ImpactPayloadDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_Kind_" data-uid="TDMaker.Core.Defs.DamageDef.Kind*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_Kind" data-uid="TDMaker.Core.Defs.DamageDef.Kind">
+  Kind
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The defense channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageKind Kind { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageKind.html">DamageKind</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_LifeSteal_" data-uid="TDMaker.Core.Defs.DamageDef.LifeSteal*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_LifeSteal" data-uid="TDMaker.Core.Defs.DamageDef.LifeSteal">
+  LifeSteal
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional restoration from actual health loss by this payload.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LifeStealDef LifeSteal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.LifeStealDef.html">LifeStealDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_MagicalPierce_" data-uid="TDMaker.Core.Defs.DamageDef.MagicalPierce*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_MagicalPierce" data-uid="TDMaker.Core.Defs.DamageDef.MagicalPierce">
+  MagicalPierce
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Magical reduction subtracted for this hit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MagicalPierce { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_Maximum_" data-uid="TDMaker.Core.Defs.DamageDef.Maximum*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_Maximum" data-uid="TDMaker.Core.Defs.DamageDef.Maximum">
+  Maximum
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum rolled damage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Maximum { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_Minimum_" data-uid="TDMaker.Core.Defs.DamageDef.Minimum*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_Minimum" data-uid="TDMaker.Core.Defs.DamageDef.Minimum">
+  Minimum
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Minimum rolled damage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Minimum { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_Options_" data-uid="TDMaker.Core.Defs.DamageDef.Options*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_Options" data-uid="TDMaker.Core.Defs.DamageDef.Options">
+  Options
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Extended damage behaviors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageOptions Options { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageOptions.html">DamageOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_PhysicalPierce_" data-uid="TDMaker.Core.Defs.DamageDef.PhysicalPierce*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_PhysicalPierce" data-uid="TDMaker.Core.Defs.DamageDef.PhysicalPierce">
+  PhysicalPierce
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Physical reduction subtracted for this hit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float PhysicalPierce { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_Radius_" data-uid="TDMaker.Core.Defs.DamageDef.Radius*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_Radius" data-uid="TDMaker.Core.Defs.DamageDef.Radius">
+  Radius
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Impact radius; zero means a single target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Radius { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_WithImpact_" data-uid="TDMaker.Core.Defs.DamageDef.WithImpact*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_WithImpact_TDMaker_Core_Defs_ImpactPayloadDef_" data-uid="TDMaker.Core.Defs.DamageDef.WithImpact(TDMaker.Core.Defs.ImpactPayloadDef)">
+  WithImpact(ImpactPayloadDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies damage while preserving mitigation options and adding impact behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageDef WithImpact(ImpactPayloadDef impact)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>impact</code> <a class="xref" href="TDMaker.Core.Defs.ImpactPayloadDef.html">ImpactPayloadDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_WithLifeSteal_" data-uid="TDMaker.Core.Defs.DamageDef.WithLifeSteal*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_WithLifeSteal_TDMaker_Core_Defs_LifeStealDef_" data-uid="TDMaker.Core.Defs.DamageDef.WithLifeSteal(TDMaker.Core.Defs.LifeStealDef)">
+  WithLifeSteal(LifeStealDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies damage/options/impact data and adds life steal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageDef WithLifeSteal(LifeStealDef lifeSteal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lifeSteal</code> <a class="xref" href="TDMaker.Core.Defs.LifeStealDef.html">LifeStealDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_DamageDef_WithOptions_" data-uid="TDMaker.Core.Defs.DamageDef.WithOptions*"></a>
+
+  <h3 id="TDMaker_Core_Defs_DamageDef_WithOptions_TDMaker_Core_Defs_DamageOptions_" data-uid="TDMaker.Core.Defs.DamageDef.WithOptions(TDMaker.Core.Defs.DamageOptions)">
+  WithOptions(DamageOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies damage data with extended behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageDef WithOptions(DamageOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="TDMaker.Core.Defs.DamageOptions.html">DamageOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SimConfig | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SimConfig | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Immutable fixed-step and preallocation settings.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.SimConfig">
+
+
+
+  <h1 id="TDMaker_Core_SimConfig" data-uid="TDMaker.Core.SimConfig" class="text-break">
+Class SimConfig  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Immutable fixed-step and preallocation settings.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SimConfig</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SimConfig</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_SimConfig__ctor_" data-uid="TDMaker.Core.SimConfig.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig__ctor_System_Int32_System_Single_System_Int32_System_Int32_System_Int32_" data-uid="TDMaker.Core.SimConfig.#ctor(System.Int32,System.Single,System.Int32,System.Int32,System.Int32)">
+  SimConfig(int, float, int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates fixed-step settings and fixed pool capacities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimConfig(int tickRate = 30, float rangeYScale = 1, int entityCapacity = 1024, int eventCapacity = 8192, int commandCapacity = 128)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tickRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>rangeYScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>entityCapacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>eventCapacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>commandCapacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_SimConfig_BeamCapacity_" data-uid="TDMaker.Core.SimConfig.BeamCapacity*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_BeamCapacity" data-uid="TDMaker.Core.SimConfig.BeamCapacity">
+  BeamCapacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum simultaneous budget channels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BeamCapacity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_ChainCapacity_" data-uid="TDMaker.Core.SimConfig.ChainCapacity*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_ChainCapacity" data-uid="TDMaker.Core.SimConfig.ChainCapacity">
+  ChainCapacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum concurrent chain jobs; each owns EntityCapacity preallocated visited identifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ChainCapacity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_CommandCapacity_" data-uid="TDMaker.Core.SimConfig.CommandCapacity*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_CommandCapacity" data-uid="TDMaker.Core.SimConfig.CommandCapacity">
+  CommandCapacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fixed input queue capacity; excess commands are rejected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CommandCapacity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_EntityCapacity_" data-uid="TDMaker.Core.SimConfig.EntityCapacity*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_EntityCapacity" data-uid="TDMaker.Core.SimConfig.EntityCapacity">
+  EntityCapacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fixed number of prewarmed entity bundles; saturated spawns fail or wait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EntityCapacity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_EventCapacity_" data-uid="TDMaker.Core.SimConfig.EventCapacity*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_EventCapacity" data-uid="TDMaker.Core.SimConfig.EventCapacity">
+  EventCapacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fixed event and per-tick damage capacities; overflow is exposed by simulation counters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EventCapacity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_HeroXpCountsOverkill_" data-uid="TDMaker.Core.SimConfig.HeroXpCountsOverkill*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_HeroXpCountsOverkill" data-uid="TDMaker.Core.SimConfig.HeroXpCountsOverkill">
+  HeroXpCountsOverkill
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Includes post-mitigation damage beyond remaining health in hero experience. Nonlethal limits, shields and immunity still apply.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HeroXpCountsOverkill { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_Limits_" data-uid="TDMaker.Core.SimConfig.Limits*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_Limits" data-uid="TDMaker.Core.SimConfig.Limits">
+  Limits
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional fixed pool sizes for M2 runtime services.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimLimits Limits { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.SimLimits.html">SimLimits</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_RangeYScale_" data-uid="TDMaker.Core.SimConfig.RangeYScale*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_RangeYScale" data-uid="TDMaker.Core.SimConfig.RangeYScale">
+  RangeYScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertical ellipse radius divided by horizontal radius; simulation range queries divide dy by this value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RangeYScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_RemainsCapacity_" data-uid="TDMaker.Core.SimConfig.RemainsCapacity*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_RemainsCapacity" data-uid="TDMaker.Core.SimConfig.RemainsCapacity">
+  RemainsCapacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fixed neutral-body capacity; zero disables body retention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemainsCapacity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_RemainsLifetime_" data-uid="TDMaker.Core.SimConfig.RemainsLifetime*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_RemainsLifetime" data-uid="TDMaker.Core.SimConfig.RemainsLifetime">
+  RemainsLifetime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Game seconds bodies remain available, independent of view corpse lifetime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RemainsLifetime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_TickRate_" data-uid="TDMaker.Core.SimConfig.TickRate*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_TickRate" data-uid="TDMaker.Core.SimConfig.TickRate">
+  TickRate
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fixed simulation ticks per second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TickRate { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_TrapCapacity_" data-uid="TDMaker.Core.SimConfig.TrapCapacity*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_TrapCapacity" data-uid="TDMaker.Core.SimConfig.TrapCapacity">
+  TrapCapacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum simultaneously deployed triggers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TrapCapacity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_SimConfig_WithAdvancedCapacity_" data-uid="TDMaker.Core.SimConfig.WithAdvancedCapacity*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_WithAdvancedCapacity_System_Int32_System_Int32_" data-uid="TDMaker.Core.SimConfig.WithAdvancedCapacity(System.Int32,System.Int32)">
+  WithAdvancedCapacity(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies all settings and sets deployment/channel fixed capacities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimConfig WithAdvancedCapacity(int traps, int beams)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>traps</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>beams</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.SimConfig.html">SimConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_WithChainCapacity_" data-uid="TDMaker.Core.SimConfig.WithChainCapacity*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_WithChainCapacity_System_Int32_" data-uid="TDMaker.Core.SimConfig.WithChainCapacity(System.Int32)">
+  WithChainCapacity(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies settings with a fixed chain-job pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimConfig WithChainCapacity(int capacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>capacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.SimConfig.html">SimConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_WithHeroXpCountsOverkill_" data-uid="TDMaker.Core.SimConfig.WithHeroXpCountsOverkill*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_WithHeroXpCountsOverkill_System_Boolean_" data-uid="TDMaker.Core.SimConfig.WithHeroXpCountsOverkill(System.Boolean)">
+  WithHeroXpCountsOverkill(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies all settings and selects full resolved damage or actual health loss as the hero experience basis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimConfig WithHeroXpCountsOverkill(bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.SimConfig.html">SimConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_WithLimits_" data-uid="TDMaker.Core.SimConfig.WithLimits*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_WithLimits_TDMaker_Core_SimLimits_" data-uid="TDMaker.Core.SimConfig.WithLimits(TDMaker.Core.SimLimits)">
+  WithLimits(SimLimits)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies settings with additional preallocation limits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimConfig WithLimits(SimLimits limits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>limits</code> <a class="xref" href="TDMaker.Core.SimLimits.html">SimLimits</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.SimConfig.html">SimConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_SimConfig_WithRemains_" data-uid="TDMaker.Core.SimConfig.WithRemains*"></a>
+
+  <h3 id="TDMaker_Core_SimConfig_WithRemains_System_Int32_System_Single_" data-uid="TDMaker.Core.SimConfig.WithRemains(System.Int32,System.Single)">
+  WithRemains(int, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies every setting and selects body storage capacity/lifetime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimConfig WithRemains(int capacity, float lifetime = 10)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>capacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>lifetime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.SimConfig.html">SimConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class WaveSchedule | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WaveSchedule | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Mirrors the simulation&#39;s spawn schedule: a group&#39;s entries run back to back; an entry entered at s with start delay d, interval h and count n spawns at s+d+h … s+d+nh, waits one more interval, then the next entry is entered after the following gap.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.WaveSchedule">
+
+
+
+  <h1 id="TDMaker_Editor_WaveSchedule" data-uid="TDMaker.Editor.WaveSchedule" class="text-break">
+Class WaveSchedule  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Mirrors the simulation's spawn schedule: a group's entries run back to back; an entry entered at <code>s</code>
+with start delay <code>d</code>, interval <code>h</code> and count <code>n</code> spawns at <code>s+d+h … s+d+nh</code>, waits one more
+interval, then the next entry is entered after the following gap.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class WaveSchedule</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">WaveSchedule</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_WaveSchedule_TickSeconds" data-uid="TDMaker.Editor.WaveSchedule.TickSeconds">
+  TickSeconds
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default simulation tick length, used for zero intervals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const float TickSeconds = 0.033333335</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_WaveSchedule_Entry_" data-uid="TDMaker.Editor.WaveSchedule.Entry*"></a>
+
+  <h3 id="TDMaker_Editor_WaveSchedule_Entry_TDMaker_Unity_Authoring_SpawnEntryData_" data-uid="TDMaker.Editor.WaveSchedule.Entry(TDMaker.Unity.Authoring.SpawnEntryData)">
+  Entry(SpawnEntryData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Totals for one entry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WaveTotals Entry(SpawnEntryData entry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entry</code> <a class="xref" href="TDMaker.Unity.Authoring.SpawnEntryData.html">SpawnEntryData</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Editor.WaveTotals.html">WaveTotals</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_WaveSchedule_GroupEnd_" data-uid="TDMaker.Editor.WaveSchedule.GroupEnd*"></a>
+
+  <h3 id="TDMaker_Editor_WaveSchedule_GroupEnd_TDMaker_Unity_Authoring_WaveGroupData_" data-uid="TDMaker.Editor.WaveSchedule.GroupEnd(TDMaker.Unity.Authoring.WaveGroupData)">
+  GroupEnd(WaveGroupData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>End time of a group (last entry end, without its trailing gap).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float GroupEnd(WaveGroupData group)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>group</code> <a class="xref" href="TDMaker.Unity.Authoring.WaveGroupData.html">WaveGroupData</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_WaveSchedule_Interval_" data-uid="TDMaker.Editor.WaveSchedule.Interval*"></a>
+
+  <h3 id="TDMaker_Editor_WaveSchedule_Interval_TDMaker_Unity_Authoring_SpawnEntryData_" data-uid="TDMaker.Editor.WaveSchedule.Interval(TDMaker.Unity.Authoring.SpawnEntryData)">
+  Interval(SpawnEntryData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Effective interval of an entry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Interval(SpawnEntryData entry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entry</code> <a class="xref" href="TDMaker.Unity.Authoring.SpawnEntryData.html">SpawnEntryData</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_WaveSchedule_IsAlternate_" data-uid="TDMaker.Editor.WaveSchedule.IsAlternate*"></a>
+
+  <h3 id="TDMaker_Editor_WaveSchedule_IsAlternate_TDMaker_Unity_Authoring_SpawnEntryData_System_Int32_" data-uid="TDMaker.Editor.WaveSchedule.IsAlternate(TDMaker.Unity.Authoring.SpawnEntryData,System.Int32)">
+  IsAlternate(SpawnEntryData, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether spawn <code class="paramref">k</code> (zero-based) of an entry uses the alternate enemy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAlternate(SpawnEntryData entry, int k)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entry</code> <a class="xref" href="TDMaker.Unity.Authoring.SpawnEntryData.html">SpawnEntryData</a></dt>
+    <dd></dd>
+    <dt><code>k</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_WaveSchedule_Layout_" data-uid="TDMaker.Editor.WaveSchedule.Layout*"></a>
+
+  <h3 id="TDMaker_Editor_WaveSchedule_Layout_TDMaker_Unity_Authoring_WaveGroupData_System_Int32_System_Collections_Generic_List_TDMaker_Editor_EntrySpan__" data-uid="TDMaker.Editor.WaveSchedule.Layout(TDMaker.Unity.Authoring.WaveGroupData,System.Int32,System.Collections.Generic.List{TDMaker.Editor.EntrySpan})">
+  Layout(WaveGroupData, int, List&lt;EntrySpan&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lays out every entry of a group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Layout(WaveGroupData group, int groupIndex, List&lt;EntrySpan&gt; output)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>group</code> <a class="xref" href="TDMaker.Unity.Authoring.WaveGroupData.html">WaveGroupData</a></dt>
+    <dd></dd>
+    <dt><code>groupIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Editor.EntrySpan.html">EntrySpan</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_WaveSchedule_Wave_" data-uid="TDMaker.Editor.WaveSchedule.Wave*"></a>
+
+  <h3 id="TDMaker_Editor_WaveSchedule_Wave_TDMaker_Unity_Authoring_WaveData_" data-uid="TDMaker.Editor.WaveSchedule.Wave(TDMaker.Unity.Authoring.WaveData)">
+  Wave(WaveData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Totals for a wave.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WaveTotals Wave(WaveData wave)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>wave</code> <a class="xref" href="TDMaker.Unity.Authoring.WaveData.html">WaveData</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Editor.WaveTotals.html">WaveTotals</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

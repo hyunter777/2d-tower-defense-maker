@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UpgradeShopSession | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UpgradeShopSession | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="One visit of the star-upgrade shop over a save slot. Every rule comes from the core : only the next rank of a track can be bought and only with enough stars (Available = EarnedTotal − Spent); opening the session copies the purchases as the revert baseline;  returns to that baseline (not one step back);  clears every purchase and makes the cleared state the new baseline. Each change is written into the slot&#39;s  (ranks per track key and stars spent) and saved at once through .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Campaign.UpgradeShopSession">
+
+
+
+  <h1 id="TDMaker_Unity_Campaign_UpgradeShopSession" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession" class="text-break">
+Class UpgradeShopSession  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<span class="xref">Unity</span>.<a class="xref" href="TDMaker.Unity.Campaign.html">Campaign</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Unity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>One visit of the star-upgrade shop over a save slot. Every rule comes from the core <a class="xref" href="TDMaker.Core.UpgradeShopRules.html">UpgradeShopRules</a>:
+only the next rank of a track can be bought and only with enough stars (<code>Available = EarnedTotal − Spent</code>); opening the
+session copies the purchases as the revert baseline; <a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html#TDMaker_Unity_Campaign_UpgradeShopSession_Revert">Revert()</a> returns to that baseline (not one step back);
+<a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html#TDMaker_Unity_Campaign_UpgradeShopSession_ResetAll">ResetAll()</a> clears every purchase and makes the cleared state the new baseline. Each change is written into the
+slot's <a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html">ProfileData</a> (ranks per track key and stars spent) and saved at once through <a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html#TDMaker_Unity_Campaign_UpgradeShopSession_Save">Save</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class UpgradeShopSession</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UpgradeShopSession</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession__ctor_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.#ctor*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession__ctor_TDMaker_Unity_Campaign_UpgradeShopAsset_TDMaker_Unity_Campaign_CampaignProgress_System_Func_System_Boolean__" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.#ctor(TDMaker.Unity.Campaign.UpgradeShopAsset,TDMaker.Unity.Campaign.CampaignProgress,System.Func{System.Boolean})">
+  UpgradeShopSession(UpgradeShopAsset, CampaignProgress, Func&lt;bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens the shop over <code class="paramref">progress</code>: reads its purchases and copies them as the revert baseline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeShopSession(UpgradeShopAsset shop, CampaignProgress progress, Func&lt;bool&gt; save = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shop</code> <a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopAsset.html">UpgradeShopAsset</a></dt>
+    <dd></dd>
+    <dt><code>progress</code> <a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html">CampaignProgress</a></dt>
+    <dd></dd>
+    <dt><code>save</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_AnyPurchased_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.AnyPurchased*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_AnyPurchased" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.AnyPurchased">
+  AnyPurchased
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether anything is bought (<a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html#TDMaker_Unity_Campaign_UpgradeShopSession_ResetAll">ResetAll()</a> would change anything).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AnyPurchased { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Available_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Available*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Available" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Available">
+  Available
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stars left to spend (negative only when an update raised prices of ranks already bought).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Available { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Baseline_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Baseline*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Baseline" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Baseline">
+  Baseline
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Purchases when the shop was opened (or after the last reset).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeSnapshot Baseline { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeSnapshot.html">UpgradeSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_CanRevert_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.CanRevert*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_CanRevert" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.CanRevert">
+  CanRevert
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html#TDMaker_Unity_Campaign_UpgradeShopSession_Revert">Revert()</a> would change anything.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanRevert { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_EarnedTotal_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.EarnedTotal*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_EarnedTotal" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.EarnedTotal">
+  EarnedTotal
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stars earned on the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long EarnedTotal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Progress_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Progress*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Progress" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Progress">
+  Progress
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The save slot's progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CampaignProgress Progress { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html">CampaignProgress</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Save_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Save*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Save" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Save">
+  Save
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes the slot after a purchase, a revert or a reset (returns false when the write failed). The default saves through
+<a class="xref" href="TDMaker.Unity.Campaign.CampaignSession.html">CampaignSession</a> when the progress belongs to its open slot (and does nothing for a progress outside any slot).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;bool&gt; Save { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_SaveFailed_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.SaveFailed*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_SaveFailed" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.SaveFailed">
+  SaveFailed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the last save attempt failed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SaveFailed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Shop_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Shop*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Shop" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Shop">
+  Shop
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The shop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeShopAsset Shop { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopAsset.html">UpgradeShopAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Spent_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Spent*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Spent" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Spent">
+  Spent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stars spent on the current purchases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Spent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_State_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.State*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_State" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.State">
+  State
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current purchases (core state).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeSnapshot State { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeSnapshot.html">UpgradeSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_TrackCount_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.TrackCount*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_TrackCount" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.TrackCount">
+  TrackCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of tracks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TrackCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_CanPurchase_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.CanPurchase*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_CanPurchase_System_Int32_System_Int32_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.CanPurchase(System.Int32,System.Int32)">
+  CanPurchase(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether rank <code class="paramref">rank</code> of <code class="paramref">track</code> can be bought now.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanPurchase(int track, int rank)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>track</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>rank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Cost_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Cost*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Cost_System_Int32_System_Int32_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Cost(System.Int32,System.Int32)">
+  Cost(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Price of rank <code class="paramref">rank</code> (1-based) of <code class="paramref">track</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Cost(int track, int rank)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>track</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>rank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_GetState_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.GetState*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_GetState_System_Int32_System_Int32_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.GetState(System.Int32,System.Int32)">
+  GetState(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>What node <code class="paramref">rank</code> (1-based) of <code class="paramref">track</code> shows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeRankState GetState(int track, int rank)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>track</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>rank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeRankState.html">UpgradeRankState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Purchase_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Purchase*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Purchase_System_Int32_System_Int32_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Purchase(System.Int32,System.Int32)">
+  Purchase(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Buys rank <code class="paramref">rank</code> of <code class="paramref">track</code> and saves (false when the rules refuse it).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Purchase(int track, int rank)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>track</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>rank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Rank_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Rank*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Rank_System_Int32_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Rank(System.Int32)">
+  Rank(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Purchased rank of <code class="paramref">track</code> (0 = none).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Rank(int track)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>track</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_RankCount_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.RankCount*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_RankCount_System_Int32_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.RankCount(System.Int32)">
+  RankCount(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of ranks of track <code class="paramref">track</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RankCount(int track)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>track</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_ResetAll_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.ResetAll*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_ResetAll" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.ResetAll">
+  ResetAll()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears every purchase (all stars back), makes that the new baseline and saves. No confirmation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ResetAll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_Revert_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Revert*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Revert" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Revert">
+  Revert()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns every track to the purchases of the baseline and saves (false when nothing changed).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Revert()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_UpgradeShopSession_UnspentBadge_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.UnspentBadge*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_UnspentBadge_TDMaker_Unity_Campaign_CampaignProgress_TDMaker_Unity_Campaign_UpgradeShopAsset_" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.UnspentBadge(TDMaker.Unity.Campaign.CampaignProgress,TDMaker.Unity.Campaign.UpgradeShopAsset)">
+  UnspentBadge(CampaignProgress, UpgradeShopAsset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stars the world map announces as unspent: <code>min(EarnedTotal, FullShopCost) − Spent</code>, never below zero (stars beyond the
+full shop price are not announced; this is a display limit, not a cap on earning).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int UnspentBadge(CampaignProgress progress, UpgradeShopAsset shop)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>progress</code> <a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html">CampaignProgress</a></dt>
+    <dd></dd>
+    <dt><code>shop</code> <a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopAsset.html">UpgradeShopAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_UpgradeShopSession_Changed" data-uid="TDMaker.Unity.Campaign.UpgradeShopSession.Changed">
+  Changed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised after every change (purchase, revert, reset).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action Changed</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PathFollowComponent | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PathFollowComponent | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Path and engagement state for an enemy.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Components.PathFollowComponent">
+
+
+
+  <h1 id="TDMaker_Core_Components_PathFollowComponent" data-uid="TDMaker.Core.Components.PathFollowComponent" class="text-break">
+Class PathFollowComponent  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Components.html">Components</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Path and engagement state for an enemy.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PathFollowComponent</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PathFollowComponent</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent__ctor_" data-uid="TDMaker.Core.Components.PathFollowComponent.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent__ctor" data-uid="TDMaker.Core.Components.PathFollowComponent.#ctor">
+  PathFollowComponent()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathFollowComponent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_BlockerCount_" data-uid="TDMaker.Core.Components.PathFollowComponent.BlockerCount*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_BlockerCount" data-uid="TDMaker.Core.Components.PathFollowComponent.BlockerCount">
+  BlockerCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of assigned soldiers in current contact-rank order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BlockerCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_BlockerId_" data-uid="TDMaker.Core.Components.PathFollowComponent.BlockerId*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_BlockerId" data-uid="TDMaker.Core.Components.PathFollowComponent.BlockerId">
+  BlockerId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>First contact-rank soldier identifier, or zero. It need not be the retained melee representative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BlockerId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_IsConnecting_" data-uid="TDMaker.Core.Components.PathFollowComponent.IsConnecting*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_IsConnecting" data-uid="TDMaker.Core.Components.PathFollowComponent.IsConnecting">
+  IsConnecting
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the unit is crossing to the current path's entry from a previous path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsConnecting { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_IsWaitingForContact_" data-uid="TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_IsWaitingForContact" data-uid="TDMaker.Core.Components.PathFollowComponent.IsWaitingForContact">
+  IsWaitingForContact
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the observed representative has not reached its contact goal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsWaitingForContact { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_LaneIndex_" data-uid="TDMaker.Core.Components.PathFollowComponent.LaneIndex*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_LaneIndex" data-uid="TDMaker.Core.Components.PathFollowComponent.LaneIndex">
+  LaneIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sub-lane index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LaneIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_NodeIndex_" data-uid="TDMaker.Core.Components.PathFollowComponent.NodeIndex*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_NodeIndex" data-uid="TDMaker.Core.Components.PathFollowComponent.NodeIndex">
+  NodeIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Index of the current segment's starting node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NodeIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_PathIndex_" data-uid="TDMaker.Core.Components.PathFollowComponent.PathIndex*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_PathIndex" data-uid="TDMaker.Core.Components.PathFollowComponent.PathIndex">
+  PathIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Level path index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PathIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_ReachedExit_" data-uid="TDMaker.Core.Components.PathFollowComponent.ReachedExit*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_ReachedExit" data-uid="TDMaker.Core.Components.PathFollowComponent.ReachedExit">
+  ReachedExit
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the unit has crossed the exit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReachedExit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_RemainingDistance_" data-uid="TDMaker.Core.Components.PathFollowComponent.RemainingDistance*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_RemainingDistance" data-uid="TDMaker.Core.Components.PathFollowComponent.RemainingDistance">
+  RemainingDistance
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Distance remaining to the exit, used for target priority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RemainingDistance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_RepresentativeId_" data-uid="TDMaker.Core.Components.PathFollowComponent.RepresentativeId*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_RepresentativeId" data-uid="TDMaker.Core.Components.PathFollowComponent.RepresentativeId">
+  RepresentativeId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retained melee representative. May differ from BlockerId after rank rotation; zero before observation/after loss.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RepresentativeId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_SegmentProgress_" data-uid="TDMaker.Core.Components.PathFollowComponent.SegmentProgress*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_SegmentProgress" data-uid="TDMaker.Core.Components.PathFollowComponent.SegmentProgress">
+  SegmentProgress
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Normalized progress along the current segment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SegmentProgress { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_TravelAngle_" data-uid="TDMaker.Core.Components.PathFollowComponent.TravelAngle*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_TravelAngle" data-uid="TDMaker.Core.Components.PathFollowComponent.TravelAngle">
+  TravelAngle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Last general travel angle in radians, retained while stopped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float TravelAngle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Components_PathFollowComponent_GetBlockerId_" data-uid="TDMaker.Core.Components.PathFollowComponent.GetBlockerId*"></a>
+
+  <h3 id="TDMaker_Core_Components_PathFollowComponent_GetBlockerId_System_Int32_" data-uid="TDMaker.Core.Components.PathFollowComponent.GetBlockerId(System.Int32)">
+  GetBlockerId(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads an assigned soldier identifier by engagement rank.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetBlockerId(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

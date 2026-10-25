@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Simulation | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Simulation | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="A deterministic fixed-step world. Use commands for player actions and ClearEvents after reading output.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Simulation">
+
+
+
+  <h1 id="TDMaker_Core_Simulation" data-uid="TDMaker.Core.Simulation" class="text-break">
+Class Simulation  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A deterministic fixed-step world. Use commands for player actions and ClearEvents after reading output.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Simulation</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Simulation</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Simulation__ctor_" data-uid="TDMaker.Core.Simulation.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Simulation__ctor_TDMaker_Core_Defs_TemplateRegistry_TDMaker_Core_Defs_LevelDef_TDMaker_Core_SimConfig_System_UInt32_" data-uid="TDMaker.Core.Simulation.#ctor(TDMaker.Core.Defs.TemplateRegistry,TDMaker.Core.Defs.LevelDef,TDMaker.Core.SimConfig,System.UInt32)">
+  Simulation(TemplateRegistry, LevelDef, SimConfig, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates and prewarms a world; no engine APIs or background clocks are used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Simulation(TemplateRegistry templates, LevelDef level, SimConfig config = null, uint seed = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>templates</code> <a class="xref" href="TDMaker.Core.Defs.TemplateRegistry.html">TemplateRegistry</a></dt>
+    <dd></dd>
+    <dt><code>level</code> <a class="xref" href="TDMaker.Core.Defs.LevelDef.html">LevelDef</a></dt>
+    <dd></dd>
+    <dt><code>config</code> <a class="xref" href="TDMaker.Core.SimConfig.html">SimConfig</a></dt>
+    <dd></dd>
+    <dt><code>seed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Simulation_ActiveBeamCount_" data-uid="TDMaker.Core.Simulation.ActiveBeamCount*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_ActiveBeamCount" data-uid="TDMaker.Core.Simulation.ActiveBeamCount">
+  ActiveBeamCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unfinished budget channels, included in completion accounting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ActiveBeamCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_ActiveChainCount_" data-uid="TDMaker.Core.Simulation.ActiveChainCount*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_ActiveChainCount" data-uid="TDMaker.Core.Simulation.ActiveChainCount">
+  ActiveChainCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unfinished chain executions, included in level completion accounting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ActiveChainCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Beams_" data-uid="TDMaker.Core.Simulation.Beams*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Beams" data-uid="TDMaker.Core.Simulation.Beams">
+  Beams
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Live and pending-removal budget channels in creation order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;BeamBinding&gt; Beams { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.BeamBinding.html">BeamBinding</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_CapacityFailureCount_" data-uid="TDMaker.Core.Simulation.CapacityFailureCount*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_CapacityFailureCount" data-uid="TDMaker.Core.Simulation.CapacityFailureCount">
+  CapacityFailureCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of fixed-pool saturation incidents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long CapacityFailureCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Config_" data-uid="TDMaker.Core.Simulation.Config*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Config" data-uid="TDMaker.Core.Simulation.Config">
+  Config
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Immutable simulation settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimConfig Config { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.SimConfig.html">SimConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_DeltaTime_" data-uid="TDMaker.Core.Simulation.DeltaTime*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_DeltaTime" data-uid="TDMaker.Core.Simulation.DeltaTime">
+  DeltaTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Seconds per fixed step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DeltaTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_DroppedDamageCount_" data-uid="TDMaker.Core.Simulation.DroppedDamageCount*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_DroppedDamageCount" data-uid="TDMaker.Core.Simulation.DroppedDamageCount">
+  DroppedDamageCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of damage requests rejected by the configured per-tick capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long DroppedDamageCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_DroppedEventCount_" data-uid="TDMaker.Core.Simulation.DroppedEventCount*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_DroppedEventCount" data-uid="TDMaker.Core.Simulation.DroppedEventCount">
+  DroppedEventCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of notifications dropped because the caller did not drain the fixed event buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long DroppedEventCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Effects_" data-uid="TDMaker.Core.Simulation.Effects*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Effects" data-uid="TDMaker.Core.Simulation.Effects">
+  Effects
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attached effect and region lifecycle service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EffectService Effects { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Effects.EffectService.html">EffectService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Entities_" data-uid="TDMaker.Core.Simulation.Entities*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Entities" data-uid="TDMaker.Core.Simulation.Entities">
+  Entities
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runtime entity state and deferred queues.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityStore Entities { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.EntityStore.html">EntityStore</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Events_" data-uid="TDMaker.Core.Simulation.Events*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Events" data-uid="TDMaker.Core.Simulation.Events">
+  Events
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Events retained until ClearEvents is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;SimEvent&gt; Events { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.SimEvent.html">SimEvent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Level_" data-uid="TDMaker.Core.Simulation.Level*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Level" data-uid="TDMaker.Core.Simulation.Level">
+  Level
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Immutable baked level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LevelDef Level { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.LevelDef.html">LevelDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_PendingRecoveryCount_" data-uid="TDMaker.Core.Simulation.PendingRecoveryCount*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_PendingRecoveryCount" data-uid="TDMaker.Core.Simulation.PendingRecoveryCount">
+  PendingRecoveryCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pending same-identity returns, successor preparation and body consumption. Unreserved bodies do not hold victory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PendingRecoveryCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_QueuedDamageCount_" data-uid="TDMaker.Core.Simulation.QueuedDamageCount*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_QueuedDamageCount" data-uid="TDMaker.Core.Simulation.QueuedDamageCount">
+  QueuedDamageCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current FIFO length, for allocation-free diagnostics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int QueuedDamageCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Random_" data-uid="TDMaker.Core.Simulation.Random*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Random" data-uid="TDMaker.Core.Simulation.Random">
+  Random
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The seeded simulation random stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimRandom Random { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.SimRandom.html">SimRandom</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RangeYScale_" data-uid="TDMaker.Core.Simulation.RangeYScale*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RangeYScale" data-uid="TDMaker.Core.Simulation.RangeYScale">
+  RangeYScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Range multiplier after applying the level override.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RangeYScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Remains_" data-uid="TDMaker.Core.Simulation.Remains*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Remains" data-uid="TDMaker.Core.Simulation.Remains">
+  Remains
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Neutral bodies in stable creation order, including exclusive reservations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;RemainsRecord&gt; Remains { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.RemainsRecord.html">RemainsRecord</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_ScheduledActionCount_" data-uid="TDMaker.Core.Simulation.ScheduledActionCount*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_ScheduledActionCount" data-uid="TDMaker.Core.Simulation.ScheduledActionCount">
+  ScheduledActionCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pending summon/strike sequences, for diagnostics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ScheduledActionCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Seed_" data-uid="TDMaker.Core.Simulation.Seed*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Seed" data-uid="TDMaker.Core.Simulation.Seed">
+  Seed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Original random seed, also stored by command recordings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint Seed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_SpatialRebuildCount_" data-uid="TDMaker.Core.Simulation.SpatialRebuildCount*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_SpatialRebuildCount" data-uid="TDMaker.Core.Simulation.SpatialRebuildCount">
+  SpatialRebuildCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enemy and friendly spatial rebuild count, excluded from deterministic state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SpatialRebuildCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Spells_" data-uid="TDMaker.Core.Simulation.Spells*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Spells" data-uid="TDMaker.Core.Simulation.Spells">
+  Spells
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Spell states in Level.AvailableSpells order; unresolved legacy slots remain locked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;SpellState&gt; Spells { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.Components.SpellState.html">SpellState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_State_" data-uid="TDMaker.Core.Simulation.State*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_State" data-uid="TDMaker.Core.Simulation.State">
+  State
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Read-only global state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameState State { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.GameState.html">GameState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_SystemPipeline_" data-uid="TDMaker.Core.Simulation.SystemPipeline*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_SystemPipeline" data-uid="TDMaker.Core.Simulation.SystemPipeline">
+  SystemPipeline
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Read-only metadata snapshot in actual execution order. Refetch after setup-time RegisterSystem calls; unchanged during stepping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;SimSystemInfo&gt; SystemPipeline { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.SimSystemInfo.html">SimSystemInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Templates_" data-uid="TDMaker.Core.Simulation.Templates*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Templates" data-uid="TDMaker.Core.Simulation.Templates">
+  Templates
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolved immutable template definitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TemplateRegistry Templates { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.TemplateRegistry.html">TemplateRegistry</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Time_" data-uid="TDMaker.Core.Simulation.Time*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Time" data-uid="TDMaker.Core.Simulation.Time">
+  Time
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Game time derived from completed fixed ticks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Time { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Traps_" data-uid="TDMaker.Core.Simulation.Traps*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Traps" data-uid="TDMaker.Core.Simulation.Traps">
+  Traps
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Live and pending-removal deployments in creation order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;TrapBinding&gt; Traps { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.TrapBinding.html">TrapBinding</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_UpgradeFingerprint_" data-uid="TDMaker.Core.Simulation.UpgradeFingerprint*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_UpgradeFingerprint" data-uid="TDMaker.Core.Simulation.UpgradeFingerprint">
+  UpgradeFingerprint
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stable setup fingerprint of the permanent-upgrade snapshot and applied definitions; zero identifies legacy setup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong UpgradeFingerprint { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Simulation_AddHeroExperience_" data-uid="TDMaker.Core.Simulation.AddHeroExperience*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_AddHeroExperience_System_Int32_System_Double_" data-uid="TDMaker.Core.Simulation.AddHeroExperience(System.Int32,System.Double)">
+  AddHeroExperience(int, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues nonnegative raw hero experience for the progression stage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AddHeroExperience(int entityId, double amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entityId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_CancelBeam_" data-uid="TDMaker.Core.Simulation.CancelBeam*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_CancelBeam_System_Int32_" data-uid="TDMaker.Core.Simulation.CancelBeam(System.Int32)">
+  CancelBeam(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancels a channel at the next mechanism stage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CancelBeam(int beamId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>beamId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_ClearEvents_" data-uid="TDMaker.Core.Simulation.ClearEvents*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_ClearEvents" data-uid="TDMaker.Core.Simulation.ClearEvents">
+  ClearEvents()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears consumed events while retaining their backing capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearEvents()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_ComputeStateHash_" data-uid="TDMaker.Core.Simulation.ComputeStateHash*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_ComputeStateHash" data-uid="TDMaker.Core.Simulation.ComputeStateHash">
+  ComputeStateHash()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hashes authoritative runtime state at a tick boundary, including pending work and RNG. Events and render-clock backlog are excluded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ComputeStateHash()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_ComputeStateHash_examples">Examples</h4>
+  <pre><code class="lang-csharp">ulong checkpoint = sim.ComputeStateHash();</code></pre>
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_ComputeStateHash_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Use identical definitions, extension registration and seed. Extensions must contribute their mutable state via IStateHashContributor.
+Exact floating-point bits diagnose same-runtime divergence; this is not a cross-platform numeric determinism guarantee.</p>
+</div>
+
+
+
+
+  <a id="TDMaker_Core_Simulation_ConfigureSpatialIndex_" data-uid="TDMaker.Core.Simulation.ConfigureSpatialIndex*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_ConfigureSpatialIndex_System_Single_System_Boolean_" data-uid="TDMaker.Core.Simulation.ConfigureSpatialIndex(System.Single,System.Boolean)">
+  ConfigureSpatialIndex(float, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures horizontal grid cell size before stepping. Disabling it selects the Id-ordered linear backend for profiling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ConfigureSpatialIndex(float cellSize = 4, bool enabled = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cellSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_ConfigureSpatialIndex_System_Single_System_Boolean__examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.ConfigureSpatialIndex(cellSize: 4);</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Deploy_" data-uid="TDMaker.Core.Simulation.Deploy*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Deploy_TDMaker_Core_Defs_DeploymentPlanDef_System_Int32_" data-uid="TDMaker.Core.Simulation.Deploy(TDMaker.Core.Defs.DeploymentPlanDef,System.Int32)">
+  Deploy(DeploymentPlanDef, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Atomically reserves one seeded path-node site and one trap slot. Zero means no candidate, invalid producer, quota or capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Deploy(DeploymentPlanDef plan, int sourceId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plan</code> <a class="xref" href="TDMaker.Core.Defs.DeploymentPlanDef.html">DeploymentPlanDef</a></dt>
+    <dd></dd>
+    <dt><code>sourceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Enqueue_" data-uid="TDMaker.Core.Simulation.Enqueue*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Enqueue_TDMaker_Core_Commands_ICommand_" data-uid="TDMaker.Core.Simulation.Enqueue(TDMaker.Core.Commands.ICommand)">
+  Enqueue(ICommand)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues an immutable command for the next tick; input allocation is outside Step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Enqueue(ICommand command)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="TDMaker.Core.Commands.ICommand.html">ICommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_FindDefaultTarget_" data-uid="TDMaker.Core.Simulation.FindDefaultTarget*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_FindDefaultTarget_TDMaker_Core_TargetQuery__" data-uid="TDMaker.Core.Simulation.FindDefaultTarget(TDMaker.Core.TargetQuery@)">
+  FindDefaultTarget(in TargetQuery)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses the built-in priority scoring and Id tie-breaks without invoking the custom selector. Safe to call from ITargetSelector.Select.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity FindDefaultTarget(in TargetQuery query)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="TDMaker.Core.TargetQuery.html">TargetQuery</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_FindDefaultTarget_TDMaker_Core_TargetQuery___examples">Examples</h4>
+  <pre><code class="lang-csharp">return simulation.FindDefaultTarget(query);</code></pre>
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_FindDefaultTarget_TDMaker_Core_TargetQuery___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Uses separate reusable storage and leaves the custom selector's candidate buffer unchanged.</p>
+</div>
+
+
+
+
+  <a id="TDMaker_Core_Simulation_FindTarget_" data-uid="TDMaker.Core.Simulation.FindTarget*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_FindTarget_TDMaker_Core_TargetQuery__" data-uid="TDMaker.Core.Simulation.FindTarget(TDMaker.Core.TargetQuery@)">
+  FindTarget(in TargetQuery)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds a ranged target using the registered selector or the original scoring and Id tie-breaks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity FindTarget(in TargetQuery query)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="TDMaker.Core.TargetQuery.html">TargetQuery</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_GetTowerAtSlot_" data-uid="TDMaker.Core.Simulation.GetTowerAtSlot*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_GetTowerAtSlot_System_Int32_" data-uid="TDMaker.Core.Simulation.GetTowerAtSlot(System.Int32)">
+  GetTowerAtSlot(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a reserved or committed tower at a construction slot, or zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetTowerAtSlot(int slotIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>slotIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_IsEligibleTarget_" data-uid="TDMaker.Core.Simulation.IsEligibleTarget*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_IsEligibleTarget_TDMaker_Core_Entity_TDMaker_Core_TargetQuery__" data-uid="TDMaker.Core.Simulation.IsEligibleTarget(TDMaker.Core.Entity,TDMaker.Core.TargetQuery@)">
+  IsEligibleTarget(Entity, in TargetQuery)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks membership, lifecycle, faction, flight filters and the query's elliptical range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEligibleTarget(Entity target, in TargetQuery query)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="TDMaker.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>query</code> <a class="xref" href="TDMaker.Core.TargetQuery.html">TargetQuery</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_PlaceTrap_" data-uid="TDMaker.Core.Simulation.PlaceTrap*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_PlaceTrap_TDMaker_Core_Defs_TrapDef_TDMaker_Core_Vec2_System_Int32_" data-uid="TDMaker.Core.Simulation.PlaceTrap(TDMaker.Core.Defs.TrapDef,TDMaker.Core.Vec2,System.Int32)">
+  PlaceTrap(TrapDef, Vec2, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Places a validated deployment without allocating. Returns zero on invalid placement/source, population limit or pool exhaustion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PlaceTrap(TrapDef definition, Vec2 desired, int sourceId = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definition</code> <a class="xref" href="TDMaker.Core.Defs.TrapDef.html">TrapDef</a></dt>
+    <dd></dd>
+    <dt><code>desired</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>sourceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_PredictTargetPosition_" data-uid="TDMaker.Core.Simulation.PredictTargetPosition*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_PredictTargetPosition_System_Int32_System_Single_" data-uid="TDMaker.Core.Simulation.PredictTargetPosition(System.Int32,System.Single)">
+  PredictTargetPosition(int, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Predicts fixed-course aim by traversing path segments from the current position at observed movement speed. Blocked or stationary targets are not led.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2 PredictTargetPosition(int entityId, float seconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entityId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>seconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_PredictTargetPosition_System_Int32_System_Single__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Uses continuous world distance, including connection gaps, rather than rounding to an authored node. Does not anticipate later control changes.</p>
+</div>
+
+
+
+
+  <a id="TDMaker_Core_Simulation_PreviewEarlyCallReward_" data-uid="TDMaker.Core.Simulation.PreviewEarlyCallReward*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_PreviewEarlyCallReward" data-uid="TDMaker.Core.Simulation.PreviewEarlyCallReward">
+  PreviewEarlyCallReward()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Previews the next manual wave call at current fixed time, including its gold and shared spell time credit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EarlyCallRewardPreview PreviewEarlyCallReward()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.EarlyCallRewardPreview.html">EarlyCallRewardPreview</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_PreviewEarlyCallReward_examples">Examples</h4>
+  <pre><code class="lang-csharp">EarlyCallRewardPreview reward = sim.PreviewEarlyCallReward();</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_PreviewEarlyCallSpellCooldownCut_" data-uid="TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_PreviewEarlyCallSpellCooldownCut_System_Int32_" data-uid="TDMaker.Core.Simulation.PreviewEarlyCallSpellCooldownCut(System.Int32)">
+  PreviewEarlyCallSpellCooldownCut(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Previews the exact reduction of one spell's remaining cooldown if the next wave is called now.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float PreviewEarlyCallSpellCooldownCut(int spellIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>spellIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_PreviewSellRefund_" data-uid="TDMaker.Core.Simulation.PreviewSellRefund*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_PreviewSellRefund_System_Int32_" data-uid="TDMaker.Core.Simulation.PreviewSellRefund(System.Int32)">
+  PreviewSellRefund(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the same nominal refund reported by TowerSold, before wallet saturation. Invalid, removing or non-tower entities return zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PreviewSellRefund(int towerId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>towerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_PreviewSellRefund_System_Int32__examples">Examples</h4>
+  <pre><code class="lang-csharp">int refund = sim.PreviewSellRefund(tower.Id);</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_PublishEvent_" data-uid="TDMaker.Core.Simulation.PublishEvent*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_PublishEvent_TDMaker_Core_SimEvent_" data-uid="TDMaker.Core.Simulation.PublishEvent(TDMaker.Core.SimEvent)">
+  PublishEvent(SimEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Publishes an event in the reserved custom range. Uses the normal fixed-capacity event buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PublishEvent(SimEvent value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="TDMaker.Core.SimEvent.html">SimEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_PublishEvent_TDMaker_Core_SimEvent__examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.PublishEvent(new SimEvent((SimEventKind)((int)SimEventKind.CustomStart + 1), actor.Id));</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_QueryEnemies_" data-uid="TDMaker.Core.Simulation.QueryEnemies*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_QueryEnemies_TDMaker_Core_Vec2_System_Single_TDMaker_Core_SpatialQueryBuffer_" data-uid="TDMaker.Core.Simulation.QueryEnemies(TDMaker.Core.Vec2,System.Single,TDMaker.Core.SpatialQueryBuffer)">
+  QueryEnemies(Vec2, float, SpatialQueryBuffer)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queries active enemies using the shared ellipse. Results are ascending Id; the caller owns and reuses its buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void QueryEnemies(Vec2 center, float range, SpatialQueryBuffer results)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>range</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>results</code> <a class="xref" href="TDMaker.Core.SpatialQueryBuffer.html">SpatialQueryBuffer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_QueryEnemies_TDMaker_Core_Vec2_System_Single_TDMaker_Core_SpatialQueryBuffer__examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.QueryEnemies(center, 3, cachedBuffer);</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RaiseRemains_" data-uid="TDMaker.Core.Simulation.RaiseRemains*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RaiseRemains_TDMaker_Core_Defs_RaiseRemainsDef_System_Int32_" data-uid="TDMaker.Core.Simulation.RaiseRemains(TDMaker.Core.Defs.RaiseRemainsDef,System.Int32)">
+  RaiseRemains(RaiseRemainsDef, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reserves closest eligible bodies, breaking ties by body Id. Returns accepted count; capacity and population include existing reservations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RaiseRemains(RaiseRemainsDef definition, int actorId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definition</code> <a class="xref" href="TDMaker.Core.Defs.RaiseRemainsDef.html">RaiseRemainsDef</a></dt>
+    <dd></dd>
+    <dt><code>actorId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RangeDistanceSquared_" data-uid="TDMaker.Core.Simulation.RangeDistanceSquared*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RangeDistanceSquared_TDMaker_Core_Vec2_TDMaker_Core_Vec2_" data-uid="TDMaker.Core.Simulation.RangeDistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2)">
+  RangeDistanceSquared(Vec2, Vec2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elliptical distance squared using the product's vertical radius ratio.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RangeDistanceSquared(Vec2 a, Vec2 b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RegisterCommandHandler_" data-uid="TDMaker.Core.Simulation.RegisterCommandHandler*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RegisterCommandHandler__1_TDMaker_Core_ICommandHandler___0__" data-uid="TDMaker.Core.Simulation.RegisterCommandHandler``1(TDMaker.Core.ICommandHandler{``0})">
+  RegisterCommandHandler&lt;T&gt;(ICommandHandler&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers an exact custom command type; built-in commands retain their original handlers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterCommandHandler&lt;T&gt;(ICommandHandler&lt;T&gt; handler) where T : class, ICommand</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>handler</code> <a class="xref" href="TDMaker.Core.ICommandHandler-1.html">ICommandHandler</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_RegisterCommandHandler__1_TDMaker_Core_ICommandHandler___0___examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.RegisterCommandHandler&lt;SetStance&gt;(new SetStanceHandler());</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RegisterComponent_" data-uid="TDMaker.Core.Simulation.RegisterComponent*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RegisterComponent__1_System_Func___0__" data-uid="TDMaker.Core.Simulation.RegisterComponent``1(System.Func{``0})">
+  RegisterComponent&lt;T&gt;(Func&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prewarms one unique component instance for every pool bundle. Factories run only here; Reset runs on spawn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterComponent&lt;T&gt;(Func&lt;T&gt; factory) where T : class, ICustomComponent</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_RegisterComponent__1_System_Func___0___examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.RegisterComponent(() =&gt; new ShieldState());</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RegisterDamageHook_" data-uid="TDMaker.Core.Simulation.RegisterDamageHook*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RegisterDamageHook_TDMaker_Core_IDamageHook_" data-uid="TDMaker.Core.Simulation.RegisterDamageHook(TDMaker.Core.IDamageHook)">
+  RegisterDamageHook(IDamageHook)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a damage hook in deterministic registration order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterDamageHook(IDamageHook hook)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hook</code> <a class="xref" href="TDMaker.Core.IDamageHook.html">IDamageHook</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_RegisterDamageHook_TDMaker_Core_IDamageHook__examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.RegisterDamageHook(new ShieldDamageHook());</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RegisterStateHashContributor_" data-uid="TDMaker.Core.Simulation.RegisterStateHashContributor*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RegisterStateHashContributor_TDMaker_Core_IStateHashContributor_" data-uid="TDMaker.Core.Simulation.RegisterStateHashContributor(TDMaker.Core.IStateHashContributor)">
+  RegisterStateHashContributor(IStateHashContributor)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Includes external extension state in ComputeStateHash, in registration order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterStateHashContributor(IStateHashContributor contributor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>contributor</code> <a class="xref" href="TDMaker.Core.IStateHashContributor.html">IStateHashContributor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_RegisterStateHashContributor_TDMaker_Core_IStateHashContributor__examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.RegisterStateHashContributor(weatherState);</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RegisterSystem_" data-uid="TDMaker.Core.Simulation.RegisterSystem*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RegisterSystem_TDMaker_Core_Systems_ISimSystem_TDMaker_Core_SimStage_System_Boolean_" data-uid="TDMaker.Core.Simulation.RegisterSystem(TDMaker.Core.Systems.ISimSystem,TDMaker.Core.SimStage,System.Boolean)">
+  RegisterSystem(ISimSystem, SimStage, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts a system before or after a built-in stage. Registrations at the same location run in registration order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterSystem(ISimSystem system, SimStage anchor, bool after = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>system</code> <a class="xref" href="TDMaker.Core.Systems.ISimSystem.html">ISimSystem</a></dt>
+    <dd></dd>
+    <dt><code>anchor</code> <a class="xref" href="TDMaker.Core.SimStage.html">SimStage</a></dt>
+    <dd></dd>
+    <dt><code>after</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_RegisterSystem_TDMaker_Core_Systems_ISimSystem_TDMaker_Core_SimStage_System_Boolean__examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.RegisterSystem(new WeatherSystem(), SimStage.Damage, after: false);</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RegisterTargetSelector_" data-uid="TDMaker.Core.Simulation.RegisterTargetSelector*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RegisterTargetSelector_TDMaker_Core_ITargetSelector_" data-uid="TDMaker.Core.Simulation.RegisterTargetSelector(TDMaker.Core.ITargetSelector)">
+  RegisterTargetSelector(ITargetSelector)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers the optional world-wide ranged selector. Candidate and definition data can distinguish actor types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterTargetSelector(ITargetSelector selector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selector</code> <a class="xref" href="TDMaker.Core.ITargetSelector.html">ITargetSelector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_RegisterTargetSelector_TDMaker_Core_ITargetSelector__examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.RegisterTargetSelector(new LowestShieldSelector());</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RemoveTrap_" data-uid="TDMaker.Core.Simulation.RemoveTrap*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RemoveTrap_System_Int32_" data-uid="TDMaker.Core.Simulation.RemoveTrap(System.Int32)">
+  RemoveTrap(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marks a deployment for removal in the next mechanism stage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveTrap(int trapId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trapId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RepositionCompanions_" data-uid="TDMaker.Core.Simulation.RepositionCompanions*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RepositionCompanions_System_Int32_TDMaker_Core_Vec2_" data-uid="TDMaker.Core.Simulation.RepositionCompanions(System.Int32,TDMaker.Core.Vec2)">
+  RepositionCompanions(int, Vec2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reassigns ground escorts around an approved owner destination. MoveHero and SetRallyPoint call this automatically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RepositionCompanions(int ownerId, Vec2 destination)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ownerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_RequestDamage_" data-uid="TDMaker.Core.Simulation.RequestDamage*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_RequestDamage_TDMaker_Core_DamageContext_" data-uid="TDMaker.Core.Simulation.RequestDamage(TDMaker.Core.DamageContext)">
+  RequestDamage(DamageContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues custom raw damage through the same hooks, FIFO, defenses, effects and experience path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequestDamage(DamageContext request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="TDMaker.Core.DamageContext.html">DamageContext</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_RequestDamage_TDMaker_Core_DamageContext__examples">Examples</h4>
+  <pre><code class="lang-csharp">sim.RequestDamage(new DamageContext(actor.Id, target.Id, 10, damage));</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_SetEntityPosition_" data-uid="TDMaker.Core.Simulation.SetEntityPosition*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_SetEntityPosition_System_Int32_TDMaker_Core_Vec2_System_Boolean_" data-uid="TDMaker.Core.Simulation.SetEntityPosition(System.Int32,TDMaker.Core.Vec2,System.Boolean)">
+  SetEntityPosition(int, Vec2, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Changes position without advancing a path cursor; invalidates spatial queries immediately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetEntityPosition(int entityId, Vec2 position, bool resetInterpolation = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entityId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>resetInterpolation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_SetProfiler_" data-uid="TDMaker.Core.Simulation.SetProfiler*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_SetProfiler_TDMaker_Core_ISimProfiler_" data-uid="TDMaker.Core.Simulation.SetProfiler(TDMaker.Core.ISimProfiler)">
+  SetProfiler(ISimProfiler)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Installs or clears observational hooks before the first Step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetProfiler(ISimProfiler value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="TDMaker.Core.ISimProfiler.html">ISimProfiler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_SetProfiler_TDMaker_Core_ISimProfiler__examples">Examples</h4>
+  <pre><code class="lang-csharp">simulation.SetProfiler(new MyPreallocatedProfiler());</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_SpawnEnemy_" data-uid="TDMaker.Core.Simulation.SpawnEnemy*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_SpawnEnemy_System_String_System_Int32_System_Int32_" data-uid="TDMaker.Core.Simulation.SpawnEnemy(System.String,System.Int32,System.Int32)">
+  SpawnEnemy(string, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues an enemy at a validated path entry. Its first action is after the next Flush.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity SpawnEnemy(string templateId, int pathIndex, int laneIndex = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>templateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pathIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>laneIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_SpawnHero_" data-uid="TDMaker.Core.Simulation.SpawnHero*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_SpawnHero_System_String_TDMaker_Core_Vec2_" data-uid="TDMaker.Core.Simulation.SpawnHero(System.String,TDMaker.Core.Vec2)">
+  SpawnHero(string, Vec2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues an available independent hero at a validated finite starting position; returns null on pool saturation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity SpawnHero(string templateId, Vec2 position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>templateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_StartRecording_" data-uid="TDMaker.Core.Simulation.StartRecording*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_StartRecording_TDMaker_Core_CommandLog_" data-uid="TDMaker.Core.Simulation.StartRecording(TDMaker.Core.CommandLog)">
+  StartRecording(CommandLog)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Begins fixed-capacity recording before the first Step. Only successfully queued external commands are recorded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartRecording(CommandLog log)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>log</code> <a class="xref" href="TDMaker.Core.CommandLog.html">CommandLog</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_StartReplay_" data-uid="TDMaker.Core.Simulation.StartReplay*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_StartReplay_TDMaker_Core_CommandLog_" data-uid="TDMaker.Core.Simulation.StartReplay(TDMaker.Core.CommandLog)">
+  StartReplay(CommandLog)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Injects recorded commands at their original ticks. Configure the same initial world and seed; live external input is rejected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartReplay(CommandLog log)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>log</code> <a class="xref" href="TDMaker.Core.CommandLog.html">CommandLog</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_StartReplay_TDMaker_Core_CommandLog__examples">Examples</h4>
+  <pre><code class="lang-csharp">var replay = new Simulation(templates, level, config, log.Seed); replay.StartReplay(log);</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_Step_" data-uid="TDMaker.Core.Simulation.Step*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_Step" data-uid="TDMaker.Core.Simulation.Step">
+  Step()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Advances one fixed tick: damage precedes exits, outcomes precede Flush, new entities act next tick.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Step()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_StopRecording_" data-uid="TDMaker.Core.Simulation.StopRecording*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_StopRecording" data-uid="TDMaker.Core.Simulation.StopRecording">
+  StopRecording()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Seals and detaches the current recording between ticks; does nothing when not recording.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopRecording()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_TryResolvePoint_" data-uid="TDMaker.Core.Simulation.TryResolvePoint*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_TryResolvePoint_TDMaker_Core_Defs_PointRuleDef_TDMaker_Core_Vec2_TDMaker_Core_Vec2__" data-uid="TDMaker.Core.Simulation.TryResolvePoint(TDMaker.Core.Defs.PointRuleDef,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)">
+  TryResolvePoint(PointRuleDef, Vec2, out Vec2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses the shared point policy for previews, hero destinations, and spell approvals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryResolvePoint(PointRuleDef rule, Vec2 candidate, out Vec2 accepted)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rule</code> <a class="xref" href="TDMaker.Core.Defs.PointRuleDef.html">PointRuleDef</a></dt>
+    <dd></dd>
+    <dt><code>candidate</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>accepted</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_TryResolveRallyPoint_" data-uid="TDMaker.Core.Simulation.TryResolveRallyPoint*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_TryResolveRallyPoint_System_Int32_TDMaker_Core_Vec2_TDMaker_Core_Vec2__" data-uid="TDMaker.Core.Simulation.TryResolveRallyPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)">
+  TryResolveRallyPoint(int, Vec2, out Vec2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates a barracks rally point using the same range, finite-coordinate and lane projection rules as SetRallyPoint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryResolveRallyPoint(int towerId, Vec2 desired, out Vec2 resolved)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>towerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>desired</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>resolved</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Simulation_TryResolveRallyPoint_System_Int32_TDMaker_Core_Vec2_TDMaker_Core_Vec2___examples">Examples</h4>
+  <pre><code class="lang-csharp">bool valid = sim.TryResolveRallyPoint(tower.Id, cursor, out Vec2 preview);</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_TryTransferToPath_" data-uid="TDMaker.Core.Simulation.TryTransferToPath*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_TryTransferToPath_System_Int32_TDMaker_Core_Defs_PathDestinationDef_System_Int32_" data-uid="TDMaker.Core.Simulation.TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32)">
+  TryTransferToPath(int, PathDestinationDef, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Atomically changes path/lane/cursor/position, clears interception and refreshes the spatial index. Invalid geometry changes nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryTransferToPath(int entityId, PathDestinationDef destination, int sourceId = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entityId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="TDMaker.Core.Defs.PathDestinationDef.html">PathDestinationDef</a></dt>
+    <dd></dd>
+    <dt><code>sourceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_TryTransferToPath_" data-uid="TDMaker.Core.Simulation.TryTransferToPath*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_TryTransferToPath_System_Int32_TDMaker_Core_Defs_PathDestinationDef_System_Int32_System_String_" data-uid="TDMaker.Core.Simulation.TryTransferToPath(System.Int32,TDMaker.Core.Defs.PathDestinationDef,System.Int32,System.String)">
+  TryTransferToPath(int, PathDestinationDef, int, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transfers a unit and includes the supplied mechanism identity in PathTransferred.Key. Null preserves the legacy unkeyed notification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryTransferToPath(int entityId, PathDestinationDef destination, int sourceId, string mechanismKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entityId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="TDMaker.Core.Defs.PathDestinationDef.html">PathDestinationDef</a></dt>
+    <dd></dd>
+    <dt><code>sourceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>mechanismKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Simulation_TryValidateSpellPoint_" data-uid="TDMaker.Core.Simulation.TryValidateSpellPoint*"></a>
+
+  <h3 id="TDMaker_Core_Simulation_TryValidateSpellPoint_System_Int32_TDMaker_Core_Vec2_TDMaker_Core_Vec2__" data-uid="TDMaker.Core.Simulation.TryValidateSpellPoint(System.Int32,TDMaker.Core.Vec2,TDMaker.Core.Vec2@)">
+  TryValidateSpellPoint(int, Vec2, out Vec2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates spell placement for UI previews without consuming cooldown or randomness.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryValidateSpellPoint(int spellIndex, Vec2 position, out Vec2 accepted)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>spellIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>accepted</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

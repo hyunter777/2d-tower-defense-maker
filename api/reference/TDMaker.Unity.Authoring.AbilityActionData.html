@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AbilityActionData | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AbilityActionData | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="One timed action channel of an ability rank, baked into . Payloads can be combined.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Authoring.AbilityActionData">
+
+
+
+  <h1 id="TDMaker_Unity_Authoring_AbilityActionData" data-uid="TDMaker.Unity.Authoring.AbilityActionData" class="text-break">
+Class AbilityActionData  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<span class="xref">Unity</span>.<a class="xref" href="TDMaker.Unity.Authoring.html">Authoring</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Unity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>One timed action channel of an ability rank, baked into <a class="xref" href="TDMaker.Core.Defs.AbilityActionDef.html">AbilityActionDef</a>. Payloads can be combined.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class AbilityActionData</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AbilityActionData</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Unity_Authoring_AbilityActionData__ctor_" data-uid="TDMaker.Unity.Authoring.AbilityActionData.#ctor*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData__ctor" data-uid="TDMaker.Unity.Authoring.AbilityActionData.#ctor">
+  AbilityActionData()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbilityActionData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_area" data-uid="TDMaker.Unity.Authoring.AbilityActionData.area">
+  area
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Region emitted on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AreaEffectData area</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.AreaEffectData.html">AreaEffectData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_attack" data-uid="TDMaker.Unity.Authoring.AbilityActionData.attack">
+  attack
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional ranged attack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RangedAttackData attack</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.RangedAttackData.html">RangedAttackData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_beam" data-uid="TDMaker.Unity.Authoring.AbilityActionData.beam">
+  beam
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Continuous single-target channel with an exact damage budget.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BeamData beam</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.BeamData.html">BeamData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_chain" data-uid="TDMaker.Unity.Authoring.AbilityActionData.chain">
+  chain
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Chained attack jumping between nearby targets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ChainAttackData chain</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.ChainAttackData.html">ChainAttackData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_cooldown" data-uid="TDMaker.Unity.Authoring.AbilityActionData.cooldown">
+  cooldown
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Seconds between activations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Min(0.05)]
+public float cooldown</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_customAction" data-uid="TDMaker.Unity.Authoring.AbilityActionData.customAction">
+  customAction
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional custom action (your own <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionAsset.html">AbilityActionAsset</a> subclass).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbilityActionAsset customAction</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.AbilityActionAsset.html">AbilityActionAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_initialDelay" data-uid="TDMaker.Unity.Authoring.AbilityActionData.initialDelay">
+  initialDelay
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delay before a newly purchased channel can run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Min(0)]
+public float initialDelay</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_mines" data-uid="TDMaker.Unity.Authoring.AbilityActionData.mines">
+  mines
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Automatic mine laying on lane nodes around the actor (flight, landing, arming, burst).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MineFieldData mines</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.MineFieldData.html">MineFieldData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_multiTarget" data-uid="TDMaker.Unity.Authoring.AbilityActionData.multiTarget">
+  multiTarget
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attack hitting several distinct targets at once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiTargetAttackData multiTarget</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.MultiTargetAttackData.html">MultiTargetAttackData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_raise" data-uid="TDMaker.Unity.Authoring.AbilityActionData.raise">
+  raise
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raises new units from nearby bodies of the fallen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RaiseRemainsData raise</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.RaiseRemainsData.html">RaiseRemainsData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_selfEffect" data-uid="TDMaker.Unity.Authoring.AbilityActionData.selfEffect">
+  selfEffect
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional effect attached to the owner on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatusEffectAsset selfEffect</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.StatusEffectAsset.html">StatusEffectAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_skillExperiencePerRank" data-uid="TDMaker.Unity.Authoring.AbilityActionData.skillExperiencePerRank">
+  skillExperiencePerRank
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hero skill experience per rank on activation (heroes only).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Min(0)]
+public float skillExperiencePerRank</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_summon" data-uid="TDMaker.Unity.Authoring.AbilityActionData.summon">
+  summon
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Units created on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SummonData summon</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.SummonData.html">SummonData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_transfer" data-uid="TDMaker.Unity.Authoring.AbilityActionData.transfer">
+  transfer
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moves nearby enemies to an exact path destination.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathTransferData transfer</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.PathTransferData.html">PathTransferData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_trap" data-uid="TDMaker.Unity.Authoring.AbilityActionData.trap">
+  trap
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fixed-position deployment that arms and triggers on nearby units.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TrapData trap</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.TrapData.html">TrapData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useAttack" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useAttack">
+  useAttack
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_attack">attack</a> is fired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useAttack</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useBeam" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useBeam">
+  useBeam
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_beam">beam</a> starts on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useBeam</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useChain" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useChain">
+  useChain
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_chain">chain</a> runs on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useChain</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useMines" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useMines">
+  useMines
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_mines">mines</a> throws a mine on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useMines</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useMultiTarget" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useMultiTarget">
+  useMultiTarget
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_multiTarget">multiTarget</a> runs on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useMultiTarget</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useRaise" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useRaise">
+  useRaise
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_raise">raise</a> raises bodies on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useRaise</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useSelfEffect" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useSelfEffect">
+  useSelfEffect
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Editor marker: this action is a self buff (kept while no <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_selfEffect">selfEffect</a> is picked yet). Baking only uses <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_selfEffect">selfEffect</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useSelfEffect</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useSummon" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useSummon">
+  useSummon
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_summon">summon</a> is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useSummon</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useTransfer" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useTransfer">
+  useTransfer
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_transfer">transfer</a> runs on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useTransfer</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_useTrap" data-uid="TDMaker.Unity.Authoring.AbilityActionData.useTrap">
+  useTrap
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="TDMaker.Unity.Authoring.AbilityActionData.html#TDMaker_Unity_Authoring_AbilityActionData_trap">trap</a> is placed on activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useTrap</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Unity_Authoring_AbilityActionData_ToDef_" data-uid="TDMaker.Unity.Authoring.AbilityActionData.ToDef*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AbilityActionData_ToDef" data-uid="TDMaker.Unity.Authoring.AbilityActionData.ToDef">
+  ToDef()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bakes the action, or null when it has no payload.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbilityActionDef ToDef()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.AbilityActionDef.html">AbilityActionDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

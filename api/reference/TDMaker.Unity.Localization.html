@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace TDMaker.Unity.Localization | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace TDMaker.Unity.Localization | 2D Tower Defense Maker API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Localization">
+
+  <h1 id="TDMaker_Unity_Localization" data-uid="TDMaker.Unity.Localization" class="text-break">Namespace TDMaker.Unity.Localization</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Localization.ContentTexts.html">ContentTexts</a></dt>
+      <dd><p>Presentation-only translations keyed by stable content IDs. Missing translations use the authored text;
+template IDs, baked definitions, saves and replay hashes are independent of the selected language.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Localization.HudTexts.html">HudTexts</a></dt>
+      <dd><p>Keys of every text the <a class="xref" href="TDMaker.Unity.Hud.GameHud.html">GameHud</a> and the campaign screens show, and their built-in English texts (used when no table
+has a key). <code>{0}</code>, <code>{1}</code> ... are filled with numbers or names; keep them (in any order) when translating.
+The sample generator writes these texts into the English sample table, so a copy of that asset is a ready template.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Localization.TextResolver.html">TextResolver</a></dt>
+      <dd><p>Resolves text keys for the selected language. Lookup order: the optional custom <a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Provider">Provider</a>, the
+<a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Tables">Tables</a> of the selected <a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Language">Language</a>, the English tables, the built-in English texts
+(<a class="xref" href="TDMaker.Unity.Localization.HudTexts.html#TDMaker_Unity_Localization_HudTexts_English">English</a>), then the caller's fallback, then the key itself. The merged table is rebuilt only when
+the language, the table list or a table changes; lookups do not allocate. <a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Version">Version</a> changes on every rebuild,
+so views can cache formatted strings and refresh them only then. The scene's instance is
+<a class="xref" href="TDMaker.Unity.View.TDGameSettings.html#TDMaker_Unity_View_TDGameSettings_Texts">Texts</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Localization.TextTable.html">TextTable</a></dt>
+      <dd><p>A string table for one language: key → text. Create one with <code>Assets/Create/2D Tower Defense Maker/Text Table</code>, set its
+<a class="xref" href="TDMaker.Unity.Localization.TextTable.html#TDMaker_Unity_Localization_TextTable_LanguageCode">LanguageCode</a> (&quot;en&quot;, &quot;ko&quot;, &quot;de&quot;, ...) and add it to <a class="xref" href="TDMaker.Unity.View.TDGameSettings.html#TDMaker_Unity_View_TDGameSettings_textTables">textTables</a>.
+Entries with an empty text count as missing (the English text is used instead), so a partly translated table still works.
+Several tables may share a language; later tables in the settings list override earlier ones.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Localization.TextTable.Entry.html">TextTable.Entry</a></dt>
+      <dd><p>One key and its text.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Localization.ITextProvider.html">ITextProvider</a></dt>
+      <dd><p>A source of user-visible text by key. <a class="xref" href="TDMaker.Unity.Localization.TextTable.html">TextTable</a> assets implement it; implement it yourself to feed the HUD from
+another system (for example the Unity Localization package or a spreadsheet import) and assign it to
+<a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Provider">Provider</a>. Lookups happen when a label changes, not every frame, but should not allocate.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

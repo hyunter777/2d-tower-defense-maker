@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace TDMaker.Unity.View | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace TDMaker.Unity.View | 2D Tower Defense Maker API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.View">
+
+  <h1 id="TDMaker_Unity_View" data-uid="TDMaker.Unity.View" class="text-break">Namespace TDMaker.Unity.View</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.ArtSet.html">ArtSet</a></dt>
+      <dd><p>A swappable set of sprites keyed by view key (template view keys and projectile view keys). Assign one to an
+<a class="xref" href="TDMaker.Unity.View.EntityViewRegistry.html">EntityViewRegistry</a> to draw units, towers and projectiles with these sprites instead of the generated
+primitives; anything without an entry keeps its prefab or primitive look, so partial sets are fine. Swapping the asset
+swaps the whole look without code changes. Also carries the build plot sprite drawn by <a class="xref" href="TDMaker.Unity.View.LevelView.html">LevelView</a>.
+Create one with <code>Assets/Create/2D Tower Defense Maker/Art Set</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.ArtSet.Entry.html">ArtSet.Entry</a></dt>
+      <dd><p>Sprites for one view key.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.AudioCuePlayer.html">AudioCuePlayer</a></dt>
+      <dd><p>Plays <a class="xref" href="TDMaker.Unity.Authoring.AudioCue.html">AudioCue</a>s through a small pool of AudioSources and routes global game events (waves, building,
+selling, victory ...) and mechanic events (chains, traps, mines, beams, heals, shields, reflection, knockback, companions,
+returning units, body raising) to cues.
+Per-template cues (attack, hit, death, projectiles, spells) are routed by <a class="xref" href="TDMaker.Unity.View.EntityViewRegistry.html">EntityViewRegistry</a>; the HUD plays
+the interface cues (click, build menu, rally, wave call). Every slot is optional.
+Volumes come from <a class="xref" href="TDMaker.Unity.View.TDGameSettings.html">TDGameSettings</a> (Master × SFX or UI) and each channel may route to an AudioMixerGroup.
+Each cue respects its <a class="xref" href="TDMaker.Unity.Authoring.AudioCue.html#TDMaker_Unity_Authoring_AudioCue_minInterval">minInterval</a>, at most <code>Max Voices Per Cue</code> copies play at once and the
+pool never grows past <code>Voices</code> (the oldest voice is reused), so dense fights do not stack sounds or allocate.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.AudioCuePlayer.GlobalCues.html">AudioCuePlayer.GlobalCues</a></dt>
+      <dd><p>Cues for global game events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.AudioCuePlayer.KeyedCue.html">AudioCuePlayer.KeyedCue</a></dt>
+      <dd><p>A cue for one mechanic id (chain, trap, mine, beam, pulse, reflection, transfer or raise id), status effect id or template id (companions, returning units).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.AudioCuePlayer.MechanicCues.html">AudioCuePlayer.MechanicCues</a></dt>
+      <dd><p>Default cues for the built-in mechanic events. A <a class="xref" href="TDMaker.Unity.View.AudioCuePlayer.KeyedCue.html">AudioCuePlayer.KeyedCue</a> with the mechanic's id overrides them.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.EllipseRenderer.html">EllipseRenderer</a></dt>
+      <dd><p>A smooth range ellipse: a filled mesh plus an outline line. Its shape always comes from <a class="xref" href="TDMaker.Unity.Authoring.RangeShape.html">RangeShape</a>,
+the same ellipse the simulation uses for range checks, so what is drawn is what is hit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.EntityView.html">EntityView</a></dt>
+      <dd><p>Pooled visual for one simulation entity: interpolated position, y-sorting, facing, optional health bar, hit flash,
+death fade, status-effect tint and icons, tower tier pips, projectile trail and orientation, hero death/return
+presentation, and an optional Animator driven with the standard parameters
+(<code>Move</code> bool, <code>Speed</code> float, <code>Attack</code>/<code>Hit</code>/<code>Die</code> triggers; missing parameters are skipped).
+Add it to custom prefabs to control sorting and the body renderer; it is added automatically otherwise.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.EntityView.AnimatorParameters.html">EntityView.AnimatorParameters</a></dt>
+      <dd><p>Animator parameter names driven by the view.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.EntityViewRegistry.html">EntityViewRegistry</a></dt>
+      <dd><p>Creates, pools and updates <a class="xref" href="TDMaker.Unity.View.EntityView.html">EntityView</a>s from simulation events. Prefabs come from authoring
+assets or the <span class="xref">TDMaker.Unity.View.EntityViewRegistry.overrides</span> list (by view key); otherwise generated primitive sprites are used.
+Also routes per-template presentation hooks (VFX prefabs through <a class="xref" href="TDMaker.Unity.View.VfxPool.html">VfxPool</a>, audio cues through
+<a class="xref" href="TDMaker.Unity.View.AudioCuePlayer.html">AudioCuePlayer</a>) and draws built-in feedback: impact flashes, splash rings and instant-hit beams.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.EntityViewRegistry.ViewOverride.html">EntityViewRegistry.ViewOverride</a></dt>
+      <dd><p>Maps a view key to a prefab, overriding the asset's own prefab.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.LevelView.html">LevelView</a></dt>
+      <dd><p>Draws level geometry for samples and prototypes: a generated ground texture (grass, roads that follow the lanes,
+rocks, tufts and trees), path entry/exit markers and stone build pads. Everything is procedural and deterministic.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.MusicPlayer.html">MusicPlayer</a></dt>
+      <dd><p>Plays background music: a menu loop while no battle is shown, the level's battle loop (<a class="xref" href="TDMaker.Unity.Authoring.LevelAsset.html#TDMaker_Unity_Authoring_LevelAsset_music">music</a>,
+falling back to this component's defaults), an optional intense loop from configurable waves (last wave, waves flagged
+<a class="xref" href="TDMaker.Unity.Authoring.WaveData.html#TDMaker_Unity_Authoring_WaveData_bossWave">bossWave</a>, or from a wave number) and victory / defeat stingers that stop or duck the loop.
+Changes crossfade between two pooled AudioSources; a third plays stingers. Volume = track × <a class="xref" href="TDMaker.Unity.View.TDGameSettings.html">TDGameSettings</a>
+Music × Master, routed to the Music mixer group when one is set. No allocation per frame; every clip is optional
+(an empty slot is silent).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.PointerInput.html">PointerInput</a></dt>
+      <dd><p>Mouse and keyboard access that works with both the Input System package and the legacy Input Manager.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.PrimitiveSprites.html">PrimitiveSprites</a></dt>
+      <dd><p>Procedurally generated sprites (1 world unit across) so samples work with zero imported art.
+Every shape exists as a flat white silhouette and as an outlined, top-lit grayscale version; both are tinted
+by the renderer colour. Shapes are described by signed distance functions in unit space (-0.5..0.5, y up).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.SimProfilerMarkers.html">SimProfilerMarkers</a></dt>
+      <dd><p>Core profiling hook that wraps every fixed step and every pipeline stage (system) in a Unity
+<span class="xref">Unity.Profiling.ProfilerMarker</span>, so the Unity Profiler shows <code>TDMaker.Sim.Step</code> with one child marker per stage
+(<code>TDMaker.Sim.Motion</code>, <code>TDMaker.Sim.Ranged</code>, ...). Another <a class="xref" href="TDMaker.Core.ISimProfiler.html">ISimProfiler</a> can be chained through
+<a class="xref" href="TDMaker.Unity.View.SimProfilerMarkers.html#TDMaker_Unity_View_SimProfilerMarkers_Next">Next</a>; it receives every callback after the marker begins and before it ends.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.SimulationRunner.html">SimulationRunner</a></dt>
+      <dd><p>Owns a <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_Simulation">Simulation</a> and advances it with the core <a class="xref" href="TDMaker.Core.SimulationClock.html">SimulationClock</a> from <code>Update</code>
+(catch-up limit = <code>catch-up ticks × speed</code> per frame). Events produced during a frame are dispatched in emission
+order through <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_EventRaised">EventRaised</a> and then cleared, so the event buffer (<code>Event Capacity</code>) must hold every
+tick a frame catches up (at most catch-up ticks × speed). Commands queued after the game ended are rejected by the core
+with <a class="xref" href="TDMaker.Core.CommandFailure.html#TDMaker_Core_CommandFailure_GameEnded">GameEnded</a> on the next frame (the clock no longer steps, so the runner flushes them).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.TDCameraController.html">TDCameraController</a></dt>
+      <dd><p>Orthographic 2D camera for a level: frames the level on start using the level's <a class="xref" href="TDMaker.Unity.Authoring.CameraFramingData.html">CameraFramingData</a> (fit the
+whole map, fit its height or width and scroll, or a fixed view size; start focus and optional intro pan) at any aspect
+ratio, and optionally pans (screen edge, middle-mouse drag, WASD/arrows, left drag from empty ground) and zooms (mouse
+wheel, +/-), always clamped to the bounds. Toggles live in <a class="xref" href="TDMaker.Unity.View.TDGameSettings.html">TDGameSettings</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.TDGameSettings.html">TDGameSettings</a></dt>
+      <dd><p>Player-facing presentation toggles read by the camera, HUD and feedback components. Put one in the scene
+(components find it automatically) and expose its fields in your options menu.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.TDHud.html">TDHud</a></dt>
+      <dd><p>Minimal IMGUI heads-up display for PC (mouse and keyboard): economy and wave status, wave calling, speed control,
+slot/tower menus (build, branching upgrades, abilities, target priority, sell, rally), hero portraits with
+level/XP/skills/respawn timer and click-to-move, and spell buttons with click-to-target.
+Every range, aim and pick ellipse uses <a class="xref" href="TDMaker.Unity.Authoring.RangeShape.html">RangeShape</a>, the same shape as the simulation's range check.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.UpgradeRunRecord.html">UpgradeRunRecord</a></dt>
+      <dd><p>The permanent upgrades of one run: the shop's name, the purchased rank of every track and the forced rank (-1 = none).
+Saved next to a recorded command log (<code>&lt;file&gt;.upgrades.json</code>) so a replay rebuilds the same snapshot.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.VfxPool.html">VfxPool</a></dt>
+      <dd><p>Pools VFX prefab instances. Particle systems on an instance are restarted on reuse and the instance returns to the
+pool after its lifetime (particle duration + start lifetime, or <span class="xref">TDMaker.Unity.View.VfxPool.defaultLifetime</span>).</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.IPooledVfx.html">IPooledVfx</a></dt>
+      <dd><p>Implement on a VFX prefab's components to be told when a pooled instance is (re)used.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.GroundStyle.html">GroundStyle</a></dt>
+      <dd><p>How <a class="xref" href="TDMaker.Unity.View.LevelView.html">LevelView</a> draws the ground.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.MusicPlayer.State.html">MusicPlayer.State</a></dt>
+      <dd><p>What the player is currently playing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.MusicPlayer.StingerMode.html">MusicPlayer.StingerMode</a></dt>
+      <dd><p>What a victory or defeat stinger does to the battle loop.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.TDKey.html">TDKey</a></dt>
+      <dd><p>Keyboard keys used by the default PC controls.</p>
+</dd>
+    </dl>
+    <h3 id="delegates">
+Delegates
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.SimEventHandler.html">SimEventHandler</a></dt>
+      <dd><p>Receives simulation events without copying them.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.View.TemplateDecorator.html">TemplateDecorator</a></dt>
+      <dd><p>Changes a baked template before the simulation is created (for example to add <code>WithCustomData</code> values).
+<code class="paramref">asset</code> is the authoring asset the template came from, or null. Return the template to use.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

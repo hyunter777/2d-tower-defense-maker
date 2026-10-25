@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RangeShape | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RangeShape | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="The single source of the range ellipse used by every view, gizmo and editor preview. It matches the simulation (Simulation.RangeDistanceSquared): a point is inside when dx&#178;/r&#178; + dy&#178;/(k&#183;r)&#178; ≤ 1 (boundary included), with k = range Y scale. The horizontal semi-axis is r and the vertical semi-axis is k&#183;r, so k &amp;lt; 1 flattens the ellipse vertically (an oblique top-down look).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Authoring.RangeShape">
+
+
+
+  <h1 id="TDMaker_Unity_Authoring_RangeShape" data-uid="TDMaker.Unity.Authoring.RangeShape" class="text-break">
+Class RangeShape  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<span class="xref">Unity</span>.<a class="xref" href="TDMaker.Unity.Authoring.html">Authoring</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Unity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The single source of the range ellipse used by every view, gizmo and editor preview. It matches the simulation
+(<code>Simulation.RangeDistanceSquared</code>): a point is inside when <code>dx²/r² + dy²/(k·r)² ≤ 1</code> (boundary included),
+with <code>k</code> = range Y scale. The horizontal semi-axis is <code>r</code> and the vertical semi-axis is <code>k·r</code>,
+so <code>k &lt; 1</code> flattens the ellipse vertically (an oblique top-down look).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class RangeShape</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RangeShape</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_RangeShape_DefaultYScale" data-uid="TDMaker.Unity.Authoring.RangeShape.DefaultYScale">
+  DefaultYScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default range Y scale used by samples and fallbacks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const float DefaultYScale = 0.8</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Unity_Authoring_RangeShape_Contains_" data-uid="TDMaker.Unity.Authoring.RangeShape.Contains*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_RangeShape_Contains_UnityEngine_Vector2_UnityEngine_Vector2_System_Single_System_Single_" data-uid="TDMaker.Unity.Authoring.RangeShape.Contains(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Single)">
+  Contains(Vector2, Vector2, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <code class="paramref">point</code> lies inside (or on) the range ellipse around <code class="paramref">center</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Contains(Vector2 center, Vector2 point, float range, float yScale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>range</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>yScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_RangeShape_DistanceSquared_" data-uid="TDMaker.Unity.Authoring.RangeShape.DistanceSquared*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_RangeShape_DistanceSquared_UnityEngine_Vector2_UnityEngine_Vector2_System_Single_" data-uid="TDMaker.Unity.Authoring.RangeShape.DistanceSquared(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)">
+  DistanceSquared(Vector2, Vector2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elliptical distance squared in horizontal units, equal to the simulation's range metric.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float DistanceSquared(Vector2 center, Vector2 point, float yScale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>yScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_RangeShape_Point_" data-uid="TDMaker.Unity.Authoring.RangeShape.Point*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_RangeShape_Point_UnityEngine_Vector2_System_Single_System_Single_System_Single_" data-uid="TDMaker.Unity.Authoring.RangeShape.Point(UnityEngine.Vector2,System.Single,System.Single,System.Single)">
+  Point(Vector2, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A point on the ellipse outline at <code class="paramref">angle</code> radians.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 Point(Vector2 center, float range, float yScale, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>range</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>yScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_RangeShape_SemiAxes_" data-uid="TDMaker.Unity.Authoring.RangeShape.SemiAxes*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_RangeShape_SemiAxes_System_Single_System_Single_" data-uid="TDMaker.Unity.Authoring.RangeShape.SemiAxes(System.Single,System.Single)">
+  SemiAxes(float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Horizontal (x) and vertical (y) semi-axes of a range ellipse: <code>(r, k·r)</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 SemiAxes(float range, float yScale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>range</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>yScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_RangeShape_SpriteScale_" data-uid="TDMaker.Unity.Authoring.RangeShape.SpriteScale*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_RangeShape_SpriteScale_System_Single_System_Single_" data-uid="TDMaker.Unity.Authoring.RangeShape.SpriteScale(System.Single,System.Single)">
+  SpriteScale(float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Local scale for a 1-unit sprite (circle or ring) so it covers the ellipse of radius <code class="paramref">range</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 SpriteScale(float range, float yScale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>range</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>yScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

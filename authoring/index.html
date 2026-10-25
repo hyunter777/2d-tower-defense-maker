@@ -1,0 +1,3181 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="English guides and API reference for building 2D tower defense games in Unity 6.">
+      
+      
+      
+        <link rel="canonical" href="https://hyunter777.github.io/2d-tower-defense-maker/authoring/">
+      
+      
+        <link rel="prev" href="../concepts/">
+      
+      
+        <link rel="next" href="../editor-tools/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Content authoring - 2D Tower Defense Maker</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/styles.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#authoring-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="2D Tower Defense Maker" class="md-header__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2D Tower Defense Maker
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Content authoring
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="2D Tower Defense Maker" class="md-nav__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    2D Tower Defense Maker
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start here
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build your game
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build your game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content authoring
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-view-all-entity-assets-enemy-tower-soldier-hero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity and view (all entity assets: Enemy, Tower, Soldier, Hero)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#melee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Melee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranged-attack-list-each-entry-is-an-independent-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ranged attack (list; each entry is an independent channel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-enemy-regeneration-hero-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery (enemy regeneration, hero recovery)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stat-modifier-status-effects-and-ability-passives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stat modifier (status effects and ability passives)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enemy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tower" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tower
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tower">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abilities-tower-abilities-and-hero-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abilities (tower abilities and hero skills)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soldier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soldier
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hero
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projectile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projectile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Effect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spell
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#point-rule-spells-and-hero-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point rule (spells and hero movement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#area-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Area effect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wave-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wave Set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scene-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scene components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scene components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-authoring-2d-tower-defense-makerlevel-authoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level Authoring (2D Tower Defense Maker/Level Authoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-authoring-2d-tower-defense-makerpath-authoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path Authoring (2D Tower Defense Maker/Path Authoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-slot-authoring-2d-tower-defense-makerbuild-slot-authoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Slot Authoring (2D Tower Defense Maker/Build Slot Authoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation-runner-2d-tower-defense-makersimulation-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation Runner (2D Tower Defense Maker/Simulation Runner)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-view-registry-2d-tower-defense-makerentity-view-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entity View Registry (2D Tower Defense Maker/Entity View Registry)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-view-2d-tower-defense-makerlevel-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level View (2D Tower Defense Maker/Level View)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-hud-and-other-presentation-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Game HUD and other presentation components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-hud-2d-tower-defense-makertd-hud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TD Hud (2D Tower Defense Maker/TD Hud)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gameplay mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campaigns and upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize and extend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customize and extend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HUD, fonts and audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extending the framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../determinism-and-replay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Determinism and replay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference and support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference and support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and licenses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-view-all-entity-assets-enemy-tower-soldier-hero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity and view (all entity assets: Enemy, Tower, Soldier, Hero)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#melee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Melee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranged-attack-list-each-entry-is-an-independent-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ranged attack (list; each entry is an independent channel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-enemy-regeneration-hero-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery (enemy regeneration, hero recovery)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stat-modifier-status-effects-and-ability-passives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stat modifier (status effects and ability passives)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enemy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tower" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tower
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tower">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abilities-tower-abilities-and-hero-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abilities (tower abilities and hero skills)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soldier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soldier
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hero
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projectile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projectile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Effect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spell
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#point-rule-spells-and-hero-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point rule (spells and hero movement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#area-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Area effect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wave-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wave Set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scene-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scene components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scene components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-authoring-2d-tower-defense-makerlevel-authoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level Authoring (2D Tower Defense Maker/Level Authoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-authoring-2d-tower-defense-makerpath-authoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path Authoring (2D Tower Defense Maker/Path Authoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-slot-authoring-2d-tower-defense-makerbuild-slot-authoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Slot Authoring (2D Tower Defense Maker/Build Slot Authoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation-runner-2d-tower-defense-makersimulation-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation Runner (2D Tower Defense Maker/Simulation Runner)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-view-registry-2d-tower-defense-makerentity-view-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entity View Registry (2D Tower Defense Maker/Entity View Registry)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-view-2d-tower-defense-makerlevel-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level View (2D Tower Defense Maker/Level View)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-hud-and-other-presentation-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Game HUD and other presentation components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-hud-2d-tower-defense-makertd-hud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TD Hud (2D Tower Defense Maker/TD Hud)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="authoring-reference">Authoring Reference<a class="headerlink" href="#authoring-reference" title="Permanent link">&para;</a></h1>
+<p>All gameplay content is authored as ScriptableObjects (<strong>Create &gt; 2D Tower Defense Maker &gt; …</strong>) plus a few scene components (<strong>Add Component &gt; 2D Tower Defense Maker &gt; …</strong>). At Play, <code>LevelAsset.Bake()</code> turns them into immutable core definitions.</p>
+<p>Units: distances in world units, times in game seconds, armor/resist values as fractions (0–1).</p>
+<p>Contents: <a href="#common-data">Common data</a> · <a href="#enemy">Enemy</a> · <a href="#tower">Tower</a> · <a href="#soldier">Soldier</a> · <a href="#hero">Hero</a> · <a href="#projectile">Projectile</a> · <a href="#status-effect">Status Effect</a> · <a href="#spell">Spell</a> · <a href="#wave-set">Wave Set</a> · <a href="#level">Level</a> · <a href="#scene-components">Scene components</a></p>
+<p>The built-in mechanic blocks (chains, multi-target attacks, impact payloads and knockback, pulses, healing, shields, combat modifiers, traps, beams, reflection, life steal, path transfers, permanent auras, mine fields, companions and on-site revival) are described in <a href="../mechanics/">Mechanic Library</a>; HUD, feedback, camera and audio components in <a href="../presentation/">Presentation</a>.</p>
+<hr />
+<h2 id="common-data">Common data<a class="headerlink" href="#common-data" title="Permanent link">&para;</a></h2>
+<h3 id="identity-and-view-all-entity-assets-enemy-tower-soldier-hero">Identity and view (all entity assets: Enemy, Tower, Soldier, Hero)<a class="headerlink" href="#identity-and-view-all-entity-assets-enemy-tower-soldier-hero" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Template Id</code></td>
+<td>Unique id inside a level. Blank = asset name. Two assets with the same id in one level fail the bake.</td>
+</tr>
+<tr>
+<td><code>Display Name</code></td>
+<td>Name in menus. Blank = asset name.</td>
+</tr>
+<tr>
+<td><code>View &gt; View Key</code></td>
+<td>Lookup key for views. Blank = template id.</td>
+</tr>
+<tr>
+<td><code>View &gt; Prefab</code></td>
+<td>Optional prefab (pooled). With no prefab, a matching ArtSet entry supplies the sprite; otherwise a primitive is generated.</td>
+</tr>
+<tr>
+<td><code>View &gt; Shape / Color / Size</code></td>
+<td>Placeholder sprite (Square, Circle, Diamond, Triangle, Keep, Bastion, Spire, Hall, Blob, Arrowhead, Hulk, Shield, Crest, Dart, Orb, Wing).</td>
+</tr>
+<tr>
+<td><code>View &gt; Show Health Bar</code></td>
+<td>Draw a health bar.</td>
+</tr>
+<tr>
+<td><code>View &gt; Shaded</code></td>
+<td>Generated sprites use the outlined, shaded style (off = flat silhouettes).</td>
+</tr>
+<tr>
+<td><code>View &gt; Facing</code></td>
+<td><code>None</code>, <code>FlipSprite</code> or <code>ScaleX</code> (for multi-sprite rigs) to face the movement direction.</td>
+</tr>
+<tr>
+<td><code>View &gt; Drive Animator</code></td>
+<td>Drive an <code>Animator</code> on the prefab with the standard parameters (<a href="../presentation/#entity-views">Presentation</a>).</td>
+</tr>
+<tr>
+<td><code>View &gt; Hooks</code></td>
+<td>Optional VFX prefabs and audio cues for spawn, attack, hit and death (<a href="../presentation/#presentation-hooks-vfx-and-audio">Presentation</a>).</td>
+</tr>
+<tr>
+<td><code>Extensions</code></td>
+<td>Optional <code>TemplateExtensionAsset</code>s (your subclasses) that decorate the baked template, for example with custom data (<a href="../extending/#2-custom-data-template-definition-runtime-component">Extending the Framework</a>).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Tip: add an <code>EntityView</code> component to custom prefabs to control sorting and which renderer is tinted; it is added automatically otherwise.</p>
+</blockquote>
+<h3 id="damage">Damage<a class="headerlink" href="#damage" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Kind</code></td>
+<td><code>Physical</code>, <code>Magical</code>, <code>True</code>, <code>Explosion</code>, <code>Electric</code>, <code>Poison</code>. See <a href="../concepts/#damage-pipeline">Concepts – Damage pipeline</a>.</td>
+</tr>
+<tr>
+<td><code>Minimum</code> / <code>Maximum</code></td>
+<td>Roll range.</td>
+</tr>
+<tr>
+<td><code>Radius</code></td>
+<td>0 = single target; &gt; 0 = area damage (range ellipse).</td>
+</tr>
+<tr>
+<td><code>Edge Multiplier</code></td>
+<td>Damage factor at the edge of the area, interpolated from 1 at the centre.</td>
+</tr>
+<tr>
+<td><code>Falloff</code></td>
+<td><code>DistanceEndpoints</code> (max at centre → min at edge), <code>RolledLinear</code> (one roll × edge factor), <code>ConstantMaximum</code>.</td>
+</tr>
+<tr>
+<td><code>Physical Pierce</code> / <code>Magical Pierce</code></td>
+<td>Armor / magic resist ignored by this hit (subtracted).</td>
+</tr>
+<tr>
+<td><code>Effects</code></td>
+<td>Status effects attached to every unit this hit damages.</td>
+</tr>
+<tr>
+<td><code>Experience Rate</code></td>
+<td>Hero experience per point of health removed (hero attacks).</td>
+</tr>
+<tr>
+<td><code>Impact</code></td>
+<td>Optional payload after each resolved hit: secondary blast, residual region, knockback and/or a path transfer (<a href="../mechanics/#impact-payload-damage-impact">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td><code>Life Steal</code></td>
+<td>Optional healing of the attacker from the health this hit actually removes (<a href="../mechanics/#life-steal-damage-life-steal">Mechanic Library</a>).</td>
+</tr>
+</tbody>
+</table>
+<p>Secondary blasts and region pulses use the same fields without <code>Impact</code> and <code>Life Steal</code> (<code>BasicDamageData</code>), so payloads cannot nest.</p>
+<h3 id="melee">Melee<a class="headerlink" href="#melee" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enabled</code></td>
+<td>Off = no melee slot. Soldiers without melee cannot block.</td>
+</tr>
+<tr>
+<td><code>Damage</code></td>
+<td>Damage per strike.</td>
+</tr>
+<tr>
+<td><code>Cooldown</code></td>
+<td>Seconds between strikes.</td>
+</tr>
+<tr>
+<td><code>Range</code></td>
+<td>Contact range (range ellipse).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ranged-attack-list-each-entry-is-an-independent-channel">Ranged attack (list; each entry is an independent channel)<a class="headerlink" href="#ranged-attack-list-each-entry-is-an-independent-channel" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Range</code></td>
+<td>Horizontal semi-axis <code>r</code> of the range ellipse; vertical is <code>r × k</code>.</td>
+</tr>
+<tr>
+<td><code>Minimum Range</code></td>
+<td>Inner exclusion radius.</td>
+</tr>
+<tr>
+<td><code>Cooldown</code></td>
+<td>Seconds between attacks.</td>
+</tr>
+<tr>
+<td><code>Damage</code></td>
+<td>Damage per hit.</td>
+</tr>
+<tr>
+<td><code>Projectile</code></td>
+<td>Projectile asset; empty = instant hit.</td>
+</tr>
+<tr>
+<td><code>Targets Flying</code> / <code>Targets Ground</code></td>
+<td>Eligible target types.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recovery-enemy-regeneration-hero-recovery">Recovery (enemy regeneration, hero recovery)<a class="headerlink" href="#recovery-enemy-regeneration-hero-recovery" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enabled</code></td>
+<td>Turn recovery on.</td>
+</tr>
+<tr>
+<td><code>Amount</code> / <code>Interval</code></td>
+<td>Health per recovery tick and seconds between ticks.</td>
+</tr>
+<tr>
+<td><code>Damage Grace</code></td>
+<td>Seconds without taking damage before recovery starts.</td>
+</tr>
+<tr>
+<td><code>Idle Only</code></td>
+<td>Only while not moving or fighting. <strong>Turn off for enemies</strong> (they are never idle).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stat-modifier-status-effects-and-ability-passives">Stat modifier (status effects and ability passives)<a class="headerlink" href="#stat-modifier-status-effects-and-ability-passives" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Speed Scale</code></td>
+<td>Movement multiplier (0.6 = 40% slow, 0 = rooted).</td>
+</tr>
+<tr>
+<td><code>Output Scale</code></td>
+<td>Outgoing damage multiplier.</td>
+</tr>
+<tr>
+<td><code>Input Scale</code> / <code>Magical Input Scale</code></td>
+<td>Incoming damage multipliers.</td>
+</tr>
+<tr>
+<td><code>Physical Shift</code> / <code>Magical Shift</code> / <code>Poison Shift</code></td>
+<td>Added armor / resist (fraction, may be negative).</td>
+</tr>
+<tr>
+<td><code>Stun</code></td>
+<td>Stops movement and attacks while active.</td>
+</tr>
+<tr>
+<td><code>Combat</code></td>
+<td><code>Range Scale</code>, <code>Disable Attacks</code>, <code>Ignore Blocking</code>, <code>Untargetable</code> (<a href="../mechanics/#combat-modifier-modifier-combat">Mechanic Library</a>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="enemy">Enemy<a class="headerlink" href="#enemy" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; Enemy</strong> (<code>EnemyAsset</code>). Required for every unit a wave spawns.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vitals</td>
+<td><code>Health</code></td>
+<td>Maximum hit points.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Physical Armor</code> / <code>Magical Armor</code> / <code>Poison Armor</code></td>
+<td>Damage reductions (0–1).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Speed</code></td>
+<td>Units per second along the lane.</td>
+</tr>
+<tr>
+<td>Reward</td>
+<td><code>Gold</code></td>
+<td>Bounty when killed.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Life Cost</code></td>
+<td>Lives lost when it leaks.</td>
+</tr>
+<tr>
+<td>Blocking</td>
+<td><code>Blockable</code></td>
+<td>Whether soldiers/heroes can block it.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Blocker Capacity</code></td>
+<td>How many friendly units can hold it at once.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Engagement</code></td>
+<td>Where blockers stand. <code>Contact Bias</code> X is this enemy's share of the horizontal gap (usually half its drawn body width plus a small gap), Y a signed world-Y shift; <code>Row Spacing</code> is the world-Y offset of the 2nd and 3rd blocker rows (they stand half of it closer). Blockers stand on the side the enemy walks toward, independent of melee range.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Flying</code></td>
+<td>Flying units ignore blocking and can only be hit by attacks with <code>Targets Flying</code>.</td>
+</tr>
+<tr>
+<td>Combat</td>
+<td><code>Melee</code></td>
+<td>Attack used against blocking units.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ranged Attacks</code></td>
+<td>Optional attacks against friendly units (they pick the closest).</td>
+</tr>
+<tr>
+<td>Abilities</td>
+<td><code>Regeneration</code></td>
+<td>Recovery (keep <code>Idle Only</code> off).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Melee Evasion</code></td>
+<td>Chance to dodge each incoming melee strike.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Status Immunities</code></td>
+<td>Effect ids or families this unit ignores (e.g. <code>slow</code>).</td>
+</tr>
+<tr>
+<td>Mechanics</td>
+<td><code>Tags</code></td>
+<td>Tag bits matched by <code>Required/Rejected Tags</code> of status effects and mechanic <code>Targets</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Behavior</code></td>
+<td>Always-on action channels (same fields as ability actions), for example a periodic shield cast on nearby allies.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Aura</code></td>
+<td>Area effect emitted when the unit appears. For a permanent aura enable <code>Until Source Lost</code> (and <code>Follow Source</code>): it lasts while the unit lives and is removed with it. May be pulse-only (heal or damage pulses without a status effect).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Reflection</code></td>
+<td>Thorns: returns a <code>Share</code> of the health the unit actually loses to its attacker as one hit of <code>Kind</code> (<a href="../mechanics/#reflection-enemy-reflection">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Death Summon</code></td>
+<td>Enemies released where it dies (split); they continue along the path.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Death Succession</code></td>
+<td>Successor rules for the released enemies: <code>Chain Budget</code>, <code>Rise Duration</code>, <code>Bounty Policy</code>, rise protection (<a href="../mechanics/#successor-rules-enemy-death-succession">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Revive</code></td>
+<td>Return on the spot: <code>Returns</code>, <code>Down Delay</code>, <code>Rise Duration</code>, <code>Return Share</code>, <code>Invulnerable / Untargetable While Rising</code>, <code>Clear Effects</code> (<a href="../mechanics/#return-on-the-spot-enemy-revive">Mechanic Library</a>).</td>
+</tr>
+</tbody>
+</table>
+<p>Inspector extras: effective HP against each damage kind and warnings (zero speed, full immunity). The validator warns about auras without a payload and auras that do not follow their unit, returns that never happen (<code>Returns</code> 0, no health back) and successor rules with nothing to release.</p>
+<hr />
+<h2 id="tower">Tower<a class="headerlink" href="#tower" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; Tower</strong> (<code>TowerAsset</code>). Each tier is a separate asset; tiers link through <code>Upgrades</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Economy</td>
+<td><code>Cost</code></td>
+<td>Gold to build this tier, or to upgrade <strong>into</strong> it.</td>
+</tr>
+<tr>
+<td>Tree</td>
+<td><code>Upgrades</code></td>
+<td>Next tiers. One entry = linear upgrade; two or more = branch.</td>
+</tr>
+<tr>
+<td>Combat</td>
+<td><code>Ranged Attacks</code></td>
+<td>Attack channels.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Target Priority</code></td>
+<td>Default priority: First, Last, Strongest, Weakest, Closest.</td>
+</tr>
+<tr>
+<td>Abilities</td>
+<td><code>Abilities</code></td>
+<td>Purchasable abilities (see below), usually on final branches.</td>
+</tr>
+<tr>
+<td>Barracks</td>
+<td><code>Soldier</code></td>
+<td>Assigning a Soldier asset turns this tier into a barracks.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Soldier Count</code></td>
+<td>Living soldiers maintained.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Rally Radius</code></td>
+<td>Maximum distance tower → rally point (range ellipse).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Respawn Time</code></td>
+<td>Seconds before a fallen soldier is replaced.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Formation Radius</code></td>
+<td>Spread of the idle formation around the rally point.</td>
+</tr>
+<tr>
+<td>Companions</td>
+<td><code>Companions</code></td>
+<td>Owner-bound escorts or a flying follower kept beside the tower; they leave when it is sold (see Hero &gt; Companions and <a href="../mechanics/#companions-hero-tower-companions">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td>Text</td>
+<td><code>Description</code></td>
+<td>Shown in menus.</td>
+</tr>
+</tbody>
+</table>
+<p>Only towers listed in the level's <code>Available Towers</code> can be built; their upgrade tiers, soldiers and projectiles are collected automatically. Sale refunds come from the level's <code>Refund Share</code>; the old per-tower <code>Refund Ratio</code> field is hidden and unused.</p>
+<h3 id="abilities-tower-abilities-and-hero-skills">Abilities (tower abilities and hero skills)<a class="headerlink" href="#abilities-tower-abilities-and-hero-skills" title="Permanent link">&para;</a></h3>
+<p><code>Abilities</code> / <code>Skills</code> entries (<code>AbilityData</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code></td>
+<td>Ability id; blank = display name.</td>
+</tr>
+<tr>
+<td><code>Display Name</code> / <code>Description</code></td>
+<td>Button text and tooltip.</td>
+</tr>
+<tr>
+<td><code>Reset Cooldown On Purchase</code></td>
+<td>Reset this ability's timers whenever a rank is bought.</td>
+</tr>
+<tr>
+<td><code>Ranks</code></td>
+<td>Ranks in purchase order. Each rank <strong>replaces</strong> the previous rank's payload.</td>
+</tr>
+</tbody>
+</table>
+<p>Each rank (<code>AbilityRankData</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Cost</code></td>
+<td>Gold (tower) or skill points (hero).</td>
+</tr>
+<tr>
+<td><code>Required Level</code></td>
+<td>Hero skills only.</td>
+</tr>
+<tr>
+<td><code>Passive</code></td>
+<td>Stat modifier active while this rank is owned.</td>
+</tr>
+<tr>
+<td><code>Soldier Replacement</code></td>
+<td>Barracks only: living and future soldiers become this Soldier asset.</td>
+</tr>
+<tr>
+<td><code>Actions</code></td>
+<td>Timed action channels (below).</td>
+</tr>
+</tbody>
+</table>
+<p>Each action (<code>AbilityActionData</code>) runs on its own cooldown; payloads can be combined:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Cooldown</code></td>
+<td>Seconds between activations.</td>
+</tr>
+<tr>
+<td><code>Initial Delay</code></td>
+<td>Delay before a newly bought channel can fire.</td>
+</tr>
+<tr>
+<td><code>Skill Experience Per Rank</code></td>
+<td>Hero only: experience per successful activation × rank (also for actions that only carry a chain, multi-target, trap, mine, beam, transfer, raise or custom payload).</td>
+</tr>
+<tr>
+<td><code>Use Attack</code> + <code>Attack</code></td>
+<td>Fire an extra ranged attack.</td>
+</tr>
+<tr>
+<td><code>Self Effect</code></td>
+<td>Status effect attached to the owner.</td>
+</tr>
+<tr>
+<td><code>Use Summon</code> + <code>Summon</code></td>
+<td>Create units (see Summon).</td>
+</tr>
+<tr>
+<td><code>Area</code></td>
+<td>Emit an area effect region at the owner (may be pulse-only).</td>
+</tr>
+<tr>
+<td><code>Use Chain</code> + <code>Chain</code></td>
+<td>Chained attack jumping between nearby enemies (<a href="../mechanics/#chain-attack">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td><code>Use Multi Target</code> + <code>Multi Target</code></td>
+<td>One activation hitting several targets (<a href="../mechanics/#multi-target-attack">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td><code>Use Trap</code> + <code>Trap</code></td>
+<td>Place a trap that arms, then triggers on nearby units (<a href="../mechanics/#traps-action-use-trap">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td><code>Use Beam</code> + <code>Beam</code></td>
+<td>Channel a continuous beam with an exact damage budget (<a href="../mechanics/#beams-action-use-beam">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td><code>Use Transfer</code> + <code>Transfer</code></td>
+<td>Move nearby enemies to an exact path point (<a href="../mechanics/#path-destination-and-transfer">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td><code>Use Mines</code> + <code>Mines</code></td>
+<td>Throw a mine onto a lane node in a band around the actor; it arms after flight, landing and its arm delay (<a href="../mechanics/#mine-fields-action-use-mines">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td><code>Use Raise</code> + <code>Raise</code></td>
+<td>Raise new units (enemy or soldier) from nearby bodies of the fallen (<a href="../mechanics/#raising-the-fallen-action-use-raise">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td><code>Custom Action</code></td>
+<td>Your own <code>AbilityActionAsset</code> subclass (<a href="../extending/#5-ability-action">Extending the Framework</a>).</td>
+</tr>
+</tbody>
+</table>
+<p>Chain, multi-target, trap, mine, beam, transfer, raise and custom payloads run together as one custom payload; the action counts as successful when any of them succeeds (for example a trap placed, a mine thrown, a body reserved or a beam started). Only successful activations restart the cooldown and award skill experience.</p>
+<blockquote>
+<p>Tip: the tower inspector shows DPS against several armor values, range-ellipse size, cumulative investment and the refund using the level's <code>Refund Share</code> (the first level whose tower trees contain this tier; otherwise the default 0.6).</p>
+</blockquote>
+<hr />
+<h2 id="soldier">Soldier<a class="headerlink" href="#soldier" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; Soldier</strong> (<code>SoldierAsset</code>). Produced by barracks, ability replacements and reinforcement spells.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Health</code></td>
+<td>Maximum hit points.</td>
+</tr>
+<tr>
+<td><code>Physical Armor</code> / <code>Magical Armor</code></td>
+<td>Reductions.</td>
+</tr>
+<tr>
+<td><code>Speed</code></td>
+<td>Movement speed.</td>
+</tr>
+<tr>
+<td><code>Intercept Radius</code></td>
+<td>Radius around the rally point in which it engages enemies.</td>
+</tr>
+<tr>
+<td><code>Engagement &gt; Contact Bias</code></td>
+<td>Its share of the horizontal gap to the enemy it blocks (X, usually half its drawn body width plus a small gap) and a world-Y shift; added to the enemy's share.</td>
+</tr>
+<tr>
+<td><code>Melee</code></td>
+<td>Required to block.</td>
+</tr>
+<tr>
+<td><code>Ranged Attacks</code></td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>Tags</code></td>
+<td>Tag bits for effect and mechanic eligibility.</td>
+</tr>
+<tr>
+<td><code>Flying</code></td>
+<td>Only anti-air attacks reach it. Needed by flying follower companions; keep it off for barracks soldiers and ground escorts.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="hero">Hero<a class="headerlink" href="#hero" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; Hero</strong> (<code>HeroAsset</code>). Add it to the level's <code>Heroes</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vitals</td>
+<td><code>Health</code>, <code>Physical Armor</code>, <code>Magical Armor</code>, <code>Speed</code></td>
+<td>Level-1 base values.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Engage Radius</code></td>
+<td>Radius in which an idle hero engages enemies.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Engagement &gt; Contact Bias</code></td>
+<td>Same as on a Soldier: the hero's share of the horizontal gap to the enemy it blocks.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Recovery</code></td>
+<td>Health recovery (usually idle only).</td>
+</tr>
+<tr>
+<td>Combat</td>
+<td><code>Melee</code>, <code>Ranged Attacks</code></td>
+<td>Attacks.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Experience Per Damage</code></td>
+<td>Experience per point of health the hero's attacks remove.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Tags</code></td>
+<td>Tag bits for effect and mechanic eligibility.</td>
+</tr>
+<tr>
+<td>Growth</td>
+<td><code>Skill Mode</code></td>
+<td><code>AutoUnlock</code> (ranks unlock automatically by level) or <code>SpendPoints</code> (player spends points).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Levels</code></td>
+<td>Growth rows; row 1 is level 1 at 0 XP. Each row: <code>Experience</code> (cumulative), <code>Skill Points</code> (total budget), <code>Health Scale</code>, <code>Damage Scale</code>, <code>Armor Bonus</code>, <code>Magic Resist Bonus</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Difficulty Experience Scale</code></td>
+<td>Experience multiplier.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Skills</code></td>
+<td>Abilities with point costs and required levels (see Abilities).</td>
+</tr>
+<tr>
+<td>Respawn &amp; Movement</td>
+<td><code>Respawn Delay</code></td>
+<td>Seconds dead before returning.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Return Duration</code></td>
+<td>Seconds of invulnerable return.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Use Respawn Position</code> / <code>Respawn Position</code></td>
+<td>Return at a fixed point instead of where it fell.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Move Point Rule</code></td>
+<td>Which destinations a move order accepts (see Point rule).</td>
+</tr>
+<tr>
+<td>Companions</td>
+<td><code>Companions</code></td>
+<td>Owner-bound companions (<code>CompanionData</code>): <code>Unit</code> (Soldier asset), <code>Slots</code>, <code>Mode</code> (Ground Escort / Flying Follower), <code>Refill Delay</code>, <code>Initial Delay</code>, <code>Formation Radius</code>, follow distances and <code>Acceleration</code> (followers), <code>Wait On Owner Death</code>, <code>Remove With Owner</code>, <code>Reconnect On Return</code>, <code>Rally Radius</code> (towers without barracks), optional <code>Point Rule</code> (<a href="../mechanics/#companions-hero-tower-companions">Mechanic Library</a>).</td>
+</tr>
+</tbody>
+</table>
+<p>Level, experience and skills are kept when the hero dies. Companion damage earns the hero experience; ground escorts take new places on every move order.</p>
+<hr />
+<h2 id="projectile">Projectile<a class="headerlink" href="#projectile" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; Projectile</strong> (<code>ProjectileAsset</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Kind</code></td>
+<td><code>Instant</code> (immediate hit, beam drawn), <code>Straight</code> (fixed aim point), <code>Ballistic</code> (fixed aim point, visual arc), <code>Homing</code> (follows target).</td>
+</tr>
+<tr>
+<td><code>Speed</code></td>
+<td>Units per second.</td>
+</tr>
+<tr>
+<td><code>Arc Height</code></td>
+<td>Visual arc height (ballistic).</td>
+</tr>
+<tr>
+<td><code>Lifetime</code></td>
+<td>Seconds before an unresolved projectile expires.</td>
+</tr>
+<tr>
+<td><code>Flight Time</code></td>
+<td>Fixed flight time; 0 = distance / speed.</td>
+</tr>
+<tr>
+<td><code>Hit Radius</code></td>
+<td>Fixed-aim single-target shots still hit if the target is this close to the aim point.</td>
+</tr>
+<tr>
+<td><code>View Key</code></td>
+<td>Blank = asset name. Must be unique (validator warns).</td>
+</tr>
+<tr>
+<td><code>Impact Area</code></td>
+<td>Optional region created once where the projectile arrives, also on empty ground (status effect and/or pulse).</td>
+</tr>
+<tr>
+<td>View: <code>Prefab</code>, <code>Shape</code>, <code>Color</code>, <code>Size</code>, <code>Impact Fx Size</code>, <code>Beam Width</code>, <code>Shaded</code>, <code>Trail Time</code>, <code>Trail Width</code>, <code>Splash Ring</code></td>
+<td>Presentation.</td>
+</tr>
+<tr>
+<td>Hooks: <code>Launch Vfx</code>, <code>Impact Vfx</code>, <code>Launch Cue</code>, <code>Impact Cue</code></td>
+<td>Optional pooled VFX and audio.</td>
+</tr>
+</tbody>
+</table>
+<p>Straight and ballistic shots aim at a predicted position. Area-damage shots always explode at the aim point.</p>
+<hr />
+<h2 id="status-effect">Status Effect<a class="headerlink" href="#status-effect" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; Status Effect</strong> (<code>StatusEffectAsset</code>). Reference it from damage <code>Effects</code>, area effects, ability <code>Self Effect</code> or spells.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identity</td>
+<td><code>Effect Id</code></td>
+<td>Used for duplicate checks; blank = asset name.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Display Name</code></td>
+<td>UI name.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Family</code></td>
+<td>Group name used by immunities and suppression (e.g. <code>slow</code>, <code>poison</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Rank</code></td>
+<td>Strength; a higher rank can replace a lower one.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Duration</code></td>
+<td>Lifetime in seconds.</td>
+</tr>
+<tr>
+<td>Stacking</td>
+<td><code>Stack Equal Rank</code></td>
+<td>Allow separate instances at equal rank.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Replace Lower Rank</code></td>
+<td>Replace lower-ranked instances of the same id.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Refresh Equal Rank</code></td>
+<td>Re-applying at equal rank refreshes the lifetime (modifiers are not applied twice).</td>
+</tr>
+<tr>
+<td>Eligibility</td>
+<td><code>Required Tags</code> / <code>Rejected Tags</code></td>
+<td>Bit masks checked against the target's tags.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Forbidden Ids</code> / <code>Forbidden Families</code></td>
+<td>Cannot attach while one of these is present.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Remove Forbidden</code></td>
+<td>Remove existing forbidden effects instead.</td>
+</tr>
+<tr>
+<td>Payload</td>
+<td><code>Modifier</code></td>
+<td>Stat modifier while attached (slow, stun, armor shift, …).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Periodic</code></td>
+<td>Damage over time: <code>Kind</code>, integer <code>Minimum</code>–<code>Maximum</code> per tick, <code>Interval</code>, optional <code>First Damage</code> on attach and <code>Last Damage</code> on natural expiry (negative = off).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Healing</code></td>
+<td>Healing over time: <code>Healing</code> (amount + share of maximum health), <code>Interval</code>, <code>Heal On Attach</code>, <code>Heal On Expire</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shield</code></td>
+<td>Damage-absorbing shield per attachment: <code>Amount</code>, <code>Maximum Health Share</code>, <code>Channels</code>, <code>Refill On Refresh</code> (<a href="../mechanics/#shields">Mechanic Library</a>).</td>
+</tr>
+<tr>
+<td>View</td>
+<td><code>Tint</code>, <code>Tint Strength</code>, <code>Icon</code></td>
+<td>Body tint and icon above affected units (shields also use the tint for their bubble).</td>
+</tr>
+</tbody>
+</table>
+<p>Units get their tags from the <code>Tags</code> field of Enemy, Soldier and Hero assets (32 bits in the Inspector). Effects with periodic damage, healing or a shield only attach to units with health.</p>
+<hr />
+<h2 id="spell">Spell<a class="headerlink" href="#spell" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; Spell</strong> (<code>SpellAsset</code>). Add it to the level's <code>Spells</code> (order = button order and number keys 1–9).</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identity</td>
+<td><code>Spell Id</code>, <code>Display Name</code>, <code>Description</code>, <code>Color</code></td>
+<td>Id (blank = asset name), button text, tooltip, button/preview colour.</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td><code>Kind</code></td>
+<td><code>Reinforcement</code> (summon friendly units), <code>AreaStrike</code> (scattered timed strikes), <code>AreaEffect</code> (region only).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Cooldown</code></td>
+<td>Seconds; consumed only by an accepted cast.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Unlock Wave</code></td>
+<td>First wave in which it can be cast (0 = before the first wave).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Point Rule</code></td>
+<td>Accepted target points (below).</td>
+</tr>
+<tr>
+<td>Payload</td>
+<td><code>Support</code></td>
+<td>Summon for <code>Reinforcement</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Strikes</code></td>
+<td><code>Damage</code> (needs a radius), <code>Projectile</code>, <code>Count</code>, <code>Interval</code>, <code>Delay</code>, <code>Scatter Radius</code>, <code>Placement Attempts</code>, <code>Launch Offset</code>, <code>Targets Flying/Ground</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Area</code></td>
+<td>Optional lingering region at the target point (any kind).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="point-rule-spells-and-hero-movement">Point rule (spells and hero movement)<a class="headerlink" href="#point-rule-spells-and-hero-movement" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Require Path</code></td>
+<td>Point must be near a lane; accepted points are projected onto it.</td>
+</tr>
+<tr>
+<td><code>Path Tolerance</code></td>
+<td>Maximum distance to the nearest lane (range ellipse).</td>
+</tr>
+<tr>
+<td><code>Use Bounds</code> / <code>Minimum</code> / <code>Maximum</code></td>
+<td>Restrict to a rectangle.</td>
+</tr>
+</tbody>
+</table>
+<p>The same rule is used for the HUD's valid/invalid preview and by the simulation when the command arrives.</p>
+<h3 id="summon">Summon<a class="headerlink" href="#summon" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Unit</code></td>
+<td>Soldier asset (friendly) or Enemy asset (hostile).</td>
+</tr>
+<tr>
+<td><code>Count</code>, <code>Delay</code>, <code>Interval</code></td>
+<td>Units per activation and timing.</td>
+</tr>
+<tr>
+<td><code>Lifetime</code></td>
+<td>Seconds; 0 = permanent.</td>
+</tr>
+<tr>
+<td><code>Formation Radius</code></td>
+<td>Spread of friendly units.</td>
+</tr>
+<tr>
+<td><code>Cancel With Source</code></td>
+<td>Cancel pending units if the source dies.</td>
+</tr>
+<tr>
+<td><code>Population Limit</code></td>
+<td>Max alive + pending per source; 0 = unlimited.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="area-effect">Area effect<a class="headerlink" href="#area-effect" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enabled</code>, <code>Effect</code></td>
+<td>Region on/off and the status effect it attaches. Leave <code>Effect</code> empty for a pulse-only region.</td>
+</tr>
+<tr>
+<td><code>Radius</code>, <code>Duration</code>, <code>Interval</code></td>
+<td>Range ellipse, lifetime, seconds between scans.</td>
+</tr>
+<tr>
+<td><code>Until Source Lost</code></td>
+<td>Permanent region: ignores <code>Duration</code>, lasts while its source lives and is removed (with the effects it attached) when the source dies or is removed. Meant for auras; needs a living source, so spells and impacts emit nothing (the validator warns).</td>
+</tr>
+<tr>
+<td><code>Max Targets</code></td>
+<td>Recipients per scan; 0 = unlimited.</td>
+</tr>
+<tr>
+<td><code>Targets Enemies</code></td>
+<td>Enemies, otherwise friendly units.</td>
+</tr>
+<tr>
+<td><code>Follow Source</code>, <code>Remove On End</code></td>
+<td>Move with the source; strip effects when the region ends.</td>
+</tr>
+<tr>
+<td><code>Targets Flying</code>, <code>Targets Ground</code>, <code>Include Towers</code></td>
+<td>Recipient filters (<code>Include Towers</code> applies to attached effects).</td>
+</tr>
+<tr>
+<td><code>Pulse</code></td>
+<td>Direct damage and/or healing on every occupant at each scan (<a href="../mechanics/#region-pulses-pulse-only-regions-and-healing">Mechanic Library</a>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="wave-set">Wave Set<a class="headerlink" href="#wave-set" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; Wave Set</strong> (<code>WaveSetAsset</code>). Best edited in <strong>Tools &gt; 2D Tower Defense Maker &gt; Wave Timeline</strong>.</p>
+<p><strong>Wave</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Auto Delay</code></td>
+<td>Seconds after the previous wave finished emitting before this wave starts by itself.</td>
+</tr>
+<tr>
+<td><code>Call Delay</code></td>
+<td>Seconds after the previous wave finished emitting before the player may call it early (clamped to <code>Auto Delay</code>).</td>
+</tr>
+<tr>
+<td><code>Early Gold Per Second</code></td>
+<td>Reward per rounded remaining second when called early (never for wave 1).</td>
+</tr>
+<tr>
+<td><code>Auto Start First</code></td>
+<td>Wave 1 only: start without waiting for the player.</td>
+</tr>
+<tr>
+<td><code>Groups</code></td>
+<td>Groups in this wave.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Group</strong>: <code>Path Index</code> (index into the level's paths), <code>Start Delay</code> (after the wave starts), <code>Entries</code> (run in order).</p>
+<p><strong>Spawn entry</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enemy</code></td>
+<td>Enemy asset. Entries without an enemy are skipped.</td>
+</tr>
+<tr>
+<td><code>Count</code></td>
+<td>Number of units.</td>
+</tr>
+<tr>
+<td><code>Interval</code></td>
+<td>Seconds between units (the first unit appears one interval after the entry starts). 0 = one per tick.</td>
+</tr>
+<tr>
+<td><code>Start Delay</code></td>
+<td>Extra delay relative to when this entry is reached.</td>
+</tr>
+<tr>
+<td><code>Lane Selection</code></td>
+<td><code>Fixed</code>, <code>RoundRobin</code> (starting at <code>Lane Index</code>), <code>Random</code>.</td>
+</tr>
+<tr>
+<td><code>Lane Index</code></td>
+<td>Fixed lane or first round-robin lane.</td>
+</tr>
+<tr>
+<td><code>Following Gap</code></td>
+<td>Delay before the next entry in the group.</td>
+</tr>
+<tr>
+<td><code>Alternate Enemy</code> / <code>Same Kind Limit</code></td>
+<td>Alternate between two enemies every N units (0 = off), sharing <code>Count</code>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="level">Level<a class="headerlink" href="#level" title="Permanent link">&para;</a></h2>
+<p><strong>Create &gt; 2D Tower Defense Maker &gt; Level</strong> (<code>LevelAsset</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td><code>Paths</code></td>
+<td>Path data (centre line, <code>Lane Count</code>, <code>Lane Spacing</code>, <code>Entry Node</code>, <code>Exit Node</code> (−1 = last), per-node lane spacing, <code>Air Route</code>). Usually written from the scene (see Level Authoring).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Build Slots</code></td>
+<td>Slot position and default rally point.</td>
+</tr>
+<tr>
+<td>Content</td>
+<td><code>Waves</code></td>
+<td>Wave Set asset.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Available Towers</code></td>
+<td>Base towers buildable on empty slots.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Extra Templates</code></td>
+<td>Additional entity assets to register (e.g. units spawned only by your scripts).</td>
+</tr>
+<tr>
+<td>Economy</td>
+<td><code>Starting Gold</code>, <code>Starting Lives</code></td>
+<td>Initial values.</td>
+</tr>
+<tr>
+<td>Ranges</td>
+<td><code>Override Range Y Scale</code> / <code>Range Y Scale</code></td>
+<td>Range ellipse ratio <code>k</code> for this level (otherwise the runner's value).</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td><code>Leak Bounty Share</code></td>
+<td>Share of bounty still paid on a leak (default 0).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Refund Share</code></td>
+<td>Sale refund after the first wave has started (default 0.6).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Override Early Call Rate</code> / <code>Early Call Reward Rate</code></td>
+<td>Use one rate for all waves instead of each wave's own.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Early Call Spell Cooldown Cut</code></td>
+<td>Early calls also shorten cooling spells.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Early Call Cut Threshold</code></td>
+<td>Remaining time must exceed this for the spell cut.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Victory Rating</code></td>
+<td><code>Two Star Life Ratio</code> (default 0.5) and <code>Three Star Life Ratio</code> (default 1): share of starting lives (0..1) still left needed for two / three stars (inclusive). Rated by the simulation (<code>State.VictoryStars</code>).</td>
+</tr>
+<tr>
+<td>Player</td>
+<td><code>Spells</code></td>
+<td>Spells in button order.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Heroes</code></td>
+<td>Heroes spawned at start.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Hero Spawn</code></td>
+<td>Spawn point (additional heroes are offset sideways).</td>
+</tr>
+</tbody>
+</table>
+<p>Inspector buttons: <strong>Validate Bake</strong>, <strong>Wave Timeline</strong>, <strong>Validate Project</strong>.</p>
+<blockquote>
+<p>Upgrading from an earlier build: the old level field <code>Star Rating</code> (fractions or absolute life counts, rated by the view) is migrated into <code>Rules &gt; Victory Rating</code> automatically when the asset loads; absolute counts become <code>count / Starting Lives</code>. Save the asset once to store the migrated values.</p>
+<p>Nesting depth: the deepest authoring chain (ability → rank → action → attack → damage → impact payload → region → pulse → damage) is 9 levels, inside Unity's serialization limit of 10. If you add your own nested <code>[Serializable]</code> data below that, reference a ScriptableObject instead of nesting another class.</p>
+</blockquote>
+<hr />
+<h2 id="scene-components">Scene components<a class="headerlink" href="#scene-components" title="Permanent link">&para;</a></h2>
+<h3 id="level-authoring-2d-tower-defense-makerlevel-authoring">Level Authoring (<code>2D Tower Defense Maker/Level Authoring</code>)<a class="headerlink" href="#level-authoring-2d-tower-defense-makerlevel-authoring" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Level</code></td>
+<td>Level asset providing waves, economy, towers, spells, heroes.</td>
+</tr>
+<tr>
+<td><code>Paths</code></td>
+<td>Path components in index order; empty = all child <code>Path Authoring</code> in hierarchy order.</td>
+</tr>
+<tr>
+<td><code>Build Slots</code></td>
+<td>Slot components in index order; empty = all child <code>Build Slot Authoring</code>.</td>
+</tr>
+<tr>
+<td><code>Use Scene Geometry</code></td>
+<td>Off = use the level asset's own <code>Paths</code>/<code>Build Slots</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Buttons: <strong>Write Scene Geometry To Level Asset</strong> (copies paths and slots into the asset), <strong>Validate Bake</strong>, <strong>Open Wave Timeline</strong>.</p>
+<h3 id="path-authoring-2d-tower-defense-makerpath-authoring">Path Authoring (<code>2D Tower Defense Maker/Path Authoring</code>)<a class="headerlink" href="#path-authoring-2d-tower-defense-makerpath-authoring" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Points</code></td>
+<td>Centre line in local space, entry → exit.</td>
+</tr>
+<tr>
+<td><code>Lane Count</code> / <code>Lane Spacing</code></td>
+<td>Parallel sub-lanes generated from the centre line. Lane 0 is on the left of the travel direction.</td>
+</tr>
+<tr>
+<td><code>Entry Node</code> / <code>Exit Node</code></td>
+<td>Where enemies appear / leak (−1 = last point).</td>
+</tr>
+<tr>
+<td><code>Point Lane Spacing</code></td>
+<td>Optional per-point spacing override (0 = default).</td>
+</tr>
+<tr>
+<td><code>Air Route</code></td>
+<td>Presentation only: <code>Level View</code> draws the path as a dotted flight line instead of a road and leaves it out of the ground texture. Use it for routes that only flying enemies take (assign them in the wave groups); the simulation treats it like any path.</td>
+</tr>
+<tr>
+<td><code>Gizmo Color</code></td>
+<td>Scene gizmo colour.</td>
+</tr>
+</tbody>
+</table>
+<p>Editing shortcuts: <a href="../editor-tools/#path-and-lane-editor">Editor Tools</a>.</p>
+<h3 id="build-slot-authoring-2d-tower-defense-makerbuild-slot-authoring">Build Slot Authoring (<code>2D Tower Defense Maker/Build Slot Authoring</code>)<a class="headerlink" href="#build-slot-authoring-2d-tower-defense-makerbuild-slot-authoring" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Rally Offset</code></td>
+<td>Default barracks rally point, relative to the slot. The simulation projects it onto the nearest lane inside the tower's rally ellipse.</td>
+</tr>
+<tr>
+<td><code>Preview Tower</code></td>
+<td>Editor only: draws that tower's range and rally radius.</td>
+</tr>
+<tr>
+<td><code>Preview Range</code></td>
+<td>Editor only: range drawn when no preview tower is set.</td>
+</tr>
+<tr>
+<td><code>Preview Range Y Scale</code></td>
+<td>Y scale of the always-on gizmo.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="simulation-runner-2d-tower-defense-makersimulation-runner">Simulation Runner (<code>2D Tower Defense Maker/Simulation Runner</code>)<a class="headerlink" href="#simulation-runner-2d-tower-defense-makersimulation-runner" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Scene Level</code></td>
+<td>Level Authoring in the scene (preferred).</td>
+</tr>
+<tr>
+<td><code>Level</code></td>
+<td>Level asset used when no scene level is set.</td>
+</tr>
+<tr>
+<td><code>Tick Rate</code></td>
+<td>Ticks per second (default 30).</td>
+</tr>
+<tr>
+<td><code>Range Y Scale</code></td>
+<td>Default <code>k</code> (0.8) unless the level overrides it.</td>
+</tr>
+<tr>
+<td><code>Spawn Heroes</code></td>
+<td>Spawn the level's heroes at start.</td>
+</tr>
+<tr>
+<td><code>Seed</code> / <code>Randomize Seed</code></td>
+<td>Random seed; randomizing makes runs non-reproducible.</td>
+</tr>
+<tr>
+<td><code>Time Scale</code></td>
+<td>Game speed (0 = paused).</td>
+</tr>
+<tr>
+<td><code>Catch Up Ticks Per Speed</code></td>
+<td>Catch-up limit: at most this × speed ticks per rendered frame (default 8, via the core <code>SimulationClock</code>).</td>
+</tr>
+<tr>
+<td><code>Start On Play</code></td>
+<td>Start automatically; otherwise call <code>StartSimulation()</code>.</td>
+</tr>
+<tr>
+<td><code>Starting Gold Override</code></td>
+<td>Debug: replaces the level's starting gold when 0 or more.</td>
+</tr>
+<tr>
+<td>Capacities</td>
+<td><code>Entity Capacity</code> (1024), <code>Event Capacity</code> (8192 – events of one whole frame, see <a href="../performance/#capacity-limits">Performance</a>), <code>Command Capacity</code> (128), <code>Effect Capacity</code> (4096), <code>Area Capacity</code> (256), <code>Schedule Capacity</code> (1024), <code>Chain Capacity</code> (64). See <a href="../performance/#capacity-limits">Performance</a>.</td>
+</tr>
+<tr>
+<td>Bodies</td>
+<td><code>Remains Capacity</code> (256; 0 keeps none) and <code>Remains Lifetime</code> (10 s): bodies of the fallen kept for raise actions (<code>SimConfig.WithRemains</code>, script: <code>SetRemains</code>). A full store keeps its old bodies.</td>
+</tr>
+<tr>
+<td>Recording &amp; Replay</td>
+<td><code>Record Commands</code>, <code>Recording Capacity</code>, <code>Recording File</code>, <code>Replay On Start</code>, <code>Replay File</code> (<a href="../determinism-and-replay/#recording-and-replaying-with-simulationrunner">Determinism and Replay</a>).</td>
+</tr>
+</tbody>
+</table>
+<p>Scripting: see <a href="../presentation/#simulationrunner-scripting">Presentation</a> (<code>Simulation</code>, <code>Baked</code>, <code>Enqueue</code>, <code>Advance</code>, <code>SetPaused</code>, <code>SetSpeed</code>, <code>AddTemplateDecorator</code>, recording, events <code>SimulationStarted</code> and <code>EventRaised</code>).</p>
+<h3 id="entity-view-registry-2d-tower-defense-makerentity-view-registry">Entity View Registry (<code>2D Tower Defense Maker/Entity View Registry</code>)<a class="headerlink" href="#entity-view-registry-2d-tower-defense-makerentity-view-registry" title="Permanent link">&para;</a></h3>
+<p><code>Runner</code> (auto-found), <code>Sprite Material</code> (empty = unlit material created at runtime), <code>Overrides</code> (view key → prefab, overrides asset prefabs), <code>Vfx Pool</code> and <code>Audio Player</code> (auto-found), <code>Prewarm Primitives</code>, <code>Death Fade Time</code>, <code>Splash Rings</code>, fallback colours per role, the mechanic toggles <code>Mechanic Arcs</code>, <code>Pulse Rings</code>, <code>Heal Glows</code>, <code>Trap Markers</code>, <code>Channel Beams</code>, <code>Reaction Lines</code>, <code>Transfer Color</code> (path-transfer trails), and for mines, companions and revival <code>Mine Flights</code>, <code>Remains Markers</code>, <code>Companion Color</code>, <code>Revive Color</code>, <code>Remains Color</code>. Art set keys: a mine's id replaces its marker sprite, <code>remains</code> replaces the body marker.</p>
+<h3 id="level-view-2d-tower-defense-makerlevel-view">Level View (<code>2D Tower Defense Maker/Level View</code>)<a class="headerlink" href="#level-view-2d-tower-defense-makerlevel-view" title="Permanent link">&para;</a></h3>
+<p>Placeholder level drawing: a generated ground (grass colours, <code>Pixels Per Unit</code>, <code>Ground Margin</code>, <code>Decoration Density</code>, <code>Seed</code>, <code>Tint Camera Background</code>), path/border/lane/slot/entry/exit colours, <code>Path Padding</code>, <code>Slot Size</code>, <code>Show Lanes</code>. Replace or disable it when you have real level art.</p>
+<h3 id="game-hud-and-other-presentation-components">Game HUD and other presentation components<a class="headerlink" href="#game-hud-and-other-presentation-components" title="Permanent link">&para;</a></h3>
+<p><code>Game HUD</code>, <code>HUD Theme</code>, <code>Damage Numbers</code>, <code>VFX Pool</code>, <code>Audio Cue Player</code>, <code>Camera Controller</code>, <code>Game Settings</code> and <code>Ellipse Renderer</code> are described in <a href="../presentation/">Presentation</a>.</p>
+<h3 id="td-hud-2d-tower-defense-makertd-hud">TD Hud (<code>2D Tower Defense Maker/TD Hud</code>)<a class="headerlink" href="#td-hud-2d-tower-defense-makertd-hud" title="Permanent link">&para;</a></h3>
+<p>Minimal IMGUI HUD kept as a code reference and, in the sample, as the <strong>F1</strong> debug overlay of the Game HUD (<code>Overlay Only</code>). Fields: <code>Runner</code>, <code>Registry</code>, <code>World Camera</code> (empty = <code>Camera.main</code>), pick radii for slots and heroes, <code>Reference Height</code> for UI scaling, and preview colours.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../concepts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Core concepts">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Core concepts
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../editor-tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Editor tools">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Editor tools
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © FlyCat
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

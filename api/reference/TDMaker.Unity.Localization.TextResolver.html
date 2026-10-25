@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TextResolver | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TextResolver | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Resolves text keys for the selected language. Lookup order: the optional custom , the  of the selected , the English tables, the built-in English texts (), then the caller&#39;s fallback, then the key itself. The merged table is rebuilt only when the language, the table list or a table changes; lookups do not allocate.  changes on every rebuild, so views can cache formatted strings and refresh them only then. The scene&#39;s instance is .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Localization.TextResolver">
+
+
+
+  <h1 id="TDMaker_Unity_Localization_TextResolver" data-uid="TDMaker.Unity.Localization.TextResolver" class="text-break">
+Class TextResolver  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<span class="xref">Unity</span>.<a class="xref" href="TDMaker.Unity.Localization.html">Localization</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Unity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Resolves text keys for the selected language. Lookup order: the optional custom <a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Provider">Provider</a>, the
+<a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Tables">Tables</a> of the selected <a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Language">Language</a>, the English tables, the built-in English texts
+(<a class="xref" href="TDMaker.Unity.Localization.HudTexts.html#TDMaker_Unity_Localization_HudTexts_English">English</a>), then the caller's fallback, then the key itself. The merged table is rebuilt only when
+the language, the table list or a table changes; lookups do not allocate. <a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Version">Version</a> changes on every rebuild,
+so views can cache formatted strings and refresh them only then. The scene's instance is
+<a class="xref" href="TDMaker.Unity.View.TDGameSettings.html#TDMaker_Unity_View_TDGameSettings_Texts">Texts</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TextResolver</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TextResolver</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver__ctor_" data-uid="TDMaker.Unity.Localization.TextResolver.#ctor*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver__ctor_System_String_System_Collections_Generic_IList_TDMaker_Unity_Localization_TextTable__" data-uid="TDMaker.Unity.Localization.TextResolver.#ctor(System.String,System.Collections.Generic.IList{TDMaker.Unity.Localization.TextTable})">
+  TextResolver(string, IList&lt;TextTable&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a resolver for <code class="paramref">languageCode</code> over <code class="paramref">textTables</code> (both optional).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextResolver(string languageCode = &quot;en&quot;, IList&lt;TextTable&gt; textTables = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>languageCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>textTables</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="TDMaker.Unity.Localization.TextTable.html">TextTable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_EnglishCode" data-uid="TDMaker.Unity.Localization.TextResolver.EnglishCode">
+  EnglishCode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Language of the built-in texts and the fallback language.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string EnglishCode = &quot;en&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Language_" data-uid="TDMaker.Unity.Localization.TextResolver.Language*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Language" data-uid="TDMaker.Unity.Localization.TextResolver.Language">
+  Language
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The selected language code (for example &quot;en&quot; or &quot;ko&quot;). Setting it rebuilds the lookup on next use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Language { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Provider_" data-uid="TDMaker.Unity.Localization.TextResolver.Provider*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Provider" data-uid="TDMaker.Unity.Localization.TextResolver.Provider">
+  Provider
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional source consulted before the tables (for example an adapter to another localization system).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITextProvider Provider { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Localization.ITextProvider.html">ITextProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Tables_" data-uid="TDMaker.Unity.Localization.TextResolver.Tables*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Tables" data-uid="TDMaker.Unity.Localization.TextResolver.Tables">
+  Tables
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tables to search (any languages; those matching <a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Language">Language</a> and English are used).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;TextTable&gt; Tables { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="TDMaker.Unity.Localization.TextTable.html">TextTable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Version_" data-uid="TDMaker.Unity.Localization.TextResolver.Version*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Version" data-uid="TDMaker.Unity.Localization.TextResolver.Version">
+  Version
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Changes whenever the resolved texts may have changed (language, tables, provider, or a table edited). Unique across
+resolvers, so a cached value never matches a different resolver by accident.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Version { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Format_" data-uid="TDMaker.Unity.Localization.TextResolver.Format*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Format_System_String_System_Object_" data-uid="TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object)">
+  Format(string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats the text of <code class="paramref">key</code> with one argument (allocates; call when the value changes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Format(string key, object arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Format_" data-uid="TDMaker.Unity.Localization.TextResolver.Format*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Format_System_String_System_Object_System_Object_" data-uid="TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object,System.Object)">
+  Format(string, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats the text of <code class="paramref">key</code> with two arguments (allocates; call when a value changes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Format(string key, object arg0, object arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Format_" data-uid="TDMaker.Unity.Localization.TextResolver.Format*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Format_System_String_System_Object_System_Object_System_Object_" data-uid="TDMaker.Unity.Localization.TextResolver.Format(System.String,System.Object,System.Object,System.Object)">
+  Format(string, object, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats the text of <code class="paramref">key</code> with three arguments (allocates; call when a value changes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Format(string key, object arg0, object arg1, object arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_FormatText_" data-uid="TDMaker.Unity.Localization.TextResolver.FormatText*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_FormatText_System_String_System_Object_" data-uid="TDMaker.Unity.Localization.TextResolver.FormatText(System.String,System.Object)">
+  FormatText(string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats an already resolved <code class="paramref">format</code> text (for example from <a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Get_System_String_System_String_">Get(string, string)</a>) with one
+argument; a text with broken placeholders is returned unformatted (and logged once) instead of throwing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FormatText(string format, object arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Get_" data-uid="TDMaker.Unity.Localization.TextResolver.Get*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Get_System_String_" data-uid="TDMaker.Unity.Localization.TextResolver.Get(System.String)">
+  Get(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The text for <code class="paramref">key</code>, or the key itself when no source has it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Get(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Get_" data-uid="TDMaker.Unity.Localization.TextResolver.Get*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Get_System_String_System_String_" data-uid="TDMaker.Unity.Localization.TextResolver.Get(System.String,System.String)">
+  Get(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The text for <code class="paramref">key</code>, or <code class="paramref">fallback</code> (then the key) when no source has it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Get(string key, string fallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Has_" data-uid="TDMaker.Unity.Localization.TextResolver.Has*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Has_System_String_" data-uid="TDMaker.Unity.Localization.TextResolver.Has(System.String)">
+  Has(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether any source (provider, tables, built-in English) has a text for <code class="paramref">key</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Has(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_Invalidate_" data-uid="TDMaker.Unity.Localization.TextResolver.Invalidate*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_Invalidate" data-uid="TDMaker.Unity.Localization.TextResolver.Invalidate">
+  Invalidate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forces a rebuild on next use (call after an external <a class="xref" href="TDMaker.Unity.Localization.TextResolver.html#TDMaker_Unity_Localization_TextResolver_Provider">Provider</a> switched language).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Invalidate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Localization_TextResolver_LanguageMatches_" data-uid="TDMaker.Unity.Localization.TextResolver.LanguageMatches*"></a>
+
+  <h3 id="TDMaker_Unity_Localization_TextResolver_LanguageMatches_System_String_System_String_" data-uid="TDMaker.Unity.Localization.TextResolver.LanguageMatches(System.String,System.String)">
+  LanguageMatches(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether a table code serves a requested language: equal ignoring case, or equal primary subtags
+(&quot;ko&quot; serves &quot;ko-KR&quot; and the other way round).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LanguageMatches(string tableCode, string language)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tableCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>language</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class StatModifierDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class StatModifierDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Immutable reversible stat changes, recomputed from base values in attachment order.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.StatModifierDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_StatModifierDef" data-uid="TDMaker.Core.Defs.StatModifierDef" class="text-break">
+Class StatModifierDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Immutable reversible stat changes, recomputed from base values in attachment order.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class StatModifierDef</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">StatModifierDef</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef__ctor_" data-uid="TDMaker.Core.Defs.StatModifierDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef__ctor_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Boolean_" data-uid="TDMaker.Core.Defs.StatModifierDef.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean)">
+  StatModifierDef(float, float, float, float, float, float, float, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a reversible modifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatModifierDef(float speedScale = 1, float outputScale = 1, float inputScale = 1, float magicalInputScale = 1, float physicalShift = 0, float magicalShift = 0, float poisonShift = 0, bool stun = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>speedScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>outputScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>inputScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>magicalInputScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>physicalShift</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>magicalShift</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>poisonShift</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>stun</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_Combat_" data-uid="TDMaker.Core.Defs.StatModifierDef.Combat*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_Combat" data-uid="TDMaker.Core.Defs.StatModifierDef.Combat">
+  Combat
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional reversible range and control modifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CombatModifierDef Combat { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.CombatModifierDef.html">CombatModifierDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_InputScale_" data-uid="TDMaker.Core.Defs.StatModifierDef.InputScale*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_InputScale" data-uid="TDMaker.Core.Defs.StatModifierDef.InputScale">
+  InputScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplicative incoming damage change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InputScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_MagicalInputScale_" data-uid="TDMaker.Core.Defs.StatModifierDef.MagicalInputScale*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_MagicalInputScale" data-uid="TDMaker.Core.Defs.StatModifierDef.MagicalInputScale">
+  MagicalInputScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional incoming magical damage change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MagicalInputScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_MagicalShift_" data-uid="TDMaker.Core.Defs.StatModifierDef.MagicalShift*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_MagicalShift" data-uid="TDMaker.Core.Defs.StatModifierDef.MagicalShift">
+  MagicalShift
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additive magical resistance change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MagicalShift { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_OutputScale_" data-uid="TDMaker.Core.Defs.StatModifierDef.OutputScale*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_OutputScale" data-uid="TDMaker.Core.Defs.StatModifierDef.OutputScale">
+  OutputScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplicative outgoing damage change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OutputScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_PhysicalShift_" data-uid="TDMaker.Core.Defs.StatModifierDef.PhysicalShift*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_PhysicalShift" data-uid="TDMaker.Core.Defs.StatModifierDef.PhysicalShift">
+  PhysicalShift
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additive physical defense change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float PhysicalShift { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_PoisonShift_" data-uid="TDMaker.Core.Defs.StatModifierDef.PoisonShift*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_PoisonShift" data-uid="TDMaker.Core.Defs.StatModifierDef.PoisonShift">
+  PoisonShift
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additive poison resistance change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float PoisonShift { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_SpeedScale_" data-uid="TDMaker.Core.Defs.StatModifierDef.SpeedScale*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_SpeedScale" data-uid="TDMaker.Core.Defs.StatModifierDef.SpeedScale">
+  SpeedScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplicative movement change; zero is supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SpeedScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_Stun_" data-uid="TDMaker.Core.Defs.StatModifierDef.Stun*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_Stun" data-uid="TDMaker.Core.Defs.StatModifierDef.Stun">
+  Stun
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds one independent stun reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Stun { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_StatModifierDef_WithCombat_" data-uid="TDMaker.Core.Defs.StatModifierDef.WithCombat*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatModifierDef_WithCombat_TDMaker_Core_Defs_CombatModifierDef_" data-uid="TDMaker.Core.Defs.StatModifierDef.WithCombat(TDMaker.Core.Defs.CombatModifierDef)">
+  WithCombat(CombatModifierDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies numeric modifiers and adds combat modifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatModifierDef WithCombat(CombatModifierDef combat)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>combat</code> <a class="xref" href="TDMaker.Core.Defs.CombatModifierDef.html">CombatModifierDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.StatModifierDef.html">StatModifierDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

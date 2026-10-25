@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LevelDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LevelDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Immutable simulation inputs baked by an authoring layer.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.LevelDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_LevelDef" data-uid="TDMaker.Core.Defs.LevelDef" class="text-break">
+Class LevelDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Immutable simulation inputs baked by an authoring layer.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LevelDef</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LevelDef</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_LevelDef__ctor_" data-uid="TDMaker.Core.Defs.LevelDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef__ctor_TDMaker_Core_Defs_PathDef___TDMaker_Core_Defs_BuildSlotDef___TDMaker_Core_Defs_WaveDef___System_Int32_System_Int32_System_String___System_Nullable_System_Single__System_String___System_String___" data-uid="TDMaker.Core.Defs.LevelDef.#ctor(TDMaker.Core.Defs.PathDef[],TDMaker.Core.Defs.BuildSlotDef[],TDMaker.Core.Defs.WaveDef[],System.Int32,System.Int32,System.String[],System.Nullable{System.Single},System.String[],System.String[])">
+  LevelDef(PathDef[], BuildSlotDef[], WaveDef[], int, int, string[], float?, string[], string[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a level and copies all top-level collections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LevelDef(PathDef[] paths, BuildSlotDef[] buildSlots, WaveDef[] waves, int startingGold, int startingLives, string[] availableTowers = null, float? rangeYScale = null, string[] availableSpells = null, string[] availableHeroes = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>paths</code> <a class="xref" href="TDMaker.Core.Defs.PathDef.html">PathDef</a>[]</dt>
+    <dd></dd>
+    <dt><code>buildSlots</code> <a class="xref" href="TDMaker.Core.Defs.BuildSlotDef.html">BuildSlotDef</a>[]</dt>
+    <dd></dd>
+    <dt><code>waves</code> <a class="xref" href="TDMaker.Core.Defs.WaveDef.html">WaveDef</a>[]</dt>
+    <dd></dd>
+    <dt><code>startingGold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>startingLives</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>availableTowers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+    <dt><code>rangeYScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+    <dt><code>availableSpells</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+    <dt><code>availableHeroes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_AvailableHeroes_" data-uid="TDMaker.Core.Defs.LevelDef.AvailableHeroes*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_AvailableHeroes" data-uid="TDMaker.Core.Defs.LevelDef.AvailableHeroes">
+  AvailableHeroes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Available independent hero template identifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; AvailableHeroes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_AvailableSpells_" data-uid="TDMaker.Core.Defs.LevelDef.AvailableSpells*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_AvailableSpells" data-uid="TDMaker.Core.Defs.LevelDef.AvailableSpells">
+  AvailableSpells
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Available spell identifiers, ordered to match Simulation.Spells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; AvailableSpells { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_AvailableTowers_" data-uid="TDMaker.Core.Defs.LevelDef.AvailableTowers*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_AvailableTowers" data-uid="TDMaker.Core.Defs.LevelDef.AvailableTowers">
+  AvailableTowers
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Buildable base tower identifiers; upgrades are checked against their source tower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; AvailableTowers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_BuildSlots_" data-uid="TDMaker.Core.Defs.LevelDef.BuildSlots*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_BuildSlots" data-uid="TDMaker.Core.Defs.LevelDef.BuildSlots">
+  BuildSlots
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construction locations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;BuildSlotDef&gt; BuildSlots { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.Defs.BuildSlotDef.html">BuildSlotDef</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_Paths_" data-uid="TDMaker.Core.Defs.LevelDef.Paths*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_Paths" data-uid="TDMaker.Core.Defs.LevelDef.Paths">
+  Paths
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Paths used by enemy waves.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;PathDef&gt; Paths { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.Defs.PathDef.html">PathDef</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_RangeYScale_" data-uid="TDMaker.Core.Defs.LevelDef.RangeYScale*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_RangeYScale" data-uid="TDMaker.Core.Defs.LevelDef.RangeYScale">
+  RangeYScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional vertical ellipse radius ratio overriding the simulation configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? RangeYScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_Rules_" data-uid="TDMaker.Core.Defs.LevelDef.Rules*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_Rules" data-uid="TDMaker.Core.Defs.LevelDef.Rules">
+  Rules
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Authoritative economy and M2 rules; overrides the legacy per-tower refund field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LevelRulesDef Rules { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.LevelRulesDef.html">LevelRulesDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_StartingGold_" data-uid="TDMaker.Core.Defs.LevelDef.StartingGold*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_StartingGold" data-uid="TDMaker.Core.Defs.LevelDef.StartingGold">
+  StartingGold
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starting gold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int StartingGold { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_StartingLives_" data-uid="TDMaker.Core.Defs.LevelDef.StartingLives*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_StartingLives" data-uid="TDMaker.Core.Defs.LevelDef.StartingLives">
+  StartingLives
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starting lives.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int StartingLives { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_Upgrades_" data-uid="TDMaker.Core.Defs.LevelDef.Upgrades*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_Upgrades" data-uid="TDMaker.Core.Defs.LevelDef.Upgrades">
+  Upgrades
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional immutable permanent-upgrade input, applied before entity pools and initial spawns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeSnapshot Upgrades { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeSnapshot.html">UpgradeSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_Waves_" data-uid="TDMaker.Core.Defs.LevelDef.Waves*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_Waves" data-uid="TDMaker.Core.Defs.LevelDef.Waves">
+  Waves
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ordered waves.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;WaveDef&gt; Waves { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.Defs.WaveDef.html">WaveDef</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_WithRules_" data-uid="TDMaker.Core.Defs.LevelDef.WithRules*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_WithRules_TDMaker_Core_Defs_LevelRulesDef_" data-uid="TDMaker.Core.Defs.LevelDef.WithRules(TDMaker.Core.Defs.LevelRulesDef)">
+  WithRules(LevelRulesDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the level with immutable M2 and economy rules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LevelDef WithRules(LevelRulesDef rules)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rules</code> <a class="xref" href="TDMaker.Core.Defs.LevelRulesDef.html">LevelRulesDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.LevelDef.html">LevelDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_LevelDef_WithUpgrades_" data-uid="TDMaker.Core.Defs.LevelDef.WithUpgrades*"></a>
+
+  <h3 id="TDMaker_Core_Defs_LevelDef_WithUpgrades_TDMaker_Core_Defs_UpgradeSnapshot_" data-uid="TDMaker.Core.Defs.LevelDef.WithUpgrades(TDMaker.Core.Defs.UpgradeSnapshot)">
+  WithUpgrades(UpgradeSnapshot)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the level with a battle snapshot; null preserves the unmodified-template setup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LevelDef WithUpgrades(UpgradeSnapshot upgrades)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>upgrades</code> <a class="xref" href="TDMaker.Core.Defs.UpgradeSnapshot.html">UpgradeSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.LevelDef.html">LevelDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

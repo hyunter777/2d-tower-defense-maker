@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UnitPresets | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UnitPresets | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Fills enemy, hero and soldier assets from ratios to a baseline (the project&#39;s median enemy and soldier, or built-in defaults). The ratios stay inside the bands of the balance notes: bounty density &#215;0.5–1.8 of the baseline, defenses in the low (0–0.2), medium (0.2–0.5) and strong (0.5–0.7) bands, hero experience steps &#215;1.1–1.6 after a first jump of &#215;2.5–3.5. They are a starting point; tune the result against your own towers.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.UnitPresets">
+
+
+
+  <h1 id="TDMaker_Editor_UnitPresets" data-uid="TDMaker.Editor.UnitPresets" class="text-break">
+Class UnitPresets  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Fills enemy, hero and soldier assets from ratios to a baseline (the project's median enemy and soldier, or built-in
+defaults). The ratios stay inside the bands of the balance notes: bounty density ×0.5–1.8 of the baseline, defenses in the
+low (0–0.2), medium (0.2–0.5) and strong (0.5–0.7) bands, hero experience steps ×1.1–1.6 after a first jump of ×2.5–3.5.
+They are a starting point; tune the result against your own towers.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UnitPresets</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UnitPresets</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_UnitPresets_Names" data-uid="TDMaker.Editor.UnitPresets.Names">
+  Names
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Display names in enum order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string[] Names</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_UnitPresets_Apply_" data-uid="TDMaker.Editor.UnitPresets.Apply*"></a>
+
+  <h3 id="TDMaker_Editor_UnitPresets_Apply_TDMaker_Unity_Authoring_EntityAssetBase_TDMaker_Editor_UnitPreset_TDMaker_Editor_UnitPresets_Baseline_TDMaker_Unity_Authoring_EnemyAsset_" data-uid="TDMaker.Editor.UnitPresets.Apply(TDMaker.Unity.Authoring.EntityAssetBase,TDMaker.Editor.UnitPreset,TDMaker.Editor.UnitPresets.Baseline,TDMaker.Unity.Authoring.EnemyAsset)">
+  Apply(EntityAssetBase, UnitPreset, Baseline, EnemyAsset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills <code class="paramref">asset</code> (an enemy, hero or soldier matching <a class="xref" href="TDMaker.Editor.UnitPresets.html#TDMaker_Editor_UnitPresets_AssetType_TDMaker_Editor_UnitPreset_">AssetType(UnitPreset)</a>) from the preset. A splitter
+also needs its smaller enemy: pass it as <code class="paramref">companion</code> (it is filled too), otherwise the split stays empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Apply(EntityAssetBase asset, UnitPreset preset, UnitPresets.Baseline b, EnemyAsset companion = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <a class="xref" href="TDMaker.Unity.Authoring.EntityAssetBase.html">EntityAssetBase</a></dt>
+    <dd></dd>
+    <dt><code>preset</code> <a class="xref" href="TDMaker.Editor.UnitPreset.html">UnitPreset</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="TDMaker.Editor.UnitPresets.html">UnitPresets</a>.<a class="xref" href="TDMaker.Editor.UnitPresets.Baseline.html">Baseline</a></dt>
+    <dd></dd>
+    <dt><code>companion</code> <a class="xref" href="TDMaker.Unity.Authoring.EnemyAsset.html">EnemyAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitPresets_AssetType_" data-uid="TDMaker.Editor.UnitPresets.AssetType*"></a>
+
+  <h3 id="TDMaker_Editor_UnitPresets_AssetType_TDMaker_Editor_UnitPreset_" data-uid="TDMaker.Editor.UnitPresets.AssetType(TDMaker.Editor.UnitPreset)">
+  AssetType(UnitPreset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The asset type a preset creates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Type AssetType(UnitPreset preset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>preset</code> <a class="xref" href="TDMaker.Editor.UnitPreset.html">UnitPreset</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitPresets_Create_" data-uid="TDMaker.Editor.UnitPresets.Create*"></a>
+
+  <h3 id="TDMaker_Editor_UnitPresets_Create_TDMaker_Editor_UnitPreset_System_String_System_String_" data-uid="TDMaker.Editor.UnitPresets.Create(TDMaker.Editor.UnitPreset,System.String,System.String)">
+  Create(UnitPreset, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates and saves a new asset from a preset in <code class="paramref">folder</code> (unique name, template id from the name).
+A splitter also creates its smaller enemy. Returns every created asset, the main one first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;EntityAssetBase&gt; Create(UnitPreset preset, string folder, string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>preset</code> <a class="xref" href="TDMaker.Editor.UnitPreset.html">UnitPreset</a></dt>
+    <dd></dd>
+    <dt><code>folder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Authoring.EntityAssetBase.html">EntityAssetBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitPresets_FromProject_" data-uid="TDMaker.Editor.UnitPresets.FromProject*"></a>
+
+  <h3 id="TDMaker_Editor_UnitPresets_FromProject" data-uid="TDMaker.Editor.UnitPresets.FromProject">
+  FromProject()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Medians of the project's enemies and soldiers (defaults where the project has none).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UnitPresets.Baseline FromProject()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Editor.UnitPresets.html">UnitPresets</a>.<a class="xref" href="TDMaker.Editor.UnitPresets.Baseline.html">Baseline</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitPresets_GrowthCurve_" data-uid="TDMaker.Editor.UnitPresets.GrowthCurve*"></a>
+
+  <h3 id="TDMaker_Editor_UnitPresets_GrowthCurve_System_Int32_System_Single_" data-uid="TDMaker.Editor.UnitPresets.GrowthCurve(System.Int32,System.Single)">
+  GrowthCurve(int, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Growth rows: experience steps ×3 after the first level then ×1.35 (inside the ×2.5–3.5 and ×1.1–1.6 bands), health +12%,
+damage +10% and one skill point per level, a little armor every other level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;HeroLevelData&gt; GrowthCurve(int levels, float firstStep)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>levels</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>firstStep</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Authoring.HeroLevelData.html">HeroLevelData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitPresets_HasCompanion_" data-uid="TDMaker.Editor.UnitPresets.HasCompanion*"></a>
+
+  <h3 id="TDMaker_Editor_UnitPresets_HasCompanion_TDMaker_Editor_UnitPreset_" data-uid="TDMaker.Editor.UnitPresets.HasCompanion(TDMaker.Editor.UnitPreset)">
+  HasCompanion(UnitPreset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether a preset also creates a second enemy (the splitter's split-off, the necromancer's raised unit).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasCompanion(UnitPreset preset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>preset</code> <a class="xref" href="TDMaker.Editor.UnitPreset.html">UnitPreset</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitPresets_Id_" data-uid="TDMaker.Editor.UnitPresets.Id*"></a>
+
+  <h3 id="TDMaker_Editor_UnitPresets_Id_System_String_" data-uid="TDMaker.Editor.UnitPresets.Id(System.String)">
+  Id(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lower-case template id from an asset name (&quot;Enemy_Big Orc&quot; → &quot;big_orc&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Id(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

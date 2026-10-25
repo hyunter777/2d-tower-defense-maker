@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ProfileData | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ProfileData | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Everything one save slot stores: opened levels with best stars, victories not yet merged into the map, purchased permanent upgrade ranks per track, stars spent on them, and free game-specific entries. App settings (volumes, language) are not part of a slot; they stay in . Serialized with  by ;  drives migrations.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Campaign.ProfileData">
+
+
+
+  <h1 id="TDMaker_Unity_Campaign_ProfileData" data-uid="TDMaker.Unity.Campaign.ProfileData" class="text-break">
+Class ProfileData  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<span class="xref">Unity</span>.<a class="xref" href="TDMaker.Unity.Campaign.html">Campaign</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Unity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Everything one save slot stores: opened levels with best stars, victories not yet merged into the map, purchased
+permanent upgrade ranks per track, stars spent on them, and free game-specific entries. App settings (volumes,
+language) are not part of a slot; they stay in <a class="xref" href="TDMaker.Unity.View.TDGameSettings.html">TDGameSettings</a>. Serialized with
+<span class="xref">UnityEngine.JsonUtility</span> by <a class="xref" href="TDMaker.Unity.Campaign.ProfileSerializer.html">ProfileSerializer</a>; <a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_version">version</a> drives migrations.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ProfileData</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ProfileData</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData__ctor_" data-uid="TDMaker.Unity.Campaign.ProfileData.#ctor*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData__ctor" data-uid="TDMaker.Unity.Campaign.ProfileData.#ctor">
+  ProfileData()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProfileData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_CurrentVersion" data-uid="TDMaker.Unity.Campaign.ProfileData.CurrentVersion">
+  CurrentVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schema version written by this code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int CurrentVersion = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_FormatName" data-uid="TDMaker.Unity.Campaign.ProfileData.FormatName">
+  FormatName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marker of 2D Tower Defense Maker profile files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FormatName = &quot;TDMakerProfile&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_created" data-uid="TDMaker.Unity.Campaign.ProfileData.created">
+  created
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creation time (UTC, round-trip format).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string created</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_custom" data-uid="TDMaker.Unity.Campaign.ProfileData.custom">
+  custom
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Free game-specific entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ProfileEntry&gt; custom</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Campaign.ProfileEntry.html">ProfileEntry</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_earnedStars" data-uid="TDMaker.Unity.Campaign.ProfileData.earnedStars">
+  earnedStars
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Earned star total when the slot was last saved (for slot pickers that do not load the campaign).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int earnedStars</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_format" data-uid="TDMaker.Unity.Campaign.ProfileData.format">
+  format
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Format marker (<a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_FormatName">FormatName</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string format</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_levels" data-uid="TDMaker.Unity.Campaign.ProfileData.levels">
+  levels
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opened levels (a level without a record is locked).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;LevelRecord&gt; levels</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Campaign.LevelRecord.html">LevelRecord</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_pendingClears" data-uid="TDMaker.Unity.Campaign.ProfileData.pendingClears">
+  pendingClears
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Victories waiting to be merged into the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;PendingClear&gt; pendingClears</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Campaign.PendingClear.html">PendingClear</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_saved" data-uid="TDMaker.Unity.Campaign.ProfileData.saved">
+  saved
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Time of the last save (UTC, round-trip format).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string saved</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_starsSpent" data-uid="TDMaker.Unity.Campaign.ProfileData.starsSpent">
+  starsSpent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stars spent on permanent upgrades (available = earned − spent).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int starsSpent</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_upgradeRanks" data-uid="TDMaker.Unity.Campaign.ProfileData.upgradeRanks">
+  upgradeRanks
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Purchased permanent upgrade ranks by track key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;UpgradeRankRecord&gt; upgradeRanks</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Campaign.UpgradeRankRecord.html">UpgradeRankRecord</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_version" data-uid="TDMaker.Unity.Campaign.ProfileData.version">
+  version
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schema version of the data (see <a class="xref" href="TDMaker.Unity.Campaign.ProfileSerializer.html#TDMaker_Unity_Campaign_ProfileSerializer_Migrate">Migrate</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int version</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_Clone_" data-uid="TDMaker.Unity.Campaign.ProfileData.Clone*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_Clone" data-uid="TDMaker.Unity.Campaign.ProfileData.Clone">
+  Clone()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A deep copy (through JSON).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProfileData Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html">ProfileData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_CreateNew_" data-uid="TDMaker.Unity.Campaign.ProfileData.CreateNew*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_CreateNew" data-uid="TDMaker.Unity.Campaign.ProfileData.CreateNew">
+  CreateNew()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A new empty profile stamped with the current time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ProfileData CreateNew()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html">ProfileData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_FindLevel_" data-uid="TDMaker.Unity.Campaign.ProfileData.FindLevel*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_FindLevel_System_String_" data-uid="TDMaker.Unity.Campaign.ProfileData.FindLevel(System.String)">
+  FindLevel(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The record of <code class="paramref">key</code>, or null (locked).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LevelRecord FindLevel(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Campaign.LevelRecord.html">LevelRecord</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_FindPending_" data-uid="TDMaker.Unity.Campaign.ProfileData.FindPending*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_FindPending_System_String_" data-uid="TDMaker.Unity.Campaign.ProfileData.FindPending(System.String)">
+  FindPending(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The pending victory of <code class="paramref">key</code>, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PendingClear FindPending(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Campaign.PendingClear.html">PendingClear</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_GetCustom_" data-uid="TDMaker.Unity.Campaign.ProfileData.GetCustom*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_GetCustom_System_String_System_String_" data-uid="TDMaker.Unity.Campaign.ProfileData.GetCustom(System.String,System.String)">
+  GetCustom(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A game-specific value, or <code class="paramref">fallback</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetCustom(string key, string fallback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_GetUpgradeRank_" data-uid="TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_GetUpgradeRank_System_String_" data-uid="TDMaker.Unity.Campaign.ProfileData.GetUpgradeRank(System.String)">
+  GetUpgradeRank(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Purchased rank of an upgrade track (0 when never bought).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetUpgradeRank(string track)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>track</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_Normalize_" data-uid="TDMaker.Unity.Campaign.ProfileData.Normalize*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_Normalize" data-uid="TDMaker.Unity.Campaign.ProfileData.Normalize">
+  Normalize()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replaces missing lists, drops empty entries and merges duplicate keys (keeping the best values). Run after loading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Normalize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_OpenLevel_" data-uid="TDMaker.Unity.Campaign.ProfileData.OpenLevel*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_OpenLevel_System_String_System_Boolean__" data-uid="TDMaker.Unity.Campaign.ProfileData.OpenLevel(System.String,System.Boolean@)">
+  OpenLevel(string, out bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The record of <code class="paramref">key</code>, created (opened) when missing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LevelRecord OpenLevel(string key, out bool created)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>created</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Campaign.LevelRecord.html">LevelRecord</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_SetCustom_" data-uid="TDMaker.Unity.Campaign.ProfileData.SetCustom*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_SetCustom_System_String_System_String_" data-uid="TDMaker.Unity.Campaign.ProfileData.SetCustom(System.String,System.String)">
+  SetCustom(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a game-specific value (null removes it).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCustom(string key, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Campaign_ProfileData_SetUpgradeRank_" data-uid="TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank*"></a>
+
+  <h3 id="TDMaker_Unity_Campaign_ProfileData_SetUpgradeRank_System_String_System_Int32_" data-uid="TDMaker.Unity.Campaign.ProfileData.SetUpgradeRank(System.String,System.Int32)">
+  SetUpgradeRank(string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the purchased rank of an upgrade track (0 removes the entry).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUpgradeRank(string track, int rank)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>track</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>rank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

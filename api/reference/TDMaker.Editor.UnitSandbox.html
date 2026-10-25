@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UnitSandbox | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UnitSandbox | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="The Unit Workshop&#39;s test range: a straight lane with the chosen towers beside it, and a wave of the unit under test (or, for heroes and soldiers, a wave of an opponent enemy against them).  plays it headless and deterministically (fixed seed, fixed tick);  returns the same level for the play-mode sandbox.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.UnitSandbox">
+
+
+
+  <h1 id="TDMaker_Editor_UnitSandbox" data-uid="TDMaker.Editor.UnitSandbox" class="text-break">
+Class UnitSandbox  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The Unit Workshop's test range: a straight lane with the chosen towers beside it, and a wave of the unit under test (or, for
+heroes and soldiers, a wave of an opponent enemy against them). <a class="xref" href="TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Run_TDMaker_Editor_UnitSandbox_Setup_">Run(Setup)</a> plays it headless and deterministically
+(fixed seed, fixed tick); <a class="xref" href="TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_BuildLevel_TDMaker_Editor_UnitSandbox_Setup_System_Collections_Generic_List_UnityEngine_Object__">BuildLevel(Setup, List&lt;Object&gt;)</a> returns the same level for the play-mode sandbox.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UnitSandbox</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UnitSandbox</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_UnitSandbox_BuildLevel_" data-uid="TDMaker.Editor.UnitSandbox.BuildLevel*"></a>
+
+  <h3 id="TDMaker_Editor_UnitSandbox_BuildLevel_TDMaker_Editor_UnitSandbox_Setup_System_Collections_Generic_List_UnityEngine_Object__" data-uid="TDMaker.Editor.UnitSandbox.BuildLevel(TDMaker.Editor.UnitSandbox.Setup,System.Collections.Generic.List{UnityEngine.Object})">
+  BuildLevel(Setup, List&lt;Object&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Builds the in-memory test level (assets marked DontSave; destroy them with <a class="xref" href="TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_Release_System_Collections_Generic_List_UnityEngine_Object__">Release(List&lt;Object&gt;)</a>). Slot i holds tower i;
+a soldier under test gets a barracks of three in the middle; a hero under test stands at the lane centre.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LevelAsset BuildLevel(UnitSandbox.Setup setup, List&lt;Object&gt; owned)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>setup</code> <a class="xref" href="TDMaker.Editor.UnitSandbox.html">UnitSandbox</a>.<a class="xref" href="TDMaker.Editor.UnitSandbox.Setup.html">Setup</a></dt>
+    <dd></dd>
+    <dt><code>owned</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Object</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.LevelAsset.html">LevelAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitSandbox_BuyAllAbilities_" data-uid="TDMaker.Editor.UnitSandbox.BuyAllAbilities*"></a>
+
+  <h3 id="TDMaker_Editor_UnitSandbox_BuyAllAbilities_TDMaker_Core_Simulation_" data-uid="TDMaker.Editor.UnitSandbox.BuyAllAbilities(TDMaker.Core.Simulation)">
+  BuyAllAbilities(Simulation)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Buys every rank of every ability of the built towers (one rank per tick, so each purchase sees the previous one).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void BuyAllAbilities(Simulation sim)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sim</code> <a class="xref" href="TDMaker.Core.Simulation.html">Simulation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitSandbox_Release_" data-uid="TDMaker.Editor.UnitSandbox.Release*"></a>
+
+  <h3 id="TDMaker_Editor_UnitSandbox_Release_System_Collections_Generic_List_UnityEngine_Object__" data-uid="TDMaker.Editor.UnitSandbox.Release(System.Collections.Generic.List{UnityEngine.Object})">
+  Release(List&lt;Object&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Destroys the assets created by <a class="xref" href="TDMaker.Editor.UnitSandbox.html#TDMaker_Editor_UnitSandbox_BuildLevel_TDMaker_Editor_UnitSandbox_Setup_System_Collections_Generic_List_UnityEngine_Object__">BuildLevel(Setup, List&lt;Object&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release(List&lt;Object&gt; owned)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>owned</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Object</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitSandbox_Run_" data-uid="TDMaker.Editor.UnitSandbox.Run*"></a>
+
+  <h3 id="TDMaker_Editor_UnitSandbox_Run_TDMaker_Editor_UnitSandbox_Setup_" data-uid="TDMaker.Editor.UnitSandbox.Run(TDMaker.Editor.UnitSandbox.Setup)">
+  Run(Setup)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the sandbox headless: builds every tower, calls the wave and runs to the end or the time limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UnitSandbox.Result Run(UnitSandbox.Setup setup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>setup</code> <a class="xref" href="TDMaker.Editor.UnitSandbox.html">UnitSandbox</a>.<a class="xref" href="TDMaker.Editor.UnitSandbox.Setup.html">Setup</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Editor.UnitSandbox.html">UnitSandbox</a>.<a class="xref" href="TDMaker.Editor.UnitSandbox.Result.html">Result</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

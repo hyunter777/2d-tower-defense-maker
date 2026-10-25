@@ -1,0 +1,2427 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="English guides and API reference for building 2D tower defense games in Unity 6.">
+      
+      
+      
+        <link rel="canonical" href="https://hyunter777.github.io/2d-tower-defense-maker/mechanics/">
+      
+      
+        <link rel="prev" href="../editor-tools/">
+      
+      
+        <link rel="next" href="../campaign/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Gameplay mechanics - 2D Tower Defense Maker</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/styles.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mechanic-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="2D Tower Defense Maker" class="md-header__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2D Tower Defense Maker
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gameplay mechanics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="2D Tower Defense Maker" class="md-nav__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    2D Tower Defense Maker
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start here
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build your game
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build your game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gameplay mechanics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gameplay mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chain-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chain attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-target-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-target attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recipient-filter-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recipient filter (Targets)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impact-payload-damage-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impact payload (Damage &gt; Impact)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#region-pulses-pulse-only-regions-and-healing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region pulses, pulse-only regions and healing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combat-modifier-modifier-combat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combat modifier (Modifier &gt; Combat)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traps-action-use-trap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traps (Action &gt; Use Trap)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mine-fields-action-use-mines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mine fields (Action &gt; Use Mines)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#companions-hero-tower-companions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Companions (Hero / Tower &gt; Companions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-on-the-spot-enemy-revive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Return on the spot (Enemy &gt; Revive)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#successor-rules-enemy-death-succession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Successor rules (Enemy &gt; Death Succession)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raising-the-fallen-action-use-raise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raising the fallen (Action &gt; Use Raise)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beams-action-use-beam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beams (Action &gt; Use Beam)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-enemy-reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection (Enemy &gt; Reflection)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#life-steal-damage-life-steal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Life steal (Damage &gt; Life Steal)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-destination-and-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path destination and transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permanent-auras-area-until-source-lost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permanent auras (Area &gt; Until Source Lost)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-in-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining in actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projectile-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projectile accuracy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-the-basic-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In the Basic sample
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-against-the-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coding against the definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campaigns and upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize and extend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customize and extend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HUD, fonts and audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extending the framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../determinism-and-replay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Determinism and replay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference and support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference and support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and licenses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chain-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chain attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-target-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-target attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recipient-filter-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recipient filter (Targets)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impact-payload-damage-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impact payload (Damage &gt; Impact)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#region-pulses-pulse-only-regions-and-healing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region pulses, pulse-only regions and healing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combat-modifier-modifier-combat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combat modifier (Modifier &gt; Combat)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traps-action-use-trap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traps (Action &gt; Use Trap)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mine-fields-action-use-mines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mine fields (Action &gt; Use Mines)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#companions-hero-tower-companions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Companions (Hero / Tower &gt; Companions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-on-the-spot-enemy-revive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Return on the spot (Enemy &gt; Revive)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#successor-rules-enemy-death-succession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Successor rules (Enemy &gt; Death Succession)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raising-the-fallen-action-use-raise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raising the fallen (Action &gt; Use Raise)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beams-action-use-beam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beams (Action &gt; Use Beam)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-enemy-reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection (Enemy &gt; Reflection)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#life-steal-damage-life-steal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Life steal (Damage &gt; Life Steal)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-destination-and-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path destination and transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permanent-auras-area-until-source-lost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permanent auras (Area &gt; Until Source Lost)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-in-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining in actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projectile-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projectile accuracy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-the-basic-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In the Basic sample
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-against-the-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coding against the definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mechanic-library">Mechanic Library<a class="headerlink" href="#mechanic-library" title="Permanent link">&para;</a></h1>
+<p>Ready-made building blocks for common tower defense mechanics. Each one is a core definition (<code>TDMaker.Core.Defs</code>) with a matching serializable authoring block (<code>TDMaker.Unity.Authoring</code>), so designers can attach it to towers, tower abilities, enemies, hero skills, spells and projectiles without code. The view draws every one of them out of the box.</p>
+<table>
+<thead>
+<tr>
+<th>Mechanic</th>
+<th>Core definition</th>
+<th>Authoring block</th>
+<th>Where you attach it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chain attack</td>
+<td><code>ChainAttackDef</code></td>
+<td><code>ChainAttackData</code></td>
+<td>Ability / skill / behavior action: <code>Use Chain</code> + <code>Chain</code></td>
+</tr>
+<tr>
+<td>Multi-target attack</td>
+<td><code>MultiTargetAttackDef</code></td>
+<td><code>MultiTargetAttackData</code></td>
+<td>Action: <code>Use Multi Target</code> + <code>Multi Target</code></td>
+</tr>
+<tr>
+<td>Recipient filter</td>
+<td><code>MechanicTargetDef</code></td>
+<td><code>MechanicTargetData</code></td>
+<td><code>Targets</code> of chains, multi-target attacks, impact payloads and pulses</td>
+</tr>
+<tr>
+<td>Impact payload</td>
+<td><code>ImpactPayloadDef</code></td>
+<td><code>ImpactPayloadData</code></td>
+<td>Any attack damage: <code>Damage &gt; Impact</code></td>
+</tr>
+<tr>
+<td>Path displacement (knockback / pull)</td>
+<td><code>PathDisplacementDef</code></td>
+<td><code>ImpactPayloadData.useDisplacement</code> + <code>displacement</code></td>
+<td>Inside an impact payload</td>
+</tr>
+<tr>
+<td>Region pulse</td>
+<td><code>AreaPulseDef</code></td>
+<td><code>AreaPulseData</code></td>
+<td>Any area effect: <code>Area &gt; Pulse</code> (an area without a status effect becomes <strong>pulse-only</strong>)</td>
+</tr>
+<tr>
+<td>Healing</td>
+<td><code>HealingDef</code></td>
+<td><code>HealingData</code></td>
+<td>Pulses and periodic healing</td>
+</tr>
+<tr>
+<td>Periodic healing</td>
+<td><code>PeriodicHealingDef</code></td>
+<td><code>PeriodicHealingData</code></td>
+<td>Status effect: <code>Healing</code></td>
+</tr>
+<tr>
+<td>Shield</td>
+<td><code>ShieldDef</code></td>
+<td><code>ShieldData</code></td>
+<td>Status effect: <code>Shield</code></td>
+</tr>
+<tr>
+<td>Combat modifier</td>
+<td><code>CombatModifierDef</code></td>
+<td><code>CombatModifierData</code></td>
+<td>Stat modifier: <code>Combat</code> (status effects, ability passives)</td>
+</tr>
+<tr>
+<td>Trap (mine, snare)</td>
+<td><code>TrapDef</code></td>
+<td><code>TrapData</code></td>
+<td>Action: <code>Use Trap</code> + <code>Trap</code></td>
+</tr>
+<tr>
+<td>Beam (channel)</td>
+<td><code>BeamDef</code></td>
+<td><code>BeamData</code></td>
+<td>Action: <code>Use Beam</code> + <code>Beam</code></td>
+</tr>
+<tr>
+<td>Reflection (thorns)</td>
+<td><code>ReflectionDef</code></td>
+<td><code>ReflectionData</code></td>
+<td>Enemy: <code>Reflection</code></td>
+</tr>
+<tr>
+<td>Life steal</td>
+<td><code>LifeStealDef</code></td>
+<td><code>LifeStealData</code></td>
+<td>Any attack damage: <code>Damage &gt; Life Steal</code></td>
+</tr>
+<tr>
+<td>Path destination</td>
+<td><code>PathDestinationDef</code></td>
+<td><code>PathDestinationData</code></td>
+<td>Inside a transfer action or an impact payload</td>
+</tr>
+<tr>
+<td>Path transfer</td>
+<td><code>PathTransferDef</code></td>
+<td><code>PathTransferData</code></td>
+<td>Action: <code>Use Transfer</code> + <code>Transfer</code>; hits: <code>Impact &gt; Use Transfer</code></td>
+</tr>
+<tr>
+<td>Permanent aura</td>
+<td><code>AreaEffectDef.WithOwnerLifetime</code> / <code>CreateOwned</code></td>
+<td><code>AreaEffectData.untilSourceLost</code></td>
+<td>Enemy <code>Aura</code>: <code>Until Source Lost</code></td>
+</tr>
+<tr>
+<td>Mine field (automatic mine laying)</td>
+<td><code>DeploymentPlanDef</code> (+ <code>TrapDef</code>)</td>
+<td><code>MineFieldData</code></td>
+<td>Action: <code>Use Mines</code> + <code>Mines</code></td>
+</tr>
+<tr>
+<td>Companions (escorts, followers)</td>
+<td><code>CompanionDef</code></td>
+<td><code>CompanionData</code></td>
+<td>Hero / Tower: <code>Companions</code></td>
+</tr>
+<tr>
+<td>Return on the spot</td>
+<td><code>ReviveDef</code></td>
+<td><code>ReviveData</code></td>
+<td>Enemy: <code>Revive</code></td>
+</tr>
+<tr>
+<td>Successor rules</td>
+<td><code>SummonDef.WithDeathSuccession</code></td>
+<td><code>DeathSuccessionData</code></td>
+<td>Enemy: <code>Death Succession</code> (with <code>Death Summon</code>)</td>
+</tr>
+<tr>
+<td>Raising the fallen</td>
+<td><code>RaiseRemainsDef</code></td>
+<td><code>RaiseRemainsData</code></td>
+<td>Action: <code>Use Raise</code> + <code>Raise</code></td>
+</tr>
+</tbody>
+</table>
+<p>Projectiles can additionally leave a region where they land: <code>ProjectileAsset &gt; Impact Area</code> (core: <code>ProjectileDef.WithImpactArea</code>).</p>
+<h2 id="chain-attack">Chain attack<a class="headerlink" href="#chain-attack" title="Permanent link">&para;</a></h2>
+<p>One activation hits a first target near the actor, then jumps from victim to victim. Each victim is hit at most once per chain.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code></td>
+<td>Event key; also selects the arc colour in the view. Use one id per look.</td>
+</tr>
+<tr>
+<td><code>Damage</code></td>
+<td>Damage at each link (may carry status effects and an impact payload).</td>
+</tr>
+<tr>
+<td><code>Range</code></td>
+<td>Range of the first link from the actor (scaled by the actor's range modifier).</td>
+</tr>
+<tr>
+<td><code>Link Range</code></td>
+<td>Range from one victim to the next.</td>
+</tr>
+<tr>
+<td><code>Max Targets</code></td>
+<td>Distinct victims including the first.</td>
+</tr>
+<tr>
+<td><code>Link Delay</code></td>
+<td>Game seconds between links (0 still waits for the next tick).</td>
+</tr>
+<tr>
+<td><code>Link Scale</code></td>
+<td>Damage multiplier applied after each link (0.8 = every jump deals 20% less).</td>
+</tr>
+<tr>
+<td><code>Chance</code></td>
+<td>One roll per activation; a failed roll still uses the cooldown.</td>
+</tr>
+<tr>
+<td><code>Targets</code>, <code>Targets Flying</code>, <code>Targets Ground</code></td>
+<td>Victim eligibility.</td>
+</tr>
+<tr>
+<td><code>Cancel With Source</code></td>
+<td>Remaining links stop if the actor dies, disappears, is stunned, disarmed or ordered to rally.</td>
+</tr>
+<tr>
+<td><code>Color</code>, <code>Vfx</code></td>
+<td>Arc colour and an optional pooled VFX spawned on each victim.</td>
+</tr>
+</tbody>
+</table>
+<p>Each link picks the nearest eligible enemy (ties: lower Id). Chains run from a fixed pool (<code>SimConfig.ChainCapacity</code>, runner field <code>Chain Capacity</code>, default 64); unfinished chains count as pending work, so the level does not end while one is running.</p>
+<p>Events: <code>ChainStarted</code> (IntValue = chain id), <code>ChainLinked</code> per victim, <code>ChainEnded</code> (Value = victims), <code>MechanicMissed</code> on a failed roll.</p>
+<h2 id="multi-target-attack">Multi-target attack<a class="headerlink" href="#multi-target-attack" title="Permanent link">&para;</a></h2>
+<p>One activation hits several distinct targets at once.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code></td>
+<td>Event key and beam colour key.</td>
+</tr>
+<tr>
+<td><code>Damage</code></td>
+<td>Independent hit per target.</td>
+</tr>
+<tr>
+<td><code>Range</code>, <code>Max Targets</code></td>
+<td>Search ellipse and number of targets.</td>
+</tr>
+<tr>
+<td><code>Health Budget</code></td>
+<td>Optional: the chosen targets' summed current health cannot exceed this (0 = no budget). Requires single-target damage. Useful for "finish off several weak enemies".</td>
+</tr>
+<tr>
+<td><code>Chance</code>, <code>Targets</code>, <code>Targets Flying</code>, <code>Targets Ground</code></td>
+<td>As for chains.</td>
+</tr>
+<tr>
+<td><code>Color</code>, <code>Vfx</code></td>
+<td>Beam colour and optional VFX per target.</td>
+</tr>
+</tbody>
+</table>
+<p>Towers order targets by their current target priority; other actors take the nearest first. Events: <code>MechanicTargeted</code> per target, then <code>MechanicActivated</code> (IntValue = targets hit).</p>
+<h2 id="recipient-filter-targets">Recipient filter (<code>Targets</code>)<a class="headerlink" href="#recipient-filter-targets" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Required Tags</code> / <code>Rejected Tags</code></td>
+<td>Bit masks matched against the recipient's <code>Tags</code> (Enemy, Soldier and Hero assets have a <code>Tags</code> field).</td>
+</tr>
+<tr>
+<td><code>Allow Heroes</code></td>
+<td>Heroes may be chosen.</td>
+</tr>
+<tr>
+<td><code>Maximum Health Ratio</code></td>
+<td>Only recipients at or below this share of their maximum health (1 = any).</td>
+</tr>
+<tr>
+<td><code>Maximum Health</code></td>
+<td>Only recipients at or below this current health (0 = off).</td>
+</tr>
+</tbody>
+</table>
+<p>Tags are your own convention: decide what each bit means (the Basic sample uses bit 0 = support, bit 1 = heavy).</p>
+<h2 id="impact-payload-damage-impact">Impact payload (<code>Damage &gt; Impact</code>)<a class="headerlink" href="#impact-payload-damage-impact" title="Permanent link">&para;</a></h2>
+<p>Extra work after a resolved hit, rolled once per hit:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enabled</code>, <code>Chance</code></td>
+<td>Turn on; probability per eligible hit.</td>
+</tr>
+<tr>
+<td><code>Trigger On Zero Damage</code></td>
+<td>Also trigger on hits that removed no health (control-only attacks). Immune targets never trigger.</td>
+</tr>
+<tr>
+<td><code>Targets</code></td>
+<td>Extra victim eligibility, checked before the damage is applied.</td>
+</tr>
+<tr>
+<td><code>Use Secondary Damage</code> + <code>Secondary Damage</code></td>
+<td>An independent extra hit centred on the victim (give it a radius for a blast).</td>
+</tr>
+<tr>
+<td><code>Area</code></td>
+<td>A residual region left at the impact point, even if the victim died (status effect and/or pulse).</td>
+</tr>
+<tr>
+<td><code>Use Displacement</code> + <code>Displacement</code></td>
+<td>Moves a <strong>surviving</strong> victim along its own path and lane: negative = back toward the entry (knockback), positive = toward the exit. Clamped to the path; blockers are released.</td>
+</tr>
+<tr>
+<td><code>Use Transfer</code> + <code>Destination</code></td>
+<td>Moves a <strong>surviving</strong> victim to an exact path point (after any displacement); see <a href="#path-destination-and-transfer">Path destination and transfer</a>. A payload with only a transfer needs no dummy damage.</td>
+</tr>
+</tbody>
+</table>
+<p>Events: <code>ImpactPayloadTriggered</code> (IntValue bits: secondary damage 1, area 2, displacement 4, path transfer 8), <code>Displaced</code>, <code>PathTransferred</code>.</p>
+<h2 id="region-pulses-pulse-only-regions-and-healing">Region pulses, pulse-only regions and healing<a class="headerlink" href="#region-pulses-pulse-only-regions-and-healing" title="Permanent link">&para;</a></h2>
+<p>Every area effect (<code>AreaEffectData</code>: tower/skill actions, spells, enemy auras, impact payloads, projectile impact areas) can carry a <code>Pulse</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enabled</code>, <code>Id</code></td>
+<td>Turn on; event key (also the ring colour key).</td>
+</tr>
+<tr>
+<td><code>Use Damage</code> + <code>Damage</code></td>
+<td>Single-target hit on every occupant per scan (the region is the area; the damage radius is ignored).</td>
+</tr>
+<tr>
+<td><code>Use Healing</code> + <code>Healing</code></td>
+<td><code>Amount</code> + <code>Maximum Health Share</code> restored to every occupant per scan (never above maximum health; not affected by damage multipliers).</td>
+</tr>
+<tr>
+<td><code>Targets</code></td>
+<td>Extra occupant eligibility.</td>
+</tr>
+<tr>
+<td><code>Color</code>, <code>Vfx</code></td>
+<td>Ring colour and optional VFX per pulse.</td>
+</tr>
+</tbody>
+</table>
+<p>Occupants are re-scanned every <code>Interval</code>; nothing lingers after a unit leaves. <strong>Leave <code>Effect</code> empty for a pulse-only region</strong> – no dummy status effect is needed. <code>Targets Enemies</code> selects the enemy faction (so an enemy aura with <code>Targets Enemies</code> on heals other enemies). Event: <code>AreaPulsed</code> (Value = radius, IntValue = occupants affected, Key = pulse id).</p>
+<p><strong>Periodic healing</strong> on a status effect (<code>Healing</code>): <code>Healing</code>, <code>Interval</code>, <code>Heal On Attach</code>, <code>Heal On Expire</code> (natural expiry only). Refreshing the effect does not reset its cadence. Event: <code>Healed</code>.</p>
+<h2 id="shields">Shields<a class="headerlink" href="#shields" title="Permanent link">&para;</a></h2>
+<p>A status effect with <code>Shield</code> enabled gives each accepted attachment its own shield:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Amount</code> + <code>Maximum Health Share</code></td>
+<td>Capacity, snapshotted when attached.</td>
+</tr>
+<tr>
+<td><code>Channels</code></td>
+<td>Damage kinds absorbed (after armor and resistance). Execute and despawn hits bypass shields.</td>
+</tr>
+<tr>
+<td><code>Refill On Refresh</code></td>
+<td>Re-applying at equal rank refills the shield; otherwise the remaining capacity is kept.</td>
+</tr>
+</tbody>
+</table>
+<p>Several shields absorb in attachment order; removing the effect discards unused capacity. Events: <code>ShieldChanged</code> (Value = capacity, 0 when gone), <code>ShieldAbsorbed</code>. The view draws a bubble that fades with the remaining capacity.</p>
+<h2 id="combat-modifier-modifier-combat">Combat modifier (<code>Modifier &gt; Combat</code>)<a class="headerlink" href="#combat-modifier-modifier-combat" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Range Scale</code></td>
+<td>Multiplies attack ranges, including melee contact (area sizes are not scaled). Tower range support or "nearsighted" debuffs.</td>
+</tr>
+<tr>
+<td><code>Disable Attacks</code></td>
+<td>No attacks or ability actions; movement and recovery continue (for example a tower jam).</td>
+</tr>
+<tr>
+<td><code>Ignore Blocking</code></td>
+<td>Cannot be blocked; current blockers are released (dashes).</td>
+</tr>
+<tr>
+<td><code>Untargetable</code></td>
+<td>Attacks cannot select the unit (concealment); status effects keep their own rules.</td>
+</tr>
+</tbody>
+</table>
+<p>Stacked flags are reference-counted and fully reversed on removal. Events: <code>CombatControlChanged</code> (IntValue bits: attacks disabled 1, ignores blocking 2, untargetable 4), <code>AttackRangeChanged</code>. The view greys out disarmed units and draws untargetable units translucent.</p>
+<h2 id="traps-action-use-trap">Traps (<code>Action &gt; Use Trap</code>)<a class="headerlink" href="#traps-action-use-trap" title="Permanent link">&para;</a></h2>
+<p>A fixed-position deployment (mine, snare, glyph). It arms after a delay, then hits the nearest eligible unit inside its detection radius until its triggers or lifetime run out.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code></td>
+<td>Event key and marker colour key; also the population-limit key (per source).</td>
+</tr>
+<tr>
+<td><code>Damage</code></td>
+<td>Hit on trigger. An area packet (<code>Radius</code> &gt; 0) is centred on the trap; a single-target packet hits the triggering unit. May carry effects, an impact payload and life steal.</td>
+</tr>
+<tr>
+<td><code>Trigger Radius</code></td>
+<td>Detection ellipse, independent of the damage radius.</td>
+</tr>
+<tr>
+<td><code>Lifetime</code>, <code>Arm Delay</code></td>
+<td>Total lifetime (including arming) and the delay before it can trigger. A trap never acts in the tick it was placed.</td>
+</tr>
+<tr>
+<td><code>Max Triggers</code>, <code>Trigger Cooldown</code></td>
+<td>Activations before it is used up, and the delay between them (at most one per tick).</td>
+</tr>
+<tr>
+<td><code>Population Limit</code></td>
+<td>Live traps with this id per source (0 = unlimited). When full, the action does not succeed and its cooldown does not restart.</td>
+</tr>
+<tr>
+<td><code>Area</code></td>
+<td>Optional region left at the trap on every trigger (status effect and/or pulse).</td>
+</tr>
+<tr>
+<td><code>Targets Enemies</code>, <code>Targets Flying</code>, <code>Targets Ground</code>, <code>Targets</code></td>
+<td>Who triggers it. Area victims use normal damage eligibility.</td>
+</tr>
+<tr>
+<td><code>Cancel With Source</code></td>
+<td>Off (default): the trap outlives its source with the damage multiplier and hero credit captured at placement. On: removed when the source dies.</td>
+</tr>
+<tr>
+<td><code>Placement</code>, <code>Placement Range</code>, <code>Offset</code></td>
+<td><code>Source</code> (actor position), <code>Rally</code> (barracks/hero rally point, else the actor) or <code>Opponent</code> (nearest eligible unit within the range). The offset is added before validation.</td>
+</tr>
+<tr>
+<td><code>Use Custom Point Rule</code> + <code>Point Rule</code></td>
+<td>Placement validation; by default the point is snapped onto the nearest lane. A rejected point cancels the activation.</td>
+</tr>
+<tr>
+<td><code>Color</code>, <code>Vfx</code></td>
+<td>Marker colour and optional VFX per trigger.</td>
+</tr>
+</tbody>
+</table>
+<p>Traps come from a fixed pool (<code>SimConfig.WithAdvancedCapacity</code>, default 128). Remaining friendly traps do not delay victory. Code can also place one at an explicit point: <code>Simulation.PlaceTrap(def, point, sourceId)</code> / <code>RemoveTrap(id)</code>.</p>
+<p>Events: <code>TrapPlaced</code> (IntValue = trap id, Value = lifetime), <code>TrapArmed</code> (Value = detection radius), <code>TrapTriggered</code> (OtherId = triggering unit, Value = damage radius), <code>TrapRemoved</code> (Value = <code>MechanicEndReason</code>: Completed, Expired, SourceLost, Cancelled). The view draws a dim pulsing marker while arming, a solid marker with a detection ring once armed, a flash and blast ring per trigger, and fades the marker out on removal.</p>
+<p>Spells cannot place traps yet (a spell has no action payload); use a hero skill or a tower ability.</p>
+<h2 id="mine-fields-action-use-mines">Mine fields (<code>Action &gt; Use Mines</code>)<a class="headerlink" href="#mine-fields-action-use-mines" title="Permanent link">&para;</a></h2>
+<p>Automatic mine laying for towers, hero skills and enemy behaviors (core: <code>DeploymentPlanDef</code> with a <code>TrapDef</code> payload). Each activation picks <strong>one lane node</strong> of a level path inside a distance band around the producer – a seeded, deterministic pick among the valid nodes, not the spot under an enemy – reserves it together with a trap slot, throws the mine (flight, landing, then the arming delay) and leaves a trap that bursts under the first eligible unit.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code></td>
+<td>Event key: marker colour, keyed audio cue, mine limit key. An art set entry with this key replaces the generated marker.</td>
+</tr>
+<tr>
+<td><code>Damage</code>, <code>Trigger Radius</code>, <code>Max Triggers</code>, <code>Area</code>, <code>Targets …</code></td>
+<td>As for traps: an area packet re-searches its victims around the mine; a single-target packet hits the triggering unit. A detection radius of about a quarter to a third of the blast radius reads well.</td>
+</tr>
+<tr>
+<td><code>Lifetime</code></td>
+<td>Counted <strong>from the throw</strong>: flight, landing and arming use it up. An unused mine fades out without exploding.</td>
+</tr>
+<tr>
+<td><code>Arm Delay</code></td>
+<td>After the landing preparation.</td>
+</tr>
+<tr>
+<td><code>Keep When Source Lost</code></td>
+<td>On (default): mines already laid stay when the producer is sold or dies, with their damage multiplier and hero credit captured at the throw.</td>
+</tr>
+<tr>
+<td><code>Minimum Distance</code>, <code>Maximum Distance</code></td>
+<td>The placement band (range ellipses around the producer). Only lane <strong>nodes</strong> inside it are candidates; denser node runs are picked more often.</td>
+</tr>
+<tr>
+<td><code>Side Clearance</code></td>
+<td>Minimum horizontal offset of a site from the producer.</td>
+</tr>
+<tr>
+<td><code>Minimum Spacing</code>, <code>Spacing Scope</code></td>
+<td>Distance to other mines, including those still in flight; <code>Owner</code> checks this producer's mines, <code>Global</code> every deployment (spell traps too).</td>
+</tr>
+<tr>
+<td><code>Max Mines</code></td>
+<td>Mines of this id alive or in flight per producer. A full field <strong>rejects</strong> the throw (old mines are never replaced); the action then does not succeed and its cooldown does not restart.</td>
+</tr>
+<tr>
+<td><code>Transit Duration</code>, <code>Settle Duration</code></td>
+<td>Flight time and landing preparation (the mine cannot trigger before <code>transit + settle + arm delay</code>).</td>
+</tr>
+<tr>
+<td><code>Use Custom Point Rule</code> + <code>Point Rule</code></td>
+<td>Terrain check for every candidate node; a node the rule would move is skipped.</td>
+</tr>
+</tbody>
+</table>
+<p>No candidate means no throw – there is no fallback spot. A mine whose lifetime ends in the same tick an enemy reaches it <strong>explodes</strong> (detection wins); expiry itself never explodes. Events: <code>TrapPlaced</code> and <code>DeploymentReserved</code> (IntValue = trap id, Position = site), <code>DeploymentInTransit</code>, <code>DeploymentLanded</code>, then the trap events <code>TrapArmed</code>, <code>TrapTriggered</code>, <code>TrapRemoved</code> (Value = <code>MechanicEndReason</code>). The view throws the marker along an arc from the producer, flashes the landing spot, shows the detection ring once armed with a short fuse blink, draws the blast and lets an expired mine sink and fade slowly. The Workshop's tower <strong>Mechanics</strong> tab has <strong>+ Mine-laying ability</strong> for a ready two-rank ability.</p>
+<h2 id="companions-hero-tower-companions">Companions (<code>Hero</code> / <code>Tower &gt; Companions</code>)<a class="headerlink" href="#companions-hero-tower-companions" title="Permanent link">&para;</a></h2>
+<p>Owner-bound slots (core: <code>CompanionDef</code>, template custom data). Each slot keeps one child alive; a fallen child is replaced <code>Refill Delay</code> seconds after <strong>its</strong> death. Child damage earns the owner experience.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Unit</code></td>
+<td>A Soldier asset. Ground escorts: not flying, with melee to block. Flying followers: <code>Flying</code> on (Soldier asset), usually with a ranged attack.</td>
+</tr>
+<tr>
+<td><code>Slots</code>, <code>Mode</code></td>
+<td><code>Ground Escort</code> walks, blocks and fights like a soldier and takes new places around the owner on every hero move order or rally point. <code>Flying Follower</code> flies after the owner and never blocks; it attacks from where it is.</td>
+</tr>
+<tr>
+<td><code>Refill Delay</code>, <code>Initial Delay</code></td>
+<td>Refill after a loss; first arrival after the owner appears.</td>
+</tr>
+<tr>
+<td><code>Formation Radius</code></td>
+<td>Ground escorts' places around the owner's last move / rally point.</td>
+</tr>
+<tr>
+<td><code>Follow Start Distance</code>, <code>Follow Stop Distance</code>, <code>Acceleration</code></td>
+<td>Flying followers: start moving beyond the start distance, stop at the stop distance (start must be larger).</td>
+</tr>
+<tr>
+<td><code>Wait On Owner Death</code></td>
+<td>On (default): children return to the dead owner and stop fighting; they reconnect when it comes back.</td>
+</tr>
+<tr>
+<td><code>Remove With Owner</code>, <code>Reconnect On Return</code></td>
+<td>On (default): children leave when a tower is sold; waiting children rejoin a returning hero (off: they leave instead). <code>Remove With Owner</code> off: they stay on as independent units.</td>
+</tr>
+<tr>
+<td><code>Rally Radius</code></td>
+<td>Towers without barracks: how far a <code>SetRallyPoint</code> command may move the escorts (<code>Simulation.TryResolveRallyPoint</code>). The sample HUD offers the rally button on barracks only; on a barracks the escorts follow its rally point.</td>
+</tr>
+<tr>
+<td><code>Use Custom Point Rule</code> + <code>Point Rule</code></td>
+<td>Ground spawn / reposition points (default: on a lane). An invalid point leaves the slot empty.</td>
+</tr>
+</tbody>
+</table>
+<p>Empty friendly slots never hold victory. Events: <code>CompanionSpawned</code> (EntityId = child, OtherId = owner, IntValue = slot, Key = child template), <code>CompanionWaiting</code>, <code>CompanionReconnected</code>, <code>CompanionRetired</code>, <code>CompanionDetached</code>. The view draws a short tether and a ring where a child arrives, dims waiting children and fades retiring ones out. The Validator reports flying mismatches as errors (the level would not start).</p>
+<h2 id="return-on-the-spot-enemy-revive">Return on the spot (<code>Enemy &gt; Revive</code>)<a class="headerlink" href="#return-on-the-spot-enemy-revive" title="Permanent link">&para;</a></h2>
+<p>The same unit lies down when killed, gets <code>Return Share</code> of its maximum health back after <code>Down Delay</code>, rises for <code>Rise Duration</code> and walks on with the same identity (core: <code>ReviveDef</code>). <code>Returns</code> counts over its lifetime; the death after the last one is final. While down it neither moves nor fights; while rising it may ignore damage (<code>Invulnerable While Rising</code>) and be skipped by attacks (<code>Untargetable While Rising</code>), independently. <code>Clear Effects</code> removes its status effects when it falls.</p>
+<p>Its bounty is paid <strong>once</strong> (on the first death) and a split on death (<code>Death Summon</code>) happens only after the last return. Pending returns hold victory. Events: <code>Died</code>, then <code>UnitDowned</code> (IntValue = returns used), <code>UnitRising</code> (Value = rise time), <code>UnitRevived</code>. The view keeps the unit (no death fade), turns it onto its side and darkens it, hides its health bar, and tweens it upright while it rises. The Sandbox counts falls separately from kills.</p>
+<h2 id="successor-rules-enemy-death-succession">Successor rules (<code>Enemy &gt; Death Succession</code>)<a class="headerlink" href="#successor-rules-enemy-death-succession" title="Permanent link">&para;</a></h2>
+<p>Extra rules for the enemies released by <code>Death Summon</code> (core: <code>SummonDef.WithDeathSuccession</code>): <code>Chain Budget</code> – death releases the whole lineage may make (one release can hold several siblings; 1 = successors do not release again), <code>Rise Duration</code> – successors rise before they act (optionally invulnerable / untargetable), <code>Bounty Policy</code> – <code>Once Per Lineage</code> (a lineage never pays twice) or <code>Suppress Successor</code>. A lineage leaks one life cost at most once, whichever member gets through. Successors inherit the dead unit's path position and travel direction.</p>
+<h2 id="raising-the-fallen-action-use-raise">Raising the fallen (<code>Action &gt; Use Raise</code>)<a class="headerlink" href="#raising-the-fallen-action-use-raise" title="Permanent link">&para;</a></h2>
+<p>Killed units leave a <strong>body</strong> (a neutral record: position, path position, side, kind, tags, cause). A raise action reserves the closest eligible bodies (ties by body order), casts for <code>Cast Delay</code>, then consumes each body and creates <code>Unit</code> there (core: <code>RaiseRemainsDef</code>). An Enemy result is hostile and continues the body's path; a Soldier result fights for the player.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code>, <code>Color</code>, <code>Vfx</code></td>
+<td>Event key, cast colour, optional VFX where a body is raised.</td>
+</tr>
+<tr>
+<td><code>Unit</code></td>
+<td>Created from each body; the body's own stats are not copied.</td>
+</tr>
+<tr>
+<td><code>Range</code>, <code>Max Count</code></td>
+<td>Body search radius around the caster and bodies per activation.</td>
+</tr>
+<tr>
+<td><code>Cast Delay</code>, <code>Rise Duration</code>, <code>Reservation Timeout</code></td>
+<td>Reservation to consumption; the result's rise time; the time-out (0 = cast delay + 1 s).</td>
+</tr>
+<tr>
+<td><code>Bodies</code>, <code>From Enemies / Soldiers / Heroes</code>, <code>Required Tags</code></td>
+<td>Whose bodies qualify. Hostile results need a body that was on a path.</td>
+</tr>
+<tr>
+<td><code>Skip Suppressed Deaths</code>, <code>Skip Executed</code>, <code>Minimum Age</code>, <code>Maximum Age</code></td>
+<td>Cause and age filters (maximum 0 = until the body decays).</td>
+</tr>
+<tr>
+<td><code>Population Limit</code>, <code>Chain Budget</code></td>
+<td>Raised units of this caster at once (reservations included); raises a lineage may make (1 = a raised unit's body cannot be raised again).</td>
+</tr>
+<tr>
+<td><code>Invulnerable While Rising</code>, <code>Untargetable While Rising</code></td>
+<td>Protection of the raised unit while it rises.</td>
+</tr>
+</tbody>
+</table>
+<p>A caster that moves, is stunned or dies releases its reservations; a body that decays is not extended by a reservation. The body is consumed only after the new unit is created, so a full entity pool releases the reservation instead. Raised enemies share the body's lineage, so they pay no second bounty. Bodies are kept by the <strong>Simulation Runner</strong> (<code>Remains Capacity</code>, default 256, 0 keeps none; <code>Remains Lifetime</code>, default 10 s; core: <code>SimConfig.WithRemains</code>); a full store does not push old bodies out. Reserved bodies hold victory; unreserved ones do not.</p>
+<p>Events: <code>RemainsCreated</code> (EntityId = dead unit, IntValue = body id), <code>RemainsReserved</code> (EntityId = caster, Value = cast delay), <code>RemainsReleased</code>, <code>RemainsConsumed</code> (OtherId = new unit). In levels where something raises bodies the view draws a small body marker for each available body (art set key <code>remains</code> replaces it), makes a reserved body glow, draws a tether from the caster for the cast time and flashes where the unit rises (the new unit starts lying and gets up).</p>
+<h2 id="beams-action-use-beam">Beams (<code>Action &gt; Use Beam</code>)<a class="headerlink" href="#beams-action-use-beam" title="Permanent link">&para;</a></h2>
+<p>A continuous single-target channel with an <strong>exact total damage budget</strong> split over pulses.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code></td>
+<td>Event key; beam colour and width key.</td>
+</tr>
+<tr>
+<td><code>Damage</code></td>
+<td>Channel (<code>Kind</code>), pierce, on-hit effects, impact payload and life steal. <code>Minimum</code>/<code>Maximum</code> and <code>Radius</code> are ignored – the budget decides the amount.</td>
+</tr>
+<tr>
+<td><code>Total Damage</code></td>
+<td>Raw damage of one channel before defenses, multiplied once by the source's damage multiplier and rounded up.</td>
+</tr>
+<tr>
+<td><code>Pulse Count</code>, <code>Interval</code>, <code>First Delay</code></td>
+<td>The budget is split evenly; earlier pulses take the remainder (100 over 3 pulses = 34, 33, 33).</td>
+</tr>
+<tr>
+<td><code>Range</code></td>
+<td>Targeting range and tracking limit; the beam ends when the target leaves it. The target is never switched.</td>
+</tr>
+<tr>
+<td><code>Targets</code>, <code>Targets Flying</code>, <code>Targets Ground</code></td>
+<td>Rechecked on every pulse.</td>
+</tr>
+<tr>
+<td><code>Cancel With Source</code></td>
+<td>On (default): ends when the source dies, is stunned or disarmed, or is ordered to move. Off: continues from the source's last position.</td>
+</tr>
+<tr>
+<td><code>Color</code>, <code>Width</code>, <code>Vfx</code></td>
+<td>Line look and optional VFX on the target per pulse.</td>
+</tr>
+</tbody>
+</table>
+<p>The budget is counted before armor, shields and hooks: mitigated, absorbed or rejected slices are not refunded, and an interrupted beam does not deal its remainder. Unfinished beams count as pending work. Pool: <code>SimConfig.WithAdvancedCapacity</code> (default 64); code can stop one with <code>Simulation.CancelBeam(id)</code>.</p>
+<p>Events: <code>BeamStarted</code> (IntValue = beam id, OtherId = target, Value = captured budget), <code>BeamPulsed</code> (Value = raw slice), <code>BeamEnded</code> (Value = <code>MechanicEndReason</code>: Completed, TargetLost, OutOfRange, SourceLost, Interrupted, Cancelled). The view keeps one pooled line per beam from start to end, following the source and target views, widening on every pulse and fading out at the end.</p>
+<h2 id="reflection-enemy-reflection">Reflection (<code>Enemy &gt; Reflection</code>)<a class="headerlink" href="#reflection-enemy-reflection" title="Permanent link">&para;</a></h2>
+<p>Thorns: when the unit loses health, a <code>Share</code> of the <strong>actual</strong> loss (shield absorption and overkill excluded, rounded up) is returned to the attacker as one single-target hit of <code>Kind</code> (with optional pierce).</p>
+<ul>
+<li>Reflected hits never reflect again and never steal life, so two reflecting units cannot loop.</li>
+<li>Dead attackers, attackers without health (towers) and self-damage are skipped; a unit that dies from the hit still reflects it.</li>
+</ul>
+<p>Event: <code>DamageReflected</code> (EntityId = reflecting unit, OtherId = attacker, Value = returned raw amount, Key = <code>Id</code>). The view draws a short line from the reflecting unit to the attacker and a flash on the attacker in the reflection <code>Color</code>.</p>
+<h2 id="life-steal-damage-life-steal">Life steal (<code>Damage &gt; Life Steal</code>)<a class="headerlink" href="#life-steal-damage-life-steal" title="Permanent link">&para;</a></h2>
+<p>The attacker recovers <code>Health Share</code> × the health this packet actually removed, plus <code>Flat Healing</code> per qualifying hit, up to its missing health.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code>, <code>Color</code></td>
+<td>Event key and feedback colour.</td>
+</tr>
+<tr>
+<td><code>Health Share</code>, <code>Flat Healing</code></td>
+<td>Healing formula.</td>
+</tr>
+<tr>
+<td><code>Include Periodic</code></td>
+<td>Also steal from the damage-over-time ticks of effects carried by this packet.</td>
+</tr>
+<tr>
+<td><code>Heal Credit Owner</code></td>
+<td>Heal the hero credited with the hit instead of the immediate source (for example a hero's trap or summon).</td>
+</tr>
+</tbody>
+</table>
+<p>Units without health (towers) cannot be healed. Events: <code>LifeStolen</code> (EntityId = healed unit, OtherId = victim, Value = restored health) and the usual <code>Healed</code> (heal numbers). The view draws a thin line from the victim to the healed unit.</p>
+<h2 id="path-destination-and-transfer">Path destination and transfer<a class="headerlink" href="#path-destination-and-transfer" title="Permanent link">&para;</a></h2>
+<p>A <strong>path destination</strong> (<code>Path Index</code>, <code>Node Index</code>, <code>Lane Index</code>, <code>Progress</code>, <code>Clear Effects</code>) is an exact point on a level path: the segment starting at <code>Node Index</code>, <code>Progress</code> of the way to the next node. <code>Lane Index</code> -1 keeps the unit's lane (modulo the destination's lane count). It is checked against the level when used: a path, lane or node outside the path's entry..exit range moves nothing (the validator reports it as an error for the level's towers and heroes).</p>
+<p>A <strong>transfer action</strong> (<code>Use Transfer</code> + <code>Transfer</code>: <code>Id</code>, <code>Destination</code>, <code>Range</code>, <code>Max Targets</code>, <code>Targets</code>) moves up to <code>Max Targets</code> path-following enemies within <code>Range</code>, nearest first. Hits can do the same through <code>Impact &gt; Use Transfer</code>.</p>
+<p>A moved unit is released from blockers, its attack cycles restart, its own cancellable chains and beams end, and with <code>Clear Effects</code> its effects are removed. Event: <code>PathTransferred</code> (EntityId = unit, OtherId = source, IntValue = path index, Value = progress, Position = destination). The view snaps the unit (no sliding across the map), draws a trail from where it was and replays its appear pop; the trail colour is the registry's <code>Transfer Color</code>.</p>
+<h2 id="permanent-auras-area-until-source-lost">Permanent auras (<code>Area &gt; Until Source Lost</code>)<a class="headerlink" href="#permanent-auras-area-until-source-lost" title="Permanent link">&para;</a></h2>
+<p>An area with <code>Until Source Lost</code> has no timed expiry: it lasts while its source is alive and is removed – together with the effects it attached – when the source dies or is removed. Heroes re-emit their permanent auras when they return. Attached effects still follow their own duration and refresh rules; only the region's lifetime is permanent.</p>
+<p>Use it for enemy <code>Aura</code>s. A spell or impact area has no living source and emits nothing; on an ability action every activation would add another permanent region, so the validator warns in both cases.</p>
+<h2 id="combining-in-actions">Combining in actions<a class="headerlink" href="#combining-in-actions" title="Permanent link">&para;</a></h2>
+<p>An ability, hero skill or enemy behavior action can combine its built-in payloads (<code>Attack</code>, <code>Self Effect</code>, <code>Summon</code>, <code>Area</code>) with <code>Use Chain</code>, <code>Use Multi Target</code>, <code>Use Trap</code>, <code>Use Mines</code>, <code>Use Beam</code>, <code>Use Transfer</code>, <code>Use Raise</code> and a <code>Custom Action</code> asset (<a href="../extending/#5-ability-action">Extending the Framework</a>). They run together on the action's cooldown. The action succeeds when any payload succeeds; only then does the cooldown restart and a hero earn <code>Skill Experience Per Rank</code> × rank (core: <code>new AbilityActionDef(action, cooldown, initialDelay, skillExperiencePerRank)</code>).</p>
+<p>The enemy <strong>Mechanics</strong> fields include:</p>
+<ul>
+<li><code>Tags</code> – their tag bits.</li>
+<li><code>Behavior</code> – always-on action channels (for example "every 7 s, shield nearby allies").</li>
+<li><code>Aura</code> – a region emitted when the unit appears. For a permanent aura enable <code>Until Source Lost</code> (and <code>Follow Source</code>).</li>
+<li><code>Reflection</code> – thorns.</li>
+<li><code>Death Summon</code> + <code>Death Succession</code> – split on death and the successor rules.</li>
+<li><code>Revive</code> – return on the spot.</li>
+</ul>
+<h2 id="projectile-accuracy">Projectile accuracy<a class="headerlink" href="#projectile-accuracy" title="Permanent link">&para;</a></h2>
+<p>Ballistic and straight shots aim where the target will be along its actual path when the shot lands, with the same flight time used for aiming and for the flight (fixed <code>Flight Time</code>, or solved from distance and speed). Blocked, stunned or stopped targets are not led. Homing shots track; instant shots hit at once. The Dry Run reports, per source, ballistic shots fired, landed, damaging, landed after the target was already gone, and landed beside a live target (with the average miss distance).</p>
+<h2 id="in-the-basic-sample">In the Basic sample<a class="headerlink" href="#in-the-basic-sample" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Content</th>
+<th>Mechanics used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Storm Spire › <strong>Arc Lightning</strong></td>
+<td>Chain attack (4 → 6 victims, 20% weaker per jump)</td>
+</tr>
+<tr>
+<td>Volley Nest › <strong>Split Volley</strong></td>
+<td>Multi-target attack</td>
+</tr>
+<tr>
+<td>Cannon III › <strong>Concussion Shell</strong>, Warden › <strong>Shield Bash</strong></td>
+<td>Impact payload with knockback; <code>Targets</code> rejects the <em>heavy</em> tag (Brutes)</td>
+</tr>
+<tr>
+<td>Void Spire › <strong>Null Lance</strong></td>
+<td>Beam: 140 → 200 magic damage over 8 → 10 pulses</td>
+</tr>
+<tr>
+<td>Void Spire › <strong>Rift</strong></td>
+<td>Path transfer: the two nearest light enemies go back to the north road's second node</td>
+</tr>
+<tr>
+<td>Garrison III › <strong>Caltrops</strong></td>
+<td>Trap at the rally point: arms after 1 s, area burst plus a short chill region, up to 2 → 3 live</td>
+</tr>
+<tr>
+<td>Warden › <strong>Snare</strong></td>
+<td>Trap placed under the nearest enemy; trap-only action that still awards skill experience</td>
+</tr>
+<tr>
+<td>Warden blade</td>
+<td>Life steal (25% of health removed)</td>
+</tr>
+<tr>
+<td><strong>Brute</strong> enemy</td>
+<td>Reflection: 25% of the health it loses goes back to its attacker as physical damage</td>
+</tr>
+<tr>
+<td><strong>Mender</strong> enemy</td>
+<td>Behavior action casting the <strong>Ward</strong> shield effect on nearby allies; permanent pulse-only healing aura (<code>Effect</code> empty, <code>Until Source Lost</code>)</td>
+</tr>
+<tr>
+<td><strong>Ward</strong> status effect</td>
+<td>Shield with refill on refresh</td>
+</tr>
+</tbody>
+</table>
+<p>The mine field, companion and revival samples are prepared by <code>SampleContentGenerator.GenerateReleaseMechanicSamples</code> (also callable with <code>-executeMethod</code>): Volley Nest › <strong>Barbed Mines</strong> (mine field, venom blast, 3 → 5 mines), Warden › <strong>Hound</strong> (ground-escort companion, refilled 10 s after it falls), <strong>Revenant</strong> (returns once with half its health) and <strong>Gravecaller</strong> (raises up to two <strong>Husks</strong> from nearby enemy bodies). The full sample generator already connects Revenants and Gravecallers to later waves in all three sample levels, gives the Warden its Hound, and adds Barbed Mines to Volley Nest. The standalone method updates only those mechanic assets.</p>
+<h2 id="coding-against-the-definitions">Coding against the definitions<a class="headerlink" href="#coding-against-the-definitions" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">TDMaker.Core.Defs</span><span class="p">;</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">arc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChainAttackDef</span><span class="p">(</span><span class="s">"arc"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DamageDef</span><span class="p">(</span><span class="n">DamageKind</span><span class="p">.</span><span class="n">Electric</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">),</span><span class="w"> </span><span class="n">range</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">linkRange</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6f</span><span class="p">,</span><span class="w"> </span><span class="n">maxTargets</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">linkScale</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8f</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">chainAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AbilityActionDef</span><span class="p">(</span><span class="n">arc</span><span class="p">,</span><span class="w"> </span><span class="n">cooldown</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w">                     </span><span class="c1">// a chain is an IAbilityAction</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">knockback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DamageDef</span><span class="p">(</span><span class="n">DamageKind</span><span class="p">.</span><span class="n">Physical</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">WithImpact</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ImpactPayloadDef</span><span class="p">(</span><span class="n">displacement</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PathDisplacementDef</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2f</span><span class="p">)));</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">heal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AreaEffectDef</span><span class="p">.</span><span class="n">CreatePulse</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">AreaPulseDef</span><span class="p">(</span><span class="s">"mend"</span><span class="p">,</span><span class="w"> </span><span class="n">healing</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HealingDef</span><span class="p">(</span><span class="mi">5</span><span class="p">)),</span><span class="w"> </span><span class="n">radius</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6f</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">interval</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5f</span><span class="p">,</span>
+<span class="w">    </span><span class="n">followSource</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">).</span><span class="n">WithOwnerLifetime</span><span class="p">();</span><span class="w">                                     </span><span class="c1">// permanent pulse-only region</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">aura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AuraDef</span><span class="p">(</span><span class="n">heal</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">caltrops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TrapDef</span><span class="p">(</span><span class="s">"caltrops"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DamageDef</span><span class="p">(</span><span class="n">DamageKind</span><span class="p">.</span><span class="n">Explosion</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">radius</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9f</span><span class="p">),</span><span class="w"> </span><span class="n">triggerRadius</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6f</span><span class="p">,</span><span class="w"> </span><span class="n">lifetime</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">    </span><span class="n">armDelay</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">populationLimit</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">placement</span><span class="p">:</span><span class="w"> </span><span class="n">TrapPlacement</span><span class="p">.</span><span class="n">Rally</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">lance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BeamDef</span><span class="p">(</span><span class="s">"lance"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DamageDef</span><span class="p">(</span><span class="n">DamageKind</span><span class="p">.</span><span class="n">Magical</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">totalDamage</span><span class="p">:</span><span class="w"> </span><span class="mi">140</span><span class="p">,</span><span class="w"> </span><span class="n">pulseCount</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">interval</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2f</span><span class="p">,</span><span class="w"> </span><span class="n">range</span><span class="p">:</span><span class="w"> </span><span class="mf">3.6f</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">snare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AbilityActionDef</span><span class="p">(</span><span class="n">caltrops</span><span class="p">,</span><span class="w"> </span><span class="n">cooldown</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">initialDelay</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">skillExperiencePerRank</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">  </span><span class="c1">// hero skill XP on a trap-only action</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">drain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DamageDef</span><span class="p">(</span><span class="n">DamageKind</span><span class="p">.</span><span class="n">Physical</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">).</span><span class="n">WithLifeSteal</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">LifeStealDef</span><span class="p">(</span><span class="s">"drain"</span><span class="p">,</span><span class="w"> </span><span class="n">healthShare</span><span class="p">:</span><span class="w"> </span><span class="mf">0.25f</span><span class="p">));</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">thorns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EntityRulesDef</span><span class="p">().</span><span class="n">WithReflection</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ReflectionDef</span><span class="p">(</span><span class="s">"thorns"</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25f</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DamageDef</span><span class="p">(</span><span class="n">DamageKind</span><span class="p">.</span><span class="n">Physical</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)));</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">rift</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PathTransferDef</span><span class="p">(</span><span class="s">"rift"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PathDestinationDef</span><span class="p">(</span><span class="n">pathIndex</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">nodeIndex</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">range</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">maxTargets</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">mines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DeploymentPlanDef</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">TrapDef</span><span class="p">(</span><span class="s">"mines"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DamageDef</span><span class="p">(</span><span class="n">DamageKind</span><span class="p">.</span><span class="n">Explosion</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="n">radius</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">triggerRadius</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3f</span><span class="p">,</span><span class="w"> </span><span class="n">lifetime</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">armDelay</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5f</span><span class="p">),</span>
+<span class="w">    </span><span class="n">minimumDistance</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6f</span><span class="p">,</span><span class="w"> </span><span class="n">maximumDistance</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">minimumSpacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6f</span><span class="p">,</span><span class="w"> </span><span class="n">populationLimit</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">transitDuration</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6f</span><span class="p">,</span><span class="w"> </span><span class="n">settleDuration</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2f</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">mineAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AbilityActionDef</span><span class="p">(</span><span class="n">mines</span><span class="p">,</span><span class="w"> </span><span class="n">cooldown</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w">                      </span><span class="c1">// a deployment plan is an IAbilityAction</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">withHound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heroTemplate</span><span class="p">.</span><span class="n">WithCustomData</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">CompanionDef</span><span class="p">(</span><span class="s">"hound"</span><span class="p">,</span><span class="w"> </span><span class="n">slots</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">refillDelay</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">));</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">revenant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enemyTemplate</span><span class="p">.</span><span class="n">WithCustomData</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ReviveDef</span><span class="p">(</span><span class="n">returns</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">downDelay</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5f</span><span class="p">,</span><span class="w"> </span><span class="n">riseDuration</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">returnShare</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5f</span><span class="p">));</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">raise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RaiseRemainsDef</span><span class="p">(</span><span class="s">"raise"</span><span class="p">,</span><span class="w"> </span><span class="s">"husk"</span><span class="p">,</span><span class="w"> </span><span class="n">range</span><span class="p">:</span><span class="w"> </span><span class="mf">2.4f</span><span class="p">,</span><span class="w"> </span><span class="n">maxCount</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">castDelay</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2f</span><span class="p">,</span><span class="w"> </span><span class="n">riseDuration</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">populationLimit</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimConfig</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8f</span><span class="p">).</span><span class="n">WithRemains</span><span class="p">(</span><span class="n">capacity</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="w"> </span><span class="n">lifetime</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">ward</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StatusEffectDef</span><span class="p">(</span><span class="s">"ward"</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">).</span><span class="n">WithShield</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ShieldDef</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">refillOnRefresh</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">));</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">jam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StatusEffectDef</span><span class="p">(</span><span class="s">"jam"</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">modifier</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StatModifierDef</span><span class="p">().</span><span class="n">WithCombat</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">CombatModifierDef</span><span class="p">(</span><span class="n">disableAttacks</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">)));</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../editor-tools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Editor tools">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Editor tools
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../campaign/" class="md-footer__link md-footer__link--next" aria-label="Next: Campaigns and upgrades">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Campaigns and upgrades
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © FlyCat
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

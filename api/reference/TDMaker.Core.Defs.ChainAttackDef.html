@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ChainAttackDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ChainAttackDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="One attack whose successive links visit distinct opposing units; state is held in a fixed simulation pool.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.ChainAttackDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_ChainAttackDef" data-uid="TDMaker.Core.Defs.ChainAttackDef" class="text-break">
+Class ChainAttackDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>One attack whose successive links visit distinct opposing units; state is held in a fixed simulation pool.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ChainAttackDef : IAbilityAction</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ChainAttackDef</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="TDMaker.Core.IAbilityAction.html">IAbilityAction</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="TDMaker_Core_Defs_ChainAttackDef_examples">Examples</h2>
+  <pre><code class="lang-csharp">var channel = new AbilityActionDef(new ChainAttackDef("arc", hit, 5, 2, 4), 3);</code></pre>
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef__ctor_" data-uid="TDMaker.Core.Defs.ChainAttackDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef__ctor_System_String_TDMaker_Core_Defs_DamageDef_System_Single_System_Single_System_Int32_System_Single_System_Single_System_Single_TDMaker_Core_Defs_MechanicTargetDef_System_Boolean_System_Boolean_System_Boolean_" data-uid="TDMaker.Core.Defs.ChainAttackDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Single,System.Single,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)">
+  ChainAttackDef(string, DamageDef, float, float, int, float, float, float, MechanicTargetDef, bool, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates chain behavior; nearest eligible targets and then smaller Id break ties at every link.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ChainAttackDef(string id, DamageDef damage, float range, float linkRange, int maxTargets, float linkDelay = 0, float linkScale = 1, float chance = 1, MechanicTargetDef targets = null, bool targetsFlying = true, bool targetsGround = true, bool cancelWithSource = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>damage</code> <a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+    <dd></dd>
+    <dt><code>range</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>linkRange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>maxTargets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>linkDelay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>linkScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>chance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>targets</code> <a class="xref" href="TDMaker.Core.Defs.MechanicTargetDef.html">MechanicTargetDef</a></dt>
+    <dd></dd>
+    <dt><code>targetsFlying</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>targetsGround</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>cancelWithSource</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_CancelWithSource_" data-uid="TDMaker.Core.Defs.ChainAttackDef.CancelWithSource*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_CancelWithSource" data-uid="TDMaker.Core.Defs.ChainAttackDef.CancelWithSource">
+  CancelWithSource
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancels remaining links if the source dies, disappears, is stunned, disarmed or ordered to rally.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CancelWithSource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_Chance_" data-uid="TDMaker.Core.Defs.ChainAttackDef.Chance*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_Chance" data-uid="TDMaker.Core.Defs.ChainAttackDef.Chance">
+  Chance
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>One probability roll per eligible activation; a failed roll still consumes its cooldown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Chance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_Damage_" data-uid="TDMaker.Core.Defs.ChainAttackDef.Damage*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_Damage" data-uid="TDMaker.Core.Defs.ChainAttackDef.Damage">
+  Damage
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Payload at each link, including optional on-hit extensions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageDef Damage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_Id_" data-uid="TDMaker.Core.Defs.ChainAttackDef.Id*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_Id" data-uid="TDMaker.Core.Defs.ChainAttackDef.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Neutral author-defined event key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_LinkDelay_" data-uid="TDMaker.Core.Defs.ChainAttackDef.LinkDelay*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_LinkDelay" data-uid="TDMaker.Core.Defs.ChainAttackDef.LinkDelay">
+  LinkDelay
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Game seconds between links; even zero yields until the next fixed tick.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LinkDelay { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_LinkRange_" data-uid="TDMaker.Core.Defs.ChainAttackDef.LinkRange*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_LinkRange" data-uid="TDMaker.Core.Defs.ChainAttackDef.LinkRange">
+  LinkRange
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Horizontal range from the preceding impact position for later links.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LinkRange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_LinkScale_" data-uid="TDMaker.Core.Defs.ChainAttackDef.LinkScale*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_LinkScale" data-uid="TDMaker.Core.Defs.ChainAttackDef.LinkScale">
+  LinkScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Outgoing multiplier applied after each link; the first uses the source's captured output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LinkScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_MaxTargets_" data-uid="TDMaker.Core.Defs.ChainAttackDef.MaxTargets*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_MaxTargets" data-uid="TDMaker.Core.Defs.ChainAttackDef.MaxTargets">
+  MaxTargets
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum distinct primary recipients, including the first; cannot exceed simulation EntityCapacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxTargets { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_Range_" data-uid="TDMaker.Core.Defs.ChainAttackDef.Range*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_Range" data-uid="TDMaker.Core.Defs.ChainAttackDef.Range">
+  Range
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initial horizontal range; affected by the source's range modifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Range { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_Targets_" data-uid="TDMaker.Core.Defs.ChainAttackDef.Targets*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_Targets" data-uid="TDMaker.Core.Defs.ChainAttackDef.Targets">
+  Targets
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recipient restrictions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MechanicTargetDef Targets { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.MechanicTargetDef.html">MechanicTargetDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_TargetsFlying_" data-uid="TDMaker.Core.Defs.ChainAttackDef.TargetsFlying*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_TargetsFlying" data-uid="TDMaker.Core.Defs.ChainAttackDef.TargetsFlying">
+  TargetsFlying
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether links may hit airborne units.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TargetsFlying { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ChainAttackDef_TargetsGround_" data-uid="TDMaker.Core.Defs.ChainAttackDef.TargetsGround*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ChainAttackDef_TargetsGround" data-uid="TDMaker.Core.Defs.ChainAttackDef.TargetsGround">
+  TargetsGround
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether links may hit ground units.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TargetsGround { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

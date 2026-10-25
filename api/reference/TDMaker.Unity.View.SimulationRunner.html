@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SimulationRunner | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SimulationRunner | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Owns a  and advances it with the core  from Update (catch-up limit = catch-up ticks &#215; speed per frame). Events produced during a frame are dispatched in emission order through  and then cleared, so the event buffer (Event Capacity) must hold every tick a frame catches up (at most catch-up ticks &#215; speed). Commands queued after the game ended are rejected by the core with  on the next frame (the clock no longer steps, so the runner flushes them).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.View.SimulationRunner">
+
+
+
+  <h1 id="TDMaker_Unity_View_SimulationRunner" data-uid="TDMaker.Unity.View.SimulationRunner" class="text-break">
+Class SimulationRunner  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<span class="xref">Unity</span>.<a class="xref" href="TDMaker.Unity.View.html">View</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Unity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Owns a <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_Simulation">Simulation</a> and advances it with the core <a class="xref" href="TDMaker.Core.SimulationClock.html">SimulationClock</a> from <code>Update</code>
+(catch-up limit = <code>catch-up ticks × speed</code> per frame). Events produced during a frame are dispatched in emission
+order through <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_EventRaised">EventRaised</a> and then cleared, so the event buffer (<code>Event Capacity</code>) must hold every
+tick a frame catches up (at most catch-up ticks × speed). Commands queued after the game ended are rejected by the core
+with <a class="xref" href="TDMaker.Core.CommandFailure.html#TDMaker_Core_CommandFailure_GameEnded">GameEnded</a> on the next frame (the clock no longer steps, so the runner flushes them).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DefaultExecutionOrder(-100)]
+[AddComponentMenu(&quot;2D Tower Defense Maker/Simulation Runner&quot;)]
+public sealed class SimulationRunner : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">SimulationRunner</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">MonoBehaviour.IsInvoking()</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.CancelInvoke()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.destroyCancellationToken</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.useGUILayout</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.didStart</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.didAwake</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.runInEditMode</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.enabled</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.isActiveAndEnabled</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <span class="xref">Component.TryGetComponent&lt;T&gt;(out T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponents&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentIndex()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <span class="xref">Component.CompareTag(TagHandle)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.transformHandle</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetEntityId()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T, Transform, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, Vector3, Quaternion, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Object.InstantiateAsync&lt;T&gt;(T, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Object.InstantiateAsync&lt;T&gt;(T, Vector3, Quaternion, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Vector3, Quaternion, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Scene)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, InstantiateParameters)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, InstantiateParameters)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive, FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner__ctor_" data-uid="TDMaker.Unity.View.SimulationRunner.#ctor*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner__ctor" data-uid="TDMaker.Unity.View.SimulationRunner.#ctor">
+  SimulationRunner()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimulationRunner()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_Baked_" data-uid="TDMaker.Unity.View.SimulationRunner.Baked*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_Baked" data-uid="TDMaker.Unity.View.SimulationRunner.Baked">
+  Baked
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The baked level backing the current simulation (templates include decorator changes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BakedLevel Baked { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.BakedLevel.html">BakedLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_CommandCodec_" data-uid="TDMaker.Unity.View.SimulationRunner.CommandCodec*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_CommandCodec" data-uid="TDMaker.Unity.View.SimulationRunner.CommandCodec">
+  CommandCodec
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional codec for custom commands, used when saving and loading command logs. Set before start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommandCodec CommandCodec { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.ICommandCodec.html">ICommandCodec</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_CommandLog_" data-uid="TDMaker.Unity.View.SimulationRunner.CommandLog*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_CommandLog" data-uid="TDMaker.Unity.View.SimulationRunner.CommandLog">
+  CommandLog
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Command log of the current run when recording or replaying, otherwise null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandLog CommandLog { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.CommandLog.html">CommandLog</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_DefaultRangeYScale_" data-uid="TDMaker.Unity.View.SimulationRunner.DefaultRangeYScale*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_DefaultRangeYScale" data-uid="TDMaker.Unity.View.SimulationRunner.DefaultRangeYScale">
+  DefaultRangeYScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The runner's own range Y scale setting (used when the level does not override it).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DefaultRangeYScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_ForcedUpgradeRank_" data-uid="TDMaker.Unity.View.SimulationRunner.ForcedUpgradeRank*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_ForcedUpgradeRank" data-uid="TDMaker.Unity.View.SimulationRunner.ForcedUpgradeRank">
+  ForcedUpgradeRank
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rank forced on every track (negative: the purchased ranks). Applies on the next start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ForcedUpgradeRank { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_InterpolationAlpha_" data-uid="TDMaker.Unity.View.SimulationRunner.InterpolationAlpha*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_InterpolationAlpha" data-uid="TDMaker.Unity.View.SimulationRunner.InterpolationAlpha">
+  InterpolationAlpha
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fraction of a tick elapsed since the last step, for render interpolation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InterpolationAlpha { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_IsPaused_" data-uid="TDMaker.Unity.View.SimulationRunner.IsPaused*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_IsPaused" data-uid="TDMaker.Unity.View.SimulationRunner.IsPaused">
+  IsPaused
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the game clock is stopped (time scale zero).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaused { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_IsReplaying_" data-uid="TDMaker.Unity.View.SimulationRunner.IsReplaying*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_IsReplaying" data-uid="TDMaker.Unity.View.SimulationRunner.IsReplaying">
+  IsReplaying
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the current run replays a log (live commands are ignored).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReplaying { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_Profiler_" data-uid="TDMaker.Unity.View.SimulationRunner.Profiler*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_Profiler" data-uid="TDMaker.Unity.View.SimulationRunner.Profiler">
+  Profiler
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional core profiling hook (per-tick and per-stage callbacks, see <a class="xref" href="TDMaker.Core.ISimProfiler.html">ISimProfiler</a>) installed on every
+new simulation. Chained behind the Unity Profiler markers when those are active; may be changed while running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISimProfiler Profiler { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.ISimProfiler.html">ISimProfiler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_ProfilerMarkers_" data-uid="TDMaker.Unity.View.SimulationRunner.ProfilerMarkers*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_ProfilerMarkers" data-uid="TDMaker.Unity.View.SimulationRunner.ProfilerMarkers">
+  ProfilerMarkers
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether stages are wrapped in Unity Profiler markers (applies on the next start).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ProfilerMarkers { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_RangeYScale_" data-uid="TDMaker.Unity.View.SimulationRunner.RangeYScale*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_RangeYScale" data-uid="TDMaker.Unity.View.SimulationRunner.RangeYScale">
+  RangeYScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Effective vertical range multiplier of the running simulation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RangeYScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_RecordCommands_" data-uid="TDMaker.Unity.View.SimulationRunner.RecordCommands*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_RecordCommands" data-uid="TDMaker.Unity.View.SimulationRunner.RecordCommands">
+  RecordCommands
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Records commands from the next start on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RecordCommands { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_RecordingFile_" data-uid="TDMaker.Unity.View.SimulationRunner.RecordingFile*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_RecordingFile" data-uid="TDMaker.Unity.View.SimulationRunner.RecordingFile">
+  RecordingFile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recording file (see the Inspector tooltip); empty disables saving.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RecordingFile { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_RemainsCapacity_" data-uid="TDMaker.Unity.View.SimulationRunner.RemainsCapacity*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_RemainsCapacity" data-uid="TDMaker.Unity.View.SimulationRunner.RemainsCapacity">
+  RemainsCapacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bodies kept for raising abilities (see <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_SetRemains_System_Int32_System_Single_">SetRemains(int, float)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemainsCapacity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_RemainsLifetime_" data-uid="TDMaker.Unity.View.SimulationRunner.RemainsLifetime*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_RemainsLifetime" data-uid="TDMaker.Unity.View.SimulationRunner.RemainsLifetime">
+  RemainsLifetime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Game seconds a body stays available (see <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_SetRemains_System_Int32_System_Single_">SetRemains(int, float)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RemainsLifetime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_ReplayFile_" data-uid="TDMaker.Unity.View.SimulationRunner.ReplayFile*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_ReplayFile" data-uid="TDMaker.Unity.View.SimulationRunner.ReplayFile">
+  ReplayFile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replay file (see the Inspector tooltip).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ReplayFile { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_ReplayOnStart_" data-uid="TDMaker.Unity.View.SimulationRunner.ReplayOnStart*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_ReplayOnStart" data-uid="TDMaker.Unity.View.SimulationRunner.ReplayOnStart">
+  ReplayOnStart
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replays <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_ReplayFile">ReplayFile</a> from the next start on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReplayOnStart { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_ReplayUpgrades_" data-uid="TDMaker.Unity.View.SimulationRunner.ReplayUpgrades*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_ReplayUpgrades" data-uid="TDMaker.Unity.View.SimulationRunner.ReplayUpgrades">
+  ReplayUpgrades
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exact ranks for the next replay (overrides every other source). When a replay file is loaded and this is null, the ranks
+recorded next to it (<code>&lt;file&gt;.upgrades.json</code>) are used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeRunRecord ReplayUpgrades { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.View.UpgradeRunRecord.html">UpgradeRunRecord</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_ResumeScale_" data-uid="TDMaker.Unity.View.SimulationRunner.ResumeScale*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_ResumeScale" data-uid="TDMaker.Unity.View.SimulationRunner.ResumeScale">
+  ResumeScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The speed restored when unpausing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ResumeScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_Simulation_" data-uid="TDMaker.Unity.View.SimulationRunner.Simulation*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_Simulation" data-uid="TDMaker.Unity.View.SimulationRunner.Simulation">
+  Simulation
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The running simulation, or null before start or after a bake failure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Simulation Simulation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Simulation.html">Simulation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_StartOnPlay_" data-uid="TDMaker.Unity.View.SimulationRunner.StartOnPlay*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_StartOnPlay" data-uid="TDMaker.Unity.View.SimulationRunner.StartOnPlay">
+  StartOnPlay
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <code>Start</code> creates the simulation automatically. Turn it off when a menu or flow script picks the level and calls <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_StartSimulation">StartSimulation()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StartOnPlay { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_StartingGoldOverride_" data-uid="TDMaker.Unity.View.SimulationRunner.StartingGoldOverride*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_StartingGoldOverride" data-uid="TDMaker.Unity.View.SimulationRunner.StartingGoldOverride">
+  StartingGoldOverride
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Debug: starting gold used instead of the level's when zero or more (applies on the next start).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int StartingGoldOverride { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_TimeScale_" data-uid="TDMaker.Unity.View.SimulationRunner.TimeScale*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_TimeScale" data-uid="TDMaker.Unity.View.SimulationRunner.TimeScale">
+  TimeScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Game speed multiplier; zero pauses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float TimeScale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_UpgradeRanks_" data-uid="TDMaker.Unity.View.SimulationRunner.UpgradeRanks*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_UpgradeRanks" data-uid="TDMaker.Unity.View.SimulationRunner.UpgradeRanks">
+  UpgradeRanks
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Purchased rank per track key for the next start, overriding the campaign slot (for example your own save system). Null uses
+the open campaign slot when <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_UseCampaignUpgrades">UseCampaignUpgrades</a> is on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;string, int&gt; UpgradeRanks { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_UpgradeRecord_" data-uid="TDMaker.Unity.View.SimulationRunner.UpgradeRecord*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_UpgradeRecord" data-uid="TDMaker.Unity.View.SimulationRunner.UpgradeRecord">
+  UpgradeRecord
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shop, purchased ranks and forced rank of the current run (what a replay needs), or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeRunRecord UpgradeRecord { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.View.UpgradeRunRecord.html">UpgradeRunRecord</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_UpgradeShop_" data-uid="TDMaker.Unity.View.SimulationRunner.UpgradeShop*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_UpgradeShop" data-uid="TDMaker.Unity.View.SimulationRunner.UpgradeShop">
+  UpgradeShop
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Star-upgrade shop applied on the next start (null: the open campaign slot's shop, see <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_UseCampaignUpgrades">UseCampaignUpgrades</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeShopAsset UpgradeShop { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopAsset.html">UpgradeShopAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_Upgrades_" data-uid="TDMaker.Unity.View.SimulationRunner.Upgrades*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_Upgrades" data-uid="TDMaker.Unity.View.SimulationRunner.Upgrades">
+  Upgrades
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The permanent-upgrade snapshot of the current run, or null when the run applies none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpgradeSnapshot Upgrades { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeSnapshot.html">UpgradeSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_UseCampaignUpgrades_" data-uid="TDMaker.Unity.View.SimulationRunner.UseCampaignUpgrades*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_UseCampaignUpgrades" data-uid="TDMaker.Unity.View.SimulationRunner.UseCampaignUpgrades">
+  UseCampaignUpgrades
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the open campaign slot (<a class="xref" href="TDMaker.Unity.Campaign.CampaignSession.html">CampaignSession</a>) supplies the shop and the purchased ranks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseCampaignUpgrades { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_AddTemplateDecorator_" data-uid="TDMaker.Unity.View.SimulationRunner.AddTemplateDecorator*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_AddTemplateDecorator_TDMaker_Unity_View_TemplateDecorator_" data-uid="TDMaker.Unity.View.SimulationRunner.AddTemplateDecorator(TDMaker.Unity.View.TemplateDecorator)">
+  AddTemplateDecorator(TemplateDecorator)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a template decorator applied to every baked template on each (re)start, in registration order.
+Register it before the runner starts (for example in <code>Awake</code> or <code>OnEnable</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTemplateDecorator(TemplateDecorator decorator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>decorator</code> <a class="xref" href="TDMaker.Unity.View.TemplateDecorator.html">TemplateDecorator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_Advance_" data-uid="TDMaker.Unity.View.SimulationRunner.Advance*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_Advance_System_Single_" data-uid="TDMaker.Unity.View.SimulationRunner.Advance(System.Single)">
+  Advance(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Advances the clock by <code class="paramref">realDeltaTime</code> × <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_TimeScale">TimeScale</a> through <a class="xref" href="TDMaker.Core.SimulationClock.html">SimulationClock</a>
+(at most catch-up ticks × speed per call), then dispatches the frame's events. Called from <code>Update</code>;
+tools (replays, screenshot capture in edit mode) may call it directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Advance(float realDeltaTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>realDeltaTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_Configure_" data-uid="TDMaker.Unity.View.SimulationRunner.Configure*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_Configure_TDMaker_Unity_Authoring_LevelAuthoring_TDMaker_Unity_Authoring_LevelAsset_" data-uid="TDMaker.Unity.View.SimulationRunner.Configure(TDMaker.Unity.Authoring.LevelAuthoring,TDMaker.Unity.Authoring.LevelAsset)">
+  Configure(LevelAuthoring, LevelAsset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Assigns the level sources; call before <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_StartSimulation">StartSimulation()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Configure(LevelAuthoring sceneSource, LevelAsset assetSource)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sceneSource</code> <a class="xref" href="TDMaker.Unity.Authoring.LevelAuthoring.html">LevelAuthoring</a></dt>
+    <dd></dd>
+    <dt><code>assetSource</code> <a class="xref" href="TDMaker.Unity.Authoring.LevelAsset.html">LevelAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_CreateConfig_" data-uid="TDMaker.Unity.View.SimulationRunner.CreateConfig*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_CreateConfig" data-uid="TDMaker.Unity.View.SimulationRunner.CreateConfig">
+  CreateConfig()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Builds the simulation settings from the Inspector values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimConfig CreateConfig()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.SimConfig.html">SimConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_Enqueue_" data-uid="TDMaker.Unity.View.SimulationRunner.Enqueue*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_Enqueue_TDMaker_Core_Commands_ICommand_" data-uid="TDMaker.Unity.View.SimulationRunner.Enqueue(TDMaker.Core.Commands.ICommand)">
+  Enqueue(ICommand)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues a player command for the next tick. Ignored while replaying. After victory or defeat the command is still
+queued and the core rejects it with <a class="xref" href="TDMaker.Core.CommandFailure.html#TDMaker_Core_CommandFailure_GameEnded">GameEnded</a> (a <code>CommandRejected</code> event) on the next frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Enqueue(ICommand command)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="TDMaker.Core.Commands.ICommand.html">ICommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_RemoveTemplateDecorator_" data-uid="TDMaker.Unity.View.SimulationRunner.RemoveTemplateDecorator*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_RemoveTemplateDecorator_TDMaker_Unity_View_TemplateDecorator_" data-uid="TDMaker.Unity.View.SimulationRunner.RemoveTemplateDecorator(TDMaker.Unity.View.TemplateDecorator)">
+  RemoveTemplateDecorator(TemplateDecorator)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a decorator added with <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_AddTemplateDecorator_TDMaker_Unity_View_TemplateDecorator_">AddTemplateDecorator(TemplateDecorator)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveTemplateDecorator(TemplateDecorator decorator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>decorator</code> <a class="xref" href="TDMaker.Unity.View.TemplateDecorator.html">TemplateDecorator</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_Restart_" data-uid="TDMaker.Unity.View.SimulationRunner.Restart*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_Restart" data-uid="TDMaker.Unity.View.SimulationRunner.Restart">
+  Restart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Discards the current world and starts again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Restart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_SaveRecording_" data-uid="TDMaker.Unity.View.SimulationRunner.SaveRecording*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_SaveRecording" data-uid="TDMaker.Unity.View.SimulationRunner.SaveRecording">
+  SaveRecording()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Seals the current recording and writes it to <a class="xref" href="TDMaker.Unity.View.SimulationRunner.html#TDMaker_Unity_View_SimulationRunner_RecordingFile">RecordingFile</a> (once per run). Called automatically when
+the game ends, on restart and when the runner is disabled. Returns the written path, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaveRecording()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_SetCapacities_" data-uid="TDMaker.Unity.View.SimulationRunner.SetCapacities*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_SetCapacities_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="TDMaker.Unity.View.SimulationRunner.SetCapacities(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+  SetCapacities(int, int, int, int, int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the capacities used by the next start (see the Inspector tooltips). Values below the Inspector minimums are raised to them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCapacities(int entities, int events, int effects, int areas, int schedule, int commands = 128, int chains = 64)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entities</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>events</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>effects</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>areas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>schedule</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>commands</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>chains</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_SetPaused_" data-uid="TDMaker.Unity.View.SimulationRunner.SetPaused*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_SetPaused_System_Boolean_" data-uid="TDMaker.Unity.View.SimulationRunner.SetPaused(System.Boolean)">
+  SetPaused(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops or resumes the game clock, remembering the last non-zero speed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPaused(bool paused)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>paused</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_SetRemains_" data-uid="TDMaker.Unity.View.SimulationRunner.SetRemains*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_SetRemains_System_Int32_System_Single_" data-uid="TDMaker.Unity.View.SimulationRunner.SetRemains(System.Int32,System.Single)">
+  SetRemains(int, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the body storage used by the next start: capacity (0 keeps none) and game seconds a body stays available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRemains(int capacity, float lifetime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>capacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>lifetime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_SetSpeed_" data-uid="TDMaker.Unity.View.SimulationRunner.SetSpeed*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_SetSpeed_System_Single_" data-uid="TDMaker.Unity.View.SimulationRunner.SetSpeed(System.Single)">
+  SetSpeed(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Selects a non-zero game speed (and resumes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSpeed(float scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_SpawnHeroes_" data-uid="TDMaker.Unity.View.SimulationRunner.SpawnHeroes*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_SpawnHeroes_TDMaker_Core_Simulation_TDMaker_Unity_Authoring_BakedLevel_" data-uid="TDMaker.Unity.View.SimulationRunner.SpawnHeroes(TDMaker.Core.Simulation,TDMaker.Unity.Authoring.BakedLevel)">
+  SpawnHeroes(Simulation, BakedLevel)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues every hero of a baked level at its spawn point (they appear after the first tick).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SpawnHeroes(Simulation simulation, BakedLevel baked)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>simulation</code> <a class="xref" href="TDMaker.Core.Simulation.html">Simulation</a></dt>
+    <dd></dd>
+    <dt><code>baked</code> <a class="xref" href="TDMaker.Unity.Authoring.BakedLevel.html">BakedLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_View_SimulationRunner_StartSimulation_" data-uid="TDMaker.Unity.View.SimulationRunner.StartSimulation*"></a>
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_StartSimulation" data-uid="TDMaker.Unity.View.SimulationRunner.StartSimulation">
+  StartSimulation()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bakes the level and creates a fresh simulation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartSimulation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_EventRaised" data-uid="TDMaker.Unity.View.SimulationRunner.EventRaised">
+  EventRaised
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised for every simulation event in emission order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event SimEventHandler EventRaised</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.View.SimEventHandler.html">SimEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Unity_View_SimulationRunner_SimulationStarted" data-uid="TDMaker.Unity.View.SimulationRunner.SimulationStarted">
+  SimulationStarted
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised after a new simulation is created (initial start or restart) and before its first step. Register
+extensions (systems, components, hooks, command handlers) here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;SimulationRunner&gt; SimulationStarted</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="TDMaker.Unity.View.SimulationRunner.html">SimulationRunner</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

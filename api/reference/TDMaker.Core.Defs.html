@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace TDMaker.Core.Defs | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace TDMaker.Core.Defs | 2D Tower Defense Maker API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs">
+
+  <h1 id="TDMaker_Core_Defs" data-uid="TDMaker.Core.Defs" class="text-break">Namespace TDMaker.Core.Defs</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.AbilityActionDef.html">AbilityActionDef</a></dt>
+      <dd><p>A generic timed action channel; payloads can be combined.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.AbilityDef.html">AbilityDef</a></dt>
+      <dd><p>A purchasable ability slot with optional executable rank payloads.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.AbilityExecutionDef.html">AbilityExecutionDef</a></dt>
+      <dd><p>Executable payloads for each purchase rank.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.AbilityRankDef.html">AbilityRankDef</a></dt>
+      <dd><p>Complete payload of one purchased rank; rank payloads replace earlier rank payloads.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.AreaEffectDef.html">AreaEffectDef</a></dt>
+      <dd><p>A timed region repeatedly requesting attached effects from current occupants.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.AreaPulseDef.html">AreaPulseDef</a></dt>
+      <dd><p>Direct periodic region payload; recipients are rescanned each pulse, with no lingering damage after exit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ArmorDef.html">ArmorDef</a></dt>
+      <dd><p>Fractional physical and magical damage reductions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.AttackCycleDef.html">AttackCycleDef</a></dt>
+      <dd><p>Release offsets measured from attack start; the repeat cooldown starts at that same mark.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.AuraDef.html">AuraDef</a></dt>
+      <dd><p>An optional region emitter slot.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.BarracksDef.html">BarracksDef</a></dt>
+      <dd><p>Soldier population and rally settings.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.BeamDef.html">BeamDef</a></dt>
+      <dd><p>A tracked single-target channel with an exact integer raw damage budget.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.BountyDef.html">BountyDef</a></dt>
+      <dd><p>Rewards and exit penalties for an enemy.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.BuildSlotDef.html">BuildSlotDef</a></dt>
+      <dd><p>A location at which a tower may be built.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ChainAttackDef.html">ChainAttackDef</a></dt>
+      <dd><p>One attack whose successive links visit distinct opposing units; state is held in a fixed simulation pool.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.CombatModifierDef.html">CombatModifierDef</a></dt>
+      <dd><p>Additional reversible combat state, suitable for support, concealment, dash and tower-disabling effects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.CompanionDef.html">CompanionDef</a></dt>
+      <dd><p>Persistent owner-bound slots, attached through EntityTemplate.WithCustomData.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+      <dd><p>Immutable damage roll and optional impact area.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.DamageOptions.html">DamageOptions</a></dt>
+      <dd><p>Immutable damage extensions, including on-hit effects and experience credit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.DeploymentPlanDef.html">DeploymentPlanDef</a></dt>
+      <dd><p>Automatic path-node production plan. Reservation and placement are atomic; failure never installs a fallback.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.EntityRulesDef.html">EntityRulesDef</a></dt>
+      <dd><p>Optional behavior slots; generic actions also extend enemy behavior without named unit subclasses.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.EntityTemplate.html">EntityTemplate</a></dt>
+      <dd><p>An immutable template with nullable definition slots; null inherits its parent's slot.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.FlyingDef.html">FlyingDef</a></dt>
+      <dd><p>Flying component marker.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.HealingDef.html">HealingDef</a></dt>
+      <dd><p>A health restoration formula independent of damage mitigation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.HealthDef.html">HealthDef</a></dt>
+      <dd><p>Immutable maximum health.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.HeroDef.html">HeroDef</a></dt>
+      <dd><p>An independent hero behavior slot.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.HeroLevelDef.html">HeroLevelDef</a></dt>
+      <dd><p>A full hero growth row; null component values retain the original template's values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.HeroProfileDef.html">HeroProfileDef</a></dt>
+      <dd><p>Hero progression, movement, and resurrection settings.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.HeroSkillDef.html">HeroSkillDef</a></dt>
+      <dd><p>Hero skill ranks with explicit level requirements and point costs.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ImpactPayloadDef.html">ImpactPayloadDef</a></dt>
+      <dd><p>Optional payload after a resolved health packet. Despawn and defense-only packets do not trigger it. One roll gates all operations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.LevelDef.html">LevelDef</a></dt>
+      <dd><p>Immutable simulation inputs baked by an authoring layer.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.LevelRulesDef.html">LevelRulesDef</a></dt>
+      <dd><p>Level-wide economy and M2 authoring data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.LifeStealDef.html">LifeStealDef</a></dt>
+      <dd><p>Healing after positive actual health loss by this damage definition; shields and reflected packets do not qualify.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.MechanicTargetDef.html">MechanicTargetDef</a></dt>
+      <dd><p>Additional eligibility for mechanic actions; never replaces lifecycle or faction checks.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.MeleeDef.html">MeleeDef</a></dt>
+      <dd><p>Immutable melee attack settings.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.MeleeEngagementDef.html">MeleeEngagementDef</a></dt>
+      <dd><p>Immutable template-data slot for world-axis contact geometry, independent of attack/search range.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.MotionDef.html">MotionDef</a></dt>
+      <dd><p>Immutable movement speed.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.MultiTargetAttackDef.html">MultiTargetAttackDef</a></dt>
+      <dd><p>One activation hits multiple distinct opponents in priority order, optionally reserving a total victim-health budget.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.PathDef.html">PathDef</a></dt>
+      <dd><p>A path consisting of lanes with matching node counts.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.PathDestinationDef.html">PathDestinationDef</a></dt>
+      <dd><p>A validated-at-use authored path destination.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.PathDisplacementDef.html">PathDisplacementDef</a></dt>
+      <dd><p>Moves a living enemy along its current authored path and lane; never teleports off path geometry.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.PathFollowDef.html">PathFollowDef</a></dt>
+      <dd><p>Path-following configuration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.PathTransferDef.html">PathTransferDef</a></dt>
+      <dd><p>Moves nearby path-following enemies to a destination, without requiring a damage hit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.PeriodicDamageDef.html">PeriodicDamageDef</a></dt>
+      <dd><p>A periodic hit using inclusive uniform integer rolls.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.PeriodicHealingDef.html">PeriodicHealingDef</a></dt>
+      <dd><p>Periodic healing on an attached effect; refreshing lifetime does not reset cadence or replay the first heal.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.PointRuleDef.html">PointRuleDef</a></dt>
+      <dd><p>Reusable finite-coordinate, bounds, path, and optional terrain checks.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ProjectileDef.html">ProjectileDef</a></dt>
+      <dd><p>Immutable projectile travel data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ProjectileOptions.html">ProjectileOptions</a></dt>
+      <dd><p>Prediction and target loss behavior for flight entities.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.RaiseRemainsDef.html">RaiseRemainsDef</a></dt>
+      <dd><p>Deterministic closest-then-body-Id reservation followed by delayed, atomic consumption.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.RangedAttackDef.html">RangedAttackDef</a></dt>
+      <dd><p>An independently timed ranged attack.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.RangedDef.html">RangedDef</a></dt>
+      <dd><p>A read-only collection of ranged attack channels.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.RecoveryDef.html">RecoveryDef</a></dt>
+      <dd><p>Recovery values; timers pause while the actor is ineligible.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ReflectionDef.html">ReflectionDef</a></dt>
+      <dd><p>One-bounce reflection from actual health loss, not raw input or shield absorption.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.RenderDef.html">RenderDef</a></dt>
+      <dd><p>Optional engine-independent view lookup data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ReviveDef.html">ReviveDef</a></dt>
+      <dd><p>Finite same-identity recovery, independent of death-successor production and ordinary hero respawning.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ShieldDef.html">ShieldDef</a></dt>
+      <dd><p>A finite damage shield, stored separately for each accepted effect binding.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.SoldierDef.html">SoldierDef</a></dt>
+      <dd><p>Soldier interception settings.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.SpawnEntryDef.html">SpawnEntryDef</a></dt>
+      <dd><p>A timed sequence of identical enemies.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.SpellDef.html">SpellDef</a></dt>
+      <dd><p>An authored spell combining support units, strikes, traps, and optional residual fields.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.StatModifierDef.html">StatModifierDef</a></dt>
+      <dd><p>Immutable reversible stat changes, recomputed from base values in attachment order.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.StatusEffectDef.html">StatusEffectDef</a></dt>
+      <dd><p>Definition-key based attachment, conflict, and lifetime rules.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.StatusImmunityDef.html">StatusImmunityDef</a></dt>
+      <dd><p>Status immunity tags matching effect identities or families.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.StrikeSequenceDef.html">StrikeSequenceDef</a></dt>
+      <dd><p>Individually timed and scattered impacts for a single cast.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.SummonDef.html">SummonDef</a></dt>
+      <dd><p>A summon sequence that can be used by spells, abilities, and death emissions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.TargetTraitsDef.html">TargetTraitsDef</a></dt>
+      <dd><p>Target and immunity traits, distinct from damage mitigation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.TemplateData.html">TemplateData</a></dt>
+      <dd><p>Small immutable type-keyed definition array. Treat stored objects as immutable configuration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.TemplateRegistry.html">TemplateRegistry</a></dt>
+      <dd><p>Resolves inheritance once and exposes immutable resolved templates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.TowerDef.html">TowerDef</a></dt>
+      <dd><p>Economy, branching upgrades, and ability slots for a tower.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.TrapDef.html">TrapDef</a></dt>
+      <dd><p>A fixed-position deployment with separate arming, detection, trigger count and lifetime.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeEffectDef.html">UpgradeEffectDef</a></dt>
+      <dd><p>An immutable numeric patch, behavior attachment, or nested template-reference substitution.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeSnapshot.html">UpgradeSnapshot</a></dt>
+      <dd><p>Immutable battle input. Tracks apply in authored order, then stages 1..rank, then authored effect order.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeStageDef.html">UpgradeStageDef</a></dt>
+      <dd><p>One purchased stage; effects retain authored order.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeTargetDef.html">UpgradeTargetDef</a></dt>
+      <dd><p>AND between supplied filters; IDs and roles are OR within their respective filters. Tags require every selected bit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeTrackDef.html">UpgradeTrackDef</a></dt>
+      <dd><p>One independent contiguous purchase track.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.VictoryRatingDef.html">VictoryRatingDef</a></dt>
+      <dd><p>Immutable three-tier victory rating using the remaining/starting life ratio, with inclusive thresholds.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.WaveDef.html">WaveDef</a></dt>
+      <dd><p>A wave whose call timing starts after the preceding wave finishes all emissions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.WaveGroupDef.html">WaveGroupDef</a></dt>
+      <dd><p>A group of spawn sequences sharing a path and start delay.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeRank.html">UpgradeRank</a></dt>
+      <dd><p>A track key and its highest contiguous purchased or applied rank.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ILevelCompletionRule.html">ILevelCompletionRule</a></dt>
+      <dd><p>Optional level action completion beyond waves and enemy accounting.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.IMovementPolicy.html">IMovementPolicy</a></dt>
+      <dd><p>Optional host navigation for friendly actors; implementations must avoid fixed-tick allocation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.IPointRule.html">IPointRule</a></dt>
+      <dd><p>Author-supplied terrain validation; implementations must be deterministic and allocation-free.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.CompanionMode.html">CompanionMode</a></dt>
+      <dd><p>Companion locomotion and interception model.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.DamageFalloff.html">DamageFalloff</a></dt>
+      <dd><p>How impact area damage depends on distance.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.DamageFlags.html">DamageFlags</a></dt>
+      <dd><p>Independent damage control behaviors.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.DamageKind.html">DamageKind</a></dt>
+      <dd><p>The defense channel used by a damage packet.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.DamageMask.html">DamageMask</a></dt>
+      <dd><p>Damage channels that may be independently immunized.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.DeploymentSpacingScope.html">DeploymentSpacingScope</a></dt>
+      <dd><p>Which deployments participate in minimum spacing checks.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.HeroSkillMode.html">HeroSkillMode</a></dt>
+      <dd><p>How hero skill ranks become active.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.LaneSelection.html">LaneSelection</a></dt>
+      <dd><p>Lane selection for each spawned unit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.ProjectileKind.html">ProjectileKind</a></dt>
+      <dd><p>The movement model of an attack projectile.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.RemainsFaction.html">RemainsFaction</a></dt>
+      <dd><p>Body faction is independent from the faction of the raised result.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.SuccessorBountyPolicy.html">SuccessorBountyPolicy</a></dt>
+      <dd><p>Reward policy for successors. A lineage can never pay twice.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.TargetPriority.html">TargetPriority</a></dt>
+      <dd><p>Stable tower target ordering, with entity Id as the final tie breaker.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.TrapPlacement.html">TrapPlacement</a></dt>
+      <dd><p>Automatic placement origin for an ability-created trap.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeField.html">UpgradeField</a></dt>
+      <dd><p>Supported numerical destinations. All matching nested payloads in the selected template are visited.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeOperation.html">UpgradeOperation</a></dt>
+      <dd><p>One arithmetic step; rounding is performed immediately, never after combining effects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Core.Defs.UpgradeTargetKind.html">UpgradeTargetKind</a></dt>
+      <dd><p>Template roles used by permanent-upgrade selectors. Multiple roles are alternatives.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

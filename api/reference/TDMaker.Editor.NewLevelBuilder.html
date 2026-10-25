@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NewLevelBuilder | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NewLevelBuilder | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Headless core of Tools &amp;gt; 2D Tower Defense Maker &amp;gt; New Level: creates a level folder with a Level asset, a Wave Set, starter units (sample kit or Unit Workshop presets), a HUD theme and a sprite material, and a scene built by the sample scene builder (Simulation Runner, Level Authoring, one path across the frame, six build slots with rally points on the road, camera, Game HUD, Level View, audio and music players). The result passes the Project Validator and plays in the Dry Run: lost without towers, won with a defense. Usable from tests and -executeMethod; the window only collects the settings.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.NewLevelBuilder">
+
+
+
+  <h1 id="TDMaker_Editor_NewLevelBuilder" data-uid="TDMaker.Editor.NewLevelBuilder" class="text-break">
+Class NewLevelBuilder  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Headless core of <b>Tools &gt; 2D Tower Defense Maker &gt; New Level</b>: creates a level folder with a Level asset, a Wave Set, starter
+units (sample kit or Unit Workshop presets), a HUD theme and a sprite material, and a scene built by the sample scene builder
+(Simulation Runner, Level Authoring, one path across the frame, six build slots with rally points on the road, camera,
+Game HUD, Level View, audio and music players). The result passes the Project Validator and plays in the Dry Run: lost
+without towers, won with a defense. Usable from tests and <code>-executeMethod</code>; the window only collects the settings.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class NewLevelBuilder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NewLevelBuilder</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_NewLevelBuilder_ContentRoot" data-uid="TDMaker.Editor.NewLevelBuilder.ContentRoot">
+  ContentRoot
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parent of the default level folders.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ContentRoot = &quot;Assets/TDMakerContent&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_NewLevelBuilder_MaxWaves" data-uid="TDMaker.Editor.NewLevelBuilder.MaxWaves">
+  MaxWaves
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Highest wave count the wizard accepts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxWaves = 30</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_NewLevelBuilder_Create_" data-uid="TDMaker.Editor.NewLevelBuilder.Create*"></a>
+
+  <h3 id="TDMaker_Editor_NewLevelBuilder_Create_TDMaker_Editor_NewLevelSettings_" data-uid="TDMaker.Editor.NewLevelBuilder.Create(TDMaker.Editor.NewLevelSettings)">
+  Create(NewLevelSettings)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the level. Replaces the open scenes with the new scene (callers ask to save modified scenes first). Throws
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a> when <a class="xref" href="TDMaker.Editor.NewLevelBuilder.html#TDMaker_Editor_NewLevelBuilder_Validate_TDMaker_Editor_NewLevelSettings_">Validate(NewLevelSettings)</a> reports a problem.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NewLevelResult Create(NewLevelSettings settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="TDMaker.Editor.NewLevelSettings.html">NewLevelSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Editor.NewLevelResult.html">NewLevelResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_NewLevelBuilder_DefaultFolder_" data-uid="TDMaker.Editor.NewLevelBuilder.DefaultFolder*"></a>
+
+  <h3 id="TDMaker_Editor_NewLevelBuilder_DefaultFolder_System_String_" data-uid="TDMaker.Editor.NewLevelBuilder.DefaultFolder(System.String)">
+  DefaultFolder(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The default folder for a level name: <code>Assets/TDMakerContent/&lt;Name&gt;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string DefaultFolder(string levelName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>levelName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_NewLevelBuilder_ResolveFolder_" data-uid="TDMaker.Editor.NewLevelBuilder.ResolveFolder*"></a>
+
+  <h3 id="TDMaker_Editor_NewLevelBuilder_ResolveFolder_TDMaker_Editor_NewLevelSettings_" data-uid="TDMaker.Editor.NewLevelBuilder.ResolveFolder(TDMaker.Editor.NewLevelSettings)">
+  ResolveFolder(NewLevelSettings)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The folder <code class="paramref">settings</code> resolves to (normalized; the default folder when empty).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ResolveFolder(NewLevelSettings settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="TDMaker.Editor.NewLevelSettings.html">NewLevelSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_NewLevelBuilder_SampleKitAvailable_" data-uid="TDMaker.Editor.NewLevelBuilder.SampleKitAvailable*"></a>
+
+  <h3 id="TDMaker_Editor_NewLevelBuilder_SampleKitAvailable" data-uid="TDMaker.Editor.NewLevelBuilder.SampleKitAvailable">
+  SampleKitAvailable()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the Basic sample assets the sample kit uses are in the project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SampleKitAvailable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_NewLevelBuilder_ScenePathFor_" data-uid="TDMaker.Editor.NewLevelBuilder.ScenePathFor*"></a>
+
+  <h3 id="TDMaker_Editor_NewLevelBuilder_ScenePathFor_TDMaker_Editor_NewLevelSettings_" data-uid="TDMaker.Editor.NewLevelBuilder.ScenePathFor(TDMaker.Editor.NewLevelSettings)">
+  ScenePathFor(NewLevelSettings)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The scene path the level will be saved to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ScenePathFor(NewLevelSettings settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="TDMaker.Editor.NewLevelSettings.html">NewLevelSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_NewLevelBuilder_Validate_" data-uid="TDMaker.Editor.NewLevelBuilder.Validate*"></a>
+
+  <h3 id="TDMaker_Editor_NewLevelBuilder_Validate_TDMaker_Editor_NewLevelSettings_" data-uid="TDMaker.Editor.NewLevelBuilder.Validate(TDMaker.Editor.NewLevelSettings)">
+  Validate(NewLevelSettings)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks the settings; returns a message describing the first problem, or null when they can be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Validate(NewLevelSettings settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="TDMaker.Editor.NewLevelSettings.html">NewLevelSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

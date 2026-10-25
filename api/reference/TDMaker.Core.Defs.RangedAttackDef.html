@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RangedAttackDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RangedAttackDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="An independently timed ranged attack.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.RangedAttackDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_RangedAttackDef" data-uid="TDMaker.Core.Defs.RangedAttackDef" class="text-break">
+Class RangedAttackDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An independently timed ranged attack.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class RangedAttackDef</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RangedAttackDef</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef__ctor_" data-uid="TDMaker.Core.Defs.RangedAttackDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef__ctor_System_Single_System_Single_TDMaker_Core_Defs_DamageDef_TDMaker_Core_Defs_ProjectileDef_System_Boolean_System_Boolean_System_Single_" data-uid="TDMaker.Core.Defs.RangedAttackDef.#ctor(System.Single,System.Single,TDMaker.Core.Defs.DamageDef,TDMaker.Core.Defs.ProjectileDef,System.Boolean,System.Boolean,System.Single)">
+  RangedAttackDef(float, float, DamageDef, ProjectileDef, bool, bool, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates ranged attack data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RangedAttackDef(float range, float cooldown, DamageDef damage, ProjectileDef projectile, bool targetsFlying = true, bool targetsGround = true, float minimumRange = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>range</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>cooldown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>damage</code> <a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+    <dd></dd>
+    <dt><code>projectile</code> <a class="xref" href="TDMaker.Core.Defs.ProjectileDef.html">ProjectileDef</a></dt>
+    <dd></dd>
+    <dt><code>targetsFlying</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>targetsGround</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>minimumRange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_Cooldown_" data-uid="TDMaker.Core.Defs.RangedAttackDef.Cooldown*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_Cooldown" data-uid="TDMaker.Core.Defs.RangedAttackDef.Cooldown">
+  Cooldown
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Seconds between attacks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Cooldown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_Cycle_" data-uid="TDMaker.Core.Defs.RangedAttackDef.Cycle*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_Cycle" data-uid="TDMaker.Core.Defs.RangedAttackDef.Cycle">
+  Cycle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Projectile release timing within one attack cycle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AttackCycleDef Cycle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.AttackCycleDef.html">AttackCycleDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_Damage_" data-uid="TDMaker.Core.Defs.RangedAttackDef.Damage*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_Damage" data-uid="TDMaker.Core.Defs.RangedAttackDef.Damage">
+  Damage
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attack damage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageDef Damage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_IgnoreFlyingMinimumRange_" data-uid="TDMaker.Core.Defs.RangedAttackDef.IgnoreFlyingMinimumRange*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_IgnoreFlyingMinimumRange" data-uid="TDMaker.Core.Defs.RangedAttackDef.IgnoreFlyingMinimumRange">
+  IgnoreFlyingMinimumRange
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional friendly-search policy bypassing only the inner range check for flying recipients. Maximum range and flight permission still apply.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IgnoreFlyingMinimumRange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_MinimumRange_" data-uid="TDMaker.Core.Defs.RangedAttackDef.MinimumRange*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_MinimumRange" data-uid="TDMaker.Core.Defs.RangedAttackDef.MinimumRange">
+  MinimumRange
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inner exclusion radius, including its boundary when positive. Zero allows the center.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MinimumRange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_Projectile_" data-uid="TDMaker.Core.Defs.RangedAttackDef.Projectile*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_Projectile" data-uid="TDMaker.Core.Defs.RangedAttackDef.Projectile">
+  Projectile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Projectile travel settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectileDef Projectile { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.ProjectileDef.html">ProjectileDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_Range_" data-uid="TDMaker.Core.Defs.RangedAttackDef.Range*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_Range" data-uid="TDMaker.Core.Defs.RangedAttackDef.Range">
+  Range
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attack range in horizontally measured world units.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Range { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_TargetsFlying_" data-uid="TDMaker.Core.Defs.RangedAttackDef.TargetsFlying*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_TargetsFlying" data-uid="TDMaker.Core.Defs.RangedAttackDef.TargetsFlying">
+  TargetsFlying
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this attack can target flying enemies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TargetsFlying { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_TargetsGround_" data-uid="TDMaker.Core.Defs.RangedAttackDef.TargetsGround*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_TargetsGround" data-uid="TDMaker.Core.Defs.RangedAttackDef.TargetsGround">
+  TargetsGround
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this attack can target ground enemies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TargetsGround { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_WithCycle_" data-uid="TDMaker.Core.Defs.RangedAttackDef.WithCycle*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_WithCycle_TDMaker_Core_Defs_AttackCycleDef_" data-uid="TDMaker.Core.Defs.RangedAttackDef.WithCycle(TDMaker.Core.Defs.AttackCycleDef)">
+  WithCycle(AttackCycleDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies a ranged attack with explicit multi-release timing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RangedAttackDef WithCycle(AttackCycleDef cycle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cycle</code> <a class="xref" href="TDMaker.Core.Defs.AttackCycleDef.html">AttackCycleDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.RangedAttackDef.html">RangedAttackDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_RangedAttackDef_WithFlyingMinimumRangeBypass_" data-uid="TDMaker.Core.Defs.RangedAttackDef.WithFlyingMinimumRangeBypass*"></a>
+
+  <h3 id="TDMaker_Core_Defs_RangedAttackDef_WithFlyingMinimumRangeBypass_System_Boolean_" data-uid="TDMaker.Core.Defs.RangedAttackDef.WithFlyingMinimumRangeBypass(System.Boolean)">
+  WithFlyingMinimumRangeBypass(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the attack with an explicitly authored flying minimum-range exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RangedAttackDef WithFlyingMinimumRangeBypass(bool enabled = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.RangedAttackDef.html">RangedAttackDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

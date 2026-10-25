@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class StatusEffectDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class StatusEffectDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Definition-key based attachment, conflict, and lifetime rules.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.StatusEffectDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_StatusEffectDef" data-uid="TDMaker.Core.Defs.StatusEffectDef" class="text-break">
+Class StatusEffectDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Definition-key based attachment, conflict, and lifetime rules.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class StatusEffectDef</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">StatusEffectDef</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef__ctor_" data-uid="TDMaker.Core.Defs.StatusEffectDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef__ctor_System_String_System_Single_System_Int32_System_String_TDMaker_Core_Defs_StatModifierDef_TDMaker_Core_Defs_PeriodicDamageDef_System_Boolean_System_Boolean_System_Boolean_System_UInt64_System_UInt64_System_String___System_String___System_Boolean_" data-uid="TDMaker.Core.Defs.StatusEffectDef.#ctor(System.String,System.Single,System.Int32,System.String,TDMaker.Core.Defs.StatModifierDef,TDMaker.Core.Defs.PeriodicDamageDef,System.Boolean,System.Boolean,System.Boolean,System.UInt64,System.UInt64,System.String[],System.String[],System.Boolean)">
+  StatusEffectDef(string, float, int, string, StatModifierDef, PeriodicDamageDef, bool, bool, bool, ulong, ulong, string[], string[], bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an immutable attached-effect definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatusEffectDef(string id, float duration, int rank = 0, string family = null, StatModifierDef modifier = null, PeriodicDamageDef periodic = null, bool stackEqualRank = false, bool replaceLowerRank = true, bool refreshEqualRank = true, ulong requiredTags = 0, ulong rejectedTags = 0, string[] forbiddenIds = null, string[] forbiddenFamilies = null, bool removeForbidden = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>rank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>family</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>modifier</code> <a class="xref" href="TDMaker.Core.Defs.StatModifierDef.html">StatModifierDef</a></dt>
+    <dd></dd>
+    <dt><code>periodic</code> <a class="xref" href="TDMaker.Core.Defs.PeriodicDamageDef.html">PeriodicDamageDef</a></dt>
+    <dd></dd>
+    <dt><code>stackEqualRank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>replaceLowerRank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>refreshEqualRank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>requiredTags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+    <dt><code>rejectedTags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+    <dt><code>forbiddenIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+    <dt><code>forbiddenFamilies</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+    <dt><code>removeForbidden</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_Duration_" data-uid="TDMaker.Core.Defs.StatusEffectDef.Duration*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_Duration" data-uid="TDMaker.Core.Defs.StatusEffectDef.Duration">
+  Duration
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lifetime in game seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Duration { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_Family_" data-uid="TDMaker.Core.Defs.StatusEffectDef.Family*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_Family" data-uid="TDMaker.Core.Defs.StatusEffectDef.Family">
+  Family
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional author-defined family used by immunity and suppression rules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Family { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_ForbiddenFamilies_" data-uid="TDMaker.Core.Defs.StatusEffectDef.ForbiddenFamilies*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_ForbiddenFamilies" data-uid="TDMaker.Core.Defs.StatusEffectDef.ForbiddenFamilies">
+  ForbiddenFamilies
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Effect families forbidden while this binding is present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; ForbiddenFamilies { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_ForbiddenIds_" data-uid="TDMaker.Core.Defs.StatusEffectDef.ForbiddenIds*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_ForbiddenIds" data-uid="TDMaker.Core.Defs.StatusEffectDef.ForbiddenIds">
+  ForbiddenIds
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Definition identifiers forbidden while this binding is present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; ForbiddenIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_Healing_" data-uid="TDMaker.Core.Defs.StatusEffectDef.Healing*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_Healing" data-uid="TDMaker.Core.Defs.StatusEffectDef.Healing">
+  Healing
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional periodic restoration, independent of periodic damage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PeriodicHealingDef Healing { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.PeriodicHealingDef.html">PeriodicHealingDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_Id_" data-uid="TDMaker.Core.Defs.StatusEffectDef.Id*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_Id" data-uid="TDMaker.Core.Defs.StatusEffectDef.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Definition identity used for duplicate checks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_Modifier_" data-uid="TDMaker.Core.Defs.StatusEffectDef.Modifier*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_Modifier" data-uid="TDMaker.Core.Defs.StatusEffectDef.Modifier">
+  Modifier
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reversible changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatModifierDef Modifier { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.StatModifierDef.html">StatModifierDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_Periodic_" data-uid="TDMaker.Core.Defs.StatusEffectDef.Periodic*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_Periodic" data-uid="TDMaker.Core.Defs.StatusEffectDef.Periodic">
+  Periodic
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional periodic damage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PeriodicDamageDef Periodic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.PeriodicDamageDef.html">PeriodicDamageDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_Rank_" data-uid="TDMaker.Core.Defs.StatusEffectDef.Rank*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_Rank" data-uid="TDMaker.Core.Defs.StatusEffectDef.Rank">
+  Rank
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Relative rank for same-definition replacement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Rank { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_RefreshEqualRank_" data-uid="TDMaker.Core.Defs.StatusEffectDef.RefreshEqualRank*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_RefreshEqualRank" data-uid="TDMaker.Core.Defs.StatusEffectDef.RefreshEqualRank">
+  RefreshEqualRank
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Refreshes lifetime without resetting periodic timing or reapplying modifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RefreshEqualRank { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_RejectedTags_" data-uid="TDMaker.Core.Defs.StatusEffectDef.RejectedTags*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_RejectedTags" data-uid="TDMaker.Core.Defs.StatusEffectDef.RejectedTags">
+  RejectedTags
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>No such eligibility bit may be present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong RejectedTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_RemoveForbidden_" data-uid="TDMaker.Core.Defs.StatusEffectDef.RemoveForbidden*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_RemoveForbidden" data-uid="TDMaker.Core.Defs.StatusEffectDef.RemoveForbidden">
+  RemoveForbidden
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Also removes matching existing bindings when attached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveForbidden { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_ReplaceLowerRank_" data-uid="TDMaker.Core.Defs.StatusEffectDef.ReplaceLowerRank*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_ReplaceLowerRank" data-uid="TDMaker.Core.Defs.StatusEffectDef.ReplaceLowerRank">
+  ReplaceLowerRank
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replaces all lower-ranked instances of the same definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReplaceLowerRank { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_RequiredTags_" data-uid="TDMaker.Core.Defs.StatusEffectDef.RequiredTags*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_RequiredTags" data-uid="TDMaker.Core.Defs.StatusEffectDef.RequiredTags">
+  RequiredTags
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>All these eligibility bits must be present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong RequiredTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_Shield_" data-uid="TDMaker.Core.Defs.StatusEffectDef.Shield*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_Shield" data-uid="TDMaker.Core.Defs.StatusEffectDef.Shield">
+  Shield
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional per-binding shield.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShieldDef Shield { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.ShieldDef.html">ShieldDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_StackEqualRank_" data-uid="TDMaker.Core.Defs.StatusEffectDef.StackEqualRank*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_StackEqualRank" data-uid="TDMaker.Core.Defs.StatusEffectDef.StackEqualRank">
+  StackEqualRank
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows separate instances at equal rank.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StackEqualRank { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_WithHealing_" data-uid="TDMaker.Core.Defs.StatusEffectDef.WithHealing*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_WithHealing_TDMaker_Core_Defs_PeriodicHealingDef_" data-uid="TDMaker.Core.Defs.StatusEffectDef.WithHealing(TDMaker.Core.Defs.PeriodicHealingDef)">
+  WithHealing(PeriodicHealingDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies all attachment rules and adds a healing cadence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatusEffectDef WithHealing(PeriodicHealingDef healing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>healing</code> <a class="xref" href="TDMaker.Core.Defs.PeriodicHealingDef.html">PeriodicHealingDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.StatusEffectDef.html">StatusEffectDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_StatusEffectDef_WithShield_" data-uid="TDMaker.Core.Defs.StatusEffectDef.WithShield*"></a>
+
+  <h3 id="TDMaker_Core_Defs_StatusEffectDef_WithShield_TDMaker_Core_Defs_ShieldDef_" data-uid="TDMaker.Core.Defs.StatusEffectDef.WithShield(TDMaker.Core.Defs.ShieldDef)">
+  WithShield(ShieldDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies all attachment rules and adds a shield.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatusEffectDef WithShield(ShieldDef shield)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shield</code> <a class="xref" href="TDMaker.Core.Defs.ShieldDef.html">ShieldDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.StatusEffectDef.html">StatusEffectDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

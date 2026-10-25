@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum CommandFailure | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum CommandFailure | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Machine-readable command failure reasons.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.CommandFailure">
+
+
+
+
+  <h1 id="TDMaker_Core_CommandFailure" data-uid="TDMaker.Core.CommandFailure" class="text-break">
+Enum CommandFailure  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Machine-readable command failure reasons.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum CommandFailure</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="TDMaker_Core_CommandFailure_CapacityExceeded"><code>CapacityExceeded = 19</code></dt>
+  
+  <dd><p>A required fixed pool or input queue is full.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_GameEnded"><code>GameEnded = 1</code></dt>
+  
+  <dd><p>The game has a terminal outcome.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_InsufficientGold"><code>InsufficientGold = 6</code></dt>
+  
+  <dd><p>The purchase cannot be funded or its investment ledger would overflow.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_InsufficientPoints"><code>InsufficientPoints = 15</code></dt>
+  
+  <dd><p>The required hero level or free point budget is missing.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_InvalidAbility"><code>InvalidAbility = 13</code></dt>
+  
+  <dd><p>The ability or skill slot does not exist.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_InvalidCommand"><code>InvalidCommand = 12</code></dt>
+  
+  <dd><p>The command type is not supported.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_InvalidEntity"><code>InvalidEntity = 7</code></dt>
+  
+  <dd><p>The required entity or component does not exist.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_InvalidPoint"><code>InvalidPoint = 16</code></dt>
+  
+  <dd><p>The shared placement policy rejected the point.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_InvalidRallyPoint"><code>InvalidRallyPoint = 9</code></dt>
+  
+  <dd><p>The point is invalid or no lane placement exists within the rally radius.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_InvalidSlot"><code>InvalidSlot = 2</code></dt>
+  
+  <dd><p>The build slot index is outside the level.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_InvalidUpgrade"><code>InvalidUpgrade = 8</code></dt>
+  
+  <dd><p>The destination is not an immediate upgrade target.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_None"><code>None = 0</code></dt>
+  
+  <dd><p>No failure applies.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_NotImplemented"><code>NotImplemented = 11</code></dt>
+  
+  <dd><p>The command is reserved for a later milestone.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_RankLimit"><code>RankLimit = 14</code></dt>
+  
+  <dd><p>The ability or skill has reached its rank cap.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_SlotOccupied"><code>SlotOccupied = 3</code></dt>
+  
+  <dd><p>The build slot is already reserved.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_SpellUnavailable"><code>SpellUnavailable = 18</code></dt>
+  
+  <dd><p>The spell is locked, cooling, or already cast this tick.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_UnavailableTower"><code>UnavailableTower = 5</code></dt>
+  
+  <dd><p>The tower is not available for construction in this level.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_UnknownSpell"><code>UnknownSpell = 17</code></dt>
+  
+  <dd><p>The spell slot has no authored definition.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_UnknownTemplate"><code>UnknownTemplate = 4</code></dt>
+  
+  <dd><p>The requested tower template does not exist.</p>
+</dd>
+    <dt id="TDMaker_Core_CommandFailure_WaveUnavailable"><code>WaveUnavailable = 10</code></dt>
+  
+  <dd><p>The next wave cannot currently be called.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

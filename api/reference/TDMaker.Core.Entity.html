@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Entity | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Entity | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="A pooled runtime entity. Keep its Id, not its reference, across removals.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Entity">
+
+
+
+  <h1 id="TDMaker_Core_Entity" data-uid="TDMaker.Core.Entity" class="text-break">
+Class Entity  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A pooled runtime entity. Keep its Id, not its reference, across removals.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Entity</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Entity</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Entity_Abilities_" data-uid="TDMaker.Core.Entity.Abilities*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Abilities" data-uid="TDMaker.Core.Entity.Abilities">
+  Abilities
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Independent generic action channels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbilityComponent Abilities { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.AbilityComponent.html">AbilityComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Armor_" data-uid="TDMaker.Core.Entity.Armor*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Armor" data-uid="TDMaker.Core.Entity.Armor">
+  Armor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defense state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArmorComponent Armor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.ArmorComponent.html">ArmorComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Aura_" data-uid="TDMaker.Core.Entity.Aura*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Aura" data-uid="TDMaker.Core.Entity.Aura">
+  Aura
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Aura marker, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuraComponent Aura { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.AuraComponent.html">AuraComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Barracks_" data-uid="TDMaker.Core.Entity.Barracks*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Barracks" data-uid="TDMaker.Core.Entity.Barracks">
+  Barracks
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Barracks state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarracksComponent Barracks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.BarracksComponent.html">BarracksComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Bounty_" data-uid="TDMaker.Core.Entity.Bounty*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Bounty" data-uid="TDMaker.Core.Entity.Bounty">
+  Bounty
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bounty state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BountyComponent Bounty { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.BountyComponent.html">BountyComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_CompanionCount_" data-uid="TDMaker.Core.Entity.CompanionCount*"></a>
+
+  <h3 id="TDMaker_Core_Entity_CompanionCount" data-uid="TDMaker.Core.Entity.CompanionCount">
+  CompanionCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current authored slot count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompanionCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_CompanionOwnerId_" data-uid="TDMaker.Core.Entity.CompanionOwnerId*"></a>
+
+  <h3 id="TDMaker_Core_Entity_CompanionOwnerId" data-uid="TDMaker.Core.Entity.CompanionOwnerId">
+  CompanionOwnerId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Owner of this companion, or zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompanionOwnerId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_CompanionSlotIndex_" data-uid="TDMaker.Core.Entity.CompanionSlotIndex*"></a>
+
+  <h3 id="TDMaker_Core_Entity_CompanionSlotIndex" data-uid="TDMaker.Core.Entity.CompanionSlotIndex">
+  CompanionSlotIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Slot index in the owner roster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompanionSlotIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Companions_" data-uid="TDMaker.Core.Entity.Companions*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Companions" data-uid="TDMaker.Core.Entity.Companions">
+  Companions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Preallocated slots; only indices below CompanionCount belong to the current definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;CompanionSlot&gt; Companions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="TDMaker.Core.CompanionSlot.html">CompanionSlot</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_CreatorId_" data-uid="TDMaker.Core.Entity.CreatorId*"></a>
+
+  <h3 id="TDMaker_Core_Entity_CreatorId" data-uid="TDMaker.Core.Entity.CreatorId">
+  CreatorId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Source owning a generic summon, or zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CreatorId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_CustomData_" data-uid="TDMaker.Core.Entity.CustomData*"></a>
+
+  <h3 id="TDMaker_Core_Entity_CustomData" data-uid="TDMaker.Core.Entity.CustomData">
+  CustomData
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Per-entity custom state; factories run during registration, never on spawn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CustomDataSlots CustomData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.CustomDataSlots.html">CustomDataSlots</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_ExperienceRecipientId_" data-uid="TDMaker.Core.Entity.ExperienceRecipientId*"></a>
+
+  <h3 id="TDMaker_Core_Entity_ExperienceRecipientId" data-uid="TDMaker.Core.Entity.ExperienceRecipientId">
+  ExperienceRecipientId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hero receiving this unit's damage experience, or zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ExperienceRecipientId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_ExpiresAt_" data-uid="TDMaker.Core.Entity.ExpiresAt*"></a>
+
+  <h3 id="TDMaker_Core_Entity_ExpiresAt" data-uid="TDMaker.Core.Entity.ExpiresAt">
+  ExpiresAt
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Game time of temporary expiration; zero means permanent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ExpiresAt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_FacingPoint_" data-uid="TDMaker.Core.Entity.FacingPoint*"></a>
+
+  <h3 id="TDMaker_Core_Entity_FacingPoint" data-uid="TDMaker.Core.Entity.FacingPoint">
+  FacingPoint
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Last facing target, not continuously retargeted during a host wait or attack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2 FacingPoint { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_FacingX_" data-uid="TDMaker.Core.Entity.FacingX*"></a>
+
+  <h3 id="TDMaker_Core_Entity_FacingX" data-uid="TDMaker.Core.Entity.FacingX">
+  FacingX
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Latched horizontal facing: -1 for a point to the left, +1 otherwise. Updated at movement, contact-wait and attack decisions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FacingX { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Flying_" data-uid="TDMaker.Core.Entity.Flying*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Flying" data-uid="TDMaker.Core.Entity.Flying">
+  Flying
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flying marker, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlyingComponent Flying { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.FlyingComponent.html">FlyingComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_FollowVelocity_" data-uid="TDMaker.Core.Entity.FollowVelocity*"></a>
+
+  <h3 id="TDMaker_Core_Entity_FollowVelocity" data-uid="TDMaker.Core.Entity.FollowVelocity">
+  FollowVelocity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current continuous-follow velocity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2 FollowVelocity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Health_" data-uid="TDMaker.Core.Entity.Health*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Health" data-uid="TDMaker.Core.Entity.Health">
+  Health
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Health state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HealthComponent Health { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.HealthComponent.html">HealthComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Hero_" data-uid="TDMaker.Core.Entity.Hero*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Hero" data-uid="TDMaker.Core.Entity.Hero">
+  Hero
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hero marker, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HeroComponent Hero { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.HeroComponent.html">HeroComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Id_" data-uid="TDMaker.Core.Entity.Id*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Id" data-uid="TDMaker.Core.Entity.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monotonically assigned identifier; zero is never assigned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IgnoresDamageWhileRising_" data-uid="TDMaker.Core.Entity.IgnoresDamageWhileRising*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IgnoresDamageWhileRising" data-uid="TDMaker.Core.Entity.IgnoresDamageWhileRising">
+  IgnoresDamageWhileRising
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether preparation currently rejects incoming damage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IgnoresDamageWhileRising { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IsActive_" data-uid="TDMaker.Core.Entity.IsActive*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IsActive" data-uid="TDMaker.Core.Entity.IsActive">
+  IsActive
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the entity has been inserted by Flush.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IsBlockImmune_" data-uid="TDMaker.Core.Entity.IsBlockImmune*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IsBlockImmune" data-uid="TDMaker.Core.Entity.IsBlockImmune">
+  IsBlockImmune
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enemy interception is currently forbidden by static or attached traits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBlockImmune { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IsDisarmed_" data-uid="TDMaker.Core.Entity.IsDisarmed*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IsDisarmed" data-uid="TDMaker.Core.Entity.IsDisarmed">
+  IsDisarmed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attack and ability activation are currently disabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDisarmed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IsExcludedWhileRising_" data-uid="TDMaker.Core.Entity.IsExcludedWhileRising*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IsExcludedWhileRising" data-uid="TDMaker.Core.Entity.IsExcludedWhileRising">
+  IsExcludedWhileRising
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether preparation currently excludes attack acquisition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExcludedWhileRising { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IsFollowingOwner_" data-uid="TDMaker.Core.Entity.IsFollowingOwner*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IsFollowingOwner" data-uid="TDMaker.Core.Entity.IsFollowingOwner">
+  IsFollowingOwner
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Latched approach state for follow hysteresis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFollowingOwner { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IsRemoving_" data-uid="TDMaker.Core.Entity.IsRemoving*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IsRemoving" data-uid="TDMaker.Core.Entity.IsRemoving">
+  IsRemoving
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compatibility alias used by lifecycle consumers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRemoving { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IsStunned_" data-uid="TDMaker.Core.Entity.IsStunned*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IsStunned" data-uid="TDMaker.Core.Entity.IsStunned">
+  IsStunned
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether normal movement and attacks are currently stopped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsStunned { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IsUntargetable_" data-uid="TDMaker.Core.Entity.IsUntargetable*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IsUntargetable" data-uid="TDMaker.Core.Entity.IsUntargetable">
+  IsUntargetable
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attack selection is currently forbidden by static or attached traits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUntargetable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_IsWaitingForOwner_" data-uid="TDMaker.Core.Entity.IsWaitingForOwner*"></a>
+
+  <h3 id="TDMaker_Core_Entity_IsWaitingForOwner" data-uid="TDMaker.Core.Entity.IsWaitingForOwner">
+  IsWaitingForOwner
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether owner death has suspended this companion's combat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsWaitingForOwner { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Kind_" data-uid="TDMaker.Core.Entity.Kind*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Kind" data-uid="TDMaker.Core.Entity.Kind">
+  Kind
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>System index category.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityKind Kind { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.EntityKind.html">EntityKind</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_LineageId_" data-uid="TDMaker.Core.Entity.LineageId*"></a>
+
+  <h3 id="TDMaker_Core_Entity_LineageId" data-uid="TDMaker.Core.Entity.LineageId">
+  LineageId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stable ancestry root for rewards, leakage and successor budgeting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LineageId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Melee_" data-uid="TDMaker.Core.Entity.Melee*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Melee" data-uid="TDMaker.Core.Entity.Melee">
+  Melee
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Melee state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MeleeComponent Melee { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.MeleeComponent.html">MeleeComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Modifiers_" data-uid="TDMaker.Core.Entity.Modifiers*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Modifiers" data-uid="TDMaker.Core.Entity.Modifiers">
+  Modifiers
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recomputed effective modifier totals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModifierComponent Modifiers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.ModifierComponent.html">ModifierComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Motion_" data-uid="TDMaker.Core.Entity.Motion*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Motion" data-uid="TDMaker.Core.Entity.Motion">
+  Motion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Motion state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MotionComponent Motion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.MotionComponent.html">MotionComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_PathFollow_" data-uid="TDMaker.Core.Entity.PathFollow*"></a>
+
+  <h3 id="TDMaker_Core_Entity_PathFollow" data-uid="TDMaker.Core.Entity.PathFollow">
+  PathFollow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Path state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathFollowComponent PathFollow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.PathFollowComponent.html">PathFollowComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_PendingRemoval_" data-uid="TDMaker.Core.Entity.PendingRemoval*"></a>
+
+  <h3 id="TDMaker_Core_Entity_PendingRemoval" data-uid="TDMaker.Core.Entity.PendingRemoval">
+  PendingRemoval
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether removal has been requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PendingRemoval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Position_" data-uid="TDMaker.Core.Entity.Position*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Position" data-uid="TDMaker.Core.Entity.Position">
+  Position
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current simulation position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2 Position { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_PreviousPosition_" data-uid="TDMaker.Core.Entity.PreviousPosition*"></a>
+
+  <h3 id="TDMaker_Core_Entity_PreviousPosition" data-uid="TDMaker.Core.Entity.PreviousPosition">
+  PreviousPosition
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position at the beginning of the current tick.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2 PreviousPosition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Projectile_" data-uid="TDMaker.Core.Entity.Projectile*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Projectile" data-uid="TDMaker.Core.Entity.Projectile">
+  Projectile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Projectile state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectileComponent Projectile { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.ProjectileComponent.html">ProjectileComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Ranged_" data-uid="TDMaker.Core.Entity.Ranged*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Ranged" data-uid="TDMaker.Core.Entity.Ranged">
+  Ranged
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ranged state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RangedComponent Ranged { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.RangedComponent.html">RangedComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Render_" data-uid="TDMaker.Core.Entity.Render*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Render" data-uid="TDMaker.Core.Entity.Render">
+  Render
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>View lookup state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RenderComponent Render { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.RenderComponent.html">RenderComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Resolution_" data-uid="TDMaker.Core.Entity.Resolution*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Resolution" data-uid="TDMaker.Core.Entity.Resolution">
+  Resolution
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>One-time resolution cause; hero resurrection resets it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResolutionKind Resolution { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.ResolutionKind.html">ResolutionKind</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Revival_" data-uid="TDMaker.Core.Entity.Revival*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Revival" data-uid="TDMaker.Core.Entity.Revival">
+  Revival
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Down/rise preparation state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RevivalPhase Revival { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.RevivalPhase.html">RevivalPhase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_RevivalReadyAt_" data-uid="TDMaker.Core.Entity.RevivalReadyAt*"></a>
+
+  <h3 id="TDMaker_Core_Entity_RevivalReadyAt" data-uid="TDMaker.Core.Entity.RevivalReadyAt">
+  RevivalReadyAt
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deadline of the current down/rise phase.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RevivalReadyAt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_RevivalsUsed_" data-uid="TDMaker.Core.Entity.RevivalsUsed*"></a>
+
+  <h3 id="TDMaker_Core_Entity_RevivalsUsed" data-uid="TDMaker.Core.Entity.RevivalsUsed">
+  RevivalsUsed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Same-identity returns already used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RevivalsUsed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Soldier_" data-uid="TDMaker.Core.Entity.Soldier*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Soldier" data-uid="TDMaker.Core.Entity.Soldier">
+  Soldier
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Soldier state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SoldierComponent Soldier { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.SoldierComponent.html">SoldierComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_StatusImmunity_" data-uid="TDMaker.Core.Entity.StatusImmunity*"></a>
+
+  <h3 id="TDMaker_Core_Entity_StatusImmunity" data-uid="TDMaker.Core.Entity.StatusImmunity">
+  StatusImmunity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Immunity state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatusImmunityComponent StatusImmunity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.StatusImmunityComponent.html">StatusImmunityComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Template_" data-uid="TDMaker.Core.Entity.Template*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Template" data-uid="TDMaker.Core.Entity.Template">
+  Template
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolved template; generated projectiles may have no template.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityTemplate Template { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.EntityTemplate.html">EntityTemplate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Entity_Tower_" data-uid="TDMaker.Core.Entity.Tower*"></a>
+
+  <h3 id="TDMaker_Core_Entity_Tower" data-uid="TDMaker.Core.Entity.Tower">
+  Tower
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tower state, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TowerComponent Tower { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Components.TowerComponent.html">TowerComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

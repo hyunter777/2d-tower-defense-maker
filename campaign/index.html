@@ -1,0 +1,1687 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="English guides and API reference for building 2D tower defense games in Unity 6.">
+      
+      
+      
+        <link rel="canonical" href="https://hyunter777.github.io/2d-tower-defense-maker/campaign/">
+      
+      
+        <link rel="prev" href="../mechanics/">
+      
+      
+        <link rel="next" href="../presentation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Campaigns and upgrades - 2D Tower Defense Maker</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/styles.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#campaign-progress-and-saves" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="2D Tower Defense Maker" class="md-header__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2D Tower Defense Maker
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Campaigns and upgrades
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="2D Tower Defense Maker" class="md-nav__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    2D Tower Defense Maker
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start here
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build your game
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build your game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gameplay mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campaigns and upgrades
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campaigns and upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-campaign-asset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Campaign asset
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Campaign asset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-in-the-inspector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing in the inspector
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#progress-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Progress rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The screens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-demo-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Demo sample
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-star-upgrade-shop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The star-upgrade shop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The star-upgrade shop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules-fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules (fixed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize and extend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customize and extend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HUD, fonts and audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extending the framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../determinism-and-replay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Determinism and replay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference and support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference and support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and licenses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-campaign-asset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Campaign asset
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Campaign asset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-in-the-inspector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing in the inspector
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#progress-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Progress rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The screens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-demo-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Demo sample
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-star-upgrade-shop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The star-upgrade shop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The star-upgrade shop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules-fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules (fixed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="campaign-progress-and-saves">Campaign, Progress and Saves<a class="headerlink" href="#campaign-progress-and-saves" title="Permanent link">&para;</a></h1>
+<p>A campaign strings your levels together on a world map: levels open one after another (or by your own rules), each level keeps
+its best star rating, and the player's progress lives in save slots. Everything here is in <code>TDMaker.Unity.Campaign</code>
+(<code>Runtime/Unity/Campaign</code>). The Demo sample (<code>Samples/Demo/DemoSample.unity</code>) uses all of it.</p>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CampaignAsset</code></td>
+<td><strong>Create &gt; 2D Tower Defense Maker &gt; Campaign</strong>. Ordered levels, their points on a world map picture, unlock rules.</td>
+</tr>
+<tr>
+<td><code>CampaignProgress</code></td>
+<td>The rules over one save slot: level states, best stars, star total, pending victories.</td>
+</tr>
+<tr>
+<td><code>ProfileData</code></td>
+<td>What a save slot stores (JSON).</td>
+</tr>
+<tr>
+<td><code>ISaveStore</code></td>
+<td>Where slots live: <code>JsonFileSaveStore</code> (default), <code>PlayerPrefsSaveStore</code> (PlayerPrefs-backed storage), <code>MemorySaveStore</code> (in-memory storage).</td>
+</tr>
+<tr>
+<td><code>CampaignSaveSlots</code></td>
+<td>Slot picker logic: summaries, open (or create), save, delete.</td>
+</tr>
+<tr>
+<td><code>CampaignMapScreen</code>, <code>SaveSlotScreen</code></td>
+<td>Ready-made uGUI screens (TextMesh Pro, styled by your <code>HudTheme</code>).</td>
+</tr>
+<tr>
+<td><code>UpgradeShopAsset</code>, <code>UpgradeShopSession</code>, <code>UpgradeShopScreen</code></td>
+<td>The permanent star-upgrade shop: tracks of ranks, the purchase rules over a slot, the ready-made screen.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-campaign-asset">The Campaign asset<a class="headerlink" href="#the-campaign-asset" title="Permanent link">&para;</a></h2>
+<p>Each entry in <strong>Levels</strong> has:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Key</td>
+<td>Stable id used by save files and text tables. <strong>Do not rename it after release</strong> – progress is stored by key.</td>
+</tr>
+<tr>
+<td>Level</td>
+<td>The <code>LevelAsset</code> to play.</td>
+</tr>
+<tr>
+<td>Title, Summary</td>
+<td>English texts of the map and the info panel. Translate them with the keys <code>campaign.level.&lt;key&gt;.title</code> / <code>.summary</code>.</td>
+</tr>
+<tr>
+<td>Map Position</td>
+<td>Point on the map picture, 0..1 from the bottom-left corner.</td>
+</tr>
+<tr>
+<td>Unlock</td>
+<td><strong>Previous Level</strong> (the nearest earlier main-path level must be won; the first one is open from the start), <strong>Required Levels</strong> (every listed key must be won) or <strong>Always</strong>.</td>
+</tr>
+<tr>
+<td>Min Total Stars</td>
+<td>Optional star gate on top of the rule (earned stars, not stars left after shopping).</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>A side level. It never blocks the main path: Previous Level skips branches when looking for the previous level. A branch with Previous Level opens after the main level listed before it.</td>
+</tr>
+<tr>
+<td>Counts Toward Stars</td>
+<td>Whether its stars add to the campaign total (star gates and the upgrade shop budget).</td>
+</tr>
+<tr>
+<td>Path Points</td>
+<td>Optional bend points of the road drawn from its prerequisite.</td>
+</tr>
+</tbody>
+</table>
+<p>Also: <strong>Map Image</strong> (any size; the points use 0..1 coordinates), <strong>Max Stars Per Level</strong> (normally 3) and the <strong>Map drawing</strong>
+group (road colours for open/locked levels, width, dash length, point size).</p>
+<h3 id="editing-in-the-inspector">Editing in the inspector<a class="headerlink" href="#editing-in-the-inspector" title="Permanent link">&para;</a></h3>
+<p>The Campaign inspector shows the map picture with every level point and the unlock roads (arrows from the prerequisite; dotted
+for branches; red when something is wrong; green points open at the start).</p>
+<ul>
+<li>Click a point to select it; drag it to move it; click an empty spot to move the selected point there.</li>
+<li>Drop Level assets from the Project window onto the map to add them at that spot (key and title come from the asset name).</li>
+<li>Right-click a point: add a bend point to its road, clear its bend points, remove the level. Right-click empty map: add a bend point to the selected level's road, or add an empty level.</li>
+<li>The list below sets the order; the selected level's fields follow it. Every edit is undoable.</li>
+</ul>
+<p>The inspector, and <strong>Tools &gt; 2D Tower Defense Maker &gt; Validate Project</strong>, report: empty or duplicate keys, entries without a Level asset, the
+same Level asset twice, unknown required keys, unlock cycles, levels that can never open (also when a star gate asks for more
+stars than the levels before it can give), no level open at the start, and points outside the map.</p>
+<p>The <strong>New Level</strong> wizard's result page has <strong>Add to Campaign</strong>: pick a campaign and the new level is appended (Previous Level rule)
+and the campaign is selected so you can place its point.</p>
+<h2 id="progress-rules">Progress rules<a class="headerlink" href="#progress-rules" title="Permanent link">&para;</a></h2>
+<p>A level is <strong>Locked</strong> until its save record exists, <strong>Open</strong> once it exists, and <strong>Completed</strong> after its first win. Records are
+created when the unlock rule holds (<code>CampaignProgress.Refresh</code>, also on every map visit, so a level added in an update opens for
+old saves too). An opened level never locks again – not when the rules change, nor when stars are spent.</p>
+<p>Victories go through two steps, so nothing is counted twice:</p>
+<ol>
+<li>When a battle is won, call <code>progress.RecordVictory(levelKey, stars)</code> and save. The win is stored as a <strong>pending clear</strong>.
+   Several wins before the map is shown keep the best rating; a defeat or an immediate restart does not discard it.</li>
+<li>When the map opens, call <code>progress.ApplyPending()</code> and save. It merges every pending clear once: best stars keep the maximum
+   (a worse re-win changes nothing, a better one adds only the difference), the first win completes the level and raises
+   <code>FirstCleared(key, stars)</code>, and the next levels open. It returns a <code>CampaignMapUpdate</code> (changes, stars gained, newly opened
+   keys) for the map to highlight. Calling it again does nothing.</li>
+</ol>
+<p><code>EarnedStars</code> is the sum of best stars of the levels that count; <code>AvailableStars = EarnedStars − SpentStars</code>.
+<code>ProjectedStars</code> (used by slot pickers) also counts pending wins, without counting a level twice.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">slots</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CampaignSaveSlots</span><span class="p">(</span><span class="n">campaign</span><span class="p">,</span><span class="w"> </span><span class="n">SaveStoreFactory</span><span class="p">.</span><span class="n">CreateDefault</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">progress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slots</span><span class="p">.</span><span class="n">Open</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">                       </span><span class="c1">// loads slot 1, or starts a new profile</span>
+<span class="c1">// ... the player wins level i with `stars`:</span>
+<span class="n">progress</span><span class="p">.</span><span class="n">RecordVictory</span><span class="p">(</span><span class="n">campaign</span><span class="p">.</span><span class="n">levels</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">stars</span><span class="p">);</span>
+<span class="n">slots</span><span class="p">.</span><span class="n">SaveActive</span><span class="p">();</span>
+<span class="c1">// ... back on the map:</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">progress</span><span class="p">.</span><span class="n">ApplyPending</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">update</span><span class="p">.</span><span class="n">HasChanges</span><span class="p">)</span><span class="w"> </span><span class="n">slots</span><span class="p">.</span><span class="n">SaveActive</span><span class="p">();</span>
+<span class="n">mapScreen</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="n">progress</span><span class="p">,</span><span class="w"> </span><span class="n">update</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="save-slots">Save slots<a class="headerlink" href="#save-slots" title="Permanent link">&para;</a></h2>
+<p><code>ProfileData</code> holds the opened levels with best stars and win counts, pending clears, <strong>purchased permanent upgrade ranks per
+track key</strong> (<code>GetUpgradeRank</code> / <code>SetUpgradeRank</code>), <strong>stars spent</strong>, the earned total at the last save, and free <code>custom</code>
+key/value entries for your own data (tutorial flags, selected hero, ...). App settings – volumes and language – are not in a slot;
+<code>TDGameSettings</code> keeps them in PlayerPrefs (<code>persistVolumes</code>, <code>persistLanguage</code>).</p>
+<p>Stores never throw; they return results and log warnings.</p>
+<ul>
+<li><strong><code>JsonFileSaveStore</code></strong> (default): <code>persistentDataPath/TDMakerSaves/slot1.json</code>, <code>slot2.json</code>, ... Writes go to <code>slotN.json.tmp</code>
+  and then replace the slot file, so a crash mid-write keeps the previous save (a leftover complete <code>.tmp</code> is recovered on load).</li>
+<li><strong><code>PlayerPrefsSaveStore</code></strong>: one PlayerPrefs string per slot. <code>SaveStoreFactory.CreateDefault</code> chooses the platform default; you can also supply a store explicitly.</li>
+<li><strong>Unreadable data is never deleted silently.</strong> A file that is not valid JSON, not a profile, or written by a newer version is
+  renamed to <code>slotN.json.bak</code> (<code>.bak2</code>, ... if one exists; <code>key.bak</code> in PlayerPrefs), a warning is logged, and the slot starts
+  empty. <code>SaveSlotScreen</code> shows a note on such a slot.</li>
+<li><strong>Versions.</strong> Every file carries <code>version</code>. Reading an older one runs the built-in steps and then your own
+  <code>ProfileSerializer.Migrate += (data, fromVersion) =&gt; ...</code> hooks, once per version step; the slot is written back in the
+  current version. Fields a file lacks keep their defaults (JsonUtility), so new fields need no migration step – only changed
+  meanings do.</li>
+<li>Deleting a slot (<code>CampaignSaveSlots.Delete</code>) removes only that slot. <code>SaveSlotScreen</code> asks first (Delete / Cancel).</li>
+</ul>
+<h2 id="the-screens">The screens<a class="headerlink" href="#the-screens" title="Permanent link">&para;</a></h2>
+<p>Both screens are built from code under any canvas: <code>CampaignMapScreen.Create(parent, theme)</code> and <code>SaveSlotScreen.Create(parent, theme)</code>
+(<code>CampaignUi.Canvas</code> makes a canvas scaled like the HUD).</p>
+<ul>
+<li><strong><code>CampaignMapScreen.Show(progress, update)</code></strong>: the map picture (fitted, letterboxed), dashed roads, level points (lock when
+  locked, number when open, best stars under completed ones, pulsing "New!" on levels the update opened), the star total, a
+  toast for first clears / stars gained / new levels, and the level info panel (title, summary, best stars, what still opens a
+  locked level, <strong>Play</strong>). Events: <code>PlayRequested(levelIndex)</code>, <code>BackRequested</code>. Keys: 1-9 select a level, Enter plays, Esc
+  closes the panel and then goes back.</li>
+<li><strong><code>SaveSlotScreen.Show(slots)</code></strong>: one row per slot (stars, levels won, last played), <strong>Continue</strong> / <strong>New Campaign</strong> and
+  <strong>Delete</strong> with confirmation. Events: <code>SlotChosen(slot)</code>, <code>SlotDeleted(slot)</code>, <code>BackRequested</code>.</li>
+</ul>
+<p>Their texts are <code>HudTexts</code> keys (<code>campaign.map.*</code>, <code>campaign.level.*</code>, <code>campaign.slots.*</code>, <code>campaign.nav.worldMap</code>), translated
+through your <code>TextTable</code>s like the HUD; they relabel themselves when the language changes. For the in-battle buttons, the Demo
+calls <code>hud.SetNavigation(false, true, null, HudTexts.NavWorldMap)</code> so the pause menu and the result screen offer <strong>World Map</strong>.</p>
+<h2 id="the-demo-sample">The Demo sample<a class="headerlink" href="#the-demo-sample" title="Permanent link">&para;</a></h2>
+<p><code>Samples/Demo/Scripts/DemoFlow.cs</code> is a complete flow in one scene: title → save slots → world map (<code>Samples/Demo/Data/SampleCampaign.asset</code>,
+painted map picture <code>Samples/Demo/Art/world_map.png</code>; the asset is generated by <strong>Create Sample Content</strong>) → battle (each level on its painted map, <strong>Level Grounds</strong>) → result → world map.
+It records each victory as a pending clear, saves immediately, and merges the result when the map opens. <code>UseStore(...)</code> lets you supply a storage implementation, and <code>PreviewMap()</code> shows a temporary in-memory profile.</p>
+<p>The generated sample shop (<code>Samples/Demo/Data/SampleUpgradeShop.asset</code>) adds the <strong>Upgrades</strong> button to the map.</p>
+<h2 id="the-star-upgrade-shop">The star-upgrade shop<a class="headerlink" href="#the-star-upgrade-shop" title="Permanent link">&para;</a></h2>
+<p>Earned stars buy permanent upgrades between battles. An <strong>Upgrade Shop</strong> asset (<strong>Create &gt; 2D Tower Defense Maker &gt; Upgrade Shop</strong>, edited in
+<strong>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Shop</strong>) holds ordered <strong>tracks</strong> (shop columns); each track is a chain of <strong>ranks</strong> bought in order,
+each rank has a star price and a list of <strong>effects</strong>. Assign the shop to the campaign's <strong>Upgrade Shop</strong> field: the world map
+then shows an <strong>Upgrades</strong> button with the unspent stars as a badge, and every battle started while a slot of that campaign is
+open applies the slot's purchased ranks.</p>
+<table>
+<thead>
+<tr>
+<th>Track field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Key</td>
+<td>Stable id in save files (purchases are stored per key) and text key stem <code>shop.track.&lt;key&gt;.name</code> / <code>.summary</code>. <strong>Do not rename it after release.</strong></td>
+</tr>
+<tr>
+<td>Display Name, Description</td>
+<td>English name and one-line summary (translated through the keys above).</td>
+</tr>
+<tr>
+<td>Icon, Color</td>
+<td>Column icon (optional) and accent colour.</td>
+</tr>
+<tr>
+<td>Ranks</td>
+<td>Price (stars), an optional English line (<code>shop.track.&lt;key&gt;.rank&lt;N&gt;</code>) and the effects. Higher ranks add their effects on top of the lower ranks.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="effects">Effects<a class="headerlink" href="#effects" title="Permanent link">&para;</a></h3>
+<p>Each effect maps one to one to the core <code>UpgradeEffectDef</code> (see <code>Runtime/Core/Upgrades.md</code>):</p>
+<ul>
+<li><strong>Target</strong>: towers, soldiers, heroes or enemies (their template ids), spells (their spell ids), further ids, required tag bits and
+  a role mask (tower, soldier, hero, spell, projectile, enemy). Filters combine with AND; the lists and the role mask are
+  alternatives. Every matching value inside a selected template changes (all its attacks, ability ranks, damage payloads ...).</li>
+<li><strong>Stat</strong>: a field (range, damage minimum / maximum, attack interval, ability cooldown, build cost, ability prices, health,
+  armor, magic / poison resistance, regeneration, rally range, respawn time, spell cooldown, units called and their duration,
+  effect duration, blast radius, speed, strike count and spread) and an operation: <strong>Multiply Ceil</strong> (multiply, then round up at
+  once - use it for damage and health), <strong>Multiply</strong> (keeps fractions - ranges, intervals), <strong>Add</strong>, <strong>Subtract</strong>, <strong>Set</strong>.
+  Effects apply one after another in track, rank and list order; there is no "sum everything, multiply once".</li>
+<li><strong>Add Mechanic</strong>: adds an always-active timed action (the same action the units' and towers' behavior lists use: an extra
+  attack, a self buff, a summon, an area, chain, trap, beam ...) to the selected units or towers. Give it a name for the
+  tooltip (<code>Mechanic Name</code>, translated through <code>shop.mechanic.&lt;Mechanic Key&gt;</code>).</li>
+<li><strong>Swap Template</strong>: replaces a unit reference (the soldier a barracks or a reinforcement spell calls, a summon) inside the
+  selected templates or spells. The replacement is registered for the battle automatically.</li>
+</ul>
+<h3 id="rules-fixed">Rules (fixed)<a class="headerlink" href="#rules-fixed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Only the next rank of a track can be bought, and only with enough stars: <code>Available = EarnedTotal - Spent</code>, where <code>Spent</code>
+  is the sum of the prices of every bought rank. Spending never lowers the earned total (star gates use earned stars).</li>
+<li>One click on a buyable rank buys it at once - no confirmation - and the slot is saved immediately.</li>
+<li><strong>Undo Changes</strong> returns every track to the purchases the shop <strong>opened</strong> with (not just the last click) and saves.</li>
+<li><strong>Reset All</strong> clears every purchase without a confirmation, saves, and makes the empty state the new Undo baseline.</li>
+<li><strong>Done</strong> (or Esc) closes the shop; purchases are already saved. Reopening makes the current purchases the new baseline.</li>
+<li>The map badge shows <code>min(EarnedTotal, FullShopPrice) - Spent</code> (never below zero): stars beyond the price of the whole shop
+  are not announced. This is a display limit, not a cap on earning.</li>
+</ul>
+<p>All of it comes from the core <code>UpgradeShopRules</code>; <code>UpgradeShopSession</code> applies them to a slot (<code>Purchase</code>, <code>Revert</code>, <code>ResetAll</code>,
+<code>Available</code>, <code>GetState</code>) and <code>UpgradeShopScreen</code> is the ready-made screen (columns of rank nodes, tooltip with price, state
+and an effect summary generated from the data - "Range +8%", "Cooldown -2s", "New: Sharpshot"). Its texts are <code>HudTexts</code>
+keys (<code>campaign.shop.*</code>, field labels <code>campaign.shop.field.&lt;Field&gt;</code>).</p>
+<h3 id="battles">Battles<a class="headerlink" href="#battles" title="Permanent link">&para;</a></h3>
+<p>When a run starts, <code>SimulationRunner</code> builds a core <code>UpgradeSnapshot</code> from the shop and the purchased ranks and passes the level
+with it (<code>LevelDef.WithUpgrades</code>); the core rewrites copies of the templates and spells before anything spawns, and includes the
+snapshot in the state hash and the command log. Where the shop and ranks come from:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runner <strong>Upgrade Shop</strong> field</td>
+<td>Used when set. Empty: the open slot's campaign shop (<code>CampaignSession.Shop</code>).</td>
+</tr>
+<tr>
+<td><code>runner.UpgradeRanks</code> (<code>Func&lt;string,int&gt;</code>)</td>
+<td>Your own rank source, such as another save system.</td>
+</tr>
+<tr>
+<td>The open campaign slot</td>
+<td><code>CampaignSaveSlots.Open</code> sets <code>CampaignSession</code>; used unless <strong>Use Campaign Upgrades</strong> is off.</td>
+</tr>
+<tr>
+<td><strong>Forced Upgrade Rank</strong></td>
+<td>Every track at this rank for the run (challenge modes); purchases are unchanged.</td>
+</tr>
+</tbody>
+</table>
+<p>No shop, or nothing bought, means no snapshot: the run is exactly the run without upgrades (same hash, same log format).
+<code>runner.Upgrades</code> is the snapshot of the current run, <code>runner.UpgradeRecord</code> the shop name and ranks it used.</p>
+<p><strong>Replays.</strong> A command log stores only a fingerprint of the upgrades. When the runner saves a recording it writes the ranks next
+to it (<code>&lt;file&gt;.upgrades.json</code>), and a replay of that file reads them back (or set <code>runner.ReplayUpgrades</code>). Different ranks or a
+changed shop give a different fingerprint, and the replay is refused.</p>
+<h3 id="the-editor">The editor<a class="headerlink" href="#the-editor" title="Permanent link">&para;</a></h3>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Shop</strong> shows the tracks as columns and the ranks as cells (price and effect summary):</p>
+<ul>
+<li>add, remove and move tracks; add, duplicate, remove and move ranks; every edit is undoable;</li>
+<li><strong>Price curve</strong>: fill a track's prices from its first and last price with a back-loaded curve (prices never decrease);</li>
+<li>the selected rank's effects with a readable summary each (+ Stat, + Mechanic, + Swap);</li>
+<li><strong>Preview</strong>: pick a level, a tower, unit or spell and a rank (of the selected track, or of all tracks) and compare its stats
+  before and after - computed by the core rewriter, so it is what the battle uses;</li>
+<li>validation: no tracks, empty or duplicate keys, tracks without ranks, negative prices, effects without a filter, mechanics
+  without a payload or on spells, swaps without units, Multiply Ceil on fractional fields, and effects that select nothing in
+  the levels of the campaigns using the shop. <strong>Tools &gt; 2D Tower Defense Maker &gt; Validate Project</strong> runs the same checks.</li>
+</ul>
+<p>The sample shop (six tracks of five ranks: archer, cannon, arcane and garrison families, Call to Arms and Starfall) is generated
+by <strong>Create Sample Content</strong> (<code>SampleContentGenerator.GenerateUpgradeShopSample</code> writes only the shop and the text tables).
+The three sample levels award at most <strong>9 stars</strong>. Each track costs <strong>0, 0, 1, 2, 3 stars</strong> (6 per track, <strong>36</strong> for the whole
+shop). The first two ranks are free purchases, still taken in order. With all 9 stars you can buy up to <strong>19 of 30 ranks</strong>
+(about 63%): buy the free ranks on all six tracks, rank 3 on five tracks and rank 4 on two of those tracks. Alternatively,
+finish one track for 6 stars and spend the remaining 3 on other tracks. Reset All lets you try a different build.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../mechanics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Gameplay mechanics">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Gameplay mechanics
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../presentation/" class="md-footer__link md-footer__link--next" aria-label="Next: HUD, fonts and audio">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                HUD, fonts and audio
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © FlyCat
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UnitFrames | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UnitFrames | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Bulk frame registration for the Unit Workshop: sorts sprite files into walk / idle / attack / hurt / death sequences by file name (&amp;quot;Orc_Walk_003&amp;quot;, &amp;quot;walk (2)&amp;quot;, &amp;quot;1_ATTACK_005&amp;quot;, &amp;quot;goblinRun07&amp;quot;, &amp;quot;Hit1&amp;quot;), fixes their texture import settings (single sprite, pivot at the feet, compressed) and writes the sequences into an . Facing is never guessed; the author ticks Faces Left.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.UnitFrames">
+
+
+
+  <h1 id="TDMaker_Editor_UnitFrames" data-uid="TDMaker.Editor.UnitFrames" class="text-break">
+Class UnitFrames  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Bulk frame registration for the Unit Workshop: sorts sprite files into walk / idle / attack / hurt / death sequences by
+file name (&quot;Orc_Walk_003&quot;, &quot;walk (2)&quot;, &quot;1_ATTACK_005&quot;, &quot;goblinRun07&quot;, &quot;Hit1&quot;), fixes their texture import settings
+(single sprite, pivot at the feet, compressed) and writes the sequences into an <a class="xref" href="TDMaker.Unity.View.ArtSet.Entry.html">ArtSet.Entry</a>.
+Facing is never guessed; the author ticks Faces Left.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UnitFrames</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UnitFrames</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_UnitFrames_Classify_" data-uid="TDMaker.Editor.UnitFrames.Classify*"></a>
+
+  <h3 id="TDMaker_Editor_UnitFrames_Classify_System_String_" data-uid="TDMaker.Editor.UnitFrames.Classify(System.String)">
+  Classify(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Guesses the action and frame number of a sprite file name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UnitFrames.Classified Classify(string fileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Editor.UnitFrames.html">UnitFrames</a>.<a class="xref" href="TDMaker.Editor.UnitFrames.Classified.html">Classified</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitFrames_CollectTexturePaths_" data-uid="TDMaker.Editor.UnitFrames.CollectTexturePaths*"></a>
+
+  <h3 id="TDMaker_Editor_UnitFrames_CollectTexturePaths_System_Collections_Generic_IEnumerable_System_String__" data-uid="TDMaker.Editor.UnitFrames.CollectTexturePaths(System.Collections.Generic.IEnumerable{System.String})">
+  CollectTexturePaths(IEnumerable&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Texture files (png, psd, tga, jpg) under the dropped paths, folders searched recursively, in name order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; CollectTexturePaths(IEnumerable&lt;string&gt; assetPaths)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetPaths</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitFrames_ConfigureImporter_" data-uid="TDMaker.Editor.UnitFrames.ConfigureImporter*"></a>
+
+  <h3 id="TDMaker_Editor_UnitFrames_ConfigureImporter_System_String_" data-uid="TDMaker.Editor.UnitFrames.ConfigureImporter(System.String)">
+  ConfigureImporter(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets sprite import settings for unit frames: Sprite (single unless the file is already sliced), pivot at the bottom
+centre (the feet), no mip maps, alpha is transparency, normal-quality compression. Returns true when it changed anything.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ConfigureImporter(string texturePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texturePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitFrames_LoadSprites_" data-uid="TDMaker.Editor.UnitFrames.LoadSprites*"></a>
+
+  <h3 id="TDMaker_Editor_UnitFrames_LoadSprites_System_Collections_Generic_IList_System_String__" data-uid="TDMaker.Editor.UnitFrames.LoadSprites(System.Collections.Generic.IList{System.String})">
+  LoadSprites(IList&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>First sprite of each texture (sliced textures add every sub-sprite in name order).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;KeyValuePair&lt;string, Sprite&gt;&gt; LoadSprites(IList&lt;string&gt; texturePaths)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texturePaths</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <span class="xref">Sprite</span>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitFrames_Register_" data-uid="TDMaker.Editor.UnitFrames.Register*"></a>
+
+  <h3 id="TDMaker_Editor_UnitFrames_Register_TDMaker_Unity_View_ArtSet_TDMaker_Unity_View_ArtSet_Entry_System_Collections_Generic_IEnumerable_System_String__System_Boolean_" data-uid="TDMaker.Editor.UnitFrames.Register(TDMaker.Unity.View.ArtSet,TDMaker.Unity.View.ArtSet.Entry,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+  Register(ArtSet, Entry, IEnumerable&lt;string&gt;, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers dropped files or folders into <code class="paramref">entry</code> of <code class="paramref">set</code> (with Undo): sequences that
+were found replace the entry's arrays, the idle sprite is the first idle (or walk) frame when the entry has none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UnitFrames.Report Register(ArtSet set, ArtSet.Entry entry, IEnumerable&lt;string&gt; droppedPaths, bool fixImport = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>set</code> <a class="xref" href="TDMaker.Unity.View.ArtSet.html">ArtSet</a></dt>
+    <dd></dd>
+    <dt><code>entry</code> <a class="xref" href="TDMaker.Unity.View.ArtSet.html">ArtSet</a>.<a class="xref" href="TDMaker.Unity.View.ArtSet.Entry.html">Entry</a></dt>
+    <dd></dd>
+    <dt><code>droppedPaths</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>fixImport</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Editor.UnitFrames.html">UnitFrames</a>.<a class="xref" href="TDMaker.Editor.UnitFrames.Report.html">Report</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitFrames_Sort_" data-uid="TDMaker.Editor.UnitFrames.Sort*"></a>
+
+  <h3 id="TDMaker_Editor_UnitFrames_Sort__1_System_Collections_Generic_IList_System_Collections_Generic_KeyValuePair_System_String___0___System_Collections_Generic_List___0__" data-uid="TDMaker.Editor.UnitFrames.Sort``1(System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,``0}},System.Collections.Generic.List{``0})">
+  Sort&lt;T&gt;(IList&lt;KeyValuePair&lt;string, T&gt;&gt;, List&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Groups named items into sequences: each action keeps its lowest variant, frames are ordered by frame number then name.
+Items without an action word are returned in <code class="paramref">unsorted</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;FrameAction, List&lt;T&gt;&gt; Sort&lt;T&gt;(IList&lt;KeyValuePair&lt;string, T&gt;&gt; items, List&lt;T&gt; unsorted = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>items</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, T&gt;&gt;</dt>
+    <dd></dd>
+    <dt><code>unsorted</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="TDMaker.Editor.FrameAction.html">FrameAction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitFrames_Tokens_" data-uid="TDMaker.Editor.UnitFrames.Tokens*"></a>
+
+  <h3 id="TDMaker_Editor_UnitFrames_Tokens_System_String_" data-uid="TDMaker.Editor.UnitFrames.Tokens(System.String)">
+  Tokens(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Splits a file name into lower-case word and number tokens (camelCase, separators and digits split).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; Tokens(string fileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace TDMaker.Unity.Campaign | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace TDMaker.Unity.Campaign | 2D Tower Defense Maker API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Campaign">
+
+  <h1 id="TDMaker_Unity_Campaign" data-uid="TDMaker.Unity.Campaign" class="text-break">Namespace TDMaker.Unity.Campaign</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignAsset.html">CampaignAsset</a></dt>
+      <dd><p>A campaign: ordered levels on a world map with unlock rules (previous level, a list of required levels, an optional star
+gate, side branches that never block the main path) and the map picture. Progress lives in a save slot
+(<a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html">ProfileData</a>, read through <a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html">CampaignProgress</a>); this asset only describes the campaign.
+Edit it in the inspector: click in the map view to place level points, and the inspector lists validation problems.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignLevel.html">CampaignLevel</a></dt>
+      <dd><p>One level of a <a class="xref" href="TDMaker.Unity.Campaign.CampaignAsset.html">CampaignAsset</a>: what to play, where its point sits on the world map and when it opens.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignMapScreen.html">CampaignMapScreen</a></dt>
+      <dd><p>World map screen built from code (uGUI + TextMesh Pro, styled by a <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a>): the campaign's map picture with a
+point per level (locked with a lock, open with its number, completed with its best stars), dashed roads from each level's
+prerequisites, the star total, and a level info panel (title, summary, best stars, unlock requirements, Play). Call
+<a class="xref" href="TDMaker.Unity.Campaign.CampaignMapScreen.html#TDMaker_Unity_Campaign_CampaignMapScreen_Show_TDMaker_Unity_Campaign_CampaignProgress_TDMaker_Unity_Campaign_CampaignMapUpdate_">Show(CampaignProgress, CampaignMapUpdate)</a> with the slot's progress and the update returned by <a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_ApplyPending">ApplyPending()</a> to highlight
+new stars and newly opened levels. <a class="xref" href="TDMaker.Unity.Campaign.CampaignMapScreen.html#TDMaker_Unity_Campaign_CampaignMapScreen_PlayRequested">PlayRequested</a> and <a class="xref" href="TDMaker.Unity.Campaign.CampaignMapScreen.html#TDMaker_Unity_Campaign_CampaignMapScreen_BackRequested">BackRequested</a> leave the screen to the caller.
+Keys: 1-9 select a level, Enter plays it, Esc closes the panel and then goes back. Texts use <a class="xref" href="TDMaker.Unity.Localization.HudTexts.html">HudTexts</a> keys
+and relabel when the language changes. When the campaign has an <a class="xref" href="TDMaker.Unity.Campaign.CampaignAsset.html#TDMaker_Unity_Campaign_CampaignAsset_upgradeShop">upgradeShop</a>, a Shop button (with
+the unspent stars as a badge) opens the <a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopScreen.html">UpgradeShopScreen</a> over the map.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignMapUpdate.html">CampaignMapUpdate</a></dt>
+      <dd><p>Everything a map should show after merging victories: new stars, first clears and newly opened levels.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html">CampaignProgress</a></dt>
+      <dd><p>Campaign rules over one save slot's <a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html">ProfileData</a>. A level is locked until its record exists; records are created
+when the unlock rule holds (<a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_Refresh">Refresh()</a>), and an opened level never locks again. A victory is first recorded as a
+pending clear (<a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_RecordVictory_System_String_System_Int32_">RecordVictory(string, int)</a>, at the end of the battle) and merged into the map once by
+<a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_ApplyPending">ApplyPending()</a> (on map entry): best stars keep the maximum, re-wins never grant stars twice, the first win raises
+<a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_FirstCleared">FirstCleared</a>, and the next levels open. Several victories before a merge keep the best rating, and a later
+defeat does not discard it. Earned stars = sum of best stars of the levels that count; available = earned − spent.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignSaveSlots.html">CampaignSaveSlots</a></dt>
+      <dd><p>Save slots of one campaign over an <a class="xref" href="TDMaker.Unity.Campaign.ISaveStore.html">ISaveStore</a>: summaries for the slot picker, opening a slot (creating a fresh
+profile for an empty or unreadable one), saving the active slot and deleting slots. App settings are not stored here.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignSession.html">CampaignSession</a></dt>
+      <dd><p>The save slots whose slot is open right now (set by <a class="xref" href="TDMaker.Unity.Campaign.CampaignSaveSlots.html#TDMaker_Unity_Campaign_CampaignSaveSlots_Open_System_Int32_">Open(int)</a>). A <code>SimulationRunner</code> reads the
+open slot's purchased upgrade ranks and its campaign's <a class="xref" href="TDMaker.Unity.Campaign.CampaignAsset.html#TDMaker_Unity_Campaign_CampaignAsset_upgradeShop">upgradeShop</a> from here when a battle starts,
+and the upgrade shop saves through it, so a flow script needs no extra wiring. Cleared when play mode starts.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignUi.html">CampaignUi</a></dt>
+      <dd><p>Helpers shared by the campaign screens (built from code with a <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a>, like the HUD).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.JsonFileSaveStore.html">JsonFileSaveStore</a></dt>
+      <dd><p>Default store: one JSON file per slot under <span class="xref">UnityEngine.Application.persistentDataPath</span> (folder <code>TDMakerSaves</code>, files
+<code>slot1.json</code>, <code>slot2.json</code>, ...). Writes go to a temporary file that then replaces the slot file, so a crash
+mid-write leaves the previous save intact. An unreadable file is renamed to <code>slotN.json.bak</code> (or <code>.bak2</code>, ...)
+and kept. Not for WebGL (use <a class="xref" href="TDMaker.Unity.Campaign.PlayerPrefsSaveStore.html">PlayerPrefsSaveStore</a>, or <a class="xref" href="TDMaker.Unity.Campaign.SaveStoreFactory.html#TDMaker_Unity_Campaign_SaveStoreFactory_CreateDefault_System_Int32_System_String_">CreateDefault(int, string)</a>).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.LevelRecord.html">LevelRecord</a></dt>
+      <dd><p>Saved progress of one campaign level. A record exists once the level is open.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.MemorySaveStore.html">MemorySaveStore</a></dt>
+      <dd><p>In-memory store (nothing persists): for tests, previews and tools.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.PendingClear.html">PendingClear</a></dt>
+      <dd><p>A victory recorded at the end of a battle and not yet merged into the map (see <a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_ApplyPending">ApplyPending()</a>).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.PlayerPrefsSaveStore.html">PlayerPrefsSaveStore</a></dt>
+      <dd><p>Store in <span class="xref">UnityEngine.PlayerPrefs</span> (browser storage in WebGL builds): one string per slot under <code>prefix + slot number</code>.
+Unreadable content is copied to <code>key.bak</code> before the slot is cleared. Flushes with <span class="xref">UnityEngine.PlayerPrefs.Save()</span> on every write.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html">ProfileData</a></dt>
+      <dd><p>Everything one save slot stores: opened levels with best stars, victories not yet merged into the map, purchased
+permanent upgrade ranks per track, stars spent on them, and free game-specific entries. App settings (volumes,
+language) are not part of a slot; they stay in <a class="xref" href="TDMaker.Unity.View.TDGameSettings.html">TDGameSettings</a>. Serialized with
+<span class="xref">UnityEngine.JsonUtility</span> by <a class="xref" href="TDMaker.Unity.Campaign.ProfileSerializer.html">ProfileSerializer</a>; <a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_version">version</a> drives migrations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.ProfileEntry.html">ProfileEntry</a></dt>
+      <dd><p>A game-specific value kept in the save slot (tutorial flags, selected hero, ...).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.ProfileSerializer.html">ProfileSerializer</a></dt>
+      <dd><p>JSON form of <a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html">ProfileData</a> with schema versions. Reading runs the built-in migration steps and then every
+registered <a class="xref" href="TDMaker.Unity.Campaign.ProfileSerializer.html#TDMaker_Unity_Campaign_ProfileSerializer_Migrate">Migrate</a> step from the file's version up to <a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html#TDMaker_Unity_Campaign_ProfileData_CurrentVersion">CurrentVersion</a>
+(JsonUtility leaves fields a file does not have at their defaults, so a step only fixes meaning, not shape).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.SaveSlotScreen.html">SaveSlotScreen</a></dt>
+      <dd><p>Save slot picker built from code (styled by a <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a>): one row per slot of a <a class="xref" href="TDMaker.Unity.Campaign.CampaignSaveSlots.html">CampaignSaveSlots</a>
+with its stars, levels won and last play time, a Continue / New Campaign button and Delete (with a confirmation dialog:
+Delete, Cancel). One click on a slot opens it (<a class="xref" href="TDMaker.Unity.Campaign.SaveSlotScreen.html#TDMaker_Unity_Campaign_SaveSlotScreen_SlotChosen">SlotChosen</a>); a new slot needs no name or extra confirmation.
+Keys: 1-9 choose a slot, Esc cancels the dialog and then goes back. Texts use <a class="xref" href="TDMaker.Unity.Localization.HudTexts.html">HudTexts</a> keys.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.SaveStoreFactory.html">SaveStoreFactory</a></dt>
+      <dd><p>Picks the store for the running platform.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.TextSaveStore.html">TextSaveStore</a></dt>
+      <dd><p>Shared logic of the text-based stores: JSON through <a class="xref" href="TDMaker.Unity.Campaign.ProfileSerializer.html">ProfileSerializer</a>, unreadable or newer content moved to a
+backup before the slot is treated as empty, and exceptions turned into results with a warning.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeEffectData.html">UpgradeEffectData</a></dt>
+      <dd><p>One effect of an upgrade rank. Maps one to one to a core <a class="xref" href="TDMaker.Core.Defs.UpgradeEffectDef.html">UpgradeEffectDef</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeRankData.html">UpgradeRankData</a></dt>
+      <dd><p>One purchasable rank of a track: its star price and its effects (added on top of the lower ranks).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeRankRecord.html">UpgradeRankRecord</a></dt>
+      <dd><p>Purchased rank of one permanent upgrade track (ranks below it count as owned).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopAsset.html">UpgradeShopAsset</a></dt>
+      <dd><p>The permanent star-upgrade shop of a campaign: ordered tracks (columns) of ranks bought in order with earned stars. Purchases
+live in the save slot (<a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_GetUpgradeRank_System_String_">GetUpgradeRank(string)</a> by track key); a battle bakes the shop and the purchased
+ranks into a core <a class="xref" href="TDMaker.Core.Defs.UpgradeSnapshot.html">UpgradeSnapshot</a> (<a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopAsset.html#TDMaker_Unity_Campaign_UpgradeShopAsset_CreateSnapshot_System_Func_System_String_System_Int32__System_Nullable_System_Int32__">CreateSnapshot(Func&lt;string, int&gt;, int?)</a>) that the simulation
+applies before anything spawns. Assign it to <a class="xref" href="TDMaker.Unity.Campaign.CampaignAsset.html#TDMaker_Unity_Campaign_CampaignAsset_upgradeShop">upgradeShop</a> (the world map then shows a Shop button
+and every battle started while that campaign's slot is open applies it) or to a <code>SimulationRunner</code> directly.
+Edit it in <b>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Shop</b>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopScreen.html">UpgradeShopScreen</a></dt>
+      <dd><p>The permanent star-upgrade shop, built from code (uGUI + TextMesh Pro, styled by a <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a>) over the world map:
+one column per track with its rank nodes, the stars to spend, a tooltip on hover (price, state and an effect summary generated
+from the data), one click on the next affordable rank buys it at once (no confirmation), <b>Undo Changes</b> returns to the
+purchases the shop opened with, <b>Reset All</b> clears every purchase (no confirmation) and <b>Done</b> or Esc closes it. Every
+change is saved immediately (<a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html">UpgradeShopSession</a>). <a class="xref" href="TDMaker.Unity.Campaign.CampaignMapScreen.html">CampaignMapScreen</a> opens it from its Shop button.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html">UpgradeShopSession</a></dt>
+      <dd><p>One visit of the star-upgrade shop over a save slot. Every rule comes from the core <a class="xref" href="TDMaker.Core.UpgradeShopRules.html">UpgradeShopRules</a>:
+only the next rank of a track can be bought and only with enough stars (<code>Available = EarnedTotal − Spent</code>); opening the
+session copies the purchases as the revert baseline; <a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html#TDMaker_Unity_Campaign_UpgradeShopSession_Revert">Revert()</a> returns to that baseline (not one step back);
+<a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html#TDMaker_Unity_Campaign_UpgradeShopSession_ResetAll">ResetAll()</a> clears every purchase and makes the cleared state the new baseline. Each change is written into the
+slot's <a class="xref" href="TDMaker.Unity.Campaign.ProfileData.html">ProfileData</a> (ranks per track key and stars spent) and saved at once through <a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopSession.html#TDMaker_Unity_Campaign_UpgradeShopSession_Save">Save</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopText.html">UpgradeShopText</a></dt>
+      <dd><p>Texts of the upgrade shop in the current language: track names and summaries (<code>shop.track.&lt;key&gt;.name|summary</code>, then the
+authored English), rank lines (<code>shop.track.&lt;key&gt;.rank&lt;N&gt;</code>) and effect summaries generated from the effect data
+(&quot;Range +10%&quot;, &quot;Cooldown -2s&quot;, &quot;New: Shell Burst&quot;, &quot;Conscript becomes Veteran&quot;).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeTargetData.html">UpgradeTargetData</a></dt>
+      <dd><p>Which templates or spells an effect changes. Filters combine with AND; inside the asset list and inside the kind mask they are
+alternatives. Empty filters do not restrict (an effect with no filter at all changes everything of the field's kind).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeTrackData.html">UpgradeTrackData</a></dt>
+      <dd><p>One shop column: a chain of ranks bought in order.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignIssue.html">CampaignIssue</a></dt>
+      <dd><p>One problem found by <a class="xref" href="TDMaker.Unity.Campaign.CampaignAsset.html#TDMaker_Unity_Campaign_CampaignAsset_Validate">Validate()</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignLevelChange.html">CampaignLevelChange</a></dt>
+      <dd><p>What one <a class="xref" href="TDMaker.Unity.Campaign.CampaignProgress.html#TDMaker_Unity_Campaign_CampaignProgress_ApplyPending">ApplyPending()</a> changed on a level.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.SaveSlotSummary.html">SaveSlotSummary</a></dt>
+      <dd><p>What a slot picker shows for one slot without opening it.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.ISaveStore.html">ISaveStore</a></dt>
+      <dd><p>Where save slots live. Implementations never throw from these calls: failures are reported through the return values
+(and a console warning). Slot numbers start at 0. Unreadable content is never deleted silently: it is kept as a backup.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignIssueSeverity.html">CampaignIssueSeverity</a></dt>
+      <dd><p>Severity of a <a class="xref" href="TDMaker.Unity.Campaign.CampaignIssue.html">CampaignIssue</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignLevelState.html">CampaignLevelState</a></dt>
+      <dd><p>Map state of a campaign level.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.CampaignUnlock.html">CampaignUnlock</a></dt>
+      <dd><p>How a campaign level opens on the world map.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.SaveLoadStatus.html">SaveLoadStatus</a></dt>
+      <dd><p>Outcome of reading a save slot.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeEffectKind.html">UpgradeEffectKind</a></dt>
+      <dd><p>What one authored permanent-upgrade effect does.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.UpgradeRankState.html">UpgradeRankState</a></dt>
+      <dd><p>What a rank node of the shop shows.</p>
+</dd>
+    </dl>
+    <h3 id="delegates">
+Delegates
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Campaign.ProfileMigration.html">ProfileMigration</a></dt>
+      <dd><p>One migration step: upgrades data read with schema <code class="paramref">fromVersion</code> to <code>fromVersion + 1</code>.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

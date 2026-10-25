@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TDEditorGUI | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TDEditorGUI | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Shared colors, styles and small IMGUI helpers for the 2D Tower Defense Maker editor tools.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.TDEditorGUI">
+
+
+
+  <h1 id="TDMaker_Editor_TDEditorGUI" data-uid="TDMaker.Editor.TDEditorGUI" class="text-break">
+Class TDEditorGUI  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Shared colors, styles and small IMGUI helpers for the 2D Tower Defense Maker editor tools.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class TDEditorGUI</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TDEditorGUI</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_Accent" data-uid="TDMaker.Editor.TDEditorGUI.Accent">
+  Accent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Accent color used for selection and highlights.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Accent</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_EntryColor" data-uid="TDMaker.Editor.TDEditorGUI.EntryColor">
+  EntryColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Entry marker tint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color EntryColor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_ErrorColor" data-uid="TDMaker.Editor.TDEditorGUI.ErrorColor">
+  ErrorColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error tint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color ErrorColor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_ExitColor" data-uid="TDMaker.Editor.TDEditorGUI.ExitColor">
+  ExitColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exit marker tint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color ExitColor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_WarningColor" data-uid="TDMaker.Editor.TDEditorGUI.WarningColor">
+  WarningColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Warning tint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color WarningColor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_BoldClipped_" data-uid="TDMaker.Editor.TDEditorGUI.BoldClipped*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_BoldClipped" data-uid="TDMaker.Editor.TDEditorGUI.BoldClipped">
+  BoldClipped
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bold label without word wrap, clipped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GUIStyle BoldClipped { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GUIStyle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_CanvasBackground_" data-uid="TDMaker.Editor.TDEditorGUI.CanvasBackground*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_CanvasBackground" data-uid="TDMaker.Editor.TDEditorGUI.CanvasBackground">
+  CanvasBackground
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Darker canvas background for timelines and graphs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color CanvasBackground { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_Header_" data-uid="TDMaker.Editor.TDEditorGUI.Header*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_Header" data-uid="TDMaker.Editor.TDEditorGUI.Header">
+  Header
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bold section header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GUIStyle Header { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GUIStyle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_LineColor_" data-uid="TDMaker.Editor.TDEditorGUI.LineColor*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_LineColor" data-uid="TDMaker.Editor.TDEditorGUI.LineColor">
+  LineColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Thin separator line color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LineColor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_MiniCentered_" data-uid="TDMaker.Editor.TDEditorGUI.MiniCentered*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_MiniCentered" data-uid="TDMaker.Editor.TDEditorGUI.MiniCentered">
+  MiniCentered
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Centered mini label.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GUIStyle MiniCentered { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GUIStyle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_PanelBackground_" data-uid="TDMaker.Editor.TDEditorGUI.PanelBackground*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_PanelBackground" data-uid="TDMaker.Editor.TDEditorGUI.PanelBackground">
+  PanelBackground
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Panel background.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color PanelBackground { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_RowTint_" data-uid="TDMaker.Editor.TDEditorGUI.RowTint*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_RowTint" data-uid="TDMaker.Editor.TDEditorGUI.RowTint">
+  RowTint
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Alternating row tint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color RowTint { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_SceneLabel_" data-uid="TDMaker.Editor.TDEditorGUI.SceneLabel*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_SceneLabel" data-uid="TDMaker.Editor.TDEditorGUI.SceneLabel">
+  SceneLabel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scene-view label with a dark backdrop for legibility on any background.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GUIStyle SceneLabel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GUIStyle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_StatValue_" data-uid="TDMaker.Editor.TDEditorGUI.StatValue*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_StatValue" data-uid="TDMaker.Editor.TDEditorGUI.StatValue">
+  StatValue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Right-aligned value label for stat tables.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GUIStyle StatValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GUIStyle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_WrapMini_" data-uid="TDMaker.Editor.TDEditorGUI.WrapMini*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_WrapMini" data-uid="TDMaker.Editor.TDEditorGUI.WrapMini">
+  WrapMini
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Word-wrapped mini label.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GUIStyle WrapMini { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GUIStyle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_Compact_" data-uid="TDMaker.Editor.TDEditorGUI.Compact*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_Compact_System_Double_" data-uid="TDMaker.Editor.TDEditorGUI.Compact(System.Double)">
+  Compact(double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats a number compactly (&quot;1.2k&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Compact(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_ContrastText_" data-uid="TDMaker.Editor.TDEditorGUI.ContrastText*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_ContrastText_UnityEngine_Color_" data-uid="TDMaker.Editor.TDEditorGUI.ContrastText(UnityEngine.Color)">
+  ContrastText(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Black or white, whichever reads better on <code class="paramref">background</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color ContrastText(Color background)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>background</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_DrawOutline_" data-uid="TDMaker.Editor.TDEditorGUI.DrawOutline*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_DrawOutline_UnityEngine_Rect_UnityEngine_Color_System_Single_" data-uid="TDMaker.Editor.TDEditorGUI.DrawOutline(UnityEngine.Rect,UnityEngine.Color,System.Single)">
+  DrawOutline(Rect, Color, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a rectangle outline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawOutline(Rect rect, Color color, float width = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rect</code> <span class="xref">Rect</span></dt>
+    <dd></dd>
+    <dt><code>color</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_FindAll_" data-uid="TDMaker.Editor.TDEditorGUI.FindAll*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_FindAll__1" data-uid="TDMaker.Editor.TDEditorGUI.FindAll``1">
+  FindAll&lt;T&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>All loaded scene objects of a type (unsorted). Wraps the API that changed across Unity 6 minors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T[] FindAll&lt;T&gt;() where T : Object</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_IsMissingReference_" data-uid="TDMaker.Editor.TDEditorGUI.IsMissingReference*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_IsMissingReference_UnityEditor_SerializedProperty_" data-uid="TDMaker.Editor.TDEditorGUI.IsMissingReference(UnityEditor.SerializedProperty)">
+  IsMissingReference(SerializedProperty)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether a serialized object reference points at a deleted or missing object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMissingReference(SerializedProperty property)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>property</code> <span class="xref">SerializedProperty</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_Section_" data-uid="TDMaker.Editor.TDEditorGUI.Section*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_Section_System_String_System_String_System_Boolean_" data-uid="TDMaker.Editor.TDEditorGUI.Section(System.String,System.String,System.Boolean)">
+  Section(string, string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a foldout section header whose state persists for the editor session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Section(string key, string title, bool defaultOpen = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>defaultOpen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_SelectAndPing_" data-uid="TDMaker.Editor.TDEditorGUI.SelectAndPing*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_SelectAndPing_UnityEngine_Object_" data-uid="TDMaker.Editor.TDEditorGUI.SelectAndPing(UnityEngine.Object)">
+  SelectAndPing(Object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Selects and pings an object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SelectAndPing(Object target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">Object</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_Separator_" data-uid="TDMaker.Editor.TDEditorGUI.Separator*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_Separator" data-uid="TDMaker.Editor.TDEditorGUI.Separator">
+  Separator()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a one-pixel horizontal line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Separator()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_StatRow_" data-uid="TDMaker.Editor.TDEditorGUI.StatRow*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_StatRow_System_String_System_String_" data-uid="TDMaker.Editor.TDEditorGUI.StatRow(System.String,System.String)">
+  StatRow(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A label/value row for stat tables.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void StatRow(string label, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDEditorGUI_TintOf_" data-uid="TDMaker.Editor.TDEditorGUI.TintOf*"></a>
+
+  <h3 id="TDMaker_Editor_TDEditorGUI_TintOf_TDMaker_Unity_Authoring_EntityAssetBase_" data-uid="TDMaker.Editor.TDEditorGUI.TintOf(TDMaker.Unity.Authoring.EntityAssetBase)">
+  TintOf(EntityAssetBase)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Primary tint of an entity asset (its fallback view color), opaque.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color TintOf(EntityAssetBase asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <a class="xref" href="TDMaker.Unity.Authoring.EntityAssetBase.html">EntityAssetBase</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

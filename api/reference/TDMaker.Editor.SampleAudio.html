@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SampleAudio | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SampleAudio | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Assigns the optional sample audio (Assets/TDMaker/Samples/Audio/Sfx/&amp;lt;key&amp;gt;.ogg and Music/&amp;lt;key&amp;gt;.ogg) to sample cues by key. A missing file leaves its cue empty, so sample generation is deterministic with or without the audio. The key tables are public so tests (and buyers copying the scheme) can check them.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.SampleAudio">
+
+
+
+  <h1 id="TDMaker_Editor_SampleAudio" data-uid="TDMaker.Editor.SampleAudio" class="text-break">
+Class SampleAudio  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Assigns the optional sample audio (<code>Assets/TDMaker/Samples/Audio/Sfx/&lt;key&gt;.ogg</code> and <code>Music/&lt;key&gt;.ogg</code>)
+to sample cues by key. A missing file leaves its cue empty, so sample generation is deterministic with or without the audio.
+The key tables are public so tests (and buyers copying the scheme) can check them.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class SampleAudio</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SampleAudio</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_BattleMusic" data-uid="TDMaker.Editor.SampleAudio.BattleMusic">
+  BattleMusic
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BattleMusic = &quot;music_battle&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_BigEnemySize" data-uid="TDMaker.Editor.SampleAudio.BigEnemySize">
+  BigEnemySize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enemies at least this large (view size) use the big death sound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const float BigEnemySize = 0.55</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_DefeatMusic" data-uid="TDMaker.Editor.SampleAudio.DefeatMusic">
+  DefeatMusic
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefeatMusic = &quot;music_defeat&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_GlobalCueKeys" data-uid="TDMaker.Editor.SampleAudio.GlobalCueKeys">
+  GlobalCueKeys
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Which global <a class="xref" href="TDMaker.Unity.View.AudioCuePlayer.GlobalCues.html">AudioCuePlayer.GlobalCues</a> slot uses which sound key (slots not listed stay empty).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly KeyValuePair&lt;string, string&gt;[] GlobalCueKeys</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_IntenseMusic" data-uid="TDMaker.Editor.SampleAudio.IntenseMusic">
+  IntenseMusic
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string IntenseMusic = &quot;music_battle_intense&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_MechanicCueKeys" data-uid="TDMaker.Editor.SampleAudio.MechanicCueKeys">
+  MechanicCueKeys
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Which <a class="xref" href="TDMaker.Unity.View.AudioCuePlayer.MechanicCues.html">AudioCuePlayer.MechanicCues</a> slot uses which sound key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly KeyValuePair&lt;string, string&gt;[] MechanicCueKeys</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_MenuMusic" data-uid="TDMaker.Editor.SampleAudio.MenuMusic">
+  MenuMusic
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MenuMusic = &quot;music_menu&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_MusicFolder" data-uid="TDMaker.Editor.SampleAudio.MusicFolder">
+  MusicFolder
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Folder of the sample music.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MusicFolder = &quot;Assets/TDMaker/Samples/Audio/Music&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_SfxFolder" data-uid="TDMaker.Editor.SampleAudio.SfxFolder">
+  SfxFolder
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Folder of the sample sound effects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SfxFolder = &quot;Assets/TDMaker/Samples/Audio/Sfx&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_SampleAudio_VictoryMusic" data-uid="TDMaker.Editor.SampleAudio.VictoryMusic">
+  VictoryMusic
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Music keys: menu loop, battle loop, intense loop, victory and defeat stingers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string VictoryMusic = &quot;music_victory&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Editor_SampleAudio_Available_" data-uid="TDMaker.Editor.SampleAudio.Available*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_Available" data-uid="TDMaker.Editor.SampleAudio.Available">
+  Available
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the optional sample audio is in the project (at least one clip in <a class="xref" href="TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_SfxFolder">SfxFolder</a> or <a class="xref" href="TDMaker.Editor.SampleAudio.html#TDMaker_Editor_SampleAudio_MusicFolder">MusicFolder</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Available { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_SampleAudio_AllKeys_" data-uid="TDMaker.Editor.SampleAudio.AllKeys*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_AllKeys" data-uid="TDMaker.Editor.SampleAudio.AllKeys">
+  AllKeys()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Every key the sample mapping can use (sound effects and music).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; AllKeys()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_ApplyAssetCues_" data-uid="TDMaker.Editor.SampleAudio.ApplyAssetCues*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_ApplyAssetCues_System_String___" data-uid="TDMaker.Editor.SampleAudio.ApplyAssetCues(System.String[])">
+  ApplyAssetCues(params string[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Assigns cues to every sample asset found in <code class="paramref">dataFolders</code> by type and id: tower attacks, projectile
+impacts, enemy hits and deaths (small / big), soldier attacks and deaths, hero attacks and spell casts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyAssetCues(params string[] dataFolders)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dataFolders</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_ApplyAssetCues_" data-uid="TDMaker.Editor.SampleAudio.ApplyAssetCues*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_ApplyAssetCues_UnityEngine_ScriptableObject_" data-uid="TDMaker.Editor.SampleAudio.ApplyAssetCues(UnityEngine.ScriptableObject)">
+  ApplyAssetCues(ScriptableObject)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Assigns the sample cues of one asset; returns whether the asset type has sample cues.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ApplyAssetCues(ScriptableObject asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <span class="xref">ScriptableObject</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_ApplyLevelMusic_" data-uid="TDMaker.Editor.SampleAudio.ApplyLevelMusic*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_ApplyLevelMusic_TDMaker_Unity_Authoring_LevelAsset_System_Single_" data-uid="TDMaker.Editor.SampleAudio.ApplyLevelMusic(TDMaker.Unity.Authoring.LevelAsset,System.Single)">
+  ApplyLevelMusic(LevelAsset, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a sample level's music: battle and intense loops (intense on the last and boss waves) and the stingers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyLevelMusic(LevelAsset level, float volume = 0.8)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="TDMaker.Unity.Authoring.LevelAsset.html">LevelAsset</a></dt>
+    <dd></dd>
+    <dt><code>volume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_ApplyMenuMusic_" data-uid="TDMaker.Editor.SampleAudio.ApplyMenuMusic*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_ApplyMenuMusic_TDMaker_Unity_View_MusicPlayer_" data-uid="TDMaker.Editor.SampleAudio.ApplyMenuMusic(TDMaker.Unity.View.MusicPlayer)">
+  ApplyMenuMusic(MusicPlayer)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the menu loop of a sample music player (empty when the file is missing).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyMenuMusic(MusicPlayer player)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>player</code> <a class="xref" href="TDMaker.Unity.View.MusicPlayer.html">MusicPlayer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_ApplyPlayerCues_" data-uid="TDMaker.Editor.SampleAudio.ApplyPlayerCues*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_ApplyPlayerCues_TDMaker_Unity_View_AudioCuePlayer_" data-uid="TDMaker.Editor.SampleAudio.ApplyPlayerCues(TDMaker.Unity.View.AudioCuePlayer)">
+  ApplyPlayerCues(AudioCuePlayer)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills the global and mechanic cues of a sample audio player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyPlayerCues(AudioCuePlayer player)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>player</code> <a class="xref" href="TDMaker.Unity.View.AudioCuePlayer.html">AudioCuePlayer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_Assign_" data-uid="TDMaker.Editor.SampleAudio.Assign*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_Assign_TDMaker_Unity_Authoring_AudioCue_System_String_System_Single_System_Single_System_Single_System_Single_" data-uid="TDMaker.Editor.SampleAudio.Assign(TDMaker.Unity.Authoring.AudioCue,System.String,System.Single,System.Single,System.Single,System.Single)">
+  Assign(AudioCue, string, float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a cue to the sample clip <code class="paramref">key</code> (or leaves it empty when the clip is missing) with the given playback
+settings. Returns whether a clip was assigned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Assign(AudioCue cue, string key, float volume = 1, float minInterval = 0.05, float pitchMin = 0.95, float pitchMax = 1.05)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cue</code> <a class="xref" href="TDMaker.Unity.Authoring.AudioCue.html">AudioCue</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>volume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>minInterval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>pitchMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>pitchMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_EnemyDeathKey_" data-uid="TDMaker.Editor.SampleAudio.EnemyDeathKey*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_EnemyDeathKey_System_Single_" data-uid="TDMaker.Editor.SampleAudio.EnemyDeathKey(System.Single)">
+  EnemyDeathKey(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Death sound of an enemy by its view size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string EnemyDeathKey(float viewSize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>viewSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_HeroAttackKey_" data-uid="TDMaker.Editor.SampleAudio.HeroAttackKey*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_HeroAttackKey_System_String_" data-uid="TDMaker.Editor.SampleAudio.HeroAttackKey(System.String)">
+  HeroAttackKey(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attack sound of a sample hero by template id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string HeroAttackKey(string templateId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>templateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_Music_" data-uid="TDMaker.Editor.SampleAudio.Music*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_Music_System_String_" data-uid="TDMaker.Editor.SampleAudio.Music(System.String)">
+  Music(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The sample music track for <code class="paramref">key</code>, or null when the file does not exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AudioClip Music(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AudioClip</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_ProjectileImpactKey_" data-uid="TDMaker.Editor.SampleAudio.ProjectileImpactKey*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_ProjectileImpactKey_System_String_" data-uid="TDMaker.Editor.SampleAudio.ProjectileImpactKey(System.String)">
+  ProjectileImpactKey(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Impact sound of a sample projectile by asset name (null: none).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ProjectileImpactKey(string assetName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_Sfx_" data-uid="TDMaker.Editor.SampleAudio.Sfx*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_Sfx_System_String_" data-uid="TDMaker.Editor.SampleAudio.Sfx(System.String)">
+  Sfx(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The sample sound effect for <code class="paramref">key</code>, or null when the file does not exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AudioClip Sfx(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AudioClip</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_SpellCastKey_" data-uid="TDMaker.Editor.SampleAudio.SpellCastKey*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_SpellCastKey_System_String_" data-uid="TDMaker.Editor.SampleAudio.SpellCastKey(System.String)">
+  SpellCastKey(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cast sound of a sample spell by spell id (null: none).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SpellCastKey(string spellId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>spellId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleAudio_TowerAttackKey_" data-uid="TDMaker.Editor.SampleAudio.TowerAttackKey*"></a>
+
+  <h3 id="TDMaker_Editor_SampleAudio_TowerAttackKey_System_String_" data-uid="TDMaker.Editor.SampleAudio.TowerAttackKey(System.String)">
+  TowerAttackKey(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attack sound of a sample tower by template id (null: none, for example barracks).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string TowerAttackKey(string templateId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>templateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

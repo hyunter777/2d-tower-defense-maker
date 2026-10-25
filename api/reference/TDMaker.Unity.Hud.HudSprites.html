@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class HudSprites | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class HudSprites | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Procedurally generated UI sprites used when a  slot is empty. All are white/grayscale so theme colours tint them. Panels and buttons are 9-sliced.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Hud.HudSprites">
+
+
+
+  <h1 id="TDMaker_Unity_Hud_HudSprites" data-uid="TDMaker.Unity.Hud.HudSprites" class="text-break">
+Class HudSprites  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<span class="xref">Unity</span>.<a class="xref" href="TDMaker.Unity.Hud.html">Hud</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Unity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Procedurally generated UI sprites used when a <a class="xref" href="TDMaker.Unity.Hud.HudTheme.html">HudTheme</a> slot is empty. All are white/grayscale so
+theme colours tint them. Panels and buttons are 9-sliced.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class HudSprites</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">HudSprites</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Arrow_" data-uid="TDMaker.Unity.Hud.HudSprites.Arrow*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Arrow" data-uid="TDMaker.Unity.Hud.HudSprites.Arrow">
+  Arrow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A small right-pointing arrow (direction hints).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Arrow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Bar_" data-uid="TDMaker.Unity.Hud.HudSprites.Bar*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Bar" data-uid="TDMaker.Unity.Hud.HudSprites.Bar">
+  Bar
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A flat bar (9-sliced, slightly rounded).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Bar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Button_" data-uid="TDMaker.Unity.Hud.HudSprites.Button*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Button" data-uid="TDMaker.Unity.Hud.HudSprites.Button">
+  Button
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A rounded, top-lit button (9-sliced).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Button { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Circle_" data-uid="TDMaker.Unity.Hud.HudSprites.Circle*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Circle" data-uid="TDMaker.Unity.Hud.HudSprites.Circle">
+  Circle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A filled circle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Circle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Coin_" data-uid="TDMaker.Unity.Hud.HudSprites.Coin*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Coin" data-uid="TDMaker.Unity.Hud.HudSprites.Coin">
+  Coin
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A coin (gold).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Coin { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Flag_" data-uid="TDMaker.Unity.Hud.HudSprites.Flag*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Flag" data-uid="TDMaker.Unity.Hud.HudSprites.Flag">
+  Flag
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A pennant (waves).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Flag { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Glow_" data-uid="TDMaker.Unity.Hud.HudSprites.Glow*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Glow" data-uid="TDMaker.Unity.Hud.HudSprites.Glow">
+  Glow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A soft glow disc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Glow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Heart_" data-uid="TDMaker.Unity.Hud.HudSprites.Heart*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Heart" data-uid="TDMaker.Unity.Hud.HudSprites.Heart">
+  Heart
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A heart (lives).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Heart { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Lock_" data-uid="TDMaker.Unity.Hud.HudSprites.Lock*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Lock" data-uid="TDMaker.Unity.Hud.HudSprites.Lock">
+  Lock
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A padlock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Lock { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Panel_" data-uid="TDMaker.Unity.Hud.HudSprites.Panel*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Panel" data-uid="TDMaker.Unity.Hud.HudSprites.Panel">
+  Panel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A rounded panel with a light rim (9-sliced).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Panel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Pause_" data-uid="TDMaker.Unity.Hud.HudSprites.Pause*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Pause" data-uid="TDMaker.Unity.Hud.HudSprites.Pause">
+  Pause
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Two vertical bars.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Pause { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Play_" data-uid="TDMaker.Unity.Hud.HudSprites.Play*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Play" data-uid="TDMaker.Unity.Hud.HudSprites.Play">
+  Play
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A right-pointing triangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Play { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Ring_" data-uid="TDMaker.Unity.Hud.HudSprites.Ring*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Ring" data-uid="TDMaker.Unity.Hud.HudSprites.Ring">
+  Ring
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A thin ring.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Ring { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Skull_" data-uid="TDMaker.Unity.Hud.HudSprites.Skull*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Skull" data-uid="TDMaker.Unity.Hud.HudSprites.Skull">
+  Skull
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A skull-like enemy marker (wave entrances).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Skull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Star_" data-uid="TDMaker.Unity.Hud.HudSprites.Star*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Star" data-uid="TDMaker.Unity.Hud.HudSprites.Star">
+  Star
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A five-point star.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Star { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_Sword_" data-uid="TDMaker.Unity.Hud.HudSprites.Sword*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_Sword" data-uid="TDMaker.Unity.Hud.HudSprites.Sword">
+  Sword
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A sword (attack / damage).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite Sword { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Hud_HudSprites_ThickRing_" data-uid="TDMaker.Unity.Hud.HudSprites.ThickRing*"></a>
+
+  <h3 id="TDMaker_Unity_Hud_HudSprites_ThickRing" data-uid="TDMaker.Unity.Hud.HudSprites.ThickRing">
+  ThickRing
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A thick ring for radial progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sprite ThickRing { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

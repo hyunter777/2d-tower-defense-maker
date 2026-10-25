@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UnitMath | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UnitMath | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Unit Workshop numbers that follow the simulation&#39;s integer damage rules exactly (single-target hits without status effects or incoming multipliers): a hit rolls ceil(lerp(min, max, u)), projectile hits deal at least 1, the target keeps floor(rolled &#215; (1 − reduction)) (soldiers: round(rolled − floor(rolled &#215; reduction))), and the reduction is the matching defense minus pierce (explosion and electric use half the physical armor), clamped to [0, 1]. Ratio checks use the bands of the balance notes (new content starting points, not rules).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.UnitMath">
+
+
+
+  <h1 id="TDMaker_Editor_UnitMath" data-uid="TDMaker.Editor.UnitMath" class="text-break">
+Class UnitMath  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Unit Workshop numbers that follow the simulation's integer damage rules exactly (single-target hits without status effects
+or incoming multipliers): a hit rolls <code>ceil(lerp(min, max, u))</code>, projectile hits deal at least 1, the target keeps
+<code>floor(rolled × (1 − reduction))</code> (soldiers: <code>round(rolled − floor(rolled × reduction))</code>), and the reduction is the
+matching defense minus pierce (explosion and electric use half the physical armor), clamped to [0, 1].
+Ratio checks use the bands of the balance notes (new content starting points, not rules).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UnitMath</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UnitMath</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_UnitMath_Kinds" data-uid="TDMaker.Editor.UnitMath.Kinds">
+  Kinds
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The damage kinds listed in stat tables.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DamageKind[] Kinds</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageKind.html">DamageKind</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_UnitMath_BountyDensity_" data-uid="TDMaker.Editor.UnitMath.BountyDensity*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_BountyDensity_TDMaker_Unity_Authoring_EnemyAsset_" data-uid="TDMaker.Editor.UnitMath.BountyDensity(TDMaker.Unity.Authoring.EnemyAsset)">
+  BountyDensity(EnemyAsset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gold per health point; the reference is the project's median over enemies (or this enemy alone).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float BountyDensity(EnemyAsset enemy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enemy</code> <a class="xref" href="TDMaker.Unity.Authoring.EnemyAsset.html">EnemyAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_Defenses_" data-uid="TDMaker.Editor.UnitMath.Defenses*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_Defenses_TDMaker_Unity_Authoring_EntityAssetBase_System_Single__System_Single__System_Single__" data-uid="TDMaker.Editor.UnitMath.Defenses(TDMaker.Unity.Authoring.EntityAssetBase,System.Single@,System.Single@,System.Single@)">
+  Defenses(EntityAssetBase, out float, out float, out float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defenses of an enemy, soldier or hero asset (zero for other types).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Defenses(EntityAssetBase unit, out float physical, out float magical, out float poison)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>unit</code> <a class="xref" href="TDMaker.Unity.Authoring.EntityAssetBase.html">EntityAssetBase</a></dt>
+    <dd></dd>
+    <dt><code>physical</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>magical</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>poison</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_Dps_" data-uid="TDMaker.Editor.UnitMath.Dps*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_Dps_TDMaker_Unity_Authoring_MeleeData_System_Collections_Generic_List_TDMaker_Unity_Authoring_RangedAttackData__System_Single_System_Single_System_Single_System_Single_System_Boolean_" data-uid="TDMaker.Editor.UnitMath.Dps(TDMaker.Unity.Authoring.MeleeData,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},System.Single,System.Single,System.Single,System.Single,System.Boolean)">
+  Dps(MeleeData, List&lt;RangedAttackData&gt;, float, float, float, float, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Expected damage per second of a melee attack and ranged channels against a target with the given defenses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double Dps(MeleeData melee, List&lt;RangedAttackData&gt; ranged, float scale, float physical, float magical, float poison, bool friendlyTarget = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>melee</code> <a class="xref" href="TDMaker.Unity.Authoring.MeleeData.html">MeleeData</a></dt>
+    <dd></dd>
+    <dt><code>ranged</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Authoring.RangedAttackData.html">RangedAttackData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>physical</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>magical</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>poison</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>friendlyTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_EffectiveHealth_" data-uid="TDMaker.Editor.UnitMath.EffectiveHealth*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_EffectiveHealth_System_Single_System_Single_" data-uid="TDMaker.Editor.UnitMath.EffectiveHealth(System.Single,System.Single)">
+  EffectiveHealth(float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Effective health against a damage kind: health / (1 − reduction), infinite at full reduction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double EffectiveHealth(float health, float reduction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>health</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>reduction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_EngagementSlot_" data-uid="TDMaker.Editor.UnitMath.EngagementSlot*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_EngagementSlot_System_Int32_UnityEngine_Vector2_UnityEngine_Vector2_System_Single_System_Boolean_" data-uid="TDMaker.Editor.UnitMath.EngagementSlot(System.Int32,UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Boolean)">
+  EngagementSlot(int, Vector2, Vector2, float, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Engagement slot offset of a rank (1-based) relative to the enemy: <code>(s × (D + h × u), Y + h × v)</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 EngagementSlot(int rank, Vector2 hostBias, Vector2 guestBias, float rowSpacing, bool movingRight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>hostBias</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>guestBias</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>rowSpacing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>movingRight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_ExpectedHit_" data-uid="TDMaker.Editor.UnitMath.ExpectedHit*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_ExpectedHit_TDMaker_Unity_Authoring_BasicDamageData_System_Single_System_Boolean_System_Boolean_" data-uid="TDMaker.Editor.UnitMath.ExpectedHit(TDMaker.Unity.Authoring.BasicDamageData,System.Single,System.Boolean,System.Boolean)">
+  ExpectedHit(BasicDamageData, float, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Expected health removed by one single-target hit of a damage packet: every integer roll between <code>ceil(min)</code> and
+<code>ceil(max)</code> weighted by its probability.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double ExpectedHit(BasicDamageData damage, float reduction, bool projectile = true, bool friendlyTarget = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>damage</code> <a class="xref" href="TDMaker.Unity.Authoring.BasicDamageData.html">BasicDamageData</a></dt>
+    <dd></dd>
+    <dt><code>reduction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>projectile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>friendlyTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_Health_" data-uid="TDMaker.Editor.UnitMath.Health*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_Health_TDMaker_Unity_Authoring_EntityAssetBase_" data-uid="TDMaker.Editor.UnitMath.Health(TDMaker.Unity.Authoring.EntityAssetBase)">
+  Health(EntityAssetBase)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum health of a unit asset (zero for other types).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Health(EntityAssetBase unit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>unit</code> <a class="xref" href="TDMaker.Unity.Authoring.EntityAssetBase.html">EntityAssetBase</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_HeroRows_" data-uid="TDMaker.Editor.UnitMath.HeroRows*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_HeroRows_TDMaker_Unity_Authoring_HeroAsset_" data-uid="TDMaker.Editor.UnitMath.HeroRows(TDMaker.Unity.Authoring.HeroAsset)">
+  HeroRows(HeroAsset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hero growth rows with the bake's threshold and point rules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;UnitMath.HeroRow&gt; HeroRows(HeroAsset hero)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hero</code> <a class="xref" href="TDMaker.Unity.Authoring.HeroAsset.html">HeroAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Editor.UnitMath.html">UnitMath</a>.<a class="xref" href="TDMaker.Editor.UnitMath.HeroRow.html">HeroRow</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_HitDamage_" data-uid="TDMaker.Editor.UnitMath.HitDamage*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_HitDamage_System_Single_System_Single_System_Boolean_" data-uid="TDMaker.Editor.UnitMath.HitDamage(System.Single,System.Single,System.Boolean)">
+  HitDamage(float, float, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Health removed by one hit of <code class="paramref">rolled</code> raw damage through <code class="paramref">reduction</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float HitDamage(float rolled, float reduction, bool friendlyTarget = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rolled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>reduction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>friendlyTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_HitsToKill_" data-uid="TDMaker.Editor.UnitMath.HitsToKill*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_HitsToKill_System_Single_System_Double_" data-uid="TDMaker.Editor.UnitMath.HitsToKill(System.Single,System.Double)">
+  HitsToKill(float, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hits needed to remove <code class="paramref">health</code> with a fixed per-hit amount; infinite when hits do nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double HitsToKill(float health, double perHit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>health</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>perHit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_Kill_" data-uid="TDMaker.Editor.UnitMath.Kill*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_Kill_TDMaker_Unity_Authoring_TowerAsset_TDMaker_Unity_Authoring_EnemyAsset_System_Int32_" data-uid="TDMaker.Editor.UnitMath.Kill(TDMaker.Unity.Authoring.TowerAsset,TDMaker.Unity.Authoring.EnemyAsset,System.Int32)">
+  Kill(TowerAsset, EnemyAsset, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Expected time and hits for <code class="paramref">tower</code> to kill <code class="paramref">enemy</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UnitMath.KillEstimate Kill(TowerAsset tower, EnemyAsset enemy, int tier = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tower</code> <a class="xref" href="TDMaker.Unity.Authoring.TowerAsset.html">TowerAsset</a></dt>
+    <dd></dd>
+    <dt><code>enemy</code> <a class="xref" href="TDMaker.Unity.Authoring.EnemyAsset.html">EnemyAsset</a></dt>
+    <dd></dd>
+    <dt><code>tier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Editor.UnitMath.html">UnitMath</a>.<a class="xref" href="TDMaker.Editor.UnitMath.KillEstimate.html">KillEstimate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_MedianBountyDensity_" data-uid="TDMaker.Editor.UnitMath.MedianBountyDensity*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_MedianBountyDensity_System_Collections_Generic_List_TDMaker_Unity_Authoring_EnemyAsset__" data-uid="TDMaker.Editor.UnitMath.MedianBountyDensity(System.Collections.Generic.List{TDMaker.Unity.Authoring.EnemyAsset})">
+  MedianBountyDensity(List&lt;EnemyAsset&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Median bounty density of the given enemies (zero when there are none).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float MedianBountyDensity(List&lt;EnemyAsset&gt; enemies)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enemies</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Authoring.EnemyAsset.html">EnemyAsset</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_Outliers_" data-uid="TDMaker.Editor.UnitMath.Outliers*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_Outliers_TDMaker_Unity_Authoring_EntityAssetBase_System_Single_" data-uid="TDMaker.Editor.UnitMath.Outliers(TDMaker.Unity.Authoring.EntityAssetBase,System.Single)">
+  Outliers(EntityAssetBase, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ratio checks for a unit (balance-note bands; product starting points, not rules).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;UnitMath.Outlier&gt; Outliers(EntityAssetBase unit, float referenceBountyDensity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>unit</code> <a class="xref" href="TDMaker.Unity.Authoring.EntityAssetBase.html">EntityAssetBase</a></dt>
+    <dd></dd>
+    <dt><code>referenceBountyDensity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Editor.UnitMath.html">UnitMath</a>.<a class="xref" href="TDMaker.Editor.UnitMath.Outlier.html">Outlier</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_Reduction_" data-uid="TDMaker.Editor.UnitMath.Reduction*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_Reduction_TDMaker_Core_Defs_DamageKind_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="TDMaker.Editor.UnitMath.Reduction(TDMaker.Core.Defs.DamageKind,System.Single,System.Single,System.Single,System.Single,System.Single)">
+  Reduction(DamageKind, float, float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reduction against a hit of <code class="paramref">kind</code> for a target with the given defenses (the simulation's switch).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Reduction(DamageKind kind, float physical, float magical, float poison, float physicalPierce = 0, float magicalPierce = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kind</code> <a class="xref" href="TDMaker.Core.Defs.DamageKind.html">DamageKind</a></dt>
+    <dd></dd>
+    <dt><code>physical</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>magical</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>poison</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>physicalPierce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>magicalPierce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_UnitMath_TowerTiers_" data-uid="TDMaker.Editor.UnitMath.TowerTiers*"></a>
+
+  <h3 id="TDMaker_Editor_UnitMath_TowerTiers_System_Collections_Generic_List_TDMaker_Unity_Authoring_TowerAsset__" data-uid="TDMaker.Editor.UnitMath.TowerTiers(System.Collections.Generic.List{TDMaker.Unity.Authoring.TowerAsset})">
+  TowerTiers(List&lt;TowerAsset&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Every tower tier in the project ordered by tree (root name) and depth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;KeyValuePair&lt;TowerAsset, int&gt;&gt; TowerTiers(List&lt;TowerAsset&gt; all = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>all</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Authoring.TowerAsset.html">TowerAsset</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="TDMaker.Unity.Authoring.TowerAsset.html">TowerAsset</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

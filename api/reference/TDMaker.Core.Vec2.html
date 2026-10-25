@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct Vec2 | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct Vec2 | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="A simulation-space vector independent of any engine.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Vec2">
+
+
+
+  <h1 id="TDMaker_Core_Vec2" data-uid="TDMaker.Core.Vec2" class="text-break">
+Struct Vec2  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A simulation-space vector independent of any engine.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly struct Vec2 : IEquatable&lt;Vec2&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Vec2__ctor_" data-uid="TDMaker.Core.Vec2.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Vec2__ctor_System_Single_System_Single_" data-uid="TDMaker.Core.Vec2.#ctor(System.Single,System.Single)">
+  Vec2(float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2(float x, float y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Core_Vec2_X" data-uid="TDMaker.Core.Vec2.X">
+  X
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The horizontal coordinate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly float X</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Core_Vec2_Y" data-uid="TDMaker.Core.Vec2.Y">
+  Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The vertical coordinate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly float Y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Vec2_Length_" data-uid="TDMaker.Core.Vec2.Length*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_Length" data-uid="TDMaker.Core.Vec2.Length">
+  Length
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Euclidean length.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Length { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_LengthSquared_" data-uid="TDMaker.Core.Vec2.LengthSquared*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_LengthSquared" data-uid="TDMaker.Core.Vec2.LengthSquared">
+  LengthSquared
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The squared Euclidean length.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LengthSquared { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_Normalized_" data-uid="TDMaker.Core.Vec2.Normalized*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_Normalized" data-uid="TDMaker.Core.Vec2.Normalized">
+  Normalized
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a unit vector, or zero for a zero vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2 Normalized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_Zero_" data-uid="TDMaker.Core.Vec2.Zero*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_Zero" data-uid="TDMaker.Core.Vec2.Zero">
+  Zero
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The origin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2 Zero { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Vec2_DistanceSquared_" data-uid="TDMaker.Core.Vec2.DistanceSquared*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_DistanceSquared_TDMaker_Core_Vec2_TDMaker_Core_Vec2_System_Single_" data-uid="TDMaker.Core.Vec2.DistanceSquared(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)">
+  DistanceSquared(Vec2, Vec2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Measures squared distance using a vertical range multiplier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float DistanceSquared(Vec2 a, Vec2 b, float yScale = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>yScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_Equals_" data-uid="TDMaker.Core.Vec2.Equals*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_Equals_System_Object_" data-uid="TDMaker.Core.Vec2.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares coordinates exactly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_Equals_" data-uid="TDMaker.Core.Vec2.Equals*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_Equals_TDMaker_Core_Vec2_" data-uid="TDMaker.Core.Vec2.Equals(TDMaker.Core.Vec2)">
+  Equals(Vec2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares coordinates exactly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Vec2 other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_GetHashCode_" data-uid="TDMaker.Core.Vec2.GetHashCode*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_GetHashCode" data-uid="TDMaker.Core.Vec2.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a coordinate hash.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_Lerp_" data-uid="TDMaker.Core.Vec2.Lerp*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_Lerp_TDMaker_Core_Vec2_TDMaker_Core_Vec2_System_Single_" data-uid="TDMaker.Core.Vec2.Lerp(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)">
+  Lerp(Vec2, Vec2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Interpolates between two positions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2 Lerp(Vec2 a, Vec2 b, float t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_MoveTowards_" data-uid="TDMaker.Core.Vec2.MoveTowards*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_MoveTowards_TDMaker_Core_Vec2_TDMaker_Core_Vec2_System_Single_" data-uid="TDMaker.Core.Vec2.MoveTowards(TDMaker.Core.Vec2,TDMaker.Core.Vec2,System.Single)">
+  MoveTowards(Vec2, Vec2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moves towards a destination without overshooting it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2 MoveTowards(Vec2 from, Vec2 to, float distance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>from</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>to</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>distance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_ToString_" data-uid="TDMaker.Core.Vec2.ToString*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_ToString" data-uid="TDMaker.Core.Vec2.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats the vector for diagnostics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="TDMaker_Core_Vec2_op_Addition_" data-uid="TDMaker.Core.Vec2.op_Addition*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_op_Addition_TDMaker_Core_Vec2_TDMaker_Core_Vec2_" data-uid="TDMaker.Core.Vec2.op_Addition(TDMaker.Core.Vec2,TDMaker.Core.Vec2)">
+  operator +(Vec2, Vec2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds two vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2 operator +(Vec2 a, Vec2 b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_op_Division_" data-uid="TDMaker.Core.Vec2.op_Division*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_op_Division_TDMaker_Core_Vec2_System_Single_" data-uid="TDMaker.Core.Vec2.op_Division(TDMaker.Core.Vec2,System.Single)">
+  operator /(Vec2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Divides a vector by a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2 operator /(Vec2 a, float s)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>s</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_op_Multiply_" data-uid="TDMaker.Core.Vec2.op_Multiply*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_op_Multiply_TDMaker_Core_Vec2_System_Single_" data-uid="TDMaker.Core.Vec2.op_Multiply(TDMaker.Core.Vec2,System.Single)">
+  operator *(Vec2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scales a vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2 operator *(Vec2 a, float s)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>s</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Vec2_op_Subtraction_" data-uid="TDMaker.Core.Vec2.op_Subtraction*"></a>
+
+  <h3 id="TDMaker_Core_Vec2_op_Subtraction_TDMaker_Core_Vec2_TDMaker_Core_Vec2_" data-uid="TDMaker.Core.Vec2.op_Subtraction(TDMaker.Core.Vec2,TDMaker.Core.Vec2)">
+  operator -(Vec2, Vec2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtracts two vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2 operator -(Vec2 a, Vec2 b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

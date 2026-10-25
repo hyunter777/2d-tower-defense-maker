@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ProjectileDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ProjectileDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Immutable projectile travel data.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.ProjectileDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_ProjectileDef" data-uid="TDMaker.Core.Defs.ProjectileDef" class="text-break">
+Class ProjectileDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Immutable projectile travel data.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ProjectileDef</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ProjectileDef</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef__ctor_" data-uid="TDMaker.Core.Defs.ProjectileDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef__ctor_TDMaker_Core_Defs_ProjectileKind_System_Single_System_Single_System_Single_System_String_System_Single_System_Single_" data-uid="TDMaker.Core.Defs.ProjectileDef.#ctor(TDMaker.Core.Defs.ProjectileKind,System.Single,System.Single,System.Single,System.String,System.Single,System.Single)">
+  ProjectileDef(ProjectileKind, float, float, float, string, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates projectile data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectileDef(ProjectileKind kind = ProjectileKind.Instant, float speed = 1, float arcHeight = 0, float lifetime = 30, string viewKey = null, float flightTime = 0, float hitRadius = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kind</code> <a class="xref" href="TDMaker.Core.Defs.ProjectileKind.html">ProjectileKind</a></dt>
+    <dd></dd>
+    <dt><code>speed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>arcHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>lifetime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>viewKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>flightTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>hitRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_ArcHeight_" data-uid="TDMaker.Core.Defs.ProjectileDef.ArcHeight*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_ArcHeight" data-uid="TDMaker.Core.Defs.ProjectileDef.ArcHeight">
+  ArcHeight
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Visual ballistic height at the middle of the flight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ArcHeight { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_FlightTime_" data-uid="TDMaker.Core.Defs.ProjectileDef.FlightTime*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_FlightTime" data-uid="TDMaker.Core.Defs.ProjectileDef.FlightTime">
+  FlightTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional fixed flight duration; zero selects distance divided by speed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FlightTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_HitRadius_" data-uid="TDMaker.Core.Defs.ProjectileDef.HitRadius*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_HitRadius" data-uid="TDMaker.Core.Defs.ProjectileDef.HitRadius">
+  HitRadius
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allowed distance between the aim point and a moving single target at impact.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float HitRadius { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_ImpactArea_" data-uid="TDMaker.Core.Defs.ProjectileDef.ImpactArea*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_ImpactArea" data-uid="TDMaker.Core.Defs.ProjectileDef.ImpactArea">
+  ImpactArea
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional region created once at actual arrival, including an empty-ground impact. Cancellation and lifetime expiry do not create it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AreaEffectDef ImpactArea { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.AreaEffectDef.html">AreaEffectDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_Kind_" data-uid="TDMaker.Core.Defs.ProjectileDef.Kind*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_Kind" data-uid="TDMaker.Core.Defs.ProjectileDef.Kind">
+  Kind
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The travel model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectileKind Kind { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.ProjectileKind.html">ProjectileKind</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_Lifetime_" data-uid="TDMaker.Core.Defs.ProjectileDef.Lifetime*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_Lifetime" data-uid="TDMaker.Core.Defs.ProjectileDef.Lifetime">
+  Lifetime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum time before a projectile expires.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Lifetime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_Options_" data-uid="TDMaker.Core.Defs.ProjectileDef.Options*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_Options" data-uid="TDMaker.Core.Defs.ProjectileDef.Options">
+  Options
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prediction and target-loss policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectileOptions Options { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.ProjectileOptions.html">ProjectileOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_Speed_" data-uid="TDMaker.Core.Defs.ProjectileDef.Speed*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_Speed" data-uid="TDMaker.Core.Defs.ProjectileDef.Speed">
+  Speed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Travel speed in world units per second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Speed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_ViewKey_" data-uid="TDMaker.Core.Defs.ProjectileDef.ViewKey*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_ViewKey" data-uid="TDMaker.Core.Defs.ProjectileDef.ViewKey">
+  ViewKey
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional view lookup key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ViewKey { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_WithImpactArea_" data-uid="TDMaker.Core.Defs.ProjectileDef.WithImpactArea*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_WithImpactArea_TDMaker_Core_Defs_AreaEffectDef_" data-uid="TDMaker.Core.Defs.ProjectileDef.WithImpactArea(TDMaker.Core.Defs.AreaEffectDef)">
+  WithImpactArea(AreaEffectDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies flight data and adds a once-per-projectile residual region, distinct from per-victim damage payloads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectileDef WithImpactArea(AreaEffectDef area)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>area</code> <a class="xref" href="TDMaker.Core.Defs.AreaEffectDef.html">AreaEffectDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.ProjectileDef.html">ProjectileDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_ProjectileDef_WithOptions_" data-uid="TDMaker.Core.Defs.ProjectileDef.WithOptions*"></a>
+
+  <h3 id="TDMaker_Core_Defs_ProjectileDef_WithOptions_TDMaker_Core_Defs_ProjectileOptions_" data-uid="TDMaker.Core.Defs.ProjectileDef.WithOptions(TDMaker.Core.Defs.ProjectileOptions)">
+  WithOptions(ProjectileOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies projectile data with flight extensions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectileDef WithOptions(ProjectileOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="TDMaker.Core.Defs.ProjectileOptions.html">ProjectileOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.ProjectileDef.html">ProjectileDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BeamDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BeamDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="A tracked single-target channel with an exact integer raw damage budget.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.BeamDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_BeamDef" data-uid="TDMaker.Core.Defs.BeamDef" class="text-break">
+Class BeamDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A tracked single-target channel with an exact integer raw damage budget.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class BeamDef : IAbilityAction</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BeamDef</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="TDMaker.Core.IAbilityAction.html">IAbilityAction</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_BeamDef__ctor_" data-uid="TDMaker.Core.Defs.BeamDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef__ctor_System_String_TDMaker_Core_Defs_DamageDef_System_Int32_System_Int32_System_Single_System_Single_System_Single_TDMaker_Core_Defs_MechanicTargetDef_System_Boolean_System_Boolean_System_Boolean_" data-uid="TDMaker.Core.Defs.BeamDef.#ctor(System.String,TDMaker.Core.Defs.DamageDef,System.Int32,System.Int32,System.Single,System.Single,System.Single,TDMaker.Core.Defs.MechanicTargetDef,System.Boolean,System.Boolean,System.Boolean)">
+  BeamDef(string, DamageDef, int, int, float, float, float, MechanicTargetDef, bool, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a budget channel. Mitigation, shields and independent on-hit payloads are outside the primary raw budget.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BeamDef(string id, DamageDef damage, int totalDamage, int pulseCount, float interval, float range, float firstDelay = 0, MechanicTargetDef targets = null, bool targetsFlying = true, bool targetsGround = true, bool cancelWithSource = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>damage</code> <a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+    <dd></dd>
+    <dt><code>totalDamage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>pulseCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>interval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>range</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>firstDelay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>targets</code> <a class="xref" href="TDMaker.Core.Defs.MechanicTargetDef.html">MechanicTargetDef</a></dt>
+    <dd></dd>
+    <dt><code>targetsFlying</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>targetsGround</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>cancelWithSource</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_MaximumExactBudget" data-uid="TDMaker.Core.Defs.BeamDef.MaximumExactBudget">
+  MaximumExactBudget
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Largest budget exactly representable by single-precision integer packets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaximumExactBudget = 16777216</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_CancelWithSource_" data-uid="TDMaker.Core.Defs.BeamDef.CancelWithSource*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_CancelWithSource" data-uid="TDMaker.Core.Defs.BeamDef.CancelWithSource">
+  CancelWithSource
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancels on source loss, stun, disarm or movement order. False continues from the last available source position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CancelWithSource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_Damage_" data-uid="TDMaker.Core.Defs.BeamDef.Damage*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_Damage" data-uid="TDMaker.Core.Defs.BeamDef.Damage">
+  Damage
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Damage behavior; endpoints are ignored. Execute, despawn, defense-only and area packets are rejected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageDef Damage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.DamageDef.html">DamageDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_FirstDelay_" data-uid="TDMaker.Core.Defs.BeamDef.FirstDelay*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_FirstDelay" data-uid="TDMaker.Core.Defs.BeamDef.FirstDelay">
+  FirstDelay
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delay before the first pulse; creation still yields at least one fixed tick.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FirstDelay { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_Id_" data-uid="TDMaker.Core.Defs.BeamDef.Id*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_Id" data-uid="TDMaker.Core.Defs.BeamDef.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Neutral channel/event identity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_Interval_" data-uid="TDMaker.Core.Defs.BeamDef.Interval*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_Interval" data-uid="TDMaker.Core.Defs.BeamDef.Interval">
+  Interval
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Seconds between pulses, at most one per fixed tick.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Interval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_PulseCount_" data-uid="TDMaker.Core.Defs.BeamDef.PulseCount*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_PulseCount" data-uid="TDMaker.Core.Defs.BeamDef.PulseCount">
+  PulseCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of pulses. Integer remainder is distributed to earlier pulses; zero slices do not request effects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PulseCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_Range_" data-uid="TDMaker.Core.Defs.BeamDef.Range*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_Range" data-uid="TDMaker.Core.Defs.BeamDef.Range">
+  Range
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initial targeting range and ongoing tracking limit, affected by current source range modifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Range { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_Targets_" data-uid="TDMaker.Core.Defs.BeamDef.Targets*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_Targets" data-uid="TDMaker.Core.Defs.BeamDef.Targets">
+  Targets
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recipient eligibility, rechecked on every pulse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MechanicTargetDef Targets { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.MechanicTargetDef.html">MechanicTargetDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_TargetsFlying_" data-uid="TDMaker.Core.Defs.BeamDef.TargetsFlying*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_TargetsFlying" data-uid="TDMaker.Core.Defs.BeamDef.TargetsFlying">
+  TargetsFlying
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows airborne recipients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TargetsFlying { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_TargetsGround_" data-uid="TDMaker.Core.Defs.BeamDef.TargetsGround*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_TargetsGround" data-uid="TDMaker.Core.Defs.BeamDef.TargetsGround">
+  TargetsGround
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows ground recipients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TargetsGround { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_BeamDef_TotalDamage_" data-uid="TDMaker.Core.Defs.BeamDef.TotalDamage*"></a>
+
+  <h3 id="TDMaker_Core_Defs_BeamDef_TotalDamage" data-uid="TDMaker.Core.Defs.BeamDef.TotalDamage">
+  TotalDamage
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Authored integer raw budget before captured source scaling; scaling is rounded up once and capped at MaximumExactBudget.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TotalDamage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

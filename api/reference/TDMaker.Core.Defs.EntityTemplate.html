@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EntityTemplate | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EntityTemplate | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="An immutable template with nullable definition slots; null inherits its parent&#39;s slot.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.EntityTemplate">
+
+
+
+  <h1 id="TDMaker_Core_Defs_EntityTemplate" data-uid="TDMaker.Core.Defs.EntityTemplate" class="text-break">
+Class EntityTemplate  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An immutable template with nullable definition slots; null inherits its parent's slot.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class EntityTemplate</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">EntityTemplate</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate__ctor_" data-uid="TDMaker.Core.Defs.EntityTemplate.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate__ctor_System_String_System_String_TDMaker_Core_Defs_HealthDef_TDMaker_Core_Defs_ArmorDef_TDMaker_Core_Defs_MotionDef_TDMaker_Core_Defs_PathFollowDef_TDMaker_Core_Defs_BountyDef_TDMaker_Core_Defs_MeleeDef_TDMaker_Core_Defs_RangedDef_TDMaker_Core_Defs_TowerDef_TDMaker_Core_Defs_BarracksDef_TDMaker_Core_Defs_SoldierDef_TDMaker_Core_Defs_HeroDef_TDMaker_Core_Defs_ProjectileDef_TDMaker_Core_Defs_AuraDef_TDMaker_Core_Defs_StatusImmunityDef_TDMaker_Core_Defs_FlyingDef_TDMaker_Core_Defs_RenderDef_" data-uid="TDMaker.Core.Defs.EntityTemplate.#ctor(System.String,System.String,TDMaker.Core.Defs.HealthDef,TDMaker.Core.Defs.ArmorDef,TDMaker.Core.Defs.MotionDef,TDMaker.Core.Defs.PathFollowDef,TDMaker.Core.Defs.BountyDef,TDMaker.Core.Defs.MeleeDef,TDMaker.Core.Defs.RangedDef,TDMaker.Core.Defs.TowerDef,TDMaker.Core.Defs.BarracksDef,TDMaker.Core.Defs.SoldierDef,TDMaker.Core.Defs.HeroDef,TDMaker.Core.Defs.ProjectileDef,TDMaker.Core.Defs.AuraDef,TDMaker.Core.Defs.StatusImmunityDef,TDMaker.Core.Defs.FlyingDef,TDMaker.Core.Defs.RenderDef)">
+  EntityTemplate(string, string, HealthDef, ArmorDef, MotionDef, PathFollowDef, BountyDef, MeleeDef, RangedDef, TowerDef, BarracksDef, SoldierDef, HeroDef, ProjectileDef, AuraDef, StatusImmunityDef, FlyingDef, RenderDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates template data; resolution happens when a registry is constructed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityTemplate(string id, string baseId = null, HealthDef health = null, ArmorDef armor = null, MotionDef motion = null, PathFollowDef pathFollow = null, BountyDef bounty = null, MeleeDef melee = null, RangedDef ranged = null, TowerDef tower = null, BarracksDef barracks = null, SoldierDef soldier = null, HeroDef hero = null, ProjectileDef projectile = null, AuraDef aura = null, StatusImmunityDef statusImmunity = null, FlyingDef flying = null, RenderDef render = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>baseId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>health</code> <a class="xref" href="TDMaker.Core.Defs.HealthDef.html">HealthDef</a></dt>
+    <dd></dd>
+    <dt><code>armor</code> <a class="xref" href="TDMaker.Core.Defs.ArmorDef.html">ArmorDef</a></dt>
+    <dd></dd>
+    <dt><code>motion</code> <a class="xref" href="TDMaker.Core.Defs.MotionDef.html">MotionDef</a></dt>
+    <dd></dd>
+    <dt><code>pathFollow</code> <a class="xref" href="TDMaker.Core.Defs.PathFollowDef.html">PathFollowDef</a></dt>
+    <dd></dd>
+    <dt><code>bounty</code> <a class="xref" href="TDMaker.Core.Defs.BountyDef.html">BountyDef</a></dt>
+    <dd></dd>
+    <dt><code>melee</code> <a class="xref" href="TDMaker.Core.Defs.MeleeDef.html">MeleeDef</a></dt>
+    <dd></dd>
+    <dt><code>ranged</code> <a class="xref" href="TDMaker.Core.Defs.RangedDef.html">RangedDef</a></dt>
+    <dd></dd>
+    <dt><code>tower</code> <a class="xref" href="TDMaker.Core.Defs.TowerDef.html">TowerDef</a></dt>
+    <dd></dd>
+    <dt><code>barracks</code> <a class="xref" href="TDMaker.Core.Defs.BarracksDef.html">BarracksDef</a></dt>
+    <dd></dd>
+    <dt><code>soldier</code> <a class="xref" href="TDMaker.Core.Defs.SoldierDef.html">SoldierDef</a></dt>
+    <dd></dd>
+    <dt><code>hero</code> <a class="xref" href="TDMaker.Core.Defs.HeroDef.html">HeroDef</a></dt>
+    <dd></dd>
+    <dt><code>projectile</code> <a class="xref" href="TDMaker.Core.Defs.ProjectileDef.html">ProjectileDef</a></dt>
+    <dd></dd>
+    <dt><code>aura</code> <a class="xref" href="TDMaker.Core.Defs.AuraDef.html">AuraDef</a></dt>
+    <dd></dd>
+    <dt><code>statusImmunity</code> <a class="xref" href="TDMaker.Core.Defs.StatusImmunityDef.html">StatusImmunityDef</a></dt>
+    <dd></dd>
+    <dt><code>flying</code> <a class="xref" href="TDMaker.Core.Defs.FlyingDef.html">FlyingDef</a></dt>
+    <dd></dd>
+    <dt><code>render</code> <a class="xref" href="TDMaker.Core.Defs.RenderDef.html">RenderDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Armor_" data-uid="TDMaker.Core.Defs.EntityTemplate.Armor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Armor" data-uid="TDMaker.Core.Defs.EntityTemplate.Armor">
+  Armor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defense definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArmorDef Armor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.ArmorDef.html">ArmorDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Aura_" data-uid="TDMaker.Core.Defs.EntityTemplate.Aura*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Aura" data-uid="TDMaker.Core.Defs.EntityTemplate.Aura">
+  Aura
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional region emitter definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuraDef Aura { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.AuraDef.html">AuraDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Barracks_" data-uid="TDMaker.Core.Defs.EntityTemplate.Barracks*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Barracks" data-uid="TDMaker.Core.Defs.EntityTemplate.Barracks">
+  Barracks
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Barracks definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarracksDef Barracks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.BarracksDef.html">BarracksDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_BaseId_" data-uid="TDMaker.Core.Defs.EntityTemplate.BaseId*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_BaseId" data-uid="TDMaker.Core.Defs.EntityTemplate.BaseId">
+  BaseId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional parent identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BaseId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Bounty_" data-uid="TDMaker.Core.Defs.EntityTemplate.Bounty*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Bounty" data-uid="TDMaker.Core.Defs.EntityTemplate.Bounty">
+  Bounty
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reward and exit cost definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BountyDef Bounty { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.BountyDef.html">BountyDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_CustomData_" data-uid="TDMaker.Core.Defs.EntityTemplate.CustomData*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_CustomData" data-uid="TDMaker.Core.Defs.EntityTemplate.CustomData">
+  CustomData
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Immutable custom definition slots, inherited by type with child overrides.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TemplateData CustomData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.TemplateData.html">TemplateData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Flying_" data-uid="TDMaker.Core.Defs.EntityTemplate.Flying*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Flying" data-uid="TDMaker.Core.Defs.EntityTemplate.Flying">
+  Flying
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flying marker.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlyingDef Flying { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.FlyingDef.html">FlyingDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Health_" data-uid="TDMaker.Core.Defs.EntityTemplate.Health*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Health" data-uid="TDMaker.Core.Defs.EntityTemplate.Health">
+  Health
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Health definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HealthDef Health { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.HealthDef.html">HealthDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Hero_" data-uid="TDMaker.Core.Defs.EntityTemplate.Hero*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Hero" data-uid="TDMaker.Core.Defs.EntityTemplate.Hero">
+  Hero
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Independent hero behavior definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HeroDef Hero { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.HeroDef.html">HeroDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Id_" data-uid="TDMaker.Core.Defs.EntityTemplate.Id*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Id" data-uid="TDMaker.Core.Defs.EntityTemplate.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unique template identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Melee_" data-uid="TDMaker.Core.Defs.EntityTemplate.Melee*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Melee" data-uid="TDMaker.Core.Defs.EntityTemplate.Melee">
+  Melee
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Melee definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MeleeDef Melee { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.MeleeDef.html">MeleeDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Motion_" data-uid="TDMaker.Core.Defs.EntityTemplate.Motion*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Motion" data-uid="TDMaker.Core.Defs.EntityTemplate.Motion">
+  Motion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Movement definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MotionDef Motion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.MotionDef.html">MotionDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_PathFollow_" data-uid="TDMaker.Core.Defs.EntityTemplate.PathFollow*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_PathFollow" data-uid="TDMaker.Core.Defs.EntityTemplate.PathFollow">
+  PathFollow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Path traversal definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathFollowDef PathFollow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.PathFollowDef.html">PathFollowDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Projectile_" data-uid="TDMaker.Core.Defs.EntityTemplate.Projectile*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Projectile" data-uid="TDMaker.Core.Defs.EntityTemplate.Projectile">
+  Projectile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Projectile definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectileDef Projectile { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.ProjectileDef.html">ProjectileDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Ranged_" data-uid="TDMaker.Core.Defs.EntityTemplate.Ranged*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Ranged" data-uid="TDMaker.Core.Defs.EntityTemplate.Ranged">
+  Ranged
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ranged attack definitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RangedDef Ranged { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.RangedDef.html">RangedDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Render_" data-uid="TDMaker.Core.Defs.EntityTemplate.Render*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Render" data-uid="TDMaker.Core.Defs.EntityTemplate.Render">
+  Render
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>View lookup definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RenderDef Render { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.RenderDef.html">RenderDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Rules_" data-uid="TDMaker.Core.Defs.EntityTemplate.Rules*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Rules" data-uid="TDMaker.Core.Defs.EntityTemplate.Rules">
+  Rules
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional additional behavior slots, inherited as one immutable bundle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityRulesDef Rules { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.EntityRulesDef.html">EntityRulesDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Soldier_" data-uid="TDMaker.Core.Defs.EntityTemplate.Soldier*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Soldier" data-uid="TDMaker.Core.Defs.EntityTemplate.Soldier">
+  Soldier
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Soldier definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SoldierDef Soldier { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.SoldierDef.html">SoldierDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_StatusImmunity_" data-uid="TDMaker.Core.Defs.EntityTemplate.StatusImmunity*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_StatusImmunity" data-uid="TDMaker.Core.Defs.EntityTemplate.StatusImmunity">
+  StatusImmunity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Effect identity and family immunities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatusImmunityDef StatusImmunity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.StatusImmunityDef.html">StatusImmunityDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_Tower_" data-uid="TDMaker.Core.Defs.EntityTemplate.Tower*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_Tower" data-uid="TDMaker.Core.Defs.EntityTemplate.Tower">
+  Tower
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tower economy definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TowerDef Tower { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.TowerDef.html">TowerDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_WithCustomData_" data-uid="TDMaker.Core.Defs.EntityTemplate.WithCustomData*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_WithCustomData__1___0_" data-uid="TDMaker.Core.Defs.EntityTemplate.WithCustomData``1(``0)">
+  WithCustomData&lt;T&gt;(T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the template and adds or replaces one custom definition slot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityTemplate WithCustomData&lt;T&gt;(T value) where T : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.EntityTemplate.html">EntityTemplate</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="TDMaker_Core_Defs_EntityTemplate_WithCustomData__1___0__examples">Examples</h4>
+  <pre><code class="lang-csharp">var custom = template.WithCustomData(new ShieldDef(100));</code></pre>
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_EntityTemplate_WithRules_" data-uid="TDMaker.Core.Defs.EntityTemplate.WithRules*"></a>
+
+  <h3 id="TDMaker_Core_Defs_EntityTemplate_WithRules_TDMaker_Core_Defs_EntityRulesDef_" data-uid="TDMaker.Core.Defs.EntityTemplate.WithRules(TDMaker.Core.Defs.EntityRulesDef)">
+  WithRules(EntityRulesDef)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a template copy with additional behavior data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityTemplate WithRules(EntityRulesDef rules)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rules</code> <a class="xref" href="TDMaker.Core.Defs.EntityRulesDef.html">EntityRulesDef</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.EntityTemplate.html">EntityTemplate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

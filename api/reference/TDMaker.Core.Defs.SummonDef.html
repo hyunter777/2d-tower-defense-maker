@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SummonDef | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SummonDef | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="A summon sequence that can be used by spells, abilities, and death emissions.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Core.Defs.SummonDef">
+
+
+
+  <h1 id="TDMaker_Core_Defs_SummonDef" data-uid="TDMaker.Core.Defs.SummonDef" class="text-break">
+Class SummonDef  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Core.html">Core</a>.<a class="xref" href="TDMaker.Core.Defs.html">Defs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A summon sequence that can be used by spells, abilities, and death emissions.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SummonDef</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SummonDef</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_SummonDef__ctor_" data-uid="TDMaker.Core.Defs.SummonDef.#ctor*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef__ctor_System_String_System_Int32_System_Single_System_Single_System_Single_System_Single_System_Boolean_System_Boolean_System_Int32_" data-uid="TDMaker.Core.Defs.SummonDef.#ctor(System.String,System.Int32,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.Int32)">
+  SummonDef(string, int, float, float, float, float, bool, bool, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates summon behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SummonDef(string templateId, int count, float delay = 0, float interval = 0, float lifetime = 0, float formationRadius = 0, bool hostile = false, bool cancelWithSource = true, int populationLimit = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>templateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>interval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>lifetime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>formationRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>hostile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>cancelWithSource</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>populationLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_BountyPolicy_" data-uid="TDMaker.Core.Defs.SummonDef.BountyPolicy*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_BountyPolicy" data-uid="TDMaker.Core.Defs.SummonDef.BountyPolicy">
+  BountyPolicy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Successor reward rule, additionally bounded by the lineage's one-payment record.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuccessorBountyPolicy BountyPolicy { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.SuccessorBountyPolicy.html">SuccessorBountyPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_CancelWithSource_" data-uid="TDMaker.Core.Defs.SummonDef.CancelWithSource*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_CancelWithSource" data-uid="TDMaker.Core.Defs.SummonDef.CancelWithSource">
+  CancelWithSource
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancels pending spawns when the source dies or is removed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CancelWithSource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_Count_" data-uid="TDMaker.Core.Defs.SummonDef.Count*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_Count" data-uid="TDMaker.Core.Defs.SummonDef.Count">
+  Count
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total units in one activation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_DeathChainBudget_" data-uid="TDMaker.Core.Defs.SummonDef.DeathChainBudget*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_DeathChainBudget" data-uid="TDMaker.Core.Defs.SummonDef.DeathChainBudget">
+  DeathChainBudget
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum shared death-emission links; one activation can emit several siblings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DeathChainBudget { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_Delay_" data-uid="TDMaker.Core.Defs.SummonDef.Delay*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_Delay" data-uid="TDMaker.Core.Defs.SummonDef.Delay">
+  Delay
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delay before the first spawn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Delay { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_ExcludeWhileRising_" data-uid="TDMaker.Core.Defs.SummonDef.ExcludeWhileRising*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_ExcludeWhileRising" data-uid="TDMaker.Core.Defs.SummonDef.ExcludeWhileRising">
+  ExcludeWhileRising
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attack-acquisition exclusion during preparation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExcludeWhileRising { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_FormationRadius_" data-uid="TDMaker.Core.Defs.SummonDef.FormationRadius*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_FormationRadius" data-uid="TDMaker.Core.Defs.SummonDef.FormationRadius">
+  FormationRadius
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Radius of the new friendly unit formation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FormationRadius { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_Hostile_" data-uid="TDMaker.Core.Defs.SummonDef.Hostile*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_Hostile" data-uid="TDMaker.Core.Defs.SummonDef.Hostile">
+  Hostile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates enemies on the source's path instead of independent friendly soldiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Hostile { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_IgnoreDamageWhileRising_" data-uid="TDMaker.Core.Defs.SummonDef.IgnoreDamageWhileRising*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_IgnoreDamageWhileRising" data-uid="TDMaker.Core.Defs.SummonDef.IgnoreDamageWhileRising">
+  IgnoreDamageWhileRising
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Damage immunity during successor preparation; false preserves normal enemy vulnerability.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IgnoreDamageWhileRising { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_Interval_" data-uid="TDMaker.Core.Defs.SummonDef.Interval*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_Interval" data-uid="TDMaker.Core.Defs.SummonDef.Interval">
+  Interval
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delay between following spawns; zero still yields between units.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Interval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_Lifetime_" data-uid="TDMaker.Core.Defs.SummonDef.Lifetime*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_Lifetime" data-uid="TDMaker.Core.Defs.SummonDef.Lifetime">
+  Lifetime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Temporary unit lifetime; zero means no timed expiration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Lifetime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_PopulationLimit_" data-uid="TDMaker.Core.Defs.SummonDef.PopulationLimit*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_PopulationLimit" data-uid="TDMaker.Core.Defs.SummonDef.PopulationLimit">
+  PopulationLimit
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Limit of alive and pending units per source and template; zero means unlimited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PopulationLimit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_RiseDuration_" data-uid="TDMaker.Core.Defs.SummonDef.RiseDuration*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_RiseDuration" data-uid="TDMaker.Core.Defs.SummonDef.RiseDuration">
+  RiseDuration
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Successor preparation after insertion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RiseDuration { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_TemplateId_" data-uid="TDMaker.Core.Defs.SummonDef.TemplateId*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_TemplateId" data-uid="TDMaker.Core.Defs.SummonDef.TemplateId">
+  TemplateId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Template to instantiate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TemplateId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Core_Defs_SummonDef_WithDeathSuccession_" data-uid="TDMaker.Core.Defs.SummonDef.WithDeathSuccession*"></a>
+
+  <h3 id="TDMaker_Core_Defs_SummonDef_WithDeathSuccession_System_Int32_System_Single_TDMaker_Core_Defs_SuccessorBountyPolicy_System_Boolean_System_Boolean_" data-uid="TDMaker.Core.Defs.SummonDef.WithDeathSuccession(System.Int32,System.Single,TDMaker.Core.Defs.SuccessorBountyPolicy,System.Boolean,System.Boolean)">
+  WithDeathSuccession(int, float, SuccessorBountyPolicy, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies a summon and configures death-only lineage/preparation behavior. Normal summons keep their original behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SummonDef WithDeathSuccession(int chainBudget = 1, float riseDuration = 0, SuccessorBountyPolicy bountyPolicy = SuccessorBountyPolicy.OncePerLineage, bool ignoreDamageWhileRising = false, bool excludeWhileRising = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>chainBudget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>riseDuration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>bountyPolicy</code> <a class="xref" href="TDMaker.Core.Defs.SuccessorBountyPolicy.html">SuccessorBountyPolicy</a></dt>
+    <dd></dd>
+    <dt><code>ignoreDamageWhileRising</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>excludeWhileRising</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Core.Defs.SummonDef.html">SummonDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

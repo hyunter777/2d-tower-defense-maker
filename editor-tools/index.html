@@ -1,0 +1,2291 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="English guides and API reference for building 2D tower defense games in Unity 6.">
+      
+      
+      
+        <link rel="canonical" href="https://hyunter777.github.io/2d-tower-defense-maker/editor-tools/">
+      
+      
+        <link rel="prev" href="../authoring/">
+      
+      
+        <link rel="next" href="../mechanics/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Editor tools - 2D Tower Defense Maker</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/styles.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#editor-tools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="2D Tower Defense Maker" class="md-header__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2D Tower Defense Maker
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Editor tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="2D Tower Defense Maker" class="md-nav__button md-logo" aria-label="2D Tower Defense Maker" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    2D Tower Defense Maker
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyunter777/2d-tower-defense-maker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start here
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build your game
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build your game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor tools
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Welcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-level-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Level wizard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Map Editor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Map Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-a-level-from-a-painted-map-in-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make a level from a painted map in 5 minutes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-framing-and-larger-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera framing and larger maps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortcuts-scene-view-while-a-map-editor-tool-is-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortcuts (Scene view while a Map Editor tool is active)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-and-lane-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path and lane editor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-slot-handles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build slot handles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wave-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wave Timeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade Tree
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Workshop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Workshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bulk-frame-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk frame registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computed-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computed values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sandbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-an-enemy-in-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make an enemy in 5 minutes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspectors-with-computed-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspectors with computed stats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-validator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Validator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dry-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dry Run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permanent-upgrade-shop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permanent upgrade shop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample generator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-screenshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample screenshot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-checking-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating and checking content
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gameplay mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campaigns and upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize and extend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customize and extend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HUD, fonts and audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extending the framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../determinism-and-replay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Determinism and replay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference and support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference and support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and licenses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Welcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-level-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Level wizard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Map Editor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Map Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-a-level-from-a-painted-map-in-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make a level from a painted map in 5 minutes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-framing-and-larger-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera framing and larger maps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortcuts-scene-view-while-a-map-editor-tool-is-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortcuts (Scene view while a Map Editor tool is active)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-and-lane-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path and lane editor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-slot-handles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build slot handles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wave-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wave Timeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade Tree
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Workshop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Workshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bulk-frame-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk frame registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computed-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computed values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sandbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-an-enemy-in-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make an enemy in 5 minutes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspectors-with-computed-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspectors with computed stats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-validator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Validator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dry-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dry Run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permanent-upgrade-shop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permanent upgrade shop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample generator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-screenshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample screenshot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-checking-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating and checking content
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="editor-tools">Editor Tools<a class="headerlink" href="#editor-tools" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Welcome</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Welcome</strong> (opens by itself the first time a project loads 2D Tower Defense Maker)</td>
+</tr>
+<tr>
+<td>New Level wizard</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; New Level</strong></td>
+</tr>
+<tr>
+<td>Map Editor</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Map Editor</strong> (or <strong>Open Map Editor</strong> on Level / Path Authoring)</td>
+</tr>
+<tr>
+<td>Unit Workshop</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Unit Workshop</strong> (or <strong>Open in Unit Workshop</strong> on an Enemy)</td>
+</tr>
+<tr>
+<td>Path and lane editor</td>
+<td>Select a GameObject with <strong>Path Authoring</strong></td>
+</tr>
+<tr>
+<td>Build slot handles</td>
+<td>Select a GameObject with <strong>Build Slot Authoring</strong></td>
+</tr>
+<tr>
+<td>Wave Timeline</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Wave Timeline</strong></td>
+</tr>
+<tr>
+<td>Upgrade Tree</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Tree</strong></td>
+</tr>
+<tr>
+<td>Project Validator</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Validate Project</strong></td>
+</tr>
+<tr>
+<td>Dry Run</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Dry Run Level</strong></td>
+</tr>
+<tr>
+<td>Sample generator</td>
+<td><strong>Tools &gt; 2D Tower Defense Maker &gt; Create Sample Content</strong></td>
+</tr>
+</tbody>
+</table>
+<p>All range ellipses drawn by the tools use the same shape as the simulation (<code>RangeShape</code>). The Y scale is taken from the open scene (level override, else the runner's value, else 0.8).</p>
+<hr />
+<h2 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">&para;</a></h2>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Welcome</strong> is the starting point after importing the package: the TextMesh Pro Essential Resources status with an <strong>Import</strong> button while they are missing, buttons for <strong>New Level…</strong>, <strong>Unit Workshop</strong> and <strong>Map Editor</strong>, and <strong>Open</strong> for each sample scene (Basic, Crossroads, Winding Pass, Demo; <strong>Create Sample Content</strong> when one is missing). <strong>Online Documentation</strong> opens this guide in your browser; <strong>API Reference</strong> opens the generated C# reference. You can also open this guide directly through <strong>Tools &gt; 2D Tower Defense Maker &gt; Online Documentation</strong>. The window opens automatically at editor startup unless <strong>Show on startup</strong> is off (stored per project). Opening it from the menu restores its bounds and focuses it. It never opens in batch mode.</p>
+<hr />
+<h2 id="new-level-wizard">New Level wizard<a class="headerlink" href="#new-level-wizard" title="Permanent link">&para;</a></h2>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; New Level</strong> makes a playable level in one step.</p>
+<p>Use <strong>Online Quick Start</strong> in the wizard to open the first-level walkthrough in your browser.</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level Name</td>
+<td>Scene and asset names; fresh assets get template ids starting with the name (<code>mylevel_walker</code>, a number is added when the name is taken).</td>
+</tr>
+<tr>
+<td>Folder</td>
+<td>Default <code>Assets/TDMakerContent/&lt;Name&gt;</code>. Folders inside <code>Assets/TDMaker</code> (the package and its samples) are refused.</td>
+</tr>
+<tr>
+<td>Background</td>
+<td>Optional painted map (Sprite, or a Texture that is re-imported as a Sprite). The default path and slots are stretched to the map, it becomes the Level View ground art and the camera is clamped to it.</td>
+</tr>
+<tr>
+<td>Starter content</td>
+<td><strong>Sample kit</strong>: the Basic sample's archer, barracks, cannon and arcane towers, its enemies, the Warden and two spells (the level refers to <code>Samples/Basic</code>). <strong>Fresh starter assets</strong>: new assets in <code>&lt;Folder&gt;/Data</code> from the Unit Workshop presets – Walker (standard enemy), Archer Tower with Archer Tower II, Barracks with Footman, and Captain (melee hero) when <strong>Include Hero</strong> is on.</td>
+</tr>
+<tr>
+<td>Include Starter Spell</td>
+<td>Adds a reinforcement spell to fresh starter content; enabled by default. Its soldier asset is created in the same Data folder.</td>
+</tr>
+<tr>
+<td>Waves</td>
+<td>1–30 (default 3). Each wave is larger than the last; the waves together always send more enemies than the level has lives, so an undefended level is lost.</td>
+</tr>
+<tr>
+<td>Use Sample Sounds</td>
+<td>Fills the units' sound cues, the level music and the scene's interface sounds with the sample audio (<code>Samples/Audio</code>). Disabled by default; enable it when the sample audio is available and you want to use it. Off: every cue and track stays empty, so a level made from fresh starter assets does not depend on the Samples folder (assign your own clips later).</td>
+</tr>
+</tbody>
+</table>
+<p>It creates <code>&lt;Folder&gt;/&lt;Name&gt;.unity</code> and <code>&lt;Folder&gt;/Data/</code> (<code>&lt;Name&gt;_Level</code>, <code>&lt;Name&gt;_Waves</code>, <code>&lt;Name&gt;_HudTheme</code>, <code>&lt;Name&gt;_SpriteUnlit</code> and the fresh units). The scene is built by the same code as the sample scenes: camera, <strong>Level Authoring</strong> with one <strong>Path Authoring</strong> (two lanes, entrance at the left edge, exit at the right edge) and six <strong>Build Slot Authorings</strong> ordered from the entrance with rally points on the nearest road, and the <code>2D Tower Defense Maker</code> object (Simulation Runner, Entity View Registry, Level View, VFX Pool, Audio Cue Player, Music Player, Game Settings, Game HUD with the F1 debug overlay, Damage Numbers). Afterwards the scene is open, the Level is selected, the Map Editor is open on the <strong>Paths</strong> tool and the wizard lists the next steps (with buttons for the Map Editor, Unit Workshop, Wave Timeline, Validate and Dry Run).</p>
+<p>The result has no Validator errors or warnings and the Dry Run loses it without towers and wins it fortified and on its starting gold. Headless: <code>NewLevelBuilder.Create(new NewLevelSettings { ... })</code> (it replaces the open scenes; <code>NewLevelBuilder.Validate</code> returns the first problem with the settings).</p>
+<hr />
+<h2 id="map-editor">Map Editor<a class="headerlink" href="#map-editor" title="Permanent link">&para;</a></h2>
+<p>One window for turning a painted map into a level: background, curved paths, build slots, wave-call buttons, then Validate, Dry Run and Bake. It works in the Scene view (2D) on the scene's <strong>Level Authoring</strong>; every edit supports Undo and marks the scene dirty. Paths are drawn by hand – the editor does not try to detect roads in the image.</p>
+<h3 id="make-a-level-from-a-painted-map-in-5-minutes">Make a level from a painted map in 5 minutes<a class="headerlink" href="#make-a-level-from-a-painted-map-in-5-minutes" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Scene.</strong> Run <strong>Tools &gt; 2D Tower Defense Maker &gt; New Level</strong> (pick your map as the Background) – it creates the scene with the 2D Tower Defense Maker rig (Simulation Runner, Level View, camera controller, HUD), a <strong>Level Authoring</strong> with a Level Asset, one path and six build slots, and opens this window. Or duplicate a sample scene (for example <code>Samples/Basic/BasicSample.unity</code>) and delete or edit its paths and build slots.</li>
+<li><strong>Background.</strong> Open <strong>Tools &gt; 2D Tower Defense Maker &gt; Map Editor</strong> and drop your map Sprite (or Texture – it is re-imported as a Sprite) on the drop area. The map becomes the Level View's ground art, the game camera is clamped to the map rectangle, and the Scene view switches to 2D and frames it. Check the size line (<code>Image 1920×1080 px · 100 px/unit · world 19.2×10.8 units</code>).</li>
+<li><strong>Paths.</strong> Press <strong>P</strong> (Paths tool) and <strong>N</strong>, then click along the road <strong>from the entrance to the exit</strong>: a handful of clicks at bends is enough – the path is a smooth curve through your points, sampled into simulation nodes every <code>Node Spacing</code> units. Drag points to fine-tune, Shift+click on the road to insert, Ctrl+click to delete. Set <strong>Lane Count</strong> / <strong>Lane Spacing</strong> until the drawn road band (lanes plus the Level View's road padding) matches the painted road; drag the white side handles of a selected point to widen or narrow the road there. Press <strong>N</strong> again for the next path; <strong>[</strong> / <strong>]</strong> switch paths.</li>
+<li><strong>Build slots.</strong> Press <strong>B</strong> and click where towers may stand. Each new slot gets its rally point on the nearest point of the nearest road. Pick a <strong>Preview Tower</strong> to see its range ellipse at the cursor and around new slots. The ghost turns orange when a slot would overlap a road or another slot. Use <strong>Align X/Y</strong>, <strong>Spread X/Y</strong>, <strong>Snap</strong>, <strong>Duplicate</strong> and <strong>Delete</strong> on the selection.</li>
+<li><strong>Wave-call buttons.</strong> Press <strong>C</strong> and drag the yellow ring of each entrance to where the HUD should show its call button (Ctrl+click resets it to just ahead of the entry).</li>
+<li><strong>Test.</strong> <strong>Validate</strong> opens the Project Validator; <strong>Dry Run</strong> simulates the level with the scene geometry (summary in the window, full report in the Console); <strong>Bake to Level Asset</strong> writes the scene paths and slots into the Level Asset (Undo works on the asset too). Press Play.</li>
+</ol>
+<h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drop area / <strong>Map Sprite</strong></td>
+<td>Sets the Level View's painted ground (Generated ground style). Textures are switched to Sprite import.</td>
+</tr>
+<tr>
+<td><strong>Pixels Per Unit</strong></td>
+<td>Re-imports the texture at a new scale; the world size follows (<code>pixels / PPU</code>).</td>
+</tr>
+<tr>
+<td><strong>Pivot Position</strong>, <strong>Center On Origin</strong></td>
+<td>Where the map sits in the world.</td>
+</tr>
+<tr>
+<td><strong>Keep alignment</strong> (on by default)</td>
+<td>When the map is replaced by an image of another size, its pixels-per-unit changes or it is re-centred, every path point (curve controls and nodes), lane width, node spacing, build slot, rally point and wave-call offset is mapped from the old map rectangle to the new one, so everything stays on the painted roads. One Undo step reverts the geometry (the texture import setting itself is not undone).</td>
+</tr>
+<tr>
+<td><strong>Fit camera bounds to the map</strong></td>
+<td>Clamps the <code>TDCameraController</code> to the map rectangle (fixed bounds). <strong>Fit Camera Now</strong> does it once.</td>
+</tr>
+<tr>
+<td><strong>Show map in Scene view</strong>, <strong>Opacity</strong></td>
+<td>An edit-mode preview of the map (never saved into the scene, removed before Play). Lower the opacity to see your lanes over a busy painting.</td>
+</tr>
+<tr>
+<td><strong>Lock map</strong></td>
+<td>Unlock to drag the map with the <strong>Map</strong> tool (M) – for lining the painting up with existing geometry.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended backgrounds.</strong> Paint at <strong>16:9</strong>, <strong>1920×1080 to 3840×2160 px</strong>, and choose texture compression appropriate for your target build. Keep <strong>one pixels-per-unit value per level</strong> and decide it before drawing paths – all level coordinates (paths, slots, rally points, ranges, speeds) are <strong>world units</strong>, so the PPU decides how big a tower range or an enemy step is on your painting. The window shows a non-blocking hint when the image is not 16:9, is larger than 4096 px, is down-scaled by its Max Size or is imported uncompressed (with a memory estimate).</p>
+<h3 id="paths">Paths<a class="headerlink" href="#paths" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Curve mode</strong> (default for new paths, the <code>Smooth Curve</code> toggle per path): you edit control points; the path is a centripetal Catmull-Rom curve that passes through every control point and is sampled into the simulation's node list at <code>Node Spacing</code> (each span gets <code>round(length / spacing)</code> equal steps). The entry is the first control point and the exit the last. Per-point lane widths are interpolated along the curve.</li>
+<li><strong>Polyline mode</strong>: the original point list, used as it is, with <code>Entry Node</code> / <code>Exit Node</code>. Existing paths stay polylines; switching a polyline to curve mode seeds the control points from its points (entry to exit), so the shape is kept. Switching back keeps the generated nodes.</li>
+<li>The path list renames (type in the row), reorders (▲▼ – waves refer to paths by <strong>index</strong>) and deletes paths. Clicking another path's line in the Scene view selects it.</li>
+<li>Every path shows its road band, all sub-lanes, direction arrows, <code>ENTRY</code> / <code>EXIT</code> markers and its wave-call button.</li>
+</ul>
+<h3 id="camera-framing-and-larger-maps">Camera framing and larger maps<a class="headerlink" href="#camera-framing-and-larger-maps" title="Permanent link">&para;</a></h3>
+<p>The <strong>Camera Framing</strong> section edits the level's framing (Level Asset, or a scene override on Level Authoring): <strong>Fit Whole Map</strong> (default – the whole map on one screen, no player pan or zoom), <strong>Fit Height Scroll Horizontally</strong>, <strong>Fit Width Scroll Vertically</strong> or <strong>Fixed View Size</strong>, the <strong>Start Focus</strong> and an optional <strong>Intro Pan</strong> along the first path. With <strong>Show start screen</strong> on, the Scene view draws the first screen of the level as a green rectangle for the chosen reference aspect (16:9 by default; 16:10, 21:9, 4:3), using the same math as the game camera – so you see what fits on screen before pressing Play. For a scrolling level, paint the map wider (or taller) than 16:9 and keep the same pixels-per-unit; see <a href="../presentation/">Presentation</a> for the camera inputs.</p>
+<h3 id="shortcuts-scene-view-while-a-map-editor-tool-is-active">Shortcuts (Scene view while a Map Editor tool is active)<a class="headerlink" href="#shortcuts-scene-view-while-a-map-editor-tool-is-active" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key / input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M / P / B / C</strong></td>
+<td>Map, Paths, Slots, Wave Call tool</td>
+</tr>
+<tr>
+<td><strong>Esc</strong></td>
+<td>Deselect, then turn the tool off</td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td>Toggle grid snap (step in the window)</td>
+</tr>
+<tr>
+<td><strong>N</strong></td>
+<td>Start a new path with the next click</td>
+</tr>
+<tr>
+<td><strong>[ / ]</strong></td>
+<td>Previous / next path</td>
+</tr>
+<tr>
+<td>Click</td>
+<td>Paths: add a point at the end (or a new path's entry). Slots: place a slot (or select one)</td>
+</tr>
+<tr>
+<td><strong>Shift+click</strong></td>
+<td>Paths: insert on the road (away from it: add before the entry). Slots: add to / remove from the selection</td>
+</tr>
+<tr>
+<td><strong>Ctrl+click</strong> (Cmd on macOS)</td>
+<td>Delete the point / slot under the cursor; Wave Call: reset the button</td>
+</tr>
+<tr>
+<td>Drag</td>
+<td>Move points, slots (the rally point follows the road when that option is on), rally squares, wave-call rings, lane width handles</td>
+</tr>
+<tr>
+<td><strong>Delete</strong>, <strong>Ctrl+D</strong>, <strong>F</strong></td>
+<td>Delete the selected point or slots, duplicate slots, frame the selected point</td>
+</tr>
+</tbody>
+</table>
+<p>The same list is in the window's <strong>Shortcuts</strong> section. With the Map Editor's Paths/Wave Call tool active, the Path Authoring inspector only draws (the window owns the handles); with the Slots tool active, the Build Slot inspector's rally handle is hidden.</p>
+<p>Scripting: the operations behind the window are public in <code>MapEditing</code> (create paths and slots, auto rally, align, remap, bake) and the curve math in <code>PathGeometry</code> (runtime assembly).</p>
+<hr />
+<h2 id="path-and-lane-editor">Path and lane editor<a class="headerlink" href="#path-and-lane-editor" title="Permanent link">&para;</a></h2>
+<p>Select an object with <strong>Path Authoring</strong>. The Scene view shows the centre line with direction arrows, all generated sub-lanes, <code>ENTRY</code> / <code>EXIT</code> markers and (optionally) build slots with their ranges.</p>
+<table>
+<thead>
+<tr>
+<th>Input (Scene view)</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drag a point</td>
+<td>Move it</td>
+</tr>
+<tr>
+<td><strong>Shift+click</strong></td>
+<td>Add a point at the end; on a segment, insert a point there</td>
+</tr>
+<tr>
+<td><strong>Ctrl+click</strong> (Cmd on macOS)</td>
+<td>Delete the hovered point (a path keeps at least two)</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>Delete the selected point</td>
+</tr>
+<tr>
+<td><strong>Ctrl+D</strong></td>
+<td>Duplicate the selected point</td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td>Frame the selected point</td>
+</tr>
+<tr>
+<td><strong>Esc</strong></td>
+<td>Deselect</td>
+</tr>
+<tr>
+<td>Drag the white side handles</td>
+<td>Override the lane width at that point (snaps back to default when equal)</td>
+</tr>
+</tbody>
+</table>
+<p>Inspector:</p>
+<ul>
+<li><strong>Lanes</strong>: <code>Lane Count</code>, <code>Lane Spacing</code>, <code>Entry Node</code>, <code>Exit At Last Node</code> / <code>Exit Node</code>.</li>
+<li><strong>Scene Editing</strong>: <code>Snap</code> toggle and <code>Step</code> (stored in editor preferences).</li>
+<li><strong>Points</strong> list with per-point <code>Lane Width</code>, plus <strong>Reverse</strong> (swap direction) and <strong>Reset Widths</strong>.</li>
+<li><strong>Build Slots / Ranges</strong> toggles show every build slot, its rally point and tower ranges while you edit paths.</li>
+</ul>
+<p>All edits support Undo.</p>
+<h2 id="build-slot-handles">Build slot handles<a class="headerlink" href="#build-slot-handles" title="Permanent link">&para;</a></h2>
+<p>Select an object with <strong>Build Slot Authoring</strong>:</p>
+<ul>
+<li>Drag the <strong>Rally</strong> handle to set the default rally point.</li>
+<li>Set <code>Preview Tower</code> to draw its attack range and rally radius; the inspector shows the resulting ellipse size and warns when the rally point lies outside the rally radius (the simulation would pull it back onto a lane inside the ellipse).</li>
+<li><strong>Reset Rally</strong> and <strong>Use Level Y Scale</strong> (copy the scene's Y scale to the gizmo).</li>
+</ul>
+<hr />
+<h2 id="wave-timeline">Wave Timeline<a class="headerlink" href="#wave-timeline" title="Permanent link">&para;</a></h2>
+<p>Open with <strong>Tools &gt; 2D Tower Defense Maker &gt; Wave Timeline</strong>, from the Level or Level Authoring inspector, or by double-clicking a wave issue in the Validator. Works on a Wave Set or on the Wave Set of a Level asset. <code>Follow</code> keeps it in sync with the Project selection; path names come from the first level that uses the wave set.</p>
+<p><strong>Layout</strong></p>
+<ul>
+<li>Left: list of waves with per-wave totals (units, total HP, gold, duration, auto delay) and <strong>+</strong>, duplicate, ▲ / ▼ (reorder), <strong>−</strong> buttons.</li>
+<li>Centre: one row per group (sorted by path). Each spawn entry is a bar from its start to the end of its last interval, with a tick per spawned unit, coloured by enemy.</li>
+<li>Right: inspector for the selected wave, group or entry (including <strong>Add Entry</strong>, <strong>Duplicate</strong>, <strong>Delete Group</strong>, ◀ Earlier / Later ▶, <strong>Select Enemy Asset</strong>, and warnings for missing enemies or invalid lanes).</li>
+<li>Footer: totals for the whole wave set.</li>
+</ul>
+<p><strong>Mouse</strong></p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Click a bar</td>
+<td>Select the entry</td>
+</tr>
+<tr>
+<td>Drag a bar</td>
+<td>Change the entry's start delay</td>
+</tr>
+<tr>
+<td><strong>Alt</strong>+drag a bar</td>
+<td>Change the group's start delay</td>
+</tr>
+<tr>
+<td>Drag a bar's right edge</td>
+<td>Change the interval</td>
+</tr>
+<tr>
+<td><strong>Shift</strong>+drag the right edge</td>
+<td>Change the count</td>
+</tr>
+<tr>
+<td>Click an empty row</td>
+<td>Select the group</td>
+</tr>
+<tr>
+<td>Double-click an empty row</td>
+<td>Add an entry at that time</td>
+</tr>
+<tr>
+<td>Mouse wheel</td>
+<td>Scroll rows</td>
+</tr>
+<tr>
+<td><strong>Shift</strong>+wheel</td>
+<td>Scroll time</td>
+</tr>
+<tr>
+<td><strong>Ctrl/Cmd</strong>+wheel</td>
+<td>Zoom time around the cursor</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Keyboard</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>← / →</td>
+<td>Nudge the selection by the snap step</td>
+</tr>
+<tr>
+<td>Page Up / Page Down</td>
+<td>Previous / next wave</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete the selected entry (or group)</td>
+</tr>
+<tr>
+<td>Ctrl+D</td>
+<td>Duplicate the selected entry (or group)</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Fit the wave to the view (also the <strong>Fit</strong> button)</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>Clear the selection</td>
+</tr>
+</tbody>
+</table>
+<p>Toolbar: <code>Snap</code> with steps 0.1 s / 0.25 s / 0.5 s / 1 s, <strong>Fit</strong>, <strong>Ping</strong>. If a level has no wave set, the window offers <strong>Create Wave Set For …</strong>. All edits support Undo.</p>
+<p>Timing shown on the timeline matches the simulation: the first unit of an entry appears one interval after the entry starts, and an interval of 0 means one unit per tick.</p>
+<hr />
+<h2 id="upgrade-tree">Upgrade Tree<a class="headerlink" href="#upgrade-tree" title="Permanent link">&para;</a></h2>
+<p>Open with <strong>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Tree</strong> with a Tower asset selected (or from the Validator). It shows the whole tree containing that tower: build tier → levels → branches.</p>
+<p>Each node shows: name, <code>BUILD</code> / <code>LEVEL n</code> / <code>BRANCH</code>, template id (and "barracks"), <strong>Cost</strong>, <strong>Invested</strong> (cumulative cost along the path from the root), <strong>Sell</strong> (after wave 1, and full refund before wave 1), and <strong>≈DPS / Range</strong>. Cycles are highlighted. The side panel lists the selected tier's purchasable abilities with their rank costs.</p>
+<p>Sell values use the <code>Refund Share</code> of the first Level asset whose tower trees contain the tier (the default 0.6 when no level contains it); the panel names the level used.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit a tier</td>
+<td>Click the node; edit it in the side inspector</td>
+</tr>
+<tr>
+<td>Select the asset</td>
+<td>Double-click the node, or <strong>Select Asset</strong></td>
+</tr>
+<tr>
+<td>Add next level / branch</td>
+<td><strong>+</strong> on the node's right edge, or <strong>Add Next Level</strong> / <strong>Add Branch</strong>. A new tower asset is created next to its parent and linked.</td>
+</tr>
+<tr>
+<td>Unlink</td>
+<td><strong>Unlink From Parent</strong> (the asset is kept)</td>
+</tr>
+<tr>
+<td>Navigate</td>
+<td><strong>Go To Root</strong>, <code>Follow</code>, <strong>Refresh</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="unit-workshop">Unit Workshop<a class="headerlink" href="#unit-workshop" title="Permanent link">&para;</a></h2>
+<p>One window for enemies, heroes, soldiers, towers, projectiles, status effects and spells: find them, make them from presets, see them move, edit them on flat tabs, read what they are worth and try them against your towers.</p>
+<table>
+<thead>
+<tr>
+<th>Panel</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>List</strong> (left)</td>
+<td>Every 2D Tower Defense Maker unit asset, grouped by type. Search (name, display name, id, effect family), type filter, tag-bit filter, towers on/off. Click, Ctrl+click and Shift+click select; several assets of one type are edited together (numbers show "—" when they differ). <code>*</code> marks unsaved changes. <strong>Used by</strong> lists the levels (buildable, hero, spell), wave sets (wave numbers and counts), towers (upgrade, barracks soldier, projectile) and other assets that refer to the active asset.</td>
+</tr>
+<tr>
+<td><strong>Toolbar</strong></td>
+<td><strong>New ▾</strong> (presets, projectile, status effect, spell), <strong>Duplicate</strong> (gives the copy its own id), <strong>Rename</strong>, <strong>Delete</strong> (asks first and says how many references will be cleared), <strong>Save</strong>, <strong>Ping</strong>, <strong>Sandbox ▶</strong>.</td>
+</tr>
+<tr>
+<td><strong>Preview</strong> (middle)</td>
+<td>Walk / Idle / Attack / Hurt / Death from the art set entry (same frame rates, hop and death hold as the game), speed and zoom, a 1-unit grid with the pivot cross and the ground line, the health bar at its real height and width. <strong>Moving right / left</strong> flips the direction; <strong>Art faces LEFT</strong> is the entry's <code>Faces Left</code> – the unit must look where it walks in both directions. Units without art show their generated shape; prefabs with an Animator list their clips. Projectiles fly from a tower to a target with their speed or flight time, arc, trail and impact flash; status effects show their tint and pip; spells their target ellipse. Below: quick numbers and checks.</td>
+</tr>
+<tr>
+<td><strong>Basics</strong></td>
+<td>Health, defenses, speed, gold, lives, flying, blocking (heroes: vitals and experience; towers: cost, targeting, upgrades, barracks). Projectiles, effects and spells show all their data as one flat form. Fields no tab claims appear under <strong>Other</strong>.</td>
+</tr>
+<tr>
+<td><strong>Attack</strong></td>
+<td>A melee card and one card per ranged attack (reorder, remove, add) with the damage block, target types and the projectile: pick one or press <strong>New</strong> to create it next to the unit, and edit its data in place.</td>
+</tr>
+<tr>
+<td><strong>Mechanics</strong></td>
+<td>Cards instead of nested foldouts. Traits (regeneration, melee evasion, reflection, aura, split on death with optional successor rules, return on the spot), on-melee-hit payloads (status effect, impact payload, life steal) and ordered timed actions (ranged attack, self buff, summon, area, chain, multi-target, trap, mine field, raise remains, beam, path transfer, custom action). <strong>+ payload ▾</strong> combines payloads in one action. Cards show computed hints: total health over all returns and time on the road, mines armed after the throw and how many lie on the road, cast plus rise time of a raise; problems (an empty placement band, a lifetime shorter than the arming, a raise without a unit) appear inside the card. Heroes and towers: a <strong>Companions</strong> card (unit, slots, escort or follower, refill) with mode/unit checks. Heroes: skills with ranks (points, level, passive stats, actions). Towers: purchasable abilities with ranks and <strong>+ Mine-laying ability</strong> (a ready two-rank mine field).</td>
+</tr>
+<tr>
+<td><strong>Effects</strong></td>
+<td>Status immunities, tag bits, the effects each hit applies (editable in place), <strong>+ New effect</strong>.</td>
+</tr>
+<tr>
+<td><strong>Look</strong></td>
+<td>View settings, the art set entry of this view key (created on request), frame arrays, scale, health bar placement, <strong>Art Faces LEFT</strong>, and the frame drop area (below).</td>
+</tr>
+<tr>
+<td><strong>Hero</strong></td>
+<td>Skill mode, respawn, move rule, growth graph (experience, health and DPS per level), growth table, <strong>Fill growth curve</strong>, skill rank summary.</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>Spawn / attack / hit / death cues with <strong>Play</strong> / <strong>Stop</strong>, VFX hooks, the launch / impact cues of the projectiles the unit fires, and the cast cue of spells that call this unit. Projectiles and spells show their own cues.</td>
+</tr>
+<tr>
+<td><strong>Engagement</strong></td>
+<td>Contact bias and row spacing, with a top view of the three blocker places around the enemy (rank 1 in front, ranks 2 and 3 below and above, pulled back by half the row spacing; ranks 4+ reuse them) for either walking direction. Soldiers and heroes are drawn against an enemy you pick.</td>
+</tr>
+<tr>
+<td><strong>Stats</strong></td>
+<td>See "Computed values" below.</td>
+</tr>
+<tr>
+<td><strong>Sandbox</strong></td>
+<td>See "Sandbox" below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bulk-frame-registration">Bulk frame registration<a class="headerlink" href="#bulk-frame-registration" title="Permanent link">&para;</a></h3>
+<p>Drop a sprite folder or several PNG files on the Look tab's drop area. Each file is sorted by its name: <code>walk</code>, <code>run</code>, <code>move</code>, <code>fly</code> → walk loop; <code>idle</code>, <code>stand</code>, <code>breath</code> → idle; <code>attack</code>, <code>atk</code>, <code>shoot</code>, <code>cast</code>, <code>slash</code> → attack; <code>hurt</code>, <code>hit</code>, <code>take hit</code>, <code>damage</code> → hurt; <code>die</code>, <code>death</code>, <code>dead</code> → death. The last number is the frame number (<code>Orc_Walk_003</code>, <code>walk (2)</code>, <code>1_ATTACK_005</code>, <code>goblinRun07</code>); a number right after the word is a variant (<code>Attack2_05</code>) and only the lowest variant is used. Files without an action word are reported as unsorted. The textures are set to Sprite, pivot bottom centre (the feet), no mip maps, compressed. Found sequences replace the entry's arrays; the idle sprite becomes the first idle (or walk) frame when the entry has none. The direction the art faces is never guessed: check <strong>Art faces LEFT</strong> in the preview.</p>
+<h3 id="presets">Presets<a class="headerlink" href="#presets" title="Permanent link">&para;</a></h3>
+<p>Standard, Fast, Armored, Magic Resistant, Healer (permanent healing aura), Splitter (splits into a smaller enemy that is created with it), Flying, Boss, Melee Hero, Ranged Hero, Barracks Soldier, Necromancer (raises weak enemies from the bodies of the fallen; the raised enemy is created with it as <code>_Risen</code>), Revenant (returns once with half its health). A preset scales the project's median enemy and soldier (or built-in defaults) by ratios inside the balance bands: gold per health ×0.5–1.8 of the standard enemy, defenses in the low / medium / strong bands, hero experience steps ×3 then ×1.35. They are starting points; tune them against your towers with the Stats and Sandbox tabs.</p>
+<h3 id="computed-values">Computed values<a class="headerlink" href="#computed-values" title="Permanent link">&para;</a></h3>
+<p>The numbers follow the simulation's damage rules exactly for single-target hits without status effects: a hit rolls <code>ceil(lerp(min, max))</code>, an enemy keeps <code>floor(hit × (1 − reduction))</code> (soldiers: <code>hit − floor(hit × reduction)</code>), and the reduction is the matching defense minus pierce (explosion and electric use half the armor). Expected values average every integer roll.</p>
+<ul>
+<li><strong>Enemy:</strong> effective health and hits of 10 for every damage kind; gold per 100 HP and per 100 effective HP; bounty density against the project's median enemy; for every tower tier in the project: hits of its strongest channel, seconds with every channel (and up to Blocker Capacity barracks soldiers), DPS and gold per 100 invested.</li>
+<li><strong>Hero:</strong> per level experience, step ratio, health, armor, DPS, effective health and skill points; a level-1 duel against every enemy.</li>
+<li><strong>Soldier:</strong> effective health, DPS against 0 / 50 / 90 % armor, a duel against every enemy.</li>
+<li><strong>Tower:</strong> investment, DPS by defense, time to kill every enemy.</li>
+<li><strong>Checks:</strong> defenses above 0.9, full reduction, zero speed, flying-but-blockable, bounty density outside ×0.5–1.8, experience steps outside ×1.1–1.6 (the first step up to ×3.5), units that cannot block, enemies that split into themselves.</li>
+</ul>
+<h3 id="sandbox">Sandbox<a class="headerlink" href="#sandbox" title="Permanent link">&para;</a></h3>
+<p>A straight lane, the towers you list beside it (any tier, unlimited gold) and a wave of the unit (<code>Count</code>, <code>Spawn interval</code>). Heroes and soldiers (a barracks of three) face an opponent enemy instead. <strong>Run headless</strong> plays it with a fixed seed and reports the outcome, spawned / killed / leaked, lives lost, kill time from spawn (average, fastest, slowest), damage taken by enemies and by soldiers or heroes, gold, damage / hits / kills per source and the final state hash – the same inputs always give the same table. <strong>Buy tower abilities</strong> buys every rank of the listed towers' abilities before the wave (mine fields only act once bought). When they happen, mines thrown and traps triggered, companions arrived (and refills), falls and finished rises, and bodies reserved and raised are listed too; a fall of a returning unit is not counted as a kill. <strong>Play in temporary scene</strong> opens an unsaved scene with the lane, the towers, views (with the Workshop's art set) and the debug HUD and enters Play mode; stop Play mode and discard the scene when done.</p>
+<h3 id="shortcuts">Shortcuts<a class="headerlink" href="#shortcuts" title="Permanent link">&para;</a></h3>
+<p>Ctrl+N new · Ctrl+D duplicate · F2 rename · Delete delete · Ctrl+S save · Ctrl+F search · ↑ / ↓ move in the list (Shift extends) · Ctrl+1…9 tabs · Space play / pause the preview · M flip the walking direction · Numpad 1–5 preview action.</p>
+<h3 id="make-an-enemy-in-5-minutes">Make an enemy in 5 minutes<a class="headerlink" href="#make-an-enemy-in-5-minutes" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create.</strong> Open <strong>Tools &gt; 2D Tower Defense Maker &gt; Unit Workshop</strong>, select an asset in the folder where the new one should go, then <strong>New ▾ &gt; Enemy &gt; Armored</strong> (or any preset). The asset gets an id from its name and numbers scaled from your project's enemies. Press <strong>F2</strong> to rename it.</li>
+<li><strong>Numbers.</strong> On <strong>Basics</strong>, adjust health, armor and speed. Watch the quick numbers under the preview and the <strong>Stats</strong> tab: the tower table tells you how long each of your tower tiers needs to kill it; orange rows are slow or cannot hit.</li>
+<li><strong>Look.</strong> On <strong>Look</strong>, pick your art set (or <strong>New</strong>), press <strong>Create entry</strong>, then drop the folder with the unit's PNGs on the drop area. Play Walk / Attack / Death in the preview, press <strong>M</strong> to flip the direction and tick <strong>Art faces LEFT</strong> if the unit walks backwards. Set the scale and the health bar height.</li>
+<li><strong>Special.</strong> On <strong>Mechanics</strong>, <strong>+ Add mechanic ▾ &gt; Trait &gt; Aura</strong> (or a timed action) and fill in the card. On <strong>Audio</strong>, assign the hit and death cues and press <strong>Play</strong>.</li>
+<li><strong>Try it.</strong> On <strong>Sandbox</strong>, <strong>Pick ▾</strong> two or three tower tiers, set the count and press <strong>Run headless</strong>: killed / leaked and the kill times show whether the enemy fits the wave you have in mind; <strong>Play in temporary scene</strong> shows it in motion. Then add it to a wave in the <strong>Wave Timeline</strong> and press <strong>Ctrl+S</strong>.</li>
+</ol>
+<hr />
+<h2 id="inspectors-with-computed-stats">Inspectors with computed stats<a class="headerlink" href="#inspectors-with-computed-stats" title="Permanent link">&para;</a></h2>
+<p>Enemy, Tower and other template inspectors group fields in foldouts and show any extra fields under "Other". The identity header shows the resolved id and warns about duplicate ids.</p>
+<table>
+<thead>
+<tr>
+<th>Inspector</th>
+<th>Computed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enemy</strong></td>
+<td>Effective HP (hits needed) against each damage kind; warnings for zero speed and full physical+magical reduction. Mechanics fields (<code>Tags</code>, <code>Behavior</code>, <code>Aura</code>) have their own group</td>
+</tr>
+<tr>
+<td><strong>Tower</strong></td>
+<td>Cumulative investment, sell value (after/before wave 1) and the refund share used (from the tower's level), range ellipse size at the scene's Y scale, garrison size and HP, DPS table for ranged attacks and for soldiers against several defense values; warnings for towers that do nothing and soldiers that cannot block</td>
+</tr>
+<tr>
+<td><strong>Level / Level Authoring</strong></td>
+<td><strong>Validate Bake</strong>, <strong>Wave Timeline</strong>, <strong>Validate Project</strong>, <strong>Write Scene Geometry To Level Asset</strong></td>
+</tr>
+</tbody>
+</table>
+<p>DPS and effective-HP values are approximations (averages; no rounding, status effects or incoming multipliers), marked with "≈".</p>
+<hr />
+<h2 id="project-validator">Project Validator<a class="headerlink" href="#project-validator" title="Permanent link">&para;</a></h2>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Validate Project</strong> scans every 2D Tower Defense Maker asset and the open scenes.</p>
+<ul>
+<li>Filter by Errors / Warnings / Info; click to select the asset, double-click (or Enter) to open the right tool (Wave Timeline for waves, Upgrade Tree for upgrade issues).</li>
+<li><strong>F5</strong> re-runs; arrow keys move the selection.</li>
+<li>Checks include: missing references; duplicate template ids and projectile view keys; enemies with zero speed or full immunity; towers that do nothing, list themselves, have empty or duplicate upgrade slots, upgrade cycles, or are not buildable in any level; soldiers that cannot block; zero rally radius; attacks with zero range or no target types; waves without groups or enemies; entries without an enemy; path/lane indices that do not exist; invalid paths (fewer than two points, entry not before exit, coincident points, overlapping lanes); levels without waves, towers, paths or slots; failed bakes; rally points outside the rally radius; mechanics: enabled auras or pulses without a payload, auras that do not follow their unit, chains that cannot jump, multi-target health budgets with area damage.</li>
+</ul>
+<p>Headless: <code>TDMaker.Editor.ValidatorWindow.RunBatch</code> logs every issue (for <code>-executeMethod</code>).</p>
+<hr />
+<h2 id="dry-run">Dry Run<a class="headerlink" href="#dry-run" title="Permanent link">&para;</a></h2>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Dry Run Level</strong> runs the level headlessly and logs a report. It uses the selected Level asset, or the first Level Authoring in the open scene.</p>
+<p>Three passes:</p>
+<ul>
+<li><strong>Undefended</strong>: no towers, every wave called as early as possible – shows the total threat (a sound level is lost here).</li>
+<li><strong>Fortified</strong>: unlimited gold; builds and upgrades towers on every slot (branch choice rotates by slot so each branch is also built near the entry; the report lists the final tiers reached), buys every ability, spawns heroes, moves them, spends skill points and casts ready spells.</li>
+<li><strong>Budget</strong>: the level's real starting gold, spent by a simple greedy player – start the first wave after three seconds, let later waves arrive on their timers, build the next empty slot (slots in list order, buildable towers cycled per slot) until half the slots hold a tower, then buy the cheapest of the next build (counted double), upgrades and ability ranks; hero and spells assist as in the fortified pass. The line adds lives left, gold left and spent, final tiers and the lives at the start of every wave. A budget-pass victory provides one reproducible winning strategy; use playtesting to assess how clear and forgiving that strategy is for your players. Order your build slots from most to least important – the budget pass builds them in that order.</li>
+</ul>
+<p>The report lists the outcome and time, waves, enemies (killed, lives lost), towers built and upgraded, soldiers, shots, damage, abilities, spells, summons, effects, a mechanics line (chains and links, multi-target hits, region pulses, shields raised and damage absorbed, impact payloads, displacements and knockback payloads), an advanced line (traps placed/armed/triggered and how they ended, beams with pulses, budget and end reasons, path transfers, reflections, life steal), ballistic accuracy per source (fired, landed, damaging, target already gone before landing, landed beside a live target with the average miss distance), heroes, any remaining enemies, and rejected commands by type. Release-mechanic counters list thrown mines, companions, temporary falls/finished rises and reserved/raised bodies; a temporary fall is not a final kill. Rejected commands point to content problems (for example a barracks whose rally point cannot reach a lane).</p>
+<p>The range Y scale is the level's override when set, otherwise the open scene's <code>Simulation Runner</code> value (0.8 when there is none). Headless: <code>-executeMethod TDMaker.Editor.LevelDryRun.RunSample</code> runs every sample level (Basic, Crossroads, Winding Pass); add <code>-dryRunLevel &lt;asset path&gt;</code> for one level asset. From code: <code>LevelDryRun.Report(levelAsset, out PassResult[] results)</code> returns the report and each pass' phase, stars, lives, time and waves.</p>
+<hr />
+<h2 id="permanent-upgrade-shop">Permanent upgrade shop<a class="headerlink" href="#permanent-upgrade-shop" title="Permanent link">&para;</a></h2>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Shop</strong> edits ordered track/rank columns, a back-loaded star-price curve and stat/mechanic/template-swap effects, with validation and before/after stat previews. Link the shop on the Campaign asset; the world map then offers <strong>Upgrades</strong>. See <a href="../campaign/#the-star-upgrade-shop">Campaigns, Progress and Saves</a> for purchases, Undo Changes, Reset All, save integration and battle snapshots.</p>
+<h2 id="sample-generator">Sample generator<a class="headerlink" href="#sample-generator" title="Permanent link">&para;</a></h2>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Create Sample Content</strong> (re)creates every generated sample: <code>Samples/Basic</code> (data assets and <code>BasicSample.unity</code>), <code>Samples/Crossroads</code> and <code>Samples/WindingPass</code> (their own data plus references to the Basic towers, enemies, hero and spells) and <code>Samples/Demo/DemoSample.unity</code> (title, save slots, world map and result flow over the three levels, with the sample campaign <code>Samples/Demo/Data/SampleCampaign.asset</code> and its painted map picture <code>Samples/Demo/Art/world_map.png</code>; the scripts in <code>Samples/Demo/Scripts</code> are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: <code>TDMaker.Editor.SampleContentGenerator.Generate()</code>.</p>
+<hr />
+<h2 id="sample-screenshot">Sample screenshot<a class="headerlink" href="#sample-screenshot" title="Permanent link">&para;</a></h2>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Capture Sample Screenshot</strong> plays the Basic sample with a scripted run and saves a PNG of the camera and HUD. Batch: <code>-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture</code> (without <code>-quit</code> and without <code>-nographics</code>). Details and options: <a href="../presentation/#sample-screenshots">Sample screenshots</a>.</p>
+<h2 id="creating-and-checking-content">Creating and checking content<a class="headerlink" href="#creating-and-checking-content" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Unit Workshop assets clear the active list filters and are selected and scrolled into view. When a user-created level is open, its Data folder is the first save-folder suggestion; packaged sample folders are not the default.</li>
+<li>A Wave Timeline group's <strong>+</strong> opens an enemy picker before adding the entry. Count and Interval are copied from the previous entry, and the operation supports Undo. Double-clicking an empty group row uses the existing copy-entry workflow.</li>
+<li>Map Editor keeps Validate/Dry Run controls and their latest summaries at the top of the window. Click the error/warning summary to open the Validator. The separate all-slot <strong>Auto Rally</strong> action asks for confirmation and supports a single Undo step.</li>
+<li><strong>Sample kit</strong> refers to existing sample units. Disabling <strong>Use Sample Sounds</strong> does not remove audio references already stored on those shared units. For content independent of Samples, choose <strong>Fresh starter assets</strong> and leave sample sounds off.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../authoring/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content authoring">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content authoring
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../mechanics/" class="md-footer__link md-footer__link--next" aria-label="Next: Gameplay mechanics">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Gameplay mechanics
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © FlyCat
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

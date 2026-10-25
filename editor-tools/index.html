@@ -911,6 +911,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#authoring-screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authoring screenshots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authoring screenshots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-workshop-attacks-and-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Workshop: attacks and preview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paths-and-build-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths and build slots
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1666,6 +1705,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#authoring-screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authoring screenshots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authoring screenshots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-workshop-attacks-and-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Workshop: attacks and preview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paths-and-build-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths and build slots
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2239,7 +2317,7 @@
 <h2 id="permanent-upgrade-shop">Permanent upgrade shop<a class="headerlink" href="#permanent-upgrade-shop" title="Permanent link">&para;</a></h2>
 <p><strong>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Shop</strong> edits ordered track/rank columns, a back-loaded star-price curve and stat/mechanic/template-swap effects, with validation and before/after stat previews. Link the shop on the Campaign asset; the world map then offers <strong>Upgrades</strong>. See <a href="../campaign/#the-star-upgrade-shop">Campaigns, Progress and Saves</a> for purchases, Undo Changes, Reset All, save integration and battle snapshots.</p>
 <h2 id="sample-generator">Sample generator<a class="headerlink" href="#sample-generator" title="Permanent link">&para;</a></h2>
-<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Regenerate Sample Content</strong> (re)creates every generated sample: <code>Samples/Basic</code> (data assets and <code>BasicSample.unity</code>), <code>Samples/Crossroads</code> and <code>Samples/WindingPass</code> (their own data plus references to the Basic towers, enemies, hero and spells) and <code>Samples/Demo/DemoSample.unity</code> (title, save slots, world map and result flow over the three levels, with the sample campaign <code>Samples/Demo/Data/SampleCampaign.asset</code> and its painted map picture <code>Samples/Demo/Art/world_map.png</code>; the scripts in <code>Samples/Demo/Scripts</code> are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: <code>TDMaker.Editor.SampleContentGenerator.Generate()</code>.</p>
+<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Regenerate Sample Content</strong> (re)creates every generated sample: <code>Samples/Basic</code> (data assets and <code>BasicSample.unity</code>), <code>Samples/Crossroads</code> and <code>Samples/WindingPass</code> (their own data plus references to the Basic towers, enemies, hero and spells) and <code>Samples/Demo/DemoSample.unity</code> (title, save slots, world map and result flow over the three levels, with the sample campaign <code>Samples/Demo/Data/SampleCampaign.asset</code> and its map image <code>Samples/Demo/Art/world_map.png</code>; the scripts in <code>Samples/Demo/Scripts</code> are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: <code>TDMaker.Editor.SampleContentGenerator.Generate()</code>.</p>
 <hr />
 <h2 id="sample-screenshot">Sample screenshot<a class="headerlink" href="#sample-screenshot" title="Permanent link">&para;</a></h2>
 <p><strong>Tools &gt; 2D Tower Defense Maker &gt; Capture Sample Screenshot</strong> plays the Basic sample with a scripted run and saves a PNG of the camera and HUD. Batch: <code>-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture</code> (without <code>-quit</code> and without <code>-nographics</code>). Details and options: <a href="../presentation/#sample-screenshots">Sample screenshots</a>.</p>
@@ -2250,6 +2328,13 @@
 <li>Map Editor keeps Validate/Dry Run controls and their latest summaries at the top of the window. Click the error/warning summary to open the Validator. The separate all-slot <strong>Auto Rally</strong> action asks for confirmation and supports a single Undo step.</li>
 <li><strong>Sample kit</strong> refers to existing sample units. Disabling <strong>Use Sample Sounds</strong> does not remove audio references already stored on those shared units. For content independent of Samples, choose <strong>Fresh starter assets</strong> and leave sample sounds off.</li>
 </ul>
+<h2 id="authoring-screenshots">Authoring screenshots<a class="headerlink" href="#authoring-screenshots" title="Permanent link">&para;</a></h2>
+<p>These are actual editor captures. The Unit Workshop and Map Editor use their standard window sizes.</p>
+<h3 id="unit-workshop-attacks-and-preview">Unit Workshop: attacks and preview<a class="headerlink" href="#unit-workshop-attacks-and-preview" title="Permanent link">&para;</a></h3>
+<p><img alt="Unit Workshop with an archer tower, attack settings and sprite preview" src="../assets/images/workshop.png" /></p>
+<h3 id="paths-and-build-slots">Paths and build slots<a class="headerlink" href="#paths-and-build-slots" title="Permanent link">&para;</a></h3>
+<p><img alt="Scene view with editable paths, entrances, exits and construction slots" src="../assets/images/map-paths.png" /></p>
+<p><img alt="Map Editor path and slot controls" src="../assets/images/map-editor.png" /></p>
 
 
 

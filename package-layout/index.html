@@ -1123,7 +1123,7 @@
 <p>2D Tower Defense Maker is a reusable runtime framework and a set of authoring tools. You create and own the content of your game. The complete sample game is an optional reference implementation.</p>
 <h2 id="install-the-maker">Install the Maker<a class="headerlink" href="#install-the-maker" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Import <code>2D-Tower-Defense-Maker-0.1.0.unitypackage</code> into a Unity 6 URP 2D project.</li>
+<li>For split archives, import <code>2D-Tower-Defense-Maker-0.1.0.unitypackage</code> into a Unity 6 URP 2D project. For a single Asset Store import, include <code>Runtime</code>, <code>Editor</code> and <code>Documentation</code>; to omit the optional examples, uncheck <strong>both</strong> <code>Samples</code> and <code>Editor/Samples</code> in the import dialog.</li>
 <li>Import TMP Essential Resources once when prompted.</li>
 <li>Open <strong>Tools &gt; 2D Tower Defense Maker &gt; Welcome</strong>, then <strong>New Level</strong>.</li>
 <li>Keep <strong>Fresh starter assets</strong> selected and <strong>Use Sample Sounds</strong> off. Create the level in your own folder, such as <code>Assets/TDMakerContent/MyLevel</code>.</li>
@@ -1131,7 +1131,7 @@
 </ol>
 <p>The Maker package works on its own. The default New Level flow does not load the sample game's scene generator, string tables, artwork, audio, campaign or balance assets. It creates a Level, Wave Set, HUD Theme, units, material and scene inside your chosen folder. A fresh HUD uses the project's TMP default font until you assign your own font in its theme.</p>
 <h2 id="add-optional-examples">Add optional examples<a class="headerlink" href="#add-optional-examples" title="Permanent link">&para;</a></h2>
-<p>Import <code>2D-Tower-Defense-Maker-Samples-0.1.0.unitypackage</code> <strong>after</strong> the Maker package. Then open <strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Browse Samples</strong>.</p>
+<p>With split archives, import <code>2D-Tower-Defense-Maker-Samples-0.1.0.unitypackage</code> <strong>after</strong> the Maker package. With a single Store import, include both <code>Samples</code> and <code>Editor/Samples</code>; if previously omitted, import those folders from the same product. Then open <strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Browse Samples</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -1183,9 +1183,9 @@
 <h2 id="features-are-choices-samples-are-examples">Features are choices, samples are examples<a class="headerlink" href="#features-are-choices-samples-are-examples" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Campaigns, saving and the permanent star shop are reusable Maker features. The sample's map, track prices, unlock sequence and title menu are example content.</li>
-<li>The engine supports both automatic hero skill unlocking and explicit skill-point purchases. The compact sample HUD shows portraits and health bars, so its heroes use automatic skill growth. To use <code>SpendPoints</code> in your own game, enable <strong>Hero Skill Buttons</strong> on Game HUD or supply a skill-allocation UI. Combat skill points are separate from the campaign's saved star-upgrade shop.</li>
+<li>The engine supports both automatic hero skill unlocking and explicit skill-point purchases. Sample heroes use <code>AutoUnlock</code>. Their compact cards show portraits, names, levels, health bars and slim experience bars; the cards do not allocate skill points. To use <code>SpendPoints</code> in your own game, enable <strong>Hero Skill Buttons</strong> on Game HUD or supply a skill-allocation UI. Combat skill points are separate from the campaign's saved star-upgrade shop.</li>
 <li>The sample game starts in English and has no title-screen language buttons. String tables, Korean fallback fonts and the language API remain available for your own game.</li>
-<li>The compact sample battle HUD displays spell buttons without a large background panel. Hero portraits and health bars sit at the bottom left. You may restyle or replace the HUD through <code>HudTheme</code> and the runtime API.</li>
+<li>The compact sample battle HUD displays spell buttons without a large background panel. Low hero cards sit side by side at the bottom left, with a portrait, name, level, health bar, slim experience bar and a border around the selected hero. You may restyle or replace the HUD through <code>HudTheme</code> and the runtime API.</li>
 </ul>
 <p>Use the examples to learn the authoring model. Start production content with New Level and keep it in your own folder.</p>
 

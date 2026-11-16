@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0
+## 1.0.0
 
 The first version of **2D Tower Defense Maker** includes:
 

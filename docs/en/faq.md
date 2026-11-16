@@ -83,3 +83,6 @@ Saves record the operating system's UTC time in ISO 8601 format. The slot screen
 
 **Does a colored Wave Set icon mean there is an error?**
 2D Tower Defense Maker does not assign a special red warning icon to Wave Sets. Check the Validator's error/warning counts and Inspector messages rather than judging an asset by its icon color.
+
+**My question is not answered here. Where can I ask?**
+Post it in [Q&A discussions](https://github.com/hyunter777/2d-tower-defense-maker/discussions/categories/q-a). Report bugs as an [issue](https://github.com/hyunter777/2d-tower-defense-maker/issues), and use **hyunter@flycat.co.kr** for private matters. [Support and licenses](support-license.md#getting-help) lists what to include.

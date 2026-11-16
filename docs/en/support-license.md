@@ -4,7 +4,13 @@
 
 Start with [Quick Start](quick-start.md) and the [FAQ](faq.md). For content problems, run **Tools > 2D Tower Defense Maker > Validate Project** and review the first relevant error. [Editor Tools](editor-tools.md#project-validator) explains how to open an issue in its authoring tool.
 
-When contacting the publisher through the support details supplied with your Asset Store purchase, include:
+Ask questions in the right place:
+
+- **Usage questions** – post in [Q&A discussions](https://github.com/hyunter777/2d-tower-defense-maker/discussions/categories/q-a). Answers stay visible, so search there first; your question may already be answered.
+- **Bug reports** – open an [issue](https://github.com/hyunter777/2d-tower-defense-maker/issues) with the details below.
+- **Private matters** (purchase, license, a reproduction project you cannot share publicly) – email **hyunter@flycat.co.kr**.
+
+When you report a problem, include:
 
 - Your 2D Tower Defense Maker package version and Unity Editor version.
 - The render pipeline and input backend you use.

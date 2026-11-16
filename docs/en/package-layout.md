@@ -4,7 +4,7 @@
 
 ## Install the Maker
 
-1. For split archives, import `2D-Tower-Defense-Maker-0.1.0.unitypackage` into a Unity 6 URP 2D project. For a single Asset Store import, include `Runtime`, `Editor` and `Documentation`; to omit the optional examples, uncheck **both** `Samples` and `Editor/Samples` in the import dialog.
+1. For split archives, import `2D-Tower-Defense-Maker-1.0.0.unitypackage` into a Unity 6 URP 2D project. For a single Asset Store import, include `Runtime`, `Editor` and `Documentation`; to omit the optional examples, uncheck **both** `Samples` and `Editor/Samples` in the import dialog.
 2. Import TMP Essential Resources once when prompted.
 3. Open **Tools > 2D Tower Defense Maker > Welcome**, then **New Level**.
 4. Keep **Fresh starter assets** selected and **Use Sample Sounds** off. Create the level in your own folder, such as `Assets/TDMakerContent/MyLevel`.
@@ -14,7 +14,7 @@ The Maker package works on its own. The default New Level flow does not load the
 
 ## Add optional examples
 
-With split archives, import `2D-Tower-Defense-Maker-Samples-0.1.0.unitypackage` **after** the Maker package. With a single Store import, include both `Samples` and `Editor/Samples`; if previously omitted, import those folders from the same product. Then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples**.
+With split archives, import `2D-Tower-Defense-Maker-Samples-1.0.0.unitypackage` **after** the Maker package. With a single Store import, include both `Samples` and `Editor/Samples`; if previously omitted, import those folders from the same product. Then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples**.
 
 | Part | Purpose | Location |
 |---|---|---|

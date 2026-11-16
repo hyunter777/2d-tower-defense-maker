@@ -101,6 +101,8 @@ Stores never throw; they return results and log warnings.
   meanings do.
 - Deleting a slot (`CampaignSaveSlots.Delete`) removes only that slot. `SaveSlotScreen` asks first (Delete / Cancel).
 
+`ProfileSerializer.Migrate` is a static extension event. Register a named callback when its owner is enabled and remove the same callback when that owner is disabled or disposed. Avoid repeatedly adding anonymous callbacks when entering Play mode with domain reload disabled.
+
 ## The screens
 
 Both screens are built from code under any canvas: `CampaignMapScreen.Create(parent, theme)` and `SaveSlotScreen.Create(parent, theme)`

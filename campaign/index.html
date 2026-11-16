@@ -1469,6 +1469,7 @@ key/value entries for your own data (tutorial flags, selected hero, ...). App se
   meanings do.</li>
 <li>Deleting a slot (<code>CampaignSaveSlots.Delete</code>) removes only that slot. <code>SaveSlotScreen</code> asks first (Delete / Cancel).</li>
 </ul>
+<p><code>ProfileSerializer.Migrate</code> is a static extension event. Register a named callback when its owner is enabled and remove the same callback when that owner is disabled or disposed. Avoid repeatedly adding anonymous callbacks when entering Play mode with domain reload disabled.</p>
 <h2 id="the-screens">The screens<a class="headerlink" href="#the-screens" title="Permanent link">&para;</a></h2>
 <p>Both screens are built from code under any canvas: <code>CampaignMapScreen.Create(parent, theme)</code> and <code>SaveSlotScreen.Create(parent, theme)</code>
 (<code>CampaignUi.Canvas</code> makes a canvas scaled like the HUD).</p>

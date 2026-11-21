@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class WelcomeWindow | 2D Tower Defense Maker API ">
       
-      <meta name="description" content="Tools &amp;gt; 2D Tower Defense Maker &amp;gt; Welcome: first stop after importing the package – check (and import) the TextMesh Pro Essential Resources, start an independent new level, browse optional examples, and open the Unit Workshop or the Map Editor. Shown automatically the first time a project loads the package, and then at each editor start while Show on startup is on (per project).">
+      <meta name="description" content="The 1.0 Welcome window. Since 1.1 its content lives in the  hub; this type stays so existing code keeps compiling and forwards to the hub.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -83,15 +83,14 @@ Class WelcomeWindow
   <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><b>Tools &gt; 2D Tower Defense Maker &gt; Welcome</b>: first stop after importing the package – check (and import) the TextMesh Pro
-Essential Resources, start an independent new level, browse optional examples,
-and open the Unit Workshop or the Map Editor. Shown automatically the first time a project loads
-the package, and then at each editor start while <b>Show on startup</b> is on (per project).</p>
+  <div class="markdown summary"><p>The 1.0 Welcome window. Since 1.1 its content lives in the <a class="xref" href="TDMaker.Editor.ProjectOverviewWindow.html">ProjectOverviewWindow</a> hub; this type stays so
+existing code keeps compiling and forwards to the hub.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class WelcomeWindow : EditorWindow</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use ProjectOverviewWindow. The Welcome window became the Project Overview in 1.1.&quot;)]
+public sealed class WelcomeWindow : EditorWindow</code></pre>
   </div>
 
 
@@ -605,7 +604,7 @@ the package, and then at each editor start while <b>Show on startup</b> is on (p
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether the window opens at every editor start in this project.</p>
+  <div class="markdown level1 summary"><p>Whether the Project Overview opens at every editor start in this project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -637,7 +636,7 @@ the package, and then at each editor start while <b>Show on startup</b> is on (p
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether the window was already shown once in this project.</p>
+  <div class="markdown level1 summary"><p>Whether the Project Overview was already shown once in this project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -673,13 +672,12 @@ the package, and then at each editor start while <b>Show on startup</b> is on (p
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Opens the welcome window.</p>
+  <div class="markdown level1 summary"><p>Opens the Project Overview. Returns null: the Welcome window itself no longer opens.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[MenuItem(&quot;Tools/2D Tower Defense Maker/Welcome&quot;, priority = 0)]
-public static WelcomeWindow Open()</code></pre>
+    <pre><code class="lang-csharp hljs">public static WelcomeWindow Open()</code></pre>
   </div>
 
 

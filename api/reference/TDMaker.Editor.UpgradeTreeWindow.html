@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class UpgradeTreeWindow | 2D Tower Defense Maker API ">
       
-      <meta name="description" content="Graph view of a tower&#39;s upgrade tree (level 1 → 2 → 3 → branches). Each node shows its cost, cumulative investment and sell refund; clicking a node edits it inline. Nodes can grow new levels or branches, which are created as assets next to their parent. Drag a node to move it (the offset is kept per tree in the project&#39;s UserSettings, editor only); drag the empty canvas, or use the middle mouse button, to pan.">
+      <meta name="description" content="Graph view of a tower&#39;s upgrade tree (level 1 → 2 → 3 → branches). Each node shows its cost, cumulative investment and sell refund; clicking a node edits it in the sidebar. Nodes can grow new levels or branches, which are created as assets next to their parent. Drag a node to move it (the offset is kept per tree in the project&#39;s UserSettings, editor only); drag the empty canvas, or use the middle mouse button, to pan. The toolbar and the sidebar are UI Toolkit; the node graph is an IMGUI canvas ().">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,9 +84,10 @@ Class UpgradeTreeWindow
   </div>
 
   <div class="markdown summary"><p>Graph view of a tower's upgrade tree (level 1 → 2 → 3 → branches). Each node shows its cost, cumulative
-investment and sell refund; clicking a node edits it inline. Nodes can grow new levels or branches, which are
+investment and sell refund; clicking a node edits it in the sidebar. Nodes can grow new levels or branches, which are
 created as assets next to their parent. Drag a node to move it (the offset is kept per tree in the project's UserSettings,
-editor only); drag the empty canvas, or use the middle mouse button, to pan.</p>
+editor only); drag the empty canvas, or use the middle mouse button, to pan.
+The toolbar and the sidebar are UI Toolkit; the node graph is an IMGUI canvas (<a class="xref" href="TDMaker.Editor.TDMakerUi.html#TDMaker_Editor_TDMakerUi_Canvas_UnityEngine_UIElements_VisualElement_System_Action_">Canvas(VisualElement, Action)</a>).</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -598,6 +599,32 @@ editor only); drag the empty canvas, or use the middle mouse button, to pan.</p>
 </h2>
 
 
+  <a id="TDMaker_Editor_UpgradeTreeWindow_CreateGUI_" data-uid="TDMaker.Editor.UpgradeTreeWindow.CreateGUI*"></a>
+
+  <h3 id="TDMaker_Editor_UpgradeTreeWindow_CreateGUI" data-uid="TDMaker.Editor.UpgradeTreeWindow.CreateGUI">
+  CreateGUI()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateGUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="TDMaker_Editor_UpgradeTreeWindow_Open_" data-uid="TDMaker.Editor.UpgradeTreeWindow.Open*"></a>
 
   <h3 id="TDMaker_Editor_UpgradeTreeWindow_Open_TDMaker_Unity_Authoring_TowerAsset_" data-uid="TDMaker.Editor.UpgradeTreeWindow.Open(TDMaker.Unity.Authoring.TowerAsset)">
@@ -647,7 +674,7 @@ editor only); drag the empty canvas, or use the middle mouse button, to pan.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[MenuItem(&quot;Tools/2D Tower Defense Maker/Upgrade Tree&quot;, priority = 11)]
+    <pre><code class="lang-csharp hljs">[MenuItem(&quot;Tools/2D Tower Defense Maker/Upgrade Tree&quot;, priority = 23)]
 public static void ShowWindow()</code></pre>
   </div>
 

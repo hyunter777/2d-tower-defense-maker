@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SampleBrowserWindow | 2D Tower Defense Maker API ">
       
-      <meta name="description" content="Separate entry point for optional examples and the complete sample game.">
+      <meta name="description" content="Standalone host of . The menu now opens the Project Overview&#39;s Samples page instead; this window stays for code that opens it directly.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -83,7 +83,8 @@ Class SampleBrowserWindow
   <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Separate entry point for optional examples and the complete sample game.</p>
+  <div class="markdown summary"><p>Standalone host of <a class="xref" href="TDMaker.Editor.SamplesView.html">SamplesView</a>. The menu now opens the Project Overview's Samples page instead; this window stays
+for code that opens it directly.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -595,10 +596,10 @@ Class SampleBrowserWindow
 </h2>
 
 
-  <a id="TDMaker_Editor_SampleBrowserWindow_Open_" data-uid="TDMaker.Editor.SampleBrowserWindow.Open*"></a>
+  <a id="TDMaker_Editor_SampleBrowserWindow_CreateGUI_" data-uid="TDMaker.Editor.SampleBrowserWindow.CreateGUI*"></a>
 
-  <h3 id="TDMaker_Editor_SampleBrowserWindow_Open" data-uid="TDMaker.Editor.SampleBrowserWindow.Open">
-  Open()
+  <h3 id="TDMaker_Editor_SampleBrowserWindow_CreateGUI" data-uid="TDMaker.Editor.SampleBrowserWindow.CreateGUI">
+  CreateGUI()
   
   </h3>
 
@@ -606,8 +607,34 @@ Class SampleBrowserWindow
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[MenuItem(&quot;Tools/2D Tower Defense Maker/Samples/Browse Samples&quot;, priority = 0)]
-public static SampleBrowserWindow Open()</code></pre>
+    <pre><code class="lang-csharp hljs">public void CreateGUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_SampleBrowserWindow_Open_" data-uid="TDMaker.Editor.SampleBrowserWindow.Open*"></a>
+
+  <h3 id="TDMaker_Editor_SampleBrowserWindow_Open" data-uid="TDMaker.Editor.SampleBrowserWindow.Open">
+  Open()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens the Sample Browser, docked beside an open maker window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SampleBrowserWindow Open()</code></pre>
   </div>
 
 

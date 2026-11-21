@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class TemplateInspectorBase | 2D Tower Defense Maker API ">
       
-      <meta name="description" content="Base for grouped template inspectors: draws named property groups in persistent foldouts and any fields not claimed by a group under &amp;quot;Other&amp;quot;, so new serialized fields never disappear from the inspector.">
+      <meta name="description" content="Base for grouped template inspectors (UI Toolkit): an identity block, named property groups in persistent foldout sections, any fields not claimed by a group under &amp;quot;Other&amp;quot; (so new serialized fields never disappear from the inspector), then the subclass footer (actions and computed read-outs, refreshed when the asset changes).">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -83,8 +83,9 @@ Class TemplateInspectorBase
   <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Base for grouped template inspectors: draws named property groups in persistent foldouts and any fields not
-claimed by a group under &quot;Other&quot;, so new serialized fields never disappear from the inspector.</p>
+  <div class="markdown summary"><p>Base for grouped template inspectors (UI Toolkit): an identity block, named property groups in persistent foldout sections,
+any fields not claimed by a group under &quot;Other&quot; (so new serialized fields never disappear from the inspector), then the
+subclass footer (actions and computed read-outs, refreshed when the asset changes).</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -165,9 +166,6 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
     </div>
     <div>
       <span class="xref">Editor.OnInspectorGUI()</span>
-    </div>
-    <div>
-      <span class="xref">Editor.CreateInspectorGUI()</span>
     </div>
     <div>
       <span class="xref">Editor.RequiresConstantRepaint()</span>
@@ -562,14 +560,81 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Starts a frame; call before drawing groups.</p>
+  <div class="markdown level1 summary"><p>Starts an IMGUI frame (1.0 API). The built-in inspectors use <a class="xref" href="TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI">CreateInspectorGUI()</a> instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void Begin()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Template inspectors are UI Toolkit since 1.1: override BuildGroups/BuildFooter instead.&quot;)]
+protected void Begin()</code></pre>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TemplateInspectorBase_BuildFooter_" data-uid="TDMaker.Editor.TemplateInspectorBase.BuildFooter*"></a>
+
+  <h3 id="TDMaker_Editor_TemplateInspectorBase_BuildFooter_UnityEngine_UIElements_VisualElement_" data-uid="TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)">
+  BuildFooter(VisualElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds what follows the &quot;Other&quot; group: actions and computed read-outs. Called for single-object editing only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void BuildFooter(VisualElement root)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TemplateInspectorBase_BuildGroups_" data-uid="TDMaker.Editor.TemplateInspectorBase.BuildGroups*"></a>
+
+  <h3 id="TDMaker_Editor_TemplateInspectorBase_BuildGroups_UnityEngine_UIElements_VisualElement_" data-uid="TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)">
+  BuildGroups(VisualElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the identity block and the property groups (<a class="xref" href="TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_">Identity(VisualElement, EntityAssetBase)</a>,
+<a class="xref" href="TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___">Group(VisualElement, string, params string[])</a>). A subclass that does not override it keeps its own IMGUI
+<code>OnInspectorGUI</code> (1.0 behaviour).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void BuildGroups(VisualElement root)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -589,12 +654,13 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Draws a four-column row.</p>
+  <div class="markdown level1 summary"><p>Draws a four-column IMGUI row (1.0 API).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected static void Cells(Rect rect, string a, string b, string c, string d, GUIStyle style)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Template inspectors are UI Toolkit since 1.1.&quot;)]
+protected static void Cells(Rect rect, string a, string b, string c, string d, GUIStyle style)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -613,6 +679,79 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TemplateInspectorBase_Computed_" data-uid="TDMaker.Editor.TemplateInspectorBase.Computed*"></a>
+
+  <h3 id="TDMaker_Editor_TemplateInspectorBase_Computed_UnityEngine_UIElements_VisualElement_System_String_System_Action_UnityEngine_UIElements_VisualElement__" data-uid="TDMaker.Editor.TemplateInspectorBase.Computed(UnityEngine.UIElements.VisualElement,System.String,System.Action{UnityEngine.UIElements.VisualElement})">
+  Computed(VisualElement, string, Action&lt;VisualElement&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A &quot;Computed&quot; section whose body <code class="paramref">build</code> fills; it is rebuilt when the asset changes and checked every second
+for changes made elsewhere (soldier stats, level rules), and only replaced when its text differs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Foldout Computed(VisualElement parent, string key, Action&lt;VisualElement&gt; build)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>build</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">VisualElement</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Foldout</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI_" data-uid="TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI*"></a>
+
+  <h3 id="TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI" data-uid="TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI">
+  CreateInspectorGUI()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override VisualElement CreateInspectorGUI()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -668,16 +807,57 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Draws a DPS-vs-defense table for a list of attacks.</p>
+  <div class="markdown level1 summary"><p>Draws an IMGUI DPS-vs-defense table (1.0 API).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected static void DpsTable(string title, List&lt;RangedAttackData&gt; attacks, MeleeData melee, int multiplier = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Template inspectors are UI Toolkit since 1.1: use DpsTable(VisualElement, ...).&quot;)]
+protected static void DpsTable(string title, List&lt;RangedAttackData&gt; attacks, MeleeData melee, int multiplier = 1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>attacks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Authoring.RangedAttackData.html">RangedAttackData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>melee</code> <a class="xref" href="TDMaker.Unity.Authoring.MeleeData.html">MeleeData</a></dt>
+    <dd></dd>
+    <dt><code>multiplier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TemplateInspectorBase_DpsTable_" data-uid="TDMaker.Editor.TemplateInspectorBase.DpsTable*"></a>
+
+  <h3 id="TDMaker_Editor_TemplateInspectorBase_DpsTable_UnityEngine_UIElements_VisualElement_System_String_System_Collections_Generic_List_TDMaker_Unity_Authoring_RangedAttackData__TDMaker_Unity_Authoring_MeleeData_System_Int32_" data-uid="TDMaker.Editor.TemplateInspectorBase.DpsTable(UnityEngine.UIElements.VisualElement,System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)">
+  DpsTable(VisualElement, string, List&lt;RangedAttackData&gt;, MeleeData, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A DPS-vs-defense table for a list of attacks (UI Toolkit).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void DpsTable(VisualElement parent, string title, List&lt;RangedAttackData&gt; attacks, MeleeData melee, int multiplier = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
     <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>attacks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Unity.Authoring.RangedAttackData.html">RangedAttackData</a>&gt;</dt>
@@ -743,12 +923,13 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Applies changes and draws unclaimed fields.</p>
+  <div class="markdown level1 summary"><p>Applies changes and draws unclaimed fields (1.0 IMGUI API).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void End()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Template inspectors are UI Toolkit since 1.1: override BuildGroups/BuildFooter instead.&quot;)]
+protected void End()</code></pre>
   </div>
 
 
@@ -770,12 +951,13 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Draws a foldout group with the given fields; returns whether it is open.</p>
+  <div class="markdown level1 summary"><p>Draws an IMGUI foldout group with the given fields; returns whether it is open (1.0 API).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool Group(string title, params string[] fields)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Template inspectors are UI Toolkit since 1.1: use Group(VisualElement, string, params string[]).&quot;)]
+protected bool Group(string title, params string[] fields)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -802,6 +984,47 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
 
 
 
+  <a id="TDMaker_Editor_TemplateInspectorBase_Group_" data-uid="TDMaker.Editor.TemplateInspectorBase.Group*"></a>
+
+  <h3 id="TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___" data-uid="TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])">
+  Group(VisualElement, string, params string[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A foldout group with the given top-level fields; the fields are claimed so &quot;Other&quot; skips them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Foldout Group(VisualElement parent, string title, params string[] fields)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>fields</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Foldout</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="TDMaker_Editor_TemplateInspectorBase_Identity_" data-uid="TDMaker.Editor.TemplateInspectorBase.Identity*"></a>
 
   <h3 id="TDMaker_Editor_TemplateInspectorBase_Identity_TDMaker_Unity_Authoring_EntityAssetBase_" data-uid="TDMaker.Editor.TemplateInspectorBase.Identity(TDMaker.Unity.Authoring.EntityAssetBase)">
@@ -809,17 +1032,116 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Draws the identity header (template id, display name) with a duplicate-id warning.</p>
+  <div class="markdown level1 summary"><p>Draws the IMGUI identity header (1.0 API).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void Identity(EntityAssetBase asset)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Template inspectors are UI Toolkit since 1.1: use Identity(VisualElement, EntityAssetBase).&quot;)]
+protected void Identity(EntityAssetBase asset)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>asset</code> <a class="xref" href="TDMaker.Unity.Authoring.EntityAssetBase.html">EntityAssetBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TemplateInspectorBase_Identity_" data-uid="TDMaker.Editor.TemplateInspectorBase.Identity*"></a>
+
+  <h3 id="TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_" data-uid="TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)">
+  Identity(VisualElement, EntityAssetBase)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The identity block: the asset's tint as a round dot, Template Id and Display Name, the resolved-id caption and a warning
+when another asset resolves to the same id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Identity(VisualElement parent, EntityAssetBase asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>asset</code> <a class="xref" href="TDMaker.Unity.Authoring.EntityAssetBase.html">EntityAssetBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TemplateInspectorBase_RefreshComputed_" data-uid="TDMaker.Editor.TemplateInspectorBase.RefreshComputed*"></a>
+
+  <h3 id="TDMaker_Editor_TemplateInspectorBase_RefreshComputed" data-uid="TDMaker.Editor.TemplateInspectorBase.RefreshComputed">
+  RefreshComputed()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rebuilds the computed read-outs when their text changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RefreshComputed()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TemplateInspectorBase_StatRow_" data-uid="TDMaker.Editor.TemplateInspectorBase.StatRow*"></a>
+
+  <h3 id="TDMaker_Editor_TemplateInspectorBase_StatRow_UnityEngine_UIElements_VisualElement_System_String_System_String_" data-uid="TDMaker.Editor.TemplateInspectorBase.StatRow(UnityEngine.UIElements.VisualElement,System.String,System.String)">
+  StatRow(VisualElement, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A label/value read-out row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void StatRow(VisualElement parent, string label, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -841,12 +1163,13 @@ claimed by a group under &quot;Other&quot;, so new serialized fields never disap
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Begins a tinted box for computed stats.</p>
+  <div class="markdown level1 summary"><p>Wraps IMGUI computed stats in a box (1.0 API).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected static void StatsBox(Action body)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Template inspectors are UI Toolkit since 1.1: use Computed(...).&quot;)]
+protected static void StatsBox(Action body)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

@@ -92,7 +92,7 @@ Several tables may share a language; later tables in the settings list override 
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[CreateAssetMenu(menuName = &quot;2D Tower Defense Maker/Text Table&quot;, fileName = &quot;TextTable&quot;, order = 41)]
-public sealed class TextTable : ScriptableObject, ITextProvider</code></pre>
+public sealed class TextTable : ScriptableObject, ITextProvider, IVersionedAsset, ISerializationCallbackReceiver</code></pre>
   </div>
 
 
@@ -112,6 +112,8 @@ public sealed class TextTable : ScriptableObject, ITextProvider</code></pre>
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="TDMaker.Unity.Localization.ITextProvider.html">ITextProvider</a></div>
+      <div><a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></div>
+      <div><span class="xref">ISerializationCallbackReceiver</span></div>
     </dd>
   </dl>
 

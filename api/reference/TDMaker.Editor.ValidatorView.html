@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ValidatorView | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ValidatorView | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="The validator&#39;s issue list (filters, search, keyboard navigation). Hosted by the Project Overview&#39;s &amp;quot;Project Check&amp;quot; page and by ; both share this one implementation.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.ValidatorView">
+
+
+
+  <h1 id="TDMaker_Editor_ValidatorView" data-uid="TDMaker.Editor.ValidatorView" class="text-break">
+Class ValidatorView  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The validator's issue list (filters, search, keyboard navigation). Hosted by the Project Overview's &quot;Project Check&quot; page
+and by <a class="xref" href="TDMaker.Editor.ValidatorWindow.html">ValidatorWindow</a>; both share this one implementation.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ValidatorView : VisualElement, IEventHandler, IResolvedStyle, ITransform, ITransitionAnimations, IExperimentalFeatures, IVisualElementScheduler</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CallbackEventHandler</span></div>
+      <div><span class="xref">Focusable</span></div>
+      <div><span class="xref">VisualElement</span></div>
+      <div><span class="xref">ValidatorView</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IEventHandler</span></div>
+      <div><span class="xref">IResolvedStyle</span></div>
+      <div><span class="xref">ITransform</span></div>
+      <div><span class="xref">ITransitionAnimations</span></div>
+      <div><span class="xref">IExperimentalFeatures</span></div>
+      <div><span class="xref">IVisualElementScheduler</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">VisualElement.disabledUssClassName</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.SetActivePseudoState(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.SetCheckedPseudoState(bool)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Focus()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SendEvent(EventBase)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.SetEnabled(bool)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.MarkDirtyRepaint()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IsMarkedForRepaint()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ContainsPoint(Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Overlaps(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetClasses()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ClearClassList()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.AddToClassList(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.RemoveFromClassList(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.ToggleInClassList(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.EnableInClassList(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.ClassListContains(string)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.FindAncestorUserData()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SetBinding(BindingId, Binding)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetBinding(BindingId)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TryGetBinding(BindingId, out Binding)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetBindingInfos()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">VisualElement.GetBindingInfos(List&lt;BindingInfo&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.HasBinding(BindingId)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ClearBinding(BindingId)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ClearBindings()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetHierarchicalDataSourceContext()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetDataSourceContext(BindingId)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TryGetDataSourceContext(BindingId, out DataSourceContext)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TryGetLastBindingToUIResult(in BindingId, out BindingResult)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TryGetLastBindingToSourceResult(in BindingId, out BindingResult)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Add(VisualElement)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.Insert(int, VisualElement)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Remove(VisualElement)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.RemoveAt(int)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Clear()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ElementAt(int)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IndexOf(VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Children()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.comparison-1">VisualElement.Sort(Comparison&lt;VisualElement&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.BringToFront()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SendToBack()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.PlaceBehind(VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.PlaceInFront(VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.RemoveFromHierarchy()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetFirstOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetFirstAncestorOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Contains(VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.FindCommonAncestor(VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.viewDataKey</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.userData</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.canGrabFocus</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.focusController</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.disablePlayModeTint</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.usageHints</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.transform</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.scaledPixelsPerPoint</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.layout</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.contentRect</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldBound</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.localBound</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldTransform</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasActivePseudoState</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasInactivePseudoState</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasHoverPseudoState</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasCheckedPseudoState</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasEnabledPseudoState</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasDisabledPseudoState</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasFocusPseudoState</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasRootPseudoState</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.pickingMode</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.name</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.enabledInHierarchy</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.enabledSelf</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.languageDirection</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.visible</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.generateVisualContent</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.dataSource</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.dataSourcePath</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.dataSourceType</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.experimental</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hierarchy</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.cacheAsBitmap</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.parent</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.panel</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.contentContainer</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.visualTreeAssetSource</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.this[int]</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.childCount</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.schedule</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.style</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.resolvedStyle</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.customStyle</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.styleSheets</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.tooltip</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.Blur()</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.focusable</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.tabIndex</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.delegatesFocus</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.RegisterCallback&lt;TEventType&gt;(EventCallback&lt;TEventType&gt;, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.RegisterCallbackOnce&lt;TEventType&gt;(EventCallback&lt;TEventType&gt;, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.RegisterCallback&lt;TEventType, TUserArgsType&gt;(EventCallback&lt;TEventType, TUserArgsType&gt;, TUserArgsType, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.RegisterCallbackOnce&lt;TEventType, TUserArgsType&gt;(EventCallback&lt;TEventType, TUserArgsType&gt;, TUserArgsType, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.UnregisterCallback&lt;TEventType&gt;(EventCallback&lt;TEventType&gt;, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.UnregisterCallback&lt;TEventType, TUserArgsType&gt;(EventCallback&lt;TEventType, TUserArgsType&gt;, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.HasTrickleDownHandlers()</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.HasBubbleUpHandlers()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="TDMaker_Editor_ValidatorView__ctor_" data-uid="TDMaker.Editor.ValidatorView.#ctor*"></a>
+
+  <h3 id="TDMaker_Editor_ValidatorView__ctor" data-uid="TDMaker.Editor.ValidatorView.#ctor">
+  ValidatorView()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValidatorView()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Editor_ValidatorView_Issues_" data-uid="TDMaker.Editor.ValidatorView.Issues*"></a>
+
+  <h3 id="TDMaker_Editor_ValidatorView_Issues" data-uid="TDMaker.Editor.ValidatorView.Issues">
+  Issues
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The issues of the last scan.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ValidationIssue&gt; Issues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Editor.ValidationIssue.html">ValidationIssue</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_ValidatorView_Run_" data-uid="TDMaker.Editor.ValidatorView.Run*"></a>
+
+  <h3 id="TDMaker_Editor_ValidatorView_Run" data-uid="TDMaker.Editor.ValidatorView.Run">
+  Run()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scans the project and open scenes and shows the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Run()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_ValidatorView_Scanned" data-uid="TDMaker.Editor.ValidatorView.Scanned">
+  Scanned
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised after every scan with the found issues.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;List&lt;ValidationIssue&gt;&gt; Scanned</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TDMaker.Editor.ValidationIssue.html">ValidationIssue</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

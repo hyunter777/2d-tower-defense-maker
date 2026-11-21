@@ -114,6 +114,9 @@ public sealed class EnemyAssetEditor : TemplateInspectorBase</code></pre>
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI">TemplateInspectorBase.CreateInspectorGUI()</a>
+    </div>
+    <div>
       <span class="xref">Editor.SaveChanges()</span>
     </div>
     <div>
@@ -156,7 +159,7 @@ public sealed class EnemyAssetEditor : TemplateInspectorBase</code></pre>
       <span class="xref">Editor.Repaint()</span>
     </div>
     <div>
-      <span class="xref">Editor.CreateInspectorGUI()</span>
+      <span class="xref">Editor.OnInspectorGUI()</span>
     </div>
     <div>
       <span class="xref">Editor.RequiresConstantRepaint()</span>
@@ -535,20 +538,60 @@ public sealed class EnemyAssetEditor : TemplateInspectorBase</code></pre>
 </h2>
 
 
-  <a id="TDMaker_Editor_EnemyAssetEditor_OnInspectorGUI_" data-uid="TDMaker.Editor.EnemyAssetEditor.OnInspectorGUI*"></a>
+  <a id="TDMaker_Editor_EnemyAssetEditor_BuildFooter_" data-uid="TDMaker.Editor.EnemyAssetEditor.BuildFooter*"></a>
 
-  <h3 id="TDMaker_Editor_EnemyAssetEditor_OnInspectorGUI" data-uid="TDMaker.Editor.EnemyAssetEditor.OnInspectorGUI">
-  OnInspectorGUI()
+  <h3 id="TDMaker_Editor_EnemyAssetEditor_BuildFooter_UnityEngine_UIElements_VisualElement_" data-uid="TDMaker.Editor.EnemyAssetEditor.BuildFooter(UnityEngine.UIElements.VisualElement)">
+  BuildFooter(VisualElement)
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds what follows the &quot;Other&quot; group: actions and computed read-outs. Called for single-object editing only.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnInspectorGUI()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void BuildFooter(VisualElement root)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_EnemyAssetEditor_BuildGroups_" data-uid="TDMaker.Editor.EnemyAssetEditor.BuildGroups*"></a>
+
+  <h3 id="TDMaker_Editor_EnemyAssetEditor_BuildGroups_UnityEngine_UIElements_VisualElement_" data-uid="TDMaker.Editor.EnemyAssetEditor.BuildGroups(UnityEngine.UIElements.VisualElement)">
+  BuildGroups(VisualElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the identity block and the property groups (<a class="xref" href="TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_">Identity(VisualElement, EntityAssetBase)</a>,
+<a class="xref" href="TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___">Group(VisualElement, string, params string[])</a>). A subclass that does not override it keeps its own IMGUI
+<code>OnInspectorGUI</code> (1.0 behaviour).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void BuildGroups(VisualElement root)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
 
 
 

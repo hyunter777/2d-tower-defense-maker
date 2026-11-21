@@ -154,7 +154,7 @@ public sealed class LevelAuthoringEditor : Editor</code></pre>
       <span class="xref">Editor.Repaint()</span>
     </div>
     <div>
-      <span class="xref">Editor.CreateInspectorGUI()</span>
+      <span class="xref">Editor.OnInspectorGUI()</span>
     </div>
     <div>
       <span class="xref">Editor.RequiresConstantRepaint()</span>
@@ -497,10 +497,10 @@ public sealed class LevelAuthoringEditor : Editor</code></pre>
 </h2>
 
 
-  <a id="TDMaker_Editor_LevelAuthoringEditor_OnInspectorGUI_" data-uid="TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI*"></a>
+  <a id="TDMaker_Editor_LevelAuthoringEditor_CreateInspectorGUI_" data-uid="TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI*"></a>
 
-  <h3 id="TDMaker_Editor_LevelAuthoringEditor_OnInspectorGUI" data-uid="TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI">
-  OnInspectorGUI()
+  <h3 id="TDMaker_Editor_LevelAuthoringEditor_CreateInspectorGUI" data-uid="TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI">
+  CreateInspectorGUI()
   
   </h3>
 
@@ -508,10 +508,15 @@ public sealed class LevelAuthoringEditor : Editor</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnInspectorGUI()</code></pre>
+    <pre><code class="lang-csharp hljs">public override VisualElement CreateInspectorGUI()</code></pre>
   </div>
 
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
 
 
 

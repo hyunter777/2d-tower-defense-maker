@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class JsonFileSaveStore | 2D Tower Defense Maker API ">
       
-      <meta name="description" content="Default store: one JSON file per slot under  (folder TDMakerSaves, files slot1.json, slot2.json, ...). Writes go to a temporary file that then replaces the slot file, so a crash mid-write leaves the previous save intact. An unreadable file is renamed to slotN.json.bak (or .bak2, ...) and kept. Not for WebGL (use , or ).">
+      <meta name="description" content="Default store: one JSON file per slot under  (folder TDMakerSaves, files slot1.json, slot2.json, ...). Writes go to a temporary file that then replaces the slot file, so a crash mid-write leaves the previous save intact. An unreadable file is renamed to slotN.json.bak (or .bak2, ...) and kept. Needs a writable file system; otherwise use  (or , which picks one).">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -86,7 +86,7 @@ Class JsonFileSaveStore
   <div class="markdown summary"><p>Default store: one JSON file per slot under <span class="xref">UnityEngine.Application.persistentDataPath</span> (folder <code>TDMakerSaves</code>, files
 <code>slot1.json</code>, <code>slot2.json</code>, ...). Writes go to a temporary file that then replaces the slot file, so a crash
 mid-write leaves the previous save intact. An unreadable file is renamed to <code>slotN.json.bak</code> (or <code>.bak2</code>, ...)
-and kept. Not for WebGL (use <a class="xref" href="TDMaker.Unity.Campaign.PlayerPrefsSaveStore.html">PlayerPrefsSaveStore</a>, or <a class="xref" href="TDMaker.Unity.Campaign.SaveStoreFactory.html#TDMaker_Unity_Campaign_SaveStoreFactory_CreateDefault_System_Int32_System_String_">CreateDefault(int, string)</a>).</p>
+and kept. Needs a writable file system; otherwise use <a class="xref" href="TDMaker.Unity.Campaign.PlayerPrefsSaveStore.html">PlayerPrefsSaveStore</a> (or <a class="xref" href="TDMaker.Unity.Campaign.SaveStoreFactory.html#TDMaker_Unity_Campaign_SaveStoreFactory_CreateDefault_System_Int32_System_String_">CreateDefault(int, string)</a>, which picks one).</p>
 </div>
   <div class="markdown conceptual"></div>
 

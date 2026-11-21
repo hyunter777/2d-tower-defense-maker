@@ -636,6 +636,32 @@ Class ValidatorWindow
 
 
 
+  <a id="TDMaker_Editor_ValidatorWindow_CreateGUI_" data-uid="TDMaker.Editor.ValidatorWindow.CreateGUI*"></a>
+
+  <h3 id="TDMaker_Editor_ValidatorWindow_CreateGUI" data-uid="TDMaker.Editor.ValidatorWindow.CreateGUI">
+  CreateGUI()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateGUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="TDMaker_Editor_ValidatorWindow_Open_" data-uid="TDMaker.Editor.ValidatorWindow.Open*"></a>
 
   <h3 id="TDMaker_Editor_ValidatorWindow_Open_System_Boolean_" data-uid="TDMaker.Editor.ValidatorWindow.Open(System.Boolean)">
@@ -643,7 +669,7 @@ Class ValidatorWindow
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Opens the validator; optionally runs a fresh scan.</p>
+  <div class="markdown level1 summary"><p>Opens the validator, docked beside an open maker window; optionally runs a fresh scan.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -681,7 +707,8 @@ Class ValidatorWindow
   </h3>
 
   <div class="markdown level1 summary"><p>Opens the validator as a floating window next to <code class="paramref">owner</code> (right side, or left when there is no room) so it
-does not cover it, runs a scan and gives the focus back to the owner. A docked validator stays where it is.</p>
+does not cover it, runs a scan and gives the focus back to the owner. A validator that is already open (docked or
+floating) is reused; a docked validator stays where it is.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -745,13 +772,12 @@ does not cover it, runs a scan and gives the focus back to the owner. A docked v
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Opens the validator and runs it.</p>
+  <div class="markdown level1 summary"><p>Opens the Project Overview on its Project Check page and runs a scan (menu entry point).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[MenuItem(&quot;Tools/2D Tower Defense Maker/Validate Project&quot;, priority = 30)]
-public static void ShowWindow()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ShowWindow()</code></pre>
   </div>
 
 

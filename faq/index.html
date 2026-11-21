@@ -1054,7 +1054,9 @@ This release is <strong>PC only (mouse and keyboard; touch UI not yet)</strong>.
 <p><strong>Can I add a new mechanic without editing package code?</strong>
 Yes: custom systems, per-entity data, target selectors, damage hooks, ability actions and commands. See <a href="../extending/">Extending the Framework</a> and the compiled examples in <code>Samples/Extending</code>.</p>
 <p><strong>Where are the logs from Dry Run and the Validator?</strong>
-The Map Editor shows <strong>Validate</strong>, <strong>Dry Run</strong> and the latest results above its scrolling content. Click the error/warning summary to open the full Validator list. The complete Dry Run report and <code>ValidatorWindow.RunBatch</code> results are also written to the Console.</p>
+The Map Editor shows <strong>Validate</strong>, <strong>Dry Run</strong> and the latest results above its scrolling content; <strong>Open list</strong> beside the summary opens the full Validator list next to the Map Editor without covering it. <strong>Tools &gt; 2D Tower Defense Maker &gt; Validate Project</strong> opens the hub's <strong>Project Check</strong> page and scans the project there, with severity filters, a search and per-row tags. The complete Dry Run report and <code>ValidatorWindow.RunBatch</code> results are also written to the Console.</p>
+<p><strong>I updated the package and the Validator shows Data format warnings.</strong>
+Those assets were saved by an older release. They still load (the migration runs in memory), and the file on disk keeps its old version until you re-save it. Run <strong>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Asset Formats</strong> (or the <strong>Upgrade…</strong> button in the Project Overview's <strong>Project Check</strong> summary) to save them in the current format. The re-save cannot be undone, so commit or back up the project first. A <strong>Data format</strong> <em>error</em> instead means the asset was saved by a newer package than the installed one: update the package; the file is left untouched until then.</p>
 <p><strong>Why is the interface still English after I set the Inspector language to <code>ko</code>?</strong>
 In the Editor, enable <strong>Ignore Saved Language In Editor</strong> and set <strong>Language</strong> to <code>ko</code>. If that option is disabled, the saved PlayerPrefs language takes precedence. You can also select Korean from the sample title screen. Keep the Korean text table and the sample theme's fallback font assigned together.</p>
 <p><strong>Why is there no spell button in my fresh level?</strong>
@@ -1065,6 +1067,10 @@ If you are aiming a hero move, spell or rally point, right-click to cancel first
 Saves record the operating system's UTC time in ISO 8601 format. The slot screen displays local time using the Gregorian <code>yyyy-MM-dd HH:mm</code> format. Existing timestamps are preserved; correcting the system clock does not rewrite older save dates.</p>
 <p><strong>Does a colored Wave Set icon mean there is an error?</strong>
 2D Tower Defense Maker does not assign a special red warning icon to Wave Sets. Check the Validator's error/warning counts and Inspector messages rather than judging an asset by its icon color.</p>
+<p><strong>Where did the Welcome window go?</strong>
+It became the <strong>Project Overview</strong> hub in 1.1 (<strong>Tools &gt; 2D Tower Defense Maker &gt; Project Overview</strong>). The startup preference carries over, and existing code that calls <code>WelcomeWindow.Open()</code> still opens the hub.</p>
+<p><strong>The Project Overview opens every time I open the project. How do I stop it?</strong>
+Turn off <strong>Show on startup</strong> at the bottom of the Project Overview. The choice is stored per project. The window never opens in batch mode, so tests and builds are unaffected.</p>
 <p><strong>My question is not answered here. Where can I ask?</strong>
 Post it in <a href="https://github.com/hyunter777/2d-tower-defense-maker/discussions/categories/q-a">Q&amp;A discussions</a>. Report bugs as an <a href="https://github.com/hyunter777/2d-tower-defense-maker/issues">issue</a>, and use <strong>hyunter@flycat.co.kr</strong> for private matters. <a href="../support-license/#getting-help">Support and licenses</a> lists what to include.</p>
 

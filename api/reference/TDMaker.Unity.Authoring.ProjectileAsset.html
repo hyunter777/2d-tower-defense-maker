@@ -89,7 +89,7 @@ Class ProjectileAsset
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[CreateAssetMenu(menuName = &quot;2D Tower Defense Maker/Projectile&quot;, fileName = &quot;Projectile&quot;, order = 14)]
-public sealed class ProjectileAsset : ScriptableObject</code></pre>
+public sealed class ProjectileAsset : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver</code></pre>
   </div>
 
 
@@ -105,6 +105,13 @@ public sealed class ProjectileAsset : ScriptableObject</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></div>
+      <div><span class="xref">ISerializationCallbackReceiver</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">

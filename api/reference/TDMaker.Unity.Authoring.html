@@ -115,6 +115,11 @@ A region whose status effect is empty becomes a pulse-only region.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html">AssetSchema</a></dt>
+      <dd><p>Schema versions and ordered migration steps for authored assets, so that data saved by an older release opens without silent loss.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Unity.Authoring.AudioCue.html">AudioCue</a></dt>
       <dd><p>A sound hook: one of several clips played with a random pitch. Empty cues are silent, so every slot is optional.
 Cues are routed through <code>TDMaker.Unity.View.AudioCuePlayer</code> (pooled AudioSources).</p>
@@ -502,9 +507,29 @@ at or above <a class="xref" href="TDMaker.Unity.Authoring.VictoryRatingData.html
       <dd><p>An ordered list of waves.</p>
 </dd>
     </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Authoring.ISubclassVersionedAsset.html">ISubclassVersionedAsset</a></dt>
+      <dd><p>A second, independent version track for your own subclass of a built-in asset base (<a class="xref" href="TDMaker.Unity.Authoring.EntityAssetBase.html">EntityAssetBase</a>,
+<a class="xref" href="TDMaker.Unity.Authoring.AbilityActionAsset.html">AbilityActionAsset</a>, <a class="xref" href="TDMaker.Unity.Authoring.TemplateExtensionAsset.html">TemplateExtensionAsset</a>). The base's <a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html#TDMaker_Unity_Authoring_IVersionedAsset_SchemaVersion">SchemaVersion</a>
+belongs to the framework, so your fields are versioned here and later framework updates cannot collide with your step numbers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></dt>
+      <dd><p>An authored asset that carries a serialized schema version and takes part in <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html">AssetSchema</a> migrations.</p>
+</dd>
+    </dl>
     <h3 id="enums">
 Enums
 </h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Unity.Authoring.AssetSchemaState.html">AssetSchemaState</a></dt>
+      <dd><p>Where an asset stands relative to the running code's schema.</p>
+</dd>
+    </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Unity.Authoring.AudioChannel.html">AudioChannel</a></dt>
       <dd><p>Volume channel of a sound. Every cue and music track is scaled by <a class="xref" href="TDMaker.Unity.Authoring.AudioChannel.html#TDMaker_Unity_Authoring_AudioChannel_Master">Master</a> and its own channel

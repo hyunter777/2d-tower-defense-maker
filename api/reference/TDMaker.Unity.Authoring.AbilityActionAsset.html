@@ -90,7 +90,7 @@ so keep it immutable and store per-entity state in a custom component.</p>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AbilityActionAsset : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AbilityActionAsset : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver</code></pre>
   </div>
 
 
@@ -106,6 +106,13 @@ so keep it immutable and store per-entity state in a custom component.</p>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></div>
+      <div><span class="xref">ISerializationCallbackReceiver</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -353,6 +360,11 @@ so keep it immutable and store per-entity state in a custom component.</p>
 
 
 
+  <h2 id="TDMaker_Unity_Authoring_AbilityActionAsset_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Versioned by <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html">AssetSchema</a>. Version your own subclass fields with <a class="xref" href="TDMaker.Unity.Authoring.ISubclassVersionedAsset.html">ISubclassVersionedAsset</a>; if your subclass
+implements <span class="xref">UnityEngine.ISerializationCallbackReceiver</span> itself, call <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleBeforeSerialize_TDMaker_Unity_Authoring_IVersionedAsset_">HandleBeforeSerialize(IVersionedAsset)</a> and
+<a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleAfterDeserialize_TDMaker_Unity_Authoring_IVersionedAsset_">HandleAfterDeserialize(IVersionedAsset)</a> from it.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors

@@ -867,6 +867,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#versioning-your-own-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versioning your own assets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-the-view-consumes-events" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1250,6 +1261,17 @@
     <span class="md-ellipsis">
       
         6. Command and event
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versioning-your-own-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versioning your own assets
       
     </span>
   </a>
@@ -1781,6 +1803,37 @@
 <span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetTowerStance</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">towerId</span><span class="p">,</span><span class="w"> </span><span class="n">Stance</span><span class="w"> </span><span class="n">stance</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">runner</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">SetStance</span><span class="p">(</span><span class="n">towerId</span><span class="p">,</span><span class="w"> </span><span class="n">stance</span><span class="p">));</span>
 </code></pre></div>
 <p>Built-in command types cannot be replaced. A command type without a handler is rejected with <code>InvalidCommand</code>.</p>
+<h2 id="versioning-your-own-assets">Versioning your own assets<a class="headerlink" href="#versioning-your-own-assets" title="Permanent link">&para;</a></h2>
+<p>The maker's assets carry a data format version (<a href="../editor-tools/#upgrading-assets-after-a-package-update">Editor Tools</a>). A standalone <code>ScriptableObject</code> of your own can carry one too, so data saved by an old build of your game opens with the new shape instead of silently losing fields. <code>IVersionedAsset</code>, <code>ISubclassVersionedAsset</code> and <code>AssetSchema</code> live in <code>TDMaker.Unity.Authoring</code>. Implement <code>IVersionedAsset</code>, add a version field with <strong>no initializer</strong> (data saved before versioning reads 0), forward the serialization callbacks, and register steps from the static constructor:</p>
+<div class="highlight"><pre><span></span><code><span class="na">[CreateAssetMenu(menuName = "My Game/Tower Skin")]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">sealed</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TowerSkin</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ScriptableObject</span><span class="p">,</span><span class="w"> </span><span class="n">IVersionedAsset</span><span class="p">,</span><span class="w"> </span><span class="n">ISerializationCallbackReceiver</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="na">[SerializeField, HideInInspector]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">schemaVersion</span><span class="p">;</span><span class="w">      </span><span class="c1">// no initializer on purpose</span>
+<span class="w">    </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">damageScale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1f</span><span class="p">;</span>
+<span class="w">    </span><span class="na">[SerializeField, HideInInspector]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">damageBonus</span><span class="p">;</span><span class="w">      </span><span class="c1">// the old field, kept readable</span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nf">TowerSkin</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">AssetSchema</span><span class="p">.</span><span class="n">RegisterStep</span><span class="o">&lt;</span><span class="n">TowerSkin</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">skin</span><span class="w"> </span><span class="o">=&gt;</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">skin</span><span class="p">.</span><span class="n">damageBonus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0f</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w">                        </span><span class="c1">// idempotent: 0 can also mean "made in code"</span>
+<span class="w">            </span><span class="n">skin</span><span class="p">.</span><span class="n">damageScale</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">skin</span><span class="p">.</span><span class="n">damageBonus</span><span class="p">;</span>
+<span class="w">            </span><span class="n">skin</span><span class="p">.</span><span class="n">damageBonus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0f</span><span class="p">;</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">IVersionedAsset</span><span class="p">.</span><span class="n">SchemaVersion</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">schemaVersion</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">schemaVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="n">ISerializationCallbackReceiver</span><span class="p">.</span><span class="n">OnBeforeSerialize</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AssetSchema</span><span class="p">.</span><span class="n">HandleBeforeSerialize</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="n">ISerializationCallbackReceiver</span><span class="p">.</span><span class="n">OnAfterDeserialize</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AssetSchema</span><span class="p">.</span><span class="n">HandleAfterDeserialize</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>Steps run in version order and must be idempotent.</strong> A step registered at version <code>n</code> converts <code>n</code> into <code>n + 1</code>; the current version is one past your highest step (at least 1). The same step can run again on an asset that was created in code and not yet stamped, so it must do nothing when the data is already in the new shape.</li>
+<li><strong>No Unity API inside a step.</strong> Steps run from <code>OnAfterDeserialize</code>, possibly off the main thread: touch the asset's serialized fields only (no <code>name</code>, no <code>AssetDatabase</code>, no comparison against other objects). Work that needs the editor belongs in <code>OnEnable</code> or in an editor pass.</li>
+<li><strong>Renaming a field:</strong> keep <code>[FormerlySerializedAs("oldName")]</code> for as long as old data may exist and never remove it; a rename alone needs no step. When the <em>meaning</em> changes (units, ranges, a field split or merged), keep the old field readable and hidden and convert it in a step that also clears it, as the example does.</li>
+<li><strong>Subclasses of the maker's bases</strong> (<code>EntityAssetBase</code>, <code>AbilityActionAsset</code>, <code>TemplateExtensionAsset</code>) get the framework's callbacks from the base. Version your own fields on a separate track with <code>ISubclassVersionedAsset</code> instead of registering steps for the base: <code>static MyBarrier() { AssetSchema.RegisterStep&lt;MyBarrier&gt;(0, b =&gt; …); }</code> then runs on that track, after the framework's own steps. Registering a subclass of a built-in base without the interface throws <code>ArgumentException</code>.</li>
+<li>Your assets are found automatically: the Validator's <strong>Data format</strong> rule and <strong>Tools &gt; 2D Tower Defense Maker &gt; Upgrade Asset Formats</strong> include every loaded type that implements <code>IVersionedAsset</code>.</li>
+</ul>
 <h2 id="how-the-view-consumes-events">How the view consumes events<a class="headerlink" href="#how-the-view-consumes-events" title="Permanent link">&para;</a></h2>
 <p><code>SimulationRunner.EventRaised</code> delivers every event in emission order once per frame, after the frame's ticks (the runner clears them afterwards). Subscribe from any MonoBehaviour – <code>ExtendingSample</code> does:</p>
 <div class="highlight"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnSimEvent</span><span class="p">(</span><span class="k">in</span><span class="w"> </span><span class="n">SimEvent</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>

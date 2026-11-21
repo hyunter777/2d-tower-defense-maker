@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class CampaignAssetEditor | 2D Tower Defense Maker API ">
       
-      <meta name="description" content="Inspector of : a map view of the world map picture with the level points and their unlock roads (arrows from prerequisites, dashed for branches, red for problems). Click a point to select it, drag it to move it, click an empty spot to move the selected point there, drop Level assets on the map to add them, right-click a point for more. Below: the ordered level list, the selected level&#39;s settings and the validation results. Every edit is undoable.">
+      <meta name="description" content="Inspector of : a map view of the world map picture with the level points and their unlock roads (arrows from prerequisites, dashed for branches, red for problems). Click a point to select it, drag it to move it, click an empty spot to move the selected point there, drop Level assets on the map to add them, right-click a point for more. Below: the ordered level list, the selected level&#39;s settings and the validation results. Every edit is undoable. The form is UI Toolkit; the map stays an IMGUI canvas.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -86,7 +86,8 @@ Class CampaignAssetEditor
   <div class="markdown summary"><p>Inspector of <a class="xref" href="TDMaker.Unity.Campaign.CampaignAsset.html">CampaignAsset</a>: a map view of the world map picture with the level points and their unlock roads
 (arrows from prerequisites, dashed for branches, red for problems). Click a point to select it, drag it to move it, click
 an empty spot to move the selected point there, drop Level assets on the map to add them, right-click a point for more.
-Below: the ordered level list, the selected level's settings and the validation results. Every edit is undoable.</p>
+Below: the ordered level list, the selected level's settings and the validation results. Every edit is undoable.
+The form is UI Toolkit; the map stays an IMGUI canvas.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,7 +158,7 @@ public sealed class CampaignAssetEditor : Editor</code></pre>
       <span class="xref">Editor.Repaint()</span>
     </div>
     <div>
-      <span class="xref">Editor.CreateInspectorGUI()</span>
+      <span class="xref">Editor.OnInspectorGUI()</span>
     </div>
     <div>
       <span class="xref">Editor.RequiresConstantRepaint()</span>
@@ -500,10 +501,10 @@ public sealed class CampaignAssetEditor : Editor</code></pre>
 </h2>
 
 
-  <a id="TDMaker_Editor_CampaignAssetEditor_OnInspectorGUI_" data-uid="TDMaker.Editor.CampaignAssetEditor.OnInspectorGUI*"></a>
+  <a id="TDMaker_Editor_CampaignAssetEditor_CreateInspectorGUI_" data-uid="TDMaker.Editor.CampaignAssetEditor.CreateInspectorGUI*"></a>
 
-  <h3 id="TDMaker_Editor_CampaignAssetEditor_OnInspectorGUI" data-uid="TDMaker.Editor.CampaignAssetEditor.OnInspectorGUI">
-  OnInspectorGUI()
+  <h3 id="TDMaker_Editor_CampaignAssetEditor_CreateInspectorGUI" data-uid="TDMaker.Editor.CampaignAssetEditor.CreateInspectorGUI">
+  CreateInspectorGUI()
   
   </h3>
 
@@ -511,10 +512,15 @@ public sealed class CampaignAssetEditor : Editor</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnInspectorGUI()</code></pre>
+    <pre><code class="lang-csharp hljs">public override VisualElement CreateInspectorGUI()</code></pre>
   </div>
 
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
 
 
 

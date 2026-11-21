@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AssetFormatUpgrade | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AssetFormatUpgrade | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Finds maker assets () written in an older data format and re-saves them in the current one, using the steps registered with . Assets saved by a newer package are never touched. The upgrade is a re-save and is not undoable; commit or back up the project first.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.AssetFormatUpgrade">
+
+
+
+  <h1 id="TDMaker_Editor_AssetFormatUpgrade" data-uid="TDMaker.Editor.AssetFormatUpgrade" class="text-break">
+Class AssetFormatUpgrade  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Finds maker assets (<a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a>) written in an older data format and re-saves them in the current one,
+using the steps registered with <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html">AssetSchema</a>. Assets saved by a newer package are never touched.
+The upgrade is a re-save and is not undoable; commit or back up the project first.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class AssetFormatUpgrade</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AssetFormatUpgrade</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_AssetFormatUpgrade_CountOutdated_" data-uid="TDMaker.Editor.AssetFormatUpgrade.CountOutdated*"></a>
+
+  <h3 id="TDMaker_Editor_AssetFormatUpgrade_CountOutdated_System_Int32__" data-uid="TDMaker.Editor.AssetFormatUpgrade.CountOutdated(System.Int32@)">
+  CountOutdated(out int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts outdated maker assets in the project; <code class="paramref">newer</code> receives the number saved by a newer package.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CountOutdated(out int newer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_AssetFormatUpgrade_RunBatch_" data-uid="TDMaker.Editor.AssetFormatUpgrade.RunBatch*"></a>
+
+  <h3 id="TDMaker_Editor_AssetFormatUpgrade_RunBatch" data-uid="TDMaker.Editor.AssetFormatUpgrade.RunBatch">
+  RunBatch()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Headless entry point for <code>-executeMethod</code>: upgrades without any dialog and logs the summary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RunBatch()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_AssetFormatUpgrade_UpgradeAll_" data-uid="TDMaker.Editor.AssetFormatUpgrade.UpgradeAll*"></a>
+
+  <h3 id="TDMaker_Editor_AssetFormatUpgrade_UpgradeAll" data-uid="TDMaker.Editor.AssetFormatUpgrade.UpgradeAll">
+  UpgradeAll()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Upgrades every outdated maker asset with <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_Upgrade_UnityEngine_Object_">Upgrade(Object)</a>, marks it dirty and saves once at the end.
+Newer assets are skipped. Logs a one-line summary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UpgradeReport UpgradeAll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Editor.UpgradeReport.html">UpgradeReport</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

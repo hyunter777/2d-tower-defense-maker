@@ -92,7 +92,7 @@ Edit it in the inspector: click in the map view to place level points, and the i
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[CreateAssetMenu(menuName = &quot;2D Tower Defense Maker/Campaign&quot;, fileName = &quot;Campaign&quot;, order = 2)]
-public sealed class CampaignAsset : ScriptableObject</code></pre>
+public sealed class CampaignAsset : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver</code></pre>
   </div>
 
 
@@ -108,6 +108,13 @@ public sealed class CampaignAsset : ScriptableObject</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></div>
+      <div><span class="xref">ISerializationCallbackReceiver</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">

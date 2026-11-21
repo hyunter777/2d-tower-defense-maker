@@ -1,6 +1,6 @@
 {
   "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
-  "source_base_path": "C:/Users/hyunter/AppData/Local/Temp/claude/d911783c7316f283/9677ac96-5bb2-4d75-bb02-c03f28d24c6f/scratchpad/td-docs/docfx",
+  "source_base_path": "D:/workspace_ai/1102.2d-tower-defense-maker/.work/qa08/docs-publish/docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -2547,6 +2547,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.AssetFormatUpgrade.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.AssetFormatUpgrade.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.AssetFormatUpgrade",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.AssetFormatUpgrade.yml\" sourcestartlinenumber=\"1\">Finds maker assets (<xref href=\"TDMaker.Unity.Authoring.IVersionedAsset\" data-throw-if-not-resolved=\"false\"></xref>) written in an older data format and re-saves them in the current one,\nusing the steps registered with <xref href=\"TDMaker.Unity.Authoring.AssetSchema\" data-throw-if-not-resolved=\"false\"></xref>. Assets saved by a newer package are never touched.\nThe upgrade is a re-save and is not undoable; commit or back up the project first.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../api-metadata/TDMaker.Editor.AudioCuePreview.yml",
       "output": {
         ".html": {
@@ -2585,7 +2599,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Editor.CampaignAssetEditor",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.CampaignAssetEditor.yml\" sourcestartlinenumber=\"1\">Inspector of <xref href=\"TDMaker.Unity.Campaign.CampaignAsset\" data-throw-if-not-resolved=\"false\"></xref>: a map view of the world map picture with the level points and their unlock roads\n(arrows from prerequisites, dashed for branches, red for problems). Click a point to select it, drag it to move it, click\nan empty spot to move the selected point there, drop Level assets on the map to add them, right-click a point for more.\nBelow: the ordered level list, the selected level's settings and the validation results. Every edit is undoable.</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.CampaignAssetEditor.yml\" sourcestartlinenumber=\"1\">Inspector of <xref href=\"TDMaker.Unity.Campaign.CampaignAsset\" data-throw-if-not-resolved=\"false\"></xref>: a map view of the world map picture with the level points and their unlock roads\n(arrows from prerequisites, dashed for branches, red for problems). Click a point to select it, drag it to move it, click\nan empty spot to move the selected point there, drop Level assets on the map to add them, right-click a point for more.\nBelow: the ordered level list, the selected level's settings and the validation results. Every edit is undoable.\nThe form is UI Toolkit; the map stays an IMGUI canvas.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2614,6 +2628,34 @@
       "IsMRef": true,
       "Title": "TDMaker.Editor.CombatMath",
       "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.CombatMath.yml\" sourcestartlinenumber=\"1\">Editor-side estimates of combat numbers. Mirrors the simulation's reduction rules\n(physical, magical, explosion/electric at half physical, poison, true) but ignores rounding,\nstatus effects and incoming-damage multipliers, so values are approximate (&quot;≈&quot;).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.ContentEditorWindow-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.ContentEditorWindow-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.ContentEditorWindow<TAsset>",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.ContentEditorWindow-1.yml\" sourcestartlinenumber=\"1\">Shared frame of the per-type content editors: header, toolbar (search, New, Duplicate, Delete, Ping), a list of every\n<code class=\"typeparamref\">TAsset</code> in the project, a form bound to the selected asset (so Undo and saving are Unity's own),\nan optional preview column (hidden below 980 px) and a live check line.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.ContentView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.ContentView.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.ContentView",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.ContentView.yml\" sourcestartlinenumber=\"1\">The Content page of the Project Overview: every maker asset in one list (filter by kind, search by name or folder, show only\nassets with problems), and for the selected asset its project check problems, the maker assets that use it and that it uses,\nand buttons to open it in its editor, select it in the Project window or play it (levels).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2768,6 +2810,20 @@
       "IsMRef": true,
       "Title": "TDMaker.Editor.LevelDryRun",
       "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.LevelDryRun.yml\" sourcestartlinenumber=\"1\">Headless content check: bakes a level and runs the simulation without rendering.\nThe undefended run calls every wave as early as possible with no towers (shows total threat);\nthe fortified run builds and upgrades towers on every slot with unlimited gold, buys every tower ability,\nspawns the level's heroes (moving them to the front enemy and spending skill points), and casts ready spells\nat the leading enemy (checks that every build, branch, rally, ability, move and cast is accepted and that the\nlevel can be completed). The budget pass plays with the level's real starting gold: it starts the first wave, lets later\nwaves arrive on their timers and spends gold greedily (builds slots in list order, cycling the buildable towers, then the\ncheapest upgrade, branch or ability rank), with the same hero and spell assistance (checks that a sensible defense wins).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.LevelPlay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.LevelPlay.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.LevelPlay",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.LevelPlay.yml\" sourcestartlinenumber=\"1\">&quot;Play this level&quot;: saves, opens the saved scene that plays the level (or a temporary unsaved scene with the game rig when no\nscene does) and enters Play mode. When Play mode stops, the scenes that were open before are opened again. Modelled on\n<xref href=\"TDMaker.Editor.UnitSandboxPlay\" data-throw-if-not-resolved=\"false\"></xref> (same scene capture and restore); nothing is written to disk except the saves the user agrees to.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2967,6 +3023,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.ProjectOverviewWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.ProjectOverviewWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.ProjectOverviewWindow",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.ProjectOverviewWindow.yml\" sourcestartlinenumber=\"1\"><b>Tools &gt; 2D Tower Defense Maker &gt; Project Overview</b>: the maker's hub. It shows TextMesh Pro readiness, how\nmuch content the project has (one card per kind), the project check summary and links to every editor. Its pages are\nOverview, Content (every maker asset with its problems and references), Project Check and Samples. It opens by itself the first time a project loads the package, and then at each editor start\nwhile <b>Show on startup</b> is on (per project). Other maker windows dock beside it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../api-metadata/TDMaker.Editor.ProjectValidator.yml",
       "output": {
         ".html": {
@@ -3019,7 +3089,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Editor.SampleBrowserWindow",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.SampleBrowserWindow.yml\" sourcestartlinenumber=\"1\">Separate entry point for optional examples and the complete sample game.</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.SampleBrowserWindow.yml\" sourcestartlinenumber=\"1\">Standalone host of <xref href=\"TDMaker.Editor.SamplesView\" data-throw-if-not-resolved=\"false\"></xref>. The menu now opens the Project Overview's Samples page instead; this window stays\nfor code that opens it directly.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3065,6 +3135,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.SamplesView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.SamplesView.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.SamplesView",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.SamplesView.yml\" sourcestartlinenumber=\"1\">The optional samples page: start your own game, the complete sample game, feature examples and sample regeneration. Hosted by the\nProject Overview's &quot;Samples&quot; page and by <xref href=\"TDMaker.Editor.SampleBrowserWindow\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../api-metadata/TDMaker.Editor.ScenePreview.yml",
       "output": {
         ".html": {
@@ -3107,6 +3191,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.TDMakerMenus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.TDMakerMenus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.TDMakerMenus",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.TDMakerMenus.yml\" sourcestartlinenumber=\"1\">Every <b>Tools &gt; 2D Tower Defense Maker</b> menu path and priority in one place. Priorities are grouped in bands\n(gaps of 11 or more make Unity draw a separator): Start, Editors, Check and play, Samples, Help. Maker-development tools live under <xref href=\"TDMaker.Editor.TDMakerMenus.DevRoot\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.TDMakerUi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.TDMakerUi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.TDMakerUi",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.TDMakerUi.yml\" sourcestartlinenumber=\"1\">Shared UI Toolkit building blocks of the maker windows: the theme (USS tokens in TDMakerEditor.uss), headers,\nheadings, notes, rows, sections, cards, badges, buttons and list rows. Class names use the <code>td-</code> prefix.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.TDMakerWindows.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.TDMakerWindows.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.TDMakerWindows",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.TDMakerWindows.yml\" sourcestartlinenumber=\"1\">Opens maker windows as tabs of one dock: a new window docks next to whichever maker window is already open (the\nProject Overview first), so the maker does not scatter floating windows. Windows are found by type, so removing a\nwindow never breaks this list.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../api-metadata/TDMaker.Editor.TemplateInspectorBase.yml",
       "output": {
         ".html": {
@@ -3117,7 +3243,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Editor.TemplateInspectorBase",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.TemplateInspectorBase.yml\" sourcestartlinenumber=\"1\">Base for grouped template inspectors: draws named property groups in persistent foldouts and any fields not\nclaimed by a group under &quot;Other&quot;, so new serialized fields never disappear from the inspector.</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.TemplateInspectorBase.yml\" sourcestartlinenumber=\"1\">Base for grouped template inspectors (UI Toolkit): an identity block, named property groups in persistent foldout sections,\nany fields not claimed by a group under &quot;Other&quot; (so new serialized fields never disappear from the inspector), then the\nsubclass footer (actions and computed read-outs, refreshed when the asset changes).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3471,6 +3597,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.UpgradeReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.UpgradeReport.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.UpgradeReport",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.UpgradeReport.yml\" sourcestartlinenumber=\"1\">Outcome of <xref href=\"TDMaker.Editor.AssetFormatUpgrade.UpgradeAll\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../api-metadata/TDMaker.Editor.UpgradeShopAssetEditor.yml",
       "output": {
         ".html": {
@@ -3523,7 +3663,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Editor.UpgradeTreeWindow",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.UpgradeTreeWindow.yml\" sourcestartlinenumber=\"1\">Graph view of a tower's upgrade tree (level 1 → 2 → 3 → branches). Each node shows its cost, cumulative\ninvestment and sell refund; clicking a node edits it inline. Nodes can grow new levels or branches, which are\ncreated as assets next to their parent. Drag a node to move it (the offset is kept per tree in the project's UserSettings,\neditor only); drag the empty canvas, or use the middle mouse button, to pan.</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.UpgradeTreeWindow.yml\" sourcestartlinenumber=\"1\">Graph view of a tower's upgrade tree (level 1 → 2 → 3 → branches). Each node shows its cost, cumulative\ninvestment and sell refund; clicking a node edits it in the sidebar. Nodes can grow new levels or branches, which are\ncreated as assets next to their parent. Drag a node to move it (the offset is kept per tree in the project's UserSettings,\neditor only); drag the empty canvas, or use the middle mouse button, to pan.\nThe toolbar and the sidebar are UI Toolkit; the node graph is an IMGUI canvas (<xref href=\"TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement%2cSystem.Action)\" data-throw-if-not-resolved=\"false\"></xref>).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3538,6 +3678,20 @@
       "IsMRef": true,
       "Title": "TDMaker.Editor.ValidationIssue",
       "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.ValidationIssue.yml\" sourcestartlinenumber=\"1\">One problem found by <xref href=\"TDMaker.Editor.ProjectValidator\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Editor.ValidatorView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Editor.ValidatorView.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Editor.ValidatorView",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.ValidatorView.yml\" sourcestartlinenumber=\"1\">The validator's issue list (filters, search, keyboard navigation). Hosted by the Project Overview's &quot;Project Check&quot; page\nand by <xref href=\"TDMaker.Editor.ValidatorWindow\" data-throw-if-not-resolved=\"false\"></xref>; both share this one implementation.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3579,7 +3733,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Editor.WaveTimelineWindow",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.WaveTimelineWindow.yml\" sourcestartlinenumber=\"1\">Timeline editor for <xref href=\"TDMaker.Unity.Authoring.WaveSetAsset\" data-throw-if-not-resolved=\"false\"></xref>s. Each wave group is a row (sorted by path); each spawn entry is a\nbar from its start delay to its last wait, with a tick per spawn, colored by enemy. Drag bars to change delays,\ndrag the right edge to change the interval (Shift: count), and edit the selection in the side inspector. With Follow on it\nshows the waves of the selected Wave Set / Level asset, or of the Level Authoring selected in (or present in) the open scene.</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.WaveTimelineWindow.yml\" sourcestartlinenumber=\"1\">Timeline editor for <xref href=\"TDMaker.Unity.Authoring.WaveSetAsset\" data-throw-if-not-resolved=\"false\"></xref>s. Each wave group is a row (sorted by path); each spawn entry is a\nbar from its start delay to its last wait, with a tick per spawn, colored by enemy. Drag bars to change delays,\ndrag the right edge to change the interval (Shift: count), and edit the selection in the side inspector. With Follow on it\nshows the waves of the selected Wave Set / Level asset, or of the Level Authoring selected in (or present in) the open scene.\nThe source picker, toolbar, wave list, summaries and inspector are UI Toolkit; the lanes are an IMGUI canvas.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3607,7 +3761,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Editor.WelcomeWindow",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.WelcomeWindow.yml\" sourcestartlinenumber=\"1\"><b>Tools &gt; 2D Tower Defense Maker &gt; Welcome</b>: first stop after importing the package – check (and import) the TextMesh Pro\nEssential Resources, start an independent new level, browse optional examples,\nand open the Unit Workshop or the Map Editor. Shown automatically the first time a project loads\nthe package, and then at each editor start while <b>Show on startup</b> is on (per project).</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Editor.WelcomeWindow.yml\" sourcestartlinenumber=\"1\">The 1.0 Welcome window. Since 1.1 its content lives in the <xref href=\"TDMaker.Editor.ProjectOverviewWindow\" data-throw-if-not-resolved=\"false\"></xref> hub; this type stays so\nexisting code keeps compiling and forwards to the hub.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3734,6 +3888,34 @@
       "IsMRef": true,
       "Title": "TDMaker.Unity.Authoring.AreaPulseData",
       "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Authoring.AreaPulseData.yml\" sourcestartlinenumber=\"1\">A direct damage and/or healing pulse on every occupant of a region, baked into <xref href=\"TDMaker.Core.Defs.AreaPulseDef\" data-throw-if-not-resolved=\"false\"></xref>.\nA region whose status effect is empty becomes a pulse-only region.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Unity.Authoring.AssetSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Unity.Authoring.AssetSchema.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Unity.Authoring.AssetSchema",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Authoring.AssetSchema.yml\" sourcestartlinenumber=\"1\">Schema versions and ordered migration steps for authored assets, so that data saved by an older release opens without silent loss.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Unity.Authoring.AssetSchemaState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Unity.Authoring.AssetSchemaState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Unity.Authoring.AssetSchemaState",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Authoring.AssetSchemaState.yml\" sourcestartlinenumber=\"1\">Where an asset stands relative to the running code's schema.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4084,6 +4266,34 @@
       "IsMRef": true,
       "Title": "TDMaker.Unity.Authoring.HeroLevelData",
       "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Authoring.HeroLevelData.yml\" sourcestartlinenumber=\"1\">One hero growth row. Values scale the hero's base stats to produce the absolute row the simulation uses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Unity.Authoring.ISubclassVersionedAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Unity.Authoring.ISubclassVersionedAsset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Unity.Authoring.ISubclassVersionedAsset",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Authoring.ISubclassVersionedAsset.yml\" sourcestartlinenumber=\"1\">A second, independent version track for your own subclass of a built-in asset base (<xref href=\"TDMaker.Unity.Authoring.EntityAssetBase\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"TDMaker.Unity.Authoring.AbilityActionAsset\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"TDMaker.Unity.Authoring.TemplateExtensionAsset\" data-throw-if-not-resolved=\"false\"></xref>). The base's <xref href=\"TDMaker.Unity.Authoring.IVersionedAsset.SchemaVersion\" data-throw-if-not-resolved=\"false\"></xref>\nbelongs to the framework, so your fields are versioned here and later framework updates cannot collide with your step numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../api-metadata/TDMaker.Unity.Authoring.IVersionedAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/TDMaker.Unity.Authoring.IVersionedAsset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TDMaker.Unity.Authoring.IVersionedAsset",
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Authoring.IVersionedAsset.yml\" sourcestartlinenumber=\"1\">An authored asset that carries a serialized schema version and takes part in <xref href=\"TDMaker.Unity.Authoring.AssetSchema\" data-throw-if-not-resolved=\"false\"></xref> migrations.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4993,7 +5203,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Unity.Campaign.JsonFileSaveStore",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Campaign.JsonFileSaveStore.yml\" sourcestartlinenumber=\"1\">Default store: one JSON file per slot under <xref href=\"UnityEngine.Application.persistentDataPath\" data-throw-if-not-resolved=\"false\"></xref> (folder <code>TDMakerSaves</code>, files\n<code>slot1.json</code>, <code>slot2.json</code>, ...). Writes go to a temporary file that then replaces the slot file, so a crash\nmid-write leaves the previous save intact. An unreadable file is renamed to <code>slotN.json.bak</code> (or <code>.bak2</code>, ...)\nand kept. Not for WebGL (use <xref href=\"TDMaker.Unity.Campaign.PlayerPrefsSaveStore\" data-throw-if-not-resolved=\"false\"></xref>, or <xref href=\"TDMaker.Unity.Campaign.SaveStoreFactory.CreateDefault(System.Int32%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref>).</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Campaign.JsonFileSaveStore.yml\" sourcestartlinenumber=\"1\">Default store: one JSON file per slot under <xref href=\"UnityEngine.Application.persistentDataPath\" data-throw-if-not-resolved=\"false\"></xref> (folder <code>TDMakerSaves</code>, files\n<code>slot1.json</code>, <code>slot2.json</code>, ...). Writes go to a temporary file that then replaces the slot file, so a crash\nmid-write leaves the previous save intact. An unreadable file is renamed to <code>slotN.json.bak</code> (or <code>.bak2</code>, ...)\nand kept. Needs a writable file system; otherwise use <xref href=\"TDMaker.Unity.Campaign.PlayerPrefsSaveStore\" data-throw-if-not-resolved=\"false\"></xref> (or <xref href=\"TDMaker.Unity.Campaign.SaveStoreFactory.CreateDefault(System.Int32%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref>, which picks one).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5049,7 +5259,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TDMaker.Unity.Campaign.PlayerPrefsSaveStore",
-      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Campaign.PlayerPrefsSaveStore.yml\" sourcestartlinenumber=\"1\">Store in <xref href=\"UnityEngine.PlayerPrefs\" data-throw-if-not-resolved=\"false\"></xref> (browser storage in WebGL builds): one string per slot under <code>prefix + slot number</code>.\nUnreadable content is copied to <code>key.bak</code> before the slot is cleared. Flushes with <xref href=\"UnityEngine.PlayerPrefs.Save\" data-throw-if-not-resolved=\"false\"></xref> on every write.</p>\n"
+      "Summary": "<p sourcefile=\"../api-metadata/TDMaker.Unity.Campaign.PlayerPrefsSaveStore.yml\" sourcestartlinenumber=\"1\">Store in <xref href=\"UnityEngine.PlayerPrefs\" data-throw-if-not-resolved=\"false\"></xref>: one string per slot under <code>prefix + slot number</code>.\nUnreadable content is copied to <code>key.bak</code> before the slot is cleared. Flushes with <xref href=\"UnityEngine.PlayerPrefs.Save\" data-throw-if-not-resolved=\"false\"></xref> on every write.</p>\n"
     },
     {
       "type": "ManagedReference",

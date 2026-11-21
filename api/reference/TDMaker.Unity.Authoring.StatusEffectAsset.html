@@ -90,7 +90,7 @@ Reference it from attack damage (<a class="xref" href="TDMaker.Unity.Authoring.B
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[CreateAssetMenu(menuName = &quot;2D Tower Defense Maker/Status Effect&quot;, fileName = &quot;StatusEffect&quot;, order = 15)]
-public sealed class StatusEffectAsset : ScriptableObject</code></pre>
+public sealed class StatusEffectAsset : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver</code></pre>
   </div>
 
 
@@ -106,6 +106,13 @@ public sealed class StatusEffectAsset : ScriptableObject</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></div>
+      <div><span class="xref">ISerializationCallbackReceiver</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">

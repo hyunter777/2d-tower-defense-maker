@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class WaveTimelineWindow | 2D Tower Defense Maker API ">
       
-      <meta name="description" content="Timeline editor for s. Each wave group is a row (sorted by path); each spawn entry is a bar from its start delay to its last wait, with a tick per spawn, colored by enemy. Drag bars to change delays, drag the right edge to change the interval (Shift: count), and edit the selection in the side inspector. With Follow on it shows the waves of the selected Wave Set / Level asset, or of the Level Authoring selected in (or present in) the open scene.">
+      <meta name="description" content="Timeline editor for s. Each wave group is a row (sorted by path); each spawn entry is a bar from its start delay to its last wait, with a tick per spawn, colored by enemy. Drag bars to change delays, drag the right edge to change the interval (Shift: count), and edit the selection in the side inspector. With Follow on it shows the waves of the selected Wave Set / Level asset, or of the Level Authoring selected in (or present in) the open scene. The source picker, toolbar, wave list, summaries and inspector are UI Toolkit; the lanes are an IMGUI canvas.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -86,7 +86,8 @@ Class WaveTimelineWindow
   <div class="markdown summary"><p>Timeline editor for <a class="xref" href="TDMaker.Unity.Authoring.WaveSetAsset.html">WaveSetAsset</a>s. Each wave group is a row (sorted by path); each spawn entry is a
 bar from its start delay to its last wait, with a tick per spawn, colored by enemy. Drag bars to change delays,
 drag the right edge to change the interval (Shift: count), and edit the selection in the side inspector. With Follow on it
-shows the waves of the selected Wave Set / Level asset, or of the Level Authoring selected in (or present in) the open scene.</p>
+shows the waves of the selected Wave Set / Level asset, or of the Level Authoring selected in (or present in) the open scene.
+The source picker, toolbar, wave list, summaries and inspector are UI Toolkit; the lanes are an IMGUI canvas.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -638,6 +639,32 @@ shows the waves of the selected Wave Set / Level asset, or of the Level Authorin
 
 
 
+  <a id="TDMaker_Editor_WaveTimelineWindow_CreateGUI_" data-uid="TDMaker.Editor.WaveTimelineWindow.CreateGUI*"></a>
+
+  <h3 id="TDMaker_Editor_WaveTimelineWindow_CreateGUI" data-uid="TDMaker.Editor.WaveTimelineWindow.CreateGUI">
+  CreateGUI()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateGUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="TDMaker_Editor_WaveTimelineWindow_Open_" data-uid="TDMaker.Editor.WaveTimelineWindow.Open*"></a>
 
   <h3 id="TDMaker_Editor_WaveTimelineWindow_Open_UnityEngine_Object_" data-uid="TDMaker.Editor.WaveTimelineWindow.Open(UnityEngine.Object)">
@@ -687,7 +714,7 @@ shows the waves of the selected Wave Set / Level asset, or of the Level Authorin
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[MenuItem(&quot;Tools/2D Tower Defense Maker/Wave Timeline&quot;, priority = 10)]
+    <pre><code class="lang-csharp hljs">[MenuItem(&quot;Tools/2D Tower Defense Maker/Wave Timeline&quot;, priority = 22)]
 public static void ShowWindow()</code></pre>
   </div>
 

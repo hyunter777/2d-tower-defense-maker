@@ -1411,7 +1411,7 @@
 <p>Start with the <strong>Maker</strong> package to create your own game. The separate <strong>Samples</strong> add-on provides a reference game and feature examples; it is optional. See <a href="../package-layout/">Maker and Samples</a> for installation and ownership.</p>
 <h2 id="build-your-first-level-about-5-minutes">Build your first level (about 5 minutes)<a class="headerlink" href="#build-your-first-level-about-5-minutes" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Open <strong>Tools &gt; 2D Tower Defense Maker &gt; New Level</strong> (also on the <strong>Welcome</strong> window, <strong>Tools &gt; 2D Tower Defense Maker &gt; Welcome</strong>).</li>
+<li>Open <strong>Tools &gt; 2D Tower Defense Maker &gt; New Level</strong> (also the <strong>New Level…</strong> button on the <strong>Project Overview</strong> hub).</li>
 <li>Enter a <strong>Level Name</strong>. The folder follows it (<code>Assets/TDMakerContent/&lt;Name&gt;</code>); change it if you like, but not to a folder inside <code>Assets/TDMaker</code> (the package).</li>
 <li>Optional: drop your painted map on <strong>Background</strong>. The default road and build slots are stretched over it and the camera is framed on it.</li>
 <li>Pick the <strong>Starter content</strong>:</li>
@@ -1426,10 +1426,10 @@
 <li><strong>Units and waves.</strong> Tune the towers and the enemy in the <strong>Unit Workshop</strong> (Tools &gt; 2D Tower Defense Maker &gt; Unit Workshop) and the waves in the <strong>Wave Timeline</strong>.</li>
 <li><strong>Check.</strong> <strong>Validate</strong> and <strong>Dry Run</strong> in the Map Editor (or Tools &gt; 2D Tower Defense Maker &gt; Validate Project / Dry Run Level). A sound level is lost without towers and won with a defense.</li>
 <li><strong>Spells.</strong> Edit the starter spell in Unit Workshop, or create a Spell asset and add it to the Level asset's <strong>Spells</strong> list.</li>
-<li><strong>Play.</strong> Build on an empty pad, then click the tower artwork or pad to upgrade it. Start the battle with the entrance skull button labeled <strong>Start Wave</strong>.</li>
+<li><strong>Play.</strong> Press <strong>▶ Play Level</strong> (Map Editor toolbar, Level inspector, or right-click the level asset) to save the level, open the scene that plays it and start Play mode in one click. Build on an empty pad, then click the tower artwork or pad to upgrade it. Start the battle with the entrance skull button labeled <strong>Start Wave</strong>.</li>
 </ol>
 <h2 id="optional-play-the-basic-sample-1-minute">Optional: play the Basic sample (1 minute)<a class="headerlink" href="#optional-play-the-basic-sample-1-minute" title="Permanent link">&para;</a></h2>
-<p>Install the optional Samples add-on after the Maker package, then open <strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Browse Samples</strong>.</p>
+<p>Install the optional Samples add-on after the Maker package, then open <strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Browse Samples</strong> (the hub's <strong>Samples</strong> page).</p>
 <ol>
 <li>Open <code>Assets/TDMaker/Samples/Basic/BasicSample.unity</code>.</li>
 <li>If the scene or its <code>Data</code> folder is missing, run <strong>Tools &gt; 2D Tower Defense Maker &gt; Samples &gt; Regenerate Sample Content</strong>. It (re)creates all sample assets and the scene in place.</li>
@@ -1592,7 +1592,7 @@
 </ol>
 <h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Start screen with samples, tools and documents: <strong>Tools &gt; 2D Tower Defense Maker &gt; Welcome</strong></li>
+<li>Project Overview hub with content cards, the Content browser, project check, samples and documents: <strong>Tools &gt; 2D Tower Defense Maker &gt; Project Overview</strong></li>
 <li>Field-by-field reference: <a href="../authoring/">Authoring Reference</a></li>
 <li>Tool reference: <a href="../editor-tools/">Editor Tools</a></li>
 <li>Built-in mechanics: <a href="../mechanics/">Mechanic Library</a>; HUD and feedback: <a href="../presentation/">Presentation</a></li>
@@ -1608,7 +1608,7 @@
 <li>In Twin Roads, divide archers and arcane towers between the upper and lower roads and use barracks to hold enemies. In Crossroads, defend the merged roads and shared exit, with archers covering the flying route. In Winding Pass, mix arcane towers and mortars on inside bends where they cover several road sections, and buy time with barracks. Tier II upgrades are available before wave 1; heroes and spells are also available.</li>
 <li>Creating a Unit Workshop asset clears search, type and tag filters, refreshes the list and scrolls to the selected row. The save dialog prefers the current user level's Data folder; otherwise it suggests the last user folder or <code>Assets/TDMakerContent/Units</code>.</li>
 <li>A Wave Timeline group's <strong>+</strong> opens an enemy picker. The new entry copies the preceding entry's Count and Interval, so check both values. Double-clicking a group row copies its preceding entry instead.</li>
-<li>Map Editor results remain above the scroll view. Click the error/warning summary for the complete list. <strong>Auto Rally</strong> for all slots asks for confirmation and can be undone in one step.</li>
+<li>Map Editor results remain above the scroll view. <strong>Open list</strong> beside the error/warning summary opens the complete Validator list next to the Map Editor. <strong>Auto Rally</strong> for all slots asks for confirmation and can be undone in one step.</li>
 </ul>
 <h2 id="new-level-window">New Level window<a class="headerlink" href="#new-level-window" title="Permanent link">&para;</a></h2>
 <p><img alt="New Level wizard with fresh starter assets" src="../assets/images/new-level.png" /></p>

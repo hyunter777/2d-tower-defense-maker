@@ -156,7 +156,7 @@ public sealed class PathAuthoringEditor : Editor</code></pre>
       <span class="xref">Editor.Repaint()</span>
     </div>
     <div>
-      <span class="xref">Editor.CreateInspectorGUI()</span>
+      <span class="xref">Editor.OnInspectorGUI()</span>
     </div>
     <div>
       <span class="xref">Editor.RequiresConstantRepaint()</span>
@@ -499,10 +499,10 @@ public sealed class PathAuthoringEditor : Editor</code></pre>
 </h2>
 
 
-  <a id="TDMaker_Editor_PathAuthoringEditor_OnInspectorGUI_" data-uid="TDMaker.Editor.PathAuthoringEditor.OnInspectorGUI*"></a>
+  <a id="TDMaker_Editor_PathAuthoringEditor_CreateInspectorGUI_" data-uid="TDMaker.Editor.PathAuthoringEditor.CreateInspectorGUI*"></a>
 
-  <h3 id="TDMaker_Editor_PathAuthoringEditor_OnInspectorGUI" data-uid="TDMaker.Editor.PathAuthoringEditor.OnInspectorGUI">
-  OnInspectorGUI()
+  <h3 id="TDMaker_Editor_PathAuthoringEditor_CreateInspectorGUI" data-uid="TDMaker.Editor.PathAuthoringEditor.CreateInspectorGUI">
+  CreateInspectorGUI()
   
   </h3>
 
@@ -510,10 +510,15 @@ public sealed class PathAuthoringEditor : Editor</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnInspectorGUI()</code></pre>
+    <pre><code class="lang-csharp hljs">public override VisualElement CreateInspectorGUI()</code></pre>
   </div>
 
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
 
 
 

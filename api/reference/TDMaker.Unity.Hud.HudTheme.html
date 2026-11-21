@@ -91,7 +91,7 @@ empty slots use generated sprites from <a class="xref" href="TDMaker.Unity.Hud.H
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[CreateAssetMenu(menuName = &quot;2D Tower Defense Maker/HUD Theme&quot;, fileName = &quot;HudTheme&quot;, order = 40)]
-public sealed class HudTheme : ScriptableObject</code></pre>
+public sealed class HudTheme : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver</code></pre>
   </div>
 
 
@@ -107,6 +107,13 @@ public sealed class HudTheme : ScriptableObject</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></div>
+      <div><span class="xref">ISerializationCallbackReceiver</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">

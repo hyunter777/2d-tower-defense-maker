@@ -989,10 +989,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-screenshots" class="md-nav__link">
+  <a href="#sample-screenshots-maker-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sample screenshots
+        Sample screenshots (maker development)
       
     </span>
   </a>
@@ -1557,10 +1557,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-screenshots" class="md-nav__link">
+  <a href="#sample-screenshots-maker-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sample screenshots
+        Sample screenshots (maker development)
       
     </span>
   </a>
@@ -2161,8 +2161,8 @@
 <p>By default the whole map is visible and the camera does not move. Scrolling is an opt-in per level for maps larger than the screen.</p>
 <p><strong><code>TDGameSettings</code></strong>: camera inputs – used only in levels whose framing scrolls – <code>cameraPan</code> (master), <code>edgePan</code> (off by default), <code>dragPan</code> (middle mouse), <code>keyboardPan</code> (WASD/arrows), <code>cameraZoom</code> (wheel, +/−), <code>leftDragPan</code> (left drag on the battlefield past a small threshold, not starting over UI; off by default; a press that became a drag is not also a click); <code>speedControls</code> (show the 1×/2×/3× buttons; off resets the speed to 1×); <code>language</code> and <code>textTables</code> (<a href="#string-tables">string tables</a>; <code>Texts</code>, <code>SetLanguage</code>, <code>GetLanguages</code>, <code>LanguageChanged</code>); <code>damageNumbers</code>, <code>confirmSell</code> (off: selling is one click), <code>showEarlyCallBonus</code> (off by default), <code>allowDebugOverlay</code>. <code>TDGameSettings.Current</code> returns the scene instance (or a hidden default). Bind these to your options menu.</p>
 <p><strong><code>EllipseRenderer</code></strong>: <code>EllipseRenderer.Create(name, parent, material, sortingOrder, width)</code>, then <code>Show(center, range, yScale, lineColor, fillAlpha)</code> / <code>Hide()</code> / <code>SetWidth(width)</code>. The shape comes from <code>RangeShape</code>, so what is drawn is exactly what the simulation tests.</p>
-<h2 id="sample-screenshots">Sample screenshots<a class="headerlink" href="#sample-screenshots" title="Permanent link">&para;</a></h2>
-<p><strong>Tools &gt; 2D Tower Defense Maker &gt; Capture Sample Screenshot</strong> (<code>TDMaker.Editor.SampleScreenshot</code>) plays the Basic sample with a scripted run (builds on every slot, upgrades, calls waves early) and renders the camera with the HUD to a PNG. Batch: <code>-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture</code> <strong>without</strong> <code>-quit</code> and <strong>without</strong> <code>-nographics</code> (the editor exits by itself). Options: <code>-tdmSeconds N</code> (default 50), <code>-tdmWidth</code> / <code>-tdmHeight</code> (default 1920×1080), and <code>-tdmOut folder</code> for your chosen output folder. Script errors during capture are counted in the Console log.</p>
+<h2 id="sample-screenshots-maker-development">Sample screenshots (maker development)<a class="headerlink" href="#sample-screenshots-maker-development" title="Permanent link">&para;</a></h2>
+<p><strong>Tools &gt; 2D Tower Defense Maker (Dev) &gt; Capture Sample Screenshot</strong> (<code>TDMaker.Editor.SampleScreenshot</code>, installed with the optional Samples add-on) is a maker-development tool for producing the screenshots in this manual and on the store page; it is not part of the game-authoring workflow. It plays the Basic sample with a scripted run (builds on every slot, upgrades, calls waves early) and renders the camera with the HUD to a PNG. Batch: <code>-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture</code> <strong>without</strong> <code>-quit</code> and <strong>without</strong> <code>-nographics</code> (the editor exits by itself). Options: <code>-tdmSeconds N</code> (default 50), <code>-tdmWidth</code> / <code>-tdmHeight</code> (default 1920×1080), and <code>-tdmOut folder</code> for your chosen output folder. Script errors during capture are counted in the Console log.</p>
 <h2 id="language-selection-and-click-area-priority">Language selection and click-area priority<a class="headerlink" href="#language-selection-and-click-area-priority" title="Permanent link">&para;</a></h2>
 <p>The sample title screen's English and Korean buttons call <code>TDGameSettings.SetLanguage</code>. With <strong>Persist Language</strong> enabled, the choice is saved in PlayerPrefs. Builds load that choice when present, otherwise use the Inspector language. <strong>Ignore Saved Language In Editor</strong> is on by default so the current Inspector language controls that Play session; turn it off to test persisted-language loading. Turning off <strong>Persist Language</strong> stops saving new choices.</p>
 <p>The default tower hit area includes its pad rectangle and the body SpriteRenderer's world bounds. Shadows, health bars and feedback decorations are excluded. When <strong>View &gt; Click Area &gt; Custom Area</strong> is enabled, only the authored rectangle is checked. Heroes keep selection priority; equal-priority overlaps prefer the lower anchor point. While aiming a move, rally point or spell, battlefield clicks remain point attempts.</p>

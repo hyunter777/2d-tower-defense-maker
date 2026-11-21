@@ -81,6 +81,13 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.AssetFormatUpgrade.html">AssetFormatUpgrade</a></dt>
+      <dd><p>Finds maker assets (<a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a>) written in an older data format and re-saves them in the current one,
+using the steps registered with <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html">AssetSchema</a>. Assets saved by a newer package are never touched.
+The upgrade is a re-save and is not undoable; commit or back up the project first.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.AudioCuePreview.html">AudioCuePreview</a></dt>
       <dd><p>Previews <a class="xref" href="TDMaker.Unity.Authoring.AudioCue.html">AudioCue</a>s in the editor (edit mode or play mode) through one hidden AudioSource: a random clip and pitch
 per play, like <code>AudioCuePlayer</code>. Shared by inspectors and editor windows (the Audio section of authoring tools).</p>
@@ -97,7 +104,8 @@ and rally radius (simulation ellipse), and a warning when the rally point lies o
       <dd><p>Inspector of <a class="xref" href="TDMaker.Unity.Campaign.CampaignAsset.html">CampaignAsset</a>: a map view of the world map picture with the level points and their unlock roads
 (arrows from prerequisites, dashed for branches, red for problems). Click a point to select it, drag it to move it, click
 an empty spot to move the selected point there, drop Level assets on the map to add them, right-click a point for more.
-Below: the ordered level list, the selected level's settings and the validation results. Every edit is undoable.</p>
+Below: the ordered level list, the selected level's settings and the validation results. Every edit is undoable.
+The form is UI Toolkit; the map stays an IMGUI canvas.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -110,6 +118,20 @@ Below: the ordered level list, the selected level's settings and the validation 
       <dd><p>Editor-side estimates of combat numbers. Mirrors the simulation's reduction rules
 (physical, magical, explosion/electric at half physical, poison, true) but ignores rounding,
 status effects and incoming-damage multipliers, so values are approximate (&quot;≈&quot;).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.ContentEditorWindow-1.html">ContentEditorWindow&lt;TAsset&gt;</a></dt>
+      <dd><p>Shared frame of the per-type content editors: header, toolbar (search, New, Duplicate, Delete, Ping), a list of every
+<code class="typeparamref">TAsset</code> in the project, a form bound to the selected asset (so Undo and saving are Unity's own),
+an optional preview column (hidden below 980 px) and a live check line.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.ContentView.html">ContentView</a></dt>
+      <dd><p>The Content page of the Project Overview: every maker asset in one list (filter by kind, search by name or folder, show only
+assets with problems), and for the selected asset its project check problems, the maker assets that use it and that it uses,
+and buttons to open it in its editor, select it in the Project window or play it (levels).</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -148,6 +170,13 @@ at the leading enemy (checks that every build, branch, rally, ability, move and 
 level can be completed). The budget pass plays with the level's real starting gold: it starts the first wave, lets later
 waves arrive on their timers and spends gold greedily (builds slots in list order, cycling the buildable towers, then the
 cheapest upgrade, branch or ability rank), with the same hero and spell assistance (checks that a sensible defense wins).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.LevelPlay.html">LevelPlay</a></dt>
+      <dd><p>&quot;Play this level&quot;: saves, opens the saved scene that plays the level (or a temporary unsaved scene with the game rig when no
+scene does) and enters Play mode. When Play mode stops, the scenes that were open before are opened again. Modelled on
+<a class="xref" href="TDMaker.Editor.UnitSandboxPlay.html">UnitSandboxPlay</a> (same scene capture and restore); nothing is written to disk except the saves the user agrees to.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -235,6 +264,14 @@ arrows, entry/exit markers, per-point lane width handles and build-slot range co
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.ProjectOverviewWindow.html">ProjectOverviewWindow</a></dt>
+      <dd><p><b>Tools &gt; 2D Tower Defense Maker &gt; Project Overview</b>: the maker's hub. It shows TextMesh Pro readiness, how
+much content the project has (one card per kind), the project check summary and links to every editor. Its pages are
+Overview, Content (every maker asset with its problems and references), Project Check and Samples. It opens by itself the first time a project loads the package, and then at each editor start
+while <b>Show on startup</b> is on (per project). Other maker windows dock beside it.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.ProjectValidator.html">ProjectValidator</a></dt>
       <dd><p>Scans 2D Tower Defense Maker content in the project and open scenes: missing references, duplicate template ids, path and
 lane problems, waves referencing missing enemies or paths, upgrade cycles and unreachable upgrade tiers, level bake
@@ -257,7 +294,8 @@ The key tables are public so tests (and buyers copying the scheme) can check the
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.SampleBrowserWindow.html">SampleBrowserWindow</a></dt>
-      <dd><p>Separate entry point for optional examples and the complete sample game.</p>
+      <dd><p>Standalone host of <a class="xref" href="TDMaker.Editor.SamplesView.html">SamplesView</a>. The menu now opens the Project Overview's Samples page instead; this window stays
+for code that opens it directly.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -306,6 +344,12 @@ Script errors logged during the run are counted and reported, so the batch run d
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.SamplesView.html">SamplesView</a></dt>
+      <dd><p>The optional samples page: start your own game, the complete sample game, feature examples and sample regeneration. Hosted by the
+Project Overview's &quot;Samples&quot; page and by <a class="xref" href="TDMaker.Editor.SampleBrowserWindow.html">SampleBrowserWindow</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.ScenePreview.html">ScenePreview</a></dt>
       <dd><p>Shared scene-view context drawing for level authoring: build slots, rally points, rally radius and tower range
 ellipses (same shape the simulation tests). Toggles persist in editor preferences.</p>
@@ -317,9 +361,29 @@ ellipses (same shape the simulation tests). Toggles persist in editor preference
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.TDMakerMenus.html">TDMakerMenus</a></dt>
+      <dd><p>Every <b>Tools &gt; 2D Tower Defense Maker</b> menu path and priority in one place. Priorities are grouped in bands
+(gaps of 11 or more make Unity draw a separator): Start, Editors, Check and play, Samples, Help. Maker-development tools live under <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_DevRoot">DevRoot</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.TDMakerUi.html">TDMakerUi</a></dt>
+      <dd><p>Shared UI Toolkit building blocks of the maker windows: the theme (USS tokens in TDMakerEditor.uss), headers,
+headings, notes, rows, sections, cards, badges, buttons and list rows. Class names use the <code>td-</code> prefix.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.TDMakerWindows.html">TDMakerWindows</a></dt>
+      <dd><p>Opens maker windows as tabs of one dock: a new window docks next to whichever maker window is already open (the
+Project Overview first), so the maker does not scatter floating windows. Windows are found by type, so removing a
+window never breaks this list.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.TemplateInspectorBase.html">TemplateInspectorBase</a></dt>
-      <dd><p>Base for grouped template inspectors: draws named property groups in persistent foldouts and any fields not
-claimed by a group under &quot;Other&quot;, so new serialized fields never disappear from the inspector.</p>
+      <dd><p>Base for grouped template inspectors (UI Toolkit): an identity block, named property groups in persistent foldout sections,
+any fields not claimed by a group under &quot;Other&quot; (so new serialized fields never disappear from the inspector), then the
+subclass footer (actions and computed read-outs, refreshed when the asset changes).</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -407,6 +471,11 @@ Edits use Undo; several selected assets of one type are edited together.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.UpgradeReport.html">UpgradeReport</a></dt>
+      <dd><p>Outcome of <a class="xref" href="TDMaker.Editor.AssetFormatUpgrade.html#TDMaker_Editor_AssetFormatUpgrade_UpgradeAll">UpgradeAll()</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.UpgradeShopAssetEditor.html">UpgradeShopAssetEditor</a></dt>
       <dd><p>Inspector of <a class="xref" href="TDMaker.Unity.Campaign.UpgradeShopAsset.html">UpgradeShopAsset</a>: a button to the Upgrade Shop window, the validation list and the default fields.</p>
 </dd>
@@ -428,14 +497,21 @@ upgrades with the core rewriter, and see the validation problems. Every edit is 
     <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.UpgradeTreeWindow.html">UpgradeTreeWindow</a></dt>
       <dd><p>Graph view of a tower's upgrade tree (level 1 → 2 → 3 → branches). Each node shows its cost, cumulative
-investment and sell refund; clicking a node edits it inline. Nodes can grow new levels or branches, which are
+investment and sell refund; clicking a node edits it in the sidebar. Nodes can grow new levels or branches, which are
 created as assets next to their parent. Drag a node to move it (the offset is kept per tree in the project's UserSettings,
-editor only); drag the empty canvas, or use the middle mouse button, to pan.</p>
+editor only); drag the empty canvas, or use the middle mouse button, to pan.
+The toolbar and the sidebar are UI Toolkit; the node graph is an IMGUI canvas (<a class="xref" href="TDMaker.Editor.TDMakerUi.html#TDMaker_Editor_TDMakerUi_Canvas_UnityEngine_UIElements_VisualElement_System_Action_">Canvas(VisualElement, Action)</a>).</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.ValidationIssue.html">ValidationIssue</a></dt>
       <dd><p>One problem found by <a class="xref" href="TDMaker.Editor.ProjectValidator.html">ProjectValidator</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TDMaker.Editor.ValidatorView.html">ValidatorView</a></dt>
+      <dd><p>The validator's issue list (filters, search, keyboard navigation). Hosted by the Project Overview's &quot;Project Check&quot; page
+and by <a class="xref" href="TDMaker.Editor.ValidatorWindow.html">ValidatorWindow</a>; both share this one implementation.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -455,15 +531,14 @@ interval, then the next entry is entered after the following gap.</p>
       <dd><p>Timeline editor for <a class="xref" href="TDMaker.Unity.Authoring.WaveSetAsset.html">WaveSetAsset</a>s. Each wave group is a row (sorted by path); each spawn entry is a
 bar from its start delay to its last wait, with a tick per spawn, colored by enemy. Drag bars to change delays,
 drag the right edge to change the interval (Shift: count), and edit the selection in the side inspector. With Follow on it
-shows the waves of the selected Wave Set / Level asset, or of the Level Authoring selected in (or present in) the open scene.</p>
+shows the waves of the selected Wave Set / Level asset, or of the Level Authoring selected in (or present in) the open scene.
+The source picker, toolbar, wave list, summaries and inspector are UI Toolkit; the lanes are an IMGUI canvas.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="TDMaker.Editor.WelcomeWindow.html">WelcomeWindow</a></dt>
-      <dd><p><b>Tools &gt; 2D Tower Defense Maker &gt; Welcome</b>: first stop after importing the package – check (and import) the TextMesh Pro
-Essential Resources, start an independent new level, browse optional examples,
-and open the Unit Workshop or the Map Editor. Shown automatically the first time a project loads
-the package, and then at each editor start while <b>Show on startup</b> is on (per project).</p>
+      <dd><p>The 1.0 Welcome window. Since 1.1 its content lives in the <a class="xref" href="TDMaker.Editor.ProjectOverviewWindow.html">ProjectOverviewWindow</a> hub; this type stays so
+existing code keeps compiling and forwards to the hub.</p>
 </dd>
     </dl>
     <dl class="jumplist">

@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TDMakerMenus | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TDMakerMenus | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Every Tools &amp;gt; 2D Tower Defense Maker menu path and priority in one place. Priorities are grouped in bands (gaps of 11 or more make Unity draw a separator): Start, Editors, Check and play, Samples, Help. Maker-development tools live under .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.TDMakerMenus">
+
+
+
+  <h1 id="TDMaker_Editor_TDMakerMenus" data-uid="TDMaker.Editor.TDMakerMenus" class="text-break">
+Class TDMakerMenus  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Every <b>Tools &gt; 2D Tower Defense Maker</b> menu path and priority in one place. Priorities are grouped in bands
+(gaps of 11 or more make Unity draw a separator): Start, Editors, Check and play, Samples, Help. Maker-development tools live under <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_DevRoot">DevRoot</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class TDMakerMenus</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TDMakerMenus</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_AssetsPlayLevel" data-uid="TDMaker.Editor.TDMakerMenus.AssetsPlayLevel">
+  AssetsPlayLevel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Project window context menu: plays the selected level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AssetsPlayLevel = &quot;Assets/2D Tower Defense Maker/Play Level&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_AssetsPlayLevelPriority" data-uid="TDMaker.Editor.TDMakerMenus.AssetsPlayLevelPriority">
+  AssetsPlayLevelPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_AssetsPlayLevel">AssetsPlayLevel</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int AssetsPlayLevelPriority = 2000</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_BrowseSamples" data-uid="TDMaker.Editor.TDMakerMenus.BrowseSamples">
+  BrowseSamples
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional sample game and feature examples.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BrowseSamples = &quot;Tools/2D Tower Defense Maker/Samples/Browse Samples&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_BrowseSamplesPriority" data-uid="TDMaker.Editor.TDMakerMenus.BrowseSamplesPriority">
+  BrowseSamplesPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_BrowseSamples">BrowseSamples</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int BrowseSamplesPriority = 60</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_CaptureSampleScreenshot" data-uid="TDMaker.Editor.TDMakerMenus.CaptureSampleScreenshot">
+  CaptureSampleScreenshot
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the sample scene and captures store screenshots.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string CaptureSampleScreenshot = &quot;Tools/2D Tower Defense Maker (Dev)/Capture Sample Screenshot&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_CaptureSampleScreenshotPriority" data-uid="TDMaker.Editor.TDMakerMenus.CaptureSampleScreenshotPriority">
+  CaptureSampleScreenshotPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_CaptureSampleScreenshot">CaptureSampleScreenshot</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int CaptureSampleScreenshotPriority = 0</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_DevRoot" data-uid="TDMaker.Editor.TDMakerMenus.DevRoot">
+  DevRoot
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Root of the maker's own development tools (sample regeneration, screenshots, art reimport). They are not part of the
+customer workflow, so they live apart from the customer menu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DevRoot = &quot;Tools/2D Tower Defense Maker (Dev)/&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_DryRunLevel" data-uid="TDMaker.Editor.TDMakerMenus.DryRunLevel">
+  DryRunLevel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Headless simulation of the selected level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DryRunLevel = &quot;Tools/2D Tower Defense Maker/Dry Run Level&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_DryRunLevelPriority" data-uid="TDMaker.Editor.TDMakerMenus.DryRunLevelPriority">
+  DryRunLevelPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_DryRunLevel">DryRunLevel</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DryRunLevelPriority = 41</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_ImportTmpEssentials" data-uid="TDMaker.Editor.TDMakerMenus.ImportTmpEssentials">
+  ImportTmpEssentials
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Imports the TextMesh Pro Essential Resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ImportTmpEssentials = &quot;Tools/2D Tower Defense Maker/Import TMP Essential Resources&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_ImportTmpEssentialsPriority" data-uid="TDMaker.Editor.TDMakerMenus.ImportTmpEssentialsPriority">
+  ImportTmpEssentialsPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_ImportTmpEssentials">ImportTmpEssentials</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int ImportTmpEssentialsPriority = 902</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_MapEditor" data-uid="TDMaker.Editor.TDMakerMenus.MapEditor">
+  MapEditor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Path and spawn editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MapEditor = &quot;Tools/2D Tower Defense Maker/Map Editor&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_MapEditorPriority" data-uid="TDMaker.Editor.TDMakerMenus.MapEditorPriority">
+  MapEditorPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_MapEditor">MapEditor</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MapEditorPriority = 20</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_NewLevel" data-uid="TDMaker.Editor.TDMakerMenus.NewLevel">
+  NewLevel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Guided creation of a new level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string NewLevel = &quot;Tools/2D Tower Defense Maker/New Level&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_NewLevelPriority" data-uid="TDMaker.Editor.TDMakerMenus.NewLevelPriority">
+  NewLevelPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_NewLevel">NewLevel</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int NewLevelPriority = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_OnlineDocumentation" data-uid="TDMaker.Editor.TDMakerMenus.OnlineDocumentation">
+  OnlineDocumentation
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens the online manual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string OnlineDocumentation = &quot;Tools/2D Tower Defense Maker/Online Documentation&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_OnlineDocumentationPriority" data-uid="TDMaker.Editor.TDMakerMenus.OnlineDocumentationPriority">
+  OnlineDocumentationPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_OnlineDocumentation">OnlineDocumentation</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int OnlineDocumentationPriority = 903</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_ProjectOverview" data-uid="TDMaker.Editor.TDMakerMenus.ProjectOverview">
+  ProjectOverview
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The hub: content counts, search, project check and links to every editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ProjectOverview = &quot;Tools/2D Tower Defense Maker/Project Overview&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_ProjectOverviewPriority" data-uid="TDMaker.Editor.TDMakerMenus.ProjectOverviewPriority">
+  ProjectOverviewPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_ProjectOverview">ProjectOverview</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int ProjectOverviewPriority = 0</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_RegenerateSampleContent" data-uid="TDMaker.Editor.TDMakerMenus.RegenerateSampleContent">
+  RegenerateSampleContent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rebuilds the optional sample content. It stays in the customer menu: the Sample Browser runs it for customers who
+installed the Samples package.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RegenerateSampleContent = &quot;Tools/2D Tower Defense Maker/Samples/Regenerate Sample Content&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_RegenerateSampleContentPriority" data-uid="TDMaker.Editor.TDMakerMenus.RegenerateSampleContentPriority">
+  RegenerateSampleContentPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_RegenerateSampleContent">RegenerateSampleContent</a> (a separator inside the Samples submenu).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int RegenerateSampleContentPriority = 71</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_ReimportSampleArt" data-uid="TDMaker.Editor.TDMakerMenus.ReimportSampleArt">
+  ReimportSampleArt
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Re-imports the sample art after its import manifest changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ReimportSampleArt = &quot;Tools/2D Tower Defense Maker (Dev)/Reimport Sample Art&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_ReimportSampleArtPriority" data-uid="TDMaker.Editor.TDMakerMenus.ReimportSampleArtPriority">
+  ReimportSampleArtPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_ReimportSampleArt">ReimportSampleArt</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int ReimportSampleArtPriority = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_Root" data-uid="TDMaker.Editor.TDMakerMenus.Root">
+  Root
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Root of every maker menu entry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Root = &quot;Tools/2D Tower Defense Maker/&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_UnitWorkshop" data-uid="TDMaker.Editor.TDMakerMenus.UnitWorkshop">
+  UnitWorkshop
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Towers, enemies, soldiers and heroes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UnitWorkshop = &quot;Tools/2D Tower Defense Maker/Unit Workshop&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_UnitWorkshopPriority" data-uid="TDMaker.Editor.TDMakerMenus.UnitWorkshopPriority">
+  UnitWorkshopPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_UnitWorkshop">UnitWorkshop</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int UnitWorkshopPriority = 21</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_UpgradeAssets" data-uid="TDMaker.Editor.TDMakerMenus.UpgradeAssets">
+  UpgradeAssets
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Re-saves maker assets written by an older version in the current data format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UpgradeAssets = &quot;Tools/2D Tower Defense Maker/Upgrade Asset Formats&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_UpgradeAssetsPriority" data-uid="TDMaker.Editor.TDMakerMenus.UpgradeAssetsPriority">
+  UpgradeAssetsPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_UpgradeAssets">UpgradeAssets</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int UpgradeAssetsPriority = 42</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_UpgradeShop" data-uid="TDMaker.Editor.TDMakerMenus.UpgradeShop">
+  UpgradeShop
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Permanent star upgrade shop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UpgradeShop = &quot;Tools/2D Tower Defense Maker/Upgrade Shop&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_UpgradeShopPriority" data-uid="TDMaker.Editor.TDMakerMenus.UpgradeShopPriority">
+  UpgradeShopPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_UpgradeShop">UpgradeShop</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int UpgradeShopPriority = 24</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_UpgradeTree" data-uid="TDMaker.Editor.TDMakerMenus.UpgradeTree">
+  UpgradeTree
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tower upgrade paths.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UpgradeTree = &quot;Tools/2D Tower Defense Maker/Upgrade Tree&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_UpgradeTreePriority" data-uid="TDMaker.Editor.TDMakerMenus.UpgradeTreePriority">
+  UpgradeTreePriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_UpgradeTree">UpgradeTree</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int UpgradeTreePriority = 23</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_ValidateProject" data-uid="TDMaker.Editor.TDMakerMenus.ValidateProject">
+  ValidateProject
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Project-wide validation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ValidateProject = &quot;Tools/2D Tower Defense Maker/Validate Project&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_ValidateProjectPriority" data-uid="TDMaker.Editor.TDMakerMenus.ValidateProjectPriority">
+  ValidateProjectPriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_ValidateProject">ValidateProject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int ValidateProjectPriority = 40</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_WaveTimeline" data-uid="TDMaker.Editor.TDMakerMenus.WaveTimeline">
+  WaveTimeline
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Wave sets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string WaveTimeline = &quot;Tools/2D Tower Defense Maker/Wave Timeline&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerMenus_WaveTimelinePriority" data-uid="TDMaker.Editor.TDMakerMenus.WaveTimelinePriority">
+  WaveTimelinePriority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Priority of <a class="xref" href="TDMaker.Editor.TDMakerMenus.html#TDMaker_Editor_TDMakerMenus_WaveTimeline">WaveTimeline</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int WaveTimelinePriority = 22</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

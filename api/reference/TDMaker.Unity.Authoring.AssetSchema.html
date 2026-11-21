@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AssetSchema | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AssetSchema | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Schema versions and ordered migration steps for authored assets, so that data saved by an older release opens without silent loss.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Unity.Authoring.AssetSchema">
+
+
+
+  <h1 id="TDMaker_Unity_Authoring_AssetSchema" data-uid="TDMaker.Unity.Authoring.AssetSchema" class="text-break">
+Class AssetSchema  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<span class="xref">Unity</span>.<a class="xref" href="TDMaker.Unity.Authoring.html">Authoring</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Unity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Schema versions and ordered migration steps for authored assets, so that data saved by an older release opens without silent loss.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class AssetSchema</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AssetSchema</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="TDMaker_Unity_Authoring_AssetSchema_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><b>Version rule.</b> Each versioned asset serializes an <code>int</code> with no initializer. Unity keeps the C# initializer when a
+field is missing from an old file, so a 1.0 file reads 0. A brand-new asset (<code>ScriptableObject.CreateInstance</code>, a Create menu,
+New Level, Unit Workshop) is never deserialized before its first serialization; <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleBeforeSerialize_TDMaker_Unity_Authoring_IVersionedAsset_">HandleBeforeSerialize(IVersionedAsset)</a> stamps such an
+asset with the current version, so it is saved as current without any change to the creation code. <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_MarkCurrent_TDMaker_Unity_Authoring_IVersionedAsset_">MarkCurrent(IVersionedAsset)</a> stamps
+explicitly. Because 0 can also mean "made in code and never stamped", <b>every step must be idempotent</b>: running it on data that is
+already in the new shape must change nothing.</p>
+<p><b>Steps.</b> A step registered at <code>fromVersion</code> brings data from that version to <code>fromVersion + 1</code>. A type's current
+version is one past its highest registered step, and at least <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_BaselineVersion">BaselineVersion</a>. Steps registered for a base type also run
+for its subclasses (base first). Register from the asset type's static constructor; the framework runs the static constructors of the
+whole type hierarchy before it reads the registry.</p>
+<p><b>On load.</b> <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleAfterDeserialize_TDMaker_Unity_Authoring_IVersionedAsset_">HandleAfterDeserialize(IVersionedAsset)</a> runs the missing steps in memory, in order, but does not change the stored
+version: the file on disk is still old until it is upgraded and saved (<a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_NeedsUpgrade_UnityEngine_Object_">NeedsUpgrade(Object)</a>, <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_Upgrade_UnityEngine_Object_">Upgrade(Object)</a>). Steps run
+inside <code>OnAfterDeserialize</code>, possibly off the main thread, so they must only touch the asset's serialized fields: no Unity API
+(no <code>name</code>, no <code>AssetDatabase</code>, no <code>Object == null</code> on other objects). A migration that needs Unity API belongs in the
+asset's <code>OnEnable</code> or in an editor upgrade pass instead.</p>
+<p><b>Newer data.</b> An asset whose version is greater than the code's current version is refused: no step runs, the version is
+never lowered, and <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_IsNewerThanSupported_UnityEngine_Object_">IsNewerThanSupported(Object)</a> reports it.</p>
+<p><b>Renaming fields (<code>FormerlySerializedAs</code> policy).</b> A renamed serialized field must keep
+<code>[UnityEngine.Serialization.FormerlySerializedAs("oldName")]</code> for as long as older data may exist; never remove it. A rename alone
+needs no step. When the <i>meaning</i> of data changes (units, ranges, a field split or merged, a value moved elsewhere), keep the old
+field readable (hidden), and add a step that converts it and clears it, as the level's legacy star rule does.</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_BaselineVersion" data-uid="TDMaker.Unity.Authoring.AssetSchema.BaselineVersion">
+  BaselineVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The version every versioned type has at least: 1 = the first versioned release (1.1.0). 0 = data from before versioning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int BaselineVersion = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_Classify_" data-uid="TDMaker.Unity.Authoring.AssetSchema.Classify*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_Classify_System_Collections_Generic_IEnumerable_UnityEngine_Object__System_Collections_Generic_List_UnityEngine_Object__System_Collections_Generic_List_UnityEngine_Object__" data-uid="TDMaker.Unity.Authoring.AssetSchema.Classify(System.Collections.Generic.IEnumerable{UnityEngine.Object},System.Collections.Generic.List{UnityEngine.Object},System.Collections.Generic.List{UnityEngine.Object})">
+  Classify(IEnumerable&lt;Object&gt;, List&lt;Object&gt;, List&lt;Object&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sorts <code class="paramref">assets</code> into outdated and newer-than-supported lists (either list may be null). Returns the number of versioned assets seen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Classify(IEnumerable&lt;Object&gt; assets, List&lt;Object&gt; outdated, List&lt;Object&gt; newer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">Object</span>&gt;</dt>
+    <dd></dd>
+    <dt><code>outdated</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Object</span>&gt;</dt>
+    <dd></dd>
+    <dt><code>newer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Object</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_CurrentSubclassVersion_" data-uid="TDMaker.Unity.Authoring.AssetSchema.CurrentSubclassVersion*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_CurrentSubclassVersion_System_Type_" data-uid="TDMaker.Unity.Authoring.AssetSchema.CurrentSubclassVersion(System.Type)">
+  CurrentSubclassVersion(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current subclass-track version of <code class="paramref">assetType</code>, or 0 when it does not implement <a class="xref" href="TDMaker.Unity.Authoring.ISubclassVersionedAsset.html">ISubclassVersionedAsset</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CurrentSubclassVersion(Type assetType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_CurrentVersion_" data-uid="TDMaker.Unity.Authoring.AssetSchema.CurrentVersion*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_CurrentVersion_System_Type_" data-uid="TDMaker.Unity.Authoring.AssetSchema.CurrentVersion(System.Type)">
+  CurrentVersion(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current framework-track version of <code class="paramref">assetType</code> (at least <a class="xref" href="TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_BaselineVersion">BaselineVersion</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CurrentVersion(Type assetType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_CurrentVersion_" data-uid="TDMaker.Unity.Authoring.AssetSchema.CurrentVersion*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_CurrentVersion__1" data-uid="TDMaker.Unity.Authoring.AssetSchema.CurrentVersion``1">
+  CurrentVersion&lt;T&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current framework-track version of <code class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CurrentVersion&lt;T&gt;() where T : class, IVersionedAsset</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_GetLastError_" data-uid="TDMaker.Unity.Authoring.AssetSchema.GetLastError*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_GetLastError_UnityEngine_Object_" data-uid="TDMaker.Unity.Authoring.AssetSchema.GetLastError(UnityEngine.Object)">
+  GetLastError(Object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The message of the last step that failed on <code class="paramref">asset</code> during load, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetLastError(Object asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <span class="xref">Object</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_GetState_" data-uid="TDMaker.Unity.Authoring.AssetSchema.GetState*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_GetState_UnityEngine_Object_" data-uid="TDMaker.Unity.Authoring.AssetSchema.GetState(UnityEngine.Object)">
+  GetState(Object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Where <code class="paramref">asset</code> stands relative to the running code. A freshly created, unsaved asset counts as current.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetSchemaState GetState(Object asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <span class="xref">Object</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TDMaker.Unity.Authoring.AssetSchemaState.html">AssetSchemaState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_HandleAfterDeserialize_" data-uid="TDMaker.Unity.Authoring.AssetSchema.HandleAfterDeserialize*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_HandleAfterDeserialize_TDMaker_Unity_Authoring_IVersionedAsset_" data-uid="TDMaker.Unity.Authoring.AssetSchema.HandleAfterDeserialize(TDMaker.Unity.Authoring.IVersionedAsset)">
+  HandleAfterDeserialize(IVersionedAsset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Call from <span class="xref">UnityEngine.ISerializationCallbackReceiver.OnAfterDeserialize()</span>. Runs the missing steps in memory without changing the
+stored version; does nothing for newer data. A failing step is logged and stops that asset's chain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void HandleAfterDeserialize(IVersionedAsset asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_HandleBeforeSerialize_" data-uid="TDMaker.Unity.Authoring.AssetSchema.HandleBeforeSerialize*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_HandleBeforeSerialize_TDMaker_Unity_Authoring_IVersionedAsset_" data-uid="TDMaker.Unity.Authoring.AssetSchema.HandleBeforeSerialize(TDMaker.Unity.Authoring.IVersionedAsset)">
+  HandleBeforeSerialize(IVersionedAsset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Call from <span class="xref">UnityEngine.ISerializationCallbackReceiver.OnBeforeSerialize()</span>. Stamps an asset that was created in code and never
+deserialized (version 0) with the current version; leaves every other asset untouched.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void HandleBeforeSerialize(IVersionedAsset asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_IsNewerThanSupported_" data-uid="TDMaker.Unity.Authoring.AssetSchema.IsNewerThanSupported*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_IsNewerThanSupported_UnityEngine_Object_" data-uid="TDMaker.Unity.Authoring.AssetSchema.IsNewerThanSupported(UnityEngine.Object)">
+  IsNewerThanSupported(Object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <code class="paramref">asset</code> was saved by a newer version of the package (its data is left untouched).
+Safe to call from the asset's own serialization callbacks (no Unity API is used).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNewerThanSupported(Object asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <span class="xref">Object</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_IsVersioned_" data-uid="TDMaker.Unity.Authoring.AssetSchema.IsVersioned*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_IsVersioned_UnityEngine_Object_" data-uid="TDMaker.Unity.Authoring.AssetSchema.IsVersioned(UnityEngine.Object)">
+  IsVersioned(Object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <code class="paramref">asset</code> takes part in versioning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsVersioned(Object asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <span class="xref">Object</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_MarkCurrent_" data-uid="TDMaker.Unity.Authoring.AssetSchema.MarkCurrent*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_MarkCurrent_TDMaker_Unity_Authoring_IVersionedAsset_" data-uid="TDMaker.Unity.Authoring.AssetSchema.MarkCurrent(TDMaker.Unity.Authoring.IVersionedAsset)">
+  MarkCurrent(IVersionedAsset)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stamps a newly created asset with the current version(s), for creation paths that want it explicit. Never lowers a version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool MarkCurrent(IVersionedAsset asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when a version changed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_NeedsUpgrade_" data-uid="TDMaker.Unity.Authoring.AssetSchema.NeedsUpgrade*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_NeedsUpgrade_UnityEngine_Object_" data-uid="TDMaker.Unity.Authoring.AssetSchema.NeedsUpgrade(UnityEngine.Object)">
+  NeedsUpgrade(Object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <code class="paramref">asset</code> was saved with an older schema and should be upgraded and saved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool NeedsUpgrade(Object asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <span class="xref">Object</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_RegisterStep_" data-uid="TDMaker.Unity.Authoring.AssetSchema.RegisterStep*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_RegisterStep__1_System_Int32_System_Action___0__" data-uid="TDMaker.Unity.Authoring.AssetSchema.RegisterStep``1(System.Int32,System.Action{``0})">
+  RegisterStep&lt;T&gt;(int, Action&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a migration step that brings <code class="typeparamref">T</code> data from <code class="paramref">fromVersion</code> to <code class="paramref">fromVersion</code> + 1.
+Call it from <code class="typeparamref">T</code>'s static constructor. Several steps at the same version run in registration order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterStep&lt;T&gt;(int fromVersion, Action&lt;T&gt; step) where T : class, IVersionedAsset</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fromVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The version the step reads (0 = data from before versioning).</p>
+</dd>
+    <dt><code>step</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The conversion. It must be idempotent and must not call Unity API (see the class remarks).</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The asset type the step converts. If it implements <a class="xref" href="TDMaker.Unity.Authoring.ISubclassVersionedAsset.html">ISubclassVersionedAsset</a>, the step runs on the subclass track.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>A subclass of a built-in base registers on the framework track; implement <a class="xref" href="TDMaker.Unity.Authoring.ISubclassVersionedAsset.html">ISubclassVersionedAsset</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="TDMaker_Unity_Authoring_AssetSchema_Upgrade_" data-uid="TDMaker.Unity.Authoring.AssetSchema.Upgrade*"></a>
+
+  <h3 id="TDMaker_Unity_Authoring_AssetSchema_Upgrade_UnityEngine_Object_" data-uid="TDMaker.Unity.Authoring.AssetSchema.Upgrade(UnityEngine.Object)">
+  Upgrade(Object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs every missing step on <code class="paramref">asset</code> and stamps it with the current version(s). Does nothing for current, unversioned
+or newer assets. The caller marks the asset dirty and saves it (this runtime class never touches the AssetDatabase).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Upgrade(Object asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <span class="xref">Object</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when the stored version changed, so the asset must be saved.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>A step failed; the asset keeps its old version.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -90,7 +90,7 @@ Call <a class="xref" href="TDMaker.Unity.Authoring.LevelAsset.html#TDMaker_Unity
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[CreateAssetMenu(menuName = &quot;2D Tower Defense Maker/Level&quot;, fileName = &quot;Level&quot;, order = 0)]
-public sealed class LevelAsset : ScriptableObject, ISerializationCallbackReceiver</code></pre>
+public sealed class LevelAsset : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver</code></pre>
   </div>
 
 
@@ -109,6 +109,7 @@ public sealed class LevelAsset : ScriptableObject, ISerializationCallbackReceive
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="TDMaker.Unity.Authoring.IVersionedAsset.html">IVersionedAsset</a></div>
       <div><span class="xref">ISerializationCallbackReceiver</span></div>
     </dd>
   </dl>

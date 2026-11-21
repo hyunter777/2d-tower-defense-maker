@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TDMakerUi | 2D Tower Defense Maker API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TDMakerUi | 2D Tower Defense Maker API ">
+      
+      <meta name="description" content="Shared UI Toolkit building blocks of the maker windows: the theme (USS tokens in TDMakerEditor.uss), headers, headings, notes, rows, sections, cards, badges, buttons and list rows. Class names use the td- prefix.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="2D Tower Defense Maker API">
+            2D Tower Defense Maker API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TDMaker.Editor.TDMakerUi">
+
+
+
+  <h1 id="TDMaker_Editor_TDMakerUi" data-uid="TDMaker.Editor.TDMakerUi" class="text-break">
+Class TDMakerUi  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">TDMaker</span>.<a class="xref" href="TDMaker.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TDMaker.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Shared UI Toolkit building blocks of the maker windows: the theme (USS tokens in TDMakerEditor.uss), headers,
+headings, notes, rows, sections, cards, badges, buttons and list rows. Class names use the <code>td-</code> prefix.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class TDMakerUi</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TDMakerUi</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerUi_HiddenClass" data-uid="TDMaker.Editor.TDMakerUi.HiddenClass">
+  HiddenClass
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Class that hides an element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string HiddenClass = &quot;td-hidden&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="TDMaker_Editor_TDMakerUi_StyleSheetName" data-uid="TDMaker.Editor.TDMakerUi.StyleSheetName">
+  StyleSheetName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Style sheet file name, next to this script.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StyleSheetName = &quot;TDMakerEditor.uss&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Accent_" data-uid="TDMaker.Editor.TDMakerUi.Accent*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Accent" data-uid="TDMaker.Editor.TDMakerUi.Accent">
+  Accent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Accent color; the same value as <code>--td-accent</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Accent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Bad_" data-uid="TDMaker.Editor.TDMakerUi.Bad*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Bad" data-uid="TDMaker.Editor.TDMakerUi.Bad">
+  Bad
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error tone; the same value as <code>--td-bad</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Bad { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Bg_" data-uid="TDMaker.Editor.TDMakerUi.Bg*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Bg" data-uid="TDMaker.Editor.TDMakerUi.Bg">
+  Bg
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Window background; the same value as <code>--td-bg</code>. For IMGUI canvases inside maker windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Bg { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Font_" data-uid="TDMaker.Editor.TDMakerUi.Font*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Font" data-uid="TDMaker.Editor.TDMakerUi.Font">
+  Font
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Geist (SIL OFL 1.1, Editor/Fonts/Geist-LICENSE.txt) as a dynamic SDF font with Geist Bold as its bold weight. Glyphs
+it lacks (for example Korean or Japanese asset names) fall back to the editor's fonts. Null when the files are
+missing: the windows keep the editor font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FontAsset Font { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FontAsset</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Good_" data-uid="TDMaker.Editor.TDMakerUi.Good*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Good" data-uid="TDMaker.Editor.TDMakerUi.Good">
+  Good
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Good tone; the same value as <code>--td-good</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Good { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Hover_" data-uid="TDMaker.Editor.TDMakerUi.Hover*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Hover" data-uid="TDMaker.Editor.TDMakerUi.Hover">
+  Hover
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hover surface and hairlines; the same value as <code>--td-hover</code> / <code>--td-border</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Hover { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Info_" data-uid="TDMaker.Editor.TDMakerUi.Info*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Info" data-uid="TDMaker.Editor.TDMakerUi.Info">
+  Info
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Info tone; the same value as <code>--td-info</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Info { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Ink_" data-uid="TDMaker.Editor.TDMakerUi.Ink*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Ink" data-uid="TDMaker.Editor.TDMakerUi.Ink">
+  Ink
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Primary text; the same value as <code>--td-ink</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Ink { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Muted_" data-uid="TDMaker.Editor.TDMakerUi.Muted*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Muted" data-uid="TDMaker.Editor.TDMakerUi.Muted">
+  Muted
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Muted text tone; the same value as <code>--td-muted</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Muted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Raised_" data-uid="TDMaker.Editor.TDMakerUi.Raised*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Raised" data-uid="TDMaker.Editor.TDMakerUi.Raised">
+  Raised
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised surface; the same value as <code>--td-raised</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Raised { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Sheet_" data-uid="TDMaker.Editor.TDMakerUi.Sheet*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Sheet" data-uid="TDMaker.Editor.TDMakerUi.Sheet">
+  Sheet
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maker style sheet, found next to this script so the package can live in any folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StyleSheet Sheet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StyleSheet</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Sub_" data-uid="TDMaker.Editor.TDMakerUi.Sub*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Sub" data-uid="TDMaker.Editor.TDMakerUi.Sub">
+  Sub
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Secondary text; the same value as <code>--td-sub</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Sub { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Surface_" data-uid="TDMaker.Editor.TDMakerUi.Surface*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Surface" data-uid="TDMaker.Editor.TDMakerUi.Surface">
+  Surface
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Panel surface; the same value as <code>--td-surface</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Surface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Warning_" data-uid="TDMaker.Editor.TDMakerUi.Warning*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Warning" data-uid="TDMaker.Editor.TDMakerUi.Warning">
+  Warning
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Warning tone; the same value as <code>--td-warning</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Warning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Well_" data-uid="TDMaker.Editor.TDMakerUi.Well*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Well" data-uid="TDMaker.Editor.TDMakerUi.Well">
+  Well
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recessed well (canvas, graph) background; the same value as <code>--td-well</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Well { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TDMaker_Editor_TDMakerUi_AddSheet_" data-uid="TDMaker.Editor.TDMakerUi.AddSheet*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_AddSheet_UnityEngine_UIElements_VisualElement_System_String_" data-uid="TDMaker.Editor.TDMakerUi.AddSheet(UnityEngine.UIElements.VisualElement,System.String)">
+  AddSheet(VisualElement, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a window's own style sheet (a .uss next to the window script, using only <code>var(--td-*)</code> tokens) after the
+shared one. <code class="paramref">fileName</code> is the file name, for example &quot;WaveTimelineWindow.uss&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddSheet(VisualElement root, string fileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_AllProps_" data-uid="TDMaker.Editor.TDMakerUi.AllProps*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_AllProps_UnityEngine_UIElements_VisualElement_UnityEditor_SerializedObject_" data-uid="TDMaker.Editor.TDMakerUi.AllProps(UnityEngine.UIElements.VisualElement,UnityEditor.SerializedObject)">
+  AllProps(VisualElement, SerializedObject)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Property fields for every visible top-level field of the serialized object, except the script reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AllProps(VisualElement parent, SerializedObject so)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>so</code> <span class="xref">SerializedObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Badge_" data-uid="TDMaker.Editor.TDMakerUi.Badge*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Badge_UnityEngine_UIElements_VisualElement_System_String_" data-uid="TDMaker.Editor.TDMakerUi.Badge(UnityEngine.UIElements.VisualElement,System.String)">
+  Badge(VisualElement, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A small accent badge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Label Badge(VisualElement parent, string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Label</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Block_" data-uid="TDMaker.Editor.TDMakerUi.Block*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Block_UnityEngine_UIElements_VisualElement_" data-uid="TDMaker.Editor.TDMakerUi.Block(UnityEngine.UIElements.VisualElement)">
+  Block(VisualElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A raised nested block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VisualElement Block(VisualElement parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Button_" data-uid="TDMaker.Editor.TDMakerUi.Button*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Button_UnityEngine_UIElements_VisualElement_System_String_System_Action_System_String_" data-uid="TDMaker.Editor.TDMakerUi.Button(UnityEngine.UIElements.VisualElement,System.String,System.Action,System.String)">
+  Button(VisualElement, string, Action, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A button; <code class="paramref">cls</code> may be &quot;primary&quot;, &quot;danger&quot; or &quot;link&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Button Button(VisualElement parent, string text, Action onClick, string cls = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>onClick</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+    <dt><code>cls</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Button</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Canvas_" data-uid="TDMaker.Editor.TDMakerUi.Canvas*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Canvas_UnityEngine_UIElements_VisualElement_System_Action_" data-uid="TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement,System.Action)">
+  Canvas(VisualElement, Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hosts an IMGUI drawing callback (a timeline, graph or map canvas) inside a UI Toolkit maker window. The container grows
+to fill its parent; draw with <span class="xref">UnityEngine.GUILayoutUtility</span> or with rects from <code>contentRect</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMGUIContainer Canvas(VisualElement parent, Action onGUI)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>onGUI</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IMGUIContainer</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Card_" data-uid="TDMaker.Editor.TDMakerUi.Card*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Card_UnityEngine_UIElements_VisualElement_System_String_System_String_System_String_System_Action_" data-uid="TDMaker.Editor.TDMakerUi.Card(UnityEngine.UIElements.VisualElement,System.String,System.String,System.String,System.Action)">
+  Card(VisualElement, string, string, string, Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A clickable card: big number, title and a short line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Button Card(VisualElement parent, string count, string title, string detail, Action onClick)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>detail</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>onClick</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Button</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Header_" data-uid="TDMaker.Editor.TDMakerUi.Header*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Header_UnityEngine_UIElements_VisualElement_System_String_System_String_" data-uid="TDMaker.Editor.TDMakerUi.Header(UnityEngine.UIElements.VisualElement,System.String,System.String)">
+  Header(VisualElement, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Window title in capitals with an optional one-line description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Header(VisualElement root, string title, string description = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Heading_" data-uid="TDMaker.Editor.TDMakerUi.Heading*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Heading_UnityEngine_UIElements_VisualElement_System_String_" data-uid="TDMaker.Editor.TDMakerUi.Heading(UnityEngine.UIElements.VisualElement,System.String)">
+  Heading(VisualElement, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Section caption with a hairline rule above (none for the first child).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Label Heading(VisualElement parent, string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Label</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_ListRow_" data-uid="TDMaker.Editor.TDMakerUi.ListRow*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_ListRow_System_String_System_String_UnityEngine_Color_System_String_System_Action_" data-uid="TDMaker.Editor.TDMakerUi.ListRow(System.String,System.String,UnityEngine.Color,System.String,System.Action)">
+  ListRow(string, string, Color, string, Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list row: colored dot, title over detail, optional tag on the right.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Button ListRow(string title, string detail, Color dot, string tag, Action onClick)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>detail</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>dot</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>onClick</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Button</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Note_" data-uid="TDMaker.Editor.TDMakerUi.Note*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Note_UnityEngine_UIElements_VisualElement_System_String_" data-uid="TDMaker.Editor.TDMakerUi.Note(UnityEngine.UIElements.VisualElement,System.String)">
+  Note(VisualElement, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Wrapped muted text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Label Note(VisualElement parent, string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Label</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Panel_" data-uid="TDMaker.Editor.TDMakerUi.Panel*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Panel_UnityEngine_UIElements_VisualElement_" data-uid="TDMaker.Editor.TDMakerUi.Panel(UnityEngine.UIElements.VisualElement)">
+  Panel(VisualElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A raised panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VisualElement Panel(VisualElement parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Prop_" data-uid="TDMaker.Editor.TDMakerUi.Prop*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Prop_UnityEngine_UIElements_VisualElement_UnityEditor_SerializedObject_System_String_System_String_" data-uid="TDMaker.Editor.TDMakerUi.Prop(UnityEngine.UIElements.VisualElement,UnityEditor.SerializedObject,System.String,System.String)">
+  Prop(VisualElement, SerializedObject, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A bound property field for a path of the serialized object; a note when the path does not exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PropertyField Prop(VisualElement parent, SerializedObject so, string path, string label = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>so</code> <span class="xref">SerializedObject</span></dt>
+    <dd></dd>
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">PropertyField</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Row_" data-uid="TDMaker.Editor.TDMakerUi.Row*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Row_UnityEngine_UIElements_VisualElement_" data-uid="TDMaker.Editor.TDMakerUi.Row(UnityEngine.UIElements.VisualElement)">
+  Row(VisualElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A horizontal row whose children share the width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VisualElement Row(VisualElement parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_SearchField_" data-uid="TDMaker.Editor.TDMakerUi.SearchField*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_SearchField_System_String_System_String_" data-uid="TDMaker.Editor.TDMakerUi.SearchField(System.String,System.String)">
+  SearchField(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A search box with a placeholder; the caller registers its value-changed callback.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextField SearchField(string value, string placeholder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>placeholder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TextField</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Section_" data-uid="TDMaker.Editor.TDMakerUi.Section*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Section_UnityEngine_UIElements_VisualElement_System_String_System_Boolean_" data-uid="TDMaker.Editor.TDMakerUi.Section(UnityEngine.UIElements.VisualElement,System.String,System.Boolean)">
+  Section(VisualElement, string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A foldout section on a surface panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Foldout Section(VisualElement parent, string title, bool open = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>open</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Foldout</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Section_" data-uid="TDMaker.Editor.TDMakerUi.Section*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Section_UnityEngine_UIElements_VisualElement_System_String_System_String_System_Boolean_" data-uid="TDMaker.Editor.TDMakerUi.Section(UnityEngine.UIElements.VisualElement,System.String,System.String,System.Boolean)">
+  Section(VisualElement, string, string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A foldout section whose open state survives domain reloads (SessionState key).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Foldout Section(VisualElement parent, string title, string persistKey, bool defaultOpen = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>persistKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>defaultOpen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Foldout</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Show_" data-uid="TDMaker.Editor.TDMakerUi.Show*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Show_UnityEngine_UIElements_VisualElement_System_Boolean_" data-uid="TDMaker.Editor.TDMakerUi.Show(UnityEngine.UIElements.VisualElement,System.Boolean)">
+  Show(VisualElement, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shows or hides an element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Show(VisualElement element, bool visible)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+    <dt><code>visible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TDMaker_Editor_TDMakerUi_Style_" data-uid="TDMaker.Editor.TDMakerUi.Style*"></a>
+
+  <h3 id="TDMaker_Editor_TDMakerUi_Style_UnityEngine_UIElements_VisualElement_" data-uid="TDMaker.Editor.TDMakerUi.Style(UnityEngine.UIElements.VisualElement)">
+  Style(VisualElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the maker classes, style sheet and font to a window root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Style(VisualElement root)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          2D Tower Defense Maker
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

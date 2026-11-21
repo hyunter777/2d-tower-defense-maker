@@ -6,6 +6,7 @@ items:
   parent: TDMaker.Editor
   children:
   - TDMaker.Editor.UpgradeTreeWindow.#ctor
+  - TDMaker.Editor.UpgradeTreeWindow.CreateGUI
   - TDMaker.Editor.UpgradeTreeWindow.Open(TDMaker.Unity.Authoring.TowerAsset)
   - TDMaker.Editor.UpgradeTreeWindow.ShowWindow
   langs:
@@ -20,11 +21,14 @@ items:
   namespace: TDMaker.Editor
   summary: 'Graph view of a tower''s upgrade tree (level 1 → 2 → 3 → branches). Each node shows its cost, cumulative
 
-    investment and sell refund; clicking a node edits it inline. Nodes can grow new levels or branches, which are
+    investment and sell refund; clicking a node edits it in the sidebar. Nodes can grow new levels or branches, which are
 
     created as assets next to their parent. Drag a node to move it (the offset is kept per tree in the project''s UserSettings,
 
-    editor only); drag the empty canvas, or use the middle mouse button, to pan.'
+    editor only); drag the empty canvas, or use the middle mouse button, to pan.
+
+    The toolbar and the sidebar are UI Toolkit; the node graph is an IMGUI canvas (<xref href="TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement%2cSystem.Action)"
+    data-throw-if-not-resolved="false"></xref>).'
   example: []
   syntax:
     content: 'public sealed class UpgradeTreeWindow : EditorWindow'
@@ -200,10 +204,10 @@ items:
   summary: Opens the window for the selected tower.
   example: []
   syntax:
-    content: '[MenuItem("Tools/2D Tower Defense Maker/Upgrade Tree", priority = 11)]
+    content: '[MenuItem("Tools/2D Tower Defense Maker/Upgrade Tree", priority = 23)]
 
       public static void ShowWindow()'
-    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Upgrade Tree", priority:=11)>
+    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Upgrade Tree", priority:=23)>
 
       Public Shared Sub ShowWindow()'
   overload: TDMaker.Editor.UpgradeTreeWindow.ShowWindow*
@@ -216,7 +220,7 @@ items:
     namedArguments:
     - name: priority
       type: System.Int32
-      value: 11
+      value: 23
 - uid: TDMaker.Editor.UpgradeTreeWindow.Open(TDMaker.Unity.Authoring.TowerAsset)
   commentId: M:TDMaker.Editor.UpgradeTreeWindow.Open(TDMaker.Unity.Authoring.TowerAsset)
   id: Open(TDMaker.Unity.Authoring.TowerAsset)
@@ -242,6 +246,24 @@ items:
       type: TDMaker.Editor.UpgradeTreeWindow
     content.vb: Public Shared Function Open(tower As TowerAsset) As UpgradeTreeWindow
   overload: TDMaker.Editor.UpgradeTreeWindow.Open*
+- uid: TDMaker.Editor.UpgradeTreeWindow.CreateGUI
+  commentId: M:TDMaker.Editor.UpgradeTreeWindow.CreateGUI
+  id: CreateGUI
+  parent: TDMaker.Editor.UpgradeTreeWindow
+  langs:
+  - csharp
+  - vb
+  name: CreateGUI()
+  nameWithType: UpgradeTreeWindow.CreateGUI()
+  fullName: TDMaker.Editor.UpgradeTreeWindow.CreateGUI()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public void CreateGUI()
+    content.vb: Public Sub CreateGUI()
+  overload: TDMaker.Editor.UpgradeTreeWindow.CreateGUI*
 - uid: TDMaker.Editor.UpgradeTreeWindow.#ctor
   commentId: M:TDMaker.Editor.UpgradeTreeWindow.#ctor
   id: '#ctor'
@@ -264,6 +286,45 @@ items:
   fullName.vb: TDMaker.Editor.UpgradeTreeWindow.New()
   name.vb: New()
 references:
+- uid: TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement,System.Action)
+  commentId: M:TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement,System.Action)
+  isExternal: true
+  href: TDMaker.Editor.TDMakerUi.html#TDMaker_Editor_TDMakerUi_Canvas_UnityEngine_UIElements_VisualElement_System_Action_
+  name: Canvas(VisualElement, Action)
+  nameWithType: TDMakerUi.Canvas(VisualElement, Action)
+  fullName: TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement, System.Action)
+  spec.csharp:
+  - uid: TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement,System.Action)
+    name: Canvas
+    isExternal: true
+    href: TDMaker.Editor.TDMakerUi.html#TDMaker_Editor_TDMakerUi_Canvas_UnityEngine_UIElements_VisualElement_System_Action_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement,System.Action)
+    name: Canvas
+    isExternal: true
+    href: TDMaker.Editor.TDMakerUi.html#TDMaker_Editor_TDMakerUi_Canvas_UnityEngine_UIElements_VisualElement_System_Action_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
 - uid: TDMaker.Editor
   commentId: N:TDMaker.Editor
   isExternal: true
@@ -7168,6 +7229,13 @@ references:
   - uid: TDMaker.Unity.Authoring
     name: Authoring
     isExternal: true
+- uid: TDMaker.Editor.UpgradeTreeWindow.CreateGUI*
+  commentId: Overload:TDMaker.Editor.UpgradeTreeWindow.CreateGUI
+  isExternal: true
+  href: TDMaker.Editor.UpgradeTreeWindow.html#TDMaker_Editor_UpgradeTreeWindow_CreateGUI
+  name: CreateGUI
+  nameWithType: UpgradeTreeWindow.CreateGUI
+  fullName: TDMaker.Editor.UpgradeTreeWindow.CreateGUI
 - uid: TDMaker.Editor.UpgradeTreeWindow.#ctor*
   commentId: Overload:TDMaker.Editor.UpgradeTreeWindow.#ctor
   isExternal: true

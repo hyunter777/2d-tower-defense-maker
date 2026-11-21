@@ -7,6 +7,7 @@ items:
   children:
   - TDMaker.Editor.WaveTimelineWindow.#ctor
   - TDMaker.Editor.WaveTimelineWindow.AddEntryForEnemy(TDMaker.Unity.Authoring.WaveSetAsset,TDMaker.Unity.Authoring.WaveData,System.Int32,System.Single,TDMaker.Unity.Authoring.EnemyAsset)
+  - TDMaker.Editor.WaveTimelineWindow.CreateGUI
   - TDMaker.Editor.WaveTimelineWindow.Open(UnityEngine.Object)
   - TDMaker.Editor.WaveTimelineWindow.ShowWindow
   langs:
@@ -28,7 +29,9 @@ items:
     it
 
     shows the waves of the selected Wave Set / Level asset, or of the Level Authoring selected in (or present in) the open
-    scene.'
+    scene.
+
+    The source picker, toolbar, wave list, summaries and inspector are UI Toolkit; the lanes are an IMGUI canvas.'
   example: []
   syntax:
     content: 'public sealed class WaveTimelineWindow : EditorWindow'
@@ -204,10 +207,10 @@ items:
   summary: Opens the window for the current selection.
   example: []
   syntax:
-    content: '[MenuItem("Tools/2D Tower Defense Maker/Wave Timeline", priority = 10)]
+    content: '[MenuItem("Tools/2D Tower Defense Maker/Wave Timeline", priority = 22)]
 
       public static void ShowWindow()'
-    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Wave Timeline", priority:=10)>
+    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Wave Timeline", priority:=22)>
 
       Public Shared Sub ShowWindow()'
   overload: TDMaker.Editor.WaveTimelineWindow.ShowWindow*
@@ -220,7 +223,7 @@ items:
     namedArguments:
     - name: priority
       type: System.Int32
-      value: 10
+      value: 22
 - uid: TDMaker.Editor.WaveTimelineWindow.Open(UnityEngine.Object)
   commentId: M:TDMaker.Editor.WaveTimelineWindow.Open(UnityEngine.Object)
   id: Open(UnityEngine.Object)
@@ -247,6 +250,24 @@ items:
       type: TDMaker.Editor.WaveTimelineWindow
     content.vb: Public Shared Function Open(target As [Object]) As WaveTimelineWindow
   overload: TDMaker.Editor.WaveTimelineWindow.Open*
+- uid: TDMaker.Editor.WaveTimelineWindow.CreateGUI
+  commentId: M:TDMaker.Editor.WaveTimelineWindow.CreateGUI
+  id: CreateGUI
+  parent: TDMaker.Editor.WaveTimelineWindow
+  langs:
+  - csharp
+  - vb
+  name: CreateGUI()
+  nameWithType: WaveTimelineWindow.CreateGUI()
+  fullName: TDMaker.Editor.WaveTimelineWindow.CreateGUI()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public void CreateGUI()
+    content.vb: Public Sub CreateGUI()
+  overload: TDMaker.Editor.WaveTimelineWindow.CreateGUI*
 - uid: TDMaker.Editor.WaveTimelineWindow.AddEntryForEnemy(TDMaker.Unity.Authoring.WaveSetAsset,TDMaker.Unity.Authoring.WaveData,System.Int32,System.Single,TDMaker.Unity.Authoring.EnemyAsset)
   commentId: M:TDMaker.Editor.WaveTimelineWindow.AddEntryForEnemy(TDMaker.Unity.Authoring.WaveSetAsset,TDMaker.Unity.Authoring.WaveData,System.Int32,System.Single,TDMaker.Unity.Authoring.EnemyAsset)
   id: AddEntryForEnemy(TDMaker.Unity.Authoring.WaveSetAsset,TDMaker.Unity.Authoring.WaveData,System.Int32,System.Single,TDMaker.Unity.Authoring.EnemyAsset)
@@ -7218,6 +7239,13 @@ references:
   name: WaveTimelineWindow
   nameWithType: WaveTimelineWindow
   fullName: TDMaker.Editor.WaveTimelineWindow
+- uid: TDMaker.Editor.WaveTimelineWindow.CreateGUI*
+  commentId: Overload:TDMaker.Editor.WaveTimelineWindow.CreateGUI
+  isExternal: true
+  href: TDMaker.Editor.WaveTimelineWindow.html#TDMaker_Editor_WaveTimelineWindow_CreateGUI
+  name: CreateGUI
+  nameWithType: WaveTimelineWindow.CreateGUI
+  fullName: TDMaker.Editor.WaveTimelineWindow.CreateGUI
 - uid: TDMaker.Editor.WaveTimelineWindow.AddEntryForEnemy*
   commentId: Overload:TDMaker.Editor.WaveTimelineWindow.AddEntryForEnemy
   isExternal: true

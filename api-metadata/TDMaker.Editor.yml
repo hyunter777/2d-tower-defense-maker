@@ -4,11 +4,14 @@ items:
   commentId: N:TDMaker.Editor
   id: TDMaker.Editor
   children:
+  - TDMaker.Editor.AssetFormatUpgrade
   - TDMaker.Editor.AudioCuePreview
   - TDMaker.Editor.BuildSlotAuthoringEditor
   - TDMaker.Editor.CampaignAssetEditor
   - TDMaker.Editor.CampaignEditing
   - TDMaker.Editor.CombatMath
+  - TDMaker.Editor.ContentEditorWindow`1
+  - TDMaker.Editor.ContentView
   - TDMaker.Editor.EditorWindowLayout
   - TDMaker.Editor.EnemyAssetEditor
   - TDMaker.Editor.EntrySpan
@@ -20,6 +23,7 @@ items:
   - TDMaker.Editor.LevelDryRun
   - TDMaker.Editor.LevelDryRun.Pass
   - TDMaker.Editor.LevelDryRun.PassResult
+  - TDMaker.Editor.LevelPlay
   - TDMaker.Editor.LevelSceneBuilder
   - TDMaker.Editor.MapBackgroundPreview
   - TDMaker.Editor.MapEditing
@@ -34,6 +38,7 @@ items:
   - TDMaker.Editor.OnlineDocumentation
   - TDMaker.Editor.PathAuthoringEditor
   - TDMaker.Editor.PathEditing
+  - TDMaker.Editor.ProjectOverviewWindow
   - TDMaker.Editor.ProjectValidator
   - TDMaker.Editor.RangePreview
   - TDMaker.Editor.SampleAudio
@@ -41,9 +46,13 @@ items:
   - TDMaker.Editor.SampleCatalog
   - TDMaker.Editor.SampleContentGenerator
   - TDMaker.Editor.SampleScreenshot
+  - TDMaker.Editor.SamplesView
   - TDMaker.Editor.ScenePreview
   - TDMaker.Editor.StarterContent
   - TDMaker.Editor.TDEditorGUI
+  - TDMaker.Editor.TDMakerMenus
+  - TDMaker.Editor.TDMakerUi
+  - TDMaker.Editor.TDMakerWindows
   - TDMaker.Editor.TemplateInspectorBase
   - TDMaker.Editor.TextMeshProSetup
   - TDMaker.Editor.TowerAssetEditor
@@ -70,11 +79,13 @@ items:
   - TDMaker.Editor.UnitWorkshopWindow.Kind
   - TDMaker.Editor.UnitWorkshopWindow.MechanicCard
   - TDMaker.Editor.UnitWorkshopWindow.Tab
+  - TDMaker.Editor.UpgradeReport
   - TDMaker.Editor.UpgradeShopAssetEditor
   - TDMaker.Editor.UpgradeShopWindow
   - TDMaker.Editor.UpgradeTreeLayout
   - TDMaker.Editor.UpgradeTreeWindow
   - TDMaker.Editor.ValidationIssue
+  - TDMaker.Editor.ValidatorView
   - TDMaker.Editor.ValidatorWindow
   - TDMaker.Editor.WaveSchedule
   - TDMaker.Editor.WaveTimelineWindow
@@ -149,6 +160,34 @@ references:
   name: CombatMath
   nameWithType: CombatMath
   fullName: TDMaker.Editor.CombatMath
+- uid: TDMaker.Editor.ContentEditorWindow`1
+  commentId: T:TDMaker.Editor.ContentEditorWindow`1
+  isExternal: true
+  href: TDMaker.Editor.ContentEditorWindow-1.html
+  name: ContentEditorWindow<TAsset>
+  nameWithType: ContentEditorWindow<TAsset>
+  fullName: TDMaker.Editor.ContentEditorWindow<TAsset>
+  nameWithType.vb: ContentEditorWindow(Of TAsset)
+  fullName.vb: TDMaker.Editor.ContentEditorWindow(Of TAsset)
+  name.vb: ContentEditorWindow(Of TAsset)
+  spec.csharp:
+  - uid: TDMaker.Editor.ContentEditorWindow`1
+    name: ContentEditorWindow
+    isExternal: true
+    href: TDMaker.Editor.ContentEditorWindow-1.html
+  - name: <
+  - name: TAsset
+  - name: '>'
+  spec.vb:
+  - uid: TDMaker.Editor.ContentEditorWindow`1
+    name: ContentEditorWindow
+    isExternal: true
+    href: TDMaker.Editor.ContentEditorWindow-1.html
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: TAsset
+  - name: )
 - uid: TDMaker.Editor.EditorWindowLayout
   commentId: T:TDMaker.Editor.EditorWindowLayout
   isExternal: true
@@ -184,6 +223,27 @@ references:
   name: TDEditorGUI
   nameWithType: TDEditorGUI
   fullName: TDMaker.Editor.TDEditorGUI
+- uid: TDMaker.Editor.TDMakerMenus
+  commentId: T:TDMaker.Editor.TDMakerMenus
+  isExternal: true
+  href: TDMaker.Editor.TDMakerMenus.html
+  name: TDMakerMenus
+  nameWithType: TDMakerMenus
+  fullName: TDMaker.Editor.TDMakerMenus
+- uid: TDMaker.Editor.TDMakerUi
+  commentId: T:TDMaker.Editor.TDMakerUi
+  isExternal: true
+  href: TDMaker.Editor.TDMakerUi.html
+  name: TDMakerUi
+  nameWithType: TDMakerUi
+  fullName: TDMaker.Editor.TDMakerUi
+- uid: TDMaker.Editor.TDMakerWindows
+  commentId: T:TDMaker.Editor.TDMakerWindows
+  isExternal: true
+  href: TDMaker.Editor.TDMakerWindows.html
+  name: TDMakerWindows
+  nameWithType: TDMakerWindows
+  fullName: TDMaker.Editor.TDMakerWindows
 - uid: TDMaker.Editor.TextMeshProSetup
   commentId: T:TDMaker.Editor.TextMeshProSetup
   isExternal: true
@@ -191,6 +251,13 @@ references:
   name: TextMeshProSetup
   nameWithType: TextMeshProSetup
   fullName: TDMaker.Editor.TextMeshProSetup
+- uid: TDMaker.Editor.ContentView
+  commentId: T:TDMaker.Editor.ContentView
+  isExternal: true
+  href: TDMaker.Editor.ContentView.html
+  name: ContentView
+  nameWithType: ContentView
+  fullName: TDMaker.Editor.ContentView
 - uid: TDMaker.Editor.EnemyAssetEditor
   commentId: T:TDMaker.Editor.EnemyAssetEditor
   isExternal: true
@@ -275,6 +342,13 @@ references:
     name: PassResult
     isExternal: true
     href: TDMaker.Editor.LevelDryRun.PassResult.html
+- uid: TDMaker.Editor.LevelPlay
+  commentId: T:TDMaker.Editor.LevelPlay
+  isExternal: true
+  href: TDMaker.Editor.LevelPlay.html
+  name: LevelPlay
+  nameWithType: LevelPlay
+  fullName: TDMaker.Editor.LevelPlay
 - uid: TDMaker.Editor.MapBackgroundPreview
   commentId: T:TDMaker.Editor.MapBackgroundPreview
   isExternal: true
@@ -332,6 +406,14 @@ references:
   name: MapSceneGUI
   nameWithType: MapSceneGUI
   fullName: TDMaker.Editor.MapSceneGUI
+- uid: TDMaker.Editor.ProjectOverviewWindow
+  commentId: T:TDMaker.Editor.ProjectOverviewWindow
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.ProjectOverviewWindow.html
+  name: ProjectOverviewWindow
+  nameWithType: ProjectOverviewWindow
+  fullName: TDMaker.Editor.ProjectOverviewWindow
 - uid: TDMaker.Editor.SampleAudio
   commentId: T:TDMaker.Editor.SampleAudio
   isExternal: true
@@ -403,6 +485,21 @@ references:
   name: UpgradeTreeWindow
   nameWithType: UpgradeTreeWindow
   fullName: TDMaker.Editor.UpgradeTreeWindow
+- uid: TDMaker.Editor.UpgradeReport
+  commentId: T:TDMaker.Editor.UpgradeReport
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.UpgradeReport.html
+  name: UpgradeReport
+  nameWithType: UpgradeReport
+  fullName: TDMaker.Editor.UpgradeReport
+- uid: TDMaker.Editor.AssetFormatUpgrade
+  commentId: T:TDMaker.Editor.AssetFormatUpgrade
+  isExternal: true
+  href: TDMaker.Editor.AssetFormatUpgrade.html
+  name: AssetFormatUpgrade
+  nameWithType: AssetFormatUpgrade
+  fullName: TDMaker.Editor.AssetFormatUpgrade
 - uid: TDMaker.Editor.IssueSeverity
   commentId: T:TDMaker.Editor.IssueSeverity
   parent: TDMaker.Editor
@@ -425,6 +522,13 @@ references:
   name: ProjectValidator
   nameWithType: ProjectValidator
   fullName: TDMaker.Editor.ProjectValidator
+- uid: TDMaker.Editor.ValidatorView
+  commentId: T:TDMaker.Editor.ValidatorView
+  isExternal: true
+  href: TDMaker.Editor.ValidatorView.html
+  name: ValidatorView
+  nameWithType: ValidatorView
+  fullName: TDMaker.Editor.ValidatorView
 - uid: TDMaker.Editor.ValidatorWindow
   commentId: T:TDMaker.Editor.ValidatorWindow
   parent: TDMaker.Editor
@@ -524,6 +628,13 @@ references:
   name: SampleCatalog
   nameWithType: SampleCatalog
   fullName: TDMaker.Editor.SampleCatalog
+- uid: TDMaker.Editor.SamplesView
+  commentId: T:TDMaker.Editor.SamplesView
+  isExternal: true
+  href: TDMaker.Editor.SamplesView.html
+  name: SamplesView
+  nameWithType: SamplesView
+  fullName: TDMaker.Editor.SamplesView
 - uid: TDMaker.Editor.WelcomeWindow
   commentId: T:TDMaker.Editor.WelcomeWindow
   parent: TDMaker.Editor

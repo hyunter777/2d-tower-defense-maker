@@ -7,6 +7,7 @@ items:
   children:
   - TDMaker.Editor.ValidatorWindow.#ctor
   - TDMaker.Editor.ValidatorWindow.BesideRect(UnityEngine.Rect,UnityEngine.Vector2,UnityEngine.Rect)
+  - TDMaker.Editor.ValidatorWindow.CreateGUI
   - TDMaker.Editor.ValidatorWindow.Open(System.Boolean)
   - TDMaker.Editor.ValidatorWindow.OpenBeside(UnityEditor.EditorWindow)
   - TDMaker.Editor.ValidatorWindow.RunBatch
@@ -196,26 +197,12 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Opens the validator and runs it.
+  summary: Opens the Project Overview on its Project Check page and runs a scan (menu entry point).
   example: []
   syntax:
-    content: '[MenuItem("Tools/2D Tower Defense Maker/Validate Project", priority = 30)]
-
-      public static void ShowWindow()'
-    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Validate Project", priority:=30)>
-
-      Public Shared Sub ShowWindow()'
+    content: public static void ShowWindow()
+    content.vb: Public Shared Sub ShowWindow()
   overload: TDMaker.Editor.ValidatorWindow.ShowWindow*
-  attributes:
-  - type: UnityEditor.MenuItem
-    ctor: UnityEditor.MenuItem.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: Tools/2D Tower Defense Maker/Validate Project
-    namedArguments:
-    - name: priority
-      type: System.Int32
-      value: 30
 - uid: TDMaker.Editor.ValidatorWindow.Open(System.Boolean)
   commentId: M:TDMaker.Editor.ValidatorWindow.Open(System.Boolean)
   id: Open(System.Boolean)
@@ -230,7 +217,7 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Opens the validator; optionally runs a fresh scan.
+  summary: Opens the validator, docked beside an open maker window; optionally runs a fresh scan.
   example: []
   syntax:
     content: public static ValidatorWindow Open(bool run)
@@ -261,7 +248,9 @@ items:
   summary: 'Opens the validator as a floating window next to <code class="paramref">owner</code> (right side, or left when
     there is no room) so it
 
-    does not cover it, runs a scan and gives the focus back to the owner. A docked validator stays where it is.'
+    does not cover it, runs a scan and gives the focus back to the owner. A validator that is already open (docked or
+
+    floating) is reused; a docked validator stays where it is.'
   example: []
   syntax:
     content: public static ValidatorWindow OpenBeside(EditorWindow owner)
@@ -357,6 +346,24 @@ items:
     content: public static void RunBatch()
     content.vb: Public Shared Sub RunBatch()
   overload: TDMaker.Editor.ValidatorWindow.RunBatch*
+- uid: TDMaker.Editor.ValidatorWindow.CreateGUI
+  commentId: M:TDMaker.Editor.ValidatorWindow.CreateGUI
+  id: CreateGUI
+  parent: TDMaker.Editor.ValidatorWindow
+  langs:
+  - csharp
+  - vb
+  name: CreateGUI()
+  nameWithType: ValidatorWindow.CreateGUI()
+  fullName: TDMaker.Editor.ValidatorWindow.CreateGUI()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public void CreateGUI()
+    content.vb: Public Sub CreateGUI()
+  overload: TDMaker.Editor.ValidatorWindow.CreateGUI*
 - uid: TDMaker.Editor.ValidatorWindow.#ctor
   commentId: M:TDMaker.Editor.ValidatorWindow.#ctor
   id: '#ctor'
@@ -7435,6 +7442,13 @@ references:
   name: RunBatch
   nameWithType: ValidatorWindow.RunBatch
   fullName: TDMaker.Editor.ValidatorWindow.RunBatch
+- uid: TDMaker.Editor.ValidatorWindow.CreateGUI*
+  commentId: Overload:TDMaker.Editor.ValidatorWindow.CreateGUI
+  isExternal: true
+  href: TDMaker.Editor.ValidatorWindow.html#TDMaker_Editor_ValidatorWindow_CreateGUI
+  name: CreateGUI
+  nameWithType: ValidatorWindow.CreateGUI
+  fullName: TDMaker.Editor.ValidatorWindow.CreateGUI
 - uid: TDMaker.Editor.ValidatorWindow.#ctor*
   commentId: Overload:TDMaker.Editor.ValidatorWindow.#ctor
   isExternal: true

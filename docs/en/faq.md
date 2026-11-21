@@ -67,7 +67,10 @@ This release is **PC only (mouse and keyboard; touch UI not yet)**. The core is 
 Yes: custom systems, per-entity data, target selectors, damage hooks, ability actions and commands. See [Extending the Framework](extending.md) and the compiled examples in `Samples/Extending`.
 
 **Where are the logs from Dry Run and the Validator?**
-The Map Editor shows **Validate**, **Dry Run** and the latest results above its scrolling content. Click the error/warning summary to open the full Validator list. The complete Dry Run report and `ValidatorWindow.RunBatch` results are also written to the Console.
+The Map Editor shows **Validate**, **Dry Run** and the latest results above its scrolling content; **Open list** beside the summary opens the full Validator list next to the Map Editor without covering it. **Tools > 2D Tower Defense Maker > Validate Project** opens the hub's **Project Check** page and scans the project there, with severity filters, a search and per-row tags. The complete Dry Run report and `ValidatorWindow.RunBatch` results are also written to the Console.
+
+**I updated the package and the Validator shows Data format warnings.**
+Those assets were saved by an older release. They still load (the migration runs in memory), and the file on disk keeps its old version until you re-save it. Run **Tools > 2D Tower Defense Maker > Upgrade Asset Formats** (or the **Upgrade…** button in the Project Overview's **Project Check** summary) to save them in the current format. The re-save cannot be undone, so commit or back up the project first. A **Data format** *error* instead means the asset was saved by a newer package than the installed one: update the package; the file is left untouched until then.
 
 **Why is the interface still English after I set the Inspector language to `ko`?**
 In the Editor, enable **Ignore Saved Language In Editor** and set **Language** to `ko`. If that option is disabled, the saved PlayerPrefs language takes precedence. You can also select Korean from the sample title screen. Keep the Korean text table and the sample theme's fallback font assigned together.
@@ -83,6 +86,12 @@ Saves record the operating system's UTC time in ISO 8601 format. The slot screen
 
 **Does a colored Wave Set icon mean there is an error?**
 2D Tower Defense Maker does not assign a special red warning icon to Wave Sets. Check the Validator's error/warning counts and Inspector messages rather than judging an asset by its icon color.
+
+**Where did the Welcome window go?**
+It became the **Project Overview** hub in 1.1 (**Tools > 2D Tower Defense Maker > Project Overview**). The startup preference carries over, and existing code that calls `WelcomeWindow.Open()` still opens the hub.
+
+**The Project Overview opens every time I open the project. How do I stop it?**
+Turn off **Show on startup** at the bottom of the Project Overview. The choice is stored per project. The window never opens in batch mode, so tests and builds are unaffected.
 
 **My question is not answered here. Where can I ask?**
 Post it in [Q&A discussions](https://github.com/hyunter777/2d-tower-defense-maker/discussions/categories/q-a). Report bugs as an [issue](https://github.com/hyunter777/2d-tower-defense-maker/issues), and use **hyunter@flycat.co.kr** for private matters. [Support and licenses](support-license.md#getting-help) lists what to include.

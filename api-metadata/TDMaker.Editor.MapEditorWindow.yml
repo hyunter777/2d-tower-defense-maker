@@ -7,6 +7,7 @@ items:
   children:
   - TDMaker.Editor.MapEditorWindow.#ctor
   - TDMaker.Editor.MapEditorWindow.ActiveTool
+  - TDMaker.Editor.MapEditorWindow.CreateGUI
   - TDMaker.Editor.MapEditorWindow.DefaultRect(UnityEngine.Rect)
   - TDMaker.Editor.MapEditorWindow.DefaultSize
   - TDMaker.Editor.MapEditorWindow.DryRunSummary
@@ -250,12 +251,12 @@ items:
   summary: Opens the Map Editor.
   example: []
   syntax:
-    content: '[MenuItem("Tools/2D Tower Defense Maker/Map Editor", priority = 5)]
+    content: '[MenuItem("Tools/2D Tower Defense Maker/Map Editor", priority = 20)]
 
       public static MapEditorWindow Open()'
     return:
       type: TDMaker.Editor.MapEditorWindow
-    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Map Editor", priority:=5)>
+    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Map Editor", priority:=20)>
 
       Public Shared Function Open() As MapEditorWindow'
   overload: TDMaker.Editor.MapEditorWindow.Open*
@@ -268,7 +269,7 @@ items:
     namedArguments:
     - name: priority
       type: System.Int32
-      value: 5
+      value: 20
 - uid: TDMaker.Editor.MapEditorWindow.DefaultRect(UnityEngine.Rect)
   commentId: M:TDMaker.Editor.MapEditorWindow.DefaultRect(UnityEngine.Rect)
   id: DefaultRect(UnityEngine.Rect)
@@ -322,6 +323,24 @@ items:
       type: TDMaker.Editor.MapEditorWindow
     content.vb: Public Shared Function Open(target As LevelAuthoring, startTool As MapEditorWindow.Tool) As MapEditorWindow
   overload: TDMaker.Editor.MapEditorWindow.Open*
+- uid: TDMaker.Editor.MapEditorWindow.CreateGUI
+  commentId: M:TDMaker.Editor.MapEditorWindow.CreateGUI
+  id: CreateGUI
+  parent: TDMaker.Editor.MapEditorWindow
+  langs:
+  - csharp
+  - vb
+  name: CreateGUI()
+  nameWithType: MapEditorWindow.CreateGUI()
+  fullName: TDMaker.Editor.MapEditorWindow.CreateGUI()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public void CreateGUI()
+    content.vb: Public Sub CreateGUI()
+  overload: TDMaker.Editor.MapEditorWindow.CreateGUI*
 - uid: TDMaker.Editor.MapEditorWindow.#ctor
   commentId: M:TDMaker.Editor.MapEditorWindow.#ctor
   id: '#ctor'
@@ -7400,6 +7419,13 @@ references:
   - uid: TDMaker.Unity.Authoring
     name: Authoring
     isExternal: true
+- uid: TDMaker.Editor.MapEditorWindow.CreateGUI*
+  commentId: Overload:TDMaker.Editor.MapEditorWindow.CreateGUI
+  isExternal: true
+  href: TDMaker.Editor.MapEditorWindow.html#TDMaker_Editor_MapEditorWindow_CreateGUI
+  name: CreateGUI
+  nameWithType: MapEditorWindow.CreateGUI
+  fullName: TDMaker.Editor.MapEditorWindow.CreateGUI
 - uid: TDMaker.Editor.MapEditorWindow.#ctor*
   commentId: Overload:TDMaker.Editor.MapEditorWindow.#ctor
   isExternal: true

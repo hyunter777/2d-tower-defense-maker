@@ -5,9 +5,12 @@ items:
   id: WorkshopGUI
   parent: TDMaker.Editor
   children:
+  - TDMaker.Editor.WorkshopGUI.BadTint
   - TDMaker.Editor.WorkshopGUI.BeginCard(System.String,UnityEngine.Color,System.String)
+  - TDMaker.Editor.WorkshopGUI.CanvasCaption
   - TDMaker.Editor.WorkshopGUI.Card
   - TDMaker.Editor.WorkshopGUI.CardTitle
+  - TDMaker.Editor.WorkshopGUI.Cell
   - TDMaker.Editor.WorkshopGUI.Children(UnityEditor.SerializedProperty,System.Int32,System.String[])
   - TDMaker.Editor.WorkshopGUI.DefaultLabelWidth
   - TDMaker.Editor.WorkshopGUI.DrawSprite(UnityEngine.Rect,UnityEngine.Sprite,System.Boolean,UnityEngine.Color)
@@ -18,15 +21,22 @@ items:
   - TDMaker.Editor.WorkshopGUI.HeaderButtons(UnityEngine.Rect,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
   - TDMaker.Editor.WorkshopGUI.IndentWidth
   - TDMaker.Editor.WorkshopGUI.IsBlock(UnityEditor.SerializedProperty)
+  - TDMaker.Editor.WorkshopGUI.Line
   - TDMaker.Editor.WorkshopGUI.MeasureLabel(System.String)
+  - TDMaker.Editor.WorkshopGUI.MiniCentered
+  - TDMaker.Editor.WorkshopGUI.Note
   - TDMaker.Editor.WorkshopGUI.Num(System.Double,System.String)
   - TDMaker.Editor.WorkshopGUI.Relative(UnityEditor.SerializedProperty,System.String[])
   - TDMaker.Editor.WorkshopGUI.Row(System.String[],System.Single[],UnityEngine.GUIStyle,System.Nullable{UnityEngine.Color})
   - TDMaker.Editor.WorkshopGUI.RowLabel
+  - TDMaker.Editor.WorkshopGUI.RowTint
   - TDMaker.Editor.WorkshopGUI.SectionLabel
+  - TDMaker.Editor.WorkshopGUI.SectionTitle
   - TDMaker.Editor.WorkshopGUI.SpriteRect(UnityEngine.Sprite,UnityEngine.Vector2,System.Single,System.Single,System.Boolean)
   - TDMaker.Editor.WorkshopGUI.Stat(System.String,System.String,System.Boolean)
   - TDMaker.Editor.WorkshopGUI.TabButton
+  - TDMaker.Editor.WorkshopGUI.TableHeader
+  - TDMaker.Editor.WorkshopGUI.WarnTint
   - TDMaker.Editor.WorkshopGUI.WidestLabel(UnityEditor.SerializedObject,System.Func{System.String,System.Single})
   langs:
   - csharp
@@ -257,7 +267,7 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Begins a card with a coloured edge and a title; returns the header rect (for buttons drawn on the right).
+  summary: Begins a card with a coloured dot and a title; returns the header rect (for buttons drawn on the right).
   example: []
   syntax:
     content: public static Rect BeginCard(string title, Color color, string subtitle = null)
@@ -606,6 +616,98 @@ items:
   nameWithType.vb: WorkshopGUI.Num(Double, String)
   fullName.vb: TDMaker.Editor.WorkshopGUI.Num(Double, String)
   name.vb: Num(Double, String)
+- uid: TDMaker.Editor.WorkshopGUI.Line
+  commentId: P:TDMaker.Editor.WorkshopGUI.Line
+  id: Line
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Line
+  nameWithType: WorkshopGUI.Line
+  fullName: TDMaker.Editor.WorkshopGUI.Line
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Hairlines and grid lines.
+  example: []
+  syntax:
+    content: public static Color Line { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly Property Line As Color
+  overload: TDMaker.Editor.WorkshopGUI.Line*
+- uid: TDMaker.Editor.WorkshopGUI.RowTint
+  commentId: P:TDMaker.Editor.WorkshopGUI.RowTint
+  id: RowTint
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: RowTint
+  nameWithType: WorkshopGUI.RowTint
+  fullName: TDMaker.Editor.WorkshopGUI.RowTint
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Zebra tint of every other table row.
+  example: []
+  syntax:
+    content: public static Color RowTint { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly Property RowTint As Color
+  overload: TDMaker.Editor.WorkshopGUI.RowTint*
+- uid: TDMaker.Editor.WorkshopGUI.WarnTint
+  commentId: P:TDMaker.Editor.WorkshopGUI.WarnTint
+  id: WarnTint
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: WarnTint
+  nameWithType: WorkshopGUI.WarnTint
+  fullName: TDMaker.Editor.WorkshopGUI.WarnTint
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Soft tint of a table row that needs attention.
+  example: []
+  syntax:
+    content: public static Color WarnTint { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly Property WarnTint As Color
+  overload: TDMaker.Editor.WorkshopGUI.WarnTint*
+- uid: TDMaker.Editor.WorkshopGUI.BadTint
+  commentId: P:TDMaker.Editor.WorkshopGUI.BadTint
+  id: BadTint
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: BadTint
+  nameWithType: WorkshopGUI.BadTint
+  fullName: TDMaker.Editor.WorkshopGUI.BadTint
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Soft tint of a table row that is a problem.
+  example: []
+  syntax:
+    content: public static Color BadTint { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Shared ReadOnly Property BadTint As Color
+  overload: TDMaker.Editor.WorkshopGUI.BadTint*
 - uid: TDMaker.Editor.WorkshopGUI.Card
   commentId: P:TDMaker.Editor.WorkshopGUI.Card
   id: Card
@@ -620,7 +722,7 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Card body style.
+  summary: 'Card body style: a flat raised surface.'
   example: []
   syntax:
     content: public static GUIStyle Card { get; }
@@ -675,6 +777,144 @@ items:
       type: UnityEngine.GUIStyle
     content.vb: Public Shared ReadOnly Property SectionLabel As GUIStyle
   overload: TDMaker.Editor.WorkshopGUI.SectionLabel*
+- uid: TDMaker.Editor.WorkshopGUI.Note
+  commentId: P:TDMaker.Editor.WorkshopGUI.Note
+  id: Note
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Note
+  nameWithType: WorkshopGUI.Note
+  fullName: TDMaker.Editor.WorkshopGUI.Note
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Muted wrapped small text (hints and notes under fields).
+  example: []
+  syntax:
+    content: public static GUIStyle Note { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property Note As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.Note*
+- uid: TDMaker.Editor.WorkshopGUI.MiniCentered
+  commentId: P:TDMaker.Editor.WorkshopGUI.MiniCentered
+  id: MiniCentered
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: MiniCentered
+  nameWithType: WorkshopGUI.MiniCentered
+  fullName: TDMaker.Editor.WorkshopGUI.MiniCentered
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Small centred text on canvases.
+  example: []
+  syntax:
+    content: public static GUIStyle MiniCentered { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property MiniCentered As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.MiniCentered*
+- uid: TDMaker.Editor.WorkshopGUI.CanvasCaption
+  commentId: P:TDMaker.Editor.WorkshopGUI.CanvasCaption
+  id: CanvasCaption
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: CanvasCaption
+  nameWithType: WorkshopGUI.CanvasCaption
+  fullName: TDMaker.Editor.WorkshopGUI.CanvasCaption
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Small caption at the top of a canvas.
+  example: []
+  syntax:
+    content: public static GUIStyle CanvasCaption { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property CanvasCaption As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.CanvasCaption*
+- uid: TDMaker.Editor.WorkshopGUI.SectionTitle
+  commentId: P:TDMaker.Editor.WorkshopGUI.SectionTitle
+  id: SectionTitle
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: SectionTitle
+  nameWithType: WorkshopGUI.SectionTitle
+  fullName: TDMaker.Editor.WorkshopGUI.SectionTitle
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Section caption inside a form (muted bold, drawn under a hairline).
+  example: []
+  syntax:
+    content: public static GUIStyle SectionTitle { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property SectionTitle As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.SectionTitle*
+- uid: TDMaker.Editor.WorkshopGUI.TableHeader
+  commentId: P:TDMaker.Editor.WorkshopGUI.TableHeader
+  id: TableHeader
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: TableHeader
+  nameWithType: WorkshopGUI.TableHeader
+  fullName: TDMaker.Editor.WorkshopGUI.TableHeader
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Header cells of a table.
+  example: []
+  syntax:
+    content: public static GUIStyle TableHeader { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property TableHeader As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.TableHeader*
+- uid: TDMaker.Editor.WorkshopGUI.Cell
+  commentId: P:TDMaker.Editor.WorkshopGUI.Cell
+  id: Cell
+  parent: TDMaker.Editor.WorkshopGUI
+  langs:
+  - csharp
+  - vb
+  name: Cell
+  nameWithType: WorkshopGUI.Cell
+  fullName: TDMaker.Editor.WorkshopGUI.Cell
+  type: Property
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Body cells of a table.
+  example: []
+  syntax:
+    content: public static GUIStyle Cell { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GUIStyle
+    content.vb: Public Shared ReadOnly Property Cell As GUIStyle
+  overload: TDMaker.Editor.WorkshopGUI.Cell*
 - uid: TDMaker.Editor.WorkshopGUI.RowLabel
   commentId: P:TDMaker.Editor.WorkshopGUI.RowLabel
   id: RowLabel
@@ -1387,6 +1627,34 @@ references:
   nameWithType.vb: Double
   fullName.vb: Double
   name.vb: Double
+- uid: TDMaker.Editor.WorkshopGUI.Line*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Line
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Line
+  name: Line
+  nameWithType: WorkshopGUI.Line
+  fullName: TDMaker.Editor.WorkshopGUI.Line
+- uid: TDMaker.Editor.WorkshopGUI.RowTint*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.RowTint
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_RowTint
+  name: RowTint
+  nameWithType: WorkshopGUI.RowTint
+  fullName: TDMaker.Editor.WorkshopGUI.RowTint
+- uid: TDMaker.Editor.WorkshopGUI.WarnTint*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.WarnTint
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_WarnTint
+  name: WarnTint
+  nameWithType: WorkshopGUI.WarnTint
+  fullName: TDMaker.Editor.WorkshopGUI.WarnTint
+- uid: TDMaker.Editor.WorkshopGUI.BadTint*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.BadTint
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_BadTint
+  name: BadTint
+  nameWithType: WorkshopGUI.BadTint
+  fullName: TDMaker.Editor.WorkshopGUI.BadTint
 - uid: TDMaker.Editor.WorkshopGUI.Card*
   commentId: Overload:TDMaker.Editor.WorkshopGUI.Card
   isExternal: true
@@ -1408,6 +1676,48 @@ references:
   name: SectionLabel
   nameWithType: WorkshopGUI.SectionLabel
   fullName: TDMaker.Editor.WorkshopGUI.SectionLabel
+- uid: TDMaker.Editor.WorkshopGUI.Note*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Note
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Note
+  name: Note
+  nameWithType: WorkshopGUI.Note
+  fullName: TDMaker.Editor.WorkshopGUI.Note
+- uid: TDMaker.Editor.WorkshopGUI.MiniCentered*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.MiniCentered
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_MiniCentered
+  name: MiniCentered
+  nameWithType: WorkshopGUI.MiniCentered
+  fullName: TDMaker.Editor.WorkshopGUI.MiniCentered
+- uid: TDMaker.Editor.WorkshopGUI.CanvasCaption*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.CanvasCaption
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_CanvasCaption
+  name: CanvasCaption
+  nameWithType: WorkshopGUI.CanvasCaption
+  fullName: TDMaker.Editor.WorkshopGUI.CanvasCaption
+- uid: TDMaker.Editor.WorkshopGUI.SectionTitle*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.SectionTitle
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_SectionTitle
+  name: SectionTitle
+  nameWithType: WorkshopGUI.SectionTitle
+  fullName: TDMaker.Editor.WorkshopGUI.SectionTitle
+- uid: TDMaker.Editor.WorkshopGUI.TableHeader*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.TableHeader
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_TableHeader
+  name: TableHeader
+  nameWithType: WorkshopGUI.TableHeader
+  fullName: TDMaker.Editor.WorkshopGUI.TableHeader
+- uid: TDMaker.Editor.WorkshopGUI.Cell*
+  commentId: Overload:TDMaker.Editor.WorkshopGUI.Cell
+  isExternal: true
+  href: TDMaker.Editor.WorkshopGUI.html#TDMaker_Editor_WorkshopGUI_Cell
+  name: Cell
+  nameWithType: WorkshopGUI.Cell
+  fullName: TDMaker.Editor.WorkshopGUI.Cell
 - uid: TDMaker.Editor.WorkshopGUI.RowLabel*
   commentId: Overload:TDMaker.Editor.WorkshopGUI.RowLabel
   isExternal: true

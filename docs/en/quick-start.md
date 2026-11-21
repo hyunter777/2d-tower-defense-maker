@@ -4,7 +4,7 @@ Start with the **Maker** package to create your own game. The separate **Samples
 
 ## Build your first level (about 5 minutes)
 
-1. Open **Tools > 2D Tower Defense Maker > New Level** (also on the **Welcome** window, **Tools > 2D Tower Defense Maker > Welcome**).
+1. Open **Tools > 2D Tower Defense Maker > New Level** (also the **New Level…** button on the **Project Overview** hub).
 2. Enter a **Level Name**. The folder follows it (`Assets/TDMakerContent/<Name>`); change it if you like, but not to a folder inside `Assets/TDMaker` (the package).
 3. Optional: drop your painted map on **Background**. The default road and build slots are stretched over it and the camera is framed on it.
 4. Pick the **Starter content**:
@@ -19,12 +19,12 @@ You get `<Folder>/<Name>.unity` (open), `<Folder>/Data/` with the Level asset, t
 3. **Units and waves.** Tune the towers and the enemy in the **Unit Workshop** (Tools > 2D Tower Defense Maker > Unit Workshop) and the waves in the **Wave Timeline**.
 4. **Check.** **Validate** and **Dry Run** in the Map Editor (or Tools > 2D Tower Defense Maker > Validate Project / Dry Run Level). A sound level is lost without towers and won with a defense.
 5. **Spells.** Edit the starter spell in Unit Workshop, or create a Spell asset and add it to the Level asset's **Spells** list.
-6. **Play.** Build on an empty pad, then click the tower artwork or pad to upgrade it. Start the battle with the entrance skull button labeled **Start Wave**.
+6. **Play.** Press **▶ Play Level** (Map Editor toolbar, Level inspector, or right-click the level asset) to save the level, open the scene that plays it and start Play mode in one click. Build on an empty pad, then click the tower artwork or pad to upgrade it. Start the battle with the entrance skull button labeled **Start Wave**.
 
 
 ## Optional: play the Basic sample (1 minute)
 
-Install the optional Samples add-on after the Maker package, then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples**.
+Install the optional Samples add-on after the Maker package, then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples** (the hub's **Samples** page).
 
 1. Open `Assets/TDMaker/Samples/Basic/BasicSample.unity`.
    - If the scene or its `Data` folder is missing, run **Tools > 2D Tower Defense Maker > Samples > Regenerate Sample Content**. It (re)creates all sample assets and the scene in place.
@@ -132,7 +132,7 @@ If the Entity View Registry has no `Sprite Material`, an unlit sprite material i
 
 ## Next steps
 
-- Start screen with samples, tools and documents: **Tools > 2D Tower Defense Maker > Welcome**
+- Project Overview hub with content cards, the Content browser, project check, samples and documents: **Tools > 2D Tower Defense Maker > Project Overview**
 - Field-by-field reference: [Authoring Reference](authoring.md)
 - Tool reference: [Editor Tools](editor-tools.md)
 - Built-in mechanics: [Mechanic Library](mechanics.md); HUD and feedback: [Presentation](presentation.md)
@@ -149,7 +149,7 @@ The complete packaged sample flow is `Assets/TDMaker/Samples/Demo/DemoSample.uni
 - In Twin Roads, divide archers and arcane towers between the upper and lower roads and use barracks to hold enemies. In Crossroads, defend the merged roads and shared exit, with archers covering the flying route. In Winding Pass, mix arcane towers and mortars on inside bends where they cover several road sections, and buy time with barracks. Tier II upgrades are available before wave 1; heroes and spells are also available.
 - Creating a Unit Workshop asset clears search, type and tag filters, refreshes the list and scrolls to the selected row. The save dialog prefers the current user level's Data folder; otherwise it suggests the last user folder or `Assets/TDMakerContent/Units`.
 - A Wave Timeline group's **+** opens an enemy picker. The new entry copies the preceding entry's Count and Interval, so check both values. Double-clicking a group row copies its preceding entry instead.
-- Map Editor results remain above the scroll view. Click the error/warning summary for the complete list. **Auto Rally** for all slots asks for confirmation and can be undone in one step.
+- Map Editor results remain above the scroll view. **Open list** beside the error/warning summary opens the complete Validator list next to the Map Editor. **Auto Rally** for all slots asks for confirmation and can be undone in one step.
 
 ## New Level window
 

@@ -6,8 +6,9 @@ items:
   parent: TDMaker.Editor
   children:
   - TDMaker.Editor.TowerAssetEditor.#ctor
+  - TDMaker.Editor.TowerAssetEditor.BuildFooter(UnityEngine.UIElements.VisualElement)
+  - TDMaker.Editor.TowerAssetEditor.BuildGroups(UnityEngine.UIElements.VisualElement)
   - TDMaker.Editor.TowerAssetEditor.Key
-  - TDMaker.Editor.TowerAssetEditor.OnInspectorGUI
   langs:
   - csharp
   - vb
@@ -39,6 +40,7 @@ items:
   - UnityEditor.Editor
   - TDMaker.Editor.TemplateInspectorBase
   inheritedMembers:
+  - TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
   - UnityEditor.Editor.SaveChanges
   - UnityEditor.Editor.DiscardChanges
   - UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type)
@@ -53,7 +55,7 @@ items:
   - UnityEditor.Editor.CreateEditor(UnityEngine.Object[],System.Type)
   - UnityEditor.Editor.DrawDefaultInspector
   - UnityEditor.Editor.Repaint
-  - UnityEditor.Editor.CreateInspectorGUI
+  - UnityEditor.Editor.OnInspectorGUI
   - UnityEditor.Editor.RequiresConstantRepaint
   - UnityEditor.Editor.DrawHeader
   - UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object,UnityEditor.Editor@)
@@ -163,26 +165,60 @@ items:
   - type: UnityEditor.CanEditMultipleObjects
     ctor: UnityEditor.CanEditMultipleObjects.#ctor
     arguments: []
-- uid: TDMaker.Editor.TowerAssetEditor.OnInspectorGUI
-  commentId: M:TDMaker.Editor.TowerAssetEditor.OnInspectorGUI
-  id: OnInspectorGUI
+- uid: TDMaker.Editor.TowerAssetEditor.BuildGroups(UnityEngine.UIElements.VisualElement)
+  commentId: M:TDMaker.Editor.TowerAssetEditor.BuildGroups(UnityEngine.UIElements.VisualElement)
+  id: BuildGroups(UnityEngine.UIElements.VisualElement)
   parent: TDMaker.Editor.TowerAssetEditor
   langs:
   - csharp
   - vb
-  name: OnInspectorGUI()
-  nameWithType: TowerAssetEditor.OnInspectorGUI()
-  fullName: TDMaker.Editor.TowerAssetEditor.OnInspectorGUI()
+  name: BuildGroups(VisualElement)
+  nameWithType: TowerAssetEditor.BuildGroups(VisualElement)
+  fullName: TDMaker.Editor.TowerAssetEditor.BuildGroups(UnityEngine.UIElements.VisualElement)
   type: Method
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
+  summary: 'Adds the identity block and the property groups (<xref href="TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement%2cTDMaker.Unity.Authoring.EntityAssetBase)"
+    data-throw-if-not-resolved="false"></xref>,
+
+    <xref href="TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement%2cSystem.String%2cSystem.String%5b%5d)"
+    data-throw-if-not-resolved="false"></xref>). A subclass that does not override it keeps its own IMGUI
+
+    <code>OnInspectorGUI</code> (1.0 behaviour).'
   example: []
   syntax:
-    content: public override void OnInspectorGUI()
-    content.vb: Public Overrides Sub OnInspectorGUI()
-  overridden: UnityEditor.Editor.OnInspectorGUI
-  overload: TDMaker.Editor.TowerAssetEditor.OnInspectorGUI*
+    content: protected override void BuildGroups(VisualElement root)
+    parameters:
+    - id: root
+      type: UnityEngine.UIElements.VisualElement
+    content.vb: Protected Overrides Sub BuildGroups(root As VisualElement)
+  overridden: TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
+  overload: TDMaker.Editor.TowerAssetEditor.BuildGroups*
+- uid: TDMaker.Editor.TowerAssetEditor.BuildFooter(UnityEngine.UIElements.VisualElement)
+  commentId: M:TDMaker.Editor.TowerAssetEditor.BuildFooter(UnityEngine.UIElements.VisualElement)
+  id: BuildFooter(UnityEngine.UIElements.VisualElement)
+  parent: TDMaker.Editor.TowerAssetEditor
+  langs:
+  - csharp
+  - vb
+  name: BuildFooter(VisualElement)
+  nameWithType: TowerAssetEditor.BuildFooter(VisualElement)
+  fullName: TDMaker.Editor.TowerAssetEditor.BuildFooter(UnityEngine.UIElements.VisualElement)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Adds what follows the "Other" group: actions and computed read-outs. Called for single-object editing only.'
+  example: []
+  syntax:
+    content: protected override void BuildFooter(VisualElement root)
+    parameters:
+    - id: root
+      type: UnityEngine.UIElements.VisualElement
+    content.vb: Protected Overrides Sub BuildFooter(root As VisualElement)
+  overridden: TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+  overload: TDMaker.Editor.TowerAssetEditor.BuildFooter*
 - uid: TDMaker.Editor.TowerAssetEditor.#ctor
   commentId: M:TDMaker.Editor.TowerAssetEditor.#ctor
   id: '#ctor'
@@ -299,6 +335,28 @@ references:
   name: TemplateInspectorBase
   nameWithType: TemplateInspectorBase
   fullName: TDMaker.Editor.TemplateInspectorBase
+- uid: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+  parent: TDMaker.Editor.TemplateInspectorBase
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI
+  name: CreateInspectorGUI()
+  nameWithType: TemplateInspectorBase.CreateInspectorGUI()
+  fullName: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI()
+  spec.csharp:
+  - uid: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI
+  - name: (
+  - name: )
 - uid: UnityEditor.Editor.SaveChanges
   commentId: M:UnityEditor.Editor.SaveChanges
   parent: UnityEditor.Editor
@@ -852,22 +910,22 @@ references:
     isExternal: true
   - name: (
   - name: )
-- uid: UnityEditor.Editor.CreateInspectorGUI
-  commentId: M:UnityEditor.Editor.CreateInspectorGUI
+- uid: UnityEditor.Editor.OnInspectorGUI
+  commentId: M:UnityEditor.Editor.OnInspectorGUI
   parent: UnityEditor.Editor
   isExternal: true
-  name: CreateInspectorGUI()
-  nameWithType: Editor.CreateInspectorGUI()
-  fullName: UnityEditor.Editor.CreateInspectorGUI()
+  name: OnInspectorGUI()
+  nameWithType: Editor.OnInspectorGUI()
+  fullName: UnityEditor.Editor.OnInspectorGUI()
   spec.csharp:
-  - uid: UnityEditor.Editor.CreateInspectorGUI
-    name: CreateInspectorGUI
+  - uid: UnityEditor.Editor.OnInspectorGUI
+    name: OnInspectorGUI
     isExternal: true
   - name: (
   - name: )
   spec.vb:
-  - uid: UnityEditor.Editor.CreateInspectorGUI
-    name: CreateInspectorGUI
+  - uid: UnityEditor.Editor.OnInspectorGUI
+    name: OnInspectorGUI
     isExternal: true
   - name: (
   - name: )
@@ -6275,32 +6333,204 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: UnityEditor.Editor.OnInspectorGUI
-  commentId: M:UnityEditor.Editor.OnInspectorGUI
-  parent: UnityEditor.Editor
+- uid: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
   isExternal: true
-  name: OnInspectorGUI()
-  nameWithType: Editor.OnInspectorGUI()
-  fullName: UnityEditor.Editor.OnInspectorGUI()
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_
+  name: Identity(VisualElement, EntityAssetBase)
+  nameWithType: TemplateInspectorBase.Identity(VisualElement, EntityAssetBase)
+  fullName: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement, TDMaker.Unity.Authoring.EntityAssetBase)
   spec.csharp:
-  - uid: UnityEditor.Editor.OnInspectorGUI
-    name: OnInspectorGUI
+  - uid: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
+    name: Identity
     isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_
   - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.EntityAssetBase
+    name: EntityAssetBase
+    isExternal: true
   - name: )
   spec.vb:
-  - uid: UnityEditor.Editor.OnInspectorGUI
-    name: OnInspectorGUI
+  - uid: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
+    name: Identity
     isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.EntityAssetBase
+    name: EntityAssetBase
+    isExternal: true
+  - name: )
+- uid: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___
+  name: Group(VisualElement, string, params string[])
+  nameWithType: TemplateInspectorBase.Group(VisualElement, string, params string[])
+  fullName: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement, string, params string[])
+  nameWithType.vb: TemplateInspectorBase.Group(VisualElement, String, ParamArray String())
+  fullName.vb: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement, String, ParamArray String())
+  name.vb: Group(VisualElement, String, ParamArray String())
+  spec.csharp:
+  - uid: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+    name: Group
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - name: params
+  - name: ' '
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+    name: Group
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - name: ParamArray
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: (
   - name: )
-- uid: TDMaker.Editor.TowerAssetEditor.OnInspectorGUI*
-  commentId: Overload:TDMaker.Editor.TowerAssetEditor.OnInspectorGUI
+  - name: )
+- uid: TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
+  parent: TDMaker.Editor.TemplateInspectorBase
   isExternal: true
-  href: TDMaker.Editor.TowerAssetEditor.html#TDMaker_Editor_TowerAssetEditor_OnInspectorGUI
-  name: OnInspectorGUI
-  nameWithType: TowerAssetEditor.OnInspectorGUI
-  fullName: TDMaker.Editor.TowerAssetEditor.OnInspectorGUI
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_BuildGroups_UnityEngine_UIElements_VisualElement_
+  name: BuildGroups(VisualElement)
+  nameWithType: TemplateInspectorBase.BuildGroups(VisualElement)
+  fullName: TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
+    name: BuildGroups
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_BuildGroups_UnityEngine_UIElements_VisualElement_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
+    name: BuildGroups
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_BuildGroups_UnityEngine_UIElements_VisualElement_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: TDMaker.Editor.TowerAssetEditor.BuildGroups*
+  commentId: Overload:TDMaker.Editor.TowerAssetEditor.BuildGroups
+  isExternal: true
+  href: TDMaker.Editor.TowerAssetEditor.html#TDMaker_Editor_TowerAssetEditor_BuildGroups_UnityEngine_UIElements_VisualElement_
+  name: BuildGroups
+  nameWithType: TowerAssetEditor.BuildGroups
+  fullName: TDMaker.Editor.TowerAssetEditor.BuildGroups
+- uid: UnityEngine.UIElements.VisualElement
+  commentId: T:UnityEngine.UIElements.VisualElement
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: VisualElement
+  nameWithType: VisualElement
+  fullName: UnityEngine.UIElements.VisualElement
+- uid: UnityEngine.UIElements
+  commentId: N:UnityEngine.UIElements
+  isExternal: true
+  name: UnityEngine.UIElements
+  nameWithType: UnityEngine.UIElements
+  fullName: UnityEngine.UIElements
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+- uid: TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+  parent: TDMaker.Editor.TemplateInspectorBase
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_BuildFooter_UnityEngine_UIElements_VisualElement_
+  name: BuildFooter(VisualElement)
+  nameWithType: TemplateInspectorBase.BuildFooter(VisualElement)
+  fullName: TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+    name: BuildFooter
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_BuildFooter_UnityEngine_UIElements_VisualElement_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+    name: BuildFooter
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_BuildFooter_UnityEngine_UIElements_VisualElement_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: TDMaker.Editor.TowerAssetEditor.BuildFooter*
+  commentId: Overload:TDMaker.Editor.TowerAssetEditor.BuildFooter
+  isExternal: true
+  href: TDMaker.Editor.TowerAssetEditor.html#TDMaker_Editor_TowerAssetEditor_BuildFooter_UnityEngine_UIElements_VisualElement_
+  name: BuildFooter
+  nameWithType: TowerAssetEditor.BuildFooter
+  fullName: TDMaker.Editor.TowerAssetEditor.BuildFooter
 - uid: TDMaker.Editor.TowerAssetEditor.#ctor*
   commentId: Overload:TDMaker.Editor.TowerAssetEditor.#ctor
   isExternal: true

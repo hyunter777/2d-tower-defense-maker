@@ -1,6 +1,6 @@
 # Sample gallery
 
-The optional **Samples content** includes original vector artwork and four playable sample scenes. Include it during import, or install the separate Samples archive after the Maker when using split archives. Then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples**. The Maker works without these examples; see [Maker and Samples](package-layout.md) for folder selection. Import **TMP Essential Resources** once before playing. These images show the included package samples.
+The optional **Samples content** includes original vector artwork and four playable sample scenes. Include it during import, or install the separate Samples archive after the Maker when using split archives. Then open **Tools > 2D Tower Defense Maker > Samples > Browse Samples** (the hub's **Samples** page). The Maker works without these examples; see [Maker and Samples](package-layout.md) for folder selection. Import **TMP Essential Resources** once before playing. These images show the included package samples.
 
 ## Battle HUD
 

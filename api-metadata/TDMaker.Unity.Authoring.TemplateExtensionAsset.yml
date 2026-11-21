@@ -21,14 +21,23 @@ items:
 
     List them in an entity asset''s <xref href="TDMaker.Unity.Authoring.EntityAssetBase.extensions" data-throw-if-not-resolved="false"></xref>;
     they run in list order during the level bake.'
+  remarks: "Versioned by <xref href=\"TDMaker.Unity.Authoring.AssetSchema\" data-throw-if-not-resolved=\"false\"></xref>.
+    Version your own subclass fields with <xref href=\"TDMaker.Unity.Authoring.ISubclassVersionedAsset\" data-throw-if-not-resolved=\"false\"></xref>;
+    if your subclass\n            implements <xref href=\"UnityEngine.ISerializationCallbackReceiver\" data-throw-if-not-resolved=\"false\"></xref>
+    itself, call <xref href=\"TDMaker.Unity.Authoring.AssetSchema.HandleBeforeSerialize(TDMaker.Unity.Authoring.IVersionedAsset)\"
+    data-throw-if-not-resolved=\"false\"></xref> and\n            <xref href=\"TDMaker.Unity.Authoring.AssetSchema.HandleAfterDeserialize(TDMaker.Unity.Authoring.IVersionedAsset)\"
+    data-throw-if-not-resolved=\"false\"></xref> from it."
   example: []
   syntax:
-    content: 'public abstract class TemplateExtensionAsset : ScriptableObject'
-    content.vb: Public MustInherit Class TemplateExtensionAsset Inherits ScriptableObject
+    content: 'public abstract class TemplateExtensionAsset : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver'
+    content.vb: Public MustInherit Class TemplateExtensionAsset Inherits ScriptableObject Implements IVersionedAsset, ISerializationCallbackReceiver
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
+  implements:
+  - TDMaker.Unity.Authoring.IVersionedAsset
+  - UnityEngine.ISerializationCallbackReceiver
   inheritedMembers:
   - UnityEngine.ScriptableObject.SetDirty
   - UnityEngine.ScriptableObject.CreateInstance(System.String)
@@ -164,6 +173,85 @@ references:
   name: extensions
   nameWithType: EntityAssetBase.extensions
   fullName: TDMaker.Unity.Authoring.EntityAssetBase.extensions
+- uid: TDMaker.Unity.Authoring.AssetSchema
+  commentId: T:TDMaker.Unity.Authoring.AssetSchema
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AssetSchema.html
+  name: AssetSchema
+  nameWithType: AssetSchema
+  fullName: TDMaker.Unity.Authoring.AssetSchema
+- uid: TDMaker.Unity.Authoring.ISubclassVersionedAsset
+  commentId: T:TDMaker.Unity.Authoring.ISubclassVersionedAsset
+  isExternal: true
+  href: TDMaker.Unity.Authoring.ISubclassVersionedAsset.html
+  name: ISubclassVersionedAsset
+  nameWithType: ISubclassVersionedAsset
+  fullName: TDMaker.Unity.Authoring.ISubclassVersionedAsset
+- uid: UnityEngine.ISerializationCallbackReceiver
+  commentId: T:UnityEngine.ISerializationCallbackReceiver
+  parent: UnityEngine
+  isExternal: true
+  name: ISerializationCallbackReceiver
+  nameWithType: ISerializationCallbackReceiver
+  fullName: UnityEngine.ISerializationCallbackReceiver
+- uid: TDMaker.Unity.Authoring.AssetSchema.HandleBeforeSerialize(TDMaker.Unity.Authoring.IVersionedAsset)
+  commentId: M:TDMaker.Unity.Authoring.AssetSchema.HandleBeforeSerialize(TDMaker.Unity.Authoring.IVersionedAsset)
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleBeforeSerialize_TDMaker_Unity_Authoring_IVersionedAsset_
+  name: HandleBeforeSerialize(IVersionedAsset)
+  nameWithType: AssetSchema.HandleBeforeSerialize(IVersionedAsset)
+  fullName: TDMaker.Unity.Authoring.AssetSchema.HandleBeforeSerialize(TDMaker.Unity.Authoring.IVersionedAsset)
+  spec.csharp:
+  - uid: TDMaker.Unity.Authoring.AssetSchema.HandleBeforeSerialize(TDMaker.Unity.Authoring.IVersionedAsset)
+    name: HandleBeforeSerialize
+    isExternal: true
+    href: TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleBeforeSerialize_TDMaker_Unity_Authoring_IVersionedAsset_
+  - name: (
+  - uid: TDMaker.Unity.Authoring.IVersionedAsset
+    name: IVersionedAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Unity.Authoring.AssetSchema.HandleBeforeSerialize(TDMaker.Unity.Authoring.IVersionedAsset)
+    name: HandleBeforeSerialize
+    isExternal: true
+    href: TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleBeforeSerialize_TDMaker_Unity_Authoring_IVersionedAsset_
+  - name: (
+  - uid: TDMaker.Unity.Authoring.IVersionedAsset
+    name: IVersionedAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  - name: )
+- uid: TDMaker.Unity.Authoring.AssetSchema.HandleAfterDeserialize(TDMaker.Unity.Authoring.IVersionedAsset)
+  commentId: M:TDMaker.Unity.Authoring.AssetSchema.HandleAfterDeserialize(TDMaker.Unity.Authoring.IVersionedAsset)
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleAfterDeserialize_TDMaker_Unity_Authoring_IVersionedAsset_
+  name: HandleAfterDeserialize(IVersionedAsset)
+  nameWithType: AssetSchema.HandleAfterDeserialize(IVersionedAsset)
+  fullName: TDMaker.Unity.Authoring.AssetSchema.HandleAfterDeserialize(TDMaker.Unity.Authoring.IVersionedAsset)
+  spec.csharp:
+  - uid: TDMaker.Unity.Authoring.AssetSchema.HandleAfterDeserialize(TDMaker.Unity.Authoring.IVersionedAsset)
+    name: HandleAfterDeserialize
+    isExternal: true
+    href: TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleAfterDeserialize_TDMaker_Unity_Authoring_IVersionedAsset_
+  - name: (
+  - uid: TDMaker.Unity.Authoring.IVersionedAsset
+    name: IVersionedAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Unity.Authoring.AssetSchema.HandleAfterDeserialize(TDMaker.Unity.Authoring.IVersionedAsset)
+    name: HandleAfterDeserialize
+    isExternal: true
+    href: TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_HandleAfterDeserialize_TDMaker_Unity_Authoring_IVersionedAsset_
+  - name: (
+  - uid: TDMaker.Unity.Authoring.IVersionedAsset
+    name: IVersionedAsset
+    isExternal: true
+    href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  - name: )
 - uid: TDMaker.Unity.Authoring
   commentId: N:TDMaker.Unity.Authoring
   isExternal: true
@@ -219,6 +307,14 @@ references:
   name: ScriptableObject
   nameWithType: ScriptableObject
   fullName: UnityEngine.ScriptableObject
+- uid: TDMaker.Unity.Authoring.IVersionedAsset
+  commentId: T:TDMaker.Unity.Authoring.IVersionedAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  name: IVersionedAsset
+  nameWithType: IVersionedAsset
+  fullName: TDMaker.Unity.Authoring.IVersionedAsset
 - uid: UnityEngine.ScriptableObject.SetDirty
   commentId: M:UnityEngine.ScriptableObject.SetDirty
   parent: UnityEngine.ScriptableObject
@@ -3580,6 +3676,12 @@ references:
   name: EntityAssetBase
   nameWithType: EntityAssetBase
   fullName: TDMaker.Unity.Authoring.EntityAssetBase
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: System
   commentId: N:System
   isExternal: true
@@ -3587,12 +3689,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
 - uid: UnityEngine.Object.InstantiateAsync``1(``0)
   commentId: M:UnityEngine.Object.InstantiateAsync``1(``0)
   isExternal: true

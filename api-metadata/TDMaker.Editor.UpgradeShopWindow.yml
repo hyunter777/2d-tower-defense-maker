@@ -7,6 +7,7 @@ items:
   children:
   - TDMaker.Editor.UpgradeShopWindow.#ctor
   - TDMaker.Editor.UpgradeShopWindow.CostCurve(System.Int32,System.Int32,System.Int32,System.Single)
+  - TDMaker.Editor.UpgradeShopWindow.CreateGUI
   - TDMaker.Editor.UpgradeShopWindow.Open(TDMaker.Unity.Campaign.UpgradeShopAsset)
   langs:
   - csharp
@@ -249,6 +250,27 @@ items:
   nameWithType.vb: UpgradeShopWindow.CostCurve(Integer, Integer, Integer, Single)
   fullName.vb: TDMaker.Editor.UpgradeShopWindow.CostCurve(Integer, Integer, Integer, Single)
   name.vb: CostCurve(Integer, Integer, Integer, Single)
+- uid: TDMaker.Editor.UpgradeShopWindow.CreateGUI
+  commentId: M:TDMaker.Editor.UpgradeShopWindow.CreateGUI
+  id: CreateGUI
+  parent: TDMaker.Editor.UpgradeShopWindow
+  langs:
+  - csharp
+  - vb
+  name: CreateGUI()
+  nameWithType: UpgradeShopWindow.CreateGUI()
+  fullName: TDMaker.Editor.UpgradeShopWindow.CreateGUI()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Builds the header, the toolbar and the grid / detail columns; the content is filled by <xref href="TDMaker.Editor.UpgradeShopWindow.Rebuild"
+    data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void CreateGUI()
+    content.vb: Public Sub CreateGUI()
+  overload: TDMaker.Editor.UpgradeShopWindow.CreateGUI*
 - uid: TDMaker.Editor.UpgradeShopWindow.#ctor
   commentId: M:TDMaker.Editor.UpgradeShopWindow.#ctor
   id: '#ctor'
@@ -7220,6 +7242,16 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: (
   - name: )
+- uid: TDMaker.Editor.UpgradeShopWindow.Rebuild
+  commentId: M:TDMaker.Editor.UpgradeShopWindow.Rebuild
+  isExternal: true
+- uid: TDMaker.Editor.UpgradeShopWindow.CreateGUI*
+  commentId: Overload:TDMaker.Editor.UpgradeShopWindow.CreateGUI
+  isExternal: true
+  href: TDMaker.Editor.UpgradeShopWindow.html#TDMaker_Editor_UpgradeShopWindow_CreateGUI
+  name: CreateGUI
+  nameWithType: UpgradeShopWindow.CreateGUI
+  fullName: TDMaker.Editor.UpgradeShopWindow.CreateGUI
 - uid: TDMaker.Editor.UpgradeShopWindow.#ctor*
   commentId: Overload:TDMaker.Editor.UpgradeShopWindow.#ctor
   isExternal: true

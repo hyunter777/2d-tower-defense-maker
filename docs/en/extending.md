@@ -454,6 +454,40 @@ public void SetTowerStance(int towerId, Stance stance) => runner.Enqueue(new Set
 
 Built-in command types cannot be replaced. A command type without a handler is rejected with `InvalidCommand`.
 
+## Versioning your own assets
+
+The maker's assets carry a data format version ([Editor Tools](editor-tools.md#upgrading-assets-after-a-package-update)). A standalone `ScriptableObject` of your own can carry one too, so data saved by an old build of your game opens with the new shape instead of silently losing fields. `IVersionedAsset`, `ISubclassVersionedAsset` and `AssetSchema` live in `TDMaker.Unity.Authoring`. Implement `IVersionedAsset`, add a version field with **no initializer** (data saved before versioning reads 0), forward the serialization callbacks, and register steps from the static constructor:
+
+```csharp
+[CreateAssetMenu(menuName = "My Game/Tower Skin")]
+public sealed class TowerSkin : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver
+{
+    [SerializeField, HideInInspector] private int schemaVersion;      // no initializer on purpose
+    [SerializeField] private float damageScale = 1f;
+    [SerializeField, HideInInspector] private float damageBonus;      // the old field, kept readable
+
+    static TowerSkin()
+    {
+        AssetSchema.RegisterStep<TowerSkin>(0, skin =>
+        {
+            if (skin.damageBonus == 0f) return;                        // idempotent: 0 can also mean "made in code"
+            skin.damageScale += skin.damageBonus;
+            skin.damageBonus = 0f;
+        });
+    }
+
+    int IVersionedAsset.SchemaVersion { get => schemaVersion; set => schemaVersion = value; }
+    void ISerializationCallbackReceiver.OnBeforeSerialize() => AssetSchema.HandleBeforeSerialize(this);
+    void ISerializationCallbackReceiver.OnAfterDeserialize() => AssetSchema.HandleAfterDeserialize(this);
+}
+```
+
+- **Steps run in version order and must be idempotent.** A step registered at version `n` converts `n` into `n + 1`; the current version is one past your highest step (at least 1). The same step can run again on an asset that was created in code and not yet stamped, so it must do nothing when the data is already in the new shape.
+- **No Unity API inside a step.** Steps run from `OnAfterDeserialize`, possibly off the main thread: touch the asset's serialized fields only (no `name`, no `AssetDatabase`, no comparison against other objects). Work that needs the editor belongs in `OnEnable` or in an editor pass.
+- **Renaming a field:** keep `[FormerlySerializedAs("oldName")]` for as long as old data may exist and never remove it; a rename alone needs no step. When the *meaning* changes (units, ranges, a field split or merged), keep the old field readable and hidden and convert it in a step that also clears it, as the example does.
+- **Subclasses of the maker's bases** (`EntityAssetBase`, `AbilityActionAsset`, `TemplateExtensionAsset`) get the framework's callbacks from the base. Version your own fields on a separate track with `ISubclassVersionedAsset` instead of registering steps for the base: `static MyBarrier() { AssetSchema.RegisterStep<MyBarrier>(0, b => …); }` then runs on that track, after the framework's own steps. Registering a subclass of a built-in base without the interface throws `ArgumentException`.
+- Your assets are found automatically: the Validator's **Data format** rule and **Tools > 2D Tower Defense Maker > Upgrade Asset Formats** include every loaded type that implements `IVersionedAsset`.
+
 ## How the view consumes events
 
 `SimulationRunner.EventRaised` delivers every event in emission order once per frame, after the frame's ticks (the runner clears them afterwards). Subscribe from any MonoBehaviour – `ExtendingSample` does:

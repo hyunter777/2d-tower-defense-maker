@@ -1,40 +1,116 @@
+# Draft for the public documentation repository (hyunter777/2d-tower-defense-maker).
+# Copy to .github/workflows/pages.yml there, not into the product repository.
+#
+# Prerequisites before this workflow can deploy:
+#   1. Repository settings > Pages > Build and deployment > Source = "GitHub Actions"
+#      (this replaces the current "Deploy from a branch: gh-pages" setting).
+#   2. The token used to push this file needs the "workflow" scope.
+#   3. Repository settings > Actions > General > Workflow permissions allows the
+#      default read-only token plus the "pages" environment (declared below).
+#
+# The site is built from the checked-in api-metadata; Unity, the product sources and
+# compiled assemblies are not needed, so no DocFX metadata generation runs here.
 name: Publish documentation
 on:
   push:
     branches: [main]
+    paths:
+      - 'docs/**'
+      - 'api-metadata/**'
+      - 'docfx/**'
+      - 'scripts/**'
+      - 'mkdocs.yml'
+      - 'requirements.txt'
+      - 'deployment/**'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: documentation-pages
   cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+  PYTHONUNBUFFERED: '1'
+  DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+  DOTNET_NOLOGO: '1'
+  NO_MKDOCS_2_WARNING: '1'
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Verify documentation repository layout
+        run: |
+          test -f mkdocs.yml
+          test -f requirements.txt
+          test -d docs/en
+          test -d api-metadata
+          test -f scripts/build.py
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.txt
+
       - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
-      - run: python -m pip install -r requirements.txt
-      - run: dotnet tool install --global docfx --version 2.81.0
-      - run: python scripts/build.py --output site
+          dotnet-version: 8.0.x
+
+      - name: Install Python dependencies
+        run: python -m pip install --no-input --disable-pip-version-check -r requirements.txt
+
+      - name: Cache DocFX
+        uses: actions/cache@v4
+        with:
+          path: ~/.dotnet/tools
+          key: docfx-2.81.0-${{ runner.os }}
+
+      - name: Install DocFX 2.81.0
+        run: |
+          dotnet tool install --global docfx --version 2.81.0 \
+            || dotnet tool update --global docfx --version 2.81.0
+          docfx --version
+
+      - name: Show tool versions
+        run: |
+          python --version
+          python -m mkdocs --version
+
+      # Strict MkDocs build, DocFX with --warningsAsErrors and the HTML link/anchor
+      # check all run inside this command; any warning fails the job.
+      - name: Build site (strict)
+        run: python scripts/build.py --output site
+
+      - name: Summarize artifact
+        run: |
+          echo "HTML pages: $(find site -name '*.html' | wc -l)"
+          echo "Size: $(du -sh site | cut -f1)"
+
       - uses: actions/configure-pages@v5
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+
   deploy:
+    needs: build
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

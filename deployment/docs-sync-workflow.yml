@@ -1,0 +1,87 @@
+# Draft (optional, not active): belongs in the PRIVATE product repository
+# (2D.Tower.Defense.Maker source) at .github/workflows/docs-sync.yml.
+# It mirrors docs/site/ from the product repository into the public documentation
+# repository so the "Publish documentation" workflow can build and deploy it.
+#
+# Requirements before enabling:
+#   1. GitHub Actions enabled for the private repository (currently the token in use
+#      has no workflow-write permission, see docs/handover.md).
+#   2. Secret DOCS_SYNC_TOKEN: a fine-grained token with Contents read/write on
+#      hyunter777/2d-tower-defense-maker. Add the "workflow" scope only if the token
+#      must also push .github/workflows changes.
+#   3. Keep the manual path (git clone, copy, commit, push) as the fallback; this
+#      workflow is a convenience, not the source of truth.
+#
+# Default input is a dry run: it prints the pending difference and pushes nothing.
+name: Sync documentation source
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Only report the difference (recommended first run)'
+        type: boolean
+        default: true
+      target_branch:
+        description: 'Branch of the public documentation repository'
+        type: string
+        default: main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    env:
+      PUBLIC_REPOSITORY: hyunter777/2d-tower-defense-maker
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Verify docs/site layout
+        run: |
+          test -f docs/site/mkdocs.yml
+          test -d docs/site/docs/en
+          test -d docs/site/api-metadata
+
+      - name: Clone the public documentation repository
+        env:
+          DOCS_SYNC_TOKEN: ${{ secrets.DOCS_SYNC_TOKEN }}
+        run: |
+          git clone --depth 1 --branch "${{ inputs.target_branch }}" \
+            "https://x-access-token:${DOCS_SYNC_TOKEN}@github.com/${PUBLIC_REPOSITORY}.git" public
+
+      # Mirrors the documentation source only. .git and .github stay untouched;
+      # site/ build output is never synced.
+      - name: Mirror docs/site into the public working tree
+        run: |
+          rsync -a --delete \
+            --exclude '.git/' --exclude '.github/' --exclude 'site/' \
+            --exclude '__pycache__/' --exclude 'docfx/obj/' \
+            docs/site/ public/
+
+      - name: Show pending changes
+        run: |
+          git -C public status --short
+          git -C public diff --stat
+
+      - name: Commit and push
+        if: ${{ inputs.dry_run == false }}
+        env:
+          DOCS_SYNC_TOKEN: ${{ secrets.DOCS_SYNC_TOKEN }}
+        run: |
+          git -C public config user.name 'TDMaker docs bot'
+          git -C public config user.email 'docs-bot@users.noreply.github.com'
+          git -C public add -A
+          if git -C public diff --cached --quiet; then
+            echo 'Documentation source already up to date.'
+            exit 0
+          fi
+          git -C public commit -m "Sync documentation source from product ${GITHUB_SHA:0:12}"
+          git -C public push origin "HEAD:${{ inputs.target_branch }}"

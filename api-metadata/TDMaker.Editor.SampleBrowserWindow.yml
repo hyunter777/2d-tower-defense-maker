@@ -6,6 +6,7 @@ items:
   parent: TDMaker.Editor
   children:
   - TDMaker.Editor.SampleBrowserWindow.#ctor
+  - TDMaker.Editor.SampleBrowserWindow.CreateGUI
   - TDMaker.Editor.SampleBrowserWindow.Open
   langs:
   - csharp
@@ -17,7 +18,10 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Separate entry point for optional examples and the complete sample game.
+  summary: 'Standalone host of <xref href="TDMaker.Editor.SamplesView" data-throw-if-not-resolved="false"></xref>. The menu
+    now opens the Project Overview''s Samples page instead; this window stays
+
+    for code that opens it directly.'
   example: []
   syntax:
     content: 'public sealed class SampleBrowserWindow : EditorWindow'
@@ -190,26 +194,32 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
+  summary: Opens the Sample Browser, docked beside an open maker window.
+  example: []
   syntax:
-    content: '[MenuItem("Tools/2D Tower Defense Maker/Samples/Browse Samples", priority = 0)]
-
-      public static SampleBrowserWindow Open()'
+    content: public static SampleBrowserWindow Open()
     return:
       type: TDMaker.Editor.SampleBrowserWindow
-    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Samples/Browse Samples", priority:=0)>
-
-      Public Shared Function Open() As SampleBrowserWindow'
+    content.vb: Public Shared Function Open() As SampleBrowserWindow
   overload: TDMaker.Editor.SampleBrowserWindow.Open*
-  attributes:
-  - type: UnityEditor.MenuItem
-    ctor: UnityEditor.MenuItem.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: Tools/2D Tower Defense Maker/Samples/Browse Samples
-    namedArguments:
-    - name: priority
-      type: System.Int32
-      value: 0
+- uid: TDMaker.Editor.SampleBrowserWindow.CreateGUI
+  commentId: M:TDMaker.Editor.SampleBrowserWindow.CreateGUI
+  id: CreateGUI
+  parent: TDMaker.Editor.SampleBrowserWindow
+  langs:
+  - csharp
+  - vb
+  name: CreateGUI()
+  nameWithType: SampleBrowserWindow.CreateGUI()
+  fullName: TDMaker.Editor.SampleBrowserWindow.CreateGUI()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public void CreateGUI()
+    content.vb: Public Sub CreateGUI()
+  overload: TDMaker.Editor.SampleBrowserWindow.CreateGUI*
 - uid: TDMaker.Editor.SampleBrowserWindow.#ctor
   commentId: M:TDMaker.Editor.SampleBrowserWindow.#ctor
   id: '#ctor'
@@ -232,6 +242,13 @@ items:
   fullName.vb: TDMaker.Editor.SampleBrowserWindow.New()
   name.vb: New()
 references:
+- uid: TDMaker.Editor.SamplesView
+  commentId: T:TDMaker.Editor.SamplesView
+  isExternal: true
+  href: TDMaker.Editor.SamplesView.html
+  name: SamplesView
+  nameWithType: SamplesView
+  fullName: TDMaker.Editor.SamplesView
 - uid: TDMaker.Editor
   commentId: N:TDMaker.Editor
   isExternal: true
@@ -7091,6 +7108,13 @@ references:
   name: SampleBrowserWindow
   nameWithType: SampleBrowserWindow
   fullName: TDMaker.Editor.SampleBrowserWindow
+- uid: TDMaker.Editor.SampleBrowserWindow.CreateGUI*
+  commentId: Overload:TDMaker.Editor.SampleBrowserWindow.CreateGUI
+  isExternal: true
+  href: TDMaker.Editor.SampleBrowserWindow.html#TDMaker_Editor_SampleBrowserWindow_CreateGUI
+  name: CreateGUI
+  nameWithType: SampleBrowserWindow.CreateGUI
+  fullName: TDMaker.Editor.SampleBrowserWindow.CreateGUI
 - uid: TDMaker.Editor.SampleBrowserWindow.#ctor*
   commentId: Overload:TDMaker.Editor.SampleBrowserWindow.#ctor
   isExternal: true

@@ -7,6 +7,7 @@ items:
   children:
   - TDMaker.Editor.NewAssetDialog.#ctor
   - TDMaker.Editor.NewAssetDialog.Ask(System.String,System.String,System.String@,System.String@)
+  - TDMaker.Editor.NewAssetDialog.CreateGUI
   - TDMaker.Editor.NewAssetDialog.DefaultFolder
   - TDMaker.Editor.NewAssetDialog.EnsureFolder(System.String)
   - TDMaker.Editor.NewAssetDialog.IsPackageFolder(System.String)
@@ -413,6 +414,24 @@ items:
   nameWithType.vb: NewAssetDialog.Ask(String, String, String, String)
   fullName.vb: TDMaker.Editor.NewAssetDialog.Ask(String, String, String, String)
   name.vb: Ask(String, String, String, String)
+- uid: TDMaker.Editor.NewAssetDialog.CreateGUI
+  commentId: M:TDMaker.Editor.NewAssetDialog.CreateGUI
+  id: CreateGUI
+  parent: TDMaker.Editor.NewAssetDialog
+  langs:
+  - csharp
+  - vb
+  name: CreateGUI()
+  nameWithType: NewAssetDialog.CreateGUI()
+  fullName: TDMaker.Editor.NewAssetDialog.CreateGUI()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  syntax:
+    content: public void CreateGUI()
+    content.vb: Public Sub CreateGUI()
+  overload: TDMaker.Editor.NewAssetDialog.CreateGUI*
 - uid: TDMaker.Editor.NewAssetDialog.#ctor
   commentId: M:TDMaker.Editor.NewAssetDialog.#ctor
   id: '#ctor'
@@ -7357,6 +7376,13 @@ references:
   name: Ask
   nameWithType: NewAssetDialog.Ask
   fullName: TDMaker.Editor.NewAssetDialog.Ask
+- uid: TDMaker.Editor.NewAssetDialog.CreateGUI*
+  commentId: Overload:TDMaker.Editor.NewAssetDialog.CreateGUI
+  isExternal: true
+  href: TDMaker.Editor.NewAssetDialog.html#TDMaker_Editor_NewAssetDialog_CreateGUI
+  name: CreateGUI
+  nameWithType: NewAssetDialog.CreateGUI
+  fullName: TDMaker.Editor.NewAssetDialog.CreateGUI
 - uid: TDMaker.Editor.NewAssetDialog.#ctor*
   commentId: Overload:TDMaker.Editor.NewAssetDialog.#ctor
   isExternal: true

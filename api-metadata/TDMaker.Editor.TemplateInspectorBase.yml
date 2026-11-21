@@ -7,14 +7,23 @@ items:
   children:
   - TDMaker.Editor.TemplateInspectorBase.#ctor
   - TDMaker.Editor.TemplateInspectorBase.Begin
+  - TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+  - TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
   - TDMaker.Editor.TemplateInspectorBase.Cells(UnityEngine.Rect,System.String,System.String,System.String,System.String,UnityEngine.GUIStyle)
+  - TDMaker.Editor.TemplateInspectorBase.Computed(UnityEngine.UIElements.VisualElement,System.String,System.Action{UnityEngine.UIElements.VisualElement})
+  - TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
   - TDMaker.Editor.TemplateInspectorBase.DefenseOf(TDMaker.Core.Defs.DamageKind)
   - TDMaker.Editor.TemplateInspectorBase.DpsTable(System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
+  - TDMaker.Editor.TemplateInspectorBase.DpsTable(UnityEngine.UIElements.VisualElement,System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
   - TDMaker.Editor.TemplateInspectorBase.Ehp(System.Double)
   - TDMaker.Editor.TemplateInspectorBase.End
   - TDMaker.Editor.TemplateInspectorBase.Group(System.String,System.String[])
+  - TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
   - TDMaker.Editor.TemplateInspectorBase.Identity(TDMaker.Unity.Authoring.EntityAssetBase)
+  - TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
   - TDMaker.Editor.TemplateInspectorBase.Key
+  - TDMaker.Editor.TemplateInspectorBase.RefreshComputed
+  - TDMaker.Editor.TemplateInspectorBase.StatRow(UnityEngine.UIElements.VisualElement,System.String,System.String)
   - TDMaker.Editor.TemplateInspectorBase.StatsBox(System.Action)
   langs:
   - csharp
@@ -26,9 +35,12 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: 'Base for grouped template inspectors: draws named property groups in persistent foldouts and any fields not
+  summary: 'Base for grouped template inspectors (UI Toolkit): an identity block, named property groups in persistent foldout
+    sections,
 
-    claimed by a group under "Other", so new serialized fields never disappear from the inspector.'
+    any fields not claimed by a group under "Other" (so new serialized fields never disappear from the inspector), then the
+
+    subclass footer (actions and computed read-outs, refreshed when the asset changes).'
   example: []
   syntax:
     content: 'public abstract class TemplateInspectorBase : Editor'
@@ -58,7 +70,6 @@ items:
   - UnityEditor.Editor.DrawDefaultInspector
   - UnityEditor.Editor.Repaint
   - UnityEditor.Editor.OnInspectorGUI
-  - UnityEditor.Editor.CreateInspectorGUI
   - UnityEditor.Editor.RequiresConstantRepaint
   - UnityEditor.Editor.DrawHeader
   - UnityEditor.Editor.OnHeaderGUI
@@ -162,120 +173,250 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: TDMaker.Editor.TemplateInspectorBase.Begin
-  commentId: M:TDMaker.Editor.TemplateInspectorBase.Begin
-  id: Begin
+- uid: TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
+  id: BuildGroups(UnityEngine.UIElements.VisualElement)
   parent: TDMaker.Editor.TemplateInspectorBase
   langs:
   - csharp
   - vb
-  name: Begin()
-  nameWithType: TemplateInspectorBase.Begin()
-  fullName: TDMaker.Editor.TemplateInspectorBase.Begin()
+  name: BuildGroups(VisualElement)
+  nameWithType: TemplateInspectorBase.BuildGroups(VisualElement)
+  fullName: TDMaker.Editor.TemplateInspectorBase.BuildGroups(UnityEngine.UIElements.VisualElement)
   type: Method
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Starts a frame; call before drawing groups.
+  summary: 'Adds the identity block and the property groups (<xref href="TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement%2cTDMaker.Unity.Authoring.EntityAssetBase)"
+    data-throw-if-not-resolved="false"></xref>,
+
+    <xref href="TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement%2cSystem.String%2cSystem.String%5b%5d)"
+    data-throw-if-not-resolved="false"></xref>). A subclass that does not override it keeps its own IMGUI
+
+    <code>OnInspectorGUI</code> (1.0 behaviour).'
   example: []
   syntax:
-    content: protected void Begin()
-    content.vb: Protected Sub Begin()
-  overload: TDMaker.Editor.TemplateInspectorBase.Begin*
-- uid: TDMaker.Editor.TemplateInspectorBase.End
-  commentId: M:TDMaker.Editor.TemplateInspectorBase.End
-  id: End
-  parent: TDMaker.Editor.TemplateInspectorBase
-  langs:
-  - csharp
-  - vb
-  name: End()
-  nameWithType: TemplateInspectorBase.End()
-  fullName: TDMaker.Editor.TemplateInspectorBase.End()
-  type: Method
-  assemblies:
-  - TDMaker.Editor
-  namespace: TDMaker.Editor
-  summary: Applies changes and draws unclaimed fields.
-  example: []
-  syntax:
-    content: protected void End()
-    content.vb: Protected Sub [End]()
-  overload: TDMaker.Editor.TemplateInspectorBase.End*
-- uid: TDMaker.Editor.TemplateInspectorBase.Group(System.String,System.String[])
-  commentId: M:TDMaker.Editor.TemplateInspectorBase.Group(System.String,System.String[])
-  id: Group(System.String,System.String[])
-  parent: TDMaker.Editor.TemplateInspectorBase
-  langs:
-  - csharp
-  - vb
-  name: Group(string, params string[])
-  nameWithType: TemplateInspectorBase.Group(string, params string[])
-  fullName: TDMaker.Editor.TemplateInspectorBase.Group(string, params string[])
-  type: Method
-  assemblies:
-  - TDMaker.Editor
-  namespace: TDMaker.Editor
-  summary: Draws a foldout group with the given fields; returns whether it is open.
-  example: []
-  syntax:
-    content: protected bool Group(string title, params string[] fields)
+    content: protected virtual void BuildGroups(VisualElement root)
     parameters:
+    - id: root
+      type: UnityEngine.UIElements.VisualElement
+    content.vb: Protected Overridable Sub BuildGroups(root As VisualElement)
+  overload: TDMaker.Editor.TemplateInspectorBase.BuildGroups*
+- uid: TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+  id: BuildFooter(UnityEngine.UIElements.VisualElement)
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: BuildFooter(VisualElement)
+  nameWithType: TemplateInspectorBase.BuildFooter(VisualElement)
+  fullName: TDMaker.Editor.TemplateInspectorBase.BuildFooter(UnityEngine.UIElements.VisualElement)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'Adds what follows the "Other" group: actions and computed read-outs. Called for single-object editing only.'
+  example: []
+  syntax:
+    content: protected virtual void BuildFooter(VisualElement root)
+    parameters:
+    - id: root
+      type: UnityEngine.UIElements.VisualElement
+    content.vb: Protected Overridable Sub BuildFooter(root As VisualElement)
+  overload: TDMaker.Editor.TemplateInspectorBase.BuildFooter*
+- uid: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+  id: CreateInspectorGUI
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: CreateInspectorGUI()
+  nameWithType: TemplateInspectorBase.CreateInspectorGUI()
+  fullName: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  example: []
+  syntax:
+    content: public override VisualElement CreateInspectorGUI()
+    return:
+      type: UnityEngine.UIElements.VisualElement
+    content.vb: Public Overrides Function CreateInspectorGUI() As VisualElement
+  overridden: UnityEditor.Editor.CreateInspectorGUI
+  overload: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI*
+- uid: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+  id: Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: Group(VisualElement, string, params string[])
+  nameWithType: TemplateInspectorBase.Group(VisualElement, string, params string[])
+  fullName: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement, string, params string[])
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: A foldout group with the given top-level fields; the fields are claimed so "Other" skips them.
+  example: []
+  syntax:
+    content: protected Foldout Group(VisualElement parent, string title, params string[] fields)
+    parameters:
+    - id: parent
+      type: UnityEngine.UIElements.VisualElement
     - id: title
       type: System.String
     - id: fields
       type: System.String[]
     return:
-      type: System.Boolean
-    content.vb: Protected Function Group(title As String, ParamArray fields As String()) As Boolean
+      type: UnityEngine.UIElements.Foldout
+    content.vb: Protected Function Group(parent As VisualElement, title As String, ParamArray fields As String()) As Foldout
   overload: TDMaker.Editor.TemplateInspectorBase.Group*
-  nameWithType.vb: TemplateInspectorBase.Group(String, ParamArray String())
-  fullName.vb: TDMaker.Editor.TemplateInspectorBase.Group(String, ParamArray String())
-  name.vb: Group(String, ParamArray String())
-- uid: TDMaker.Editor.TemplateInspectorBase.Identity(TDMaker.Unity.Authoring.EntityAssetBase)
-  commentId: M:TDMaker.Editor.TemplateInspectorBase.Identity(TDMaker.Unity.Authoring.EntityAssetBase)
-  id: Identity(TDMaker.Unity.Authoring.EntityAssetBase)
+  nameWithType.vb: TemplateInspectorBase.Group(VisualElement, String, ParamArray String())
+  fullName.vb: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement, String, ParamArray String())
+  name.vb: Group(VisualElement, String, ParamArray String())
+- uid: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
+  id: Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
   parent: TDMaker.Editor.TemplateInspectorBase
   langs:
   - csharp
   - vb
-  name: Identity(EntityAssetBase)
-  nameWithType: TemplateInspectorBase.Identity(EntityAssetBase)
-  fullName: TDMaker.Editor.TemplateInspectorBase.Identity(TDMaker.Unity.Authoring.EntityAssetBase)
+  name: Identity(VisualElement, EntityAssetBase)
+  nameWithType: TemplateInspectorBase.Identity(VisualElement, EntityAssetBase)
+  fullName: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement, TDMaker.Unity.Authoring.EntityAssetBase)
   type: Method
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Draws the identity header (template id, display name) with a duplicate-id warning.
+  summary: 'The identity block: the asset''s tint as a round dot, Template Id and Display Name, the resolved-id caption and
+    a warning
+
+    when another asset resolves to the same id.'
   example: []
   syntax:
-    content: protected void Identity(EntityAssetBase asset)
+    content: protected void Identity(VisualElement parent, EntityAssetBase asset)
     parameters:
+    - id: parent
+      type: UnityEngine.UIElements.VisualElement
     - id: asset
       type: TDMaker.Unity.Authoring.EntityAssetBase
-    content.vb: Protected Sub Identity(asset As EntityAssetBase)
+    content.vb: Protected Sub Identity(parent As VisualElement, asset As EntityAssetBase)
   overload: TDMaker.Editor.TemplateInspectorBase.Identity*
-- uid: TDMaker.Editor.TemplateInspectorBase.DpsTable(System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
-  commentId: M:TDMaker.Editor.TemplateInspectorBase.DpsTable(System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
-  id: DpsTable(System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
+- uid: TDMaker.Editor.TemplateInspectorBase.Computed(UnityEngine.UIElements.VisualElement,System.String,System.Action{UnityEngine.UIElements.VisualElement})
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Computed(UnityEngine.UIElements.VisualElement,System.String,System.Action{UnityEngine.UIElements.VisualElement})
+  id: Computed(UnityEngine.UIElements.VisualElement,System.String,System.Action{UnityEngine.UIElements.VisualElement})
   parent: TDMaker.Editor.TemplateInspectorBase
   langs:
   - csharp
   - vb
-  name: DpsTable(string, List<RangedAttackData>, MeleeData, int)
-  nameWithType: TemplateInspectorBase.DpsTable(string, List<RangedAttackData>, MeleeData, int)
-  fullName: TDMaker.Editor.TemplateInspectorBase.DpsTable(string, System.Collections.Generic.List<TDMaker.Unity.Authoring.RangedAttackData>,
+  name: Computed(VisualElement, string, Action<VisualElement>)
+  nameWithType: TemplateInspectorBase.Computed(VisualElement, string, Action<VisualElement>)
+  fullName: TDMaker.Editor.TemplateInspectorBase.Computed(UnityEngine.UIElements.VisualElement, string, System.Action<UnityEngine.UIElements.VisualElement>)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: 'A "Computed" section whose body <code class="paramref">build</code> fills; it is rebuilt when the asset changes
+    and checked every second
+
+    for changes made elsewhere (soldier stats, level rules), and only replaced when its text differs.'
+  example: []
+  syntax:
+    content: protected Foldout Computed(VisualElement parent, string key, Action<VisualElement> build)
+    parameters:
+    - id: parent
+      type: UnityEngine.UIElements.VisualElement
+    - id: key
+      type: System.String
+    - id: build
+      type: System.Action{UnityEngine.UIElements.VisualElement}
+    return:
+      type: UnityEngine.UIElements.Foldout
+    content.vb: Protected Function Computed(parent As VisualElement, key As String, build As Action(Of VisualElement)) As
+      Foldout
+  overload: TDMaker.Editor.TemplateInspectorBase.Computed*
+  nameWithType.vb: TemplateInspectorBase.Computed(VisualElement, String, Action(Of VisualElement))
+  fullName.vb: TDMaker.Editor.TemplateInspectorBase.Computed(UnityEngine.UIElements.VisualElement, String, System.Action(Of
+    UnityEngine.UIElements.VisualElement))
+  name.vb: Computed(VisualElement, String, Action(Of VisualElement))
+- uid: TDMaker.Editor.TemplateInspectorBase.RefreshComputed
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.RefreshComputed
+  id: RefreshComputed
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: RefreshComputed()
+  nameWithType: TemplateInspectorBase.RefreshComputed()
+  fullName: TDMaker.Editor.TemplateInspectorBase.RefreshComputed()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Rebuilds the computed read-outs when their text changed.
+  example: []
+  syntax:
+    content: protected void RefreshComputed()
+    content.vb: Protected Sub RefreshComputed()
+  overload: TDMaker.Editor.TemplateInspectorBase.RefreshComputed*
+- uid: TDMaker.Editor.TemplateInspectorBase.StatRow(UnityEngine.UIElements.VisualElement,System.String,System.String)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.StatRow(UnityEngine.UIElements.VisualElement,System.String,System.String)
+  id: StatRow(UnityEngine.UIElements.VisualElement,System.String,System.String)
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: StatRow(VisualElement, string, string)
+  nameWithType: TemplateInspectorBase.StatRow(VisualElement, string, string)
+  fullName: TDMaker.Editor.TemplateInspectorBase.StatRow(UnityEngine.UIElements.VisualElement, string, string)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: A label/value read-out row.
+  example: []
+  syntax:
+    content: protected static void StatRow(VisualElement parent, string label, string value)
+    parameters:
+    - id: parent
+      type: UnityEngine.UIElements.VisualElement
+    - id: label
+      type: System.String
+    - id: value
+      type: System.String
+    content.vb: Protected Shared Sub StatRow(parent As VisualElement, label As String, value As String)
+  overload: TDMaker.Editor.TemplateInspectorBase.StatRow*
+  nameWithType.vb: TemplateInspectorBase.StatRow(VisualElement, String, String)
+  fullName.vb: TDMaker.Editor.TemplateInspectorBase.StatRow(UnityEngine.UIElements.VisualElement, String, String)
+  name.vb: StatRow(VisualElement, String, String)
+- uid: TDMaker.Editor.TemplateInspectorBase.DpsTable(UnityEngine.UIElements.VisualElement,System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.DpsTable(UnityEngine.UIElements.VisualElement,System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
+  id: DpsTable(UnityEngine.UIElements.VisualElement,System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: DpsTable(VisualElement, string, List<RangedAttackData>, MeleeData, int)
+  nameWithType: TemplateInspectorBase.DpsTable(VisualElement, string, List<RangedAttackData>, MeleeData, int)
+  fullName: TDMaker.Editor.TemplateInspectorBase.DpsTable(UnityEngine.UIElements.VisualElement, string, System.Collections.Generic.List<TDMaker.Unity.Authoring.RangedAttackData>,
     TDMaker.Unity.Authoring.MeleeData, int)
   type: Method
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Draws a DPS-vs-defense table for a list of attacks.
+  summary: A DPS-vs-defense table for a list of attacks (UI Toolkit).
   example: []
   syntax:
-    content: protected static void DpsTable(string title, List<RangedAttackData> attacks, MeleeData melee, int multiplier
-      = 1)
+    content: protected static void DpsTable(VisualElement parent, string title, List<RangedAttackData> attacks, MeleeData
+      melee, int multiplier = 1)
     parameters:
+    - id: parent
+      type: UnityEngine.UIElements.VisualElement
     - id: title
       type: System.String
     - id: attacks
@@ -284,72 +425,13 @@ items:
       type: TDMaker.Unity.Authoring.MeleeData
     - id: multiplier
       type: System.Int32
-    content.vb: Protected Shared Sub DpsTable(title As String, attacks As List(Of RangedAttackData), melee As MeleeData, multiplier
-      As Integer = 1)
+    content.vb: Protected Shared Sub DpsTable(parent As VisualElement, title As String, attacks As List(Of RangedAttackData),
+      melee As MeleeData, multiplier As Integer = 1)
   overload: TDMaker.Editor.TemplateInspectorBase.DpsTable*
-  nameWithType.vb: TemplateInspectorBase.DpsTable(String, List(Of RangedAttackData), MeleeData, Integer)
-  fullName.vb: TDMaker.Editor.TemplateInspectorBase.DpsTable(String, System.Collections.Generic.List(Of TDMaker.Unity.Authoring.RangedAttackData),
-    TDMaker.Unity.Authoring.MeleeData, Integer)
-  name.vb: DpsTable(String, List(Of RangedAttackData), MeleeData, Integer)
-- uid: TDMaker.Editor.TemplateInspectorBase.Cells(UnityEngine.Rect,System.String,System.String,System.String,System.String,UnityEngine.GUIStyle)
-  commentId: M:TDMaker.Editor.TemplateInspectorBase.Cells(UnityEngine.Rect,System.String,System.String,System.String,System.String,UnityEngine.GUIStyle)
-  id: Cells(UnityEngine.Rect,System.String,System.String,System.String,System.String,UnityEngine.GUIStyle)
-  parent: TDMaker.Editor.TemplateInspectorBase
-  langs:
-  - csharp
-  - vb
-  name: Cells(Rect, string, string, string, string, GUIStyle)
-  nameWithType: TemplateInspectorBase.Cells(Rect, string, string, string, string, GUIStyle)
-  fullName: TDMaker.Editor.TemplateInspectorBase.Cells(UnityEngine.Rect, string, string, string, string, UnityEngine.GUIStyle)
-  type: Method
-  assemblies:
-  - TDMaker.Editor
-  namespace: TDMaker.Editor
-  summary: Draws a four-column row.
-  example: []
-  syntax:
-    content: protected static void Cells(Rect rect, string a, string b, string c, string d, GUIStyle style)
-    parameters:
-    - id: rect
-      type: UnityEngine.Rect
-    - id: a
-      type: System.String
-    - id: b
-      type: System.String
-    - id: c
-      type: System.String
-    - id: d
-      type: System.String
-    - id: style
-      type: UnityEngine.GUIStyle
-    content.vb: Protected Shared Sub Cells(rect As Rect, a As String, b As String, c As String, d As String, style As GUIStyle)
-  overload: TDMaker.Editor.TemplateInspectorBase.Cells*
-  nameWithType.vb: TemplateInspectorBase.Cells(Rect, String, String, String, String, GUIStyle)
-  fullName.vb: TDMaker.Editor.TemplateInspectorBase.Cells(UnityEngine.Rect, String, String, String, String, UnityEngine.GUIStyle)
-  name.vb: Cells(Rect, String, String, String, String, GUIStyle)
-- uid: TDMaker.Editor.TemplateInspectorBase.StatsBox(System.Action)
-  commentId: M:TDMaker.Editor.TemplateInspectorBase.StatsBox(System.Action)
-  id: StatsBox(System.Action)
-  parent: TDMaker.Editor.TemplateInspectorBase
-  langs:
-  - csharp
-  - vb
-  name: StatsBox(Action)
-  nameWithType: TemplateInspectorBase.StatsBox(Action)
-  fullName: TDMaker.Editor.TemplateInspectorBase.StatsBox(System.Action)
-  type: Method
-  assemblies:
-  - TDMaker.Editor
-  namespace: TDMaker.Editor
-  summary: Begins a tinted box for computed stats.
-  example: []
-  syntax:
-    content: protected static void StatsBox(Action body)
-    parameters:
-    - id: body
-      type: System.Action
-    content.vb: Protected Shared Sub StatsBox(body As Action)
-  overload: TDMaker.Editor.TemplateInspectorBase.StatsBox*
+  nameWithType.vb: TemplateInspectorBase.DpsTable(VisualElement, String, List(Of RangedAttackData), MeleeData, Integer)
+  fullName.vb: TDMaker.Editor.TemplateInspectorBase.DpsTable(UnityEngine.UIElements.VisualElement, String, System.Collections.Generic.List(Of
+    TDMaker.Unity.Authoring.RangedAttackData), TDMaker.Unity.Authoring.MeleeData, Integer)
+  name.vb: DpsTable(VisualElement, String, List(Of RangedAttackData), MeleeData, Integer)
 - uid: TDMaker.Editor.TemplateInspectorBase.Ehp(System.Double)
   commentId: M:TDMaker.Editor.TemplateInspectorBase.Ehp(System.Double)
   id: Ehp(System.Double)
@@ -403,6 +485,264 @@ items:
       type: System.String
     content.vb: Protected Shared Function DefenseOf(kind As DamageKind) As String
   overload: TDMaker.Editor.TemplateInspectorBase.DefenseOf*
+- uid: TDMaker.Editor.TemplateInspectorBase.Begin
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Begin
+  id: Begin
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: Begin()
+  nameWithType: TemplateInspectorBase.Begin()
+  fullName: TDMaker.Editor.TemplateInspectorBase.Begin()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Starts an IMGUI frame (1.0 API). The built-in inspectors use <xref href="TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI"
+    data-throw-if-not-resolved="false"></xref> instead.
+  example: []
+  syntax:
+    content: '[Obsolete("Template inspectors are UI Toolkit since 1.1: override BuildGroups/BuildFooter instead.")]
+
+      protected void Begin()'
+    content.vb: '<Obsolete("Template inspectors are UI Toolkit since 1.1: override BuildGroups/BuildFooter instead.")>
+
+      Protected Sub Begin()'
+  overload: TDMaker.Editor.TemplateInspectorBase.Begin*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Template inspectors are UI Toolkit since 1.1: override BuildGroups/BuildFooter instead.'
+- uid: TDMaker.Editor.TemplateInspectorBase.End
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.End
+  id: End
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: End()
+  nameWithType: TemplateInspectorBase.End()
+  fullName: TDMaker.Editor.TemplateInspectorBase.End()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Applies changes and draws unclaimed fields (1.0 IMGUI API).
+  example: []
+  syntax:
+    content: '[Obsolete("Template inspectors are UI Toolkit since 1.1: override BuildGroups/BuildFooter instead.")]
+
+      protected void End()'
+    content.vb: '<Obsolete("Template inspectors are UI Toolkit since 1.1: override BuildGroups/BuildFooter instead.")>
+
+      Protected Sub [End]()'
+  overload: TDMaker.Editor.TemplateInspectorBase.End*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Template inspectors are UI Toolkit since 1.1: override BuildGroups/BuildFooter instead.'
+- uid: TDMaker.Editor.TemplateInspectorBase.Group(System.String,System.String[])
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Group(System.String,System.String[])
+  id: Group(System.String,System.String[])
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: Group(string, params string[])
+  nameWithType: TemplateInspectorBase.Group(string, params string[])
+  fullName: TDMaker.Editor.TemplateInspectorBase.Group(string, params string[])
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws an IMGUI foldout group with the given fields; returns whether it is open (1.0 API).
+  example: []
+  syntax:
+    content: '[Obsolete("Template inspectors are UI Toolkit since 1.1: use Group(VisualElement, string, params string[]).")]
+
+      protected bool Group(string title, params string[] fields)'
+    parameters:
+    - id: title
+      type: System.String
+    - id: fields
+      type: System.String[]
+    return:
+      type: System.Boolean
+    content.vb: '<Obsolete("Template inspectors are UI Toolkit since 1.1: use Group(VisualElement, string, params string[]).")>
+
+      Protected Function Group(title As String, ParamArray fields As String()) As Boolean'
+  overload: TDMaker.Editor.TemplateInspectorBase.Group*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Template inspectors are UI Toolkit since 1.1: use Group(VisualElement, string, params string[]).'
+  nameWithType.vb: TemplateInspectorBase.Group(String, ParamArray String())
+  fullName.vb: TDMaker.Editor.TemplateInspectorBase.Group(String, ParamArray String())
+  name.vb: Group(String, ParamArray String())
+- uid: TDMaker.Editor.TemplateInspectorBase.Identity(TDMaker.Unity.Authoring.EntityAssetBase)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Identity(TDMaker.Unity.Authoring.EntityAssetBase)
+  id: Identity(TDMaker.Unity.Authoring.EntityAssetBase)
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: Identity(EntityAssetBase)
+  nameWithType: TemplateInspectorBase.Identity(EntityAssetBase)
+  fullName: TDMaker.Editor.TemplateInspectorBase.Identity(TDMaker.Unity.Authoring.EntityAssetBase)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws the IMGUI identity header (1.0 API).
+  example: []
+  syntax:
+    content: '[Obsolete("Template inspectors are UI Toolkit since 1.1: use Identity(VisualElement, EntityAssetBase).")]
+
+      protected void Identity(EntityAssetBase asset)'
+    parameters:
+    - id: asset
+      type: TDMaker.Unity.Authoring.EntityAssetBase
+    content.vb: '<Obsolete("Template inspectors are UI Toolkit since 1.1: use Identity(VisualElement, EntityAssetBase).")>
+
+      Protected Sub Identity(asset As EntityAssetBase)'
+  overload: TDMaker.Editor.TemplateInspectorBase.Identity*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Template inspectors are UI Toolkit since 1.1: use Identity(VisualElement, EntityAssetBase).'
+- uid: TDMaker.Editor.TemplateInspectorBase.DpsTable(System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.DpsTable(System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
+  id: DpsTable(System.String,System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData},TDMaker.Unity.Authoring.MeleeData,System.Int32)
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: DpsTable(string, List<RangedAttackData>, MeleeData, int)
+  nameWithType: TemplateInspectorBase.DpsTable(string, List<RangedAttackData>, MeleeData, int)
+  fullName: TDMaker.Editor.TemplateInspectorBase.DpsTable(string, System.Collections.Generic.List<TDMaker.Unity.Authoring.RangedAttackData>,
+    TDMaker.Unity.Authoring.MeleeData, int)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws an IMGUI DPS-vs-defense table (1.0 API).
+  example: []
+  syntax:
+    content: '[Obsolete("Template inspectors are UI Toolkit since 1.1: use DpsTable(VisualElement, ...).")]
+
+      protected static void DpsTable(string title, List<RangedAttackData> attacks, MeleeData melee, int multiplier = 1)'
+    parameters:
+    - id: title
+      type: System.String
+    - id: attacks
+      type: System.Collections.Generic.List{TDMaker.Unity.Authoring.RangedAttackData}
+    - id: melee
+      type: TDMaker.Unity.Authoring.MeleeData
+    - id: multiplier
+      type: System.Int32
+    content.vb: '<Obsolete("Template inspectors are UI Toolkit since 1.1: use DpsTable(VisualElement, ...).")>
+
+      Protected Shared Sub DpsTable(title As String, attacks As List(Of RangedAttackData), melee As MeleeData, multiplier
+      As Integer = 1)'
+  overload: TDMaker.Editor.TemplateInspectorBase.DpsTable*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Template inspectors are UI Toolkit since 1.1: use DpsTable(VisualElement, ...).'
+  nameWithType.vb: TemplateInspectorBase.DpsTable(String, List(Of RangedAttackData), MeleeData, Integer)
+  fullName.vb: TDMaker.Editor.TemplateInspectorBase.DpsTable(String, System.Collections.Generic.List(Of TDMaker.Unity.Authoring.RangedAttackData),
+    TDMaker.Unity.Authoring.MeleeData, Integer)
+  name.vb: DpsTable(String, List(Of RangedAttackData), MeleeData, Integer)
+- uid: TDMaker.Editor.TemplateInspectorBase.Cells(UnityEngine.Rect,System.String,System.String,System.String,System.String,UnityEngine.GUIStyle)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Cells(UnityEngine.Rect,System.String,System.String,System.String,System.String,UnityEngine.GUIStyle)
+  id: Cells(UnityEngine.Rect,System.String,System.String,System.String,System.String,UnityEngine.GUIStyle)
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: Cells(Rect, string, string, string, string, GUIStyle)
+  nameWithType: TemplateInspectorBase.Cells(Rect, string, string, string, string, GUIStyle)
+  fullName: TDMaker.Editor.TemplateInspectorBase.Cells(UnityEngine.Rect, string, string, string, string, UnityEngine.GUIStyle)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Draws a four-column IMGUI row (1.0 API).
+  example: []
+  syntax:
+    content: '[Obsolete("Template inspectors are UI Toolkit since 1.1.")]
+
+      protected static void Cells(Rect rect, string a, string b, string c, string d, GUIStyle style)'
+    parameters:
+    - id: rect
+      type: UnityEngine.Rect
+    - id: a
+      type: System.String
+    - id: b
+      type: System.String
+    - id: c
+      type: System.String
+    - id: d
+      type: System.String
+    - id: style
+      type: UnityEngine.GUIStyle
+    content.vb: '<Obsolete("Template inspectors are UI Toolkit since 1.1.")>
+
+      Protected Shared Sub Cells(rect As Rect, a As String, b As String, c As String, d As String, style As GUIStyle)'
+  overload: TDMaker.Editor.TemplateInspectorBase.Cells*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Template inspectors are UI Toolkit since 1.1.
+  nameWithType.vb: TemplateInspectorBase.Cells(Rect, String, String, String, String, GUIStyle)
+  fullName.vb: TDMaker.Editor.TemplateInspectorBase.Cells(UnityEngine.Rect, String, String, String, String, UnityEngine.GUIStyle)
+  name.vb: Cells(Rect, String, String, String, String, GUIStyle)
+- uid: TDMaker.Editor.TemplateInspectorBase.StatsBox(System.Action)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.StatsBox(System.Action)
+  id: StatsBox(System.Action)
+  parent: TDMaker.Editor.TemplateInspectorBase
+  langs:
+  - csharp
+  - vb
+  name: StatsBox(Action)
+  nameWithType: TemplateInspectorBase.StatsBox(Action)
+  fullName: TDMaker.Editor.TemplateInspectorBase.StatsBox(System.Action)
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Wraps IMGUI computed stats in a box (1.0 API).
+  example: []
+  syntax:
+    content: '[Obsolete("Template inspectors are UI Toolkit since 1.1: use Computed(...).")]
+
+      protected static void StatsBox(Action body)'
+    parameters:
+    - id: body
+      type: System.Action
+    content.vb: '<Obsolete("Template inspectors are UI Toolkit since 1.1: use Computed(...).")>
+
+      Protected Shared Sub StatsBox(body As Action)'
+  overload: TDMaker.Editor.TemplateInspectorBase.StatsBox*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 'Template inspectors are UI Toolkit since 1.1: use Computed(...).'
 - uid: TDMaker.Editor.TemplateInspectorBase.#ctor
   commentId: M:TDMaker.Editor.TemplateInspectorBase.#ctor
   id: '#ctor'
@@ -1120,25 +1460,6 @@ references:
   spec.vb:
   - uid: UnityEditor.Editor.OnInspectorGUI
     name: OnInspectorGUI
-    isExternal: true
-  - name: (
-  - name: )
-- uid: UnityEditor.Editor.CreateInspectorGUI
-  commentId: M:UnityEditor.Editor.CreateInspectorGUI
-  parent: UnityEditor.Editor
-  isExternal: true
-  name: CreateInspectorGUI()
-  nameWithType: Editor.CreateInspectorGUI()
-  fullName: UnityEditor.Editor.CreateInspectorGUI()
-  spec.csharp:
-  - uid: UnityEditor.Editor.CreateInspectorGUI
-    name: CreateInspectorGUI
-    isExternal: true
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: UnityEditor.Editor.CreateInspectorGUI
-    name: CreateInspectorGUI
     isExternal: true
   - name: (
   - name: )
@@ -6578,24 +6899,178 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: TDMaker.Editor.TemplateInspectorBase.Begin*
-  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.Begin
+- uid: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
   isExternal: true
-  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Begin
-  name: Begin
-  nameWithType: TemplateInspectorBase.Begin
-  fullName: TDMaker.Editor.TemplateInspectorBase.Begin
-- uid: TDMaker.Editor.TemplateInspectorBase.End*
-  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.End
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_
+  name: Identity(VisualElement, EntityAssetBase)
+  nameWithType: TemplateInspectorBase.Identity(VisualElement, EntityAssetBase)
+  fullName: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement, TDMaker.Unity.Authoring.EntityAssetBase)
+  spec.csharp:
+  - uid: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
+    name: Identity
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.EntityAssetBase
+    name: EntityAssetBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.TemplateInspectorBase.Identity(UnityEngine.UIElements.VisualElement,TDMaker.Unity.Authoring.EntityAssetBase)
+    name: Identity
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: TDMaker.Unity.Authoring.EntityAssetBase
+    name: EntityAssetBase
+    isExternal: true
+  - name: )
+- uid: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
   isExternal: true
-  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_End
-  name: End
-  nameWithType: TemplateInspectorBase.End
-  fullName: TDMaker.Editor.TemplateInspectorBase.End
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___
+  name: Group(VisualElement, string, params string[])
+  nameWithType: TemplateInspectorBase.Group(VisualElement, string, params string[])
+  fullName: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement, string, params string[])
+  nameWithType.vb: TemplateInspectorBase.Group(VisualElement, String, ParamArray String())
+  fullName.vb: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement, String, ParamArray String())
+  name.vb: Group(VisualElement, String, ParamArray String())
+  spec.csharp:
+  - uid: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+    name: Group
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - name: params
+  - name: ' '
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.TemplateInspectorBase.Group(UnityEngine.UIElements.VisualElement,System.String,System.String[])
+    name: Group
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: ' '
+  - name: ParamArray
+  - name: ' '
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: TDMaker.Editor.TemplateInspectorBase.BuildGroups*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.BuildGroups
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_BuildGroups_UnityEngine_UIElements_VisualElement_
+  name: BuildGroups
+  nameWithType: TemplateInspectorBase.BuildGroups
+  fullName: TDMaker.Editor.TemplateInspectorBase.BuildGroups
+- uid: UnityEngine.UIElements.VisualElement
+  commentId: T:UnityEngine.UIElements.VisualElement
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: VisualElement
+  nameWithType: VisualElement
+  fullName: UnityEngine.UIElements.VisualElement
+- uid: UnityEngine.UIElements
+  commentId: N:UnityEngine.UIElements
+  isExternal: true
+  name: UnityEngine.UIElements
+  nameWithType: UnityEngine.UIElements
+  fullName: UnityEngine.UIElements
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+- uid: TDMaker.Editor.TemplateInspectorBase.BuildFooter*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.BuildFooter
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_BuildFooter_UnityEngine_UIElements_VisualElement_
+  name: BuildFooter
+  nameWithType: TemplateInspectorBase.BuildFooter
+  fullName: TDMaker.Editor.TemplateInspectorBase.BuildFooter
+- uid: UnityEditor.Editor.CreateInspectorGUI
+  commentId: M:UnityEditor.Editor.CreateInspectorGUI
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: CreateInspectorGUI()
+  nameWithType: Editor.CreateInspectorGUI()
+  fullName: UnityEditor.Editor.CreateInspectorGUI()
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI
+  name: CreateInspectorGUI
+  nameWithType: TemplateInspectorBase.CreateInspectorGUI
+  fullName: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
 - uid: TDMaker.Editor.TemplateInspectorBase.Group*
   commentId: Overload:TDMaker.Editor.TemplateInspectorBase.Group
   isExternal: true
-  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_System_String_System_String___
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Group_UnityEngine_UIElements_VisualElement_System_String_System_String___
   name: Group
   nameWithType: TemplateInspectorBase.Group
   fullName: TDMaker.Editor.TemplateInspectorBase.Group
@@ -6633,21 +7108,17 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: (
   - name: )
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
+- uid: UnityEngine.UIElements.Foldout
+  commentId: T:UnityEngine.UIElements.Foldout
+  parent: UnityEngine.UIElements
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Foldout
+  nameWithType: Foldout
+  fullName: UnityEngine.UIElements.Foldout
 - uid: TDMaker.Editor.TemplateInspectorBase.Identity*
   commentId: Overload:TDMaker.Editor.TemplateInspectorBase.Identity
   isExternal: true
-  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_TDMaker_Unity_Authoring_EntityAssetBase_
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Identity_UnityEngine_UIElements_VisualElement_TDMaker_Unity_Authoring_EntityAssetBase_
   name: Identity
   nameWithType: TemplateInspectorBase.Identity
   fullName: TDMaker.Editor.TemplateInspectorBase.Identity
@@ -6689,10 +7160,92 @@ references:
   - uid: TDMaker.Unity.Authoring
     name: Authoring
     isExternal: true
+- uid: TDMaker.Editor.TemplateInspectorBase.Computed*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.Computed
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Computed_UnityEngine_UIElements_VisualElement_System_String_System_Action_UnityEngine_UIElements_VisualElement__
+  name: Computed
+  nameWithType: TemplateInspectorBase.Computed
+  fullName: TDMaker.Editor.TemplateInspectorBase.Computed
+- uid: System.Action{UnityEngine.UIElements.VisualElement}
+  commentId: T:System.Action{UnityEngine.UIElements.VisualElement}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<VisualElement>
+  nameWithType: Action<VisualElement>
+  fullName: System.Action<UnityEngine.UIElements.VisualElement>
+  nameWithType.vb: Action(Of VisualElement)
+  fullName.vb: System.Action(Of UnityEngine.UIElements.VisualElement)
+  name.vb: Action(Of VisualElement)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: ' '
+  - name: T
+  - name: )
+- uid: TDMaker.Editor.TemplateInspectorBase.RefreshComputed*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.RefreshComputed
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_RefreshComputed
+  name: RefreshComputed
+  nameWithType: TemplateInspectorBase.RefreshComputed
+  fullName: TDMaker.Editor.TemplateInspectorBase.RefreshComputed
+- uid: TDMaker.Editor.TemplateInspectorBase.StatRow*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.StatRow
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_StatRow_UnityEngine_UIElements_VisualElement_System_String_System_String_
+  name: StatRow
+  nameWithType: TemplateInspectorBase.StatRow
+  fullName: TDMaker.Editor.TemplateInspectorBase.StatRow
 - uid: TDMaker.Editor.TemplateInspectorBase.DpsTable*
   commentId: Overload:TDMaker.Editor.TemplateInspectorBase.DpsTable
   isExternal: true
-  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_DpsTable_System_String_System_Collections_Generic_List_TDMaker_Unity_Authoring_RangedAttackData__TDMaker_Unity_Authoring_MeleeData_System_Int32_
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_DpsTable_UnityEngine_UIElements_VisualElement_System_String_System_Collections_Generic_List_TDMaker_Unity_Authoring_RangedAttackData__TDMaker_Unity_Authoring_MeleeData_System_Int32_
   name: DpsTable
   nameWithType: TemplateInspectorBase.DpsTable
   fullName: TDMaker.Editor.TemplateInspectorBase.DpsTable
@@ -6815,42 +7368,6 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: TDMaker.Editor.TemplateInspectorBase.Cells*
-  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.Cells
-  isExternal: true
-  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Cells_UnityEngine_Rect_System_String_System_String_System_String_System_String_UnityEngine_GUIStyle_
-  name: Cells
-  nameWithType: TemplateInspectorBase.Cells
-  fullName: TDMaker.Editor.TemplateInspectorBase.Cells
-- uid: UnityEngine.Rect
-  commentId: T:UnityEngine.Rect
-  parent: UnityEngine
-  isExternal: true
-  name: Rect
-  nameWithType: Rect
-  fullName: UnityEngine.Rect
-- uid: UnityEngine.GUIStyle
-  commentId: T:UnityEngine.GUIStyle
-  parent: UnityEngine
-  isExternal: true
-  name: GUIStyle
-  nameWithType: GUIStyle
-  fullName: UnityEngine.GUIStyle
-- uid: TDMaker.Editor.TemplateInspectorBase.StatsBox*
-  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.StatsBox
-  isExternal: true
-  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_StatsBox_System_Action_
-  name: StatsBox
-  nameWithType: TemplateInspectorBase.StatsBox
-  fullName: TDMaker.Editor.TemplateInspectorBase.StatsBox
-- uid: System.Action
-  commentId: T:System.Action
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.action
-  name: Action
-  nameWithType: Action
-  fullName: System.Action
 - uid: TDMaker.Editor.TemplateInspectorBase.Ehp*
   commentId: Overload:TDMaker.Editor.TemplateInspectorBase.Ehp
   isExternal: true
@@ -6914,6 +7431,97 @@ references:
   - uid: TDMaker.Core.Defs
     name: Defs
     isExternal: true
+- uid: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+  commentId: M:TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+  parent: TDMaker.Editor.TemplateInspectorBase
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI
+  name: CreateInspectorGUI()
+  nameWithType: TemplateInspectorBase.CreateInspectorGUI()
+  fullName: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI()
+  spec.csharp:
+  - uid: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.TemplateInspectorBase.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+    href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_CreateInspectorGUI
+  - name: (
+  - name: )
+- uid: TDMaker.Editor.TemplateInspectorBase.Begin*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.Begin
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Begin
+  name: Begin
+  nameWithType: TemplateInspectorBase.Begin
+  fullName: TDMaker.Editor.TemplateInspectorBase.Begin
+- uid: TDMaker.Editor.TemplateInspectorBase
+  commentId: T:TDMaker.Editor.TemplateInspectorBase
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html
+  name: TemplateInspectorBase
+  nameWithType: TemplateInspectorBase
+  fullName: TDMaker.Editor.TemplateInspectorBase
+- uid: TDMaker.Editor.TemplateInspectorBase.End*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.End
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_End
+  name: End
+  nameWithType: TemplateInspectorBase.End
+  fullName: TDMaker.Editor.TemplateInspectorBase.End
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TDMaker.Editor.TemplateInspectorBase.Cells*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.Cells
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_Cells_UnityEngine_Rect_System_String_System_String_System_String_System_String_UnityEngine_GUIStyle_
+  name: Cells
+  nameWithType: TemplateInspectorBase.Cells
+  fullName: TDMaker.Editor.TemplateInspectorBase.Cells
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: UnityEngine.GUIStyle
+  commentId: T:UnityEngine.GUIStyle
+  parent: UnityEngine
+  isExternal: true
+  name: GUIStyle
+  nameWithType: GUIStyle
+  fullName: UnityEngine.GUIStyle
+- uid: TDMaker.Editor.TemplateInspectorBase.StatsBox*
+  commentId: Overload:TDMaker.Editor.TemplateInspectorBase.StatsBox
+  isExternal: true
+  href: TDMaker.Editor.TemplateInspectorBase.html#TDMaker_Editor_TemplateInspectorBase_StatsBox_System_Action_
+  name: StatsBox
+  nameWithType: TemplateInspectorBase.StatsBox
+  fullName: TDMaker.Editor.TemplateInspectorBase.StatsBox
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
 - uid: TDMaker.Editor.TemplateInspectorBase.#ctor*
   commentId: Overload:TDMaker.Editor.TemplateInspectorBase.#ctor
   isExternal: true

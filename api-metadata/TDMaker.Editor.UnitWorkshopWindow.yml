@@ -7,6 +7,7 @@ items:
   children:
   - TDMaker.Editor.UnitWorkshopWindow.#ctor
   - TDMaker.Editor.UnitWorkshopWindow.Active
+  - TDMaker.Editor.UnitWorkshopWindow.CreateGUI
   - TDMaker.Editor.UnitWorkshopWindow.CurrentTab
   - TDMaker.Editor.UnitWorkshopWindow.DiscardChanges
   - TDMaker.Editor.UnitWorkshopWindow.KindOf(UnityEngine.Object)
@@ -211,12 +212,12 @@ items:
   summary: Opens the Unit Workshop.
   example: []
   syntax:
-    content: '[MenuItem("Tools/2D Tower Defense Maker/Unit Workshop", priority = 6)]
+    content: '[MenuItem("Tools/2D Tower Defense Maker/Unit Workshop", priority = 21)]
 
       public static UnitWorkshopWindow Open()'
     return:
       type: TDMaker.Editor.UnitWorkshopWindow
-    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Unit Workshop", priority:=6)>
+    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Unit Workshop", priority:=21)>
 
       Public Shared Function Open() As UnitWorkshopWindow'
   overload: TDMaker.Editor.UnitWorkshopWindow.Open*
@@ -229,7 +230,7 @@ items:
     namedArguments:
     - name: priority
       type: System.Int32
-      value: 6
+      value: 21
 - uid: TDMaker.Editor.UnitWorkshopWindow.Open(UnityEngine.Object,TDMaker.Editor.UnitWorkshopWindow.Tab)
   commentId: M:TDMaker.Editor.UnitWorkshopWindow.Open(UnityEngine.Object,TDMaker.Editor.UnitWorkshopWindow.Tab)
   id: Open(UnityEngine.Object,TDMaker.Editor.UnitWorkshopWindow.Tab)
@@ -382,6 +383,26 @@ items:
   fullName.vb: TDMaker.Editor.UnitWorkshopWindow.ResolveArtSet(TDMaker.Unity.View.ArtSet, String, System.Collections.Generic.IList(Of
     TDMaker.Unity.View.ArtSet))
   name.vb: ResolveArtSet(ArtSet, String, IList(Of ArtSet))
+- uid: TDMaker.Editor.UnitWorkshopWindow.CreateGUI
+  commentId: M:TDMaker.Editor.UnitWorkshopWindow.CreateGUI
+  id: CreateGUI
+  parent: TDMaker.Editor.UnitWorkshopWindow
+  langs:
+  - csharp
+  - vb
+  name: CreateGUI()
+  nameWithType: UnitWorkshopWindow.CreateGUI()
+  fullName: TDMaker.Editor.UnitWorkshopWindow.CreateGUI()
+  type: Method
+  assemblies:
+  - TDMaker.Editor
+  namespace: TDMaker.Editor
+  summary: Builds the window (UI Toolkit frame and forms; IMGUI canvases for the preview and the diagrams).
+  example: []
+  syntax:
+    content: public void CreateGUI()
+    content.vb: Public Sub CreateGUI()
+  overload: TDMaker.Editor.UnitWorkshopWindow.CreateGUI*
 - uid: TDMaker.Editor.UnitWorkshopWindow.#ctor
   commentId: M:TDMaker.Editor.UnitWorkshopWindow.#ctor
   id: '#ctor'
@@ -473,6 +494,45 @@ items:
     content.vb: Public Property CurrentTab As UnitWorkshopWindow.Tab
   overload: TDMaker.Editor.UnitWorkshopWindow.CurrentTab*
 references:
+- uid: TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement,System.Action)
+  commentId: M:TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement,System.Action)
+  isExternal: true
+  href: TDMaker.Editor.TDMakerUi.html#TDMaker_Editor_TDMakerUi_Canvas_UnityEngine_UIElements_VisualElement_System_Action_
+  name: Canvas(VisualElement, Action)
+  nameWithType: TDMakerUi.Canvas(VisualElement, Action)
+  fullName: TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement, System.Action)
+  spec.csharp:
+  - uid: TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement,System.Action)
+    name: Canvas
+    isExternal: true
+    href: TDMaker.Editor.TDMakerUi.html#TDMaker_Editor_TDMakerUi_Canvas_UnityEngine_UIElements_VisualElement_System_Action_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Editor.TDMakerUi.Canvas(UnityEngine.UIElements.VisualElement,System.Action)
+    name: Canvas
+    isExternal: true
+    href: TDMaker.Editor.TDMakerUi.html#TDMaker_Editor_TDMakerUi_Canvas_UnityEngine_UIElements_VisualElement_System_Action_
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: ' '
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
 - uid: TDMaker.Editor
   commentId: N:TDMaker.Editor
   isExternal: true
@@ -7570,6 +7630,13 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TDMaker.Editor.UnitWorkshopWindow.CreateGUI*
+  commentId: Overload:TDMaker.Editor.UnitWorkshopWindow.CreateGUI
+  isExternal: true
+  href: TDMaker.Editor.UnitWorkshopWindow.html#TDMaker_Editor_UnitWorkshopWindow_CreateGUI
+  name: CreateGUI
+  nameWithType: UnitWorkshopWindow.CreateGUI
+  fullName: TDMaker.Editor.UnitWorkshopWindow.CreateGUI
 - uid: TDMaker.Editor.UnitWorkshopWindow.#ctor*
   commentId: Overload:TDMaker.Editor.UnitWorkshopWindow.#ctor
   isExternal: true

@@ -2,7 +2,7 @@
 
 | Tool | Where |
 |---|---|
-| Welcome | **Tools > 2D Tower Defense Maker > Welcome** (opens by itself the first time a project loads 2D Tower Defense Maker) |
+| Project Overview | **Tools > 2D Tower Defense Maker > Project Overview** (the hub; opens by itself the first time a project loads 2D Tower Defense Maker) |
 | New Level wizard | **Tools > 2D Tower Defense Maker > New Level** |
 | Map Editor | **Tools > 2D Tower Defense Maker > Map Editor** (or **Open Map Editor** on Level / Path Authoring) |
 | Unit Workshop | **Tools > 2D Tower Defense Maker > Unit Workshop** (or **Open in Unit Workshop** on an Enemy) |
@@ -10,22 +10,48 @@
 | Build slot handles | Select a GameObject with **Build Slot Authoring** |
 | Wave Timeline | **Tools > 2D Tower Defense Maker > Wave Timeline** |
 | Upgrade Tree | **Tools > 2D Tower Defense Maker > Upgrade Tree** |
-| Project Validator | **Tools > 2D Tower Defense Maker > Validate Project** |
+| Upgrade Shop | **Tools > 2D Tower Defense Maker > Upgrade Shop** |
+| Project Validator | **Tools > 2D Tower Defense Maker > Validate Project** (opens the hub's **Project Check** page) |
 | Dry Run | **Tools > 2D Tower Defense Maker > Dry Run Level** |
-| Sample browser | **Tools > 2D Tower Defense Maker > Samples > Browse Samples** |
+| Upgrade Asset Formats | **Tools > 2D Tower Defense Maker > Upgrade Asset Formats** |
+| Sample browser | **Tools > 2D Tower Defense Maker > Samples > Browse Samples** (opens the hub's **Samples** page) |
 | Sample generator | **Tools > 2D Tower Defense Maker > Samples > Regenerate Sample Content** |
+| TMP Essential Resources | **Tools > 2D Tower Defense Maker > Import TMP Essential Resources** |
+| This manual | **Tools > 2D Tower Defense Maker > Online Documentation** |
+
+Maker-development tools (sample screenshots and sample art reimport, installed with the optional Samples add-on) live under **Tools > 2D Tower Defense Maker (Dev)**. They are not needed to build a game.
 
 All range ellipses drawn by the tools use the same shape as the simulation (`RangeShape`). The Y scale is taken from the open scene (level override, else the runner's value, else 0.8).
 
 ---
 
-## Welcome
+## Project Overview
 
-**Tools > 2D Tower Defense Maker > Welcome** starts with TextMesh Pro setup, then **Create your game**: New Level, Unit Workshop and Map Editor. **New Level** defaults to fresh assets in your own folder and works without the Samples add-on. The **Browse Samples** button opens a separate browser for the optional complete sample game and feature examples. Missing samples are not a setup failure. **Online Documentation** and **API Reference** open the guide and C# reference. **Show on startup** is stored per project; the window never opens in batch mode.
+**Tools > 2D Tower Defense Maker > Project Overview** is the hub. It opens by itself the first time a project loads 2D Tower Defense Maker, and then at each editor start while **Show on startup** is on (stored per project). It never opens in batch mode. A page strip switches between **Overview**, **Content**, **Project Check** and **Samples**.
 
-### Optional sample browser
+- **TextMesh Pro row** (Overview) – *TextMesh Pro is ready.* or an **Import** button that imports the Essential Resources.
+- **START** (Overview) – **New Level…**, **Map Editor**, **Unit Workshop**, **Wave Timeline**, **Upgrade Tree** and **Upgrade Shop** open the editors. **New Level** defaults to fresh assets in your own folder and works without the Samples add-on.
+- **CONTENT** (Overview) – one card per content kind with its count in the project: Levels, Wave Sets, Towers, Enemies, Soldiers, Heroes, Spells, Projectiles, Status Effects, Campaigns and Upgrade Shops. Click a card to open the **Content** page on that kind; **Browse all content** opens it on every kind.
+- **PROJECT CHECK** page – the Validator itself: **Run check** (F5), **Errors** / **Warnings** / **Notes** toggles with their counts, a search over messages and categories, and a severity tag on every row. The Overview page shows the latest counts with **Run check** and **Show problems**, plus a **Data format** notice with an **Upgrade…** button when assets were saved by another package version ([see below](#upgrading-assets-after-a-package-update)). The **Validate Project** menu opens this page and runs a scan straight away.
+- **SAMPLES** page – one block per sample scene with **Open** and **Not installed** (missing samples are not a setup failure). The **Samples > Browse Samples** menu opens this page.
+- **Help row** (Overview) – **Browse Samples** (shows the Samples page), **Online Manual**, **API Reference** and **Show on startup**.
 
-**Tools > 2D Tower Defense Maker > Samples > Browse Samples** separates the complete **Sample Game** (title, slots, campaign, star shop and battles) from feature examples (Basic, Crossroads and Winding Pass). It also links back to New Level. Sample regeneration is available only when the add-on's editor scripts are installed and asks before resetting generated samples. These examples demonstrate choices you can replace in your own game; they are not mandatory Maker configuration.
+The hub and the maker editors share one floating window: whichever maker window you open first becomes that window, and every later maker window (Map Editor, Unit Workshop, Wave Timeline, Upgrade Tree, Upgrade Shop) opens as a tab in it. The Project Overview opens on the first load, so in normal use the editors appear as tabs beside it. The **New Level** wizard stays a standalone dialog, and the complete Validator list opens separately from the Map Editor's **Open list**, next to the Map Editor (see [Project Validator](#project-validator)). The 1.0 **Welcome** window became this hub in 1.1: existing calls to `WelcomeWindow.Open()` (obsolete) still open the Project Overview, and the startup preference carries over.
+
+### Content page
+
+**Content** lists every maker asset in one place. The kind dropdown filters by kind and shows each kind's count, the search field matches asset names and folder paths, and **Issues only** keeps the assets with errors or warnings from the last project check. **Refresh** scans the project again.
+
+- The coloured dot on a row is the worst problem from the last check: accent when there is none (or only notes), orange for a warning, red for an error.
+- The details show the asset's preview, name, kind and path, then **PROBLEMS** (from the last project check; run the check first), **USED BY** (maker assets that reference it) and **USES** (maker assets it references). Click a referenced asset to show it on this page.
+- **Open** opens the asset in its editor and **Select in Project** highlights its file. Levels and Campaigns have no dedicated editor, so **Open** only selects them for the Inspector. Levels also get **▶ Play Level** ([see below](#play-level)).
+- **↑/↓** move the selection, **Enter** or a double click opens it. Lists stop at 300 rows; narrow the search to see more.
+
+![Content page with a tower selected: asset list, sprite preview, problems and the levels and shops that use it](assets/images/content.png)
+
+### Samples page
+
+**Tools > 2D Tower Defense Maker > Samples > Browse Samples** opens the hub on its **Samples** page, which separates the complete **Sample Game** (title, slots, campaign, star shop and battles) from feature examples (Basic, Crossroads and Winding Pass). It also links back to New Level. Sample regeneration stays in the same **Samples** menu and the page runs it for you; it is available only when the add-on's editor scripts are installed and asks before resetting generated samples. These examples demonstrate choices you can replace in your own game; they are not mandatory Maker configuration.
 
 ---
 
@@ -62,7 +88,7 @@ One window for turning a painted map into a level: background, curved paths, bui
 3. **Paths.** Press **P** (Paths tool) and **N**, then click along the road **from the entrance to the exit**: a handful of clicks at bends is enough – the path is a smooth curve through your points, sampled into simulation nodes every `Node Spacing` units. Drag points to fine-tune, Shift+click on the road to insert, Ctrl+click to delete. Set **Lane Count** / **Lane Spacing** until the drawn road band (lanes plus the Level View's road padding) matches the painted road; drag the white side handles of a selected point to widen or narrow the road there. Press **N** again for the next path; **[** / **]** switch paths.
 4. **Build slots.** Press **B** and click where towers may stand. Each new slot gets its rally point on the nearest point of the nearest road. Pick a **Preview Tower** to see its range ellipse at the cursor and around new slots. The ghost turns orange when a slot would overlap a road or another slot. Use **Align X/Y**, **Spread X/Y**, **Snap**, **Duplicate** and **Delete** on the selection.
 5. **Wave-call buttons.** Press **C** and drag the yellow ring of each entrance to where the HUD should show its call button (Ctrl+click resets it to just ahead of the entry).
-6. **Test.** **Validate** opens the Project Validator; **Dry Run** simulates the level with the scene geometry (summary in the window, full report in the Console); **Bake to Level Asset** writes the scene paths and slots into the Level Asset (Undo works on the asset too). Press Play.
+6. **Test.** **Validate** runs the project check and shows the result below the toolbar; **Open list** beside the summary opens the full Validator list next to the Map Editor. **Dry Run** simulates the level with the scene geometry (summary in the window, full report in the Console); **Bake to Level Asset** writes the scene paths and slots into the Level Asset (Undo works on the asset too). Press Play.
 
 ### Background
 
@@ -278,15 +304,28 @@ DPS and effective-HP values are approximations (averages; no rounding, status ef
 
 ## Project Validator
 
-**Tools > 2D Tower Defense Maker > Validate Project** scans every 2D Tower Defense Maker asset and the open scenes.
+**Tools > 2D Tower Defense Maker > Validate Project** opens the hub on its **Project Check** page and scans every 2D Tower Defense Maker asset and the open scenes. The scan result and the issue counts stay on that page until you run another check.
 
-- Filter by Errors / Warnings / Info; click to select the asset, double-click (or Enter) to open the right tool (Wave Timeline for waves, Upgrade Tree for upgrade issues).
-- **F5** re-runs; arrow keys move the selection.
+The full issue list also opens as its own window: from the **Validate Project** buttons in inspectors (for example on a Level or Level Authoring), where it docks with the other maker windows, or floating next to the Map Editor from its **Open list** link.
+
+- Filter by Errors / Warnings / Notes; click to select the asset, double-click (or Enter) to open the right tool (Wave Timeline for waves, Upgrade Tree for upgrade issues).
+- **Run check** and **F5** re-run; arrow keys move the selection.
 - Checks include: missing references; duplicate template ids and projectile view keys; enemies with zero speed or full immunity; towers that do nothing, list themselves, have empty or duplicate upgrade slots, upgrade cycles, or are not buildable in any level; soldiers that cannot block; zero rally radius; attacks with zero range or no target types; waves without groups or enemies; entries without an enemy; path/lane indices that do not exist; invalid paths (fewer than two points, entry not before exit, coincident points, overlapping lanes); levels without waves, towers, paths or slots; failed bakes; rally points outside the rally radius; mechanics: enabled auras or pulses without a payload, auras that do not follow their unit, chains that cannot jump, multi-target health budgets with area damage.
 
 Headless: `TDMaker.Editor.ValidatorWindow.RunBatch` logs every issue (for `-executeMethod`).
 
 ---
+
+## Upgrading assets after a package update
+
+Every maker asset stores the data format it was saved with. Older assets still open: the package migrates a copy in memory while you work, and the file on disk keeps its old version until it is re-saved.
+
+- **Validator → Data format.** Assets saved by an older release are **warnings**: *"<name> uses an older data format (v0); run Upgrade Asset Formats to save it in the current format."* Assets saved by a **newer** package are **errors**: *"…was saved by a newer version… it will not be modified. Update the package to edit it."* An asset with its own subclass track shows both versions, for example `v1 / subclass v0`.
+- **Tools > 2D Tower Defense Maker > Upgrade Asset Formats** re-saves every outdated asset in the current format. It asks first and says how many assets it will re-save. The upgrade is a re-save, not an editor step you can undo: commit or back up the project before running it. Newer assets are skipped, and a read-only file (for example inside an immutable package) is reported as failed instead of being changed.
+- **Project Overview → Project Check** shows the same notice in its summary block, below the counts, with an **Upgrade…** button. It runs the menu command and then re-checks the project.
+- **Batch:** `-batchmode -quit -executeMethod TDMaker.Editor.AssetFormatUpgrade.RunBatch` runs the same upgrade without dialogs and logs `X upgraded, Y already current, Z newer (left untouched).` plus one error line per failed asset.
+
+Your own assets can take part in the same pass: see [Versioning your own assets](extending.md#versioning-your-own-assets).
 
 ## Dry Run
 
@@ -304,6 +343,19 @@ The range Y scale is the level's override when set, otherwise the open scene's `
 
 ---
 
+## Play Level
+
+**▶ Play Level** starts a level without finding its scene by hand. The button is on the **Map Editor** and **Wave Timeline** toolbars, at the end of the **Level** asset inspector, on the New Level wizard's result page, and in the Project window's right-click menu (**2D Tower Defense Maker > Play Level**, with a single level asset selected).
+
+It saves the level (and its wave set), saves pending maker assets, asks to save modified scenes (Cancel stops it), and then:
+
+- opens the saved scene that starts this level and enters Play mode. A scene counts when it references the level and its runner has **Start On Play** on, so the sample's menu scene is skipped in favour of the level's own scene. The level's own folder wins, then its parent folder (the wizard layout), then the first scene by path; the scene already open wins over all of them;
+- or, when no saved scene does, builds a temporary unsaved scene with the game rig from the level asset and enters Play mode. The temporary scene uses the paths saved in the level asset, so **bake** paths drawn in the Map Editor to the level first; a level with no saved scene and no paths cannot be played this way: clicking explains that you need to bake the paths or open the level's scene, and stops.
+
+Stopping Play mode opens the scenes that were open before, unless the level's own scene was already being edited (then nothing is restored). The button is disabled, with the reason in its tooltip, while playing, while scripts compile, and for a level that is not saved as an asset.
+
+---
+
 ## Permanent upgrade shop
 
 **Tools > 2D Tower Defense Maker > Upgrade Shop** edits ordered track/rank columns, a back-loaded star-price curve and stat/mechanic/template-swap effects, with validation and before/after stat previews. Link the shop on the Campaign asset; the world map then offers **Upgrades**. See [Campaigns, Progress and Saves](campaign.md#the-star-upgrade-shop) for purchases, Undo Changes, Reset All, save integration and battle snapshots.
@@ -312,17 +364,11 @@ The range Y scale is the level's override when set, otherwise the open scene's `
 
 **Tools > 2D Tower Defense Maker > Samples > Regenerate Sample Content** (re)creates every generated sample: `Samples/Basic` (data assets and `BasicSample.unity`), `Samples/Crossroads` and `Samples/WindingPass` (their own data plus references to the Basic towers, enemies, hero and spells) and `Samples/Demo/DemoSample.unity` (title, save slots, world map and result flow over the three levels, with the sample campaign `Samples/Demo/Data/SampleCampaign.asset` and its map image `Samples/Demo/Art/world_map.png`; the scripts in `Samples/Demo/Scripts` are not generated). Re-running updates generated assets in place, including customized sample data. Keep your own game content outside the package folder. Headless: `TDMaker.Editor.SampleContentGenerator.Generate()`.
 
----
-
-## Sample screenshot
-
-**Tools > 2D Tower Defense Maker > Capture Sample Screenshot** plays the Basic sample with a scripted run and saves a PNG of the camera and HUD. Batch: `-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture` (without `-quit` and without `-nographics`). Details and options: [Sample screenshots](presentation.md#sample-screenshots).
-
 ## Creating and checking content
 
 - New Unit Workshop assets clear the active list filters and are selected and scrolled into view. When a user-created level is open, its Data folder is the first save-folder suggestion; packaged sample folders are not the default.
 - A Wave Timeline group's **+** opens an enemy picker before adding the entry. Count and Interval are copied from the previous entry, and the operation supports Undo. Double-clicking an empty group row uses the existing copy-entry workflow.
-- Map Editor keeps Validate/Dry Run controls and their latest summaries at the top of the window. Click the error/warning summary to open the Validator. The separate all-slot **Auto Rally** action asks for confirmation and supports a single Undo step.
+- Map Editor keeps Validate/Dry Run controls and their latest summaries at the top of the window. **Open list** beside the summary opens the full Validator list next to the Map Editor without covering it. The separate all-slot **Auto Rally** action asks for confirmation and supports a single Undo step.
 - **Sample kit** refers to existing sample units. Disabling **Use Sample Sounds** does not remove audio references already stored on those shared units. For content independent of Samples, choose **Fresh starter assets** and leave sample sounds off.
 
 ## Authoring screenshots
@@ -331,7 +377,7 @@ These are actual editor captures. The Unit Workshop and Map Editor use their sta
 
 ### Unit Workshop: attacks and preview
 
-![Unit Workshop with an archer tower, attack settings and sprite preview](assets/images/workshop.png)
+![Unit Workshop with an enemy selected: asset list, sprite preview and the Attack tab form](assets/images/workshop.png)
 
 ### Paths and build slots
 

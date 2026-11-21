@@ -6,7 +6,7 @@ items:
   parent: TDMaker.Editor
   children:
   - TDMaker.Editor.LevelAuthoringEditor.#ctor
-  - TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI
+  - TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI
   langs:
   - csharp
   - vb
@@ -46,7 +46,7 @@ items:
   - UnityEditor.Editor.CreateEditor(UnityEngine.Object[],System.Type)
   - UnityEditor.Editor.DrawDefaultInspector
   - UnityEditor.Editor.Repaint
-  - UnityEditor.Editor.CreateInspectorGUI
+  - UnityEditor.Editor.OnInspectorGUI
   - UnityEditor.Editor.RequiresConstantRepaint
   - UnityEditor.Editor.DrawHeader
   - UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object,UnityEditor.Editor@)
@@ -153,26 +153,28 @@ items:
     arguments:
     - type: System.Type
       value: TDMaker.Unity.Authoring.LevelAuthoring
-- uid: TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI
-  commentId: M:TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI
-  id: OnInspectorGUI
+- uid: TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI
+  commentId: M:TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI
+  id: CreateInspectorGUI
   parent: TDMaker.Editor.LevelAuthoringEditor
   langs:
   - csharp
   - vb
-  name: OnInspectorGUI()
-  nameWithType: LevelAuthoringEditor.OnInspectorGUI()
-  fullName: TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI()
+  name: CreateInspectorGUI()
+  nameWithType: LevelAuthoringEditor.CreateInspectorGUI()
+  fullName: TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI()
   type: Method
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
   example: []
   syntax:
-    content: public override void OnInspectorGUI()
-    content.vb: Public Overrides Sub OnInspectorGUI()
-  overridden: UnityEditor.Editor.OnInspectorGUI
-  overload: TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI*
+    content: public override VisualElement CreateInspectorGUI()
+    return:
+      type: UnityEngine.UIElements.VisualElement
+    content.vb: Public Overrides Function CreateInspectorGUI() As VisualElement
+  overridden: UnityEditor.Editor.CreateInspectorGUI
+  overload: TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI*
 - uid: TDMaker.Editor.LevelAuthoringEditor.#ctor
   commentId: M:TDMaker.Editor.LevelAuthoringEditor.#ctor
   id: '#ctor'
@@ -802,22 +804,22 @@ references:
     isExternal: true
   - name: (
   - name: )
-- uid: UnityEditor.Editor.CreateInspectorGUI
-  commentId: M:UnityEditor.Editor.CreateInspectorGUI
+- uid: UnityEditor.Editor.OnInspectorGUI
+  commentId: M:UnityEditor.Editor.OnInspectorGUI
   parent: UnityEditor.Editor
   isExternal: true
-  name: CreateInspectorGUI()
-  nameWithType: Editor.CreateInspectorGUI()
-  fullName: UnityEditor.Editor.CreateInspectorGUI()
+  name: OnInspectorGUI()
+  nameWithType: Editor.OnInspectorGUI()
+  fullName: UnityEditor.Editor.OnInspectorGUI()
   spec.csharp:
-  - uid: UnityEditor.Editor.CreateInspectorGUI
-    name: CreateInspectorGUI
+  - uid: UnityEditor.Editor.OnInspectorGUI
+    name: OnInspectorGUI
     isExternal: true
   - name: (
   - name: )
   spec.vb:
-  - uid: UnityEditor.Editor.CreateInspectorGUI
-    name: CreateInspectorGUI
+  - uid: UnityEditor.Editor.OnInspectorGUI
+    name: OnInspectorGUI
     isExternal: true
   - name: (
   - name: )
@@ -6195,32 +6197,61 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: UnityEditor.Editor.OnInspectorGUI
-  commentId: M:UnityEditor.Editor.OnInspectorGUI
+- uid: UnityEditor.Editor.CreateInspectorGUI
+  commentId: M:UnityEditor.Editor.CreateInspectorGUI
   parent: UnityEditor.Editor
   isExternal: true
-  name: OnInspectorGUI()
-  nameWithType: Editor.OnInspectorGUI()
-  fullName: UnityEditor.Editor.OnInspectorGUI()
+  name: CreateInspectorGUI()
+  nameWithType: Editor.CreateInspectorGUI()
+  fullName: UnityEditor.Editor.CreateInspectorGUI()
   spec.csharp:
-  - uid: UnityEditor.Editor.OnInspectorGUI
-    name: OnInspectorGUI
+  - uid: UnityEditor.Editor.CreateInspectorGUI
+    name: CreateInspectorGUI
     isExternal: true
   - name: (
   - name: )
   spec.vb:
-  - uid: UnityEditor.Editor.OnInspectorGUI
-    name: OnInspectorGUI
+  - uid: UnityEditor.Editor.CreateInspectorGUI
+    name: CreateInspectorGUI
     isExternal: true
   - name: (
   - name: )
-- uid: TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI*
-  commentId: Overload:TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI
+- uid: TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI*
+  commentId: Overload:TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI
   isExternal: true
-  href: TDMaker.Editor.LevelAuthoringEditor.html#TDMaker_Editor_LevelAuthoringEditor_OnInspectorGUI
-  name: OnInspectorGUI
-  nameWithType: LevelAuthoringEditor.OnInspectorGUI
-  fullName: TDMaker.Editor.LevelAuthoringEditor.OnInspectorGUI
+  href: TDMaker.Editor.LevelAuthoringEditor.html#TDMaker_Editor_LevelAuthoringEditor_CreateInspectorGUI
+  name: CreateInspectorGUI
+  nameWithType: LevelAuthoringEditor.CreateInspectorGUI
+  fullName: TDMaker.Editor.LevelAuthoringEditor.CreateInspectorGUI
+- uid: UnityEngine.UIElements.VisualElement
+  commentId: T:UnityEngine.UIElements.VisualElement
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: VisualElement
+  nameWithType: VisualElement
+  fullName: UnityEngine.UIElements.VisualElement
+- uid: UnityEngine.UIElements
+  commentId: N:UnityEngine.UIElements
+  isExternal: true
+  name: UnityEngine.UIElements
+  nameWithType: UnityEngine.UIElements
+  fullName: UnityEngine.UIElements
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
 - uid: TDMaker.Editor.LevelAuthoringEditor.#ctor*
   commentId: Overload:TDMaker.Editor.LevelAuthoringEditor.#ctor
   isExternal: true

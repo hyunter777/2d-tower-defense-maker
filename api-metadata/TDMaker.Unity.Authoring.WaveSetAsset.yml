@@ -24,14 +24,17 @@ items:
   syntax:
     content: '[CreateAssetMenu(menuName = "2D Tower Defense Maker/Wave Set", fileName = "Waves", order = 20)]
 
-      public sealed class WaveSetAsset : ScriptableObject'
+      public sealed class WaveSetAsset : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver'
     content.vb: '<CreateAssetMenu(menuName:="2D Tower Defense Maker/Wave Set", fileName:="Waves", order:=20)>
 
-      Public NotInheritable Class WaveSetAsset Inherits ScriptableObject'
+      Public NotInheritable Class WaveSetAsset Inherits ScriptableObject Implements IVersionedAsset, ISerializationCallbackReceiver'
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
+  implements:
+  - TDMaker.Unity.Authoring.IVersionedAsset
+  - UnityEngine.ISerializationCallbackReceiver
   inheritedMembers:
   - UnityEngine.ScriptableObject.SetDirty
   - UnityEngine.ScriptableObject.CreateInstance(System.String)
@@ -271,6 +274,21 @@ references:
   name: ScriptableObject
   nameWithType: ScriptableObject
   fullName: UnityEngine.ScriptableObject
+- uid: TDMaker.Unity.Authoring.IVersionedAsset
+  commentId: T:TDMaker.Unity.Authoring.IVersionedAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  name: IVersionedAsset
+  nameWithType: IVersionedAsset
+  fullName: TDMaker.Unity.Authoring.IVersionedAsset
+- uid: UnityEngine.ISerializationCallbackReceiver
+  commentId: T:UnityEngine.ISerializationCallbackReceiver
+  parent: UnityEngine
+  isExternal: true
+  name: ISerializationCallbackReceiver
+  nameWithType: ISerializationCallbackReceiver
+  fullName: UnityEngine.ISerializationCallbackReceiver
 - uid: UnityEngine.ScriptableObject.SetDirty
   commentId: M:UnityEngine.ScriptableObject.SetDirty
   parent: UnityEngine.ScriptableObject

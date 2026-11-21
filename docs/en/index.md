@@ -6,7 +6,7 @@ A Unity 6 toolkit for building **tower defense** games in 2D (URP): enemies foll
 
 ## Create your game first
 
-The **Maker** is the reusable runtime and authoring tools. The **Samples** add-on is a separate, optional reference game with its own art, balance and campaign. Install the Maker, open **Welcome > New Level**, and use **Fresh starter assets** to create independent content in `Assets/TDMakerContent/`. Browse the sample game only when you want an example. [See the package boundaries and installation order](package-layout.md).
+The **Maker** is the reusable runtime and authoring tools. The **Samples** add-on is a separate, optional reference game with its own art, balance and campaign. Install the Maker, open the **Project Overview** hub, press **New Level**, and use **Fresh starter assets** to create independent content in `Assets/TDMakerContent/`. Browse the sample game only when you want an example. [See the package boundaries and installation order](package-layout.md).
 
 ## Features
 
@@ -38,7 +38,7 @@ The **Maker** is the reusable runtime and authoring tools. The **Samples** add-o
 
 **Editor tools**
 
-- New Level wizard and Welcome window; Map Editor with map backgrounds, curve paths, build slots, snapping and previews.
+- Project Overview hub with **Overview**, **Content**, **Project Check** and **Samples** pages (content counts, content browser, project check) and the New Level wizard; Map Editor with map backgrounds, curve paths, build slots, snapping and previews.
 - Unit Workshop: every unit, projectile and effect in one window – presets, animation preview, mechanic cards, bulk frame registration, computed values and a headless sandbox.
 - Wave Timeline window.
 - Upgrade Tree window.
@@ -50,7 +50,7 @@ The **Maker** is the reusable runtime and authoring tools. The **Samples** add-o
 
 ## A workflow built around your game
 
-![Maker Welcome: create your own game or explore optional samples](assets/images/welcome.png)
+![Maker Project Overview: content cards, the content browser and links to every editor](assets/images/welcome.png)
 
 Start with your own content, then use the [New Level wizard](editor-tools.md), [Unit Workshop](editor-tools.md) and [Map Editor](editor-tools.md) to author and validate it. The complete sample game is optional.
 

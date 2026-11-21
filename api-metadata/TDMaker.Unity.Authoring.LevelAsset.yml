@@ -43,15 +43,16 @@ items:
   syntax:
     content: '[CreateAssetMenu(menuName = "2D Tower Defense Maker/Level", fileName = "Level", order = 0)]
 
-      public sealed class LevelAsset : ScriptableObject, ISerializationCallbackReceiver'
+      public sealed class LevelAsset : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver'
     content.vb: '<CreateAssetMenu(menuName:="2D Tower Defense Maker/Level", fileName:="Level", order:=0)>
 
-      Public NotInheritable Class LevelAsset Inherits ScriptableObject Implements ISerializationCallbackReceiver'
+      Public NotInheritable Class LevelAsset Inherits ScriptableObject Implements IVersionedAsset, ISerializationCallbackReceiver'
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   implements:
+  - TDMaker.Unity.Authoring.IVersionedAsset
   - UnityEngine.ISerializationCallbackReceiver
   inheritedMembers:
   - UnityEngine.ScriptableObject.SetDirty
@@ -755,6 +756,14 @@ references:
   name: ScriptableObject
   nameWithType: ScriptableObject
   fullName: UnityEngine.ScriptableObject
+- uid: TDMaker.Unity.Authoring.IVersionedAsset
+  commentId: T:TDMaker.Unity.Authoring.IVersionedAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  name: IVersionedAsset
+  nameWithType: IVersionedAsset
+  fullName: TDMaker.Unity.Authoring.IVersionedAsset
 - uid: UnityEngine.ISerializationCallbackReceiver
   commentId: T:UnityEngine.ISerializationCallbackReceiver
   parent: UnityEngine

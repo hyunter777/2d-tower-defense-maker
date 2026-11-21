@@ -1,0 +1,181 @@
+### YamlMime:ManagedReference
+items:
+- uid: TDMaker.Unity.Authoring.AssetSchemaState
+  commentId: T:TDMaker.Unity.Authoring.AssetSchemaState
+  id: AssetSchemaState
+  parent: TDMaker.Unity.Authoring
+  children:
+  - TDMaker.Unity.Authoring.AssetSchemaState.Current
+  - TDMaker.Unity.Authoring.AssetSchemaState.NewerThanSupported
+  - TDMaker.Unity.Authoring.AssetSchemaState.Outdated
+  - TDMaker.Unity.Authoring.AssetSchemaState.Unversioned
+  langs:
+  - csharp
+  - vb
+  name: AssetSchemaState
+  nameWithType: AssetSchemaState
+  fullName: TDMaker.Unity.Authoring.AssetSchemaState
+  type: Enum
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Where an asset stands relative to the running code's schema.
+  example: []
+  syntax:
+    content: public enum AssetSchemaState
+    content.vb: Public Enum AssetSchemaState
+- uid: TDMaker.Unity.Authoring.AssetSchemaState.Unversioned
+  commentId: F:TDMaker.Unity.Authoring.AssetSchemaState.Unversioned
+  id: Unversioned
+  parent: TDMaker.Unity.Authoring.AssetSchemaState
+  langs:
+  - csharp
+  - vb
+  name: Unversioned
+  nameWithType: AssetSchemaState.Unversioned
+  fullName: TDMaker.Unity.Authoring.AssetSchemaState.Unversioned
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: The asset does not implement <xref href="TDMaker.Unity.Authoring.IVersionedAsset" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: Unversioned = 0
+    return:
+      type: TDMaker.Unity.Authoring.AssetSchemaState
+- uid: TDMaker.Unity.Authoring.AssetSchemaState.Current
+  commentId: F:TDMaker.Unity.Authoring.AssetSchemaState.Current
+  id: Current
+  parent: TDMaker.Unity.Authoring.AssetSchemaState
+  langs:
+  - csharp
+  - vb
+  name: Current
+  nameWithType: AssetSchemaState.Current
+  fullName: TDMaker.Unity.Authoring.AssetSchemaState.Current
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Saved with the current schema (or freshly created and stamped when first saved).
+  example: []
+  syntax:
+    content: Current = 1
+    return:
+      type: TDMaker.Unity.Authoring.AssetSchemaState
+- uid: TDMaker.Unity.Authoring.AssetSchemaState.Outdated
+  commentId: F:TDMaker.Unity.Authoring.AssetSchemaState.Outdated
+  id: Outdated
+  parent: TDMaker.Unity.Authoring.AssetSchemaState
+  langs:
+  - csharp
+  - vb
+  name: Outdated
+  nameWithType: AssetSchemaState.Outdated
+  fullName: TDMaker.Unity.Authoring.AssetSchemaState.Outdated
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Saved with an older schema. It is migrated in memory on load; <xref href="TDMaker.Unity.Authoring.AssetSchema.Upgrade(UnityEngine.Object)"
+    data-throw-if-not-resolved="false"></xref> stamps it so a save writes the new version.
+  example: []
+  syntax:
+    content: Outdated = 2
+    return:
+      type: TDMaker.Unity.Authoring.AssetSchemaState
+- uid: TDMaker.Unity.Authoring.AssetSchemaState.NewerThanSupported
+  commentId: F:TDMaker.Unity.Authoring.AssetSchemaState.NewerThanSupported
+  id: NewerThanSupported
+  parent: TDMaker.Unity.Authoring.AssetSchemaState
+  langs:
+  - csharp
+  - vb
+  name: NewerThanSupported
+  nameWithType: AssetSchemaState.NewerThanSupported
+  fullName: TDMaker.Unity.Authoring.AssetSchemaState.NewerThanSupported
+  type: Field
+  assemblies:
+  - TDMaker.Unity
+  namespace: TDMaker.Unity.Authoring
+  summary: Saved by a newer version of the package. Left untouched; never migrated or stamped down.
+  example: []
+  syntax:
+    content: NewerThanSupported = 3
+    return:
+      type: TDMaker.Unity.Authoring.AssetSchemaState
+references:
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+- uid: TDMaker.Unity.Authoring.IVersionedAsset
+  commentId: T:TDMaker.Unity.Authoring.IVersionedAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  name: IVersionedAsset
+  nameWithType: IVersionedAsset
+  fullName: TDMaker.Unity.Authoring.IVersionedAsset
+- uid: TDMaker.Unity.Authoring.AssetSchemaState
+  commentId: T:TDMaker.Unity.Authoring.AssetSchemaState
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AssetSchemaState.html
+  name: AssetSchemaState
+  nameWithType: AssetSchemaState
+  fullName: TDMaker.Unity.Authoring.AssetSchemaState
+- uid: TDMaker.Unity.Authoring.AssetSchema.Upgrade(UnityEngine.Object)
+  commentId: M:TDMaker.Unity.Authoring.AssetSchema.Upgrade(UnityEngine.Object)
+  isExternal: true
+  href: TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_Upgrade_UnityEngine_Object_
+  name: Upgrade(Object)
+  nameWithType: AssetSchema.Upgrade(Object)
+  fullName: TDMaker.Unity.Authoring.AssetSchema.Upgrade(UnityEngine.Object)
+  spec.csharp:
+  - uid: TDMaker.Unity.Authoring.AssetSchema.Upgrade(UnityEngine.Object)
+    name: Upgrade
+    isExternal: true
+    href: TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_Upgrade_UnityEngine_Object_
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: TDMaker.Unity.Authoring.AssetSchema.Upgrade(UnityEngine.Object)
+    name: Upgrade
+    isExternal: true
+    href: TDMaker.Unity.Authoring.AssetSchema.html#TDMaker_Unity_Authoring_AssetSchema_Upgrade_UnityEngine_Object_
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )

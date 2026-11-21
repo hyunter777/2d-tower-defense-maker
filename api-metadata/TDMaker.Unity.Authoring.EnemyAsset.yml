@@ -47,15 +47,18 @@ items:
   syntax:
     content: '[CreateAssetMenu(menuName = "2D Tower Defense Maker/Enemy", fileName = "Enemy", order = 10)]
 
-      public sealed class EnemyAsset : EntityAssetBase'
+      public sealed class EnemyAsset : EntityAssetBase, IVersionedAsset, ISerializationCallbackReceiver'
     content.vb: '<CreateAssetMenu(menuName:="2D Tower Defense Maker/Enemy", fileName:="Enemy", order:=10)>
 
-      Public NotInheritable Class EnemyAsset Inherits EntityAssetBase'
+      Public NotInheritable Class EnemyAsset Inherits EntityAssetBase Implements IVersionedAsset, ISerializationCallbackReceiver'
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - TDMaker.Unity.Authoring.EntityAssetBase
+  implements:
+  - TDMaker.Unity.Authoring.IVersionedAsset
+  - UnityEngine.ISerializationCallbackReceiver
   inheritedMembers:
   - TDMaker.Unity.Authoring.EntityAssetBase.templateId
   - TDMaker.Unity.Authoring.EntityAssetBase.displayName
@@ -960,6 +963,21 @@ references:
   name: EntityAssetBase
   nameWithType: EntityAssetBase
   fullName: TDMaker.Unity.Authoring.EntityAssetBase
+- uid: TDMaker.Unity.Authoring.IVersionedAsset
+  commentId: T:TDMaker.Unity.Authoring.IVersionedAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  name: IVersionedAsset
+  nameWithType: IVersionedAsset
+  fullName: TDMaker.Unity.Authoring.IVersionedAsset
+- uid: UnityEngine.ISerializationCallbackReceiver
+  commentId: T:UnityEngine.ISerializationCallbackReceiver
+  parent: UnityEngine
+  isExternal: true
+  name: ISerializationCallbackReceiver
+  nameWithType: ISerializationCallbackReceiver
+  fullName: UnityEngine.ISerializationCallbackReceiver
 - uid: TDMaker.Unity.Authoring.EntityAssetBase.templateId
   commentId: F:TDMaker.Unity.Authoring.EntityAssetBase.templateId
   parent: TDMaker.Unity.Authoring.EntityAssetBase

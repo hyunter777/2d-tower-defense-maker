@@ -290,9 +290,9 @@ By default the whole map is visible and the camera does not move. Scrolling is a
 
 **`EllipseRenderer`**: `EllipseRenderer.Create(name, parent, material, sortingOrder, width)`, then `Show(center, range, yScale, lineColor, fillAlpha)` / `Hide()` / `SetWidth(width)`. The shape comes from `RangeShape`, so what is drawn is exactly what the simulation tests.
 
-## Sample screenshots
+## Sample screenshots (maker development)
 
-**Tools > 2D Tower Defense Maker > Capture Sample Screenshot** (`TDMaker.Editor.SampleScreenshot`) plays the Basic sample with a scripted run (builds on every slot, upgrades, calls waves early) and renders the camera with the HUD to a PNG. Batch: `-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture` **without** `-quit` and **without** `-nographics` (the editor exits by itself). Options: `-tdmSeconds N` (default 50), `-tdmWidth` / `-tdmHeight` (default 1920×1080), and `-tdmOut folder` for your chosen output folder. Script errors during capture are counted in the Console log.
+**Tools > 2D Tower Defense Maker (Dev) > Capture Sample Screenshot** (`TDMaker.Editor.SampleScreenshot`, installed with the optional Samples add-on) is a maker-development tool for producing the screenshots in this manual and on the store page; it is not part of the game-authoring workflow. It plays the Basic sample with a scripted run (builds on every slot, upgrades, calls waves early) and renders the camera with the HUD to a PNG. Batch: `-batchmode -executeMethod TDMaker.Editor.SampleScreenshot.Capture` **without** `-quit` and **without** `-nographics` (the editor exits by itself). Options: `-tdmSeconds N` (default 50), `-tdmWidth` / `-tdmHeight` (default 1920×1080), and `-tdmOut folder` for your chosen output folder. Script errors during capture are counted in the Console log.
 
 ## Language selection and click-area priority
 

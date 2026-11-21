@@ -45,8 +45,8 @@ items:
   assemblies:
   - TDMaker.Unity
   namespace: TDMaker.Unity.Campaign
-  summary: <xref href="TDMaker.Unity.Campaign.PlayerPrefsSaveStore" data-throw-if-not-resolved="false"></xref> in WebGL builds
-    (no file system), otherwise <xref href="TDMaker.Unity.Campaign.JsonFileSaveStore" data-throw-if-not-resolved="false"></xref>.
+  summary: <xref href="TDMaker.Unity.Campaign.PlayerPrefsSaveStore" data-throw-if-not-resolved="false"></xref> on platforms
+    without a file system, otherwise <xref href="TDMaker.Unity.Campaign.JsonFileSaveStore" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public static ISaveStore CreateDefault(int slots = 3, string name = "TDMaker")

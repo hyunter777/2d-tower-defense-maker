@@ -40,14 +40,17 @@ items:
   syntax:
     content: '[CreateAssetMenu(menuName = "2D Tower Defense Maker/Art Set", fileName = "ArtSet", order = 41)]
 
-      public sealed class ArtSet : ScriptableObject'
+      public sealed class ArtSet : ScriptableObject, IVersionedAsset, ISerializationCallbackReceiver'
     content.vb: '<CreateAssetMenu(menuName:="2D Tower Defense Maker/Art Set", fileName:="ArtSet", order:=41)>
 
-      Public NotInheritable Class ArtSet Inherits ScriptableObject'
+      Public NotInheritable Class ArtSet Inherits ScriptableObject Implements IVersionedAsset, ISerializationCallbackReceiver'
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
+  implements:
+  - TDMaker.Unity.Authoring.IVersionedAsset
+  - UnityEngine.ISerializationCallbackReceiver
   inheritedMembers:
   - UnityEngine.ScriptableObject.SetDirty
   - UnityEngine.ScriptableObject.CreateInstance(System.String)
@@ -506,6 +509,21 @@ references:
   name: ScriptableObject
   nameWithType: ScriptableObject
   fullName: UnityEngine.ScriptableObject
+- uid: TDMaker.Unity.Authoring.IVersionedAsset
+  commentId: T:TDMaker.Unity.Authoring.IVersionedAsset
+  parent: TDMaker.Unity.Authoring
+  isExternal: true
+  href: TDMaker.Unity.Authoring.IVersionedAsset.html
+  name: IVersionedAsset
+  nameWithType: IVersionedAsset
+  fullName: TDMaker.Unity.Authoring.IVersionedAsset
+- uid: UnityEngine.ISerializationCallbackReceiver
+  commentId: T:UnityEngine.ISerializationCallbackReceiver
+  parent: UnityEngine
+  isExternal: true
+  name: ISerializationCallbackReceiver
+  nameWithType: ISerializationCallbackReceiver
+  fullName: UnityEngine.ISerializationCallbackReceiver
 - uid: UnityEngine.ScriptableObject.SetDirty
   commentId: M:UnityEngine.ScriptableObject.SetDirty
   parent: UnityEngine.ScriptableObject
@@ -3848,6 +3866,36 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: TDMaker.Unity.Authoring
+  commentId: N:TDMaker.Unity.Authoring
+  isExternal: true
+  name: TDMaker.Unity.Authoring
+  nameWithType: TDMaker.Unity.Authoring
+  fullName: TDMaker.Unity.Authoring
+  spec.csharp:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
+  spec.vb:
+  - uid: TDMaker
+    name: TDMaker
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: TDMaker.Unity.Authoring
+    name: Authoring
+    isExternal: true
 - uid: UnityEngine.Object.InstantiateAsync``1(``0)
   commentId: M:UnityEngine.Object.InstantiateAsync``1(``0)
   isExternal: true

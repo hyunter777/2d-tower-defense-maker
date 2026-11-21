@@ -35,8 +35,9 @@ items:
     mid-write leaves the previous save intact. An unreadable file is renamed to <code>slotN.json.bak</code> (or <code>.bak2</code>,
     ...)
 
-    and kept. Not for WebGL (use <xref href="TDMaker.Unity.Campaign.PlayerPrefsSaveStore" data-throw-if-not-resolved="false"></xref>,
-    or <xref href="TDMaker.Unity.Campaign.SaveStoreFactory.CreateDefault(System.Int32%2cSystem.String)" data-throw-if-not-resolved="false"></xref>).'
+    and kept. Needs a writable file system; otherwise use <xref href="TDMaker.Unity.Campaign.PlayerPrefsSaveStore" data-throw-if-not-resolved="false"></xref>
+    (or <xref href="TDMaker.Unity.Campaign.SaveStoreFactory.CreateDefault(System.Int32%2cSystem.String)" data-throw-if-not-resolved="false"></xref>,
+    which picks one).'
   example: []
   syntax:
     content: 'public sealed class JsonFileSaveStore : TextSaveStore, ISaveStore'

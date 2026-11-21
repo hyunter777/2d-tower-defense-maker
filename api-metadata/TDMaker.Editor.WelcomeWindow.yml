@@ -19,18 +19,18 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: '<b>Tools &gt; 2D Tower Defense Maker &gt; Welcome</b>: first stop after importing the package – check (and import)
-    the TextMesh Pro
+  summary: 'The 1.0 Welcome window. Since 1.1 its content lives in the <xref href="TDMaker.Editor.ProjectOverviewWindow" data-throw-if-not-resolved="false"></xref>
+    hub; this type stays so
 
-    Essential Resources, start an independent new level, browse optional examples,
-
-    and open the Unit Workshop or the Map Editor. Shown automatically the first time a project loads
-
-    the package, and then at each editor start while <b>Show on startup</b> is on (per project).'
+    existing code keeps compiling and forwards to the hub.'
   example: []
   syntax:
-    content: 'public sealed class WelcomeWindow : EditorWindow'
-    content.vb: Public NotInheritable Class WelcomeWindow Inherits EditorWindow
+    content: '[Obsolete("Use ProjectOverviewWindow. The Welcome window became the Project Overview in 1.1.")]
+
+      public sealed class WelcomeWindow : EditorWindow'
+    content.vb: '<Obsolete("Use ProjectOverviewWindow. The Welcome window became the Project Overview in 1.1.")>
+
+      Public NotInheritable Class WelcomeWindow Inherits EditorWindow'
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -185,6 +185,12 @@ items:
   - System.Object.GetType
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use ProjectOverviewWindow. The Welcome window became the Project Overview in 1.1.
 - uid: TDMaker.Editor.WelcomeWindow.Open
   commentId: M:TDMaker.Editor.WelcomeWindow.Open
   id: Open
@@ -199,28 +205,14 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Opens the welcome window.
+  summary: 'Opens the Project Overview. Returns null: the Welcome window itself no longer opens.'
   example: []
   syntax:
-    content: '[MenuItem("Tools/2D Tower Defense Maker/Welcome", priority = 0)]
-
-      public static WelcomeWindow Open()'
+    content: public static WelcomeWindow Open()
     return:
       type: TDMaker.Editor.WelcomeWindow
-    content.vb: '<MenuItem("Tools/2D Tower Defense Maker/Welcome", priority:=0)>
-
-      Public Shared Function Open() As WelcomeWindow'
+    content.vb: Public Shared Function Open() As WelcomeWindow
   overload: TDMaker.Editor.WelcomeWindow.Open*
-  attributes:
-  - type: UnityEditor.MenuItem
-    ctor: UnityEditor.MenuItem.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: Tools/2D Tower Defense Maker/Welcome
-    namedArguments:
-    - name: priority
-      type: System.Int32
-      value: 0
 - uid: TDMaker.Editor.WelcomeWindow.#ctor
   commentId: M:TDMaker.Editor.WelcomeWindow.#ctor
   id: '#ctor'
@@ -256,7 +248,7 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Whether the window opens at every editor start in this project.
+  summary: Whether the Project Overview opens at every editor start in this project.
   example: []
   syntax:
     content: public static bool ShowOnStartup { get; set; }
@@ -279,7 +271,7 @@ items:
   assemblies:
   - TDMaker.Editor
   namespace: TDMaker.Editor
-  summary: Whether the window was already shown once in this project.
+  summary: Whether the Project Overview was already shown once in this project.
   example: []
   syntax:
     content: public static bool ShownInProject { get; set; }
@@ -289,6 +281,14 @@ items:
     content.vb: Public Shared Property ShownInProject As Boolean
   overload: TDMaker.Editor.WelcomeWindow.ShownInProject*
 references:
+- uid: TDMaker.Editor.ProjectOverviewWindow
+  commentId: T:TDMaker.Editor.ProjectOverviewWindow
+  parent: TDMaker.Editor
+  isExternal: true
+  href: TDMaker.Editor.ProjectOverviewWindow.html
+  name: ProjectOverviewWindow
+  nameWithType: ProjectOverviewWindow
+  fullName: TDMaker.Editor.ProjectOverviewWindow
 - uid: TDMaker.Editor
   commentId: N:TDMaker.Editor
   isExternal: true
